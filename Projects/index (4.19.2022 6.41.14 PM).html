@@ -1,0 +1,1246 @@
+<!doctype html>
+<html dir="ltr" style="scroll-behavior: smooth; --vh: 638px; --ww: 947px; --pixelratio: 1; --elementInfoHeight-body: 417px;" lang="en-US"><head>
+    <meta charset="utf-8">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <title>Daniel Roswadowsky</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"> 
+<script type="text/javascript" src="https://css-tricks.com/examples/HorzScrolling/jquery.mousewheel.js"></script>
+ <style>
+/*
+
+TRANSITIONS
+
+*/
+
+@keyframes shaker {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+
+#view_project:hover {
+  background: #EEF1F4;
+}
+.hide{
+  display:  none!important; 
+}
+.SENDTOBACK{
+  z-index:   0 !important;
+}
+.SENDTOFRONT{
+  z-index:   3 !important;
+}
+.active{
+  background: #82b3c6 !important;
+}
+.temp-main-image:hover * {
+  transform: scale(1.09, 1.09);
+  transition: transform .25s ease;
+}
+.temp-main-image:hover {
+  left: 0px;
+  top: 0;
+}
+}
+.temp-main-image:hover ~ #view_project{
+  
+  animation: shake 2s;
+  animation-iteration-count: infinite;
+}
+
+.temp-main-image:hover > div::after {
+  opacity: .5;
+}
+
+#background::after {
+}
+.temp-main-image:hover {
+  z-index: 0;
+}
+.temp-main-image > div::after {
+    background-image: -webkit-linear-gradient(bottom, rgba(225, 225, 225, 0.5) -25%, transparent 40%);
+  content: "";
+  height: 100%;
+  width:  100%;
+  position: absolute;
+  opacity: 0;
+  transition: .25s cubic-bezier(.39,.58,.57,1);
+}
+.tag-h-infocus {
+  max-height: -webkit-fill-available !important;
+  height: calc(var(--vh) - var(--elementInfoHeight-body) - 135px)!important;
+}
+.tag-hh-infocus{
+  height: fit-content!important;
+}
+#button1, #button2 {
+  z-index: 3 !important;
+}#tag-branding, #tag-print, #tag-media, #tag-coding {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 24px;
+  position: relative!important;
+  background: #c8c8c8;
+  border-radius: 24px;
+  width: 36px;
+  height: 12px;
+  margin: 0px 0px 18px 0px!important;
+  transition: .25s ease;
+}}@media screen and (max-width: 390px){
+#tag-branding, #tag-print, #tag-media, #tag-coding {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 24px;
+  position: relative!important;
+  background: #c8c8c8;
+  border-radius: 24px;
+  width: 36px;
+  height: 12px;
+  margin: 0px 0px 18px 0px;
+}
+#view_project { padding: 30px 90px!important;}
+}
+#view_project::after {
+  content: "View Project";
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: #6a7586;
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  display: flex;
+  float: left;
+  left: 30px;
+}
+#body-text {
+  height: fit-content;
+}
+#body-copy {
+  margin-bottom: 30px;
+}
+#button1,#button2,#button3 {
+  width: 30px;
+  height: 12px;
+  margin-top: -3.5px;
+  border-radius: 48px;
+    transition: .25s ease;
+  float: right;
+  margin-right: 30px;
+}
+#button1{
+ border: solid 2px #6A7586!important;
+}
+#button1::after {
+  content: "Projects";
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: #6a7586;
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  display: flex;
+}
+  #button2::after {
+  content: "Contact";
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: #6a7586;
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  flex-direction: row;
+}
+#logo::after {
+  font-family: 'Inter', sans-serif;
+  content: "LOGO";
+  text-align: center;
+  top: 7px;
+  position: relative;
+  text-decoration: none;
+  color: #6a7586;
+}
+body {
+  background-color: #FFFFFF;
+  /*! overflow: hidden; */
+  height: var(--vh);
+  /*! padding-right: 30px; */
+  margin: 0;
+}
+.nav-bg{
+  background: white;
+height: 115px;
+margin-bottom: -110px;
+z-index: 1;
+position: absolute;
+width: 100%;
+}
+.desktop-nav {
+  position: relative;
+  z-index: 2;
+  height: 105px;
+  width: 100%;
+  margin: 0 auto;
+}
+.temp-main-image {
+  background: #EEF1F4;
+  height: calc(var(--vh) - 140px);
+  border: 3px solid #667080;
+  box-sizing: content-box;
+  position: relative;
+  width: auto;
+  z-index: 2;
+  overflow: hidden;
+}
+.main-image {
+  width: 58vw;
+  height: calc(var(--vh) - 150px);
+  box-sizing: content-box;
+  position: relative;
+  top: 115px;
+  margin-left: 30px;
+}
+.content-main::-webkit-scrollbar {
+    display: none;
+}
+.content-main > .page-1, .page-2, .page-3, .page-4, .page-5{
+  scroll-snap-align: start;
+  width: calc(50% - 45px);
+  height: calc(var(--vh) - 105px);
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  position: static !important;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.project-title {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+  font-feature-settings: 'calt' off;
+  color: #4b515b;
+}
+ 
+#tag-branding::after {
+  content: "Branding";
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10.5px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: #FFFFFF;
+}
+#tag-branding {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 24px;
+  position: absolute;
+  background: #c8c8c8;
+  border-radius: 24px;
+  width: 36px;
+  height: 12px;
+  margin: 6px 0px 24px 0px;
+}
+
+#tag-print::after {
+  content: "Print";
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10.5px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: #FFFFFF;
+}
+#tag-print {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 24px;
+  position: absolute;
+  background: #c8c8c8;
+  border-radius: 24px;
+  width: 36px;
+  height: 12px;
+  margin: 6px 0px 24px 0px;
+}
+
+.floating {  
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+ 
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, 0px); }    
+}
+ 
+@keyframes floating2 {
+    from { transform: rotate(270deg) translate(0,  0px); }
+    65%  { transform: rotate(270deg) translate(0, 5px); }
+    to   { transform: rotate(270deg) translate(0, 0px); }    
+}
+ 
+ 
+#view_project:active {
+    background-color: #eef1f4;
+    border: solid 2px #667080!important;
+}
+#view_project:hover > .scrolldown{
+    animation-name: floating2;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+ 
+ .page-4.coding.tag-p-infocus{
+    margin-left: calc(50% - 15px ) !important;
+ }  
+  .tag-p-infocus.m {
+  margin-left: 0!important;
+ margin-top: 0!important;
+ }
+
+ .scrolldown{
+    user-select: none;
+ }
+ 
+/*@media screen and (max-width: 900px) {
+.scrolldown {
+ width: 150px!important ;
+}
+}
+ 
+ 
+BREAKPOINT WIDTH
+ 
+629PX
+ 
+//TWO IMAGES IN VIEW PER SCREEN
+ 
+H1: 42/48
+H2: 24/30
+BODY: 16/24
+ 
+3/4
+ 
+H1: 36/42
+H2: 18/24
+BODY: 14/21
+ 
+2/3
+ 
+H1: 28/32
+H2: 16/20
+BODY: 12/16;
+ 
+ 
+ 
+BREAKPOINT WIDTH
+ 
+849PX
+ 
+//SINGLE IMAGE IN VIEW PER SCREEN
+ 
+ 
+ 
+BREAKPOINT WIDTH
+ 
+500PX
+ 
+//SINGLE IMAGE IN VIEW PER SCREEN // HIDE BODY COPY DESCRIPTION
+ 
+ 
+ 
+BREAKPOINT WIDTH
+ 
+475PX
+ 
+//MOBILE NAV HAMBURGER MENU
+ 
+;
+ 
+!!!!!!!!!!!!!!!!!!!
+ 
+ 
+BREAKPOINT WIDTH
+ 
+375PX
+ 
+//FIX VIEW PROJECT CUT OFF
+ 
+;
+ 
+!!!!!!!!!!!!!!!!!!!
+ 
+ 
+NO MORE COMPATABILITY BELOW 300PX WIDTH AND/OR 400PX HEIGHT
+
+ 
+*/
+
+ 
+
+ 
+ 
+@media screen and (min-width: 850px) {
+.project-one{
+  margin-top: 30px!important;
+width: fit-content!important;
+border-radius: 48px!important;
+display: flex!important;
+bottom: 68px!important;
+position: unset!important;
+}
+}
+ @media screen and (max-height: 599px) {
+#body-text {
+  display: none!important;
+}
+} 
+@media screen and (max-width: 600px) {
+.content-main > .page-1, .page-2, .page-3, .page-4, .page-5 {
+  scroll-snap-align: start;
+  width: 100%!important;
+  position: relative!important;
+}
+.page-2{
+  margin-left: 100vw!important;
+}
+.page-3{
+  margin-left: 200vw!important;
+}
+.page-4{
+  margin-left: 300vw!important;
+}
+.page-5{
+  margin-left: 400vw!important;
+}
+.project-title {
+  font-size: 28px !important;
+  line-height: 32px !important;
+}
+#button1::after, #button2::after, #button3::after {
+  font-size: 12px !important;
+  letter-spacing: 0.01em !important;
+  font-weight: 600 !important;
+}
+#button1, #button2 {
+  padding: 12px 36px !important;
+  margin-top: 2.5px;
+}
+h2{
+  font-size: 16px!important;
+  line-height: 20px!important;
+}
+#body-text {
+ font-size: 12px!important;
+ line-height:16px!important;
+}
+}
+@media screen and (min-width: 849px) and (max-width: 1200px) {
+#button1::after, #button2::after, #button3::after {
+  font-size: 14px !important;
+  letter-spacing: 0.01em !important;
+  font-weight: 600 !important;
+}
+#button1, #button2{
+  padding: 15px 45px!important;
+}
+}
+h2 {
+  margin: 6px 0 0 0;
+}
+.element-info {
+  margin-top: -3px;
+}
+@media screen and (min-width: 1350px) {
+#button1,#button2,#button3 {
+  padding: 18px 55px !important;
+}
+}
+@media screen and (max-width: 650px) and (max-height: 650px) {
+#body-text {
+  display: none!important;
+}
+}
+@media screen and (max-height: 599px) and (max-width: 999px) {
+#body-text{
+  display: block!important;
+}
+  #project-element{
+    flex-direction: row!important;
+  }
+  .element-info{
+    height: calc(100% - 36px) !important;
+    border-left: none!important;
+    border-top: 3px solid rgb(102, 112, 128)!important;
+  }
+  .temp-main-image{
+  width: 100%;
+  height: calc(100% - 36px) !important;
+  max-width: var(--ww);
+}
+#view_project {
+  margin-top: 5px !important;
+}
+#body-text {
+  margin-top: 0px!important
+}
+    .page-1::after, .page-2::after, .page-3::after , .page-4::after, .page-5::after {
+  width: calc(100% - 66px) !important;
+  height: calc(100% - 36px) !important;
+}
+}
+
+/* breakpoint */
+
+@media screen and (max-height: 429px) {
+    .page-1::after, .page-2::after, .page-3::after , .page-4::after, .page-5::after {
+ display: none!important;
+}
+  .element-info{
+    height: calc(100% - 30px)!important;;
+  }
+}
+
+
+@media screen and (max-width: 390px) {
+#body-text{
+  display: none!important;
+}
+#view_project {
+  margin-top: 5px !important;
+}
+#body-text {
+  margin-top: 0px!important
+}
+}
+
+
+*, ::before, ::after {
+  box-sizing: unset;
+}
+@media screen and (max-height: 849px) and (min-height: 600px) {
+.project-title {
+  font-size: 36px !important;
+  line-height: 42px !important;
+}
+h2{
+  font-size: 18px!important;
+  margin: 3px 0 0 0!important;
+  line-height: 24px!important;
+}
+#body-text {
+ font-size: 14px!important;
+ line-height:21px!important;
+ margin-top: 12px!important;
+}
+}
+@media screen and (max-height: 749px) and (max-width: 1200px) {
+.project-title {
+  font-size: 28px !important;
+  line-height: 32px !important;
+}
+h2{
+  font-size: 16px!important;
+  margin: 3px 0 0 0!important;
+  line-height: 20px!important;
+}
+#body-text {
+ font-size: 14px!important;
+ line-height:21px!important;
+ margin-top: 12px!important;
+}
+}
+@media screen and (min-height: 750px) and (min-width: 850px) and (max-width: 1200px) {
+.project-title {
+  font-size: 36px !important;
+  line-height: 42px !important;
+}
+h2{
+  margin: 3px 0 0 0!important;
+  font-size: 18px!important;
+  line-height: 24px!important;
+}
+#body-text {
+ font-size: 14px!important;
+ line-height:21px!important;
+ margin-top: 12px!important;
+}
+}
+@media screen and (max-height: 700px) and (max-width: 1000px) {
+.project-title {
+  font-size: 28px !important;
+  line-height: 32px !important;
+}
+    #logoblockfour, #logoblocktwo {
+    display: none;
+  }
+  #logoblockone, #logoblockthree {
+    border-left: solid #474747 1vw!important;
+    margin-left: -30px;
+  }
+  #logotype{
+  left: calc(6vw + 45px) !important;
+
+  }
+.project-one{
+  margin-top: 30px!important;
+width: fit-content!important;
+border-radius: 48px!important;
+display: flex!important;
+bottom: 68px!important;
+position: static!important;
+}
+.content-main > .page-1, .page-2, .page-3, .page-4, .page-5 {
+  scroll-snap-align: start;
+  width: calc(100% - 60px) !important;
+  position: relative!important;
+}
+.desktop-nav{
+  position: inherit!important;
+}
+.content-main{
+  position: inherit!important;
+  margin: 0!important;
+}
+.page-2{
+  margin-left: 100vw!important;
+}
+.page-3{
+  margin-left: 200vw!important;
+}
+.page-4{
+  margin-left: 300vw!important;
+}
+.page-5{
+  margin-left: 400vw!important;
+}
+h2{
+  font-size: 16px!important;
+  line-height: 20px!important;
+}
+#body-text {
+ font-size: 12px!important;
+ line-height:16px!important;
+ 
+}
+}
+@media screen and (max-width: 1000px) and (max-height: 700px){
+.project-title {
+  font-size: 28px !important;
+  line-height: 32px !important;
+}
+  .page-1::after, .page-2::after, .page-3::after, .page-4::after, .page-5::after {
+  width: calc(100% - 66px) !important;
+  height: calc(100% - 36px) !important;
+}
+}@media screen and (max-width: 1000px) and (max-height: 700px){
+.project-title {
+  font-size: 28px !important;
+  line-height: 32px !important;
+}
+    .page-4.coding.tag-p-infocus {
+  margin-left: calc(100% - 15px ) !important;
+}
+  .page-1::after, .page-2::after, .page-3::after, .page-4::after, .page-5::after {
+  width: calc(100% - 66px) !important;
+  height: calc(100% - 36px) !important;
+}
+}
+@media screen and (max-width: 849px) and (min-height: 500px){
+  #logoblockfour, #logoblocktwo {
+    display: none;
+  }
+  #logoblockone, #logoblockthree {
+    border-left: solid #474747 1vw!important;
+    margin-left: -30px;
+  }
+  #logotype{
+  left: calc(6vw + 45px) !important;
+
+  }
+  .project-title {
+  font-size: 28px !important;
+  line-height: 32px !important;
+}
+.page-1::after, .page-2::after, .page-3::after, .page-4::after, .page-5::after {
+  width: calc(100% - 66px) !important;
+  height: calc(var(--vh) - 141px) !important;
+}
+.content-main > .page-1, .page-2, .page-3, .page-4, .page-5 {
+  scroll-snap-align: start;
+  width: calc(100% - 60px) !important;
+  position: relative!important;
+}
+.page-2{
+ margin-left: calc(100% - 15px ) !important;
+}
+  .page-4.coding.tag-p-infocus {
+  margin-left: calc(100% - 15px ) !important;
+}
+.page-3{
+  margin-left: 200vw!important;
+}
+.page-4{
+  margin-left: 300vw!important;
+}
+.page-5{
+  margin-left: 400vw!important;
+}
+h2{
+  font-size: 16px!important;
+  line-height: 20px!important;
+    margin: 3px 0 0 0!important;
+}
+#body-text {
+ font-size: 12px!important;
+ line-height:16px!important;
+ margin-top: 12px!important
+}
+.desktop-nav{
+  position: inherit!important;
+}
+.content-main{
+  position: inherit!important;
+  margin: 0!important;
+}
+}
+ 
+ 
+/*
+////////////////////////////////
+/////////////////////////////////
+ 
+ART DIRECTION
+ 
+//////////////////////////////
+////////////////////////////////
+*/
+ 
+@media screen  and (min-height: 900px) and (min-width: 1800px) {
+.p5jsprojpicture {
+      background-image: url(/~rad%5cdbr73/assets/images/464684457805858.png)!important;
+      background-size: cover!important;
+    }
+  }
+ 
+/*
+////////////////////////////////
+/////////////////////////////////
+//////////////////////////////
+////////////////////////////////
+*/
+ 
+.element-info {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  height: ;
+  z-index: 3;
+  border: 3px solid rgb(102, 112, 128);
+  border-top: none;
+  width: fit-content;
+}
+@media screen and (min-width: 1350px) and (min-height: 400px) {
+#button1,#button2,#button3 {
+  padding: 18px 55px !important;
+}
+}
+*, ::before, ::after {
+  box-sizing: unset;
+}
+#button1,#button2,#button3 {
+  width: 30px;
+  height: 12px;
+  /* margin-top: 38px; */
+  border-radius: 48px;
+  float: right;
+  margin-right: 30px;
+}
+#button1::after {
+  content: "Projects";
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: #6a7586;
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  display: flex;
+}
+  #button2::after {
+  content: "Contact";
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: #6a7586;
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  flex-direction: row;
+}
+#logo::after {
+  font-family: 'Inter', sans-serif;
+    content: "LOGO";
+    text-align: center;
+    top: 7px;
+ 
+  position: relative;
+}
+body {
+  background-color: #FFFFFF;
+  overflow: hidden;
+  height: -webkit-fill-available;
+  min-height: 100%;
+  /*! padding-right: 30px; */
+  margin: 0;
+  position: inherit;
+}
+ 
+.page-1::after, .page-2::after, .page-3::after, .page-4::after, .page-5::after {
+  /*! border: 3px solid #667080; */
+  /*! z-index: 4; */
+  /*! content: ""; */
+  /*! height: 100%; */
+  /*! width: calc(50% - 50px); */
+  /*! height: calc(100% - 140px); */
+  /*! pointer-events: none; */
+  /*! content: ""; */
+}
+.page-1.branding {
+}
+/*.main-image {
+  width: 58vw;
+  height: calc(var(--vh) - 157px);
+  background: #EEF1F4;
+  border: 3px solid #667080;
+  box-sizing: content-box;
+  position: relative;
+  top: calc(60px - -3.75vw);
+  margin-left: 30px;
+}
+*/
+.nav-bg{
+  background: white;
+height: 115px;
+margin-bottom: -110px;
+z-index: 1;
+position: absolute;
+width: 100%;
+}
+.desktop-nav {
+    position: fixed;
+    z-index: 2;
+    height: 45px;
+    padding: 30px;width: 100%;
+    margin: 0px 0px 0px -30px;
+}
+.temp-main-image {
+}
+.main-image {
+  width: 58vw;
+  height: calc(var(--vh) - 150px);
+  box-sizing: content-box;
+  position: relative;
+  top: 115px;
+  margin-left: 30px;
+}
+.content-main {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;scroll-behavior: smooth; 
+  max-height: calc(var(--vh) - 105px);
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  min-height: inherit;
+  margin: 105px 0 0 0;
+  position: fixed;
+  width: 100%;
+}
+.content-main::-webkit-scrollbar {
+    display: none;
+}
+ 
+.project-title {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+  font-feature-settings: 'calt' off;
+  color: #4b515b;
+}
+ 
+#tag-branding::after {
+  content: "Branding";
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10.5px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: #FFFFFF;
+}
+#tag-branding {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 24px;
+  position: absolute;
+  background: #c8c8c8;
+  border-radius: 24px;
+  width: 36px;
+  height: 12px;
+  margin: 6px 0px 24px 0px;
+}
+ 
+#tag-coding::after {
+  content: "Coding";
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10.5px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: #FFFFFF;
+}
+#tag-coding {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 24px;
+  position: absolute;
+  background: #c8c8c8;
+  border-radius: 24px;
+  width: 36px;
+  height: 12px;
+  margin: 6px 0px 24px 0px;
+}
+.floating {  
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+ 
+#button1:active, #button2:active {
+    background-color: #eef1f4;
+    border: solid 2px #667080!important;
+}
+ 
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, 0px); }    
+}
+ 
+#body-text {
+    max-width: 95%;
+    margin-top: 18px;
+}
+ 
+
+#tag-branding:hover, #tag-coding:hover, #tag-print:hover {
+  background: #667080;
+  cursor: pointer;
+} 
+
+
+#tag-branding:active, #tag-print:active, #tag-coding:active {
+  background: #4b515b!important;
+  cursor: pointer;
+}
+#button2:hover {
+  background: #eef1f4 !important;
+  }
+@media screen and (max-width: 520px){
+  .contain-logo{
+    left: 30px!important;
+  }
+   #logotype{
+    display: none!important;
+  }
+}
+
+
+
+
+
+
+</style></head>
+ 
+  <body onresize="getWindowSpec()">
+<div class="desktop-nav">
+ 
+<div style="background: white;height: 105px;top: 0;width: 100%;position: absolute;"></div><a href="/~rad%5cdbr73/splash-exercise/"> <div id="logo" style="width: 150px;height: 45px;background: #FFFFFF;border: 3px solid #667080;box-sizing: border-box;left: 0px;right: 0;top: 0px;bottom: 60px;border: 1px solid #667080;/*! =============== breakpoint 1150px W ===============*/position: fixed;border: 1px solid #667080;margin-left: 30px;margin-top: 30px;content: &quot;LOGO&quot;;font-size: 24px;text-align: center;display: none;"></div><div style="left: 60px;position: absolute;"><div id="logoblockone" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;border-left: 1vw solid;border-left-color: currentcolor;border-left-color: #474747;"></div><div style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);border-right: 1vw solid #474747;" id="logoblocktwo"></div><div id="logoblockthree" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;top: 22px;border-left: 1vw solid;border-left-color: #474747;"></div><div style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);top: 22px;border-right: 1vw solid #474747;" id="logoblockfour"></div></div><h id="logotype" style="position: absolute;left: calc(12vw + 60px);font-family: 'Inter', sans-serif;font-style: normal;font-weight: 600;font-size: 16px;line-height: 48px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #4b515b;height: 45px;top: 28px;">Daniel Roswadowsky</h>
+</a><div id="button1" style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;/*! background: #EEF1F4; */position: relative;flex: none;order: 0;flex-grow: 0;border: solid 2px #EEF1F4;margin-right: 30px;"></div><a href="/~rad%5cdbr73/Contact/"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: absolute;/*! background: #EEF1F4; */border-radius: 24px;position: relative;flex: none;order: 0;flex-grow: 0;border: solid 2px #EEF1F4;" id="button2"></div></a>&gt;</div>
+<main class="content-main" onresize="reorder()">
+<div class="page-1 branding" style="">
+<div id="project-element" style="display: flex; flex-direction: column; height: 533px; z-index: 2;" class="one"><div style="background: #ffff;" class="temp-main-image"><div id="background" style="z-index: 3;position: absolute;width: 100%;height:  100%;border: 30px solid #fff;pointer-events: none;overflow: hidden;/*! display: none; */border: 30px solid #fff;transform: scale(1) !important;left: -29px;top: -29px;border-bottom-width: 120px;"></div><div class="BTprojpicture" style="
+    object-fit: contain;
+    --adjacent-container-height; auto;
+    background-image: url(/~rad%5cdbr73/assets/images/3240880DWE.png);
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: .25s ease;
+                                                                                       "></div></div><div class="element-info one-one" style="box-sizing: content-box; display: flex; height: 311px;"><div id="body-copy" style="min-height: fit-content;flex-direction: column;font-family: 'Inter';margin-right: 30px;font-style: normal;z-index: 2;font-weight: 400;font-size: 9px;display: flex;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;margin-top: 30px;margin-left: 30px;margin-bottom: 30px;place-content: end space-between;"><div style=""><div id="tag-branding" onclick="toggletagbranding()" class=""></div><h class="project-title" style="">Bullseye Tracker</h><h2 style="font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 24px;
+/* or 137% */
+letter-spacing: -0.02em;
+font-feature-settings: 'calt' off;
+ 
+/* Primary */
+color: #667080;
+position: relative;
+">2019</h2><h style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;display: flex;" id="body-text">BullseyeTracker is a web-based scoring application that simplifies all the challenges involved in Bullseye Pistol Leagues. Following the brand’s philosophy, I created a minimal wordmark and logomark reflecting their values of simplicity and ease of use.</h></div><a href="/~rad%5cdbr73/Projects/BullseyeTracker/" style="margin-top: 30px;width: fit-content;border-radius: 48px;display: flex;margin-bottom: 8px;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border: solid 2px #EEF1F4;margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div></div>
+<div></div></div>
+
+
+<div class="page-2 branding" style="margin-left: calc(50vw - 15px);scroll-snap-align: start;margin-top: calc(var(--vh) * -1 + 105px);">
+<div id="project-element" style="display: flex; flex-direction: column; height: 533px;" class="two"><div style="background: #48c2c5;" class="temp-main-image"><div id="background" style="z-index: 3;position: absolute;width: calc(100% + 1px);height:  100%;border: 30px solid #fff;pointer-events: none;overflow: hidden;/*! display: none; */border: 30px solid #fff;transform: scale(1) !important;left: -30px;top: -30px;border-bottom-width: 120px;"></div><div class="BTprojpicture" style="
+    object-fit: contain;
+    --adjacent-container-height; auto;
+    background-image: url(/~rad%5cdbr73/assets/images/46235423525432.png);
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform .25s ease;
+                                                                                       "></div></div><div class="element-info two-two" style="box-sizing: content-box; display: flex; height: 311px; width: auto;"><div id="body-copy" style="min-height: fit-content;flex-direction: column;font-family: 'Inter';margin-right: 30px;font-style: normal;z-index: 2;font-weight: 400;font-size: 9px;display: flex;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;margin-top: 30px;margin-left: 30px;margin-bottom: 30px;place-content: end space-between;"><div style=""><div id="tag-branding" onclick="toggletagbranding()" style="" class=""></div><h class="project-title" style="">9Tee</h><h2 style="font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 24px;
+/* or 137% */
+letter-spacing: -0.02em;
+font-feature-settings: 'calt' off;
+ 
+/* Primary */
+color: #667080;
+position: relative;
+">2018</h2><h style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;display: flex;" id="body-text">A minimal wordmark and logomark with a short series
+of digital web-based advertisements for
+a customizable print on-demand
+clothing brand.</h></div><a href="/~rad%5cdbr73/Projects/9Tee/" style="margin-top: 30px;width: fit-content;border-radius: 48px;display: flex;margin-bottom: 8px;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border: solid 2px #EEF1F4;margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div></div>
+<div></div></div>
+
+
+<div class="page-3 coding" style="margin-left: calc(100% - 30px); scroll-snap-align: start; margin-top: calc(var(--vh) * -1 + 105px);">
+<div id="project-element" class="three" style="
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+"><div class="temp-main-image" style="background: linear-gradient(0deg, rgb(200, 0, 134) -10%, rgb(0, 47, 200) 110%);
+"><div id="background" style="z-index: 3;position: absolute;width: calc(100% + 6px);height:  calc(100% + 3px);border: 30px solid #fff;pointer-events: none;overflow: hidden;/*! display: none; */border: 30px solid #fff;transform: scale(1) !important;left: -30px;top: -30px;border-bottom-width: 120px;"></div><div class="p5jsprojpicture" style="
+    object-fit: contain;
+    background-image: url(/~rad%5cdbr73/assets/images/877947467dh.png);
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: .25s ease;
+                                                                                       "></div></div><div class="element-info three-three" style="
+    box-sizing: content-box;
+box-sizing: content-box;
+height: fit-content;"><div id="body-copy" style=" min-height: fit-content;flex-direction: column;font-family: 'Inter';margin-right: 30px;font-style: normal;place-content: end;z-index: 2;font-weight: 400;font-size: 9px;place-content: end space-between;display: flex;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;margin-top: 30px;margin-left: 30px;margin-bottom: 30px;height: calc(100% - 60px);"><div><div id="tag-coding" onclick="toggletagcoding()" class=""></div><h class="project-title">Generative Abstract Composition</h><h2 style="font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 24px;
+/* or 137% */
+letter-spacing: -0.02em;
+font-feature-settings: 'calt' off;
+ 
+/* Primary */
+color: #667080;
+">P5.JS</h2><h style="line-height: 24px;letter-spacing: -0.02em;padding-bottom: 0px;
+    height: fit-content;
+ 
+    display: block;
+ 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    flex: auto;font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+ 
+ 
+ 
+    font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;" id="body-text">Utilizing the P5.JS library to create a generative abstract composition using algorithmic forms with careful consideration for aesthetic issues like rhythm, color; precise control of shape, as well as the balance between both organic and geometric forms.</h></div>
+<a href="/~rad%5cdbr73/p5js-clock/" style="margin-top: 30px; width: fit-content; border-radius: 48px; display: flex; margin-bottom: 8px;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border: solid 2px #EEF1F4;margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div></div>
+</div>
+
+
+
+<div class="page-4 coding" style="margin-left: calc(150% - 45px); scroll-snap-align: start; margin-top: calc(var(--vh) * -1 + 105px);">
+<div id="project-element" class="four" style="display: flex; flex-direction: column; height: 533px;"><div style="background: #000;" class="temp-main-image"><div id="background" style="z-index: 3;position: absolute;width: calc(100% + 4px);height:  calc(100% + 4px);border: 30px solid #fff;pointer-events: none;overflow: hidden;/*! display: none; */border: 30px solid #fff;transform: scale(1) !important;left: -30px;top: -31px;border-bottom-width: 120px;"></div><div class="p5clockprojpicture" style="
+    object-fit: contain;
+    --adjacent-container-height; auto;
+    background-image: url(/~rad%5cdbr73/assets/images/23684ryqa.png);
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: .25s ease;
+                                                                                       "></div></div><div class="element-info four-four" style="box-sizing: content-box; display: flex; height: 311px;"><div id="body-copy" style=" min-height: fit-content;flex-direction: column;font-family: 'Inter';margin-right: 30px;font-style: normal;place-content: end;z-index: 2;font-weight: 400;font-size: 9px;place-content: end space-between;display: flex;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;margin-top: 30px;margin-left: 30px;margin-bottom: 30px;"><div><div id="tag-coding" onclick="toggletagcoding()" class=""></div><h class="project-title">24 Hour Clock</h><h2 style="font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 24px;
+/* or 137% */
+letter-spacing: -0.02em;
+font-feature-settings: 'calt' off;
+ 
+/* Primary */
+color: #667080;
+">P5.JS</h2><h style="line-height: 24px;letter-spacing: -0.02em;padding-bottom: 0px;
+    height: fit-content;
+ 
+    display: block;
+ 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    flex: auto;font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+ 
+ 
+ 
+    font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;" id="body-text">A unique conceptual and exceedingly minimalist approach to a clock design where pixel blocks for seconds, minutes, and hours count up following a determined grid system while also progressing through the color spectrum by utilizing the P5.JS library. </h></div>
+<a href="/~rad%5cdbr73/p5js-clock/" style="margin-top: 30px; width: fit-content; border-radius: 48px; display: flex; margin-bottom: 8px;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border: solid 2px #EEF1F4;margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div></div>
+<div></div></div>
+
+
+<div style="margin-left: calc(200% - 60px); scroll-snap-align: start; margin-top: calc(var(--vh) * -1 + 105px);" class="page-5 print">
+<div></div><div id="project-element" class="five" style="display: flex; flex-direction: column; height: 533px;"><div style="background: #000;" class="temp-main-image"><div id="background" style="z-index: 3;position: absolute;width: 100%;height:  100%;border: 30px solid #fff;pointer-events: none;overflow: hidden;display: none;/*! border: 30px solid #fff; */transform: scale(1) !important;left: -29px;top: -29px;border-bottom-width: 120px;"></div><div style="
+    object-fit: contain;
+    --adjacent-container-height; auto;
+    background-image: url(/~rad%5cdbr73/assets/images/3489rufe9w9we.png);
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #859673;
+    transition: .25s ease;
+                                                                                       " class="bookprojpicture"></div></div><div class="element-info five-five" style="box-sizing: content-box; display: flex; height: 311px;"><div id="body-copy" style=" min-height: fit-content;flex-direction: column;font-family: 'Inter';margin-right: 30px;font-style: normal;place-content: end;z-index: 2;font-weight: 400;font-size: 9px;place-content: end space-between;display: flex;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;margin-top: 30px;margin-left: 30px;margin-bottom: 30px;"><div><div id="tag-print" onclick="toggletagprint()" class=""></div><h class="project-title">National Parks of the United States</h><h2 style="font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 24px;
+/* or 137% */
+letter-spacing: -0.02em;
+font-feature-settings: 'calt' off;
+ 
+/* Primary */
+color: #667080;
+">Book</h2><h style="line-height: 24px;letter-spacing: -0.02em;padding-bottom: 0px;
+    height: fit-content;
+ 
+    display: block;
+ 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    flex: auto;font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+  
+
+ 
+    font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;" id="body-text">A book design with careful attention to design
+elements such as typography, heirarchy, layout,
+and color. Includes photography material sourced from National Park Service (NPS).</h></div>
+<a href="" style="margin-top: 30px; width: fit-content; border-radius: 48px; display: flex; margin-bottom: 8px;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border: solid 2px #EEF1F4;margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div></div></div>
+
+
+</main><script src="/~rad%5cdbr73/sai.js"></script><style type="text/css"></style><style type="text/css"></style><style type="text/css"></style><style type="text/css"></style><style type="text/css"></style></body><style type="text/css"></style></html>

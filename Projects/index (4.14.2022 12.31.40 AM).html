@@ -1,0 +1,888 @@
+<!doctype html>
+<html dir="ltr" style="scroll-behavior: smooth;" lang="en-US"><head>
+    <meta charset="utf-8">
+    <title>Daniel Roswadowsky</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"> 
+<script type="text/javascript" src="https://css-tricks.com/examples/HorzScrolling/jquery.mousewheel.js"></script>
+ <style>
+#view_project:hover {
+  background: #EEF1F4;
+}
+#view_project::after {
+  content: "View Project";
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: #6a7586;
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  display: flex;
+  float: left;
+  left: 30px;
+}
+#body-text {
+  height: fit-content;
+}
+#body-copy {
+  margin-bottom: 30px;
+}
+#button1,#button2,#button3 {
+  width: 30px;
+  height: 12px;
+  margin-top: -3.5px;
+  border-radius: 48px;
+  float: right;
+  margin-right: 30px;
+}
+#button1{
+ border: solid 2px #6A7586!important;
+}
+#button1::after {
+  content: "Projects";
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: #6a7586;
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  display: flex;
+}
+  #button2::after {
+  content: "About";
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: #6a7586;
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  flex-direction: row;
+}
+#logo::after {
+  font-family: 'Inter', sans-serif;
+  content: "LOGO";
+  text-align: center;
+  top: 7px;
+  position: relative;
+  text-decoration: none;
+  color: #6a7586;
+}
+body {
+  background-color: #FFFFFF;
+  /*! overflow: hidden; */
+  height: 100vh;
+  /*! padding-right: 30px; */
+  margin: 0;
+}
+.nav-bg{
+  background: white;
+height: 115px;
+margin-bottom: -110px;
+z-index: 1;
+position: absolute;
+width: 100%;
+}
+.desktop-nav {
+  position: relative;
+  z-index: 2;
+  height: 105px;
+  width: 100%;
+  margin: 0 auto;
+}
+.temp-main-image {
+  background: #EEF1F4;
+  height: auto;
+  border: 3px solid #667080;
+  box-sizing: content-box;
+  position: relative;
+  width: 100%;
+}
+.main-image {
+  width: 58vw;
+  height: calc(100vh - 150px);
+  box-sizing: content-box;
+  position: relative;
+  top: 115px;
+  margin-left: 30px;
+}
+.content-main::-webkit-scrollbar {
+    display: none;
+}
+
+.content-main > .page-1, .page-2, .page-3, .page-4{
+  scroll-snap-align: start;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative !important;
+}
+.project-title {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+  font-feature-settings: 'calt' off;
+  color: #4b515b;
+}
+
+#tag-branding::after {
+  content: "Branding";
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10.5px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: #FFFFFF;
+}
+#tag-branding {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 24px;
+  position: absolute;
+  background: #c8c8c8;
+  border-radius: 24px;
+  width: 36px;
+  height: 12px;
+  margin: 6px 0px 24px 0px;
+}
+.floating {  
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, 0px); }    
+}
+
+@keyframes floating2 {
+    from { transform: rotate(270deg) translate(0,  0px); }
+    65%  { transform: rotate(270deg) translate(0, 5px); }
+    to   { transform: rotate(270deg) translate(0, 0px); }    
+}
+
+
+#view_project:active {
+    background-color: #eef1f4;
+    border: solid 2px #667080!important;
+}
+#view_project:hover > .scrolldown{
+    animation-name: floating2;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+
+
+
+
+/*@media screen and (max-width: 900px) {
+.scrolldown {
+ width: 150px!important ;
+}
+}
+
+
+BREAKPOINT WIDTH
+
+629PX
+
+//TWO IMAGES IN VIEW PER SCREEN
+
+H1: 42/48
+H2: 24/30
+BODY: 16/24
+
+3/4
+
+H1: 36/42
+H2: 18/24
+BODY: 14/21
+
+2/3
+
+H1: 28/32
+H2: 16/20
+BODY: 12/16;
+
+
+
+BREAKPOINT WIDTH
+
+849PX
+
+//SINGLE IMAGE IN VIEW PER SCREEN
+
+
+
+BREAKPOINT WIDTH
+
+500PX
+
+//SINGLE IMAGE IN VIEW PER SCREEN // HIDE BODY COPY DESCRIPTION
+
+
+
+BREAKPOINT WIDTH
+
+475PX
+
+//MOBILE NAV HAMBURGER MENU
+
+;
+
+!!!!!!!!!!!!!!!!!!!
+
+
+BREAKPOINT WIDTH
+
+375PX
+
+//FIX VIEW PROJECT CUT OFF
+
+;
+
+!!!!!!!!!!!!!!!!!!!
+
+
+
+*/
+
+
+*/
+
+
+
+
+@media screen and (min-width: 850px) {
+.project-one{
+  margin-top: 30px!important;
+width: fit-content!important;
+border-radius: 48px!important;
+display: flex!important;
+bottom: 68px!important;
+position: unset!important;
+}
+}
+
+@media screen and (max-width: 600px) {
+.content-main > .page-1, .page-2, .page-3, .page-4 {
+  scroll-snap-align: start;
+  width: 100%!important;
+  position: relative!important;
+}
+.page-2{
+  margin-left: 100vw!important;
+}
+.page-3{
+  margin-left: 200vw!important;
+}
+.page-4{
+  margin-left: 300vw!important;
+}
+.project-title {
+  font-size: 28px !important;
+  line-height: 32px !important;
+}
+#button1::after, #button2::after, #button3::after {
+  font-size: 12px !important;
+  letter-spacing: 0.01em !important;
+  font-weight: 600 !important;
+}
+#button1, #button2 {
+  padding: 12px 36px !important;
+  margin-top: 2.5px;
+}
+h2{
+  font-size: 16px!important;
+  line-height: 20px!important;
+}
+#body-text {
+ font-size: 12px!important;
+ line-height:16px!important;
+}
+}
+@media screen and (min-width: 849px) and (max-width: 1200px) {
+#button1::after, #button2::after, #button3::after {
+  font-size: 14px !important;
+  letter-spacing: 0.01em !important;
+  font-weight: 600 !important;
+}
+#button1, #button2{
+  padding: 15px 45px!important;
+}
+}
+h2 {
+  margin: 6px 0 0 0;
+}
+.element-info {
+  margin-top: -3px;
+}
+@media screen and (min-width: 1350px) {
+#button1,#button2,#button3 {
+  padding: 18px 55px !important;
+}
+}
+@media screen and (max-width: 499px) and (max-height: 650px) {
+#body-text {
+  display: none!important;
+}
+}
+@media screen and (max-height: 599px) and (min-width: 999px) {
+#body-text{
+  display: none!important;
+}
+#view_project {
+  margin-top: 5px !important;
+}
+#body-text {
+  margin-top: 0px!important
+}
+}
+@media screen and (max-width: 390px) {
+#body-text{
+  display: none!important;
+}
+#view_project {
+  margin-top: 5px !important;
+}
+#body-text {
+  margin-top: 0px!important
+}
+}
+*, ::before, ::after {
+  box-sizing: unset;
+}
+@media screen and (max-height: 699px) {
+.project-title {
+  font-size: 28px !important;
+  line-height: 32px !important;
+}
+h2{
+  font-size: 16px!important;
+  margin: 3px 0 0 0!important;
+  line-height: 20px!important;
+}
+#body-text {
+ font-size: 14px!important;
+ line-height:21px!important;
+ margin-top: 12px!important;
+}
+}
+@media screen and (max-height: 849px) and (min-height: 700px) {
+.project-title {
+  font-size: 36px !important;
+  line-height: 42px !important;
+}
+h2{
+  font-size: 18px!important;
+  margin: 3px 0 0 0!important;
+  line-height: 24px!important;
+}
+#body-text {
+ font-size: 14px!important;
+ line-height:21px!important;
+ margin-top: 12px!important;
+}
+}
+@media screen and (min-height: 750px) and (min-width: 850px) and (max-width: 1200px) {
+.project-title {
+  font-size: 36px !important;
+  line-height: 42px !important;
+}
+h2{
+  margin: 3px 0 0 0!important;
+  font-size: 18px!important;
+  line-height: 24px!important;
+}
+#body-text {
+ font-size: 14px!important;
+ line-height:21px!important;
+ margin-top: 12px!important;
+}
+}
+@media screen and (max-height: 700px) and (max-width: 1000px) {
+.project-title {
+  font-size: 28px !important;
+  line-height: 32px !important;
+}
+.project-one{
+  margin-top: 30px!important;
+width: fit-content!important;
+border-radius: 48px!important;
+display: flex!important;
+bottom: 68px!important;
+position: static!important;
+}
+.content-main > .page-1, .page-2, .page-3, .page-4 {
+  scroll-snap-align: start;
+  width: calc(100% - 60px) !important;
+  position: relative!important;
+}
+.desktop-nav{
+  position: inherit!important;
+}
+.content-main{
+  position: inherit!important;
+  margin: 0!important;
+}
+.page-2{
+  margin-left: 100vw!important;
+}
+.page-3{
+  margin-left: 200vw!important;
+}
+.page-4{
+  margin-left: 300vw!important;
+}
+h2{
+  font-size: 16px!important;
+  line-height: 20px!important;
+}
+#body-text {
+ font-size: 12px!important;
+ line-height:16px!important;
+
+}
+.one{
+  height: inherit!important;
+}
+}
+@media screen and (max-width: 849px){
+.project-title {
+  font-size: 28px !important;
+  line-height: 32px !important;
+}
+.content-main > .page-1, .page-2, .page-3, .page-4 {
+  scroll-snap-align: start;
+  width: calc(100% - 60px) !important;
+  position: relative!important;
+}
+.page-2{
+  margin-left: 100vw!important;
+}
+.page-3{
+  margin-left: 200vw!important;
+}
+.page-4{
+  margin-left: 300vw!important;
+}
+h2{
+  font-size: 16px!important;
+  line-height: 20px!important;
+    margin: 3px 0 0 0!important;
+}
+#body-text {
+ font-size: 12px!important;
+ line-height:16px!important;
+ margin-top: 12px!important
+}
+.one{
+  height: inherit!important;
+}
+.desktop-nav{
+  position: inherit!important;
+}
+.content-main{
+  position: inherit!important;
+  margin: 0!important;
+}
+}
+
+
+/*
+////////////////////////////////
+/////////////////////////////////
+
+ART DIRECTION
+
+//////////////////////////////
+////////////////////////////////
+*/
+
+@media screen  and (min-height: 900px) and (min-width: 1800px) {
+.p5jsprojpicture {
+      background-image: url(/~rad%5cdbr73/assets/images/464684457805858.png)!important;
+      background-size: cover!important;
+    }
+  }
+
+/*
+////////////////////////////////
+/////////////////////////////////
+//////////////////////////////
+////////////////////////////////
+*/
+
+.element-info {
+  margin-top: -3px;
+  margin-bottom: 30px !important;
+  /*! height: fit-content; */
+}
+@media screen and (min-width: 1350px) {
+#button1,#button2,#button3 {
+  padding: 18px 55px !important;
+}
+}
+*, ::before, ::after {
+  box-sizing: unset;
+}
+#button1,#button2,#button3 {
+  width: 30px;
+  height: 12px;
+  /* margin-top: 38px; */
+  border-radius: 48px;
+  float: right;
+  margin-right: 30px;
+}
+#button1::after {
+  content: "Projects";
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: #6a7586;
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  display: flex;
+}
+  #button2::after {
+  content: "About";
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: #6a7586;
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  flex-direction: row;
+}
+#logo::after {
+  font-family: 'Inter', sans-serif;
+    content: "LOGO";
+    text-align: center;
+    top: 7px;
+
+  position: relative;
+}
+body {
+  background-color: #FFFFFF;
+  overflow: hidden;
+  height: -webkit-fill-available;
+  min-height: 100%;
+  /*! padding-right: 30px; */
+  margin: 0;
+  position: inherit;
+}
+
+/*.main-image {
+  width: 58vw;
+  height: calc(100vh - 157px);
+  background: #EEF1F4;
+  border: 3px solid #667080;
+  box-sizing: content-box;
+  position: relative;
+  top: calc(60px - -3.75vw);
+  margin-left: 30px;
+}
+*/
+.nav-bg{
+  background: white;
+height: 115px;
+margin-bottom: -110px;
+z-index: 1;
+position: absolute;
+width: 100%;
+}
+.desktop-nav {
+    position: fixed;
+    z-index: 2;
+    height: 45px;
+    padding: 30px;width: 100%;
+    margin: 0px 0px 0px -30px;
+}
+.temp-main-image {
+}
+.main-image {
+  width: 58vw;
+  height: calc(100vh - 150px);
+  box-sizing: content-box;
+  position: relative;
+  top: 115px;
+  margin-left: 30px;
+}
+.content-main {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;scroll-behavior: smooth; 
+  max-height: calc(100vh - 105px);
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  min-height: auto;
+  margin: 105px 0 0 0;
+  position: fixed;
+  width: 100%;
+}
+.content-main::-webkit-scrollbar {
+    display: none;
+}
+
+.content-main > .page-1, .page-2, .page-3, .page-4{
+  scroll-snap-align: start;
+  width: calc(50% - 45px);
+  height: calc(100vh - 105px);
+  display: flex;
+  flex-direction: column;
+  position: relative !important;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.project-title {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+  font-feature-settings: 'calt' off;
+  color: #4b515b;
+}
+
+#tag-branding::after {
+  content: "Branding";
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10.5px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: #FFFFFF;
+}
+#tag-branding {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 24px;
+  position: absolute;
+  background: #c8c8c8;
+  border-radius: 24px;
+  width: 36px;
+  height: 12px;
+  margin: 6px 0px 24px 0px;
+}
+.floating {  
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#button1:active, #button2:active {
+    background-color: #eef1f4;
+    border: solid 2px #667080!important;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, 0px); }    
+}
+
+#body-text {
+    max-width: 95%;
+    margin-top: 18px;
+}
+
+
+</style></head>
+
+  <body onresize="getHeight()">
+<div class="desktop-nav">
+
+<div style="background: white;height: 105px;top: 0;width: 100%;position: absolute;"></div><a href="/~rad%5cdbr73/splash-exercise/"> <div id="logo" style="width: 150px;height: 45px;background: #FFFFFF;border: 3px solid #667080;box-sizing: border-box;left: 0px;right: 0;top: 0px;bottom: 60px;border: 1px solid #667080;/*! =============== breakpoint 1150px W ===============*/position: fixed;border: 1px solid #667080;margin-left: 30px;margin-top: 30px;content: &quot;LOGO&quot;;font-size: 24px;text-align: center;"></div></a><div id="button1" style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;/*! background: #EEF1F4; */position: relative;flex: none;order: 0;flex-grow: 0;border: solid 2px #EEF1F4;margin-right: 30px;"></div><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: absolute;/*! background: #EEF1F4; */border-radius: 24px;position: relative;flex: none;order: 0;flex-grow: 0;border: solid 2px #EEF1F4;" id="button2"></div></div>
+<main class="content-main" onresize="reorder()">
+<div class="page-1" style="">
+<div id="project-element" class="one" style="display: flex; flex-direction: row; height: 394px;"><div style="background: #ffff;" class="temp-main-image"><div class="BTprojpicture" style="
+    object-fit: contain;
+    --adjacent-container-height; auto;
+    background-image: url(/~rad%5cdbr73/assets/images/3240880DWE.png);
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+                                                                                       "></div></div></div><div class="element-info one-one" style="border: 3px solid rgb(102, 112, 128); box-sizing: content-box; display: flex; height: 408px;"><div id="body-copy" style="min-height: fit-content;flex-direction: column;font-family: 'Inter';margin-right: 30px;font-style: normal;z-index: 2;font-weight: 400;font-size: 9px;display: flex;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;margin-top: 30px;margin-left: 30px;margin-bottom: 30px;place-content: end space-between;"><div style=""><h class="project-title" style="">Bullseye Tracker</h><h2 style="font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 24px;
+/* or 137% */
+letter-spacing: -0.02em;
+font-feature-settings: 'calt' off;
+
+/* Primary */
+color: #667080;
+position: relative;
+">2019</h2><h style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;display: flex;" id="body-text">BullseyeTracker is a web-based scoring application that simplifies all the challenges involved in Bullseye Pistol Leagues. Following the brand’s philosophy, I created a minimal wordmark and logomark which would reflect their goals and values of simplicity and ease of use.</h></div><a href="/~rad%5cdbr73/untitled.html" style="margin-top: 30px;width: fit-content;border-radius: 48px;display: flex;margin-bottom: 8px;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border: solid 2px #EEF1F4;margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div>
+<div></div></div><div class="page-2" style="margin-left: calc(50vw - 15px);scroll-snap-align: start;margin-top: calc(-100vh + 105px);">
+<div id="project-element" class="two" style="
+    display: flex;
+    flex-direction: row;
+    height: inherit;
+"><div class="temp-main-image" style="background: linear-gradient(0deg, rgb(200, 0, 134) -10%, rgb(0, 47, 200) 110%);
+"><div class="p5jsprojpicture" style="
+    object-fit: contain;
+    background-image: url(/~rad%5cdbr73/assets/images/877947467dh.png);
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+                                                                                       "></div></div></div><div class="element-info two-two" style="
+    border: 3px solid #667080;
+    box-sizing: content-box;
+    DISPLAY: inline-table;
+"><div id="body-copy" style="min-height: fit-content;flex-direction: column;font-family: 'Inter';margin-right: 30px;font-style: normal;z-index: 2;font-weight: 400;font-size: 9px;display: flex;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;margin-top: 30px;margin-left: 30px;margin-bottom: 30px;"><h class="project-title">Generative Abstract Composition</h><h2 style="font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 24px;
+/* or 137% */
+letter-spacing: -0.02em;
+font-feature-settings: 'calt' off;
+
+/* Primary */
+color: #667080;
+">P5.JS</h2><h style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;" id="body-text">Utilizing the P5.JS library to create a generative
+abstract composition using algorithmic forms
+with careful consideration for aesthetic issues
+like rhythm, color; precise control of shape,
+as well as the balance between both
+organic and geometric forms.</h><a href="/~rad%5cdbr73/" style="margin-top: 30px;width: fit-content;border-radius: 48px;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border: solid 2px #EEF1F4;margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div>
+</div><div class="page-3" style="margin-left: calc(100% - 30px); scroll-snap-align: start; margin-top: calc(-100vh + 105px);">
+<div id="project-element" class="three" style="display: flex; flex-direction: row; height: 394px;"><div style="background: #000;" class="temp-main-image"><div class="p5clockprojpicture" style="
+    object-fit: contain;
+    --adjacent-container-height; auto;
+    background-image: url(/~rad%5cdbr73/assets/images/23684ryqa.png);
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+                                                                                       "></div></div></div><div class="element-info three-three" style="border: 3px solid rgb(102, 112, 128); box-sizing: content-box; display: flex; height: 408px;"><div id="body-copy" style="height: -webkit-fill-available; min-height: fit-content;flex-direction: column;font-family: 'Inter';margin-right: 30px;font-style: normal;place-content: end;z-index: 2;font-weight: 400;font-size: 9px;place-content: end space-between;display: flex;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;margin-top: 30px;margin-left: 30px;margin-bottom: 30px;"><div><h class="project-title">24 Hour Clock</h><h2 style="font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 24px;
+/* or 137% */
+letter-spacing: -0.02em;
+font-feature-settings: 'calt' off;
+
+/* Primary */
+color: #667080;
+">P5.JS</h2><h style="line-height: 24px;letter-spacing: -0.02em;padding-bottom: 0px;
+    height: fit-content;
+    
+    display: block;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    flex: auto;font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    
+    
+    
+    font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;" id="body-text">A unique conceptual and exceedingly minimalist approach to a clock design where pixel blocks for seconds, minutes, and hours count up following a determined grid system while also progressing through the color spectrum by utilizing the P5.JS library. </h></div>
+<a href="/~rad%5cdbr73/p5js-clock/" style="margin-top: 30px; width: fit-content; border-radius: 48px; display: flex; margin-bottom: 8px;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border: solid 2px #EEF1F4;margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div>
+<div></div></div><div style="margin-left: calc(150% - 45px); scroll-snap-align: start; margin-top: calc(-100vh + 105px);" class="page-4">
+<div id="project-element" class="four" style="display: flex; flex-direction: row; height: 394px;"><div style="background: #000;" class="temp-main-image"><div class="p5clockprojpicture" style="
+    object-fit: contain;
+    --adjacent-container-height; auto;
+    background-image: url(/~rad%5cdbr73/assets/images/23684ryqa.png);
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+                                                                                       "></div></div></div><div class="element-info four-four" style="border: 3px solid rgb(102, 112, 128); box-sizing: content-box; display: flex; height: 408px;"><div id="body-copy" style="height: -webkit-fill-available; min-height: fit-content;flex-direction: column;font-family: 'Inter';margin-right: 30px;font-style: normal;place-content: end;z-index: 2;font-weight: 400;font-size: 9px;place-content: end space-between;display: flex;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;margin-top: 30px;margin-left: 30px;margin-bottom: 30px;"><div><h class="project-title">24 Hour Clock</h><h2 style="font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 24px;
+/* or 137% */
+letter-spacing: -0.02em;
+font-feature-settings: 'calt' off;
+
+/* Primary */
+color: #667080;
+">P5.JS</h2><h style="line-height: 24px;letter-spacing: -0.02em;padding-bottom: 0px;
+    height: fit-content;
+    
+    display: block;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    flex: auto;font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    
+    
+    
+    font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;" id="body-text">A unique conceptual and exceedingly minimalist approach to a clock design where pixel blocks for seconds, minutes, and hours count up following a determined grid system while also progressing through the color spectrum by utilizing the P5.JS library. </h></div>
+<a href="/~rad%5cdbr73/p5js-clock/" style="margin-top: 30px; width: fit-content; border-radius: 48px; display: flex; margin-bottom: 8px;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border: solid 2px #EEF1F4;margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div>
+<div></div></div></main><script src="/~rad%5cdbr73/sai.js"></script></body></html>

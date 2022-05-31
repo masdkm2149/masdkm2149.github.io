@@ -138,16 +138,9 @@
  width: 150px!important ;
 }
 }
-
-
 BREAKPOINT WIDTH
-
 1150PX
-
 !!!!!!!!!!!!!!!!!!!
-
-
-
 */
 
 @media screen and (max-width: 1500px) {
@@ -445,7 +438,6 @@ line-height: 24px;
 /* or 137% */
 letter-spacing: -0.02em;
 font-feature-settings: 'calt' off;
-
 /* Primary */
 color: #667080;
 margin: 6px 0 0 0;
@@ -494,10 +486,9 @@ position: relative;
 console.log(y);
 console.log(window.innerHeight * 7)
 /*console.log($(document).height() * 7);
-
 */
 if (y > window.innerHeight * 3.75) {
-            document.querySelector('.scrolldown').style.display='none';t
+            document.querySelector('.scrolldown').style.display='none'; 
         }
         else {
             document.querySelector('.scrolldown').style.display='block';
@@ -512,14 +503,6 @@ document.getElementsByClassName('content-main')[0].scrollTop +=8;
 
 window.addEventListener('resize', function(event) {
     reorder();
-    
-          document.querySelector('#defaultCanvas0').style.setProperty('width', '100%!important');
-          document.querySelector('#defaultCanvas0').style.setProperty('height', 'auto');
-    #defaultCanvas0 {
-  width: 100%!important;
-  height: auto;
-}
-      
 }, true);
 
 
@@ -528,5 +511,14 @@ window.onresize = reorder();
 
                        document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
 
+
+  function reorder(){
+document.getElementsByClassName('content-main')[0].scrollTop +=8;
+                       document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
+}
+
+window.addEventListener('resize', function(event) {
+    reorder();
+}, true);
 
 </script><style type="text/css"></style><style type="text/css"></style></body></html>

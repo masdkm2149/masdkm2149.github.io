@@ -497,7 +497,7 @@ console.log(window.innerHeight * 7)
 
 */
 if (y > window.innerHeight * 3.75) {
-            document.querySelector('.scrolldown').style.display='none'; 
+            document.querySelector('.scrolldown').style.display='none';t
         }
         else {
             document.querySelector('.scrolldown').style.display='block';
@@ -512,6 +512,14 @@ document.getElementsByClassName('content-main')[0].scrollTop +=8;
 
 window.addEventListener('resize', function(event) {
     reorder();
+    
+          document.querySelector('#defaultCanvas0').style.setProperty('width', '100%!important');
+          document.querySelector('#defaultCanvas0').style.setProperty('height', 'auto');
+    #defaultCanvas0 {
+  width: 100%!important;
+  height: auto;
+}
+      
 }, true);
 
 
@@ -520,14 +528,5 @@ window.onresize = reorder();
 
                        document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
 
-
-  function reorder(){
-document.getElementsByClassName('content-main')[0].scrollTop +=8;
-                       document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
-}
-
-window.addEventListener('resize', function(event) {
-    reorder();
-}, true);
 
 </script><style type="text/css"></style><style type="text/css"></style></body></html>

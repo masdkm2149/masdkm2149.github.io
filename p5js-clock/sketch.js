@@ -1431,4 +1431,5 @@ function secondBlocks20() {
   fill(second() * 6 % 360, 100, 100);
   square(windowWidth / 2 - 114, windowHeight / 2 -29.2, 20);
   pop();
+}
 }, true);

@@ -8,20 +8,7 @@ window.addEventListener('resize', function(event) {
 h = window.innerHeight;  
 	console.log(w + " " + h)
   createCanvas(w, h);	
-	var multiplicator = 1
-background(0, 0, 0);
-  colorMode(HSB);
-  let i = 1;
-  //
-  push();
-  HOURS();
-  pop();
-  push();
-  MINUTES();
-  pop();
-  push();
-  SECONDS();
-  pop();
+  draw();
 }, true);
 function setup() {
   canvas=createCanvas(w, h);

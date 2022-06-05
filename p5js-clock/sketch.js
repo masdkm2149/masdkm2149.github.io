@@ -720,6 +720,7 @@ window.addEventListener('resize', function(event) {
   // assigns new values for width and height variables
   w = window.innerWidth;
 h = window.innerHeight;  
+	console.log(w + " " + h)
 function setup() {
   canvas=createCanvas(w, h);	
 	canvas.size(w,h);

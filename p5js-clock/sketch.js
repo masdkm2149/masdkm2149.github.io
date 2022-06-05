@@ -1,7 +1,7 @@
 
 var w = window.innerWidth;
 var h = window.innerHeight;  
-var multiplicator = 1.5
+var multiplicator = 1.5;
 
 window.addEventListener('resize', function(event) {
   // assigns new values for width and height variables
@@ -9,7 +9,7 @@ window.addEventListener('resize', function(event) {
 h = window.innerHeight;  
 	console.log(w + " " + h)
   createCanvas(w, h);	
-	let multiplicator = 1
+	let multiplicator = 1;
   draw();
 }, true);
 function setup() {

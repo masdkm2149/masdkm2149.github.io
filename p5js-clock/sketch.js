@@ -721,6 +721,5 @@ window.addEventListener('resize', function(event) {
   w = window.innerWidth;
 h = window.innerHeight;  
 	console.log(w + " " + h)
-  canvas=createCanvas(w, h);	
-	canvas.size(w,h);
+  createCanvas(w, h);	
 }, true);

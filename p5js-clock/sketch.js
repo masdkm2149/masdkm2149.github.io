@@ -719,6 +719,9 @@ function secondBlocks20() {
 window.onresize = function() {
   // assigns new values for width and height variables
   w = window.innerWidth;
-  h = window.innerHeight;  
-  canvas.size(w,h);
+h = window.innerHeight;  
+function setup() {
+  canvas=createCanvas(w, h);	
+	canvas.size(w,h);
+}
 }

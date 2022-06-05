@@ -716,7 +716,7 @@ function secondBlocks20() {
   pop();
 }
 
-window.onresize = function() {
+window.addEventListener('resize', function(event) {
   // assigns new values for width and height variables
   w = window.innerWidth;
 h = window.innerHeight;  
@@ -724,4 +724,4 @@ function setup() {
   canvas=createCanvas(w, h);	
 	canvas.size(w,h);
 }
-}
+}, true);

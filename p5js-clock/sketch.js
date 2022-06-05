@@ -2,10 +2,32 @@
 var w = window.innerWidth;
 var h = window.innerHeight;  
 
+window.addEventListener('resize', function(event) {
+  // assigns new values for width and height variables
+  w = window.innerWidth;
+h = window.innerHeight;  
+	console.log(w + " " + h)
+  createCanvas(w, h);	
+	var multiplicator = 1
+background(0, 0, 0);
+  colorMode(HSB);
+  let i = 1;
+  //
+  push();
+  HOURS();
+  pop();
+  push();
+  MINUTES();
+  pop();
+  push();
+  SECONDS();
+  pop();
+}, true);
 function setup() {
   canvas=createCanvas(w, h);
 }
 var multiplicator = 1.5
+
 
 function draw() {
   background(0, 0, 0);
@@ -716,24 +738,4 @@ function secondBlocks20() {
   pop();
 }
 
-window.addEventListener('resize', function(event) {
-  // assigns new values for width and height variables
-  w = window.innerWidth;
-h = window.innerHeight;  
-	console.log(w + " " + h)
-  createCanvas(w, h);	
-	var multiplicator = 1
-background(0, 0, 0);
-  colorMode(HSB);
-  let i = 1;
-  //
-  push();
-  HOURS();
-  pop();
-  push();
-  MINUTES();
-  pop();
-  push();
-  SECONDS();
-  pop();
-}, true);
+

@@ -10,7 +10,7 @@ h = window.innerHeight;
 	console.log(w + " " + h)
 	  createCanvas(w, h);	
   draw();
-document.querySelector("body").style.setProperty('transform', 'scale('+ w*.00015 +')');
+document.querySelector("body").style.setProperty('transform', 'scale('+ w*.0005 +')');
 }, true);
 function setup() {
   canvas=createCanvas(w, h);

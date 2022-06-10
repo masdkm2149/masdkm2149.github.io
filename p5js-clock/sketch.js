@@ -10,9 +10,10 @@ h = window.innerHeight;
 document.querySelector("body").style.setProperty('transform', 'scale('+ w*.0005 +')');
 	console.log(w + " " + h);
 	  
-	  if (w < 600) {createCanvas(w*3, h);}
+	  if (w < 600) {createCanvas(w*3, h); document.querySelector("body").style.setProperty('left', 'calc(-30% + 20px);');}
 	else{
 	createCanvas(w*2, h);
+		document.querySelector("body").style.setProperty('left', 'calc(-60% + 250px);');
 	}
 		  draw();
 }, true);

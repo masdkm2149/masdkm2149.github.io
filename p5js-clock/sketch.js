@@ -9,7 +9,7 @@ window.addEventListener('resize', function(event) {
 h = window.innerHeight;
 document.querySelector("body").style.setProperty('transform', 'scale('+ w*.0005 +')');
 	console.log(w + " " + h);
-	  createCanvas(w, h);
+	  createCanvas(w*4, h*4);
 		  draw();
 }, true);
 function setup() {

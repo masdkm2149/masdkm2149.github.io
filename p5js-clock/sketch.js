@@ -20,7 +20,8 @@ function draw() {
   background(0, 0, 0);
   colorMode(HSB);
   let i = 1;
-			if (w < 1100) { translate(w/2, 0); }
+			if (w <= 800 || w > 600) { translate(w/2, 0); }
+	                if (w < 1100 || w > 800) { translate(w/3, 0); }
 //	if (w >= 1000) { translate(w/6, 0); }
   push();
   HOURS();

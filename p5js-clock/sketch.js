@@ -30,7 +30,7 @@ function draw() {
   background(0, 0, 0);
   colorMode(HSB);
   let i = 1;
-  //
+  translate(135, 0);
   push();
   HOURS();
   pop();

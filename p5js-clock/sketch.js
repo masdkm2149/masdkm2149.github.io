@@ -9,7 +9,11 @@ window.addEventListener('resize', function(event) {
 h = window.innerHeight;
 document.querySelector("body").style.setProperty('transform', 'scale('+ w*.0005 +')');
 	console.log(w + " " + h);
-	  createCanvas(w*2, h);
+	  
+	  if (w < 600) {createCanvas(w*2, h);}
+	else{
+	createCanvas(w*2, h);
+	}
 		  draw();
 }, true);
 function setup() {
@@ -21,6 +25,7 @@ function draw() {
   colorMode(HSB);
   let i = 1;
 			if (w <= 800 || w > 600) { translate(w/3, 0); }
+		        if (w < 600) { translate(w/5*-1, 0); }
 	                if (w < 1100 || w > 800) { translate(w/5, 0); }
 //	if (w >= 1000) { translate(w/6, 0); }
   push();

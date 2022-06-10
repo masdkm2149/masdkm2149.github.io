@@ -18,7 +18,7 @@ h = window.innerHeight;
 document.querySelector("body").style.setProperty('transform', 'scale('+ w*.0005 +')');
 }, true);
 function setup() {
-	if w > 1200 {
+	if window.innerWidth > 1200 {
   canvas=createCanvas(w, h);
 	}
 	else{ canvas=createCanvas(1200, h); }

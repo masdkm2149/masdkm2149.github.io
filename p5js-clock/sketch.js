@@ -7,7 +7,7 @@ window.addEventListener('resize', function(event) {
   // assigns new values for width and height variables
   w = window.innerWidth;
 h = window.innerHeight;  
-	console.log(w + " " + h)
+	console.log(w + " " + h);
 		if w < 1200 {
 	  createCanvas(1200, h);
 		}
@@ -21,9 +21,7 @@ function setup() {
 	if w > 1200 {
   canvas=createCanvas(w, h);
 	}
-	else if w < 1200 {
-  canvas=createCanvas(1200, h);
-	}
+	else{ canvas=createCanvas(1200, h); }
 }
 
 

@@ -8,9 +8,7 @@ window.addEventListener('resize', function(event) {
   w = window.innerWidth;
 h = window.innerHeight;  
 	console.log(w + " " + h)
-  createCanvas(w, h);	
-	let multiplicator = 1;
-  draw();
+document.querySelector("main").style.setProperty('transform', 'scale('+ w*.01 +')');
 }, true);
 function setup() {
   canvas=createCanvas(w, h);

@@ -10,7 +10,7 @@ h = window.innerHeight;
 document.querySelector("body").style.setProperty('transform', 'scale('+ w*.0005 +')');
 	console.log(w + " " + h);
 	  
-	  if (w < 600) {createCanvas(w*2, h);}
+	  if (w < 600) {createCanvas(w*3, h);}
 	else{
 	createCanvas(w*2, h);
 	}
@@ -25,7 +25,7 @@ function draw() {
   colorMode(HSB);
   let i = 1;
 			if (w <= 800 || w > 600) { translate(w/3, 0); }
-		        if (w < 600) { translate(w/5*-1, 0); }
+		        if (w < 600) { translate(w/3*-1, 0); }
 	                if (w < 1100 || w > 800) { translate(w/5, 0); }
 //	if (w >= 1000) { translate(w/6, 0); }
   push();

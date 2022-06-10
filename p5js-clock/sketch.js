@@ -6,7 +6,8 @@ var multiplicator = 1.5;
 window.addEventListener('resize', function(event) {
   // assigns new values for width and height variables
   w = window.innerWidth;
-h = window.innerHeight;  
+h = window.innerHeight;
+document.querySelector("body").style.setProperty('transform', 'scale('+ w*.0005 +')');
 	console.log(w + " " + h);
 		if w < 1200 {
 	  createCanvas(1200, h);
@@ -14,12 +15,11 @@ h = window.innerHeight;
 		else {
 	  createCanvas(w, h);
 		}
-  draw();
-document.querySelector("body").style.setProperty('transform', 'scale('+ w*.0005 +')');
+		  draw();
 }, true);
 function setup() {
 	if window.innerWidth > 1200 {
-  canvas=createCanvas(w, h);
+  canvas=createCanvas(window.innerWidth, h);
 	}
 	else{ canvas=createCanvas(1200, h); }
 }

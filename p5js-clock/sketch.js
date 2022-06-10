@@ -11,7 +11,7 @@ h = window.innerHeight;
 		if w < 1200 {
 	  createCanvas(1200, h);
 		}
-			if w > 1200 {
+		else {
 	  createCanvas(w, h);
 		}
   draw();
@@ -21,7 +21,7 @@ function setup() {
 	if w > 1200 {
   canvas=createCanvas(w, h);
 	}
-	if w < 1200 {
+	else if w < 1200 {
   canvas=createCanvas(1200, h);
 	}
 }

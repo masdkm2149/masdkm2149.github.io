@@ -13,13 +13,8 @@ document.querySelector("body").style.setProperty('transform', 'scale('+ w*.0005 
 		  draw();
 }, true);
 function setup() {
-	if (window.innerWidth > 1200) {
   canvas=createCanvas(window.innerWidth, h);
-	}
-	else{ canvas=createCanvas(1200, h); }
 }
-
-
 
 function draw() {
   background(0, 0, 0);

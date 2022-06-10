@@ -8,12 +8,22 @@ window.addEventListener('resize', function(event) {
   w = window.innerWidth;
 h = window.innerHeight;  
 	console.log(w + " " + h)
-	  createCanvas(1200, h);	
+		if w < 1200 {
+	  createCanvas(1200, h);
+		}
+			if w > 1200 {
+	  createCanvas(w, h);
+		}
   draw();
 document.querySelector("body").style.setProperty('transform', 'scale('+ w*.0005 +')');
 }, true);
 function setup() {
+	if w > 1200 {
+  canvas=createCanvas(w, h);
+	}
+	if w < 1200 {
   canvas=createCanvas(1200, h);
+	}
 }
 
 

@@ -12,7 +12,11 @@ document.querySelector("body").style.setProperty('transform', 'scale('+ w*.00051
 	  
 	  if (w < 600) {createCanvas(w*3, h*1.2); document.querySelector("body").style.setProperty('left', 'calc(-45% + 80px)');}
 	else{
-	createCanvas(w*2, h*1.1);
+			  if (h > 900) {
+	createCanvas(w*2, h); }
+		else  {
+			createCanvas(w*2, h*1.1); }
+		}
 		document.querySelector("body").style.setProperty('left','calc(-52% + 210px)');
 	}
 		  draw();
@@ -23,7 +27,11 @@ function setup() {
 	
   if (w < 600) {createCanvas(w*3, h*1.2); document.querySelector("body").style.setProperty('left', 'calc(-45% + 80px)');}
 	else{
-	createCanvas(w*2, 1.1*h);
+			  if (h > 900) {
+	createCanvas(w*2, h); }
+		else  {
+			createCanvas(w*2, h*1.1); }
+		}
 		document.querySelector("body").style.setProperty('left','calc(-52% + 210px)');
 	}
 }

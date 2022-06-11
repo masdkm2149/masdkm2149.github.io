@@ -26,13 +26,10 @@ function setup() {
 	
   if (w < 600) {createCanvas(w*3, h*1.2); document.querySelector("body").style.setProperty('left', 'calc(-45% + 80px)');}
 	else{
-			  if (h > 900) {
-	createCanvas(w*2, h); }
-		else  {
-			createCanvas(w*2, h*1.1); }
-		}
 		document.querySelector("body").style.setProperty('left','calc(-52% + 210px)');
-	}
+		if (h > 900) {createCanvas(w*2, h); }
+		else  {createCanvas(w*2, h*1.1); }
+           }
 }
 
 function draw() {

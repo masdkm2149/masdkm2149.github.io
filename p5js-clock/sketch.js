@@ -28,6 +28,8 @@ function setup() {
 }
 
 function draw() {
+document.querySelector("body").style.setProperty('transform', 'scale('+ w*.00052 +')');
+	
   background(0, 0, 0);
   colorMode(HSB);
   let i = 1;

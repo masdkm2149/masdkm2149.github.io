@@ -10,19 +10,19 @@ h = window.innerHeight;
 document.querySelector("body").style.setProperty('transform', 'scale('+ w*.00051 +')');
 	console.log(w + " " + h);
 	  
-	  if (w < 600) {createCanvas(w*3, h); document.querySelector("body").style.setProperty('left', 'calc(-30% + 20px)');}
+	  if (w < 600) {createCanvas(w*3, h*1.2); document.querySelector("body").style.setProperty('left', 'calc(-30% + 20px)');}
 	else{
-	createCanvas(w*2, h);
+	createCanvas(w*2, h*1.1);
 		document.querySelector("body").style.setProperty('left','calc(-60% + 250px)');
 	}
 		  draw();
 }, true);
 function setup() {
- document.querySelector("body").style.setProperty('transform', 'scale('+ w*.00051 +')');
+ document.querySelector("body").style.setProperty('transform', 'scale('+ w*.00052 +')');
 	
-  if (w < 600) {createCanvas(w*3, h); document.querySelector("body").style.setProperty('left', 'calc(-30% + 20px)');}
+  if (w < 600) {createCanvas(w*3, h*1.2); document.querySelector("body").style.setProperty('left', 'calc(-30% + 20px)');}
 	else{
-	createCanvas(w*2, h);
+	createCanvas(w*2, 1.1*h);
 		document.querySelector("body").style.setProperty('left','calc(-60% + 250px)');
 	}
 }

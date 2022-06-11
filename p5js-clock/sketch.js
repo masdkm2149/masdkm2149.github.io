@@ -16,7 +16,6 @@ document.querySelector("body").style.setProperty('transform', 'scale('+ w*.00051
 	createCanvas(w*2, h); }
 		else  {
 			createCanvas(w*2, h*1.1); }
-		}
 		document.querySelector("body").style.setProperty('left','calc(-52% + 210px)');
 	}
 		  draw();

@@ -18,6 +18,8 @@ document.querySelector("body").style.setProperty('transform', 'scale('+ w*.0005 
 		  draw();
 }, true);
 function setup() {
+ document.querySelector("body").style.setProperty('transform', 'scale('+ w*.0005 +')');
+	
   if (w < 600) {createCanvas(w*3, h); document.querySelector("body").style.setProperty('left', 'calc(-30% + 20px)');}
 	else{
 	createCanvas(w*2, h);

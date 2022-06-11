@@ -18,7 +18,8 @@ document.querySelector("body").style.setProperty('transform', 'scale('+ w*.00051
 		  draw();
 }, true);
 function setup() {
- document.querySelector("body").style.setProperty('transform', 'scale('+ w*.00052 +')');
+   if (w < 1500) {document.querySelector("body").style.setProperty('transform', 'scale('+ w*.00052 +')');}
+	else {document.querySelector("body").style.setProperty('transform', 'scale(.75)');}
 	
   if (w < 600) {createCanvas(w*3, h*1.2); document.querySelector("body").style.setProperty('left', 'calc(-30% + 20px)');}
 	else{
@@ -28,8 +29,8 @@ function setup() {
 }
 
 function draw() {
-document.querySelector("body").style.setProperty('transform', 'scale('+ w*.00052 +')');
-	
+   if (w < 1500) {document.querySelector("body").style.setProperty('transform', 'scale('+ w*.00052 +')');}
+	else {document.querySelector("body").style.setProperty('transform', 'scale(.75)');}
   background(0, 0, 0);
   colorMode(HSB);
   let i = 1;

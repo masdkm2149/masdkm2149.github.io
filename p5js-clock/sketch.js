@@ -7,7 +7,7 @@ window.addEventListener('resize', function(event) {
   // assigns new values for width and height variables
   w = window.innerWidth;
 h = window.innerHeight;
-document.querySelector("body").style.setProperty('transform', 'scale('+ w*.0005 +')');
+document.querySelector("body").style.setProperty('transform', 'scale('+ w*.00051 +')');
 	console.log(w + " " + h);
 	  
 	  if (w < 600) {createCanvas(w*3, h); document.querySelector("body").style.setProperty('left', 'calc(-30% + 20px)');}

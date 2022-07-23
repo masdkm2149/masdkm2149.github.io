@@ -33,6 +33,17 @@ TRANSITIONS
 .active{
   background: #667080!important;
 }
+     
+span:hover {
+  position: absolute;
+  animation: bounce .3s infinite alternate;
+  animation-timing-function: ease-in-out;
+}
+@keyframes bounce {
+  from {margin-left:6px;}
+  to {margin-left:5px;}
+}
+
 .temp-main-image:hover * {
   transform: scale(1.05, 1.075);
   transition: transform .25s ease;

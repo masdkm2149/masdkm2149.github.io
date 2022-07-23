@@ -8,10 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"> 
 <script type="text/javascript" src="https://css-tricks.com/examples/HorzScrolling/jquery.mousewheel.js"></script>
- <style><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: absolute;/*! background: #EEF1F4; */border-radius: 24px;position: relative;flex: none;order: 0;flex-grow: 0;border: solid 2px #EEF1F4;" id="button2"></div>
-
-<div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: absolute;/*! background: #EEF1F4; */border-radius: 24px;position: relative;flex: none;order: 0;flex-grow: 0;border: solid 2px #EEF1F4;" id="button2"></div>
-
+ <style>
 
 /*
 
@@ -260,6 +257,9 @@ h2{
   padding: 15px 45px!important;
 }
 }
+    .interface{
+    margin-top: -60px !important;
+  }
 h2 {
   margin: 6px 0 0 270px;
 }
@@ -290,17 +290,31 @@ h2 {
 
 
 @media screen and (max-width: 390px) {
-#body-text{
+//#body-text{
   display: none!important;
 }
-#view_project {
-  margin-top: 5px !important;
-}
+  a#button1, div#button2{
+  margin-right: 99px !important;
+  right: -70px;
+  top: -8px;
+  transform: scale(.90);
+  }
 #body-text {
   margin-top: 0px!important
 }
 }
+@media screen and (max-width: 220px) {
 
+  a#button1, div#button2{
+  display: none!important;
+  }
+  
+}
+@media screen and (max-width: 325px) {
+  #body-copy > div {
+    margin-left: 30px!important;
+  }
+}
 
 *, ::before, ::after {
   box-sizing: unset;
@@ -326,8 +340,13 @@ h2{
   font-size: 28px !important;
   line-height: 32px !important;
 }
+  .interface > a {
+    transform: scale(.9);
+margin-left: -15px;
+    
+  }
     .interface{
-    margin-top: -40px !important;
+    margin-top: -50px !important;
   }
 h2{
   font-size: 16px!important;
@@ -348,8 +367,17 @@ h2{
   font-size: 36px !important;
   line-height: 42px !important;
 }
+  #body-text {
+ font-size: 12px !important;
+ line-height:14px !important;
+ margin-top: 12px!important;
+}
+   .bta#body-text {
+ font-size: 12px !important;
+ line-height:14px !important;
+}
     #body-copy {
-  bottom: 40 !important;
+  bottom: 180px !important;
   }
 h2{
   margin: 3px 0 0 200px !important;
@@ -380,20 +408,20 @@ h2{
  line-height:14px !important;
  margin-top: 12px!important;
 }
+   .bta#body-text {
+ font-size: 12px !important;
+ line-height:14px !important;
+ margin-top: -40px !important;
+}
   .interface > a{
     margin-top: 25px!important;
   }
 #body-copy {
   left: 0 !important;
   bottom: 0 !important;
-  top: -110px !important;
+  top: -250px !important;
   margin-top: auto !important;
   margin-bottom: auto !important;
-}
- .bta#body-text {
- font-size: 12px !important;
- line-height:14px !important;
- margin-top: -40px !important;
 }
 }
 }
@@ -421,7 +449,7 @@ h2{
  
 @media screen and (max-width: 1249px) and (min-width: 800px)  {
   .interface{
-    margin-top: -60px !important;
+    margin-top: -70px !important;
   }
   #body-text {
   font-size: 14px!important;
@@ -440,6 +468,9 @@ h2{
   }
   .project-title{
     font-size: 64px!important;
+  }
+      .interface{
+    margin-top: -82px !important;
   }
 h2 {
   font-size: 32px !important;
@@ -579,7 +610,6 @@ width: 100%;
 #button1:hover {
   background: #eef1f4 !important;
   }
-
 
 
 

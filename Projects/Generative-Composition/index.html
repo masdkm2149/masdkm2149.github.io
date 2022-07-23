@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"> 
   <style>
+
     .hnmshZ {
   min-width: fit-content;
   position: relative;
@@ -35,6 +36,11 @@
     display: none!important;
   }
 }   
+ @media screen and (max-width: 340px){
+   .project-title{
+  width: min-content!important;
+   }
+}
     @media screen and (max-height: 550px) {
 #body-header{
  margin-top:  100% !important;
@@ -95,6 +101,8 @@
  width: 100% !important;
  scroll-snap-align: center;
  left: 0PX !important;
+ /*! text-align: center; */
+ display: flex;
 }.page-2{margin-top: 200% !important;}
   #logoblockfour, #logoblocktwo {
     display: none;
@@ -108,11 +116,11 @@
 
   }
   .project-title{
-    max-width: 90%!important;
+    max-width: 100% !important;
   }
   #body-text {
   width: 100%;
-  max-width: 75vw !important;
+  max-width: calc(50vw + 180px) !important;
 }
   .main-image{
     width: 100% !important;
@@ -329,6 +337,7 @@ width: 100%;
   letter-spacing: -0.02em;
   font-feature-settings: 'calt' off;
   color: #4b515b;
+  width: fit-content;
 }
 
 #tag-branding::after {
@@ -414,6 +423,8 @@ right: 0;
   width: 100%!important;
   height: auto;
 }
+      
+
       
 </style></head>
 

@@ -17,7 +17,7 @@ function toggletagbranding() {
   document.querySelectorAll('.branding > #project-element')[i].classList.toggle("tag-h-infocus");
 }
 	  for (let i = 0; i < document.querySelectorAll('.branding').length; i++) {
-  document.querySelectorAll('.branding .temp-main-image')[i].classList.toggle("active-border");
+  document.querySelectorAll('.branding .temp-main-image')[i].classList.toggle("active-border-1");
 }
 		  for (let i = 0; i < document.querySelectorAll('.branding').length; i++) {
   document.querySelectorAll('.branding > .element-info')[i].classList.toggle("active-border");
@@ -49,7 +49,7 @@ function toggletagcoding() {
 }
   document.querySelectorAll('.coding')[0].classList.toggle("m");
 	  for (let i = 0; i < document.querySelectorAll('.coding').length; i++) {
-  document.querySelectorAll('.coding .temp-main-image')[i].classList.toggle("active-border");
+  document.querySelectorAll('.coding .temp-main-image')[i].classList.toggle("active-border-1");
 }
 		  for (let i = 0; i < document.querySelectorAll('.coding').length; i++) {
   document.querySelectorAll('.coding > .element-info')[i].classList.toggle("active-border");
@@ -85,7 +85,7 @@ function toggletagprint() {
 }
   document.querySelectorAll('.print > .element-info')[0].classList.toggle("tag-hh-infocus");
 	  for (let i = 0; i < document.querySelectorAll('.print').length; i++) {
-  document.querySelectorAll('.print .temp-main-image')[i].classList.toggle("active-border");
+  document.querySelectorAll('.print .temp-main-image')[i].classList.toggle("active-border-1");
 }
 		  for (let i = 0; i < document.querySelectorAll('.print').length; i++) {
   document.querySelectorAll('.print > .element-info')[i].classList.toggle("active-border");

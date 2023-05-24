@@ -1,6 +1,25 @@
 body {
 	transition: .75s ease;
+	--text-color: #000;
+	--bkg-color: #fff;
 }
+body.dark-theme {
+  --text-color: #eee;
+  --bkg-color: #121212;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  body {
+    --text-color: #eee;
+    --bkg-color: #121212;
+  }
+  body.light-theme {
+    --text-color: #222;
+    --bkg-color: #fff;
+  }
+}
+
 .nav {
 	display: none;
 color: #79e9a3;

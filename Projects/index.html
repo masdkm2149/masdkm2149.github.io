@@ -1188,7 +1188,94 @@ width: 100%;
 </style></head>
  
   <body onresize="getWindowSpec()">
-<button class="btn-toggle" style="position: relative;z-index: 999;">Toggle Dark-Mode</button><script>
+<button class="btn-toggle">
+    <style>:root {
+  --light: #fff;
+  --dark: #28292c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+.btn-toggle {
+  position: absolute;
+  width: 200px; border:none;
+}
+
+label {
+  position: absolute; z-index:99;
+  width: 90px;
+  height: 40px;
+  background-color: var(--dark);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+input {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  transition: 0.5s; z-index:999;
+}
+
+input:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: inset 15px -6px 0px 3px var(--light);
+  background-color: var(--dark);
+  transition: 0.5s;
+}
+
+input:checked ~ .slider::before {
+  transform: translateX(45px);
+  background-color: var(--dark);
+  box-shadow: none;
+}
+
+a {
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  top: 150px;
+  left: 10px;
+  font-size: 10px;
+  text-decoration: none;
+  color: var(--link);
+  font-weight: bold;
+  text-align: center;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+</style>
+    <label>
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+            
+        </button><script>
       const btn = document.querySelector(".btn-toggle");
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 

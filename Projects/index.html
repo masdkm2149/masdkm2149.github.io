@@ -1188,7 +1188,7 @@ width: 100%;
 </style></head>
  
   <body onresize="getWindowSpec()">
-<button class="btn-toggle">Toggle Dark-Mode</button><script>
+<button class="btn-toggle" style="position: relative;z-index: 999;">Toggle Dark-Mode</button><script>
       const btn = document.querySelector(".btn-toggle");
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 

@@ -114,14 +114,16 @@ window.addEventListener('resize', function(event) {
 body {
   --text-color: #222;
   --bkg-color: #fff;
+  --h2-color: #667080;
   --body-color: #667080;
   --view_project-hov: #EEF1F4;
   --view_project-but: #6a7586;
   --project-title: #4b515b;
 }
 body.dark-theme {
-  --body-color: #bbb;  
+  --body-color: #adb4c0;  
   --text-color: #eee;
+  --h2-color: #585f6a;
   --bkg-color: #000;
   --view_project-hov: #0b0d10;
   --view_project-but: #e0e0e0;
@@ -133,14 +135,16 @@ body.dark-theme {
   body {
     --text-color: #eee;
     --bkg-color: #000;
-    --body-color: #bbb;
+    --body-color: #adb4c0;
     --view_project-hov: #0b0d10;
     --view_project-but: #e0e0e0;
-   --project-title: #e0e0e0;
+    --h2-color: #585f6a;
+    --project-title: #e0e0e0;
     }
   body.light-theme {
     --text-color: #222;
     --bkg-color: #fff;
+    --h2-color: #667080;
     --view_project-hov: #EEF1F4;
     --view_project-but: #6a7586;
     --body-color: #667080;
@@ -543,7 +547,7 @@ BODY: 16/24
 3/4
  
 H1: 36/42
-H2: 18/24
+F: 18/24
 BODY: 14/21
  
 2/3
@@ -1251,8 +1255,9 @@ letter-spacing: -0.02em;
 font-feature-settings: 'calt' off;
  
 /* Primary */
-color: #667080;
-position: relative;
+
+color:  var(--h2-color);
+    position: relative;
 ">2018</h2><h style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: var(--body-color)!important;font-family: 'Inter', sans-serif;display: flex;" id="body-text">A minimal wordmark and logomark with a short series
 of digital web-based advertisements for
 a customizable print on-demand
@@ -1290,7 +1295,8 @@ letter-spacing: -0.02em;
 font-feature-settings: 'calt' off;
  
 /* Primary */
-color: #667080;
+
+color:  var(--h2-color);
 ">P5.JS</h2><h style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: var(--body-color)!important;font-family: 'Inter', sans-serif;" id="body-text">Utilizing the P5.JS library to create a generative
 abstract composition using algorithmic forms
 with careful consideration for aesthetic issues
@@ -1324,7 +1330,8 @@ letter-spacing: -0.02em;
 font-feature-settings: 'calt' off;
  
 /* Primary */
-color: #667080;
+
+color:  var(--h2-color);
 ">P5.JS</h2><h style="line-height: 24px;letter-spacing: -0.02em;padding-bottom: 0px;
     height: fit-content;
  
@@ -1368,7 +1375,7 @@ letter-spacing: -0.02em;
 font-feature-settings: 'calt' off;
  
 /* Primary */
-color: #667080;
+color:  var(--h2-color);
 ">Book</h2><h style="line-height: 24px;letter-spacing: -0.02em;padding-bottom: 0px;
     height: fit-content;
  

@@ -120,6 +120,7 @@ body {
   --body-color: #667080;
   --view_project-hov: #EEF1F4;
   --view_project-but: #6a7586;
+  --view_project-but-text: #EEF1F4;  
   --project-title: #4b515b;
   --border-color: solid 2px #EEF1F4;
 }
@@ -133,6 +134,7 @@ body.dark-theme {
   --bkg-color: #000;
   --view_project-hov: #0b0d10;
   --view_project-but: #363840;
+  --view_project-but-text: #EEF1F4;  
   --project-title: #e0e0e0;
 }
 
@@ -145,6 +147,7 @@ body.dark-theme {
     --bkg-color: #000;
     --body-color: #adb4c0;
     --tag-bg: #2e313a;
+    --view_project-but-text: #EEF1F4;  
     --view_project-hov: #0b0d10;
     --view_project-but: #363840;
     --h2-color: #585f6a;
@@ -154,6 +157,7 @@ body.dark-theme {
     --text-color: #222;
     --content-border: 3px solid rgb(102, 112, 128);
     --bkg-color: #fff;
+    --view_project-but-text: #EEF1F4;   
     --border-color: solid 2px #EEF1F4;
     --tag-bg: #c8c8c8;
     --h2-color: #667080;
@@ -314,7 +318,7 @@ TRANSITIONS
   line-height: 22px;
   letter-spacing: -0.01em;
   font-feature-settings: 'calt' off;
-  color: var(--view_project-but);
+  color: var(--view_project-but-text);
   font-family: 'Inter', sans-serif;
   margin: 0 auto;
   display: flex;
@@ -1207,7 +1211,8 @@ width: 100%;
 </style></head>
  
   <body onresize="getWindowSpec()">
-<div class="desktop-nav">
+<button class="btn-toggle">Toggle Dark-Mode</button>
+      <div class="desktop-nav">
  
 <div style="height: 105px;top: 0;width: 100%;position: absolute;"></div><a href="https://designedbydan.art/"> <div id="logo" style="width: 150px;height: 45px;background: #FFFFFF;border: 3px solid #667080;box-sizing: border-box;left: 0px;right: 0;top: 0px;bottom: 60px;border: 1px solid #667080;/*! =============== breakpoint 1150px W ===============*/position: fixed;border: 1px solid #667080;margin-left: 30px;margin-top: 30px;content: &quot;LOGO&quot;;font-size: 24px;text-align: center;display: none;"></div><div style="left: 60px;position: absolute;"><div id="logoblockone" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;border-left: 1vw solid;border-left-color: currentcolor;border-left-color: #474747;"></div><div style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);border-right: 1vw solid #474747;" id="logoblocktwo"></div><div id="logoblockthree" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;top: 22px;border-left: 1vw solid;border-left-color: #474747;"></div><div style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);top: 22px;border-right: 1vw solid #474747;" id="logoblockfour"></div></div><h id="logotype" style="position: absolute;left: calc(12vw + 60px);font-family: 'Inter', sans-serif;font-style: normal;font-weight: 600;font-size: 16px;line-height: 48px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: var(--project-title);height: 45px;top: 28px;">Daniel Roswadowsky</h>
 </a><div id="button1" style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;/*! background: #EEF1F4; */position: relative;flex: none;order: 0;flex-grow: 0;border: solid 2px #EEF1F4;margin-right: 30px;"></div><a href="/Contact/"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: absolute;/*! background: #EEF1F4; */border-radius: 24px;position: relative;flex: none;order: 0;flex-grow: 0;border: solid 2px #EEF1F4;" id="button2"></div></a>&gt;</div>
@@ -1237,7 +1242,7 @@ font-feature-settings: 'calt' off;
 /* Primary */
 color: var(--h2-color);
 position: relative;
-">2019</h2><h style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: var(--body-color)!important;font-family: 'Inter', sans-serif;display: flex;" id="body-text">BullseyeTracker is a web-based scoring application that simplifies all the challenges involved in Bullseye Pistol Leagues. Following the brand’s philosophy, I created a minimal wordmark and logomark reflecting their values of simplicity and ease of use.</h></div><a href="/Projects/BullseyeTracker/" style="margin-top: 30px;width: fit-content;border-radius: 48px;display: flex;margin-bottom: 8px;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border: solid 2px #EEF1F4;margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://artfiles.rutgers.edu/~rad%5Cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div>
+">2019</h2><h style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: var(--body-color)!important;font-family: 'Inter', sans-serif;display: flex;" id="body-text">BullseyeTracker is a web-based scoring application that simplifies all the challenges involved in Bullseye Pistol Leagues. Following the brand’s philosophy, I created a minimal wordmark and logomark reflecting their values of simplicity and ease of use.</h></div><a href="/Projects/BullseyeTracker/" style="margin-top: 30px;width: fit-content;border-radius: 48px;display: flex;margin-bottom: 8px;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border: var(--view_project-but);margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://artfiles.rutgers.edu/~rad%5Cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div>
 <div></div></div>
 
 

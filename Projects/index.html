@@ -113,6 +113,7 @@ window.addEventListener('resize', function(event) {
 </script> <style>
 body {
   --text-color: #222;
+  --tag-bg: #c8c8c8;  
   --bkg-color: #fff;
   --h2-color: #667080;
   --body-color: #667080;
@@ -121,6 +122,7 @@ body {
   --project-title: #4b515b;
 }
 body.dark-theme {
+  --tag-bg: #2e313a;
   --body-color: #adb4c0;  
   --text-color: #eee;
   --h2-color: #585f6a;
@@ -136,6 +138,7 @@ body.dark-theme {
     --text-color: #eee;
     --bkg-color: #000;
     --body-color: #adb4c0;
+    --tag-bg: #2e313a;
     --view_project-hov: #0b0d10;
     --view_project-but: #e0e0e0;
     --h2-color: #585f6a;
@@ -144,6 +147,7 @@ body.dark-theme {
   body.light-theme {
     --text-color: #222;
     --bkg-color: #fff;
+    --tag-bg: #c8c8c8;
     --h2-color: #667080;
     --view_project-hov: #EEF1F4;
     --view_project-but: #6a7586;
@@ -269,7 +273,7 @@ TRANSITIONS
   align-items: center;
   padding: 9px 24px;
   position: relative!important;
-  background: #c8c8c8;
+  background: var(--tag-bg);;
   border-radius: 24px;
   width: 36px;
   height: 12px;
@@ -283,7 +287,7 @@ TRANSITIONS
   align-items: center;
   padding: 9px 24px;
   position: relative!important;
-  background: #c8c8c8;
+  background: var(--tag-bg);
   border-radius: 24px;
   width: 36px;
   height: 12px;

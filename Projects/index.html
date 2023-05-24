@@ -1188,12 +1188,12 @@ width: 100%;
 </style></head>
  
   <body onresize="getWindowSpec()">
-<button class="btn-toggle">
+<button class="btn">
     <style>:root {
   --light: #fff;
   --dark: #28292c;
 }
-.btn-toggle {
+.btn {
   position: absolute;
   width: 200px; border:none;
 }
@@ -1212,19 +1212,21 @@ input {
   display: none;
 }
 
-.slider {
+.btn-toggle {
   position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 50px;
-  transition: 0.5s; z-index:999;
+  transition: 0.5s; 
+  all: unset;  
+  z-index:999;
 }
 
-input:checked ~ .slider {
+input:checked ~ .btn-toggle {
   background-color: var(--light);
 }
 
-.slider::before {
+.btn-toggle::before {
   content: "";
   position: absolute;
   top: 4px;

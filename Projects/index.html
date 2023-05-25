@@ -1198,7 +1198,11 @@ width: 100%;
 </style></head>
  
   <body onresize="getWindowSpec()">
-      <script>function show_toggle(){document.getElementbyId("state1").classList.toggle("hide");};</script>
+      <script>function show_toggle(){
+              getElementbyId("state1").classList.toggle("hide");
+              getElementsByClassName(btn).classList.toggle("hide");
+
+          };</script>
       <div id="state1" onclick="show_toggle()"></div>
 <div class="btn hide" style="position: fixed;z-index: 9;padding: 30px;right: 75px;transform: scale(0.9);top: 2px;opacity:.9;transition: .25s ease;">
 <img class="hide" style="width: auto;opacity:.5;height: 18px;position: absolute;z-index: 3;margin: 0 auto;bottom: calc(2.2vh + 10px);left: 175;right: -45px;top: 41px;z-index: 999;transition: .1s;" src="https://designedbydan.art/assets/images/38488.png" onclick="hidebtn();">

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: #474747;
+      }
+
+      .cls-2 {
+        filter: url(#filter);
+      }
+
+      .cls-3 {
+        filter: url(#filter-2);
+      }
+    </style>
+    <filter id="filter" x="146" y="500" width="707" height="500" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="146" y="500" width="707" height="500" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNzA3IiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDcwNyA1MDAiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50KTsKICAgICAgfQogICAgPC9zdHlsZT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50IiB4MT0iMzUzLjUiIHgyPSIzNTMuNSIgeTI9IjUwMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9Ii0wLjE2IiBzdG9wLWNvbG9yPSIjZmZmIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMS4xNiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNzA3IiBoZWlnaHQ9IjUwMCIvPgo8L3N2Zz4K"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="146" y="0" width="707" height="500" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="146" y="0" width="707" height="500" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNzA3IiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDcwNyA1MDAiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50KTsKICAgICAgfQogICAgPC9zdHlsZT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50IiB4MT0iMzUzLjUiIHgyPSIzNTMuNSIgeTI9IjUwMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9Ii0wLjE2IiBzdG9wLWNvbG9yPSIjZmZmIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMS4xNiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNzA3IiBoZWlnaHQ9IjUwMCIvPgo8L3N2Zz4K"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <image id="Background" width="1000" height="1000" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAqUlEQVR4nO3QgQ0AMQyDwHz33zmvTgFSuQmwv93dedh5efzVAYIGVAcIGlAdIGhAdYCgAdUBggZUBwgaUB0gaEB1gKAB1QGCBlQHCBpQHSBoQHWAoAHVAYIGVAcIGlAdIGhAdYCgAdUBggZUBwgaUB0gaEB1gKAB1QGCBlQHCBpQHSBoQHWAoAHVAYIGVAcIGlAdIGhAdYCgAdUBggZUBwgaUB0gaODMzA9VOgR8F5U4SQAAAABJRU5ErkJggg=="/>
+  <rect class="cls-1" y="-35" width="147" height="1139"/>
+  <rect class="cls-2" x="146" y="500" width="707" height="500"/>
+  <rect id="Rectangle_2_copy" data-name="Rectangle 2 copy" class="cls-3" x="146" width="707" height="500"/>
+  <rect id="Rectangle_1_copy" data-name="Rectangle 1 copy" class="cls-1" x="853" y="-23" width="147" height="1139"/>
+</svg>

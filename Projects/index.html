@@ -1208,8 +1208,9 @@ label {
   background-color: var(--dark);
   border-radius: 50px;
   cursor: pointer;
+  opacity: .8;
 }
-
+label:hover{opacity: 1!important;}
 input {
   position: absolute;
   display: none;
@@ -1228,7 +1229,9 @@ button{
         }
 input:checked ~ .btn-toggle {   box-sizing:border-box; border: 2px solid var(--dark);background-color: var(--light);
 }
-
+.btn::hover {
+  opacity: 1!important;
+}
 .btn-toggle::before {
   content: "";
   position: absolute;
@@ -1247,6 +1250,7 @@ input:checked ~ .btn-toggle::before {
   transform: translateX(46px)translateY(-1px)scale(.95);
   box-shadow: none;
 }
+      
       </style>
 <script>
       const btn = document.querySelector(".btn-toggle");

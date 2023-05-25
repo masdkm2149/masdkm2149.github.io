@@ -1274,12 +1274,13 @@ if (currentTheme == "dark") {
 
 btn.addEventListener("click", function () {
   if (prefersDarkScheme.matches) {
-  document.body.classList.add("light-theme");}
+  document.body.classList.add("light-theme");
     var theme = document.body.classList.contains("light-theme")
       ? "light"
       : "dark";
   } else {
   document.body.classList.add("dark-theme");
+        var theme = document.body.classList.contains("dark-theme")
       ? "dark"
       : "light";
   }

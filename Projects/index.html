@@ -1191,7 +1191,6 @@ width: 100%;
 <div class="btn" style="position: fixed;z-index: 9;padding: 30px;right: 75px;transform: scale(0.9);top: 2px;opacity: 0.8;transition: .3s;">
 <img class="hide" style="width: auto;opacity:.5;height: 18px;position: absolute;z-index: 3;margin: 0 auto;bottom: calc(2.2vh + 10px);left: 175;right: -45px;top: 41px;z-index: 999;transition: .1s;" src="https://designedbydan.art/assets/images/38488.png" onclick="hidebtn();">
     <label>
-                <input type="checkbox">
                 <span class="btn-toggle" style=""></span>
             </label>
             
@@ -1227,7 +1226,7 @@ input {
 button{
     all:unset;
         }
-input:checked ~ .btn-toggle {   box-sizing:border-box; border: 2px solid var(--dark);background-color: var(--light);
+body.dark-theme ~ .btn-toggle {   box-sizing:border-box; border: 2px solid var(--dark);background-color: var(--light);
 }
 .btn::hover {
   opacity: 1!important;
@@ -1245,8 +1244,8 @@ input:checked ~ .btn-toggle {   box-sizing:border-box; border: 2px solid var(--d
   transition: 0.5s;
   transition-property: background-color,transform;
 }
-input:checked label {opacity:0!important;}
-input:checked ~ .btn-toggle::before {
+body.dark-theme label {opacity:0!important;}
+body.dark-theme ~ .btn-toggle::before {
   transform: translateX(46px)translateY(-1px)scale(.95);
   box-shadow: none;
 }

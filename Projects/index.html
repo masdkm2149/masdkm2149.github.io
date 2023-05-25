@@ -1199,9 +1199,8 @@ width: 100%;
  
   <body onresize="getWindowSpec()">
       <script>function show_toggle(){
-              getElementbyId("state1").classList.toggle("hide");
-              getElementsByClassName(btn).classList.toggle("hide");
-
+              document.getElementbyId("state1").classList.toggle("hide");
+              document.getElementsByClassName(btn).classList.toggle("hide");
           };</script>
       <div id="state1" onclick="show_toggle()"></div>
 <div class="btn hide" style="position: fixed;z-index: 9;padding: 30px;right: 75px;transform: scale(0.9);top: 2px;opacity:.9;transition: .25s ease;">

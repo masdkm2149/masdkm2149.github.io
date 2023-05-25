@@ -1226,7 +1226,7 @@ input {
 button{
     all:unset;
         }
-body.dark-theme ~ .btn-toggle {   box-sizing:border-box; border: 2px solid var(--dark);background-color: var(--light);
+body.dark-theme .btn-toggle {   box-sizing:border-box; border: 2px solid var(--dark);background-color: var(--light);
 }
 .btn::hover {
   opacity: 1!important;
@@ -1245,7 +1245,7 @@ body.dark-theme ~ .btn-toggle {   box-sizing:border-box; border: 2px solid var(-
   transition-property: background-color,transform;
 }
 body.dark-theme label {opacity:0!important;}
-body.dark-theme ~ .btn-toggle::before {
+body.dark-theme .btn-toggle::before {
   transform: translateX(46px)translateY(-1px)scale(.95);
   box-shadow: none;
 }

@@ -1213,15 +1213,13 @@ input {
   width: 100%;
   height: 100%;
   border-radius: 50px;
-  transition: 0.5s; 
-  z-index:999;
+  z-index:99;
 }
 
 button{
     all:unset;
         }
-input:checked ~ .btn-toggle {
-  background-color: var(--light);
+input:checked ~ .btn-toggle {   box-sizing:border-box; border: 2px solid var(--dark);background-color: var(--light);
 }
 
 .btn-toggle::before {
@@ -1236,7 +1234,7 @@ input:checked ~ .btn-toggle {
   background-color: var(--dark);
   transition: 0.5s;
 }
-
+input:checked ~ label {background:none!important;}
 input:checked ~ .btn-toggle::before {
   transform: translateX(45px);
   background-color: var(--dark);

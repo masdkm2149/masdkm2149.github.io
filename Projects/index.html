@@ -1188,8 +1188,7 @@ width: 100%;
 </style></head>
  
   <body onresize="getWindowSpec()">
-<div class="btn" style="position: fixed;z-index: 9;padding: 30px;right: 75px;transform: scale(0.9);top: 2px;">
-<img class="hide" style="width: auto;opacity:.5;height: 18px;position: absolute;z-index: 3;margin: 0 auto;bottom: calc(2.2vh + 10px);left: 175;right: -45px;top: 41px;z-index: 999;transition: .1s;" src="https://designedbydan.art/assets/images/38488.png" onclick="hidebtn();">    <style>:root {
+:root {
   --light: #fff;
   --dark: #28292c;
 }
@@ -1227,27 +1226,21 @@ input:checked ~ .btn-toggle {   box-sizing:border-box; border: 2px solid var(--d
   position: absolute;
   top: 4px;
   left: 6px;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   box-shadow: inset 15px -6px 0px 3px var(--light);
   background-color: var(--dark);
   transition: 0.5s;
+  transition-property: background-color,transform;
 }
-input:checked ~ label {background:none!important;}
+input:checked label {opacity:0!important;}
 input:checked ~ .btn-toggle::before {
-  transform: translateX(45px);
-  background-color: var(--dark);
+  transform: translateX(46px)translateY(-1px)scale(.95);
   box-shadow: none;
 }
 
-</style>
-    <label>
-                <input type="checkbox">
-                <span class="btn-toggle" style=""></span>
-            </label>
-            
-        </div><script>
+<script>
       const btn = document.querySelector(".btn-toggle");
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 

@@ -726,7 +726,19 @@ background-color: var(--dark)!important;
 background-color: var(--view_project-but);
 border: solid 2px #667080 !important;
 }
-
+#state1 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: inset 9px -6px 0px 3px var(--dark);
+  position: absolute;
+  right: 2px;
+  bottom: 3px;
+  z-index: 999;
+  cursor: pointer;
+  pointer-events: all;
+  transition: .25s ease;
+}
 </style>
 
 </head>
@@ -734,7 +746,8 @@ border: solid 2px #667080 !important;
  <body>
 
      <div class="desktop-nav">
- <img class="scrolldown floating" style="opacity: 0.45; width: 50px; position: fixed; margin-left: auto; margin-right: auto; right: 0px; bottom: 30px; left: 0px; z-index: 2; display: block;" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(300, -250, 1, 800))">
+ <div style="background: var(--bkg-color);height: 105px;top: 0;width: 100%;position: absolute;"></div>
+         <img class="scrolldown floating" style="opacity: 0.45; width: 50px; position: fixed; margin-left: auto; margin-right: auto; right: 0px; bottom: 30px; left: 0px; z-index: 2; display: block;" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(300, -250, 1, 800))">
 <div style="height: 105px;top: 0;width: 100%;position: absolute;"></div>
                <script>
           function preview_toggle(){};

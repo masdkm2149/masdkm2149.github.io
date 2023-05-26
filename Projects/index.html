@@ -1284,7 +1284,10 @@ body.dark-theme .one .BTprojpicture {
   background-color: black;
     background-size:    77% !important;
   }    
-</style>      <script>
+</style>      </head>
+ 
+  <body onresize="getWindowSpec()">
+<script>
           function preview_toggle(){};
           function show_toggle(){
               document.getElementById("state1").classList.toggle("hide");
@@ -1318,10 +1321,7 @@ btn.addEventListener("click", function () {
   }
   localStorage.setItem("theme", theme);
 });
-      </script></head>
- 
-  <body onresize="getWindowSpec()">
-
+      </script>
           <div class="btn hide" style="position: absolute;z-index: 9;padding: 30px;right: 75px;transform: scale(0.8);top: 4px;opacity:.9;transition: .25s ease;">
       <img class="hide" style="width: auto;opacity:.5;height: 18px;position: absolute;z-index: 3;margin: 0 auto;bottom: calc(2.2vh + 10px);left: 175;right: -45px;top: 41px;z-index: 999;transition: .1s;" src="https://designedbydan.art/assets/images/38488.png" onclick="hidebtn();">
       <label>

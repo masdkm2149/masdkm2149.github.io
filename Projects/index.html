@@ -88,6 +88,7 @@ window.addEventListener('resize', function(event) {
 }, true);
 */
 </script> <style>
+
     .darken {
   filter: brightness(.5);
 }
@@ -1282,10 +1283,15 @@ body.dark-theme .one .BTprojpicture {
     #view_project:hover, #button1:hover, #button2:hover {
   background: var(--view_project-hov);
 }
+   body.dark-theme #button2:hover {
+  background-color: var(--dark)!important;
+}
+
    body.dark-theme #view_project:active, #button1:active, #button2:active {
   background-color: var(--view_project-but);
   border: solid 2px #667080 !important;
 }
+
 </style></head>
  
   <body onresize="getWindowSpec()">

@@ -1231,13 +1231,12 @@ body.dark-theme .scrolldown{filter: invert(1)}
 
 label {
   position: absolute; z-index:99;
-  width: 90px;
+  width: 85px;
   height: 40px;
   background-color: var(--dark);
   border-radius: 50px;
   cursor: pointer;
     transition: .25s ease;
-  opacity: .8;
 }
 label:hover{opacity: 1!important;}
 input {
@@ -1256,7 +1255,8 @@ body.dark-theme #state1 {box-shadow: inset 9px -6px 0px 3px var(--light);}
 button{
     all:unset;
         }
-body.dark-theme .btn-toggle {   box-sizing:border-box; border: 2px solid var(--dark);background-color: var(--light);
+.btn{transform: scale(.85)}
+body.dark-theme .btn-toggle {   box-sizing:border-box; border: 2px solid #363840;
 }
 .btn::hover {
   opacity: 1!important;
@@ -1264,20 +1264,35 @@ body.dark-theme .btn-toggle {   box-sizing:border-box; border: 2px solid var(--d
 .btn-toggle::before {
   content: "";
   position: absolute;
-  top: 4px;
+  top: 6px;
   left: 6px;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  opacity: 1;
+  box-shadow: inset 8.5px -3px 0px 3.5px var(--light);
+  transition: 0.5s;
+  /*! transition-property: background-color,transform; */
+}
+body.dark-theme label {background: none;}
+body.dark-theme .btn-toggle::before {
+  transform: translateX(48px)translateY(-1px)scale(.4);
+  box-shadow: none;
+  opacity: 0;
+}
+.btn-toggle::after { content:""; transition: .5s; right:65px; opacity: 0;
+  position: absolute;
+transform: scale(.9);
+}
+body.dark-theme .btn-toggle::after {
+  background-image: url(https://designedbydan.art/assets/images/icons8-sun.svg);
   width: 30px;
   height: 30px;
-  border-radius: 50%;
-  box-shadow: inset 15px -6px 0px 3px var(--light);
-  background-color: var(--dark);
-  transition: 0.5s;
-  transition-property: background-color,transform;
-}
-body.dark-theme label {}
-body.dark-theme .btn-toggle::before {
-  transform: translateX(46px)translateY(-1px)scale(.95);
-  box-shadow: none;
+  opacity: 1;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  filter: invert(1);
 }
     .one .BTprojpicture {
     background-image: url(https://designedbydan.art/assets/images/3240880DWE.png);

@@ -16,6 +16,7 @@
 
 
 
+
 #body-text{
     color: var(--body-color) !important;
       }
@@ -379,7 +380,7 @@ border: solid 2px #667080 !important;
     justify-content: space-around;
     padding-bottom: 60px !important;
 }.page-2{margin-top: var(--vh) !important;}
-  .fixsize{width:auto !important;height: var(--vh)!important;}
+  .fixsize{max-height: calc(var(--vh) - 165px) !important;}
   #body-text {
   width: 100%;
   max-width: 75vw !important;
@@ -404,6 +405,7 @@ border: solid 2px #667080 !important;
     right: 0;
   }
     .page-2 > .main-image{
+     top: 0;
      position: relative !important;
   }
   .body-2{
@@ -421,7 +423,7 @@ border: solid 2px #667080 !important;
   .fixsize{width:auto !important;height: var(--vh) !important;}
 }
 @media screen and (max-width: 1399px) and (min-width: 1350px) and (max-height: 580px) {
-  .fixsize{width:auto !important;height:  var(--vh) !important; /*! position: absolute !important; */}
+  .fixsize{width:auto !important;max-height:  var(--vh) !important; /*! position: absolute !important; */}
 }
 
 
@@ -750,11 +752,7 @@ body.dark-theme .BTprojpicture {
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-    
-    
-    
-    
-    
+      }
     </style>
 
 </head>

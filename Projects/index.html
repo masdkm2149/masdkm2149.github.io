@@ -88,13 +88,18 @@ window.addEventListener('resize', function(event) {
 }, true);
 */
 </script> <style>
-@media screen and (max-height: 500px) {
+@media screen and (max-height: 700px) {
 .content-main > .page-1, .page-2, .page-3, .page-4, .page-5 {
- flex-direction:    row;
+ flex-direction:    row!important;
 }
   #project-element{ width: 100%!important;max-height: calc(var(--vh) - 161px);}
+  .element-info{box-sizing: content-box;
+display: flex;
+height: auto!important;
+max-height: calc(var(--vh) - 167px);
+border: var(--content-border) !important;
+margin-left: -3px;}
 }
- 
  
     .darken {
   filter: brightness(.5);
@@ -223,7 +228,7 @@ TRANSITIONS
   left: 0px;
   top: 0;
 }
-}
+
 .temp-main-image:hover ~ #view_project{
   
   animation: shake 2s;
@@ -274,7 +279,8 @@ TRANSITIONS
   height: 12px;
   margin: 0px 0px 18px 0px!important;
   transition: .25s ease;
-}}@media screen and (max-width: 390px){
+}
+@media screen and (max-width: 390px){
 #tag-branding, #tag-print, #tag-media, #tag-coding {
   display: flex;
   flex-direction: row;
@@ -523,85 +529,11 @@ width: 100%;
  .scrolldown{
     user-select: none;
  }
- 
-/*@media screen and (max-width: 900px) {
-.scrolldown {
- width: 150px!important ;
+  @media screen and (max-height: 599px) and (max-width: 1499px) {
+#body-text {
+  display: none!important;
 }
-}
- 
- 
-BREAKPOINT WIDTH
- 
-629PX
- 
-//TWO IMAGES IN VIEW PER SCREEN
- 
-H1: 42/48
-H2: 24/30
-BODY: 16/24
- 
-3/4
- 
-H1: 36/42
-F: 18/24
-BODY: 14/21
- 
-2/3
- 
-H1: 28/32
-H2: 16/20
-BODY: 12/16;
- 
- 
- 
-BREAKPOINT WIDTH
- 
-849PX
- 
-//SINGLE IMAGE IN VIEW PER SCREEN
- 
- 
- 
-BREAKPOINT WIDTH
- 
-500PX
- 
-//SINGLE IMAGE IN VIEW PER SCREEN // HIDE BODY COPY DESCRIPTION
- 
- 
- 
-BREAKPOINT WIDTH
- 
-475PX
- 
-//MOBILE NAV HAMBURGER MENU
- 
-;
- 
-!!!!!!!!!!!!!!!!!!!
- 
- 
-BREAKPOINT WIDTH
- 
-375PX
- 
-//FIX VIEW PROJECT CUT OFF
- 
-;
- 
-!!!!!!!!!!!!!!!!!!!
- 
- 
-NO MORE COMPATABILITY BELOW 300PX WIDTH AND/OR 400PX HEIGHT
-
- 
-*/
-
- 
-
- 
- 
+} 
 @media screen and (min-width: 850px) {
 .project-one{
   margin-top: 30px!important;
@@ -657,7 +589,7 @@ h2{
  line-height:16px!important;
 }
 }
-@media screen and (min-width: 849px) and (max-width: 1200px) {
+@media screen and (min-width: 849px) and (max-width: 1500px) {
 #button1::after, #button2::after, #button3::after {
   font-size: 14px !important;
   letter-spacing: 0.01em !important;
@@ -683,7 +615,7 @@ h2 {
   display: none!important;
 }
 }
-@media screen and (max-height: 599px) and (max-width: 999px) {
+@media screen and (max-height: 399px) and (max-width: 1499px) {
 #body-text{
   display: none!important;
 }
@@ -736,7 +668,7 @@ h2 {
 *, ::before, ::after {
   box-sizing: unset;
 }
-@media screen and (max-height: 849px) and (min-height: 600px) {
+@media screen and (max-height: 849px) and (min-height: 500px) {
 .project-title {
   font-size: 36px !important;
   line-height: 42px !important;
@@ -768,7 +700,7 @@ h2{
  margin-top: 12px!important;
 }
 }
-@media screen and (min-height: 750px) and (min-width: 850px) and (max-width: 1200px) {
+@media screen and (min-height: 250px) and (min-width: 350px) and (max-width: 1500px) {
 .project-title {
   font-size: 36px !important;
   line-height: 42px !important;
@@ -784,11 +716,8 @@ h2{
  margin-top: 12px!important;
 }
 }
-@media screen and (max-height: 700px) and (max-width: 1000px) {
-.project-title {
-  font-size: 28px !important;
-  line-height: 32px !important;
-}
+@media screen and (max-height: 700px) and (max-width: 1500px) {
+
     #logoblockfour, #logoblocktwo {
     display: none;
   }
@@ -832,30 +761,27 @@ position: static!important;
 .page-5{
   margin-left: 400vw!important;
 }
+.project-title {
+  font-size: 48px !important;
+  line-height: 60px !important;
+}
 h2{
-  font-size: 16px!important;
-  line-height: 20px!important;
+  margin: 3px 0 0 0 !important;
+  font-size: 24px !important;
+  line-height: 24px !important;
 }
 #body-text {
- font-size: 12px!important;
- line-height:16px!important;
- 
+ font-size: 18px !important;
+ line-height:28px !important;
+ margin-top: 18px !important;
 }
 }
-@media screen and (max-width: 1000px) and (max-height: 700px){
-.project-title {
-  font-size: 28px !important;
-  line-height: 32px !important;
-}
+@media screen and (max-width: 1200px) and (max-height: 700px){
   .page-1::after, .page-2::after, .page-3::after, .page-4::after, .page-5::after {
   width: calc(100% - 66px) !important;
   height: calc(100% - 36px) !important;
 }
-}@media screen and (max-width: 1000px) and (max-height: 700px){
-.project-title {
-  font-size: 28px !important;
-  line-height: 32px !important;
-}
+}@media screen and (max-width: 1200px) and (max-height: 700px){
     .page-4.coding.tag-p-infocus {
   margin-left: calc(100% - 15px ) !important;
 }
@@ -1298,6 +1224,8 @@ body.dark-theme .one .BTprojpicture {
   background-color: var(--view_project-but);
   border: solid 2px #667080 !important;
 }
+
+
 
 </style></head>
  

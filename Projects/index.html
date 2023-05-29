@@ -88,6 +88,17 @@ window.addEventListener('resize', function(event) {
 }, true);
 */
 </script> <style>
+@media screen and (max-height: 450px) {
+    #tag-branding, #tag-coding, #tag-print {display: none!important;}
+}
+@media screen and (max-height: 515px) {
+  #body-copy .project-title{font-size: 28px !important;
+line-height: 32px !important;
+}
+  
+ #body-copy h2 {font-size: 16px !important;
+line-height: 20px !important;}
+}
 @media screen and (max-height: 700px) {
 .content-main > .page-1, .page-2, .page-3, .page-4, .page-5 {
  flex-direction:    row!important;
@@ -529,12 +540,12 @@ width: 100%;
  .scrolldown{
     user-select: none;
  }
-  @media screen and (max-height: 599px) and (max-width: 1499px) {
+  @media screen and (max-height: 699px) and (max-width: 1499px) {
 #body-text {
   display: none!important;
 }
 } 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 950px) {
 .project-one{
   margin-top: 30px!important;
 width: fit-content!important;
@@ -589,7 +600,7 @@ h2{
  line-height:16px!important;
 }
 }
-@media screen and (min-width: 849px) and (max-width: 1500px) {
+@media screen and (min-width: 949px) and (max-width: 1500px) {
 #button1::after, #button2::after, #button3::after {
   font-size: 14px !important;
   letter-spacing: 0.01em !important;
@@ -668,7 +679,7 @@ h2 {
 *, ::before, ::after {
   box-sizing: unset;
 }
-@media screen and (max-height: 849px) and (min-height: 500px) {
+@media screen and (max-height: 949px) and (min-height: 500px) {
 .project-title {
   font-size: 36px !important;
   line-height: 42px !important;
@@ -790,7 +801,7 @@ h2{
   height: calc(100% - 36px) !important;
 }
 }
-@media screen and (max-width: 849px) and (min-height: 500px){
+@media screen and (max-width: 949px) and (min-height: 500px){
   #logoblockfour, #logoblocktwo {
     display: none;
   }
@@ -801,10 +812,7 @@ h2{
 #logotype {
   left: calc(6vw + 45px) !important;
 }
-  .project-title {
-  font-size: 28px !important;
-  line-height: 32px !important;
-}
+
 .page-1::after, .page-2::after, .page-3::after, .page-4::after, .page-5::after {
   width: calc(100% - 66px) !important;
   height: calc(var(--vh) - 141px) !important;
@@ -829,16 +837,7 @@ h2{
 .page-5{
   margin-left: 400vw!important;
 }
-h2{
-  font-size: 16px!important;
-  line-height: 20px!important;
-    margin: 3px 0 0 0!important;
-}
-#body-text {
- font-size: 12px!important;
- line-height:16px!important;
- margin-top: 12px!important
-}
+
 .desktop-nav{
   position: inherit!important;
 }
@@ -1224,7 +1223,6 @@ body.dark-theme .one .BTprojpicture {
   background-color: var(--view_project-but);
   border: solid 2px #667080 !important;
 }
-
 
 
 </style></head>

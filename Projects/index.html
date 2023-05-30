@@ -89,6 +89,12 @@ window.addEventListener('resize', function(event) {
 */
 </script>     <style>
 
+.page-3.coding.tag-p-infocus.m {
+  margin-top: 0 !important;
+}
+.page-5.print.tag-p-infocus.m {
+  margin: 0 !important;
+}
 @media screen and (max-height: 450px) {
     #tag-branding, #tag-coding, #tag-print {display: none!important;}
 
@@ -134,6 +140,15 @@ border: var(--content-border) !important;
 margin-left: -3px;}
 }
 
+
+       #project-element .tag-h-infocus {
+    height: calc(var(--vh) - 135px) !important;
+}
+@media screen and (min-height: 801px) {
+.content-main .active-border-1 {
+  border-bottom: 0px!important;
+}
+}
 @media screen and (max-height: 800px) and (min-width: 700px) {
 .content-main > .page-1, .page-2, .page-3, .page-4, .page-5 {
  flex-direction:    row!important;
@@ -299,10 +314,6 @@ TRANSITIONS
   opacity: 0;
   transition: .25s cubic-bezier(.39,.58,.57,1);
 }
-.tag-h-infocus {
-  max-height: -webkit-fill-available !important;
-  height: calc(var(--vh) - var(--elementInfoHeight-body) - 135px)!important;
-}
 .five.tag-h-infocus {
   max-height: -webkit-fill-available !important;
   height: calc(var(--vh) - var(--elementInfoHeight-body) - 105px)!important;
@@ -327,6 +338,9 @@ TRANSITIONS
   transition: .25s ease;
 }
 @media screen and (max-width: 390px){
+  .content-main .active-border-1 {
+  border-bottom: 0px!important;
+}
 #tag-branding, #tag-print, #tag-media, #tag-coding {
   display: flex;
   flex-direction: row;
@@ -524,12 +538,18 @@ margin-left: -3px;
 .content-main > .page-1, .page-2, .page-3, .page-4, .page-5 {
  flex-direction:    row!important;
 }
-  #project-element{ width: 100%!important;max-height: calc(var(--vh) - 135px);}
+  #project-element{ width:      100% !important;max-height: calc(var(--vh) - 135px);}
   .element-info{box-sizing: content-box;
 display: flex;
 height: auto!important;
 border: var(--content-border) !important;
-margin-left: -3px;}
+margin-left: -3px;
+width: min-content;
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 20px;
+padding-bottom: 10px;
+}
 }
  
     .darken {
@@ -686,7 +706,7 @@ TRANSITIONS
 }
 .tag-h-infocus {
   max-height: -webkit-fill-available !important;
-  height: inherit !important;
+  height: calc(var(--vh) - var(--elementInfoHeight-body) - 138px) !important;
 }
 .tag-hh-infocus{
 }
@@ -961,15 +981,7 @@ bottom: 68px!important;
 position: unset!important;
 }
 }
- @media screen and (min-height: 801px) {
-.content-main .active-border-1 {
-  border-bottom: 0px!important;
-}
-     .content-main #project-element .tag-h-infocus{
-    height: calc(var(--vh) - 135px) !important;
-}
-}
- @media screen and (max-height: 599px) {
+ @media screen and (max-height: 710px) {
 #body-text {
   display: none!important;
 }
@@ -1013,7 +1025,7 @@ h2{
  font-size: 12px!important;
  line-height:16px!important;
 }
-}@media screen and (max-width: 1400px) and (max-height: 800px) {
+}@media screen and (max-width: 1500px) and (max-height: 800px) {
 .content-main > .page-1, .page-2, .page-3, .page-4, .page-5 {
   scroll-snap-align: start;
   position: relative!important;
@@ -1102,7 +1114,7 @@ h2 {
  display: none!important;
 }
   .element-info{
-    height: calc(100% - 30px)!important;;
+    ;
   }
 }
 
@@ -1148,7 +1160,7 @@ h2{
  margin-top: 12px !important;
 }
 }
-@media screen and (max-height: 749px) and (max-width: 1400px) {
+@media screen and (max-height: 749px) and (max-width: 1500px) {
 .project-title {
   font-size: 28px !important;
   line-height: 32px !important;
@@ -1164,7 +1176,7 @@ h2{
  margin-top: 12px!important;
 }
 }
-@media screen and (min-height: 250px) and (min-width: 550px) and (max-width: 1400px) {
+@media screen and (min-height: 250px) and (min-width: 550px) and (max-width: 1500px) {
 .project-title {
   font-size: 38px !important;
   line-height: 42px !important;
@@ -1563,6 +1575,11 @@ width: 100%;
   }
    #logotype{
     display: none!important;
+  }
+}
+@media screen and (max-width: 699px) and (min-width: 381px) and (min-height: 701px){
+.content-main .active-border-1 {
+  border-bottom: 0px!important;
   }
 }
     #body-copy{width: calc(100% - 60px);}

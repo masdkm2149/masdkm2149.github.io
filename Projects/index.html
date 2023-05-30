@@ -88,8 +88,29 @@ window.addEventListener('resize', function(event) {
 }, true);
 */
 </script>     <style>
+
 @media screen and (max-height: 450px) {
     #tag-branding, #tag-coding, #tag-print {display: none!important;}
+
+}
+
+@media screen and (max-height: 380px) {
+.element-info #body-copy{
+ display: inherit!important;
+  }
+  .element-info{
+ width:  min-content !important;
+  }
+}
+
+@media screen and (max-height: 420px) {
+.element-info #body-copy{
+  justify-content: center !important;
+   transform: scale(calc(var(--scalefit) *.0022)) !important;
+}
+  .element-info { width:initial;
+align-items: center;
+}
 }
 @media screen and (max-height: 515px) {
   #body-copy .project-title{font-size: 28px !important;
@@ -1655,7 +1676,6 @@ body.dark-theme .one .BTprojpicture {
   background-color: var(--view_project-but);
   border: solid 2px #667080 !important;
 }
-
 </style></head>
  
   <body onmouseover="getWindowSpec();" onresize="getWindowSpec(); reorder();">

@@ -111,18 +111,20 @@ window.addEventListener('resize', function(event) {
     ajidw();
     reorder();
         getWindowSpec();
-
+          document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
           document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
 
   }
   else if (document.getElementsByClassName('print')[0].classList.contains('hide') && document.getElementsByClassName('branding')[0].classList.contains('hide')){  
     bjidw();
       document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
+	            document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
     reorder();
     getWindowSpec();
   }
   else if (document.getElementsByClassName('coding')[0].classList.contains('hide') && document.getElementsByClassName('branding')[0].classList.contains('hide')){  
       document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
+	            document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
     cjidw();
     reorder();
       getWindowSpec();
@@ -133,7 +135,7 @@ window.addEventListener('resize', function(event) {
     getWindowSpec();
         getWindowSpec2();
     reorder();
-  
+            document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
       document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
 }
 }, true);
@@ -248,6 +250,7 @@ function cjidw(){
                          if (document.querySelector('.debug')){
                            document.querySelector('.debug').innerHTML = ("Your Height: " + window.innerHeight + "px" + "<br><br>" + "Your Width: " + window.innerWidth + "px" + "<br><br>"  + "Your Pixel Ratio: " +  window.devicePixelRatio);
                        }
+		          document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
                        document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
                        document.querySelector(':root').style.setProperty('--ww', window.innerWidth + 'px');
                        document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);

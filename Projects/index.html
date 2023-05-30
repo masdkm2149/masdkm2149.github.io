@@ -89,6 +89,7 @@ window.addEventListener('resize', function(event) {
 */
 </script> <style>
 
+
 @media screen and (max-height: 450px) {
     #tag-branding, #tag-coding, #tag-print {display: none!important;}
 }
@@ -100,7 +101,21 @@ line-height: 32px !important;
  #body-copy h2 {font-size: 16px !important;
 line-height: 20px !important;}
 }
+
 @media screen and (max-height: 700px) {
+.content-main > .page-1, .page-2, .page-3, .page-4, .page-5 {
+ flex-direction:    row!important;
+}
+  #project-element{ width: 100%!important;max-height: calc(var(--vh) - 135px);}
+  .element-info{box-sizing: content-box;
+display: flex;
+height: auto!important;
+max-height: calc(var(--vh) - 141px);
+border: var(--content-border) !important;
+margin-left: -3px;}
+}
+
+@media screen and (max-height: 800px) and (min-width: 700px) {
 .content-main > .page-1, .page-2, .page-3, .page-4, .page-5 {
  flex-direction:    row!important;
 }
@@ -541,12 +556,12 @@ width: 100%;
  .scrolldown{
     user-select: none;
  }
-  @media screen and (max-height: 699px) and (max-width: 1499px) {
+  @media screen and (max-height: 599px) and (max-width: 949px) {
 #body-text {
   display: none!important;
 }
 } 
-@media screen and (min-width: 950px) {
+@media screen and (min-width:950px) {
 .project-one{
   margin-top: 30px!important;
 width: fit-content!important;
@@ -561,11 +576,11 @@ position: unset!important;
   display: none!important;
 }
 } 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
 .content-main > .page-1, .page-2, .page-3, .page-4, .page-5 {
   scroll-snap-align: start;
-  width: 100%!important;
   position: relative!important;
+  width: calc(100% - 60px);
 }
 .page-2{
   margin-left: 100vw!important;
@@ -622,7 +637,7 @@ h2 {
   padding: 18px 55px !important;
 }
 }
-@media screen and (max-width: 650px) and (max-height: 650px) {
+@media screen and (max-width: 650px) and (max-height: 600px) {
 #body-text {
   display: none!important;
 }
@@ -680,7 +695,7 @@ h2 {
 *, ::before, ::after {
   box-sizing: unset;
 }
-@media screen and (max-height: 949px) and (min-height: 500px) {
+@media screen and (max-height: 500px) and (min-width: 500px) {
 .project-title {
   font-size: 36px !important;
   line-height: 42px !important;
@@ -696,7 +711,7 @@ h2{
  margin-top: 12px !important;
 }
 }
-@media screen and (max-height: 749px) and (max-width: 1200px) {
+@media screen and (max-height: 749px) and (max-width: 1400px) {
 .project-title {
   font-size: 28px !important;
   line-height: 32px !important;
@@ -712,7 +727,7 @@ h2{
  margin-top: 12px!important;
 }
 }
-@media screen and (min-height: 250px) and (min-width: 350px) and (max-width: 1500px) {
+@media screen and (min-height: 250px) and (min-width: 550px) and (max-width: 949px) {
 .project-title {
   font-size: 36px !important;
   line-height: 42px !important;
@@ -728,7 +743,7 @@ h2{
  margin-top: 12px!important;
 }
 }
-@media screen and (max-height: 700px) and (max-width: 1500px) {
+@media screen and (max-height: 500px) and (max-width: 1500px) {
 
     #logoblockfour, #logoblocktwo {
     display: none;
@@ -802,7 +817,7 @@ h2{
   height: calc(100% - 36px) !important;
 }
 }
-@media screen and (max-width: 949px) and (min-height: 500px){
+@media screen and (max-width: 1049px) and (min-height: 500px) and  (max-height: 600px){
   #logoblockfour, #logoblocktwo {
     display: none;
   }
@@ -1224,10 +1239,6 @@ body.dark-theme .one .BTprojpicture {
   background-color: var(--view_project-but);
   border: solid 2px #667080 !important;
 }
-
-
-
-
 </style></head>
  
   <body onresize="getWindowSpec()">

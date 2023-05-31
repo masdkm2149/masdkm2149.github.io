@@ -1608,13 +1608,14 @@ width: 100%;
   height: 30px;
   border-radius: 50%;
   box-shadow: inset 9px -6px 0px 3px var(--dark);
-  position: absolute;
-  right: 2px;
+  position: fixed;
+  right: 3px;
   bottom: 3px;
   z-index: 999;
   cursor:pointer;
   pointer-events: all;
   transition: .25s ease;
+  transform: scale(.9);
 }
 body.dark-theme .scrolldown{filter: invert(1)}
 #state1:hover {

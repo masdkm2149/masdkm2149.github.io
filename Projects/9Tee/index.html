@@ -398,18 +398,60 @@ right: 0;
 
 
 
-
 <div class="desktop-nav">
- <img class="scrolldown floating" style="opacity: 0.45; width: 50px; position: fixed; margin-left: auto; margin-right: auto; right: 0px; bottom: 30px; left: 0px; z-index: 2; display: block;" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(300, -250, 1, 800))">
-<div style="background: white;height: 105px;top: 0;width: 100%;position: absolute;"></div><a href="https://designedbydan.art/"> <div id="logo" style="width: 150px;height: 45px;background: #FFFFFF;border: 3px solid #667080;box-sizing: border-box;left: 0px;right: 0;top: 0px;bottom: 60px;border: 1px solid #667080;/*! =============== breakpoint 1150px W ===============*/position: fixed;border: 1px solid #667080;margin-left: 30px;margin-top: 30px;content: &quot;LOGO&quot;;font-size: 24px;text-align: center;display: none;"></div><div style="left: 30px;position: absolute;"><div id="logoblockone" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;border-left: 1vw solid;border-left-color: currentcolor;border-left-color: #474747;"></div><div style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);border-right: 1vw solid #474747;" id="logoblocktwo"></div><div id="logoblockthree" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;top: 22px;border-left: 1vw solid;border-left-color: #474747;"></div><div style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);top: 22px;border-right: 1vw solid #474747;" id="logoblockfour"></div></div><h id="logotype" style="position: absolute;left: calc(12vw + 40px);font-family: 'Inter', sans-serif;font-style: normal;font-weight: 600;font-size: 16px;line-height: 48px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #4b515b;height: 45px;top: 28px;">Daniel Roswadowsky</h>
-</a><a href="https://designedbydan.art/Projects/"> <div id="button1" style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;/*! background: #EEF1F4; */position: relative;flex: none;order: 0;flex-grow: 0;border: solid 2px #EEF1F4;margin-right: 0;"></div></a><a href="https://designedbydan.art/Contact/"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: absolute;/*! background: #EEF1F4; */border-radius: 24px;position: relative;flex: none;order: 0;flex-grow: 0;border: solid 2px #EEF1F4;" id="button2"></div></a></div><div class="content-main">
+ <div style="background: var(--bkg-color);height: 105px;top: 0;width: 100%;position: absolute;"></div>
+         <img class="scrolldown floating" style="opacity: 0.45; width: 50px; position: fixed; margin-left: auto; margin-right: auto; right: 0px; bottom: 30px; left: 0px; z-index: 2; display: block;" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(300, -250, 1, 800))">
+               <script>
+          function preview_toggle(){};
+          function show_toggle(){
+              document.getElementById("state1").classList.toggle("hide");
+              document.getElementsByClassName("btn")[0].classList.toggle("hide");
+              document.getElementById("button1").classList.toggle("checked");
+          };
+      </script>
+      <div id="state1" onmouseover="preview_toggle()" onclick="show_toggle()"></div>
+    <div class="btn hide" style="position: absolute;z-index: 9;padding: 30px;right: 75px;transform: scale(0.8);top: 4px;opacity:.9;transition: .25s ease;">
+    <img class="hide" style="width: auto;opacity:.5;height: 18px;position: absolute;z-index: 3;margin: 0 auto;bottom: calc(2.2vh + 10px);left: 175;right: -45px;top: 41px;z-index: 999;transition: .1s;" src="https://designedbydan.art/assets/images/38488.png" onclick="hidebtn();">
+    <label>
+                <span class="btn-toggle" style=""></span>
+            </label>
+            
+        </div>
+<script>
+      const btn = document.querySelector(".btn-toggle");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme == "dark") { 
+  document.body.classList.remove("light-theme");
+  document.body.classList.add("dark-theme");
+} else if (currentTheme == "light") {
+  document.body.classList.remove("dark-theme");
+  document.body.classList.add("light-theme");
+}
+
+btn.addEventListener("click", function () {
+  if (prefersDarkScheme.matches) {
+  document.body.classList.toggle("dark-theme");
+  document.body.classList.toggle("light-theme");
+  var theme = document.body.classList.contains("light-theme") ? "light" : "dark";
+  } else {
+  document.body.classList.toggle("light-theme");
+  document.body.classList.toggle("dark-theme");
+  var theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
+  }
+  localStorage.setItem("theme", theme);
+});
+      </script>
+         <a href="https://designedbydan.art/"> <div id="logo" style="width: 150px;height: 45px;background: #FFFFFF;border: 3px solid #667080;box-sizing: border-box;left: 0px;right: 0;top: 0px;bottom: 60px;border: 1px solid #667080;/*! =============== breakpoint 1150px W ===============*/position: fixed;border: 1px solid #667080;margin-left: 30px;margin-top: 30px;content: &quot;LOGO&quot;;font-size: 24px;text-align: center;display: none;"></div><div style="position: absolute;"><div id="logoblockone" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;border-left: 1vw solid;border-left-color: currentcolor;border-left-color: #474747;"></div><div style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);border-right: 1vw solid #474747;" id="logoblocktwo"></div><div id="logoblockthree" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;top: 22px;border-left: 1vw solid;border-left-color: #474747;"></div><div style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);top: 22px;border-right: 1vw solid #474747;" id="logoblockfour"></div></div><h id="logotype" style="position: absolute;left: calc(12vw + 60px);font-family: 'Inter', sans-serif;font-style: normal;font-weight: 600;font-size: 16px;line-height: 48px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: var(--project-title);height: 45px;top: 28px;">Daniel Roswadowsky</h>
+</a><a href="/Projects/"> <div id="button1" style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: relative;flex: none;order: 0;flex-grow: 0;border: var(--border-color);margin-right: 0;"></div></a>
+<a href="/Contact/"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: absolute;position: relative;flex: none;order: 0;flex-grow: 0;border: var(--border-color);" id="button2"></div></a></div>
+<div class="content-main">
 <div class="page-1" style="width: 100%;">  
-<div class="main-image"><img media="(min-width: 1500px)" style="width: 80%;display: flex;flex-direction: row;margin: 0 auto;top: 0;bottom: 0;position: relative;display: flex;place-content: center;height: inherit;" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/9teelmc.svg"></div>
-
-
-
-</div><div style="/*! margin-top: 100vh; */height: 100%; width: 100%;top: -90px;">  
-<div id="body-header" style="position: absolute;height: fit-content;font-family: 'Inter';font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;margin: 0;display: inline-grid;place-content: center;margin-top: auto;margin-bottom: auto;bottom: 60px;width: fit-content;left: calc(50% + 14vw);/*! margin-top: calc(200% + 330px); */top: 135px;"><h class="project-title">9Tee</h><h2 style="font-family: 'Inter', sans-serif;
+<div class="main-image BTprojpicture"><video autoplay="" loop="" width="100%" height="100%">
+  <source type="video/mp4" src="https://designedbydan.art/assets/images/9tee21lmw_3.mp4">
+</video>
+</div><div id="body-header" style="position: inherit;height: calc(var(--vh) - 135px);font-family:'Inter';font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;margin-left: auto;font-feature-settings:'calt' off;color: #667080;display: inline-grid;align-content: center;bottom: 0;width: fit-content;/*! margin-top: calc(200% + 330px); */top: 0;margin-right: auto;"><h class="project-title" style="">9Tee</h><h2 style="font-family: 'Inter', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 24px;
@@ -421,32 +463,61 @@ font-feature-settings: 'calt' off;
 /* Primary */
 color: #667080;
 margin: 6px 0 0 0;
-">2018</h2><div id="tag-branding"></div><h id="body-text" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;">9Tee is a customizable print on-demand clothing brand. For this project, I was tasked with developing a minimal wordmark and logomark, supplemented with drafts for a short series of modularly designed digital web-based advertisements to be displayed in a marketing campaign.</h></div>
+">2018</h2><div id="tag-branding"></div><h id="body-text" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;">9Tee is a customizable print on-demand clothing brand that was developed as part of my portfolio. I took on the responsibility of developing a minimal wordmark and logomark that would embody the brand's essence. Through careful consideration of form, typography, color, and other visual elements, the brand identity captures the unique personality of 9Tee. The wordmark and logomark were designed to resonate with the target audience and effectively represent the brand's vision.</h></div>
 
 
 
 </div>
-
-
-
 <div style="width: 100%;top: -90px;" class="page-2">  
 
 
 
 
-<div class="main-image" style="width: 100%;background: #33cccc;"><img media="(min-width: 1500px)" style="width: 90%;display: flex;flex-direction: row;margin: 0 auto;top: 0;bottom: 0;position: relative;display: flex;place-content: center;max-width: 1000px;height: inherit;" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/9teew.svg"></div></div><div style="width: 100%;top: -90px;" class="page-2">  
+<div class="main-image" style="width: 100%;background: linear-gradient(1255deg, rgb(0, 0, 0) -50%, rgb(61, 86, 97) 150%);"><img media="(min-width: 1500px)" style="width: 90%;display: flex;flex-direction: row;margin: 0 auto;top: 0;bottom: 0;position: relative;display: flex;place-content: center;max-width: 1400px;" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/34r893i4t3.png"></div></div><div style="position: relative;font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;place-content: ;width: 100% !important;scroll-snap-align: center;margin-top: var(--vh);margin-bottom: var(--vh);padding-top: 0 !important;display: inherit;max-width: 1000px;margin-left: auto;margin-right: auto;scroll-snap-align: center;flex: none;justify-content: space-around;padding-bottom: 60px !important;" class="" id="body-header"><h class="project-title" style="max-width: 90%;display: block;margin: auto;">Designing the Brand Identity</h><h2 style="font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 24px;
+/* or 137% */
+letter-spacing: -0.02em;
+font-feature-settings: 'calt' off;
+
+/* Primary */
+color: #667080;
+margin:   6px auto auto auto !important;
+display: block;
+max-width: 90%;
+">Statement:</h2><div></div><h id="body-text" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;margin-top: 12px !important;margin: auto;max-width: 90% !important;display: block;">
+  
+ Communicating the brand’s philosophy through design, the visual identity for BullseyeTracker incorporates their core values of simplicity and ease of use. Crafting the wordmark and logomark, it was important that it would be recognizable to their target audience. The wordmark is clean, modern, and legible, with a bold yet approachable font that compliments the logomark and conveys the brand's no-nonsense approach to pistol leagues. Designing brand style guidelines provided a visual framework for ensuring cohesion in brand identity. The 12 page booklet includes guidelines for consistency in how visual assets are displayed across various applications, such as webpages in digital media, or business cards in printed media. </h></div><div style="width: 100%;top: -90px;" class="page-3">  
+<div class="main-image"><img style="width: 100%;top: 0;display: flex;flex-direction: row;margin: 0 auto;bottom: 0;position: relative;display: flex;place-content: center;max-width: 850px;height: auto;" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/4645828524.png" class="fixsize" media="(min-width: 1500px)"></div>
 
 
 
 
-<div class="main-image" style="width: 100%;background: #33cccc;"><img media="(min-width: 1500px)" style="width: 80%;display: flex;flex-direction: row;margin: 0 auto;top: 0;bottom: 0;position: relative;display: flex;place-content: center;max-width: 1000px;height: inherit;" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/9teelmw.svg"></div></div>
-
-<div style="width: 100%;top: -60px;position: relative;scroll-snap-align: center;" class="page-4">  
 
 
 
+<div style="place-content: center;bottom: 0;position: inherit;height: calc(var(--vh) - 135px);font-family: 'Inter';font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;margin-left: auto;font-feature-settings: 'calt' off;color: #667080;display: inline-grid;align-content: center;bottom: 0;width: fit-content;top: 0;margin-right: auto;" id="body-header"><h class="project-title">The Logomark</h><h2 style="font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 24px;
+/* or 137% */
+letter-spacing: -0.02em;
+font-feature-settings: 'calt' off;
 
-<div class="main-image" style="width: inherit;background: #fff;"> <div style="width: 100%;background: url(https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/3450825439-29-35R2.png);background-size: contain;background-repeat: no-repeat;margin-top: auto;top: 0;bottom: 0;height: auto;position: absolute;margin-bottom: auto;background-position: center;max-width: 700px;margin-left: auto;margin-right: auto;left: 0;right: 0;"></div></div></div><div class="page-3" style="height: var(--vh);width: 100%;/*! margin-top: 100%; */scroll-snap-align: center;position: relative;padding-top: 105px;"> <div id="body-copy" style="min-height: fit-content;flex-direction: column;font-family: 'Inter';margin-right: 30px;font-style: normal;z-index: 2;font-weight: 400;font-size: 9px;display: inline-flex;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;margin-top: auto;margin-bottom: auto;/*! transform: scale(1.5); */position: absolute;margin: auto;top: 0;bottom: 0px;height: fit-content;left: 0;right: 0;width: fit-content;top: 30px;"><div style="/*! transform: scale(1.5); *//*! width: 100%; *//*! height: 100%; */max-width: 890px;width: revert;"><h class="project-title" style="">That's all for this project.<br style="margin-bottom: 30px;"> 
+/* Primary */
+color: #667080;
+margin: 6px 0 0 0;
+">Statement:</h2><div></div><h id="body-text" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;margin-top: 12px !important;">A logomark is the core visual representation of a brand's identity. Creating a sucessful mark should effectively communicate the brand's function or services as well as an essential overarching mission. The mark should be recognizable to a brand's targeted users as well as the broader community. On this basis, the criteria for developing the mark required it to be adaptable, identifiable, informative, and succinct. The BullseyeTracker logomark is a simple yet effective design which incorporates the iconic shape of the bullseye pistol.</h></div></div>
+
+<div style="margin-top: var(--vh);scroll-snap-align: start;width: 100%;height: var(--vh);pointer-events: none;position: relative;display: flex;z-index: 1;padding-top: 105px;padding-bottom: 30px;" class="page-4">  
+
+
+
+
+<div class="main-image" style="width: inherit;"> <div style="width: 100%;background: url(https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/864688335.png);background-size: contain;background-repeat: no-repeat;margin-top: auto;top: 0;bottom: 0;height: auto;position: absolute;margin-bottom: auto;background-position: center;"></div></div></div><div class="page-3" style="height: var(--vh);width: 100%;margin-top: var(--vh);scroll-snap-align: center;position: relative;padding-top: 105px;padding-bottom: 30px;align-items: center;"> <div id="body-copy" style="min-height: fit-content;flex-direction: column;font-family: 'Inter';margin-right: 30px;font-style: normal;z-index: 2;font-weight: 400;font-size: 9px;display: inline-flex;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;top: 0;bottom: 0px;height: fit-content;left: 0;right: 0;justify-content: center;position: absolute;width: fit-content;margin: auto;padding-bottom: 30px;"><div style="/*! transform: scale(1.5); *//*! width: 100%; *//*! height: 100%; */max-width: 832px;width: revert;"><h class="project-title" style="">That's all for this project.<br style="margin-bottom: 30px;"> 
   Hopefully you enjoyed that as much as I did...
 <br>
 Lets get in contact!</h><h2 style="font-family: 'Inter', sans-serif;
@@ -461,7 +532,7 @@ font-feature-settings: 'calt' off;
 /* Primary */
 color: #667080;
 position: relative;
-">Don't be shy...</h2><h style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;display: flex;" id="body-text">Email: danrossgfx@gmail.com</h></div><a href="mailto:danrossgfx@gmail.com" style="pointer-events:all;margin-top: 30px;width: fit-content;border-radius: 48px;display: flex;margin-bottom: 8px;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border: solid 2px #EEF1F4;margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a>
+">Don't be shy...</h2><h style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;display: flex;" id="body-text">Email: danrossgfx@gmail.com</h></div><a href="mailto:danrossgfx@gmail.com" style="pointer-events:all;margin-top: 30px;width: fit-content;border-radius: 100px;display: flex;margin-bottom: 8px;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border: solid 2px #EEF1F4;margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a>
 </div></div></div><script>
 
 

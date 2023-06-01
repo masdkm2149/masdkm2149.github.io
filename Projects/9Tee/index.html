@@ -743,14 +743,7 @@ right: 0;
 }
     
 </style>
-    <script>  
-                            
-                            
-                            function as() { document.documentElement.style.setProperty('--vh', window.innerHeight + 'px');}
-         
-
-    window.addEventListener('resize', as())
-    </script></head>
+ </head>
 
  <body>
 
@@ -938,4 +931,29 @@ window.addEventListener('resize', function(event) {
     reorder();
 }, true);
 
-</script><style type="text/css"></style></body><script src="/sai.js"></script></html>
+</script><style type="text/css"></style></body><script>	
+    function reorder(){
+document.getElementsByClassName('content-main')[0].scrollLeft +=8
+}
+function reorder2(){
+document.getElementsByClassName('content-main')[0].scrollLeft +=400}
+    
+$( document ).ready(function() {
+
+      getWindowSpec();      getWindowSpec2();
+         document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
+         reorder();
+      
+});
+
+
+const scrollContainer = document.querySelector(".content-main");
+
+window.addEventListener('resize', function(event) {
+              document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
+          document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
+    		          document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
+                       document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
+                       document.querySelector(':root').style.setProperty('--ww', window.innerWidth + 'px');
+                       document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
+    </script></html>

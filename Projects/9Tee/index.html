@@ -742,7 +742,12 @@ right: 0;
   left: 30px;
 }
     
-</style></head>
+</style>
+    <script>
+    window.addEventListener('resize', function(event) {
+          document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
+
+    }</script></head>
 
  <body>
 

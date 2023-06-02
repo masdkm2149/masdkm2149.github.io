@@ -962,7 +962,10 @@ document.getElementsByClassName('content-main')[0].scrollLeft +=400}
     
 $( document ).ready(function() {
 
-      getWindowSpec();      getWindowSpec2();
+      		          document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
+                       document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
+                       document.querySelector(':root').style.setProperty('--ww', window.innerWidth + 'px');
+                       document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
          document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
          reorder();
       

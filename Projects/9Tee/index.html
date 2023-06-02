@@ -803,23 +803,9 @@ btn.addEventListener("click", function () {
 <div class="main-image BTprojpicture"><video muted autoplay playsinline loop width="100%" style="height:inherit;">
   <source type="video/mp4" src="https://designedbydan.art/assets/images/9tee21lmw_3.mp4">
 </video><script>
-      const btn = document.querySelector(".btn-toggle");
 var video = document.getElementById('video');
 var source = document.createElement('source');
 const currentTheme = localStorage.getItem("theme");
-if (currentTheme == "dark") { 
-source.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_3.mp4');
-source.setAttribute('type', 'video/mp4');
-video.appendChild(source);
-video.play();
-} else if (currentTheme == "light") {
-source.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_2.mp4');
-source.setAttribute('type', 'video/mp4');
-video.appendChild(source);
-video.play();
-}
-
-btn.addEventListener("click", function () {
 if (currentTheme == "dark") { 
 source.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_3.mp4');
 source.setAttribute('type', 'video/mp4');

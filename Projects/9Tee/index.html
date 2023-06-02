@@ -785,11 +785,11 @@ if (currentTheme == "dark") {
 
 btn.addEventListener("click", function () {
   if (prefersDarkScheme.matches) {
-  document.body.classList.toggle("dark-theme");
+  document.body.classList.toggle("dark-theme");  
+  document.body.classList.toggle("light-theme");
   var video = document.getElementById('video');
   video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_3.mp4');
   video.setAttribute('type', 'video/mp4');
-  document.body.classList.toggle("light-theme");
   var theme = document.body.classList.contains("light-theme") ? "light" : "dark";
   } else {
   document.body.classList.toggle("light-theme");
@@ -899,7 +899,6 @@ position: relative;
 if (currentTheme == "dark") { 
 video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_3.mp4');
 video.setAttribute('type', 'video/mp4');
-video.appendChild(source);
 video.play();
   } else {
 video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_2.mp4');

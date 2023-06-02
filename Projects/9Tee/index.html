@@ -802,21 +802,7 @@ btn.addEventListener("click", function () {
 <div class="page-1" style="width: 100%;">  
 <div class="main-image BTprojpicture"><video muted autoplay playsinline loop width="100%" style="height:inherit;">
   <source type="video/mp4" src="https://designedbydan.art/assets/images/9tee21lmw_3.mp4">
-</video><script>
-var video = document.getElementById('video');
-var source = document.createElement('source');
-if (currentTheme == "dark") { 
-source.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_3.mp4');
-source.setAttribute('type', 'video/mp4');
-video.appendChild(source);
-video.play();
-  } else {
-source.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_2.mp4');
-source.setAttribute('type', 'video/mp4');
-video.appendChild(source);
-video.play();
-  }
-      </script>
+</video>
 </div><div id="body-header" style="position: inherit;height: calc(var(--vh) - 135px);font-family:'Inter';font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;margin-left: auto;font-feature-settings:'calt' off;color: #667080;display: inline-grid;align-content: center;bottom: 0;width: fit-content;/*! margin-top: calc(200% + 330px); */top: 0;margin-right: auto;"><h class="project-title" style="">9Tee</h><h2 style="font-family: 'Inter', sans-serif;
 font-style: normal;
 font-weight: 700;
@@ -970,4 +956,18 @@ window.addEventListener('resize', function(event) {
                        document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
                        document.querySelector(':root').style.setProperty('--ww', window.innerWidth + 'px');
                        document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
-    </script></html>
+    </script><script>
+var video = document.getElementById('video');
+var source = document.createElement('source');
+if (currentTheme == "dark") { 
+source.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_3.mp4');
+source.setAttribute('type', 'video/mp4');
+video.appendChild(source);
+video.play();
+  } else {
+source.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_2.mp4');
+source.setAttribute('type', 'video/mp4');
+video.appendChild(source);
+video.play();
+  }
+      </script></html>

@@ -788,7 +788,7 @@ const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 const currentTheme = localStorage.getItem("theme");
 
 btn.addEventListener("click", function () {
-      if body.classList.contains('dark-theme') {
+      if (body.classList.contains('dark-theme')) {
         video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_5.mp4');
         video.setAttribute('type', 'video/mp4');
         if (prefersDarkScheme.matches) {
@@ -797,7 +797,7 @@ btn.addEventListener("click", function () {
         }
   var theme = document.body.classList.contains("light-theme") ? "light" : "dark";
   } else {
-      if body.classList.contains('light-theme') {
+      if (body.classList.contains('light-theme')) {
         video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_3.mp4');
         video.setAttribute('type', 'video/mp4');
       }

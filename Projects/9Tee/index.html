@@ -57,12 +57,12 @@ body.dark-theme {
 --view_project-but-text: #EEF1F4;  
 --project-title: #e0e0e0;
 }
-
-@media (prefers-color-scheme: dark) {
-/* defaults to dark theme */
-.main-image.BTprojpicture::after{
+body.dark-theme .main-image.BTprojpicture::after{
     background: #000!important;
     }
+@media (prefers-color-scheme: dark) {
+/* defaults to dark theme */
+
     body {
   --content-border: 3px solid rgb(12, 13, 16);
   --border-color: solid 2px #363840;

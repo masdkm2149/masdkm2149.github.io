@@ -791,10 +791,10 @@ btn.addEventListener("click", function () {
       if body.classList.contains('dark-theme') {
         video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_5.mp4');
         video.setAttribute('type', 'video/mp4');
-      }
-  if (prefersDarkScheme.matches) {
-  document.body.classList.toggle("dark-theme");  
-  document.body.classList.toggle("light-theme");
+        if (prefersDarkScheme.matches) {
+            document.body.classList.toggle("dark-theme");  
+            document.body.classList.toggle("light-theme");
+        }
   var theme = document.body.classList.contains("light-theme") ? "light" : "dark";
   } else {
       if body.classList.contains('light-theme') {

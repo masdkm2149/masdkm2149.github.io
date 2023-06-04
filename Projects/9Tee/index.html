@@ -9,21 +9,7 @@
           <link rel="icon" type="image/x-icon" href="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/favicon.svg">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"> 
-    <script>
-$( document ).ready(function() {
-  if (document.body.classList.contains('dark-theme')) {
-    var video = document.getElementById('video');
-  video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_3.mp4');
-  video.setAttribute('type', 'video/mp4');
-  video.play();
-} else   if (document.body.classList.contains('light-theme')) {
-    var video = document.getElementById('video');
-  video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_5.mp4');
-  video.setAttribute('type', 'video/mp4');
-  video.play(); 
-}      
-});
-    </script>
+
   <style>
 
 
@@ -829,7 +815,21 @@ btn.addEventListener("click", function () {
 <div class="page-1" style="width: 100%;">  
 <div class="main-image BTprojpicture"><video muted autoplay playsinline loop width="100%" id="video" style="max-height: 100%;">
 
-</video>
+</video>    <script>
+$( document ).ready(function() {
+  if (document.body.classList.contains('dark-theme')) {
+    var video = document.getElementById('video');
+  video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_3.mp4');
+  video.setAttribute('type', 'video/mp4');
+  video.play();
+} else if (document.body.classList.contains('light-theme')) {
+    var video = document.getElementById('video');
+  video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_5.mp4');
+  video.setAttribute('type', 'video/mp4');
+  video.play(); 
+}      
+});
+    </script>
 </div><div id="body-header" style="position: inherit;height: calc(var(--vh) - 135px);font-family:'Inter';font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;margin-left: auto;font-feature-settings:'calt' off;color: #667080;display: inline-grid;align-content: center;bottom: 0;width: fit-content;/*! margin-top: calc(200% + 330px); */top: 0;margin-right: auto;"><h class="project-title" style="">9Tee</h><h2 style="font-family: 'Inter', sans-serif;
 font-style: normal;
 font-weight: 700;

@@ -959,6 +959,7 @@ window.onresize = reorder();
   function reorder(){
 document.getElementsByClassName('content-main')[0].scrollTop +=8;
                        document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
+      document.getElementsByClassName('content-main')[0].style.setProperty('overflow-y', 'auto');
 }
 
 window.addEventListener('resize', function(event) {

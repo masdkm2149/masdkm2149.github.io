@@ -817,28 +817,20 @@ btn.addEventListener("click", function () {
 </video>    <script>
 $( document ).ready(function() {
   const currentTheme = localStorage.getItem("theme");
-  if (currentTheme == "dark") { 
+  if (currentTheme == "dark") || (document.body.classList.contains('dark-theme')) { 
     video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_3.mp4');
     video.setAttribute('type', 'video/mp4');
     document.body.classList.remove("light-theme");
     document.body.classList.add("dark-theme");
-} else if (currentTheme == "light") {
+} else if (currentTheme == "light") || (document.body.classList.contains('light-theme')) {
     video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_5.mp4');
     video.setAttribute('type', 'video/mp4');
     document.body.classList.remove("dark-theme");
     document.body.classList.add("light-theme");
-} else if (document.body.classList.contains('dark-theme')) {
-    video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_3.mp4');
-    video.setAttribute('type', 'video/mp4');
-} else if (document.body.classList.contains('light-theme')) {
-    video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_5.mp4');
-    video.setAttribute('type', 'video/mp4');
-}      
-  else { 
+} else { 
      var theme = document.body.classList.contains("light-theme") ? "light" : "dark";
      localStorage.setItem("theme", theme);
-}
-   video.play();
+} video.play();
 });
     </script>
 </div><div id="body-header" style="position: inherit;height: calc(var(--vh) - 135px);font-family:'Inter';font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;margin-left: auto;font-feature-settings:'calt' off;color: #667080;display: inline-grid;align-content: center;bottom: 0;width: fit-content;/*! margin-top: calc(200% + 330px); */top: 0;margin-right: auto;"><h class="project-title" style="">9Tee</h><h2 style="font-family: 'Inter', sans-serif;

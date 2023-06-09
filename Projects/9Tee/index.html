@@ -926,19 +926,20 @@ position: relative;
 </div></div></div><script>const currentTheme = localStorage.getItem("theme");
 
 if (currentTheme == "dark") { 
-  document.body.classList.remove("light-theme");
-  document.body.classList.add("dark-theme");
-    var video = document.getElementById('video');
+  var video = document.getElementById('video');
   video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_3.mp4');
   video.setAttribute('type', 'video/mp4');
   video.play();
+  document.body.classList.remove("light-theme");
+  document.body.classList.add("dark-theme");
+
 } else if (currentTheme == "light") {
-  document.body.classList.remove("dark-theme");
-  document.body.classList.add("light-theme");
-    var video = document.getElementById('video');
+  var video = document.getElementById('video');
   video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_5.mp4');
   video.setAttribute('type', 'video/mp4');
-  video.play(); 
+  video.play();
+  document.body.classList.remove("dark-theme");
+  document.body.classList.add("light-theme");
 }
 window.addEventListener("scroll", function(event) {
 var y = document.getElementsByClassName('content-main')[0].scrollTop

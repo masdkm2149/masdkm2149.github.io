@@ -88,6 +88,36 @@ window.addEventListener('resize', function(event) {
 }, true);
 */
 </script>     <style>
+	
+	@media screen and (max-width: 380px) {
+      .checked, #button1, #button2 {
+  margin-left: 250px !important;
+  margin-right: 0px !important;
+  margin-bottom: 6px !important;
+}
+    .desktop-nav #button1.checked {
+  margin-right: 0px !important;
+      }
+.desktop-nav .btn {
+  position: fixed !important;
+  right: 50px !important;
+  bottom: 15px !important;
+  top: unset !important;
+}
+      }
+@media screen and (max-width: 720px) and (min-width: 380px) {
+    .desktop-nav #button1.checked {
+  margin-right: 0px !important;
+      }
+.desktop-nav .btn {
+  position: fixed !important;
+  right: 50px !important;
+  bottom: 15px !important;
+  top: unset !important;
+}
+      }
+	/* ^^^ NAV ^^^ */
+	
 @media only screen and (max-device-width: 480px) {
 	body {
 		-webkit-text-size-adjust: 100%;

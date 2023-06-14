@@ -4,6 +4,8 @@ function setup() {
 
 
 function draw() {
+          colorMode(HSB);
+    background(random(1,360), random(20,100), random(10,100));
 }
   function mouseWheel(event) {
     scrollDelta = event.delta;

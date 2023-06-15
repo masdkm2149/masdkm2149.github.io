@@ -147,9 +147,9 @@ function setup() {
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
-      text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
-      textSize(18);
-    text("Interactive Design", windowWidth/3, windowHeight/2 + 50);
+ //     text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
+ //     textSize(18);
+ //   text("Interactive Design", windowWidth/3, windowHeight/2 + 50);
 }
 
 
@@ -305,9 +305,9 @@ $( document ).ready(function() {
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
-      text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
-      textSize(18);
-    text("Interactive Design", windowWidth/3, windowHeight/2 + 50);
+    //  text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
+    //  textSize(18);
+    //  text("Interactive Design", windowWidth/3, windowHeight/2 + 50);
   }
 function draw() {
 
@@ -463,9 +463,9 @@ function draw() {
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
-      text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
-      textSize(18);
-    text("Interactive Design", windowWidth/3, windowHeight/2 + 50);
+//      text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
+  //    textSize(18);
+  //  text("Interactive Design", windowWidth/3, windowHeight/2 + 50);
       } 
     else {
         colorMode(HSB);
@@ -523,10 +523,9 @@ function draw() {
             else if ((rr3 < 50) && (rr1 > 315)) {
             fill(random(0, 270), rr2*rr, random(65, 100));
       }
-      text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
-      textSize(18);
-    text("Interactive Design", windowWidth/3, windowHeight/2 + 50);
-
+// text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
+  //    textSize(18);
+ //   text("Interactive Design", windowWidth/3, windowHeight/2 + 50);
     }
 
 }

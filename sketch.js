@@ -1,6 +1,6 @@
 function setup() {
 
-    createCanvas(windowWidth, windowHeight);
+   // createCanvas(windowWidth, windowHeight);
      const rx = (0.8, 2)
         colorMode(HSB);
           let r1 = (1,360)
@@ -161,7 +161,7 @@ $( document ).ready(function() {
 });
 
   function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+//  resizeCanvas(windowWidth, windowHeight);
            const rx = (0.8, 2)
         colorMode(HSB);
           let r1 = (1,360)

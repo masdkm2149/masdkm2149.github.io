@@ -9,7 +9,25 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
     <meta name="theme-color" content="hsl(var(--bg_hue), var(--bg_saturation), var(--bg_brightness))"/>
-<style>
+
+	<script>function setup() {
+  createCanvas(windowWidth, windowHeight);
+}
+
+function draw() {
+clear();
+ellipse(mouseX, mouseY, 80, 80);
+  colorMode(HSB)
+  fill(0, 100, 100)
+  noStroke()
+
+}</script><style>
+  #123canvas {
+z-index: 9999;
+position: absolute;
+mix-blend-mode: difference;
+pointer-events: none;
+  }
 #view_project:hover {
   background: var(--colorr);
   transform: scale(1.5);

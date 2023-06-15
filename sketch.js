@@ -29,7 +29,7 @@ function setup() {
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       
     else if (rr2 < 50) {
-            xo = random(rr3*1.23, 100)
+            xy = random(rr2*1.23, 100)
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       
    
@@ -249,7 +249,7 @@ function draw() {
             document.querySelector(':root').style.setProperty('--bg_brightness', rr2 + '%');
             document.querySelector(':root').style.setProperty('--bg_saturation', rr3 + '%');
       textSize(40);  
-     if (rr3 > 50) {
+    if (rr3 > 50) {
             xo = random(1, rr3*0.85)
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     }       
@@ -263,7 +263,7 @@ function draw() {
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       
     else if (rr2 < 50) {
-            xo = random(rr3*1.23, 100)
+            xy = random(rr2*1.23, 100)
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       
    
@@ -327,7 +327,7 @@ function draw() {
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       
     else if (rr2 < 50) {
-            xo = random(rr3*1.23, 100)
+            xy = random(rr2*1.23, 100)
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       
    

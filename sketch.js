@@ -25,11 +25,11 @@ function setup() {
     }       
    
    if (rr2 > 50) {
-            xy = random(1, rr2*0.77)
+            xy = random(1, rr2*0.7)
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       
     else if (rr2 < 50) {
-            xy = random(rr2*1.23, 100)
+            xy = random(rr2*1.3, 100)
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       
    
@@ -98,11 +98,11 @@ $( document ).ready(function() {
     }       
    
    if (rr2 > 50) {
-            xy = random(1, rr2*0.77)
+            xy = random(1, rr2*0.7)
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       
     else if (rr2 < 50) {
-            xy = random(rr2*1.23, 100)
+            xy = random(rr2*1.3, 100)
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       
    
@@ -170,11 +170,11 @@ function draw() {
     }       
    
    if (rr2 > 50) {
-            xy = random(1, rr2*0.77)
+            xy = random(1, rr2*0.7)
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       
     else if (rr2 < 50) {
-            xy = random(rr2*1.23, 100)
+            xy = random(rr2*1.3, 100)
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       
    
@@ -234,11 +234,11 @@ function draw() {
     }       
    
    if (rr2 > 50) {
-            xy = random(1, rr2*0.77)
+            xy = random(1, rr2*0.7)
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       
     else if (rr2 < 50) {
-            xy = random(rr2*1.23, 100)
+            xy = random(rr2*1.3, 100)
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       
    

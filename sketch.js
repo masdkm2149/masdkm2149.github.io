@@ -11,6 +11,9 @@ function setup() {
         var rr3 = random(r3)
         var rr = random(rx)
         background(rr1, rr2, rr3);
+            document.querySelector(':root').style.setProperty('--bg_hue', rr1);
+            document.querySelector(':root').style.setProperty('--bg_brightness', rr2 + '%');
+            document.querySelector(':root').style.setProperty('--bg_saturation', rr3 + '%');
       textSize(40);
     if ((rr3 > 50) && (rr1 < 45)) {
             xi = random(90, 360)
@@ -169,6 +172,9 @@ $( document ).ready(function() {
         var rr3 = random(r3)
         var rr = random(rx)
         background(rr1, rr2, rr3);
+                  document.querySelector(':root').style.setProperty('--bg_hue', rr1);
+            document.querySelector(':root').style.setProperty('--bg_brightness', rr2 + '%');
+            document.querySelector(':root').style.setProperty('--bg_saturation', rr3 + '%');
       textSize(40);
     if ((rr3 > 50) && (rr1 < 45)) {
             xi = random(90, 360)
@@ -328,6 +334,9 @@ function draw() {
         let r3 = (10,100)
 
         background(rr1, rr2, rr3);
+                      document.querySelector(':root').style.setProperty('--bg_hue', rr1);
+            document.querySelector(':root').style.setProperty('--bg_brightness', rr2 + '%');
+            document.querySelector(':root').style.setProperty('--bg_saturation', rr3 + '%');
       textSize(40);  
     if ((rr3 > 50) && (rr1 < 45)) {
             xi = random(90, 360)
@@ -474,6 +483,9 @@ function draw() {
         let r2 = (20,100)
         let r3 = (10,100)
         background(rr1, rr2, rr3);
+                    document.querySelector(':root').style.setProperty('--bg_hue', rr1);
+            document.querySelector(':root').style.setProperty('--bg_brightness', rr2 + '%');
+            document.querySelector(':root').style.setProperty('--bg_saturation', rr3 + '%');
       textSize(40);
           if ((rr3 > 50) && (rr1 < 45)) {
             xi = random(90, 360)

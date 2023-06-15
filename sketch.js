@@ -13,49 +13,109 @@ function setup() {
         background(rr1, rr2, rr3);
       textSize(40);
     if ((rr3 > 50) && (rr1 < 45)) {
-            fill(random(90, 360), rr2*rr, random(0, 35));
-      }          
+            xi = random(90, 360)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+    }          
   else if ((rr3 > 50) && (rr1 > 90)) {
-            fill(random(0, 45), rr2*rr, random(0, 40));
+            xi = random(0, 45)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
          else if ((rr3 > 50) && (rr1 > 135)) {
-            fill(random(0, 90), rr2*rr, random(0, 40));
+            xi = random(0, 90)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
          else if ((rr3 > 50) && (rr1 > 180)) {
-            fill(random(0, 135), rr2*rr, random(0, 40));
+            xi = random(0, 135)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
          else if ((rr3 > 50) && (rr1 > 225)) {
-            fill(random(0, 180), rr2*rr, random(0, 40));
+            xi = random(0, 180)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
          else if ((rr3 > 50) && (rr1 > 270)) {
-            fill(random(0, 225), rr2*rr, random(0, 40));
+            xi = random(0, 225)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
          else if ((rr3 > 50) && (rr1 > 315)) {
-            fill(random(0, 270), rr2*rr, random(0, 40));
+            xi = random(0, 270)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
          else if ((rr3 > 50) && (rr1 > 135)) {
-            fill(random(0, 90), rr2*rr, random(0, 40));
+            xi = random(0, 90)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
       else if ((rr3 < 50) && (rr1 > 180)) {
-            fill(random(0, 135), rr2*rr, random(60, 100));
+            xi = random(0, 135)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }      
                else if ((rr3 < 50) && (rr1 < 45)) {
-            fill(random(90, 360), rr2*rr, random(65, 100));
+            xi = random(90, 360)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }    
   else if ((rr3 < 50) && (rr1 > 90)) {
-            fill(random(0, 45), rr2*rr, random(60, 100));
+            xi = random(0, 45)
+            xy = random(65, 100)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
     else if ((rr3 < 50) && (rr1 > 135)) {
-            fill(random(0, 90), rr2*rr, random(60, 100));
+            xi = random(0, 90)
+            xy = random(65, 100)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
         else if ((rr3 < 50) && (rr1 > 225)) {
-            fill(random(0, 180), rr2*rr, random(60, 100));
+            xi = random(0, 180)
+            xy = random(65, 100)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }      
           else if ((rr3 < 50) && (rr1 > 270)) {
-            fill(random(0, 225), rr2*rr, random(60, 100));
+            xi = random(0, 225)
+            xy = random(65, 100)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }     
             else if ((rr3 < 50) && (rr1 > 315)) {
-            fill(random(0, 270), rr2*rr, random(60, 100));
+            xi = random(0, 270)
+            xy = random(65, 100)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
       text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
       textSize(18);
@@ -208,50 +268,110 @@ function draw() {
         var rr = random(rx)
         background(rr1, rr2, rr3);
       textSize(40);  
-          if ((rr3 > 50) && (rr1 < 45)) {
-            fill(random(90, 360), rr2*rr, random(0, 35));
-      }    
-        else if ((rr3 > 50) && (rr1 > 90)) {
-            fill(random(0, 45), rr2*rr, random(0, 35));
+    if ((rr3 > 50) && (rr1 < 45)) {
+            xi = random(90, 360)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+    }          
+  else if ((rr3 > 50) && (rr1 > 90)) {
+            xi = random(0, 45)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
          else if ((rr3 > 50) && (rr1 > 135)) {
-            fill(random(0, 90), rr2*rr, random(0, 35));
+            xi = random(0, 90)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
          else if ((rr3 > 50) && (rr1 > 180)) {
-            fill(random(0, 135), rr2*rr, random(0, 35));
+            xi = random(0, 135)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
          else if ((rr3 > 50) && (rr1 > 225)) {
-            fill(random(0, 180), rr2*rr, random(0, 35));
+            xi = random(0, 180)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
          else if ((rr3 > 50) && (rr1 > 270)) {
-            fill(random(0, 225), rr2*rr, random(0, 35));
+            xi = random(0, 225)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
          else if ((rr3 > 50) && (rr1 > 315)) {
-            fill(random(0, 270), rr2*rr, random(0, 35));
+            xi = random(0, 270)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
          else if ((rr3 > 50) && (rr1 > 135)) {
-            fill(random(0, 90), rr2*rr, random(0, 35));
+            xi = random(0, 90)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
       else if ((rr3 < 50) && (rr1 > 180)) {
-            fill(random(0, 135), rr2*rr, random(65, 100));
+            xi = random(0, 135)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }      
-             else if ((rr3 < 50) && (rr1 < 45)) {
-            fill(random(90, 360), rr2*rr, random(65, 100));
+               else if ((rr3 < 50) && (rr1 < 45)) {
+            xi = random(90, 360)
+            xy = random(0, 35)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }    
   else if ((rr3 < 50) && (rr1 > 90)) {
-            fill(random(0, 45), rr2*rr, random(65, 100));
+            xi = random(0, 45)
+            xy = random(65, 100)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
     else if ((rr3 < 50) && (rr1 > 135)) {
-            fill(random(0, 90), rr2*rr, random(65, 100));
+            xi = random(0, 90)
+            xy = random(65, 100)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
         else if ((rr3 < 50) && (rr1 > 225)) {
-            fill(random(0, 180), rr2*rr, random(65, 100));
+            xi = random(0, 180)
+            xy = random(65, 100)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }      
           else if ((rr3 < 50) && (rr1 > 270)) {
-            fill(random(0, 225), rr2*rr, random(65, 100));
+            xi = random(0, 225)
+            xy = random(65, 100)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }     
             else if ((rr3 < 50) && (rr1 > 315)) {
-            fill(random(0, 270), rr2*rr, random(60, 100));
+            xi = random(0, 270)
+            xy = random(65, 100)
+            fill(xi, rr2*rr, xy);
+        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
       }
       text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
       textSize(18);

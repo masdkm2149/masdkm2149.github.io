@@ -321,10 +321,6 @@ function draw() {
   function mouseWheel(event) {
     scrollDelta = event.delta;
      const rx = (0.8, 2)
-                      var rr1 = random(r1)
-        var rr2 = random(r2)
-        var rr3 = random(r3)
-        var rr = random(rx)
     clear();
    
       if (scrollDelta > 0) {
@@ -332,7 +328,10 @@ function draw() {
         let r1 = (1,360)
         let r2 = (20,100)
         let r3 = (10,100)
-
+        var rr1 = random(r1)
+        var rr2 = random(r2)
+        var rr3 = random(r3)
+        var rr = random(rx)
         background(rr1, rr2, rr3);
                       document.querySelector(':root').style.setProperty('--bg_hue', rr1);
             document.querySelector(':root').style.setProperty('--bg_brightness', rr2 + '%');
@@ -482,6 +481,10 @@ function draw() {
         let r1 = (1,360)
         let r2 = (20,100)
         let r3 = (10,100)
+       var rr1 = random(r1)
+        var rr2 = random(r2)
+        var rr3 = random(r3)
+        var rr = random(rx)
         background(rr1, rr2, rr3);
                     document.querySelector(':root').style.setProperty('--bg_hue', rr1);
             document.querySelector(':root').style.setProperty('--bg_brightness', rr2 + '%');

@@ -15,107 +15,137 @@ function setup() {
     if ((rr3 > 50) && (rr1 < 45)) {
             xi = random(90, 360)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     }          
   else if ((rr3 > 50) && (rr1 > 90)) {
             xi = random(0, 45)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
          else if ((rr3 > 50) && (rr1 > 135)) {
             xi = random(0, 90)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
          else if ((rr3 > 50) && (rr1 > 180)) {
             xi = random(0, 135)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
          else if ((rr3 > 50) && (rr1 > 225)) {
             xi = random(0, 180)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
          else if ((rr3 > 50) && (rr1 > 270)) {
             xi = random(0, 225)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
          else if ((rr3 > 50) && (rr1 > 315)) {
             xi = random(0, 270)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
          else if ((rr3 > 50) && (rr1 > 135)) {
             xi = random(0, 90)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
       else if ((rr3 < 50) && (rr1 > 180)) {
             xi = random(0, 135)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }      
                else if ((rr3 < 50) && (rr1 < 45)) {
             xi = random(90, 360)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }    
   else if ((rr3 < 50) && (rr1 > 90)) {
             xi = random(0, 45)
             xy = random(65, 100)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
     else if ((rr3 < 50) && (rr1 > 135)) {
             xi = random(0, 90)
             xy = random(65, 100)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
         else if ((rr3 < 50) && (rr1 > 225)) {
             xi = random(0, 180)
             xy = random(65, 100)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }      
           else if ((rr3 < 50) && (rr1 > 270)) {
             xi = random(0, 225)
             xy = random(65, 100)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }     
             else if ((rr3 < 50) && (rr1 > 315)) {
             xi = random(0, 270)
             xy = random(65, 100)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
       text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
       textSize(18);
@@ -143,107 +173,137 @@ $( document ).ready(function() {
     if ((rr3 > 50) && (rr1 < 45)) {
             xi = random(90, 360)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     }          
   else if ((rr3 > 50) && (rr1 > 90)) {
             xi = random(0, 45)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
          else if ((rr3 > 50) && (rr1 > 135)) {
             xi = random(0, 90)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
          else if ((rr3 > 50) && (rr1 > 180)) {
             xi = random(0, 135)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
          else if ((rr3 > 50) && (rr1 > 225)) {
             xi = random(0, 180)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
          else if ((rr3 > 50) && (rr1 > 270)) {
             xi = random(0, 225)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
          else if ((rr3 > 50) && (rr1 > 315)) {
             xi = random(0, 270)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
          else if ((rr3 > 50) && (rr1 > 135)) {
             xi = random(0, 90)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
       else if ((rr3 < 50) && (rr1 > 180)) {
             xi = random(0, 135)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }      
                else if ((rr3 < 50) && (rr1 < 45)) {
             xi = random(90, 360)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }    
   else if ((rr3 < 50) && (rr1 > 90)) {
             xi = random(0, 45)
             xy = random(65, 100)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
     else if ((rr3 < 50) && (rr1 > 135)) {
             xi = random(0, 90)
             xy = random(65, 100)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
         else if ((rr3 < 50) && (rr1 > 225)) {
             xi = random(0, 180)
             xy = random(65, 100)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }      
           else if ((rr3 < 50) && (rr1 > 270)) {
             xi = random(0, 225)
             xy = random(65, 100)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }     
             else if ((rr3 < 50) && (rr1 > 315)) {
             xi = random(0, 270)
             xy = random(65, 100)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
       text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
       textSize(18);
@@ -271,107 +331,137 @@ function draw() {
     if ((rr3 > 50) && (rr1 < 45)) {
             xi = random(90, 360)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     }          
   else if ((rr3 > 50) && (rr1 > 90)) {
             xi = random(0, 45)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
          else if ((rr3 > 50) && (rr1 > 135)) {
             xi = random(0, 90)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
          else if ((rr3 > 50) && (rr1 > 180)) {
             xi = random(0, 135)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
          else if ((rr3 > 50) && (rr1 > 225)) {
             xi = random(0, 180)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
          else if ((rr3 > 50) && (rr1 > 270)) {
             xi = random(0, 225)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
          else if ((rr3 > 50) && (rr1 > 315)) {
             xi = random(0, 270)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
          else if ((rr3 > 50) && (rr1 > 135)) {
             xi = random(0, 90)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
       else if ((rr3 < 50) && (rr1 > 180)) {
             xi = random(0, 135)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }      
                else if ((rr3 < 50) && (rr1 < 45)) {
             xi = random(90, 360)
             xy = random(0, 35)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }    
   else if ((rr3 < 50) && (rr1 > 90)) {
             xi = random(0, 45)
             xy = random(65, 100)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
     else if ((rr3 < 50) && (rr1 > 135)) {
             xi = random(0, 90)
             xy = random(65, 100)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
         else if ((rr3 < 50) && (rr1 > 225)) {
             xi = random(0, 180)
             xy = random(65, 100)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }      
           else if ((rr3 < 50) && (rr1 > 270)) {
             xi = random(0, 225)
             xy = random(65, 100)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }     
             else if ((rr3 < 50) && (rr1 > 315)) {
             xi = random(0, 270)
             xy = random(65, 100)
-            fill(xi, rr2*rr, xy);
+            xo = rr2*rr
+            fill(xi, xo, xy);
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy);
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
       }
       text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
       textSize(18);

@@ -1,10 +1,8 @@
-function reveal() {
-     document.getElementsByClassName('dotcursor')[0].classList.remove("hide"); 
-     document.getElementsByClassName('dotcursor')[0].classList.add("show");
+function reveal() { 
+     document.getElementsByClassName('dotcursor')[0].classList.toggle("show");
 }
-function hidden() {
-     document.getElementsByClassName('dotcursor')[0].classList.remove("show");
-     document.getElementsByClassName('dotcursor')[0].classList.add("hide");
+function hidden() { 
+     document.getElementsByClassName('dotcursor')[0].classList.toggle("show");
 }
 
 function setup() {

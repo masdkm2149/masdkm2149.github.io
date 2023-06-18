@@ -67,7 +67,13 @@ function setup() {
 
 
 $( document ).ready(function() {
-
+        let r1 = (1,360)
+        let r2 = (20,100)
+        let r3 = (10,100)        
+        var rr1 = random(r1)
+        var rr2 = random(r2)
+        var rr3 = random(r3)
+$('head').append("<meta name='theme-color' content='hsl(" + r1 + "," + r2 + "," + r3 +")'>");
 });
 
   function windowResized() {
@@ -82,6 +88,7 @@ $( document ).ready(function() {
         var rr2 = random(r2)
         var rr3 = random(r3)
         var rr = random(rx)
+             $('head').append("<meta name='theme-color' content='hsl(" + r1 + "," + r2 + "," + r3 +")'>");
         //background(rr1, rr2, rr3);
                   document.querySelector(':root').style.setProperty('--bg_hue', rr1);
             document.querySelector(':root').style.setProperty('--bg_brightness', rr2 + '%');

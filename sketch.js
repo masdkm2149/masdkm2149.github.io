@@ -1,3 +1,17 @@
+function set() {
+             let r1 = (1,360)
+        let r2 = (20,100)
+        let r3 = (10,100)        
+        var rr1 = random(r1)
+        var rr2 = random(r2)
+        var rr3 = random(r3)
+                  $('meta[name=theme-color]').remove();
+$('head').append("<meta name='theme-color' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");     
+             $('meta[name=apple-mobile-web-app-status-bar-style]').remove();
+     $('head').append("<meta name='apple-mobile-web-app-status-bar-style' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");
+}
+set();
+
 function setup() {
      const rx = (0.8, 2)
         colorMode(HSB);
@@ -67,14 +81,7 @@ function setup() {
 
 
 $( document ).ready(function() {
-        let r1 = (1,360)
-        let r2 = (20,100)
-        let r3 = (10,100)        
-        var rr1 = random(r1)
-        var rr2 = random(r2)
-        var rr3 = random(r3)
-$('head').append("<meta name='theme-color' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");     
-$('head').append("<meta name='apple-mobile-web-app-status-bar-style' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");
+
 });
 
   function windowResized() {

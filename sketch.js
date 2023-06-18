@@ -1,4 +1,4 @@
-function set() {
+function setx() {
              let r1 = (1,360)
         let r2 = (20,100)
         let r3 = (10,100)        
@@ -7,7 +7,7 @@ function set() {
         var rr3 = random(r3)
 $('head').append("<meta name='theme-color' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");     
 }
-set();
+setx();
 
 function setup() {
      const rx = (0.8, 2)

@@ -143,8 +143,8 @@ ellipse(mouseX, mouseY, 80, 80);
   colorMode(HSB);
   fill(xi, xo, xy);
   noStroke();
-     document.querySelector(':root').style.setProperty('--mousex', mouseX);
-     document.querySelector(':root').style.setProperty('--mousey', mouseY);
+     document.querySelector(':root').style.setProperty('--mousex', mouseX + 'px');
+     document.querySelector(':root').style.setProperty('--mousey', mouseY + 'px');
 }
   function mouseWheel(event) {
     scrollDelta = event.delta;

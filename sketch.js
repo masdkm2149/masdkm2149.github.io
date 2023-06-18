@@ -61,7 +61,7 @@ function setup() {
  //     textSize(18);
  //   text("Interactive Design", windowWidth/3, windowHeight/2 + 50);   
    noCursor();
-     createCanvas(windowWidth + 40, windowHeight + 40);
+     //createCanvas(windowWidth + 40, windowHeight + 40);
    clear();
 }
 
@@ -71,7 +71,7 @@ $( document ).ready(function() {
 });
 
   function windowResized() {
-resizeCanvas(windowWidth + 40, windowHeight + 40);
+//resizeCanvas(windowWidth + 40, windowHeight + 40);
      clear();
            const rx = (0.8, 2)
         colorMode(HSB);
@@ -143,6 +143,8 @@ ellipse(mouseX, mouseY, 80, 80);
   colorMode(HSB);
   fill(xi, xo, xy);
   noStroke();
+     document.querySelector(':root').style.setProperty('--mousex', mouseX);
+     document.querySelector(':root').style.setProperty('--mousey', mouseY);
 }
   function mouseWheel(event) {
     scrollDelta = event.delta;

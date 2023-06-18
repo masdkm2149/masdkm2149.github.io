@@ -11,7 +11,8 @@
       function reveal() { 
      document.getElementsByClassName('dotcursor')[0].classList.toggle("show");
 }
-function setup() {
+
+$( document ).ready(function() {
      const rx = (0.8, 2)
         colorMode(HSB);
           let r1 = (1,360)
@@ -69,7 +70,7 @@ function setup() {
             xi = random(0, 270)
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
       }
-}</script><style> 
+});</script><style> 
   body {
     background-color: hsl(var(--bg_hue), var(--bg_saturation), var(--bg_brightness));
     min-height: calc(100% + 200px);

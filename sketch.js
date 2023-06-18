@@ -5,9 +5,7 @@ function set() {
         var rr1 = random(r1)
         var rr2 = random(r2)
         var rr3 = random(r3)
-                  $('meta[name=theme-color]').remove();
 $('head').append("<meta name='theme-color' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");     
-             $('meta[name=apple-mobile-web-app-status-bar-style]').remove();
      $('head').append("<meta name='apple-mobile-web-app-status-bar-style' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");
 }
 set();

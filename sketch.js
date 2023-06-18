@@ -1,3 +1,12 @@
+function reveal() {
+     document.body.classList.remove("hide"); 
+     document.body.classList.add("show");
+}
+function hidden() {
+      document.body.classList.remove("show");
+      document.body.classList.add("hide");
+}
+
 function setup() {
      const rx = (0.8, 2)
         colorMode(HSB);

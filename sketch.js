@@ -1,6 +1,6 @@
 function setup() {
 
-   // createCanvas(windowWidth, windowHeight);
+   createCanvas(windowWidth, windowHeight);
      const rx = (0.8, 2)
         colorMode(HSB);
           let r1 = (1,360)
@@ -139,7 +139,11 @@ $( document ).ready(function() {
     //  text("Interactive Design", windowWidth/3, windowHeight/2 + 50);
   }
 function draw() {
-
+clear();
+ellipse(mouseX, mouseY, 80, 80);
+  colorMode(HSB)
+  fill(0, 100, 100)
+  noStroke()
 }
   function mouseWheel(event) {
     scrollDelta = event.delta;

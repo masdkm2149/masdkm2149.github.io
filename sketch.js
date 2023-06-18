@@ -1,10 +1,10 @@
 function reveal() {
-     document.body.classList.remove("hide"); 
-     document.body.classList.add("show");
+     document.getElementsByClassName('dotcursor')[0].classList.remove("hide"); 
+     document.getElementsByClassName('dotcursor')[0].classList.add("show");
 }
 function hidden() {
-      document.body.classList.remove("show");
-      document.body.classList.add("hide");
+     document.getElementsByClassName('dotcursor')[0].classList.remove("show");
+     document.getElementsByClassName('dotcursor')[0].classList.add("hide");
 }
 
 function setup() {

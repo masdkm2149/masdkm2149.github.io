@@ -9,20 +9,28 @@
     <meta charset="utf-8" /><script src="sketch.js"></script>	    
     <meta name="apple-mobile-web-app-status-bar-style" content="hsl(var(--bg_hue), var(--bg_saturation), var(--bg_brightness))">
     <meta name="theme-color" content="hsl(var(--bg_hue), var(--bg_saturation), var(--bg_brightness))"/>
-<style> .dotcursor {
-  height: 80px;
-  width: 80px;
-  background-color: hsl(var(--txt_hue), var(--txt_saturation), var(--txt_brightness));
-  border-radius: 50%;
-  mix-blend-mode: difference;
-  display: inline-block;
-} 
+<style> 
   body {
     background-color: hsl(var(--bg_hue), var(--bg_saturation), var(--bg_brightness));
     min-height: calc(100% + 200px);
     transition: .5s ease;
     overflow:hidden;
   }
+   .dotcursor::after {
+  display: none;
+} 
+.dotcursor {
+  height: 80px;
+  width: 80px;
+  background-color: hsl(var(--txt_hue), var(--txt_saturation), var(--txt_brightness));
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  display: inline-block;
+  position: absolute;
+  top: calc(var(--mousey) - 40px);
+  left: calc(var(--mousex) - 40px);
+  z-index: 9;
+} 
   #123canvas {
 z-index: 9999;
 position: absolute;

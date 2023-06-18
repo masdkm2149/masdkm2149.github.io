@@ -1,7 +1,6 @@
 function setup() {
 
-   createCanvas(windowWidth, windowHeight);
-   clear();
+
      const rx = (0.8, 2)
         colorMode(HSB);
           let r1 = (1,360)
@@ -65,7 +64,9 @@ function setup() {
  
  //     text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
  //     textSize(18);
- //   text("Interactive Design", windowWidth/3, windowHeight/2 + 50);
+ //   text("Interactive Design", windowWidth/3, windowHeight/2 + 50);   
+   createCanvas(windowWidth, windowHeight);
+   clear();
 }
 
 

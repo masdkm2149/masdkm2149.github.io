@@ -1,10 +1,3 @@
-function reveal() { 
-     document.getElementsByClassName('dotcursor')[0].classList.toggle("show");
-}
-function hidden() { 
-     document.getElementsByClassName('dotcursor')[0].classList.toggle("show");
-}
-
 function setup() {
      const rx = (0.8, 2)
         colorMode(HSB);

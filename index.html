@@ -89,6 +89,7 @@ $( document ).ready(function() {
   pointer-events: none;
   position: absolute;
   display:none;
+  opacity:0;
   top: calc(var(--mousey) - 40px);
   left: calc(var(--mousex) - 40px);
   z-index: 9;
@@ -101,6 +102,7 @@ pointer-events: none;
   }
   .show {
       display: inline-block!important;
+      opacity: 1!important;
   }
  .hide {
     display:none!important;

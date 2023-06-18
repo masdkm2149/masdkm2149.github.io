@@ -60,7 +60,8 @@ function setup() {
  //     text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
  //     textSize(18);
  //   text("Interactive Design", windowWidth/3, windowHeight/2 + 50);   
-   createCanvas(windowWidth, windowHeight);
+   noCursor();
+     createCanvas(windowWidth + 40, windowHeight + 40);
    clear();
 }
 
@@ -70,7 +71,7 @@ $( document ).ready(function() {
 });
 
   function windowResized() {
-resizeCanvas(windowWidth, windowHeight);
+resizeCanvas(windowWidth + 40, windowHeight + 40);
      clear();
            const rx = (0.8, 2)
         colorMode(HSB);

@@ -88,6 +88,7 @@ $('head').append("<meta name='theme-color' content='hsl(" + rr1 + "," + rr2 + ",
         var rr2 = random(r2)
         var rr3 = random(r3)
         var rr = random(rx)
+             $('meta[name=theme-color]').remove();
              $('head').append("<meta name='theme-color' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");
         //background(rr1, rr2, rr3);
                   document.querySelector(':root').style.setProperty('--bg_hue', rr1);

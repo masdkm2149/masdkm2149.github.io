@@ -6,7 +6,6 @@ function set() {
         var rr2 = random(r2)
         var rr3 = random(r3)
 $('head').append("<meta name='theme-color' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");     
-     $('head').append("<meta name='apple-mobile-web-app-status-bar-style' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");
 }
 set();
 

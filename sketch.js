@@ -73,7 +73,7 @@ $( document ).ready(function() {
         var rr1 = random(r1)
         var rr2 = random(r2)
         var rr3 = random(r3)
-$('head').append("<meta name='theme-color' content='hsl(" + r1 + "," + r2 + "," + r3 +")'>");
+$('head').append("<meta name='theme-color' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");
 });
 
   function windowResized() {

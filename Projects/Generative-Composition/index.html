@@ -26,6 +26,7 @@ $( document ).ready(function() {
 
 
 
+
 @media screen and (max-width: 1600px) {
 .page-3 .project-title {
   font-size: 28px !important;
@@ -507,8 +508,12 @@ border: solid 2px #667080 !important;
   .fixsize{width:auto !important;max-height:  var(--vh) !important; /*! position: absolute !important; */}
 }
 
-
-@media screen and (max-width: 1200px) and (min-height: 250px) {
+@media screen and (max-width: 1350px) {
+  .page-1 .project-title {
+    max-width: 100%!important;
+  }
+}
+@media screen and (max-width: 1350px) and (min-height: 250px) {
 #body-header{
 margin-top:  var(--vh) !important;
     position: relative !important;
@@ -541,6 +546,7 @@ padding-bottom: 60px !important;
     width: 100%!important;
     margin-right: auto!important;
     right: 0;
+    background-position: center;
 }
   .body-2{
   margin-top: calc(var(--vh) * 1) !important;
@@ -727,7 +733,7 @@ width: 100%;
   margin-left: 30px;
 }
 .main-image {
-  width: calc(60vw - 30px);
+  width: calc(65vw - 30px);
   height: calc(var(--vh) - 135px);
   box-sizing: content-box;
   position: relative;
@@ -786,7 +792,7 @@ width: 100%;
 }
 
 #tag-branding::after {
-  content: "Branding";
+  content: "Coding";
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -855,6 +861,7 @@ right: 0;
   content: "When I drafted a series of ads for 9Tee's digital marketing campaign, my priority was to effectively connect the audience to the products and services offered by 9Tee while also communicating the brand's identity. To achieve this, I started with a clear and structured layout, utilizing grids and alignment to create a visually balanced composition. With close attention to UX principles, I facilitated a seamless user experience that allows for easy comprehension of information. To maintain consistency with the brand’s visual identity, I ensured the designs complemented the same typography, color palette, and overall aesthetic as the brand’s wordmark and logomark, incorporating attention-grabbing visuals with personality. To accommodate various ad formats, devices, and proportions, I developed a versatile library of modular UI components, such as buttons, image placeholders, and text blocks that provided efficiency and flexibility for any alterations or iterations while ensuring a consistent visual language. By strategically placing important elements with a focus on hierarchy, such as the brand’s logo, tagline, featured products, and calls to action, I employed effective layout techniques that guide the user’s attention and encourage engagement.";
   }
   }
+
 </style>
     
 
@@ -932,12 +939,12 @@ btn.addEventListener("click", function () {
   </a>
     </div>
 
-
-<div class="content-main">
+<div class="content-main" style="overflow-y: auto;">
 <div class="page-1" style="width: 100%;">  
-<div class="main-image" style="width: 100%;background-image: url(https://designedbydan.art/assets/images/852512402.png); background-size: contain;background-position: center;background-repeat:no-repeat;"></div>
+<div class="main-image" style="background-image: url(https://designedbydan.art/assets/images/852512402.png); background-size: contain;background-repeat:no-repeat;max-width: calc(var(--vh) - 135px);"></div>
 
-<div id="body-header" style="position: inherit;height: calc(var(--vh) - 135px);font-family:'Inter';font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;margin-left: auto;font-feature-settings:'calt' off;color: #667080;display: inline-grid;align-content: center;bottom: 0;width: fit-content;/*! margin-top: calc(200% + 330px); */top: 0;margin-right: auto;"><h class="project-title" style="">9Tee</h><h2 style="font-family: 'Inter', sans-serif;
+<div id="body-header" style="position: inherit;height: calc(var(--vh) - 135px);font-family:'Inter';font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;margin-left: auto;font-feature-settings:'calt' off;color: #667080;display: inline-grid;align-content: center;bottom: 0;width: fit-content;/*! margin-top: calc(200% + 330px); */top: 0;margin-right: auto;right: -30px;margin-left: auto;max-width: 90%;"><h class="project-title" style="max-width: 28vw;">
+Generative Abstract Composition</h><h2 style="font-family: 'Inter', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 24px;
@@ -949,7 +956,7 @@ font-feature-settings: 'calt' off;
 /* Primary */
 color: #667080;
 margin: 6px 0 0 0;
-">P5.JS</h2><div id="tag-branding"></div><h id="body-text" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;">9Tee is a customizable print on-demand clothing brand that was developed as part of my portfolio. I took on the responsibility of designing a complete visual identity, including a minimal wordmark and logomark that would embody the brand's essence. Through careful consideration of form, typography, color, and other visual elements, the brand identity captures the unique personality of 9Tee. Designed alongisde the wordmark and logomark, I drafted a seies of modular web-based advertisements intended to clearly and quickly communicate the services provided while also effectively representing the brand's vision.</h></div>
+">P5.JS</h2><div id="tag-branding"></div><h id="body-text" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;max-width: 28vw;">Utilizing the P5.JS library to create a generative abstract composition using algorithmic forms with careful consideration for aesthetic issues like rhythm, color; precise control of shape, as well as the balance between both organic and geometric forms.</h></div>
 
 
 

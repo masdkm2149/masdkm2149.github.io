@@ -517,12 +517,12 @@ border: solid 2px #667080 !important;
     #p5jsapp {transform:scale(1)!important;}
 }
       
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) and (min-height: 900px) {
     #p5jsapp {transform: scale(var(--wwhalf));}
 }
       
-@media screen and (max-height: 900px) {
-    #p5jsapp {transform: scale(var(--whalf));}
+@media screen and (max-height: 900px) and (min-width: 900px) {
+    #p5jsapp {transform: scale(var(--whhalf));}
 }
       @media screen and (max-width: 1350px) and (min-height: 250px) {
 #body-header{

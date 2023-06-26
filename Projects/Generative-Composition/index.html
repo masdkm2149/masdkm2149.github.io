@@ -513,7 +513,10 @@ border: solid 2px #667080 !important;
     max-width: 100%!important;
   }
 }
-@media screen and (max-width: 1350px) and (min-height: 250px) {
+@media screen and (min-width: 1100px) {
+    iframe { transform:scale(1)!important;}
+}
+      @media screen and (max-width: 1350px) and (min-height: 250px) {
 #body-header{
 margin-top:  var(--vh) !important;
     position: relative !important;
@@ -1080,7 +1083,7 @@ $( document ).ready(function() {
       		          document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
                        document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
                        document.querySelector(':root').style.setProperty('--ww', window.innerWidth + 'px');
-                           document.querySelector(':root').style.setProperty('--wwhalf', window.innerWidth *.001);
+                           document.querySelector(':root').style.setProperty('--wwhalf', window.innerWidth *.0011);
                        document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
          document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
          reorder();
@@ -1096,7 +1099,7 @@ window.addEventListener('resize', function(event) {
     		          document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
                        document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
                        document.querySelector(':root').style.setProperty('--ww', window.innerWidth + 'px');
-                               document.querySelector(':root').style.setProperty('--wwhalf', window.innerWidth *.001);
+                               document.querySelector(':root').style.setProperty('--wwhalf', window.innerWidth *.0011);
                        document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
 });
       </script></html>

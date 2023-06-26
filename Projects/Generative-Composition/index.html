@@ -1116,7 +1116,7 @@ $( document ).ready(function() {
                                    document.querySelector(':root').style.setProperty('--whhalf', window.innerHeight *.0011);
                        document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
          document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
-    if (window.innerWidth > window.innerHeight) { document.querySelector(':root').style.setProperty('--scaleapp', window.innerHeight *.0011); }
+    if (window.innerWidth > window.innerHeight) { document.querySelector(':root').style.setProperty('--scaleapp', window.innerHeight *.001); }
     else { document.querySelector(':root').style.setProperty('--scaleapp', window.innerWidth *.0011); }
          reorder();
 });
@@ -1131,7 +1131,7 @@ window.addEventListener('resize', function(event) {
                        document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
                        document.querySelector(':root').style.setProperty('--ww', window.innerWidth + 'px');
                        document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
-if (window.innerWidth > window.innerHeight) { document.querySelector(':root').style.setProperty('--scaleapp', window.innerHeight *.0011); }
+if (window.innerWidth > window.innerHeight) { document.querySelector(':root').style.setProperty('--scaleapp', window.innerHeight *.001); }
 else { document.querySelector(':root').style.setProperty('--scaleapp', window.innerWidth *.0011); }
 });
       </script></html>

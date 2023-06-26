@@ -516,11 +516,12 @@ border: solid 2px #667080 !important;
 @media screen and (min-width: 900px) (min-height: 900px){
     #p5jsapp {transform:scale(1)!important;}
 }
-      
+     #p5jsapp {transform:var(--scaleapp);} 
+            /*
 @media screen and (max-width: 750px) and (min-height: 751px) {
     #p5jsapp {transform: scale(var(--wwhalf));}
 }
-        /*
+  
 @media screen and (max-width: 800px) and (min-height: 801px) {
     #p5jsapp {transform: scale(var(--wwhalf));}
 }
@@ -530,12 +531,10 @@ border: solid 2px #667080 !important;
 @media screen and (max-width: 600px) and (min-height: 601px) {
     #p5jsapp {transform: scale(var(--wwhalf));}
 }
-      */
       
 @media screen and (max-height: 750px) and (min-width: 751px) {
     #p5jsapp {transform: scale(var(--whhalf));}
-}     
-      /*
+}    
 @media screen and (max-height: 800px) and (min-width: 801px) {
     #p5jsapp {transform: scale(var(--whhalf));}
 }     

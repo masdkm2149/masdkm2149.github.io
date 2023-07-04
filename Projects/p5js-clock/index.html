@@ -10,12 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"> 
 
   <style>
+@media screen and (min-width: 1200px) and (min-height: 900px) {
+    #p5jsapp { transform:scale(1)!important;left: 50%;!important}
+}
 
-
-
-
-
-
+     #p5jsapp {transform:scale(var(--scaleapp));top: 50%;position: fixed;left: 51%;} 
 
 @media screen and (max-width: 900px) {
   .page-2.a .main-image {
@@ -511,38 +510,7 @@ border: solid 2px #667080 !important;
     max-width: 100%!important;
   }
 }
-@media screen and (min-width: 900px) (min-height: 900px){
-    #p5jsapp {transform:scale(1)!important;}
-}
-     #p5jsapp {transform:scale(var(--scaleapp));} 
-            /*
-@media screen and (max-width: 750px) and (min-height: 751px) {
-    #p5jsapp {transform: scale(var(--wwhalf));}
-}
-  
-@media screen and (max-width: 800px) and (min-height: 801px) {
-    #p5jsapp {transform: scale(var(--wwhalf));}
-}
-@media screen and (max-width: 700px) and (min-height: 701px) {
-    #p5jsapp {transform: scale(var(--wwhalf));}
-}
-@media screen and (max-width: 600px) and (min-height: 601px) {
-    #p5jsapp {transform: scale(var(--wwhalf));}
-}
-      
-@media screen and (max-height: 750px) and (min-width: 751px) {
-    #p5jsapp {transform: scale(var(--whhalf));}
-}    
-@media screen and (max-height: 800px) and (min-width: 801px) {
-    #p5jsapp {transform: scale(var(--whhalf));}
-}     
-@media screen and (max-height: 700px) and (min-width: 701px) {
-    #p5jsapp {transform: scale(var(--whhalf));}
-}
-@media screen and (max-height: 600px) and (min-width: 601px) {
-    #p5jsapp {transform: scale(var(--whhalf));}
-}
-      */
+
       @media screen and (max-width: 1300px) and (min-height: 250px) {
   
 .page-1 #body-header{ margin-left:  auto !important;
@@ -902,6 +870,7 @@ right: 0;
 .page-1 h#body-text::before {
   content: "Leveraging the power of JavaScript and the p5.js library, I developed a generative abstract composition with careful consideration for aesthetic issues like rhythm, color, precise control of shape, as well as the balance between organic and geometric forms. I created different compositions by designing an interactive interface that adjusts various properties of the composition, using sliders. Adjusting the properties in real-time corresponds with different visual outcomes. The result is a visually captivating experience that combines algorithmic forms, aesthetic considerations, and user interaction."; }
   }
+
 </style>
     
 

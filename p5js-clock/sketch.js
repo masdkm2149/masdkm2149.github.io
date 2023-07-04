@@ -5,26 +5,14 @@ var multiplicator = 1.5;
 
 
 function setup() {
-   if (w < 1500) {document.querySelector("body").style.setProperty('transform', 'scale('+ w*.00052 +')');}
-	else {document.querySelector("body").style.setProperty('transform', 'scale(.75)');}
-	
-  if (w < 600) {createCanvas(w*3, h*1.2); document.querySelector("body").style.setProperty('left', 'calc(-45% + 80px)');}
-	else{
-		document.querySelector("body").style.setProperty('left','calc(-52% + 210px)');
-		if (h > 900) {createCanvas(w*2, h); }
+	if (h > 900) {createCanvas(w*2, h); }
 		else  {createCanvas(w*2, h*1.1); }
-           }
 }
 
 function draw() {
-   if (w < 1500) {document.querySelector("body").style.setProperty('transform', 'scale('+ w*.00052 +')');}
-	else {document.querySelector("body").style.setProperty('transform', 'scale(.75)');}
   background(0, 0, 0);
   colorMode(HSB);
   let i = 1;
-			if (w <= 800 || w > 600) { translate(w/3, 0); }
-		        if (w < 600) { translate(w*.5, 0); }
-	                if (w < 1100 || w > 800) { translate(w/5, 0); }
 //	if (w >= 1000) { translate(w/6, 0); }
   push();
   HOURS();

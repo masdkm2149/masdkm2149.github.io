@@ -3,27 +3,477 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>9Tee - Projects</title>
+    <title>Book: National Parks of the United States - Projects</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="icon" type="image/x-icon" href="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/favicon.svg">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"> 
-  <style>
-        @media screen and (max-width: 520px) {
-#logotype {
-  display: none !important;
+<script>
+$( document ).ready(function() {
+  const currentTheme = localStorage.getItem("theme");
+  if (currentTheme == "dark") { 
+    document.body.classList.remove("light-theme");
+    document.body.classList.add("dark-theme");
+} else if (currentTheme == "light") {
+    document.body.classList.remove("dark-theme");
+    document.body.classList.add("light-theme");
 }
-      }      
-      @media screen and (max-height: 550px) {
+});
+    </script>
+  <style>
+
+
+
+
+
+
+
+@media screen and (max-width: 900px) {
+  .page-2.a .main-image {
+    background-image: url(https://designedbydan.art/assets/images/4299847823586%282%29.png)!important;;
+  }
+}
+@media screen and (max-width: 600px) {
+  .page-2.a .main-image {
+    background-image: url(https://designedbydan.art/assets/images/4299847823586%283%29.png)!important;;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+.page-3 .project-title {
+  font-size: 28px !important;
+  line-height: 32px !important;
+}
+.page-3 h2{
+  font-size: 16px!important;
+  margin: 3px 0 0 0!important;
+  line-height: 20px!important;
+}
+.page-3 h#body-text {
+ font-size: 14px !important;
+ line-height:21px!important;
+ margin-top: 0px !important;
+} 
+}
+@media screen and (max-width: 1400px) {
+.page-3 h#body-text {
+} 
+}   
+.page-3 #body-text {
+} 
+@media screen and (min-width: 1201px)and (max-width: 1400px) and (min-height: 250px) {
+  .page-3 .main-image {
+  margin-left: auto !important;
+  position: absolute !important;
+  left: 0;
+  width: 100% !important;
+  margin-right: auto !important;
+  right: 0;
+}
+    .page-2.a {
+  margin-top: var(--vh) !important;
+}
+  .page-3 #body-header {
+  margin-top: var(--vh) !important;
+  position: relative !important;
+  width: 100% !important;
+  scroll-snap-align: center;
+  flex: none;
+  left: 0PX !important;
+  justify-content: space-around;
+  padding-bottom: 60px !important;
+}
+}
+.main-image.BTprojpicture::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: relative;
+  display: flex;
+  bottom: 2px;
+}
+ 
+body.light-theme .main-image.BTprojpicture::after {
+  background: white;
+}
+      
+#body-text{
+    color: var(--body-color) !important;
+      }
+      h2 {
+      color: var(--h2-color);
+      }
+body {
+--text-color: #222;
+--tag-bg: #c8c8c8;  
+--bkg-color: #fff;
+--content-border: 3px solid rgb(102, 112, 128);
+--h2-color: #667080;
+--body-color: #667080;
+--view_project-hov: #EEF1F4;
+--view_project-but: #6a7586;
+--view_project-but-text: #6a7586;  
+--project-title: #4b515b;
+--border-color: solid 2px #EEF1F4;
+}
+body.dark-theme {
+--content-border: 3px solid rgb(12, 13, 16);
+--tag-bg: #2e313a;
+--body-color: #adb4c0;  
+--border-color: solid 2px #363840;
+--text-color: #eee;
+--h2-color: #585f6a;
+--bkg-color: #000;
+--view_project-hov: #0b0d10;
+--view_project-but: #363840;
+--view_project-but-text: #EEF1F4;  
+--project-title: #e0e0e0;
+}
+body.dark-theme .main-image.BTprojpicture::after{
+    background: #000!important;
+    }
+@media (prefers-color-scheme: dark) {
+/* defaults to dark theme */
+
+    body {
+  --content-border: 3px solid rgb(12, 13, 16);
+  --border-color: solid 2px #363840;
+  --text-color: #eee;
+  --bkg-color: #000;
+  --body-color: #adb4c0;
+  --tag-bg: #2e313a;
+  --view_project-but-text: #EEF1F4;  
+  --view_project-hov: #0b0d10;
+  --view_project-but: #363840;
+  --h2-color: #585f6a;
+  --project-title: #e0e0e0;
+  }
+body.light-theme {
+  --text-color: #222;
+  --content-border: 3px solid rgb(102, 112, 128);
+  --bkg-color: #fff;
+  --view_project-but-text: #6a7586;   
+  --border-color: solid 2px #EEF1F4;
+  --tag-bg: #c8c8c8;
+  --h2-color: #667080;
+  --view_project-hov: #EEF1F4;
+  --view_project-but: #6a7586;
+  --body-color: #667080;
+  --project-title: #4b515b;
+  }
+}
+
+* {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+background: var(--bkg-color)!important;
+}
+
+h1,
+p {
+color: var(--text-color)!important;
+}
+  /*
+
+TRANSITIONS
+
+*/
+
+@keyframes shaker {
+10%, 90% {
+  transform: translate3d(-1px, 0, 0);
+}
+
+20%, 80% {
+  transform: translate3d(2px, 0, 0);
+}
+
+30%, 50%, 70% {
+  transform: translate3d(-4px, 0, 0);
+}
+
+40%, 60% {
+  transform: translate3d(4px, 0, 0);
+}
+}
+.hide{
+display:  none!important; 
+}
+.SENDTOBACK{
+z-index:   0 !important;
+}
+.SENDTOFRONT{
+z-index:   3 !important;
+}
+  .active-border{
+  border: 3px solid #82b3c6!important;
+      transition: border .25s ease;
+  }
+      .active-border-1{
+          transition: border .25s ease;
+  border-top: 3px solid #82b3c6!important;
+  
+  border-left: 3px solid #82b3c6!important;
+  border-right: 3px solid #82b3c6!important;
+  border-bottom: 0px solid #82b3c6!important;
+  }
+.active{
+background: #82b3c6 !important;
+}
+.temp-main-image:hover * {
+transform: scale(1.09, 1.09);
+transition: transform .25s ease;
+}
+.temp-main-image:hover {
+left: 0px;
+top: 0;
+}
+.temp-main-image:hover ~ #view_project{
+
+animation: shake 2s;
+animation-iteration-count: infinite;
+}
+
+.temp-main-image:hover > div::after {
+opacity: .5;
+}
+
+#background::after {
+}
+.temp-main-image:hover {
+z-index: 0;
+}
+.temp-main-image > div::after {
+  background-image: -webkit-linear-gradient(bottom, rgba(225, 225, 225, 0.5) -25%, transparent 40%);
+content: "";
+height: 100%;
+width:  100%;
+position: absolute;
+opacity: 0;
+transition: .25s cubic-bezier(.39,.58,.57,1);
+}
+.tag-h-infocus {
+max-height: -webkit-fill-available !important;
+height: calc(var(--vh) - var(--elementInfoHeight-body) - 135px)!important;
+}
+.five.tag-h-infocus {
+max-height: -webkit-fill-available !important;
+height: calc(var(--vh) - var(--elementInfoHeight-body) - 105px)!important;
+}
+.tag-hh-infocus{
+height: fit-content!important;
+}
+#tag-branding, #tag-print, #tag-media, #tag-coding {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9px 24px;
+background: var(--tag-bg);
+border-radius: 24px;
+width: 36px;
+height: 12px;
+transition: .25s ease;
+}
+      @media screen and (max-width: 390px){
+#tag-branding, #tag-print, #tag-media, #tag-coding {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9px 24px;
+background: var(--tag-bg);
+border-radius: 24px;
+width: 36px;
+height: 12px;
+}
+}
+
+.floating {  
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  from { transform: translate(0,  0px); }
+  65%  { transform: translate(0, 10px); }
+  to   { transform: translate(0, 0px); }    
+}
+
+@keyframes floating2 {
+  from { transform: rotate(270deg) translate(0,  0px); }
+  65%  { transform: rotate(270deg) translate(0, 5px); }
+  to   { transform: rotate(270deg) translate(0, 0px); }    
+}
+
+@keyframes rotatehue {
+  from { filter: hue-rotate(0deg); }
+  to  { filter: hue-rotate(360deg);}
+}
+
+.main-image.BTprojpicture {
+  animation: rotatehue 30s infinite;
+}
+#view_project:active {
+  background-color: #eef1f4;
+  border: solid 2px #667080!important;
+}
+#view_project:hover > .scrolldown{
+  animation-name: floating2;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.page-4.coding.tag-p-infocus{
+  margin-left: calc(50% - 15px ) !important;
+}  
+.tag-p-infocus.m {
+margin-left: 0!important;
+margin-top: 0!important;
+}
+
+.scrolldown{
+  user-select: none;
+}
+  #body-copy{width: calc(100% - 60px);}
+#state1 {
+width: 30px;
+height: 30px;
+border-radius: 50%;
+box-shadow: inset 9px -6px 0px 3px var(--dark);
+position: absolute;
+right: 2px;
+z-index: 999;
+cursor:pointer;
+pointer-events: all;
+transition: .25s ease;
+top: calc(var(--vh) - 34px);
+transform: scale(.8);
+}
+body.dark-theme .scrolldown{filter: invert(1)}
+#state1:hover {
+transform: scale(1.15);
+bottom: 5px;
+right: 5px;
+}
+  #button1.checked{margin-right:130px!important;}
+  :root {
+--light: #fff;
+--dark: #28292c;
+}
+
+label {
+position: absolute; z-index:99;
+width: 85px;
+height: 40px;
+background-color: var(--dark);
+border-radius: 50px;
+cursor: pointer;
+  transition: .25s ease;
+}
+label:hover{opacity: 1!important;}
+input {
+position: absolute;
+display: none;
+}
+body.dark-theme #state1 {box-shadow: inset 9px -6px 0px 3px var(--light);}
+.btn-toggle {
+position: absolute;
+width: 100%;
+height: 100%;
+border-radius: 50px;
+z-index:99;
+}
+.content-main * {
+    direction:ltr;
+      }
+button{
+  all:unset;
+      }
+.btn{transform: scale(.85)}
+body.dark-theme .btn-toggle {   box-sizing:border-box; border: 2px solid #363840;
+}
+.btn::hover {
+opacity: 1!important;
+}
+.btn-toggle::before {
+content: "";
+position: absolute;
+top: 6px;
+left: 6px;
+width: 27px;
+height: 27px;
+border-radius: 50%;
+opacity: 1;
+box-shadow: inset 8.5px -3px 0px 3.5px var(--light);
+transition: 0.5s;
+/*! transition-property: background-color,transform; */
+}
+body.dark-theme label {background: none;}
+body.dark-theme .btn-toggle::before {
+transform: translateX(48px)translateY(-1px)scale(.4);
+box-shadow: none;
+opacity: 0;
+}
+.btn-toggle::after { content:""; transition: .5s; right:65px; opacity: 0;
+position: absolute;
+transform: scale(.9);
+}
+body.dark-theme .btn-toggle::after {
+background-image: url(https://designedbydan.art/assets/images/icons8-sun.svg);
+width: 30px;
+height: 30px;
+opacity: 1;
+position: absolute;
+top: 3px;
+right: 3px;
+filter: invert(1);
+}
+  .one .BTprojpicture {
+  background-image: url(https://designedbydan.art/assets/images/3240880DWE.png);
+}
+
+body.dark-theme .one .BTprojpicture {
+  background-image: url(https://designedbydan.art/assets/images/Wordmark_Light.png) !important;
+background-color: black;
+  background-size:    77% !important;
+}    
+  #view_project:hover, #button2:active {
+background: var(--view_project-hov);
+}
+ body.dark-theme #button2:hover, body.dark-theme #button1:hover {
+background-color: var(--dark);
+}
+
+ body.dark-theme #view_project:active, body.dark-theme #button1:active, body.dark-theme #button2:active {
+background-color: var(--view_project-but);
+border: solid 2px #667080 !important;
+}@media screen and (max-width: 590px){
+  .contain-logo{
+    left: 30px!important;
+  }
+   #logotype{
+    display: none!important;
+  }
+}
+  @media screen and (max-height: 550px) {
 #body-header{
- margin-top:  100% !important;
- position: relative !important;
- width: 100% !important;
- scroll-snap-align: center;
- left: 0PX !important;
-}.page-2{margin-top: 200% !important;}
-  .fixsize{width:auto !important;height: 100% !important;}
+    margin-top: calc(var(--vh) * 2)!important;
+    position: relative !important;
+    width: 100% !important;
+    scroll-snap-align: center;
+    flex: none;
+    left: 0PX !important;
+    justify-content: space-around;
+    padding-bottom: 60px !important;
+}.page-2{margin-top: calc(var(--vh) * 2) !important;}
+  .fixsize{max-height: calc(var(--vh) - 165px) !important;}
   #body-text {
   width: 100%;
   max-width: 75vw !important;
@@ -39,41 +489,90 @@
   left: calc(6vw + 45px) !important;
 
   }
-  .main-image{
-    width: 100% !important;
-    left: 0px;
-    /*! top: 0px; */
+.main-image {
+    margin-left: auto!important;
+    position: absolute!important;
+    left: 0;
+    width: 100%!important;
+    margin-right: auto!important;
+    right: 0;
   }
     .page-2 > .main-image{
-     top: 0;
+     position: relative !important;
   }
   .body-2{
-    margin-top: 100%
+    margin-top: var(--vh);
   }
 }
 
 @media screen and (min-width: 1400px) and (max-height: 620px) {
-  .fixsize{width: auto !important;height: 100% !important;}
+  .fixsize{width: auto !important;height:var(--vh) !important;}
 }
 @media screen and (max-width: 600px) and (max-height: 450px) {
   .fixsize{width:100% !important;height: auto !important;}
 }
 @media screen and (min-width: 1400px) and (max-height: 580px) {
-  .fixsize{width:auto !important;height: 100% !important;}
+  .fixsize{width:auto !important;height: var(--vh) !important;}
 }
 @media screen and (max-width: 1399px) and (min-width: 1350px) and (max-height: 580px) {
-  .fixsize{width:auto !important;height:  100% !important; /*! position: absolute !important; */}
+  .fixsize{width:auto !important;max-height:  var(--vh) !important; /*! position: absolute !important; */}
 }
 
-
-@media screen and (max-width: 800px) and (min-height: 250px) {
+@media screen and (max-width: 1350px) {
+  .page-1 .project-title {
+    max-width: 100%!important;
+  }
+}
+@media screen and (min-width: 900px) (min-height: 900px){
+    #p5jsapp {transform:scale(1)!important;}
+}
+     #p5jsapp {transform:scale(var(--scaleapp));} 
+            /*
+@media screen and (max-width: 750px) and (min-height: 751px) {
+    #p5jsapp {transform: scale(var(--wwhalf));}
+}
+  
+@media screen and (max-width: 800px) and (min-height: 801px) {
+    #p5jsapp {transform: scale(var(--wwhalf));}
+}
+@media screen and (max-width: 700px) and (min-height: 701px) {
+    #p5jsapp {transform: scale(var(--wwhalf));}
+}
+@media screen and (max-width: 600px) and (min-height: 601px) {
+    #p5jsapp {transform: scale(var(--wwhalf));}
+}
+      
+@media screen and (max-height: 750px) and (min-width: 751px) {
+    #p5jsapp {transform: scale(var(--whhalf));}
+}    
+@media screen and (max-height: 800px) and (min-width: 801px) {
+    #p5jsapp {transform: scale(var(--whhalf));}
+}     
+@media screen and (max-height: 700px) and (min-width: 701px) {
+    #p5jsapp {transform: scale(var(--whhalf));}
+}
+@media screen and (max-height: 600px) and (min-width: 601px) {
+    #p5jsapp {transform: scale(var(--whhalf));}
+}
+      */
+      @media screen and (max-width: 1300px) and (min-height: 250px) {
+  
+.page-1 #body-header{ margin-left:  auto !important;
+  margin-right: auto !important;
+  padding-right: 0!important;
+  padding-left: 0!important;
+left: 0 !important;
+right: 0 !important;
+}
 #body-header{
- margin-top:  100% !important;
- position: relative !important;
- width: 100% !important;
- scroll-snap-align: center;
- left: 0PX !important;
-}.page-2{margin-top: 200% !important;}
+margin-top:  var(--vh) !important;
+    position: relative !important;
+    width: 100% !important;
+    scroll-snap-align: center;
+    flex: none;
+    justify-content: space-around;
+padding-bottom: 60px !important;
+}.page-2{margin-top: var(--vh) !important;}
   #logoblockfour, #logoblocktwo {
     display: none;
   }
@@ -89,16 +588,20 @@
   width: 100%;
   max-width: 75vw !important;
 }
-  .main-image{
-    width: 100% !important;
-    left: 0px;
-    /*! top: 0px; */
-  }
-    .page-2 > .main-image{
-     top: 0;
-  }
+.main-image {
+    margin-left: auto!important;
+    position: absolute!important;
+    left: 0;
+    width: 100%!important;
+    margin-right: auto!important;
+    right: 0;
+    background-position: center;
+}
   .body-2{
   margin-top: calc(var(--vh) * 1) !important;
+  }
+    .body-3{
+  margin-top: calc(var(--vh) * -.25) !important;
   }
   
 }
@@ -120,11 +623,44 @@
  width: 150px!important ;
 }
 }
-BREAKPOINT WIDTH
-1150PX
-!!!!!!!!!!!!!!!!!!!
-*/
 
+
+BREAKPOINT WIDTH
+
+1150PX
+
+!!!!!!!!!!!!!!!!!!!
+
+
+
+*/
+@media screen and (max-width: 380px) {
+      .checked, #button1, #button2 {
+  margin-left: 250px !important;
+  margin-right: 0px !important;
+  margin-bottom: 6px !important;
+}
+    .desktop-nav #button1.checked {
+  margin-right: 0px !important;
+      }
+.desktop-nav .btn {
+  position: fixed !important;
+  right: 50px !important;
+  bottom: 15px !important;
+  top: unset !important;
+}
+      }
+@media screen and (max-width: 720px) and (min-width: 380px) {
+    .desktop-nav #button1.checked {
+  margin-right: 0px !important;
+      }
+.desktop-nav .btn {
+  position: fixed !important;
+  right: 50px !important;
+  bottom: 15px !important;
+  top: unset !important;
+}
+      }
 @media screen and (max-width: 1500px) {
 .project-title {
   font-size: 28px !important;
@@ -135,13 +671,15 @@ h2{
   margin: 3px 0 0 0!important;
   line-height: 20px!important;
 }
-#body-text {
+  .page-1 #body-header > h#body-text, .page-1 #body-header > h.project-title { max-width: fit-content; }
+  #body-text {
  font-size: 14px !important;
  line-height:21px!important;
  margin-top: 0px !important;
- /*! width: 23vw; */
-} #body-header {}}
-
+} .page-1 #body-header {margin-right:   !important;}}
+@media screen and (min-width:1500px){
+    .page-1 #body-header > h#body-text, .page-1 #body-header > h.project-title { max-width: 55vw; }
+}
 @media screen and (min-width: 1350px) {
 #button1::after,#button2::after,#button3::after {
   font-size: 14px !important;
@@ -157,7 +695,7 @@ h2{
   width: 30px;
   height: 12px;
   margin-top: 40px;
-  border-radius: 48px;
+  border-radius: 100px;
 }
 #button1::after {
   content: "Projects";
@@ -170,7 +708,7 @@ h2{
   line-height: 22px;
   letter-spacing: -0.01em;
   font-feature-settings: 'calt' off;
-  color: #667080;
+  color: var(--view_project-but-text);
   font-family: 'Inter', sans-serif;
   right: 0;
   margin: 0 auto;
@@ -186,7 +724,7 @@ h2{
   line-height: 22px;
   letter-spacing: -0.01em;
   font-feature-settings: 'calt' off;
-  color: #667080;
+  color: var(--view_project-but-text);
   font-family: 'Inter', sans-serif;
   right: 0;
   margin: 0 auto;
@@ -246,7 +784,7 @@ width: 100%;
   margin-left: 30px;
 }
 .main-image {
-  width: calc(60vw - 30px);
+  width: calc(65vw - 30px);
   height: calc(var(--vh) - 135px);
   box-sizing: content-box;
   position: relative;
@@ -254,28 +792,26 @@ width: 100%;
   display: inline-grid;
 }
 .content-main {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  min-height: calc(100vh - 60px);
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  max-height: 100vh;
-  position: fixed;
-  margin-top: ;
-  width: calc(100% - 60px);
-  height: -webkit-fill-available;
-  padding: 30px;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    direction:rtl;
+    min-height: calc(100vh - 60px);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    max-height: 100vh;
+    position: fixed;
+    width: calc(100% - 60px);
+    height: -webkit-fill-available;
+    padding: 105px 30px 30px 30px;
 }
-.page-1, .page-2, .page-3 {
+.page-1, .page-2, .page-3, page-4 {
   scroll-snap-align: start;
   width: 100%;
-  height: 100%;
+  height: var(--vh);
   pointer-events: none; 
   position: relative;
   display: flex;
-  /*! position: inherit; */
   z-index: 1;
-  /*! padding: ; */
   padding-top: 105px;
   padding-bottom: 30px;
 }
@@ -283,7 +819,7 @@ width: 100%;
   width: 30px;
   height: 12px;
   margin-top: 0;
-  border-radius: 48px;
+  border-radius: 100px;
     transition: .25s ease;
   float: right;
   margin-right: 30px;
@@ -303,11 +839,11 @@ width: 100%;
   line-height: 48px;
   letter-spacing: -0.02em;
   font-feature-settings: 'calt' off;
-  color: #4b515b;
+  color: var(--project-title);
 }
 
 #tag-branding::after {
-  content: "Branding";
+  content: "Coding";
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -323,28 +859,10 @@ width: 100%;
   justify-content: center;
   align-items: center;
   padding: 9px 24px;
-  background: #c8c8c8;
   border-radius: 24px;
   width: 36px;
   height: 12px;
   margin: 12px 0px 18px 0px;
-}
-.floating {  
-    animation-name: floating;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes floating {
-    from { transform: translate(0,  0px); }
-    65%  { transform: translate(0, 10px); }
-    to   { transform: translate(0, 0px); }    
-}
-@keyframes floating2 {
-    from { transform: rotate(270deg) translate(0,  0px); }
-    65%  { transform: rotate(270deg) translate(0, 5px); }
-    to   { transform: rotate(270deg) translate(0, 0px); }    
 }
 #view_project:hover > .scrolldown{
     animation-name: floating2;
@@ -384,25 +902,101 @@ right: 0;
   float: left;
   left: 30px;
 }
-</style></head>
 
-<body>
+  @media screen and (max-width: 550px) {
+.x h#body-text.b::before {
+  content: "A user interface controlled by sliders allows for adjustments to various properties in the code which actively shape the composition. Users can explore different visual outcomes with the slider interface and find their own preferred aesthetics. Adjusting various properties of the composition in real-time dynamically corresponds to changes in the code. Interactivity, as implemented in this project offered an opportunity for participants to actively engage in the creative process."; } .page-1 h#body-text::before {
+  content: "I had the privilege of designing this book which exhibits the natural beauty of various national parks through a collection of stunning photograhs sourced from the National Park Service (NPS). The photography is accompanied with brief overviews for the 16 parks included in the short book. As the designer, my responsibilities were focused on providing a structure, layout, hierarchy, and the components for all the visuals and text.";}
+  }
+  @media screen and (min-width: 551px) {
+.x h#body-text.b::before{
+  content: "A user interface controlled by sliders enables users to make adjustments to various properties in the code. By providing users with control over properties like rotation and color, they can actively shape the composition and visually engage for a personalized experience. Users can explore different color palettes and find their own preferred aesthetics. The interactive nature of the project enables users to actively participate in the creative process. By adjusting the properties in real-time, they can explore different visual outcomes and make the composition their own. The result is a visually captivating experience that combines algorithmic forms, aesthetic considerations, and user interaction."; }
+.page-1 h#body-text::before {
+  content: "I had the privilege of designing this book which exhibits the natural beauty of various national parks through a collection of stunning photograhs sourced from the National Park Service (NPS). The photography is accompanied with brief overviews for the 16 parks included in the short book. As the designer, my responsibilities were focused on providing a structure, layout, hierarchy, and the components for all the visuals and text."; }
+  }
+</style>
+    
 
+ </head>
 
-
-
-
+ <body>
+<script>
+$( document ).ready(function() {
+  const currentTheme = localStorage.getItem("theme");
+  if (currentTheme == "dark" || document.body.classList.contains('dark-theme')) { 
+    document.body.classList.remove("light-theme");
+    document.body.classList.add("dark-theme");
+    video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_3.mp4');
+    video.setAttribute('type', 'video/mp4');
+} else if (currentTheme == "light" || document.body.classList.contains('light-theme')) {
+    document.body.classList.remove("dark-theme");
+    document.body.classList.add("light-theme");
+    video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_5.mp4');
+    video.setAttribute('type', 'video/mp4');
+} else { 
+     var theme = document.body.classList.contains("light-theme") ? "light" : "dark";
+     localStorage.setItem("theme", theme);
+} video.play();
+});
+    </script>
 <div class="desktop-nav">
- <img class="scrolldown floating" style="opacity: 0.45; width: 50px; position: fixed; margin-left: auto; margin-right: auto; right: 0px; bottom: 30px; left: 0px; z-index: 2; display: block;" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(300, -250, 1, 800))">
-<div style="background: white;height: 105px;top: 0;width: 100%;position: absolute;"></div><a href="https://designedbydan.art/"> <div id="logo" style="width: 150px;height: 45px;background: #FFFFFF;border: 3px solid #667080;box-sizing: border-box;left: 0px;right: 0;top: 0px;bottom: 60px;border: 1px solid #667080;/*! =============== breakpoint 1150px W ===============*/position: fixed;border: 1px solid #667080;margin-left: 30px;margin-top: 30px;content: &quot;LOGO&quot;;font-size: 24px;text-align: center;display: none;"></div><div style="left: 30px;position: absolute;"><div id="logoblockone" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;border-left: 1vw solid;border-left-color: currentcolor;border-left-color: #474747;"></div><div style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);border-right: 1vw solid #474747;" id="logoblocktwo"></div><div id="logoblockthree" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;top: 22px;border-left: 1vw solid;border-left-color: #474747;"></div><div style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);top: 22px;border-right: 1vw solid #474747;" id="logoblockfour"></div></div><h id="logotype" style="position: absolute;left: calc(12vw + 40px);font-family: 'Inter', sans-serif;font-style: normal;font-weight: 600;font-size: 16px;line-height: 48px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #4b515b;height: 45px;top: 28px;">Daniel Roswadowsky</h>
-</a><a href="https://designedbydan.art/Projects/"> <div id="button1" style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;/*! background: #EEF1F4; */position: relative;flex: none;order: 0;flex-grow: 0;border: solid 2px #EEF1F4;margin-right: 0;"></div></a><a href="https://designedbydan.art/Contact/"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: absolute;/*! background: #EEF1F4; */border-radius: 24px;position: relative;flex: none;order: 0;flex-grow: 0;border: solid 2px #EEF1F4;" id="button2"></div></a></div><div class="content-main">
+ <div style="background: var(--bkg-color);height: 105px;top: 0;width: 100%;position: absolute;"></div>
+         <img class="scrolldown floating" style="opacity: 0.45; width: 50px; position: fixed; margin-left: auto; margin-right: auto; right: 0px; bottom: 30px; left: 0px; z-index: 2; display: block;" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(300, -250, 1, 800))">
+               <script>
+          function preview_toggle(){};
+          function show_toggle(){
+              document.getElementById("state1").classList.toggle("hide");
+              document.getElementsByClassName("btn")[0].classList.toggle("hide");
+              document.getElementById("button1").classList.toggle("checked"); document.getElementById("button2").classList.toggle("checked");
+          };
+      </script>
+      <div id="state1" onmouseover="preview_toggle()" onclick="show_toggle()"></div>
+    <div class="btn hide" style="position: absolute;z-index: 9;padding: 30px;right: 77px;transform: scale(0.8);top: 7px;opacity:.9;transition: .25s ease;">
+    <img class="hide" style="width: auto;opacity:.5;height: 18px;position: absolute;z-index: 3;margin: 0 auto;bottom: calc(2.2vh + 10px);left: 175;right: -45px;top: 41px;z-index: 999;transition: .1s;" src="https://designedbydan.art/assets/images/38488.png" onclick="hidebtn();">
+    <label>
+                <span class="btn-toggle" style=""></span>
+            </label>
+            
+        </div>
+<script>
+      const btn = document.querySelector(".btn-toggle");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+btn.addEventListener("click", function () {
+      if (document.body.classList.contains('dark-theme')) {
+        video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_5.mp4');
+        video.setAttribute('type', 'video/mp4');
+        document.body.classList.toggle("dark-theme");  
+        document.body.classList.toggle("light-theme");
+        var theme = document.body.classList.contains("light-theme") ? "light" : "dark";
+      } else {
+      if (document.body.classList.contains('light-theme')) {
+        video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_3.mp4');
+        video.setAttribute('type', 'video/mp4');
+        document.body.classList.toggle("light-theme");
+        document.body.classList.toggle("dark-theme");
+        var theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
+      }
+      }
+    video.play();
+  localStorage.setItem("theme", theme);
+});
+
+      </script>
+         <a href="https://designedbydan.art/"> <div id="logo" style="width: 150px;height: 45px;background: #FFFFFF;border: 3px solid #667080;box-sizing: border-box;left: 0px;right: 0;top: 0px;bottom: 60px;border: 1px solid #667080;/*! =============== breakpoint 1150px W ===============*/position: fixed;border: 1px solid #667080;margin-left: 30px;margin-top: 30px;content: &quot;LOGO&quot;;font-size: 24px;text-align: center;display: none;"></div><div style="position: absolute;"><div id="logoblockone" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;border-left: 1vw solid;border-left-color: currentcolor;border-left-color: #474747;"></div><div style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);border-right: 1vw solid #474747;" id="logoblocktwo"></div><div id="logoblockthree" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;top: 22px;border-left: 1vw solid;border-left-color: #474747;"></div><div style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);top: 22px;border-right: 1vw solid #474747;" id="logoblockfour"></div></div><h id="logotype" style="position: absolute;left: calc(12vw + 60px);font-family: 'Inter', sans-serif;font-style: normal;font-weight: 600;font-size: 16px;line-height: 48px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: var(--project-title);height: 45px;top: 28px;">Daniel Roswadowsky</h>
+</a><a href="/Projects/"> <div id="button1" style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: relative;flex: none;order: 0;flex-grow: 0;border: var(--border-color);margin-right: 0;"></div></a>
+  <a href="/Contact/">
+    <div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: absolute;position: relative;flex: none;order: 0;flex-grow: 0;border: var(--border-color);" id="button2">
+    </div>
+  </a>
+    </div>
+
+<div class="content-main" style="overflow-y: auto;">
 <div class="page-1" style="width: 100%;">  
-<div class="main-image"><img media="(min-width: 1500px)" style="width: 100%;display: flex;flex-direction: row;margin: 0 auto;top: 0;bottom: 0;position: relative;display: flex;place-content: center;height: auto;" src="httpS://designedbydan.art/assets/images/edwrHJJ.png"></div>
+<div class="main-image" style="background-image: url(https://designedbydan.art/assets/images/edwrHJJ.png); background-size: contain;background-repeat:no-repeat;margin-left: calc(5% - 30px);width: calc(var(--vh) - 135px);width: 200vw;max-width: calc(var(--vh) - 135px);background-position: center;"></div>
 
-
-
-</div><div style="/*! margin-top: 100vh; */height: 100%; width: 100%;top: -90px;">  
-<div id="body-header" style="position: absolute;height: fit-content;font-family: 'Inter';font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;margin: 0;display: inline-grid;place-content: center;margin-top: auto;margin-bottom: auto;bottom: 60px;width: fit-content;left: calc(50% + 14vw);/*! margin-top: calc(200% + 330px); */top: 135px;margin-right: 30px;"><h class="project-title">National Parks of the United States</h><h2 style="font-family: 'Inter', sans-serif;
+<div id="body-header" style="position: inherit;height: calc(var(--vh) - 135px);font-family:'Inter';font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;margin-left: auto;font-feature-settings:'calt' off;color: #667080;display: inline-grid;align-content: center;bottom: 0;width: fit-content;/*! margin-top: calc(200% + 330px); */top: 0;right: -15px;margin-left: auto;max-width: 90%;left: 15px;margin-right: auto;padding-right: 5%;padding-left: 5%;"><h class="project-title" style="">
+National Parks of the United States</h><h2 style="font-family: 'Inter', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 24px;
@@ -410,42 +1004,55 @@ line-height: 24px;
 /* or 137% */
 letter-spacing: -0.02em;
 font-feature-settings: 'calt' off;
+
 /* Primary */
 color: #667080;
 margin: 6px 0 0 0;
-">2020</h2><div id="tag-branding"></div><h id="body-text" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;">For this book, I designed with careful attention to design elements such as typography, heirarchy, layout, and color. An objective was to create a spacious and not overwhelming structure for the content that also provided some consistency. All photography displayed in this project was sourced from National Park Service (NPS).</h></div>
+">2020</h2><div id="tag-branding"></div><h id="body-text" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;"></h></div>
 
 
 
-</div>
-
-
-
-<div style="width: 100%;top: 0;" class="page-2">  
+</div><div style="width: 100%;" class="page-2 a">  
 
 
 
 
-<div class="main-image" style="width: 100%;background-image: url(&quot;httpS://designedbydan.art/assets/images/spread mockup(12).png&quot;);background-size: 115%;background-repeat: no-repeat;background-position: center;background-position-x: 39%;"></div></div><div style="width: 100%;top: 0;" class="page-2">  
+<div class="main-image" style="width: 100%;/*! background: linear-gradient(1255deg, rgb(0, 0, 0) -50%, rgb(61, 86, 97) 150%); */background-image: url(https://designedbydan.art/assets/images/spread mockup%2812%29.png);background-size: contain;background-position: center;background-repeat:no-repeat;"></div></div>
 
-<div class="main-image" style="width: 100%;background-image: url(&quot;httpS://designedbydan.art/assets/images/spread mockup(13).png&quot;);background-size: 115%;background-repeat: no-repeat;background-position: center;background-position-x: 39%;"></div>
-
-
-</div>
-
-<div style="width: 100%;top: -20px;position: relative;scroll-snap-align: center;" class="page-4">  
-<div style="width: 100%;top: 0px;position: relative;scroll-snap-align: center;" class="page-4">  
+    <div style="width: 100%;" class="page-2">  
 
 
 
 
+<div class="main-image" style="width: 100%;background-image: url(https://designedbydan.art/assets/images/43535-459-34-95.png);background-size: contain;background-position: center;background-repeat:no-repeat;"></div></div>
+    
+    
+<div style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;/*! place-content: center; */width:      inherit;scroll-snap-align: center;display: flex;max-width:1200px;margin-left: auto;margin-right: auto;scroll-snap-align: center;height: calc(var(--vh) - 135px);flex-direction: column;padding-bottom: 60px;" class="x" id="body-header"><div style="max-width:90%;margin: auto;">
+  <h class="project-title" style="display: block;/*! margin: auto; */">Designing for Interaction</h><h2 style="font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 24px;
+/* or 137% */
+letter-spacing: -0.02em;
+font-feature-settings: 'calt' off;
+
+/* Primary */
+color: #667080;
+margin:   6px 0 0 0 !important;
+display: block;
+">About Interactivity &amp; User Interface (UI)</h2><h id="body-text" class="b" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;margin-top: 12px !important;margin: 0;max-width: 100% !important;display: block;"></h></div></div><div style="width: 100%;" class="page-3">  
+<div class="main-image" style="background-image: url(https://designedbydan.art/assets/images/345t.gif);max-width: 850px;background-size: contain;background-position: center;background-repeat: no-repeat;margin: 0 auto 0 auto;"></div>
+
+  
+</div><div style="width: 100%;justify-content: center;" class="page-2 a">  
 
 
-<div class="main-image" style="width: inherit;background: #fff;pointer-events: none;"> <iframe id="pdf" style="margin:calc(30vh + 1000px) auto;position: absolute;height: inherit;min-height: 59%;padding-bottom: 40px;border: none;top: calc(-782px - 50vh - 25px);width: inherit;right: 0px;left: 0px;pointer-events: all;" src="http://designedbydan.art/assets/218582.pdf" scrolling="yes" height="70%" frameborder="0"></iframe><div style="width: 100%;background-size: contain;background-repeat: no-repeat;margin-top: auto;top: 0;bottom: 0;height: auto;position: absolute;margin-bottom: auto;background-position: center;max-width: 700px;margin-left: auto;margin-right: auto;left: 0;right: 0;"></div></div></div>
-</div>
-    <div class="page-3" style="height: var(--vh);width: 100%;/*! margin-top: 100%; */scroll-snap-align: center;position: relative;padding-top: 105px;"> <div id="body-copy" style="min-height: fit-content;flex-direction: column;font-family: 'Inter';margin-right: 30px;font-style: normal;z-index: 2;font-weight: 400;font-size: 9px;display: inline-flex;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;margin-top: auto;margin-bottom: auto;/*! transform: scale(1.5); */position: absolute;margin: auto;top: 0;bottom: 0px;height: fit-content;left: 0;right: 0;width: fit-content;top: 30px;"><div style="/*! transform: scale(1.5); *//*! width: 100%; *//*! height: 100%; */max-width: 890px;width: revert;"><h class="project-title" style="">That's all for this project.<br style="margin-bottom: 30px;"> 
-  Hopefully you enjoyed that as much as I did...
-<br>
+
+
+<iframe id="p5jsapp" scrolling="no" style="pointer-events: all;margin:auto;overflow:hidden!important;position: absolute;max-width: 720px;min-height: 720px;border: none;z-index: 1;height: auto;min-width: 720px;left: auto;right: auto;top: -60px;bottom: 0;" src="https://designedbydan.art/Projects/Generative-Composition/webapp.html" width="100%" height="100%" frameborder="0"></iframe></div><div class="page-3" style="height: var(--vh);width: 100%;scroll-snap-align: center;position: relative;padding-top: 105px;padding-bottom: 30px;align-items: center;"> <div id="body-copy" style="min-height: fit-content;flex-direction: column;font-family: 'Inter';margin-right: 30px;font-style: normal;z-index: 2;font-weight: 400;font-size: 9px;display: inline-flex;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;top: 0;bottom: 0px;height: fit-content;left: 0;right: 0;justify-content: center;position: absolute;width: fit-content;margin: auto;padding-bottom: 30px;"><div style="/*! transform: scale(1.5); *//*! width: 100%; *//*! height: 100%; */max-width: 832px;width: revert;"><h class="project-title" style="">That's all for this project.<br style="margin-bottom: 30px;">
+Hopefully you enjoyed that as much as I did...
+    <br>
 Lets get in contact!</h><h2 style="font-family: 'Inter', sans-serif;
 font-style: normal;
 font-weight: 700;
@@ -458,26 +1065,15 @@ font-feature-settings: 'calt' off;
 /* Primary */
 color: #667080;
 position: relative;
-">Don't be shy...</h2><h style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;display: flex;" id="body-text">Email: danrossgfx@gmail.com</h></div><a href="mailto:danrossgfx@gmail.com" style="pointer-events:all;margin-top: 30px;width: fit-content;border-radius: 48px;display: flex;margin-bottom: 8px;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border: solid 2px #EEF1F4;margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a>
+">Don't be shy...</h2><h style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;display: flex;" id="body-text">Email: danrossgfx@gmail.com</h></div><a href="mailto:danrossgfx@gmail.com" style="pointer-events:all;margin-top: 30px;width: fit-content;border-radius: 100px;display: flex;margin-bottom: 8px;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border: solid 2px #EEF1F4;margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a>
 </div></div><script>
-
-
-   window.addEventListener("scroll", function(event) {
-    var y = document.getElementsByClassName('content-main')[0].scrollTop
-
-
+window.addEventListener("scroll", function(event) {
+var y = document.getElementsByClassName('content-main')[0].scrollTop
 console.log(y);
 console.log(window.innerHeight * 7)
-/*console.log($(document).height() * 7);
-*/
-if (y > window.innerHeight * 3.75) {
-            document.querySelector('.scrolldown').style.display='none'; 
-        }
-        else {
-            document.querySelector('.scrolldown').style.display='block';
-        } 
-}, true);
+if (y > window.innerHeight * 3.75) { document.querySelector('.scrolldown').style.display='none'; } else { document.querySelector('.scrolldown').style.display='block'; } }, true);
 
+     
 
   function reorder(){
 document.getElementsByClassName('content-main')[0].scrollTop +=8;
@@ -498,13 +1094,45 @@ window.onresize = reorder();
   function reorder(){
 document.getElementsByClassName('content-main')[0].scrollTop +=8;
                        document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
+      document.getElementsByClassName('content-main')[0].style.setProperty('overflow-y', 'auto');
 }
 
 window.addEventListener('resize', function(event) {
     reorder();
 }, true);
 
-</script><style type="text/css"></style>
-</div>
+</script><style type="text/css"></style></body><script>	
+    function reorder(){
+document.getElementsByClassName('content-main')[0].scrollLeft +=8
+}
+function reorder2(){
+document.getElementsByClassName('content-main')[0].scrollLeft +=400}
+    
+$( document ).ready(function() {
 
-</body></html>
+      		          document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
+                       document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
+                       document.querySelector(':root').style.setProperty('--ww', window.innerWidth + 'px');
+                           document.querySelector(':root').style.setProperty('--wwhalf', window.innerWidth *.0011);
+                                   document.querySelector(':root').style.setProperty('--whhalf', window.innerHeight *.0011);
+                       document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
+         document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
+    if (window.innerWidth > window.innerHeight) { document.querySelector(':root').style.setProperty('--scaleapp', window.innerHeight *.001); }
+    else { document.querySelector(':root').style.setProperty('--scaleapp', window.innerWidth *.0011); }
+         reorder();
+});
+
+
+const scrollContainer = document.querySelector(".content-main");
+
+window.addEventListener('resize', function(event) {
+                  document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
+          document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
+    		          document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
+                       document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
+                       document.querySelector(':root').style.setProperty('--ww', window.innerWidth + 'px');
+                       document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
+if (window.innerWidth > window.innerHeight) { document.querySelector(':root').style.setProperty('--scaleapp', window.innerHeight *.001); }
+else { document.querySelector(':root').style.setProperty('--scaleapp', window.innerWidth *.0011); }
+});
+      </script></html>

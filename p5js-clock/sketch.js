@@ -5,7 +5,7 @@ var multiplicator = 1.5;
 
 
 function setup() {
-createCanvas(w*2, h); 
+createCanvas(2000, 1000); 
 }
 
 function draw() {

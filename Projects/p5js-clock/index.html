@@ -12,33 +12,25 @@
   <style>
 @media screen and (min-width: 1200px) and (min-height: 900px) {
     #p5jsapp { 
-        transform:scale(1)!important;  
-        top: -4%;
-        position: fixed;
-        justify-content: center;
-        display: flex;
-        min-width: inherit;
-        min-height: inherit;
-        bottom: 0;
-        width:100%;
-        margin: auto;
-        left: 1%;
+          transform:scale(1)!important;  
+          justify-content: center;
+          display: flex;
+          min-width: inherit;
+          min-height: var(--vh);
+          width: 100%;
+          margin: -1vh 0 0 1vw;
     }
 }
 
-     #p5jsapp {
+#p5jsapp {
   transform: scale(var(--scaleapp));
-  top: -4%;
-  position: fixed;
   justify-content: center;
   display: flex;
   min-width: inherit;
-  min-height: inherit;
-  bottom: 0;
+  min-height: var(--vh);
   width: 100%;
-  margin: auto;
-  left: 1%;
-} 
+  margin: -1vh 0 0 1vw;
+}
 body {
 --text-color: #222;
 --tag-bg: #c8c8c8;  

@@ -666,7 +666,7 @@ function SECONDS() {
 function hourBlocks() {
   push();
   fill(hour() * 14 % 360, 100, 100);
-  square(windowWidth / 2 - 288 * multiplicator, windowHeight / 2 - 117 * multiplicator, 92 * multiplicator);
+  square(2000 / 2 - 288 * multiplicator, 1000 / 2 - 117 * multiplicator, 92 * multiplicator);
   pop();
   //console.log(huewheel);
   translate(92.2 * multiplicator, 0);
@@ -676,7 +676,7 @@ function hourBlocks20() {
   translate(-316 * multiplicator, 0);
   push();
   fill(170, 100, 100);
-  square(windowWidth / 2 - 288 * multiplicator, windowHeight / 2 - 117 * multiplicator, 92 * multiplicator);
+  square(2000 / 2 - 288 * multiplicator, 1000 / 2 - 117 * multiplicator, 92 * multiplicator);
   pop();
 }
 
@@ -684,7 +684,7 @@ function minuteBlocks() {
 	let multiplicator = 1.48;
   push();
   fill(minute() * 6 % 180, 100, 100);
-  square(windowWidth / 2 - 137 * multiplicator, windowHeight / 2 - 47 -39.2 * multiplicator, 23.325 * multiplicator);
+  square(2000 / 2 - 137 * multiplicator, 1000 / 2 - 47 -39.2 * multiplicator, 23.325 * multiplicator);
   pop();
   //console.log(huewheel);
   translate(23.325 * multiplicator, 0);
@@ -695,7 +695,7 @@ function minuteBlocks20() {
   translate(-280 * multiplicator, 23.325 * multiplicator);
   push();
   fill(minute() * 3 > 45 % 335, 100, 100);
-  square(windowWidth / 2 - 137 * multiplicator, windowHeight / 2 - 47 - 39.2 * multiplicator, 23.325 * multiplicator);
+  square(2000 / 2 - 137 * multiplicator, 1000 / 2 - 47 - 39.2 * multiplicator, 23.325 * multiplicator);
   pop();
 }
 
@@ -703,7 +703,7 @@ function secondBlocks() {
 
   push();
   fill(second() * 6 % 360, 100, 100);
-  square(windowWidth / 2 - 114, windowHeight / 2 - 29.2, 20);
+  square(2000 / 2 - 114, 1000 / 2 - 29.2, 20);
   pop();
   //console.log(huewheel);
   translate(20, 0);
@@ -713,7 +713,7 @@ function secondBlocks20() {
   translate(-200, 20);
   push();
   fill(second() * 6 % 360, 100, 100);
-  square(windowWidth / 2 - 114, windowHeight / 2 -29.2, 20);
+  square(2000 / 2 - 114, 1000 / 2 -29.2, 20);
   pop();
 }
 

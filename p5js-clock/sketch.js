@@ -5,8 +5,7 @@ var multiplicator = 1.5;
 
 
 function setup() {
-	if (h > 900) {createCanvas(w*2, h); }
-		else  {createCanvas(w*2, h*1.1); }
+createCanvas(w*2, h); 
 }
 
 function draw() {

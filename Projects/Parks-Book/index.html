@@ -1042,10 +1042,12 @@ position: relative;
 </div></div><script>
 
 $(window).on('load', function() {
+if (window.innerWidth < 900) {
     var pdfDoc = "http://designedbydan.art/assets/218582.pdf";
     var pathToPdf =  "http://docs.google.com/viewer?url=" + pdfDoc + "&embedded=true";
     var pdfDoc = pathToPdf
     document.getElementById('pdf').src = pdfDoc;
+}
 });
     
 window.addEventListener("scroll", function(event) {

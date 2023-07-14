@@ -72,8 +72,11 @@ $( document ).ready(function() {
             xi = random(0, 270)
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
       }       
-  document.querySelector(':root').style.setProperty('transition', 'ease .5s');
+    addtransiton(){
+    document.querySelector(':root').style.setProperty('transition', 'ease .5s');
     document.body.style.setProperty('transition', 'ease .5s');
+    }  
+  setTimeout(addtransition, 3000);
 });</script><style> 
   body {
     min-height: calc(100% + 200px);

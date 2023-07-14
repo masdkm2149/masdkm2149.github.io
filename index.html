@@ -25,7 +25,6 @@ $( document ).ready(function() {
         var rr3 = random(r3)
             document.querySelector(':root').style.setProperty('--bg_hue', rr1);
             document.querySelector(':root').style.setProperty('--bg_brightness', rr2 + '%');
-       document.querySelector(':root').style.setProperty('transition', '.5s ease');
             document.querySelector(':root').style.setProperty('--bg_saturation', rr3 + '%');
     if (rr3 > 50) {
             xo = random(1, rr3*0.85)
@@ -72,7 +71,8 @@ $( document ).ready(function() {
          else if (rr1 > 315) {
             xi = random(0, 270)
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
-      }
+      }       
+  document.querySelector(':root').style.setProperty('transition', '.5s ease');
 });</script><style> 
   body {
     min-height: calc(100% + 200px);

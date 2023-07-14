@@ -73,10 +73,10 @@ $( document ).ready(function() {
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
       }       
   document.querySelector(':root').style.setProperty('transition', 'ease .5s');
+    document.body.style.setProperty('transition', 'ease .5s');
 });</script><style> 
   body {
     min-height: calc(100% + 200px);
-    transition: .5s ease;
     cursor:none;
   }  html,body {
     background-color: hsl(var(--bg_hue), var(--bg_saturation), var(--bg_brightness));

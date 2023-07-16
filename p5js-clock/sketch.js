@@ -9,8 +9,9 @@ createCanvas(2000, 1000);
 }
 
 function draw() {
-  background(0, 0, 0);
-  colorMode(HSB);
+
+  colorMode(HSB);  
+	background(0, 0, 0);
   let i = 1;
 //	if (w >= 1000) { translate(w/6, 0); }
   push();

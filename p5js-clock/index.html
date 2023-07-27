@@ -13,14 +13,16 @@
           var script = document.createElement("script");
           var mobilesketch = 'sketch-mobile.js';
           var sketch = 'sketch.js';
+          document.body.append(script)          
+          script.type = "text/javascript";
   if (window.Width > 500 && window.Height > 200) {
-  document.body.append(sketch);
+  script.src = sketch;
   }
   else if (window.Height < 200 && window.Width > 500) { 
-  document.body.append(mobilesketch);
+  script.src = mobilesketch;
   }
   else {
-  document.body.append(mobilesketch);
+  script.src = mobilesketch;
   }
 </script>
   </body>

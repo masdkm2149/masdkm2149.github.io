@@ -10,14 +10,17 @@
   </head>
   <body style="image-rendering:optimizequality;position: relative;">
         <script>
+          var script = document.createElement("script");
+          var mobilesketch = 'sketch-mobile.js';
+          var sketch = 'sketch.js';
   if (window.Width > 500 && window.Height > 200) {
-  document.body.append("<script src='sketch.js'>");
+  document.body.append(sketch);
   }
   else if (window.Height < 200 && window.Width > 500) { 
-  document.body.append("<script src='sketch-mobile.js'>");
+  document.body.append(sketch-mobile);
   }
   else {
-  document.body.append("<script src='sketch-mobile.js'>");
+  document.body.append(sketch-mobile);
   }
 </script>
   </body>

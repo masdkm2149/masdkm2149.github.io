@@ -18,6 +18,30 @@
   $('body').append("<script src='sketch-mobile.js'>");
   }
 </script>
+    <script>
+  if (window.Width > 500px) && (window.Height > 200px) {
+  document.body.append("<script src='sketch.js'>");
+  }
+  else if (window.Height < 200px) && (window.Width > 500px) { 
+  document.body.append("<script src='sketch-mobile.js'>");
+  }
+  else {
+  document.body.append("<script src='sketch-mobile.js'>");
+  }
+</script>
+    <script>
+      $( document ).ready(function() {
+  if (window.Width > 500px) && (window.Height > 200px) {
+  $('body').append("<script src='sketch.js'>");
+  }
+  else if (window.Height < 200px) && (window.Width > 500px) { 
+  $('body').append("<script src='sketch-mobile.js'>");
+  }
+  else {
+  $('body').append("<script src='sketch-mobile.js'>");
+  }
+        });
+</script>
   </head>
   <body style="image-rendering:optimizequality;position: relative;">
   </body>

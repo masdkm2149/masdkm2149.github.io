@@ -9,6 +9,10 @@ $('head').append("<meta name='theme-color' content='hsl(" + rr1 + "," + rr2 + ",
 }
 setx();
 
+      function reveal() { 
+     document.getElementsByClassName('dotcursor')[0].classList.toggle("show");
+}
+
 function setup() {
      const rx = (0.8, 2)
         colorMode(HSB);

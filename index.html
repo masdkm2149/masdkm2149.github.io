@@ -73,8 +73,8 @@ $( document ).ready(function() {
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
       }       
     addtransiton(){
-    document.querySelector(':root').style.setProperty('transition', 'ease .35s');
-    document.body.style.setProperty('transition', 'ease .35s');
+    document.querySelector(':root').style.setProperty('transition', 'ease .5s');
+    document.body.style.setProperty('transition', 'ease .5s');
     }  
   setTimeout(addtransition, 1000);
 });</script><style> 
@@ -122,8 +122,8 @@ pointer-events: none;
   transform: scale(1.5);
 }
     @media screen and (max-width: 475px) {
-      span{font-size: 9vw!important;}
-    span::after {}
+      span{font-size: 12vw!important;}
+    span::after {position:inherit!important;font-size: 5vw;}
     }
 #view_project:hover::after {
   color: var(--colorr2)!important;

@@ -73,8 +73,8 @@ $( document ).ready(function() {
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
       }       
     addtransiton(){
-    document.querySelector(':root').style.setProperty('transition', 'ease .5s');
-    document.body.style.setProperty('transition', 'ease .5s');
+    document.querySelector(':root').style.setProperty('transition', 'ease .35s');
+    document.body.style.setProperty('transition', 'ease .35s');
     }  
   setTimeout(addtransition, 1000);
 });</script><style> 
@@ -84,7 +84,6 @@ $( document ).ready(function() {
   }  html,body {
     background-color: hsl(var(--bg_hue), var(--bg_saturation), var(--bg_brightness));
     overflow:hidden;
-    transition:.35s ease;
   }
    .dotcursor::after {
   display: none;

@@ -84,6 +84,7 @@ $( document ).ready(function() {
   }  html,body {
     background-color: hsl(var(--bg_hue), var(--bg_saturation), var(--bg_brightness));
     overflow:hidden;
+    transition:.35s ease;
   }
    .dotcursor::after {
   display: none;
@@ -122,8 +123,8 @@ pointer-events: none;
   transform: scale(1.5);
 }
     @media screen and (max-width: 475px) {
-      span{font-size: 12vw!important;}
-    span::after {position:inherit!important;font-size: 5vw;}
+      span{font-size: 9vw!important;}
+    span::after {}
     }
 #view_project:hover::after {
   color: var(--colorr2)!important;

@@ -73,8 +73,8 @@ $( document ).ready(function() {
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
       }       
     addtransiton(){
-    document.querySelector(':root').style.setProperty('transition', 'ease .5s');
-    document.body.style.setProperty('transition', 'ease .5s');
+    document.querySelector(':root').style.setProperty('transition', '.5s ease');
+    document.body.style.setProperty('transition', '.5s ease');
     }  
   setTimeout(addtransition, 1000);
 });</script><style> 
@@ -88,12 +88,11 @@ $( document ).ready(function() {
    .dotcursor::after {
   display: none;
 } 
-  span{ pointer-events:none;}
+  h{ pointer-events:none;}
 .dotcursor {
   height: 80px;
   transition: .035s ease-out;
   width: 80px;
-  transition: .5s background-color ease-out;
   background-color: hsl(var(--txt_hue), var(--txt_saturation), var(--txt_brightness));
   border-radius: 50%;
   mix-blend-mode: difference;
@@ -123,19 +122,17 @@ pointer-events: none;
   transform: scale(1.5);
 }
     @media screen and (max-width: 475px) {
-      span{font-size: 12vw!important;}
-    span::after {position:inherit!important;font-size: 5vw;}
+      h{font-size: 12vw!important;}
+    h::after {position:inherit!important;font-size: 5vw;content: "Interactive Design";
+margin-top: 1.5em;margin-left: auto;margin-right: auto;}
     }
 #view_project:hover::after {
   color: var(--colorr2)!important;
 }
 canvas {  mix-blend-mode: exclusion;}
-span::after {
+h::after {
   content: "Interactive Design";
   margin-top: 1.5em;
-  position: fixed;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
   width: max-content;
   display: table;
@@ -160,7 +157,7 @@ span::after {
   left: 30px;
 }
  main { display:none;} 
-  
+
 </style>
   </head>
   <body onmouseenter="reveal()" ontouchstart="reveal()" ontouchend="reveal()" onmouseleave="reveal()" >      <span class="dotcursor"></span>

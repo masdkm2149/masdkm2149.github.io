@@ -26,19 +26,19 @@ function setup() {
             document.querySelector(':root').style.setProperty('--bg_brightness', rr2 + '%');
             document.querySelector(':root').style.setProperty('--bg_saturation', rr3 + '%');
     if (rr3 > 50 && rr2 > 50) {
-            sat = random(1, rr3*(random(0.7, 0.85)))
+            sat = random(1, rr3*0.85)
         document.querySelector(':root').style.setProperty('--txt_saturation', sat + '%');
     }       
     else if (rr3 < 50 && rr2 > 50) {
-            sat = random(rr3*(random(1.15, 1.3)), 100)
+            sat = random(rr3*1.3, 100)
         document.querySelector(':root').style.setProperty('--txt_saturation', sat + '%');
     }       
     else if (rr3 < 50 && rr2 < 50) {
-            sat = random(rr3*(random(1.15, 1.3)), 100)
+            sat = random(rr3*1.3, 100)
         document.querySelector(':root').style.setProperty('--txt_saturation', sat + '%');
     }       
     else if (rr3 < 50 && rr2 > 50) {
-            sat = random(rr3*(random(1.15, 1.3)), 100)
+            sat = random(rr3*1.3, 100)
         document.querySelector(':root').style.setProperty('--txt_saturation', sat + '%');
     }         
    if (rr2 > 50) {
@@ -117,21 +117,21 @@ addTrans();
             document.querySelector(':root').style.setProperty('--bg_saturation', rr3 + '%');
       textSize(40);
     if (rr3 > 50 && rr2 > 50) {
-            sat = random(1, rr3*(random(0.7, 0.85)))
+            sat = random(1, rr3*0.85)
         document.querySelector(':root').style.setProperty('--txt_saturation', sat + '%');
     }       
     else if (rr3 < 50 && rr2 > 50) {
-            sat = random(rr3*(random(1.15, 1.3)), 100)
+            sat = random(rr3*1.3, 100)
         document.querySelector(':root').style.setProperty('--txt_saturation', sat + '%');
     }       
     else if (rr3 < 50 && rr2 < 50) {
-            sat = random(rr3*(random(1.15, 1.3)), 100)
+            sat = random(rr3*1.3, 100)
         document.querySelector(':root').style.setProperty('--txt_saturation', sat + '%');
     }       
     else if (rr3 < 50 && rr2 > 50) {
-            sat = random(rr3*(random(1.15, 1.3)), 100)
+            sat = random(rr3*1.3, 100)
         document.querySelector(':root').style.setProperty('--txt_saturation', sat + '%');
-    }       
+    }         
    if (rr2 > 50) {
             luma = random(1, rr2*0.7)
         document.querySelector(':root').style.setProperty('--txt_brightness', luma + '%');
@@ -202,21 +202,21 @@ ellipse(mouseX, mouseY, 80, 80);
             document.querySelector(':root').style.setProperty('--bg_saturation', rr3 + '%');
       textSize(40);  
     if (rr3 > 50 && rr2 > 50) {
-            sat = random(1, rr3*(random(0.7, 0.85)))
+            sat = random(1, rr3*0.85)
         document.querySelector(':root').style.setProperty('--txt_saturation', sat + '%');
     }       
     else if (rr3 < 50 && rr2 > 50) {
-            sat = random(rr3*(random(1.15, 1.3)), 100)
+            sat = random(rr3*1.3, 100)
         document.querySelector(':root').style.setProperty('--txt_saturation', sat + '%');
     }       
     else if (rr3 < 50 && rr2 < 50) {
-            sat = random(rr3*(random(1.15, 1.3)), 100)
+            sat = random(rr3*1.3, 100)
         document.querySelector(':root').style.setProperty('--txt_saturation', sat + '%');
     }       
     else if (rr3 < 50 && rr2 > 50) {
-            sat = random(rr3*(random(1.15, 1.3)), 100)
+            sat = random(rr3*1.3, 100)
         document.querySelector(':root').style.setProperty('--txt_saturation', sat + '%');
-    }             
+    }           
    if (rr2 > 50) {
             luma = random(1, rr2*0.7)
         document.querySelector(':root').style.setProperty('--txt_brightness', luma + '%');
@@ -273,21 +273,21 @@ ellipse(mouseX, mouseY, 80, 80);
             document.querySelector(':root').style.setProperty('--bg_saturation', rr3 + '%');
       textSize(40);
     if (rr3 > 50 && rr2 > 50) {
-            sat = random(1, rr3*(random(0.7, 0.85)))
+            sat = random(1, rr3*0.85)
         document.querySelector(':root').style.setProperty('--txt_saturation', sat + '%');
     }       
     else if (rr3 < 50 && rr2 > 50) {
-            sat = random(rr3*(random(1.15, 1.3)), 100)
+            sat = random(rr3*1.3, 100)
         document.querySelector(':root').style.setProperty('--txt_saturation', sat + '%');
     }       
     else if (rr3 < 50 && rr2 < 50) {
-            sat = random(rr3*(random(1.15, 1.3)), 100)
+            sat = random(rr3*1.3, 100)
         document.querySelector(':root').style.setProperty('--txt_saturation', sat + '%');
     }       
     else if (rr3 < 50 && rr2 > 50) {
-            sat = random(rr3*(random(1.15, 1.3)), 100)
+            sat = random(rr3*1.3, 100)
         document.querySelector(':root').style.setProperty('--txt_saturation', sat + '%');
-    }     
+    }         
       
    if (rr2 > 50) {
             luma = random(1, rr2*0.7)

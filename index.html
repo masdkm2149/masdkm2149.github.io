@@ -74,6 +74,7 @@ $( document ).ready(function() {
 });
 </script>
 <style> 
+  
   body {
     min-height: calc(100% + 200px);
   }  html,body {
@@ -85,7 +86,13 @@ $( document ).ready(function() {
   display: none;
 } 
   h{ pointer-events:none;}
-.dotcursor {
+dotcursor.show:active {
+  width: 100px;
+  height: 100px;
+  top: calc(var(--mousey) - 50px);
+  left: calc(var(--mousex) - 50px);
+}
+  .dotcursor {
   height: 80px;
   transition: .035s ease-out left, .035s ease-out top, 0.35s ease-out background-color;
   width: 80px;

@@ -80,14 +80,6 @@ function setup() {
    clear();
 }
 
-let timeout;
-function trans() { timeout = setTimeout(addTrans, 1000); }; 
-function addTrans() { document.querySelector(':root').style.setProperty('transition', 'ease-out background-color .5s'); document.body.style.setProperty('transition', 'ease-out background-color .5s');
-                     
-$( document ).ready(function() {
-addTrans();
-});
-
   function windowResized() {
 //resizeCanvas(windowWidth + 40, windowHeight + 40);
      clear();

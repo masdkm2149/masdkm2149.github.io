@@ -14,10 +14,6 @@
      document.getElementsByClassName('dotcursor')[0].classList.toggle("show");
 }
 $( document ).ready(function() {
-        function addtransiton() {
-    document.querySelector(':root').style.setProperty('transition', .5 + 's ease background-color');
-    document.body.style.setProperty('transition', .5 + 's ease background-color');
-}  
      const rx = (0.8, 2)
         colorMode(HSB);
           let r1 = (1,360)
@@ -75,9 +71,6 @@ $( document ).ready(function() {
             xi = random(0, 270)
         document.querySelector(':root').style.setProperty('--txt_hue', xi);
       }       
-  setTimeout(addtransition(), 1000);
-    document.querySelector(':root').style.setProperty('transition', '.5s ease background-color');
-    document.body.style.setProperty('transition', '.5s ease background-color');
 });
 </script>
 <style> 

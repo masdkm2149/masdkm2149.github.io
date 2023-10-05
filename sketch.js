@@ -30,7 +30,7 @@ function setup() {
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     } 
     else if (rr3 > 70) {
-            xo = random(1, rr3*0.5)
+            xo = random(1, rr3*random(0.5, 0.85))
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     }       
     else if (rr3 < 50 && rr3 > 30) {
@@ -38,7 +38,7 @@ function setup() {
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     }       
     else if (rr3 < 30) {
-            xo = random(rr3*1.5, 100)
+            xo = random(rr3*random(1.15, 1.5, 100)
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     }       
    
@@ -114,7 +114,7 @@ function setup() {
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     } 
     else if (rr3 > 70) {
-            xo = random(1, rr3*0.5)
+            xo = random(1, rr3*random(0.5, 0.85))
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     }       
     else if (rr3 < 50 && rr3 > 30) {
@@ -122,7 +122,7 @@ function setup() {
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     }       
     else if (rr3 < 30) {
-            xo = random(rr3*1.5, 100)
+            xo = random(rr3*random(1.15, 1.5, 100)
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     }       
          
@@ -201,7 +201,7 @@ ellipse(mouseX, mouseY, 80, 80);
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     } 
     else if (rr3 > 70) {
-            xo = random(1, rr3*0.5)
+            xo = random(1, rr3*random(0.5, 0.85))
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     }       
     else if (rr3 < 50 && rr3 > 30) {
@@ -209,7 +209,7 @@ ellipse(mouseX, mouseY, 80, 80);
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     }       
     else if (rr3 < 30) {
-            xo = random(rr3*1.5, 100)
+            xo = random(rr3*random(1.15, 1.5, 100)
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     }       
    
@@ -273,7 +273,7 @@ ellipse(mouseX, mouseY, 80, 80);
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     } 
     else if (rr3 > 70) {
-            xo = random(1, rr3*0.5)
+            xo = random(1, rr3*random(0.5, 0.85))
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     }       
     else if (rr3 < 50 && rr3 > 30) {
@@ -281,9 +281,9 @@ ellipse(mouseX, mouseY, 80, 80);
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     }       
     else if (rr3 < 30) {
-            xo = random(rr3*1.5, 100)
+            xo = random(rr3*random(1.15, 1.5, 100)
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
-    }       
+    }            
       
    
    if (rr2 > 50) {

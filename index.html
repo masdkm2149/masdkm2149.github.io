@@ -200,12 +200,12 @@ function change() {
   document.querySelector(':root, h::after').style.setProperty('--txt',  t[counter]);  
   var textrotation = JSON.stringify(getComputedStyle(document.querySelector(':root')).getPropertyValue('--txt'));
   console.log(textrotation);  // for debug
+  document.querySelector('#text::after').style.setProperty('content', textrotation);
   counter++;
   if (counter >= t.length) {
     counter = 0;
     // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
   }
-  document.querySelector('#text::after').style.setProperty('content', textrotation);
 }</script>
 <script src="sketch.js"></script>	    
   </body>

@@ -199,12 +199,9 @@ var inst = setInterval(change, 3000);
 function change() {
   document.querySelector(':root').style.setProperty('--txt',  t[counter]);
   document.querySelector(':root, h::after').style.setProperty('--txt',  t[counter]);  
-  // for debug
-  console.log(getComputedStyle(document.querySelector(':root').getPropertyValue('--txt')));
-  // for debug 
-  var textrotation = getComputedStyle(document.querySelector(':root')).getPropertyValue('--txt')
+  var textrotation = getComputedStyle(document.querySelector(':root')).getPropertyValue('--txt');
+  console.log(textrotation);  // for debug
   document.querySelector(':root, h::after').style.setProperty('content', textrotation);
-
   counter++;
   if (counter >= t.length) {
     counter = 0;

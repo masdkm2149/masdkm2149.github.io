@@ -26,16 +26,16 @@ $( document ).ready(function() {
             document.querySelector(':root').style.setProperty('--bg_brightness', rr2 + '%');
             document.querySelector(':root').style.setProperty('--bg_saturation', rr3 + '%');
     if (rr3 > 50) {
-            sat = random(1, rr3*0.85)
+            sat = random(1, rr3*random(0.75, 0.85))
         document.querySelector(':root').style.setProperty('--txt_saturation', sat + '%');
     }       
     else if (rr3 < 50) {
-            sat = random(rr3*1.15, 100)
+            sat = random(rr3*random(1.15, 1.25), 100)
         document.querySelector(':root').style.setProperty('--txt_saturation', sat + '%');
     }       
    
    if (rr2 > 50) {
-            luma = random(1, rr2*0.7)
+            luma = random(1, rr2*0.65)
         document.querySelector(':root').style.setProperty('--txt_brightness', luma + '%');
     }       
     else if (rr2 < 50) {
@@ -170,6 +170,15 @@ h::after {
   </h></a>
 <script src="sketch.js"></script>	    
       <script> 
-$( document ).ready(function() { document.querySelector(':root').style.setProperty('transition', 'ease-out background-color .5s'); document.body.style.setProperty('transition', 'ease-out background-color .5s');});</script> 
+$( document ).ready(function() { 
+let timeout;
+function trans() {
+  timeout = setTimeout(addtrans, 1000);
+} 
+  function addtrans() { document.querySelector(':root').style.setProperty('transition', 'ease-out background-color .5s'); document.body.style.setProperty('transition', 'ease-out background-color .5s');
+        trans();
+});
+
+      </script> 
   </body>
 </html>

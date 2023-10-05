@@ -27,7 +27,8 @@ setTimeout(addTrans, 500);
         var rr3 = random(r3)
             document.querySelector(':root').style.setProperty('--bg_hue', rr1);
             document.querySelector(':root').style.setProperty('--bg_brightness', rr2 + '%');
-            document.querySelector(':root').style.setProperty('--bg_saturation', rr3 + '%');
+            document.querySelector(':root').style.setProperty('--bg_saturation', rr3 + '%'); 
+            document.querySelector(':root').style.setProperty('--txt', "Interactive Design");
   //text saturation algorithm  
   if (rr3 > 50 && rr3 < 70) {
             sat = random(1, rr3*0.85)
@@ -190,7 +191,7 @@ h::after {
 <a href="/Projects/" style="width: fit-content;border-radius: 48px;position: absolute;width: 100%;height: 100%;align-content: center;justify-content: center;display: flex;text-decoration: none;"><h id="text" style="color: hsl(var(--txt_hue), var(--txt_saturation), var(--txt_brightness));text-align: center;flex-direction: column;display:flex;margin: auto;position: unset;font-size: 3em;font-family: sans-serif;transition: .5s ease;">Daniel Roswadowsky
   </h></a>
     <script>
-var text = ["Interactive Design", "User Interface Design (UI)", "User Experience Design (UX)", "Branding", "Graphic Design", "Motion Geraphics", "Front-End Development"];
+var text = ["User Interface Design (UI)", "User Experience Design (UX)", "Branding", "Graphic Design", "Motion Geraphics", "Front-End Development"];
 var counter = 0;
 var inst = setInterval(change, 3000);
 

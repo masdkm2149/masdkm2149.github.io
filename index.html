@@ -94,9 +94,7 @@ $( document ).ready(function() {
   h{ pointer-events:none;}
 .dotcursor {
   height: 80px;
-  transition: .35s ease-out background-color;
-  transition: .035s ease-out top;
-  transition: .035s ease-out left;
+  transition: .035s ease-out left, 035s ease-out top, 0.35s ease-out background-color;
   width: 80px;
   background-color: hsl(var(--txt_hue), var(--txt_saturation), var(--txt_brightness));
   border-radius: 50%;
@@ -170,6 +168,6 @@ h::after {
   </h></a>
 <script src="sketch.js"></script>	    
       <script> 
-$( document ).ready(function() { document.querySelector(':root').style.setProperty('transition', '.5s ease background-color'); document.body.style.setProperty('transition', '.5s ease background-color');});</script> 
+$( document ).ready(function() { document.querySelector(':root').style.setProperty('transition', '.5s ease-out background-color'); document.body.style.setProperty('transition', '.5s ease-out background-color');});</script> 
   </body>
 </html>

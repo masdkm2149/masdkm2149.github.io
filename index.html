@@ -81,7 +81,7 @@ $( document ).ready(function() {
     background-color: hsl(var(--bg_hue), var(--bg_saturation), var(--bg_brightness));
     overflow:hidden;
   }
-  body * { cursor: none;}
+  html,body * { cursor: none;}
    .dotcursor::after {
   display: none;
 } 
@@ -114,7 +114,7 @@ mix-blend-mode: difference;
 pointer-events: none;
   }
   .show {
-      display: inline-block!important;
+      display: flex!important;
       opacity: 1!important;
   }
  .hide {

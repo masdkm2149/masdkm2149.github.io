@@ -199,7 +199,7 @@ var inst = setInterval(change, 3000);
 function change() {
   document.querySelector(':root').style.setProperty('--txt',  t[counter]);
   document.querySelector(':root, h::after').style.setProperty('--txt',  t[counter]);
-  document.querySelector(':root, h::after').style.setProperty('content', "'" + getComputedStyle(document.querySelector(':root').getPropertyValue('--txt') + "'" );
+  document.querySelector(':root, h::after').style.setProperty('content', getComputedStyle(document.querySelector(':root')).getPropertyValue('--txt'));
   counter++;
   if (counter >= t.length) {
     counter = 0;

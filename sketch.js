@@ -11,8 +11,6 @@ setx();
 let timeout;
 function trans() { timeout = setTimeout(addtrans, 1000); }; 
 function addtrans() { document.querySelector(':root').style.setProperty('transition', 'ease-out background-color .5s'); document.body.style.setProperty('transition', 'ease-out background-color .5s');
-trans();
-
       function reveal() { 
      document.getElementsByClassName('dotcursor')[0].classList.toggle("show");
 }
@@ -82,7 +80,7 @@ trans();
 
 
 $( document ).ready(function() {
-
+trans();
 });
 
   function windowResized() {

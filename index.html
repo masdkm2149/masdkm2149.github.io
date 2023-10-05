@@ -196,7 +196,7 @@ var counter = 0;
 var inst = setInterval(change, 3000);
 
 function change() {
-  document.querySelector(':root').style.setProperty('--txt',  text[counter]);
+  document.querySelector(':root').style.setProperty('--txt',  t[counter]);
   counter++;
   if (counter >= t.length) {
     counter = 0;

@@ -67,28 +67,32 @@ setTimeout(addTrans, 1000);
                     huee = random(90, 360)
         document.querySelector(':root').style.setProperty('--txt_hue', huee);
      }
-  else if (rr1 > 90) {
+  else if (rr1 > 90 && rr1 > 45) {
             huee = random(0, 45)
         document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-   else if (rr1 > 135) {
+   else if (rr1 > 135 && rr1 > 90) {
             huee = random(0, 90)
         document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-    else if (rr1 > 180) {
+    else if (rr1 > 180 && rr1 > 135) {
             huee = random(0, 135)
         document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-    else if (rr1 > 225) {
+    else if (rr1 > 225 && rr1 > 180) {
             huee = random(0, 180)
         document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-         else if (rr1 > 270) {
+         else if (rr1 > 270 && rr1 > 225) {
             huee = random(0, 225)
         document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-         else if (rr1 > 315) {
+         else if (rr1 > 315 && rr1 > 270) {
             huee = random(0, 270)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
+      }       
+         else if (rr1 < 360 && rr1 > 315) {
+            huee = random(45, 315)
         document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }       
 });

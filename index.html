@@ -113,10 +113,10 @@ setTimeout(addTrans, 1000);
 .dotcursor:active {
   width: 110px;
   height: 110px;
-  top: calc(var(--mousey) - 55px);
-  left: calc(var(--mousex) - 55px);
+  margin-left: -10px;
+  margin-top: -10px;
 }
-  .dotcursor.show { transition: .02s ease-out left, .02s ease-out right, .02s ease-out bottom, .02s ease-out top, 0.35s ease-out background-color, 0.2s ease-out width, 0.2s ease-out height; }
+  .dotcursor.show { transition: .02s ease-out left, .02s ease-out right, .02s ease-out bottom, .02s ease-out top, 0.35s ease-out background-color, 0.2s ease-out width, 0.2s ease-out height, 0.2s ease-out margin; }
   .dotcursor {
   height: 80px;
   width: 80px;

@@ -42,7 +42,11 @@ function setup() {
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     }       
    
-   if (rr2 > 50) {
+   if (rr3 > 75 && rr2 > 50) {
+            xy = random(1, rr2*0.5)
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+    }       
+   else if (rr3 < 75 && rr2 > 50) {
             xy = random(1, rr2*0.7)
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       

@@ -59,34 +59,39 @@ function setup() {
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }      
    
+  //text hue algorithm
    if  (rr1 < 45) {
-                    xi = random(90, 360)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+                    huee = random(90, 360)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
      }
-  else if (rr1 > 90) {
-            xi = random(0, 45)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+  else if (rr1 > 90 && rr1 > 45) {
+            huee = random(0, 45)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-   else if (rr1 > 135) {
-            xi = random(0, 90)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+   else if (rr1 > 135 && rr1 > 90) {
+            huee = random(0, 90)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-    else if (rr1 > 180) {
-            xi = random(0, 135)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+    else if (rr1 > 180 && rr1 > 135) {
+            huee = random(0, 135)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-    else if (rr1 > 225) {
-            xi = random(0, 180)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+    else if (rr1 > 225 && rr1 > 180) {
+            huee = random(0, 180)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-         else if (rr1 > 270) {
-            xi = random(0, 225)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+         else if (rr1 > 270 && rr1 > 225) {
+            huee = random(0, 225)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-         else if (rr1 > 315) {
-            xi = random(0, 270)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
-      }
+         else if (rr1 > 315 && rr1 > 270) {
+            huee = random(0, 270)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
+      }       
+         else if (rr1 < 360 && rr1 > 315) {
+            huee = random(45, 315)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
+      }  
  //       textSize(40);
  //     text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
  //     textSize(18);
@@ -152,34 +157,39 @@ function setup() {
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       
    
+   //text hue algorithm
    if  (rr1 < 45) {
-                    xi = random(90, 360)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+                    huee = random(90, 360)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
      }
-  else if (rr1 > 90) {
-            xi = random(0, 45)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+  else if (rr1 > 90 && rr1 > 45) {
+            huee = random(0, 45)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-   else if (rr1 > 135) {
-            xi = random(0, 90)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+   else if (rr1 > 135 && rr1 > 90) {
+            huee = random(0, 90)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-    else if (rr1 > 180) {
-            xi = random(0, 135)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+    else if (rr1 > 180 && rr1 > 135) {
+            huee = random(0, 135)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-    else if (rr1 > 225) {
-            xi = random(0, 180)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+    else if (rr1 > 225 && rr1 > 180) {
+            huee = random(0, 180)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-         else if (rr1 > 270) {
-            xi = random(0, 225)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+         else if (rr1 > 270 && rr1 > 225) {
+            huee = random(0, 225)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-         else if (rr1 > 315) {
-            xi = random(0, 270)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
-      }
+         else if (rr1 > 315 && rr1 > 270) {
+            huee = random(0, 270)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
+      }       
+         else if (rr1 < 360 && rr1 > 315) {
+            huee = random(45, 315)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
+      }  
     //  text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
     //  textSize(18);
     //  text("Interactive Design", windowWidth/3, windowHeight/2 + 50);
@@ -246,34 +256,39 @@ ellipse(mouseX, mouseY, 80, 80);
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }      
    
+   //text hue algorithm
    if  (rr1 < 45) {
-                    xi = random(90, 360)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+                    huee = random(90, 360)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
      }
-  else if (rr1 > 90) {
-            xi = random(0, 45)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+  else if (rr1 > 90 && rr1 > 45) {
+            huee = random(0, 45)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-   else if (rr1 > 135) {
-            xi = random(0, 90)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+   else if (rr1 > 135 && rr1 > 90) {
+            huee = random(0, 90)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-    else if (rr1 > 180) {
-            xi = random(0, 135)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+    else if (rr1 > 180 && rr1 > 135) {
+            huee = random(0, 135)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-    else if (rr1 > 225) {
-            xi = random(0, 180)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+    else if (rr1 > 225 && rr1 > 180) {
+            huee = random(0, 180)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-         else if (rr1 > 270) {
-            xi = random(0, 225)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+         else if (rr1 > 270 && rr1 > 225) {
+            huee = random(0, 225)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-         else if (rr1 > 315) {
-            xi = random(0, 270)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
-      }
+         else if (rr1 > 315 && rr1 > 270) {
+            huee = random(0, 270)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
+      }       
+         else if (rr1 < 360 && rr1 > 315) {
+            huee = random(45, 315)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
+      }  
 //      text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
   //    textSize(18);
   //  text("Interactive Design", windowWidth/3, windowHeight/2 + 50);
@@ -326,34 +341,39 @@ ellipse(mouseX, mouseY, 80, 80);
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }      
    
+  //text hue algorithm
    if  (rr1 < 45) {
-                    xi = random(90, 360)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+                    huee = random(90, 360)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
      }
-  else if (rr1 > 90) {
-            xi = random(0, 45)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+  else if (rr1 > 90 && rr1 > 45) {
+            huee = random(0, 45)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-   else if (rr1 > 135) {
-            xi = random(0, 90)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+   else if (rr1 > 135 && rr1 > 90) {
+            huee = random(0, 90)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-    else if (rr1 > 180) {
-            xi = random(0, 135)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+    else if (rr1 > 180 && rr1 > 135) {
+            huee = random(0, 135)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-    else if (rr1 > 225) {
-            xi = random(0, 180)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+    else if (rr1 > 225 && rr1 > 180) {
+            huee = random(0, 180)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-         else if (rr1 > 270) {
-            xi = random(0, 225)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
+         else if (rr1 > 270 && rr1 > 225) {
+            huee = random(0, 225)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }
-         else if (rr1 > 315) {
-            xi = random(0, 270)
-        document.querySelector(':root').style.setProperty('--txt_hue', xi);
-      }
+         else if (rr1 > 315 && rr1 > 270) {
+            huee = random(0, 270)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
+      }       
+         else if (rr1 < 360 && rr1 > 315) {
+            huee = random(45, 315)
+        document.querySelector(':root').style.setProperty('--txt_hue', huee);
+      }  
 // text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
   //    textSize(18);
  //   text("Interactive Design", windowWidth/3, windowHeight/2 + 50);

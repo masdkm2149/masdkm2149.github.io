@@ -201,7 +201,7 @@ function change() {
   document.querySelector(':root, h::after').style.setProperty('--txt',  t[counter]);
   document.querySelector(':root, h::after').style.setProperty('content', getComputedStyle(document.querySelector(':root')).getPropertyValue('--txt'));
   // for debug
-  console.log(getComputedStyle(document.querySelector(':root')).getPropertyValue('--txt')));
+  console.log(getComputedStyle(document.querySelector(':root').getPropertyValue('--txt'));
   // for debug 
   counter++;
   if (counter >= t.length) {

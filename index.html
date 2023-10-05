@@ -172,12 +172,10 @@ h::after {
       <script> 
 $( document ).ready(function() { 
 let timeout;
-function trans() {
-  timeout = setTimeout(addtrans, 1000);
-} 
-  function addtrans() { document.querySelector(':root').style.setProperty('transition', 'ease-out background-color .5s'); document.body.style.setProperty('transition', 'ease-out background-color .5s');
+function trans() { timeout = setTimeout(addtrans, 1000); } 
+function addtrans() { document.querySelector(':root').style.setProperty('transition', 'ease-out background-color .5s'); document.body.style.setProperty('transition', 'ease-out background-color .5s');
         trans();
-});
+};
 
       </script> 
   </body>

@@ -192,11 +192,10 @@ h::after {
     <script>
 var text = ["Interactive Design", "User Interface Design (UI)", "User Experience Design (UX)", "Branding", "Graphic Design", "Motion Geraphics", "Front-End Development"];
 var counter = 0;
-var elem =  document.querySelector(':root');
 var inst = setInterval(change, 3000);
 
 function change() {
-  elem..style.setProperty('--txt',  text[counter]);
+  document.querySelector(':root').style.setProperty('--txt',  text[counter]);
   counter++;
   if (counter >= text.length) {
     counter = 0;

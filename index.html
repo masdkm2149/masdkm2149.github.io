@@ -192,14 +192,15 @@ h::after {
 <a href="/Projects/" style="width: fit-content;border-radius: 48px;position: absolute;width: 100%;height: 100%;align-content: center;justify-content: center;display: flex;text-decoration: none;"><h class="txt" style="color: hsl(var(--txt_hue), var(--txt_saturation), var(--txt_brightness));text-align: center;flex-direction: column;display:flex;margin: auto;position: unset;font-size: 3em;font-family: sans-serif;transition: .5s ease;">Daniel Roswadowsky
   </h></a>
     <script>
-var t = ["User Interface Design (UI)", "User Experience Design (UX)", "Branding", "Graphic Design", "Motion Geraphics", "Front-End Development"];
-var counter = 0;
+
 var inst = setInterval(change, 3000);
 
 function change() {
+
+  var t = ["User Interface Design (UI)", "User Experience Design (UX)", "Branding", "Graphic Design", "Motion Geraphics", "Front-End Development"];
+  var counter = 0;
   document.querySelector(':root, h::after').style.setProperty('--txt',  t[counter]);  
   var textrotation = JSON.stringify(getComputedStyle(document.querySelector(':root')).getPropertyValue('--txt'));
-
   counter++;
   if (counter >= t.length) {
     counter = 0;

@@ -131,14 +131,18 @@ function setup() {
     }       
          
    
-   if (rr2 > 50) {
+   if (rr3 > 75 && rr2 > 50) {
+            xy = random(1, rr2*0.5)
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+    }       
+   else if (rr3 < 75 && rr2 > 50) {
             xy = random(1, rr2*0.7)
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       
     else if (rr2 < 50) {
             xy = random(rr2*1.3, 100)
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-    }       
+    }           
    
    if  (rr1 < 45) {
                     xi = random(90, 360)
@@ -217,14 +221,18 @@ ellipse(mouseX, mouseY, 80, 80);
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     }       
    
-   if (rr2 > 50) {
+   if (rr3 > 75 && rr2 > 50) {
+            xy = random(1, rr2*0.5)
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+    }       
+   else if (rr3 < 75 && rr2 > 50) {
             xy = random(1, rr2*0.7)
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       
     else if (rr2 < 50) {
             xy = random(rr2*1.3, 100)
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-    }       
+    }        
    
    if  (rr1 < 45) {
                     xi = random(90, 360)
@@ -289,15 +297,18 @@ ellipse(mouseX, mouseY, 80, 80);
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     }       
       
-   
-   if (rr2 > 50) {
+   if (rr3 > 75 && rr2 > 50) {
+            xy = random(1, rr2*0.5)
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+    }       
+   else if (rr3 < 75 && rr2 > 50) {
             xy = random(1, rr2*0.7)
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       
     else if (rr2 < 50) {
             xy = random(rr2*1.3, 100)
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-    }       
+    }          
    
    if  (rr1 < 45) {
                     xi = random(90, 360)

@@ -110,6 +110,7 @@ setTimeout(addTrans, 500);
    .dotcursor::after {
   display: none;
 } 
+
   h{user-select: none; pointer-events:none;}
 .dotcursor:active {
   width: 110px;
@@ -197,6 +198,7 @@ var inst = setInterval(change, 3000);
 
 function change() {
   document.querySelector(':root').style.setProperty('--txt',  t[counter]);
+  document.querySelector(':root, h::after').style.setProperty('--txt',  t[counter]);
   counter++;
   if (counter >= t.length) {
     counter = 0;

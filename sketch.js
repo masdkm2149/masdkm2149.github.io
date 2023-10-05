@@ -8,6 +8,10 @@ function setx() {
 $('head').append("<meta name='theme-color' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");     
 }
 setx();
+let timeout;
+function trans() { timeout = setTimeout(addtrans, 1000); }; 
+function addtrans() { document.querySelector(':root').style.setProperty('transition', 'ease-out background-color .5s'); document.body.style.setProperty('transition', 'ease-out background-color .5s');
+trans();
 
       function reveal() { 
      document.getElementsByClassName('dotcursor')[0].classList.toggle("show");

@@ -187,8 +187,22 @@ h::after {
   </head>
   <body onmouseenter="reveal()" ontouchstart="reveal()" ontouchend="reveal()" onmouseleave="reveal()"> 
  <span class="dotcursor"></span>
-<a href="/Projects/" style="width: fit-content;border-radius: 48px;position: absolute;width: 100%;height: 100%;align-content: center;justify-content: center;display: flex;text-decoration: none;"><h style="color: hsl(var(--txt_hue), var(--txt_saturation), var(--txt_brightness));text-align: center;flex-direction: column;display:flex;margin: auto;position: unset;font-size: 3em;font-family: sans-serif;transition: .5s ease;">Daniel Roswadowsky
+<a href="/Projects/" style="width: fit-content;border-radius: 48px;position: absolute;width: 100%;height: 100%;align-content: center;justify-content: center;display: flex;text-decoration: none;"><h id="text" style="color: hsl(var(--txt_hue), var(--txt_saturation), var(--txt_brightness));text-align: center;flex-direction: column;display:flex;margin: auto;position: unset;font-size: 3em;font-family: sans-serif;transition: .5s ease;">Daniel Roswadowsky
   </h></a>
+    <script>
+var text = ["Interactive Design", "User Interface Design (UI)", "User Experience Design (UX)", "Branding", "Graphic Design", "Motion Geraphics", "Front-End Development"];
+var counter = 0;
+var elem =  document.querySelector(':root');
+var inst = setInterval(change, 3000);
+
+function change() {
+  elem..style.setProperty('--txt',  text[counter]);
+  counter++;
+  if (counter >= text.length) {
+    counter = 0;
+    // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
+  }
+}</script>
 <script src="sketch.js"></script>	    
   </body>
 </html>

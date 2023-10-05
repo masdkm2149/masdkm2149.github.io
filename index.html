@@ -81,11 +81,11 @@ $( document ).ready(function() {
 <style> 
   body {
     min-height: calc(100% + 200px);
-    cursor:none;
   }  html,body {
     background-color: hsl(var(--bg_hue), var(--bg_saturation), var(--bg_brightness));
     overflow:hidden;
   }
+  body * { cursor: none;}
    .dotcursor::after {
   display: none;
 } 
@@ -161,8 +161,8 @@ h::after {
 </style>
   </head>
   <body onmouseenter="reveal()" ontouchstart="reveal()" ontouchend="reveal()" onmouseleave="reveal()" >      <span class="dotcursor"></span>
-<a href="/Projects/" style="/*! margin-top: 30px; */width: fit-content;border-radius: 48px;position: absolute;width: 100%;height: 100%;align-content: center;justify-content: center;display: flex;text-decoration: none;"><span style="color: hsl(var(--txt_hue), var(--txt_saturation), var(--txt_brightness));text-align: center;display: block ruby;margin: auto;position: unset;font-size: 3em;font-family: sans-serif;transition: .5s ease;">Daniel Roswadowsky
-  </span><div style="display: none;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border: solid 2px #EEF1F4;margin-right: 0px;border-radius: 50px;width: fit-content;position: fixed;transition: ease-in-out .25s;cursor: pointer;" id="view_project" onmousemove="remapcolor()" class="one"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a>
+<a href="/Projects/" style="width: fit-content;border-radius: 48px;position: absolute;width: 100%;height: 100%;align-content: center;justify-content: center;display: flex;text-decoration: none;"><h style="color: hsl(var(--txt_hue), var(--txt_saturation), var(--txt_brightness));text-align: center;display: block ruby;margin: auto;position: unset;font-size: 3em;font-family: sans-serif;transition: .5s ease;">Daniel Roswadowsky
+  </h><div style="display: none;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border: solid 2px #EEF1F4;margin-right: 0px;border-radius: 50px;width: fit-content;position: fixed;transition: ease-in-out .25s;cursor: pointer;" id="view_project" onmousemove="remapcolor()" class="one"></a>
     <main>
 
     </main>

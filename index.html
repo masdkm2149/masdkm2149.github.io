@@ -192,7 +192,7 @@ h::after {
 <a href="/Projects/" style="width: fit-content;border-radius: 48px;position: absolute;width: 100%;height: 100%;align-content: center;justify-content: center;display: flex;text-decoration: none;"><h id="text" style="color: hsl(var(--txt_hue), var(--txt_saturation), var(--txt_brightness));text-align: center;flex-direction: column;display:flex;margin: auto;position: unset;font-size: 3em;font-family: sans-serif;transition: .5s ease;">Daniel Roswadowsky
   </h></a>
     <script>
-var t = ["'User Interface Design (UI)'", "'User Experience Design (UX)'", "'Branding'", "'Graphic Design'", "'Motion Geraphics'", "'Front-End Development'"];
+var t = ["''User Interface Design (UI)''", "''User Experience Design (UX)''", "''Branding''", "''Graphic Design''", "''Motion Geraphics''", "''Front-End Development''"];
 var counter = 0;
 var inst = setInterval(change, 3000);
 
@@ -201,7 +201,7 @@ function change() {
   document.querySelector(':root, h::after').style.setProperty('--txt',  t[counter]);  
   var textrotation = getComputedStyle(document.querySelector(':root')).getPropertyValue('--txt');
   console.log(textrotation);  // for debug
-  document.querySelector(':root, h::after').style.setProperty('content',"'" textrotation "'");
+  document.querySelector(':root, h::after').style.setProperty('content', textrotation);
   counter++;
   if (counter >= t.length) {
     counter = 0;

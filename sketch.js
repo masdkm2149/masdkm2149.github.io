@@ -92,15 +92,12 @@ function setup() {
             huee = random(45, 315)
         document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }  
- //       textSize(40);
- //     text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
- //     textSize(18);
- //   text("Interactive Design", windowWidth/3, windowHeight/2 + 50);   
-   noCursor();
-     //createCanvas(windowWidth + 40, windowHeight + 40);
-   clear();
 }
 
+function draw() {
+     document.querySelector(':root').style.setProperty('--mousex', mouseX + 'px');
+     document.querySelector(':root').style.setProperty('--mousey', mouseY + 'px');
+}
   function windowResized() {
 //resizeCanvas(windowWidth + 40, windowHeight + 40);
      clear();
@@ -194,15 +191,7 @@ function setup() {
     //  textSize(18);
     //  text("Interactive Design", windowWidth/3, windowHeight/2 + 50);
   }
-function draw() {
-clear();
-ellipse(mouseX, mouseY, 80, 80);
-  colorMode(HSB);
-  fill(xi, xo, xy);
-  noStroke();
-     document.querySelector(':root').style.setProperty('--mousex', mouseX + 'px');
-     document.querySelector(':root').style.setProperty('--mousey', mouseY + 'px');
-}
+
   function mouseWheel(event) {
     scrollDelta = event.delta;
      const rx = (0.8, 2)

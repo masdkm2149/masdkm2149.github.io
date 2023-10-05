@@ -13,8 +13,12 @@
       function reveal() { 
      document.getElementsByClassName('dotcursor')[0].classList.toggle("show");
 }
+var timeout;
+function trans() { timeout = setTimeout(addTrans, 1000); }; 
+function addTrans() { document.querySelector(':root').style.setProperty('transition', 'ease-out background-color .5s'); document.body.style.setProperty('transition', 'ease-out background-color .5s');                     
 $( document ).ready(function() {
-     const rx = (0.8, 2)
+addTrans();
+  const rx = (0.8, 2)
         colorMode(HSB);
           let r1 = (1,360)
         let r2 = (20,100)

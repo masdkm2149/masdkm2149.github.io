@@ -210,16 +210,16 @@ var t = ["i1", "i2", "i3", "i4", "i5", "i6", "i7"];
 var counter = 0;
 // start text rotation
 function change() { 
-  // adjust fade timing, must also adjust changes on line 184 
-  setTimeout(document.querySelector('h.txt').classList.toggle('fade'), 3750);
   //  console.log([counter])  // for debug
   // add classes
-  document.querySelector('h.txt').classList.add(...['fade', 'fadeinout', t[counter]]);
+  document.querySelector('h.txt').classList.add(...['fade', t[counter]]);
   // clear previous text class
   if ([counter] > 0 && [counter] < 7) { document.querySelector('h.txt').classList.toggle(t[counter - 1]); }
   if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) { document.querySelector('h.txt').classList.toggle(t[6]); }
   if ([counter] >= 1 && document.querySelector('h.txt').classList.contains('i1')) { document.querySelector('h.txt').classList.toggle(t[0]); }
   counter++;
+  // adjust fade timing, must also adjust changes on line 184 
+  setTimeout(document.querySelector('h.txt').classList.toggle('fade'), 3750);
   if (counter >= t.length) {
     counter = 0;
     // clearInterval(change); // uncomment this if you want to stop refreshing after one cycle

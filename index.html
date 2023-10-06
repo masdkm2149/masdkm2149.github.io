@@ -182,13 +182,13 @@ h::after {
     }
 }
 .fade { opacity: 0;}
-.i1::after { content: "Interactive Design"; }
-.i2::after { aontent: "User Interface Design (UI)"; }
-.i3::after { content: "User Experience Design (UX)"; }
-.i4::after { content: "Branding"; }
-.i5::after { content: "Graphic Design"; }
-.i6::after { content: "Motion Graphics"; }
-.i7::after { content: "Front-End Development"; }
+.i1::after { content: "Interactive Design"; opacity:1;}
+.i2::after { aontent: "User Interface Design (UI)"; opacity:1; }
+.i3::after { content: "User Experience Design (UX)"; opacity:1; }
+.i4::after { content: "Branding"; opacity:1; }
+.i5::after { content: "Graphic Design"; opacity:1; }
+.i6::after { content: "Motion Graphics"; opacity:1; }
+.i7::after { content: "Front-End Development"; opacity:1; }
   #view_project::after {
   content: "View Projects";
   position: absolute;
@@ -216,17 +216,19 @@ h::after {
 <a href="/Projects/" style="width: fit-content;border-radius: 48px;position: absolute;width: 100%;height: 100%;align-content: center;justify-content: center;display: flex;text-decoration: none;"><h class="txt" style="color: hsl(var(--txt_hue), var(--txt_saturation), var(--txt_brightness));text-align: center;flex-direction: column;display:flex;margin: auto;position: unset;font-size: 3em;font-family: sans-serif;transition: .5s ease;">Daniel Roswadowsky
   </h></a>
     <script>
-
+// set rotation timing
 var inst = setInterval(change, 4000);
+// set rotation classes
 var t = ["i1", "i2", "i3", "i4", "i5", "i6", "i7"];
 // document.querySelector('h.txt').classList.toggle(t[0]);  // to start with tagline
 var counter = 0;
-      
+// start text rotation
 function change() { 
-  console.log([counter])
+//  console.log([counter])  // for debug
   document.querySelector('h.txt').classList.add(t[counter]);
   if ([counter] > 0 && [counter] < 7) {
-      setInterval(document.querySelector('.'+t[counter - 1]).classList.toggle('fade'), 3500);
+    // set fade timing
+      setInterval(document.querySelector('.'+t[counter - 1]).classList.toggle('fade'), 3750);
       document.querySelector('h.txt').classList.toggle(t[counter - 1]);
   }
   if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) {setInterval(document.querySelector('.i1').classList.toggle('fade'), 3500);document.querySelector('.i7').classList.toggle('fade');document.querySelector('h.txt').classList.toggle(t[6]);}

@@ -204,15 +204,15 @@ h::after {
 // document.querySelector('h.txt').classList.toggle(t[0]);  // to start with tagline
 // set rotation timing
 setInterval(change, 4000);
-// adjust fade timing, must also adjust changes on line 184 
-setTimeout(setInterval(document.querySelector('h.txt').classList.remove('fadeinout'), 3750), 4000);
 // set rotation classes
 var t = ["i1", "i2", "i3", "i4", "i5", "i6", "i7"];
 // start
 var counter = 0;
 // start text rotation
 function change() { 
-//  console.log([counter])  // for debug
+  // adjust fade timing, must also adjust changes on line 184 
+  setInterval(document.querySelector('h.txt').classList.remove('fadeinout'), 3750);
+  //  console.log([counter])  // for debug
   // add classes
   document.querySelector('h.txt').classList.add(...['fade', 'fadeinout', t[counter]]);
   // clear previous text class

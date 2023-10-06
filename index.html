@@ -205,13 +205,13 @@ function change() {
 
   var t = ["i1", "i2", "i3", "i4", "i5", "i6", "i7"];
   var counter = 0; 
-  document.querySelector('h.txt').classList.toggle(t);
+  document.querySelector('h.txt').classList.toggle(t[counter]);
   counter++;
   if (counter >= t.length) {
     counter = 0;
     // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
   }  
-    document.querySelector('h.txt').classList.toggle(t);
+    document.querySelector('h.txt').classList.toggle(t[counter]);
 }
     </script>
 <script src="sketch.js"></script>	    

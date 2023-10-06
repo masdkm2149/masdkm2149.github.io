@@ -212,7 +212,7 @@ var counter = 0;
 function change() { 
   //  console.log([counter])  // for debug
   // add classes
-  document.querySelector('h.txt').classList.add(...['xx', 'fade', t[counter]]);
+  document.querySelector('h.txt').classList.add(...['fade', t[counter]]);
   // adjust fade timing, must also adjust changes on line 184 
   setTimeout(function() { document.querySelector('h.txt').classList.toggle('fade')}, 3500); 
   // clear previous text class

@@ -208,7 +208,7 @@ function change() {
   if ([counter] > 0 && [counter] < 6) {
   document.querySelector('h.txt').classList.toggle(t[counter - 1]);
   }
-  else if ([counter] == 6) { document.querySelector('h.txt').classList.toggle(t[counter]); }
+  else if ([counter] >= 6) { document.querySelector('h.txt').classList.remove(t[6]); }
   counter++;
   if (counter >= t.length) {
     counter = 0;

@@ -225,13 +225,12 @@ var counter = 0;
 // start text rotation
 function change() { 
 //  console.log([counter])  // for debug
-  document.querySelector('h.txt').classList.add(t[counter]);
+  document.querySelector('h.txt').classList.add(t[counter]+'fade');
   if ([counter] > 0 && [counter] < 7) {
-      document.querySelector('.'+t[counter - 1]).classList.toggle('fade');
     setInterval(document.querySelector('.'+t[counter - 1]).classList.toggle('fade'), 3750);
       document.querySelector('h.txt').classList.toggle(t[counter - 1]);
   }
-  if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) {setInterval(document.querySelector('.i1').classList.toggle('fade'), 3750);document.querySelector('.i7').classList.toggle('fade');document.querySelector('h.txt').classList.toggle(t[6]);}
+  if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) {setInterval(document.querySelector('.i1').classList.toggle('fade'), 3750);document.querySelector('h.txt').classList.toggle(t[6]);}
   if ([counter] >= 1 && document.querySelector('h.txt').classList.contains('i1')) {setInterval(document.querySelector('.i1').classList.toggle('fade'), 3750);document.querySelector('h.txt').classList.toggle(t[0]);}
   counter++;
   if (counter >= t.length) {

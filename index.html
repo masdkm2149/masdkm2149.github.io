@@ -221,11 +221,12 @@ var inst = setInterval(change, 4000);
 var t = ["i1", "i2", "i3", "i4", "i5", "i6", "i7"];
 // document.querySelector('h.txt').classList.toggle(t[0]);  // to start with tagline
 var counter = 0;
+      
 function change() { 
   console.log([counter])
   document.querySelector('h.txt').classList.add(t[counter]);
   if ([counter] > 0 && [counter] < 7) {
-      document.querySelector('.'+t[counter - 1]).classList.toggle('fade');
+      setInterval(document.querySelector('.'+t[counter - 1]).classList.toggle('fade'), 3500);
       document.querySelector('h.txt').classList.toggle(t[counter - 1]);
   }
   if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) {document.querySelector('.i7').classList.toggle('fade');document.querySelector('h.txt').classList.toggle(t[6]);}

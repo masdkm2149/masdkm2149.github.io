@@ -228,8 +228,8 @@ function change() {
       document.querySelector('.'+t[counter - 1]).classList.toggle('fade');
       document.querySelector('h.txt').classList.toggle(t[counter - 1]);
   }
-  if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) {document.querySelector('h.txt.i7').classList.toggle('fade');document.querySelector('h.txt').classList.toggle(t[6]);}
-  if ([counter] >= 1 && document.querySelector('h.txt').classList.contains('i1')) {document.querySelector('h.txt.i1').classList.toggle('fade');document.querySelector('h.txt').classList.toggle(t[0]);}
+  if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) {document.querySelector('.i7').classList.toggle('fade');document.querySelector('h.txt').classList.toggle(t[6]);}
+  if ([counter] >= 1 && document.querySelector('h.txt').classList.contains('i1')) {document.querySelector('.i1').classList.toggle('fade');document.querySelector('h.txt').classList.toggle(t[0]);}
   counter++;
   if (counter >= t.length) {
     counter = 0;

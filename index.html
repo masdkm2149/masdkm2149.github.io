@@ -111,7 +111,7 @@ setTimeout(addTrans, 500);
   display: none;
 } 
 
-  h{user-select: none; pointer-events:none; opacity:1;}
+  h{user-select: none; pointer-events:none; opacity:1 !important;}
 .dotcursor:active {
   width: 110px;
   height: 110px;
@@ -181,14 +181,14 @@ h::after {
         opacity: 0;
     }
 }
-.fade { opacity: 0!important;}
-.i1::after { animation: fade 4.0s ease-in-out infinite;animation-play-state: initial;content: "Interactive Design"; }
-.i2::after { animation: fade 4.0s ease-in-out infinite;animation-play-state: initial;content: "User Interface Design (UI)"; }
-.i3::after { animation: fade 4.0s ease-in-out infinite;animation-play-state: initial;content: "User Experience Design (UX)"; }
-.i4::after { animation: fade 4.0s ease-in-out infinite;animation-play-state: initial;content: "Branding"; }
-.i5::after { animation: fade 4.0s ease-in-out infinite;animation-play-state: initial;content: "Graphic Design"; }
-.i6::after { animation: fade 4.0s ease-in-out infinite;animation-play-state: initial;content: "Motion Graphics"; }
-.i7::after { animation: fade 4.0s ease-in-out infinite;animation-play-state: initial;content: "Front-End Development"; }
+.fade { opacity: 0;}
+.i1::after { content: "Interactive Design"; }
+.i2::after { aontent: "User Interface Design (UI)"; }
+.i3::after { content: "User Experience Design (UX)"; }
+.i4::after { content: "Branding"; }
+.i5::after { content: "Graphic Design"; }
+.i6::after { content: "Motion Graphics"; }
+.i7::after { content: "Front-End Development"; }
   #view_project::after {
   content: "View Projects";
   position: absolute;

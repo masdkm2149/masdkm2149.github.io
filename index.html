@@ -181,7 +181,7 @@ h::after {
         opacity: 0;
     }
 }
-
+.fade { opacity: 0!important;}
 .i1::after { animation: fade 4.0s ease-in-out infinite;animation-play-state: initial;content: "Interactive Design"; }
 .i2::after { animation: fade 4.0s ease-in-out infinite;animation-play-state: initial;content: "User Interface Design (UI)"; }
 .i3::after { animation: fade 4.0s ease-in-out infinite;animation-play-state: initial;content: "User Experience Design (UX)"; }
@@ -226,9 +226,12 @@ function change() {
   document.querySelector('h.txt').classList.add(t[counter]);
   if ([counter] > 0 && [counter] < 7) {
   document.querySelector('h.txt').classList.toggle(t[counter - 1]);
+      document.querySelector('h.txt.'+t[counter - 1]).classList.toggle(fade);
   }
   if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) { document.querySelector('h.txt').classList.toggle(t[6]); }
+  if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) { document.querySelector('h.txt.i7').classList.toggle(fade); }
   if ([counter] >= 1 && document.querySelector('h.txt').classList.contains('i1')) {document.querySelector('h.txt').classList.toggle(t[0]);}
+  if ([counter] >= 1 && document.querySelector('h.txt').classList.contains('i1')) {document.querySelector('h.txt.i1').classList.toggle(fade);}
   counter++;
   if (counter >= t.length) {
     counter = 0;

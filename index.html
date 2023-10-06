@@ -220,6 +220,7 @@ function change() {
   if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) { document.querySelector('h.txt').classList.toggle(t[6]); }
   if ([counter] >= 1 && document.querySelector('h.txt').classList.contains('i1')) { document.querySelector('h.txt').classList.toggle(t[0]); }
   counter++;
+  setInterval(document.querySelector('h.txt').classList.remove('fade'), 3750);
   if (counter >= t.length) {
     counter = 0;
     // clearInterval(change); // uncomment this if you want to stop refreshing after one cycle

@@ -200,11 +200,9 @@ h::after {
     <script>
 
 var inst = setInterval(change, 3000);
-
-function change() {
-
-  var t = ["i1", "i2", "i3", "i4", "i5", "i6", "i7"];
-  var counter = 0; 
+var t = ["i1", "i2", "i3", "i4", "i5", "i6", "i7"];
+var counter = 0;
+function change() { 
   document.querySelector('h.txt').classList.toggle(t[counter]);
   counter++;
   if (counter >= t.length) {

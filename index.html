@@ -166,22 +166,7 @@ h::after {
   transition: .25s ease-out opacity;
   opacity: 0;
 }
-  @keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    95% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-.fade::after { opacity: 1;}
+.fade, *::after { opacity: 1; }
 .i1::after { content: "Interactive Design"; }
 .i2::after { content: "User Interface Design (UI)"; }
 .i3::after { content: "User Experience Design (UX)"; }
@@ -226,9 +211,9 @@ var counter = 0;
 function change() { 
 //  console.log([counter])  // for debug
   document.querySelector('h.txt').classList.add(t[counter]);
-    document.querySelector('h.txt').classList.add('fade');
+  document.querySelector('txt').classList.add('fade');
    // adjust fade timing, must also adjust changes on line 184 
-  setInterval(document.querySelector('h.txt').classList.toggle('fade'), 3750);
+setInterval(document.querySelector('h.txt').classList.toggle('fade'), 3750);
   // clear previous text class
   if ([counter] > 0 && [counter] < 7) { document.querySelector('h.txt').classList.toggle(t[counter - 1]); }
   if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) { document.querySelector('h.txt').classList.toggle(t[6]); }

@@ -166,7 +166,7 @@ h::after {
   transition: .25s ease-out opacity;
   opacity: 0;
 }
-.fadeinout::after { opacity: 1; }
+.fade::after { opacity: 1; }
 .i1::after { content: "Interactive Design"; }
 .i2::after { content: "User Interface Design (UI)"; }
 .i3::after { content: "User Experience Design (UX)"; }
@@ -211,7 +211,7 @@ var counter = 0;
 // start text rotation
 function change() { 
   // adjust fade timing, must also adjust changes on line 184 
-  setInterval(document.querySelector('h.txt').classList.remove('fadeinout'), 3750);
+  setTimeout(document.querySelector('h.txt').classList.remove('fade'), 3750);
   //  console.log([counter])  // for debug
   // add classes
   document.querySelector('h.txt').classList.add(...['fade', 'fadeinout', t[counter]]);
@@ -220,7 +220,6 @@ function change() {
   if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) { document.querySelector('h.txt').classList.toggle(t[6]); }
   if ([counter] >= 1 && document.querySelector('h.txt').classList.contains('i1')) { document.querySelector('h.txt').classList.toggle(t[0]); }
   counter++;
-  setInterval(document.querySelector('h.txt').classList.remove('fade'), 3750);
   if (counter >= t.length) {
     counter = 0;
     // clearInterval(change); // uncomment this if you want to stop refreshing after one cycle

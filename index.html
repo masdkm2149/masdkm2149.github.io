@@ -166,8 +166,8 @@ h::after {
   transition: .5s ease-in-out opacity;
   opacity: 0;
 }
-a * { transition: .5s ease-in-out height; }
-.fade::after { opacity: 1; transition: .5s ease-in-out opacity; }
+a * { transition: .5s ease-in-out height, .5s ease-in-out opacity; }
+.fade::after { opacity: 1; }
 .i1::after { content: "Interactive Design"; }
 .i2::after { content: "User Interface Design (UI)"; }
 .i3::after { content: "User Experience Design (UX)"; }

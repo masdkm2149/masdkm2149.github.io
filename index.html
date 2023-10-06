@@ -163,7 +163,7 @@ h::after {
   width: max-content;
   display: flex;
   font-size: .5em;
-  transition: .25s ease-out opacity;
+  transition: .5s ease-in-out opacity;
   opacity: 0;
 }
 .fade::after { opacity: 1; }
@@ -214,7 +214,7 @@ function change() {
   // add classes
   document.querySelector('h.txt').classList.add(...['xx', 'fade', t[counter]]);
   // adjust fade timing, must also adjust changes on line 184 
-  setTimeout(function() { document.querySelector('h.txt').classList.toggle('fade')}, 3750); 
+  setTimeout(function() { document.querySelector('h.txt').classList.toggle('fade')}, 3500); 
   // clear previous text class
   if ([counter] > 0 && [counter] < 7) { document.querySelector('h.txt').classList.toggle(t[counter - 1]); }
   if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) { document.querySelector('h.txt').classList.toggle(t[6]); }

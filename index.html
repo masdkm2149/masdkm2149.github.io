@@ -208,12 +208,13 @@ setInterval(change, 4000);
 // fade start
 
 // fade end
-setTimeout(function() { setInterval(fading, 3500); }, 4000);
+setTimeout(fading2, 4000);
 // set rotational classes
 var t = ["i1", "i2", "i3", "i4", "i5", "i6", "i7"];
 // start from 0
 var counter = 0;
 // start text rotation
+function fading2 () { setInterval(fading, 3500); }
 function fading() { document.querySelector('h.txt').classList.toggle('fade'); } 
 function change() { 
   //  console.log([counter])  // for debug

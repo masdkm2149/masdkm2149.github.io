@@ -201,15 +201,16 @@ h::after {
 
 var inst = setInterval(change, 3000);
 var t = ["i1", "i2", "i3", "i4", "i5", "i6", "i7"];
+// document.querySelector('h.txt').classList.toggle(t[0]);  // to start with tagline
 var counter = 0;
 function change() { 
-  document.querySelector('h.txt').classList.toggle(t[counter]);
+  document.querySelector('h.txt').classList.add(t[counter]);
+  document.querySelector('h.txt').classList.toggle(t[counter - 1]);
   counter++;
   if (counter >= t.length) {
     counter = 0;
     // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
   }  
-    document.querySelector('h.txt').classList.toggle(t[counter]);
 }
     </script>
 <script src="sketch.js"></script>	    

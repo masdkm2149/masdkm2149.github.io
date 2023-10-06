@@ -206,9 +206,9 @@ h::after {
 setInterval(change, 4000);
 // adjust fade timing, must also adjust changes in stylesheet transitions
 // fade start
-setInterval(function() { document.querySelector('h.txt').classList.toggle('fade')}, 3500);
+setTimeout(function() { setInterval(function() { document.querySelector('h.txt').classList.toggle('fade')}, 3500); }, 500);
 // fade end
-setInterval(function() { document.querySelector('h.txt').classList.toggle('fade')}, 4000);
+setTimeout(function() {setInterval(function() { document.querySelector('h.txt').classList.toggle('fade')}, 4000); }, 500);
 // set rotational classes
 var t = ["i1", "i2", "i3", "i4", "i5", "i6", "i7"];
 // start from 0

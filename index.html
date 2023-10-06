@@ -167,13 +167,27 @@ h::after {
   opacity: 0;
   margin-bottom:-10px;
 }
-.i1::after { opacity: 1; margin-bottom:unset; content: "Interactive Design"; }
-.i2::after { opacity: 1; margin-bottom:unset;content: "User Interface Design (UI)"; }
-.i3::after { opacity: 1; margin-bottom:unset;content: "User Experience Design (UX)"; }
-.i4::after { opacity: 1; margin-bottom:unset;content: "Branding"; }
-.i5::after { opacity: 1; margin-bottom:unset;content: "Graphic Design"; }
-.i6::after { opacity: 1; margin-bottom:unset;content: "Motion Graphics"; }
-.i7::after { opacity: 1; margin-bottom:unset;content: "Front-End Development"; }
+  @keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.i1::after { animation: fade 4.75s ease-out;opacity: 1; margin-bottom:unset; content: "Interactive Design"; }
+.i2::after { animation: fade 4.75s ease-out;opacity: 1; margin-bottom:unset;content: "User Interface Design (UI)"; }
+.i3::after { animation: fade 4.75s ease-out;opacity: 1; margin-bottom:unset;content: "User Experience Design (UX)"; }
+.i4::after { animation: fade 4.75s ease-out;opacity: 1; margin-bottom:unset;content: "Branding"; }
+.i5::after { animation: fade 4.75s ease-out;opacity: 1; margin-bottom:unset;content: "Graphic Design"; }
+.i6::after { animation: fade 4.75s ease-out;opacity: 1; margin-bottom:unset;content: "Motion Graphics"; }
+.i7::after { animation: fade 4.75s ease-out;opacity: 1; margin-bottom:unset;content: "Front-End Development"; }
   #view_project::after {
   content: "View Projects";
   position: absolute;

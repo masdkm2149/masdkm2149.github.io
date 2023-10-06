@@ -208,8 +208,7 @@ setInterval(change, 4000);
 // fade start
 
 // fade end
-setTimeout(function() {setInterval(function() {  document.querySelector('h.txt').classList.toggle('fade')}, 3500); }, 500);
-setInterval(function() { document.querySelector('h.txt').classList.toggle('fade')}, 4000); 
+setTimeout(function() {setInterval(function() {  document.querySelector('h.txt').classList.toggle('fade')}, 3500); }, 4000);
 // set rotational classes
 var t = ["i1", "i2", "i3", "i4", "i5", "i6", "i7"];
 // start from 0
@@ -218,6 +217,7 @@ var counter = 0;
 function change() { 
   //  console.log([counter])  // for debug
   // add classes
+  document.querySelector('h.txt').classList.toggle('fade')
   document.querySelector('h.txt').classList.add(t[counter]);
   // clear previous text class
   if ([counter] > 0 && [counter] < 7) { document.querySelector('h.txt').classList.toggle(t[counter - 1]); }

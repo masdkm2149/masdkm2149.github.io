@@ -163,8 +163,14 @@ h::after {
   width: max-content;
   display: flex;
   font-size: .5em;
-  content: "Interactive Design";
 }
+.i1 { content: "Interactive Design"; }
+.i2 { content: "User Interface Design (UI)"; }
+.i3 { content: "User Experience Design (UX)"; }
+.i4 { content: "Branding"; }
+.i5 { content: "Graphic Design"; }
+.i6 { content: "Motion Geraphics"; }
+.i7 { content: "Front-End Development"; }
   #view_project::after {
   content: "View Projects";
   position: absolute;
@@ -197,17 +203,15 @@ var inst = setInterval(change, 3000);
 
 function change() {
 
-  var t = ["User Interface Design (UI)", "User Experience Design (UX)", "Branding", "Graphic Design", "Motion Geraphics", "Front-End Development"];
-  var counter = 0;
-  document.querySelector(':root, h::after').style.setProperty('--txt',  t[counter]);  
-  var textrotation = JSON.stringify(getComputedStyle(document.querySelector(':root')).getPropertyValue('--txt'));
+  var t = ["i1", "i2", "i3", "i4", "i5", "i6", "i7"];
+  var counter = 0; 
+  document.querySelector('h.txt').classList.toggle(t);
   counter++;
-  console.log(textrotation);  // for debug
-  document.querySelector('h.txt::after').style.setProperty("content", textrotation);
   if (counter >= t.length) {
     counter = 0;
     // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
   }  
+    document.querySelector('h.txt').classList.toggle(t);
 }
     </script>
 <script src="sketch.js"></script>	    

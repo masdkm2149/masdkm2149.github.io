@@ -1,15 +1,4 @@
-function setx() {
-             let r1 = (1,360)
-        let r2 = (20,100)
-        let r3 = (10,100)        
-        var rr1 = random(r1)
-        var rr2 = random(r2)
-        var rr3 = random(r3)
-$('head').append("<meta name='theme-color' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");     
-}
-setx();
-
-      function reveal() { 
+function reveal() { 
      document.getElementsByClassName('dotcursor')[0].classList.toggle("show");
 }
 
@@ -93,6 +82,17 @@ function setup() {
         document.querySelector(':root').style.setProperty('--txt_hue', huee);
       }  
 }
+
+function setx() {
+        let r1 = (1,360)
+        let r2 = (20,100)
+        let r3 = (10,100)        
+        var rr1 = random(r1)
+        var rr2 = random(r2)
+        var rr3 = random(r3)
+     $('head').append("<meta name='theme-color' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");     
+}
+setx();
 
 function draw() {
      document.querySelector(':root').style.setProperty('--mousex', mouseX + 'px');

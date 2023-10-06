@@ -213,10 +213,9 @@ function change() {
   //  console.log([counter])  // for debug
   // add classes
   document.querySelector('h.txt').classList.add(t[counter]);
-  document.querySelector('h.txt').classList.toggle('fade');
   // adjust fade timing, must also adjust changes in stylesheet transitions
-  setInterval(function(){ document.querySelector('h.txt').classList.toggle('fade'); }, 500);
-  setInterval(function(){ document.querySelector('h.txt').classList.toggle('fade'); }, 4500);
+  setTimeout(function(){ document.querySelector('h.txt').classList.toggle('fade'); }, 500);
+  setTimeout(function(){ document.querySelector('h.txt').classList.toggle('fade'); }, 4500);
   // clear previous text class
   if ([counter] > 0 && [counter] < 7) { document.querySelector('h.txt').classList.toggle(t[counter - 1]); }
   if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) { document.querySelector('h.txt').classList.toggle(t[6]); }

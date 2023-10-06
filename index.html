@@ -181,7 +181,7 @@ h::after {
         opacity: 0;
     }
 }
-.fade { opacity: 0;}
+.fade { opacity: 1;}
 .i1::after { content: "Interactive Design"; opacity:1;}
 .i2::after { aontent: "User Interface Design (UI)"; opacity:1; }
 .i3::after { content: "User Experience Design (UX)"; opacity:1; }
@@ -227,12 +227,12 @@ function change() {
 //  console.log([counter])  // for debug
   document.querySelector('h.txt').classList.add(t[counter]);
   if ([counter] > 0 && [counter] < 7) {
-    // set fade timing
-      setInterval(document.querySelector('.'+t[counter - 1]).classList.toggle('fade'), 3750);
+      document.querySelector('.'+t[counter - 1]).classList.toggle('fade');
+    setInterval(document.querySelector('.'+t[counter - 1]).classList.toggle('fade'), 3750);
       document.querySelector('h.txt').classList.toggle(t[counter - 1]);
   }
-  if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) {setInterval(document.querySelector('.i1').classList.toggle('fade'), 3500);document.querySelector('.i7').classList.toggle('fade');document.querySelector('h.txt').classList.toggle(t[6]);}
-  if ([counter] >= 1 && document.querySelector('h.txt').classList.contains('i1')) {setInterval(document.querySelector('.i1').classList.toggle('fade'), 3500);document.querySelector('h.txt').classList.toggle(t[0]);}
+  if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) {setInterval(document.querySelector('.i1').classList.toggle('fade'), 3750);document.querySelector('.i7').classList.toggle('fade');document.querySelector('h.txt').classList.toggle(t[6]);}
+  if ([counter] >= 1 && document.querySelector('h.txt').classList.contains('i1')) {setInterval(document.querySelector('.i1').classList.toggle('fade'), 3750);document.querySelector('h.txt').classList.toggle(t[0]);}
   counter++;
   if (counter >= t.length) {
     counter = 0;

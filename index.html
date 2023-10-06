@@ -204,17 +204,20 @@ h::after {
 // document.querySelector('h.txt').classList.toggle(t[0]);  // to start with tagline
 // set rotation timing
 setInterval(change, 4000);
-// adjust fade timing, must also adjust changes on line 184 
-setTimeout(function() { setInterval(function() { document.querySelector('h.txt').classList.toggle('fade')}, 3500); }, 500);
-// set rotation classes
+// adjust fade timing, must also adjust changes in stylesheet transitions
+// fade start
+setInterval(function() { document.querySelector('h.txt').classList.toggle('fade')}, 3500);
+// fade end
+setInterval(function() { document.querySelector('h.txt').classList.toggle('fade')}, 4000);
+// set rotational classes
 var t = ["i1", "i2", "i3", "i4", "i5", "i6", "i7"];
-// start
+// start from 0
 var counter = 0;
 // start text rotation
 function change() { 
   //  console.log([counter])  // for debug
   // add classes
-  document.querySelector('h.txt').classList.add(...['fade', t[counter]]);
+  document.querySelector('h.txt').classList.add(t[counter]);
   // clear previous text class
   if ([counter] > 0 && [counter] < 7) { document.querySelector('h.txt').classList.toggle(t[counter - 1]); }
   if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) { document.querySelector('h.txt').classList.toggle(t[6]); }

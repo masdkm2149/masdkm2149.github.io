@@ -111,7 +111,7 @@ setTimeout(addTrans, 500);
   display: none;
 } 
 
-  h{user-select: none; pointer-events:none;}
+  h{user-select: none; pointer-events:none; opacity:1;}
 .dotcursor:active {
   width: 110px;
   height: 110px;
@@ -225,11 +225,11 @@ function change() {
   console.log([counter])
   document.querySelector('h.txt').classList.add(t[counter]);
   if ([counter] > 0 && [counter] < 7) {
-      document.querySelector('.'+t[counter - 1]).classList.toggle('fade');
+      document.querySelector('.'+t[counter - 1]+'::after').classList.toggle('fade');
       document.querySelector('h.txt').classList.toggle(t[counter - 1]);
   }
-  if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) {document.querySelector('.i7').classList.toggle('fade');document.querySelector('h.txt').classList.toggle(t[6]);}
-  if ([counter] >= 1 && document.querySelector('h.txt').classList.contains('i1')) {document.querySelector('.i1').classList.toggle('fade');document.querySelector('h.txt').classList.toggle(t[0]);}
+  if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) {document.querySelector('.i7::after').classList.toggle('fade');document.querySelector('h.txt').classList.toggle(t[6]);}
+  if ([counter] >= 1 && document.querySelector('h.txt').classList.contains('i1')) {document.querySelector('.i1::after').classList.toggle('fade');document.querySelector('h.txt').classList.toggle(t[0]);}
   counter++;
   if (counter >= t.length) {
     counter = 0;

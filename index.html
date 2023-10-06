@@ -201,13 +201,14 @@ h::after {
 <a href="/Projects/" style="width: fit-content;border-radius: 48px;position: absolute;width: 100%;height: 100%;align-content: center;justify-content: center;display: flex;text-decoration: none;"><h class="txt" style="color: hsl(var(--txt_hue), var(--txt_saturation), var(--txt_brightness));text-align: center;flex-direction: column;display:flex;margin: auto;position: unset;font-size: 3em;font-family: sans-serif;transition: .5s ease;">Daniel Roswadowsky
   </h></a>
     <script>
+// document.querySelector('h.txt').classList.toggle(t[0]);  // to start with tagline
 // set rotation timing
 setInterval(change, 4000);
 // adjust fade timing, must also adjust changes on line 184 
 setTimeout(setInterval(document.querySelector('h.txt').classList.remove('fadeinout'), 3750); 4000););
 // set rotation classes
 var t = ["i1", "i2", "i3", "i4", "i5", "i6", "i7"];
-// document.querySelector('h.txt').classList.toggle(t[0]);  // to start with tagline
+// start
 var counter = 0;
 // start text rotation
 function change() { 

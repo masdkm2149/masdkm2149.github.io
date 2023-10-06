@@ -225,7 +225,7 @@ var counter = 0;
 // start text rotation
 function change() { 
 //  console.log([counter])  // for debug
-  document.querySelector('h.txt').classList.add(t[counter]+' fade');
+  document.querySelector('h.txt').classList.add(t[counter],'fade');
   if ([counter] > 0 && [counter] < 7) {
     setInterval(document.querySelector('.'+t[counter - 1]).classList.toggle('fade'), 3750);
       document.querySelector('h.txt').classList.toggle(t[counter - 1]);

@@ -214,11 +214,8 @@ function change() {
   // add classes
   document.querySelector('h.txt').classList.add(...['fade', t[counter]]);
   // adjust fade timing, must also adjust changes on line 184 
-  setTimeout(function() { document.querySelector('h.txt').classList.toggle('fade')}, 3500); 
+  setTimeout(function() { document.querySelector('h.txt').classList.toggle('fade');  if ([counter] > 0 && [counter] < 7) { document.querySelector('h.txt').classList.toggle(t[counter - 1]); } if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) { document.querySelector('h.txt').classList.toggle(t[6]); } if ([counter] >= 1 && document.querySelector('h.txt').classList.contains('i1')) { document.querySelector('h.txt').classList.toggle(t[0]); }  }, 3500); 
   // clear previous text class
-  if ([counter] > 0 && [counter] < 7) { document.querySelector('h.txt').classList.toggle(t[counter - 1]); }
-  if ([counter] < 1 && document.querySelector('h.txt').classList.contains('i7')) { document.querySelector('h.txt').classList.toggle(t[6]); }
-  if ([counter] >= 1 && document.querySelector('h.txt').classList.contains('i1')) { document.querySelector('h.txt').classList.toggle(t[0]); }
   counter++;
   if (counter >= t.length) {
     counter = 0;

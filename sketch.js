@@ -291,7 +291,6 @@ function draw() {
 //      text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
   //    textSize(18);
   //  text("Interactive Design", windowWidth/3, windowHeight/2 + 50);
-      } 
       var icon_bg_hue = document.querySelector(':root').style.getPropertyValue('--bg_hue');
       var icon_bg_luma = document.querySelector(':root').style.getPropertyValue('--bg_brightness');
       var icon_bg_sat = document.querySelector(':root').style.getPropertyValue('--bg_saturation');
@@ -300,7 +299,7 @@ function draw() {
       var icon_fg_sat = document.querySelector(':root').style.getPropertyValue('--txt_saturation');
       $('head').append("<link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='10' y='10' width='160' height='160' style='fill:hsl("+ icon_bg_hue + "," + icon_bg_sat + "," + icon_bg_luma + ");'%3E%3C/rect%3E%3Ccircle cx='90' cy='90' r='45' style='fill:hsl("+ icon_fg_hue + "," + icon_fg_sat + "," + icon_fg_luma + ");mix-blend-mode: difference;'%3E%3C/circle%3E%3C/svg%3E\" />");
 
-    else {
+      } else {
         colorMode(HSB);
         let r1 = (1,360)
         let r2 = (20,100)

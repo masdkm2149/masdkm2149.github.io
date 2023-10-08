@@ -212,8 +212,8 @@ h * { transition: .5s ease-in-out height, .5s ease-in-out opacity; }
 // set rotational classes
 var t = ["i1", "i2", "i3", "i4", "i5", "i6", "i7"];
 // start from 0
-var counter = 0;      
-document.querySelector('h.txt').classList.toggle(t[0]); setTimeout(function(){ document.querySelector('h.txt').classList.toggle('fade'); }, 1000);  // to start with tagline
+var counter = 1;      
+document.querySelector('h.txt').classList.toggle(t[0]); setTimeout(function(){ document.querySelector('h.txt').classList.toggle('fade'); }, 1000); setTimeout(function(){ document.querySelector('h.txt').classList.toggle('fade'); }, 5000);  // to start with tagline
 // set rotation timing
 setInterval(change, 5000);
 // start text rotation 

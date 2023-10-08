@@ -4,61 +4,21 @@ function reveal() {
 
 function setup() {
 function setx() {
-        let r1 = (1,360)
-        let r2 = (20,100)
-        let r3 = (10,100)        
-        var rr1 = random(r1)
-        var rr2 = random(r2)
-        var rr3 = random(r3)
+     let r1 = (1,360)
+     let r2 = (20,100)
+     let r3 = (10,100)        
+     var rr1 = random(r1)
+     var rr2 = random(r2)
+     var rr3 = random(r3)
+     colorMode(HSB);
      $('head').append("<meta name='theme-color' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");     
-}
-setx();
-     
-     const rx = (0.8, 2)
-        colorMode(HSB);
-          let r1 = (1,360)
-        let r2 = (20,100)
-        let r3 = (10,100)        
-        var rr1 = random(r1)
-        var rr2 = random(r2)
-        var rr3 = random(r3)
+     }
+     setx();
+            const rx = (0.8, 2)
             document.querySelector(':root').style.setProperty('--bg_hue', rr1);
             document.querySelector(':root').style.setProperty('--bg_brightness', rr2 + '%');
             document.querySelector(':root').style.setProperty('--bg_saturation', rr3 + '%');
-    if (rr3 > 50 && rr3 < 70) {
-            xo = random(1, rr3*0.85)
-        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
-    } 
-    else if (rr3 > 70) {
-            xo = random(1, rr3*0.5)
-        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
-    }       
-    else if (rr3 < 50 && rr3 > 30) {
-            xo = random(rr3*1.15, 100)
-        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
-    }       
-    else if (rr3 < 30) {
-            xo = random(rr3*1.5, 100)
-        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
-    }       
-   
-   if (rr2 > 50 && rr2 < 70) {
-            xy = random(1, rr2*0.7)
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-    }       
-   else if (rr2 > 70) {
-            xy = random(1, rr2*0.5)
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-    }       
-    else if (rr2 < 50 && rr2 > 30) {
-            xy = random(rr2*1.3, 100)
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-    }      
-    else if (rr2 < 30) {
-            xy = random(rr2*1.5, 100)
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-    }      
-   
+       
   //text hue algorithm
    if  (rr1 < 45) {
                     huee = random(90, 360)
@@ -91,8 +51,48 @@ setx();
          else if (rr1 < 360 && rr1 > 315) {
             huee = random(45, 315)
         document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }  
-           var icon_bg_hue = document.querySelector(':root').style.getPropertyValue('--bg_hue');
+      }    
+   //txt brightness algorithm
+   if (rr2 > 50 && rr2 < 70) {
+            xy = random(1, rr2*0.7)
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+    }       
+   else if (rr2 > 70) {
+            xy = random(1, rr2*0.5)
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+    }       
+    else if (rr2 < 50 && rr2 > 30) {
+         if (rr3 > 60 && rr1 < 100) {
+               xy = random(rr2*0.7, 100)
+               document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+         }
+         else {
+            xy = random(rr2*1.3, 100)
+            document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+         }      
+    }   
+    else if (rr2 < 30) {
+            xy = random(rr2*1.5, 100)
+        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+    }      
+     //text saturation algorithm
+     if (rr3 > 50 && rr3 < 70) {
+            xo = random(1, rr3*0.85)
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
+    } 
+    else if (rr3 > 70) {
+            xo = random(1, rr3*0.5)
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
+    }       
+    else if (rr3 < 50 && rr3 > 30) {
+            xo = random(rr3*1.15, 100)
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
+    }       
+    else if (rr3 < 30) {
+            xo = random(rr3*1.5, 100)
+        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
+    }     
+      var icon_bg_hue = document.querySelector(':root').style.getPropertyValue('--bg_hue');
       var icon_bg_luma = document.querySelector(':root').style.getPropertyValue('--bg_brightness');
       var icon_bg_sat = document.querySelector(':root').style.getPropertyValue('--bg_saturation');
       var icon_fg_hue = document.querySelector(':root').style.getPropertyValue('--txt_hue');
@@ -100,8 +100,11 @@ setx();
       var icon_fg_sat = document.querySelector(':root').style.getPropertyValue('--txt_saturation');
       //$('head').append("<link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='10' y='10' width='160' height='160' style='fill:hsl("+ icon_bg_hue + "," + icon_bg_sat + "," + icon_bg_luma + ");'%3E%3C/rect%3E%3Ccircle cx='90' cy='90' r='45' style='fill:hsl("+ icon_fg_hue + "," + icon_fg_sat + "," + icon_fg_luma + ");mix-blend-mode: difference;'%3E%3C/circle%3E%3C/svg%3E\" />");
       var icon_href = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='10' y='10' width='160' height='160' style='transition: all.5s ease-out; fill:hsl("+ icon_bg_hue + "," + icon_bg_sat + "," + icon_bg_luma + ");'%3E%3C/rect%3E%3Ccircle cx='90' cy='90' r='45' style='fill:hsl("+ icon_fg_hue + "," + icon_fg_sat + "," + icon_fg_luma + ");transition: all .4s ease-out;mix-blend-mode: difference;'%3E%3C/circle%3E%3C/svg%3E"
-      $('head').append("<link rel=\"icon\" type=\"image/svg+xml\" href=\""+icon_href+"\" />");
-}
+ if ($("link[rel='icon']")) { $("link[rel='icon']").attr("href", icon_href); }
+ else {
+     $('head').append("<link rel=\"icon\" type=\"image/svg+xml\" href=\""+icon_href+"\" />");
+ }
+ }
 
 function draw() {
      document.querySelector(':root').style.setProperty('--mousex', mouseX + 'px');
@@ -110,302 +113,19 @@ function draw() {
   function windowResized() {
 //resizeCanvas(windowWidth + 40, windowHeight + 40);
      clear();
-           const rx = (0.8, 2)
-        colorMode(HSB);
-          let r1 = (1,360)
-        let r2 = (20,100)
-        let r3 = (10,100)        
-        var rr1 = random(r1)
-        var rr2 = random(r2)
-        var rr3 = random(r3)
-        var rr = random(rx)
              $('meta[name=theme-color]').remove();
              $('head').append("<meta name='theme-color' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");
              $('meta[name=apple-mobile-web-app-status-bar-style]').remove();
        $('head').append("<meta name='apple-mobile-web-app-status-bar-style' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");
-        //background(rr1, rr2, rr3);
-                  document.querySelector(':root').style.setProperty('--bg_hue', rr1);
-            document.querySelector(':root').style.setProperty('--bg_brightness', rr2 + '%');
-            document.querySelector(':root').style.setProperty('--bg_saturation', rr3 + '%');
-      textSize(40);
-    if (rr3 > 50 && rr3 < 70) {
-            xo = random(1, rr3*0.85)
-        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
-    } 
-    else if (rr3 > 70) {
-            xo = random(1, rr3*0.5)
-        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
-    }       
-    else if (rr3 < 50 && rr3 > 30) {
-            xo = random(rr3*1.15, 100)
-        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
-    }       
-    else if (rr3 < 30) {
-            xo = random(rr3*1.5, 100)
-        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
-    }       
-         
-   
-   if (rr2 > 50 && rr2 < 70) {
-            xy = random(1, rr2*0.7)
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-    }       
-   else if (rr2 > 70) {
-            xy = random(1, rr2*0.5)
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-    }       
-    else if (rr2 < 50 && rr2 > 30) {
-            xy = random(rr2*1.3, 100)
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-    }      
-    else if (rr2 < 30) {
-            xy = random(rr2*1.5, 100)
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-    }       
-   
-   //text hue algorithm
-   if  (rr1 < 45) {
-                    huee = random(90, 360)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-     }
-  else if (rr1 > 90 && rr1 > 45) {
-            huee = random(0, 45)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }
-   else if (rr1 > 135 && rr1 > 90) {
-            huee = random(0, 90)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }
-    else if (rr1 > 180 && rr1 > 135) {
-            huee = random(0, 135)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }
-    else if (rr1 > 225 && rr1 > 180) {
-            huee = random(0, 180)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }
-         else if (rr1 > 270 && rr1 > 225) {
-            huee = random(0, 225)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }
-         else if (rr1 > 315 && rr1 > 270) {
-            huee = random(0, 270)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }       
-         else if (rr1 < 360 && rr1 > 315) {
-            huee = random(45, 315)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }  
-    //  text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
-    //  textSize(18);
-    //  text("Interactive Design", windowWidth/3, windowHeight/2 + 50);
-     var icon_bg_hue = document.querySelector(':root').style.getPropertyValue('--bg_hue');
-      var icon_bg_luma = document.querySelector(':root').style.getPropertyValue('--bg_brightness');
-      var icon_bg_sat = document.querySelector(':root').style.getPropertyValue('--bg_saturation');
-      var icon_fg_hue = document.querySelector(':root').style.getPropertyValue('--txt_hue');
-      var icon_fg_luma = document.querySelector(':root').style.getPropertyValue('--txt_brightness');
-      var icon_fg_sat = document.querySelector(':root').style.getPropertyValue('--txt_saturation');
-      var icon_href = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='10' y='10' width='160' height='160' style='transition: all .5s ease-out;fill:hsl("+ icon_bg_hue + "," + icon_bg_sat + "," + icon_bg_luma + ");'%3E%3C/rect%3E%3Ccircle cx='90' cy='90' r='45' style='fill:hsl("+ icon_fg_hue + "," + icon_fg_sat + "," + icon_fg_luma + ");transition: all .4s ease-out;mix-blend-mode: difference;'%3E%3C/circle%3E%3C/svg%3E"
-      $("link[rel='icon']").attr("href", icon_href);
+     setup();
        //$('head').querySelector('link').setAttribute("href", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='10' y='10' width='160' height='160' style='fill:hsl("+ icon_bg_hue + "," + icon_bg_sat + "," + icon_bg_luma + ");'%3E%3C/rect%3E%3Ccircle cx='90' cy='90' r='45' style='fill:hsl("+ icon_fg_hue + "," + icon_fg_sat + "," + icon_fg_luma + ");mix-blend-mode: difference;'%3E%3C/circle%3E%3C/svg%3E");
      // $('head').append("<link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='10' y='10' width='160' height='160' style='fill:hsl("+ icon_bg_hue + "," + icon_bg_sat + "," + icon_bg_luma + ");'%3E%3C/rect%3E%3Ccircle cx='90' cy='90' r='45' style='fill:hsl("+ icon_fg_hue + "," + icon_fg_sat + "," + icon_fg_luma + ");mix-blend-mode: difference;'%3E%3C/circle%3E%3C/svg%3E\" />");
-
   }
 
   function mouseWheel(event) {
     scrollDelta = event.delta;
-     const rx = (0.8, 2)
     clear();
-   
       if (scrollDelta > 0) {
-      colorMode(HSB);    
-        let r1 = (1,360)
-        let r2 = (20,100)
-        let r3 = (10,100)
-        var rr1 = random(r1)
-        var rr2 = random(r2)
-        var rr3 = random(r3)
-        var rr = random(rx)
-      //  background(rr1, rr2, rr3);
-                      document.querySelector(':root').style.setProperty('--bg_hue', rr1);
-            document.querySelector(':root').style.setProperty('--bg_brightness', rr2 + '%');
-            document.querySelector(':root').style.setProperty('--bg_saturation', rr3 + '%');
-      textSize(40);  
-    if (rr3 > 50 && rr3 < 70) {
-            xo = random(1, rr3*0.85)
-        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
-    } 
-    else if (rr3 > 70) {
-            xo = random(1, rr3*0.5)
-        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
-    }       
-    else if (rr3 < 50 && rr3 > 30) {
-            xo = random(rr3*1.15, 100)
-        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
-    }       
-    else if (rr3 < 30) {
-            xo = random(rr3*1.5, 100)
-        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
-    }       
-   
-   if (rr2 > 50 && rr2 < 70) {
-            xy = random(1, rr2*0.7)
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-    }       
-   else if (rr2 > 70) {
-            xy = random(1, rr2*0.5)
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-    }       
-    else if (rr2 < 50 && rr2 > 30) {
-            xy = random(rr2*1.3, 100)
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-    }      
-    else if (rr2 < 30) {
-            xy = random(rr2*1.5, 100)
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-    }      
-   
-   //text hue algorithm
-   if  (rr1 < 45) {
-                    huee = random(90, 360)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-     }
-  else if (rr1 > 90 && rr1 > 45) {
-            huee = random(0, 45)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }
-   else if (rr1 > 135 && rr1 > 90) {
-            huee = random(0, 90)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }
-    else if (rr1 > 180 && rr1 > 135) {
-            huee = random(0, 135)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }
-    else if (rr1 > 225 && rr1 > 180) {
-            huee = random(0, 180)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }
-         else if (rr1 > 270 && rr1 > 225) {
-            huee = random(0, 225)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }
-         else if (rr1 > 315 && rr1 > 270) {
-            huee = random(0, 270)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }       
-         else if (rr1 < 360 && rr1 > 315) {
-            huee = random(45, 315)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }  
-//      text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
-  //    textSize(18);
-  //  text("Interactive Design", windowWidth/3, windowHeight/2 + 50);
-      var icon_bg_hue = document.querySelector(':root').style.getPropertyValue('--bg_hue');
-      var icon_bg_luma = document.querySelector(':root').style.getPropertyValue('--bg_brightness');
-      var icon_bg_sat = document.querySelector(':root').style.getPropertyValue('--bg_saturation');
-      var icon_fg_hue = document.querySelector(':root').style.getPropertyValue('--txt_hue');
-      var icon_fg_luma = document.querySelector(':root').style.getPropertyValue('--txt_brightness');
-      var icon_fg_sat = document.querySelector(':root').style.getPropertyValue('--txt_saturation');
-      var icon_href = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='10' y='10' width='160' height='160' style='transition: all .5s ease-out;fill:hsl("+ icon_bg_hue + "," + icon_bg_sat + "," + icon_bg_luma + ");'%3E%3C/rect%3E%3Ccircle cx='90' cy='90' r='45' style='fill:hsl("+ icon_fg_hue + "," + icon_fg_sat + "," + icon_fg_luma + ");transition: all .4s ease-out;mix-blend-mode: difference;'%3E%3C/circle%3E%3C/svg%3E"
-      $("link[rel='icon']").attr("href", icon_href);      
-     // $('head').append("<link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='10' y='10' width='160' height='160' style='fill:hsl("+ icon_bg_hue + "," + icon_bg_sat + "," + icon_bg_luma + ");'%3E%3C/rect%3E%3Ccircle cx='90' cy='90' r='45' style='fill:hsl("+ icon_fg_hue + "," + icon_fg_sat + "," + icon_fg_luma + ");mix-blend-mode: difference;'%3E%3C/circle%3E%3C/svg%3E\" />");
-
-      } else {
-        colorMode(HSB);
-        let r1 = (1,360)
-        let r2 = (20,100)
-        let r3 = (10,100)
-       var rr1 = random(r1)
-        var rr2 = random(r2)
-        var rr3 = random(r3)
-        var rr = random(rx)
-     //   background(rr1, rr2, rr3);
-                    document.querySelector(':root').style.setProperty('--bg_hue', rr1);
-            document.querySelector(':root').style.setProperty('--bg_brightness', rr2 + '%');
-            document.querySelector(':root').style.setProperty('--bg_saturation', rr3 + '%');
-      textSize(40);
-    if (rr3 > 50 && rr3 < 70) {
-            xo = random(1, rr3*0.85)
-        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
-    } 
-    else if (rr3 > 70) {
-            xo = random(1, rr3*0.5)
-        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
-    }       
-    else if (rr3 < 50 && rr3 > 30) {
-            xo = random(rr3*1.15, 100)
-        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
-    }       
-    else if (rr3 < 30) {
-            xo = random(rr3*1.5, 100)
-        document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
-    }       
-      
-   if (rr2 > 50 && rr2 < 70) {
-            xy = random(1, rr2*0.7)
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-    }       
-   else if (rr2 > 70) {
-            xy = random(1, rr2*0.5)
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-    }       
-    else if (rr2 < 50 && rr2 > 30) {
-            xy = random(rr2*1.3, 100)
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-    }      
-    else if (rr2 < 30) {
-            xy = random(rr2*1.5, 100)
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-    }      
-   
-  //text hue algorithm
-   if  (rr1 < 45) {
-                    huee = random(90, 360)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-     }
-  else if (rr1 > 90 && rr1 > 45) {
-            huee = random(0, 45)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }
-   else if (rr1 > 135 && rr1 > 90) {
-            huee = random(0, 90)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }
-    else if (rr1 > 180 && rr1 > 135) {
-            huee = random(0, 135)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }
-    else if (rr1 > 225 && rr1 > 180) {
-            huee = random(0, 180)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }
-         else if (rr1 > 270 && rr1 > 225) {
-            huee = random(0, 225)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }
-         else if (rr1 > 315 && rr1 > 270) {
-            huee = random(0, 270)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }       
-         else if (rr1 < 360 && rr1 > 315) {
-            huee = random(45, 315)
-        document.querySelector(':root').style.setProperty('--txt_hue', huee);
-      }  
-// text("Daniel Roswadowsky", windowWidth/3, windowHeight/2);
-  //    textSize(18);
- //   text("Interactive Design", windowWidth/3, windowHeight/2 + 50);
-     var icon_bg_hue = document.querySelector(':root').style.getPropertyValue('--bg_hue');
-      var icon_bg_luma = document.querySelector(':root').style.getPropertyValue('--bg_brightness');
-      var icon_bg_sat = document.querySelector(':root').style.getPropertyValue('--bg_saturation');
-      var icon_fg_hue = document.querySelector(':root').style.getPropertyValue('--txt_hue');
-      var icon_fg_luma = document.querySelector(':root').style.getPropertyValue('--txt_brightness');
-      var icon_fg_sat = document.querySelector(':root').style.getPropertyValue('--txt_saturation');
-      var icon_href = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='10' y='10' width='160' height='160' style='transition: all .5s ease-out;fill:hsl("+ icon_bg_hue + "," + icon_bg_sat + "," + icon_bg_luma + ");'%3E%3C/rect%3E%3Ccircle cx='90' cy='90' r='45' style='fill:hsl("+ icon_fg_hue + "," + icon_fg_sat + "," + icon_fg_luma + ");transition: all .4s ease-out;mix-blend-mode: difference;'%3E%3C/circle%3E%3C/svg%3E"
-      $("link[rel='icon']").attr("href", icon_href);      
-           //$('head').querySelector('link').setAttribute("href", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='10' y='10' width='160' height='160' style='fill:hsl("+ icon_bg_hue + "," + icon_bg_sat + "," + icon_bg_luma + ");'%3E%3C/rect%3E%3Ccircle cx='90' cy='90' r='45' style='fill:hsl("+ icon_fg_hue + "," + icon_fg_sat + "," + icon_fg_luma + ");mix-blend-mode: difference;'%3E%3C/circle%3E%3C/svg%3E");  
-      // $('head').append("<link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='10' y='10' width='160' height='160' style='fill:hsl("+ icon_bg_hue + "," + icon_bg_sat + "," + icon_bg_luma + ");'%3E%3C/rect%3E%3Ccircle cx='90' cy='90' r='45' style='fill:hsl("+ icon_fg_hue + "," + icon_fg_sat + "," + icon_fg_luma + ");mix-blend-mode: difference;'%3E%3C/circle%3E%3C/svg%3E\" />");
-
-    }
-
+     setup();
+      } else { setup(); }
 }

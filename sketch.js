@@ -1,9 +1,7 @@
 function reveal() { 
      document.getElementsByClassName('dotcursor')[0].classList.toggle("show");
 }
-
 function setup() {
-function setx() {
      let r1 = (1,360)
      let r2 = (20,100)
      let r3 = (10,100)        
@@ -12,8 +10,6 @@ function setx() {
      var rr3 = random(r3)
      colorMode(HSB);
      $('head').append("<meta name='theme-color' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");     
-     }
-     setx();
             const rx = (0.8, 2)
             document.querySelector(':root').style.setProperty('--bg_hue', rr1);
             document.querySelector(':root').style.setProperty('--bg_brightness', rr2 + '%');
@@ -101,11 +97,8 @@ function setx() {
       //$('head').append("<link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='10' y='10' width='160' height='160' style='fill:hsl("+ icon_bg_hue + "," + icon_bg_sat + "," + icon_bg_luma + ");'%3E%3C/rect%3E%3Ccircle cx='90' cy='90' r='45' style='fill:hsl("+ icon_fg_hue + "," + icon_fg_sat + "," + icon_fg_luma + ");mix-blend-mode: difference;'%3E%3C/circle%3E%3C/svg%3E\" />");
       var icon_href = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='10' y='10' width='160' height='160' style='transition: all.5s ease-out; fill:hsl("+ icon_bg_hue + "," + icon_bg_sat + "," + icon_bg_luma + ");'%3E%3C/rect%3E%3Ccircle cx='90' cy='90' r='45' style='fill:hsl("+ icon_fg_hue + "," + icon_fg_sat + "," + icon_fg_luma + ");transition: all .4s ease-out;mix-blend-mode: difference;'%3E%3C/circle%3E%3C/svg%3E"
  if ($("link[rel='icon']")) { $("link[rel='icon']").attr("href", icon_href); }
- else {
-     $('head').append("<link rel=\"icon\" type=\"image/svg+xml\" href=\""+icon_href+"\" />");
+ else { $('head').append("<link rel=\"icon\" type=\"image/svg+xml\" href=\""+icon_href+"\" />"); }
  }
- }
-
 function draw() {
      document.querySelector(':root').style.setProperty('--mousex', mouseX + 'px');
      document.querySelector(':root').style.setProperty('--mousey', mouseY + 'px');

@@ -9,7 +9,10 @@ function setup() {
      var rr2 = random(r2)
      var rr3 = random(r3)
      colorMode(HSB);
-     $('head').append("<meta name='theme-color' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");     
+       $('meta[name=theme-color]').remove();
+       $('head').append("<meta name='theme-color' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");
+       $('meta[name=apple-mobile-web-app-status-bar-style]').remove();
+       $('head').append("<meta name='apple-mobile-web-app-status-bar-style' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");
             const rx = (0.8, 2)
             document.querySelector(':root').style.setProperty('--bg_hue', rr1);
             document.querySelector(':root').style.setProperty('--bg_brightness', rr2 + '%');
@@ -96,7 +99,7 @@ function setup() {
       var icon_fg_sat = document.querySelector(':root').style.getPropertyValue('--txt_saturation');
       //$('head').append("<link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='10' y='10' width='160' height='160' style='fill:hsl("+ icon_bg_hue + "," + icon_bg_sat + "," + icon_bg_luma + ");'%3E%3C/rect%3E%3Ccircle cx='90' cy='90' r='45' style='fill:hsl("+ icon_fg_hue + "," + icon_fg_sat + "," + icon_fg_luma + ");mix-blend-mode: difference;'%3E%3C/circle%3E%3C/svg%3E\" />");
       var icon_href = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='10' y='10' width='160' height='160' style='transition: all.5s ease-out; fill:hsl("+ icon_bg_hue + "," + icon_bg_sat + "," + icon_bg_luma + ");'%3E%3C/rect%3E%3Ccircle cx='90' cy='90' r='45' style='fill:hsl("+ icon_fg_hue + "," + icon_fg_sat + "," + icon_fg_luma + ");transition: all .4s ease-out;mix-blend-mode: difference;'%3E%3C/circle%3E%3C/svg%3E"
- if ($("link[rel='icon']")) { $("link[rel='icon']").attr("href", icon_href); }
+ if ( $("link[rel='icon']") ) { $("link[rel='icon']").attr("href", icon_href); }
  else { $('head').append("<link rel=\"icon\" type=\"image/svg+xml\" href=\""+icon_href+"\" />"); }
  }
 function draw() {
@@ -106,10 +109,6 @@ function draw() {
   function windowResized() {
 //resizeCanvas(windowWidth + 40, windowHeight + 40);
      clear();
-             $('meta[name=theme-color]').remove();
-             $('head').append("<meta name='theme-color' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");
-             $('meta[name=apple-mobile-web-app-status-bar-style]').remove();
-       $('head').append("<meta name='apple-mobile-web-app-status-bar-style' content='hsl(" + rr1 + "," + rr2 + "," + rr3 +")'>");
      setup();
        //$('head').querySelector('link').setAttribute("href", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='10' y='10' width='160' height='160' style='fill:hsl("+ icon_bg_hue + "," + icon_bg_sat + "," + icon_bg_luma + ");'%3E%3C/rect%3E%3Ccircle cx='90' cy='90' r='45' style='fill:hsl("+ icon_fg_hue + "," + icon_fg_sat + "," + icon_fg_luma + ");mix-blend-mode: difference;'%3E%3C/circle%3E%3C/svg%3E");
      // $('head').append("<link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='10' y='10' width='160' height='160' style='fill:hsl("+ icon_bg_hue + "," + icon_bg_sat + "," + icon_bg_luma + ");'%3E%3C/rect%3E%3Ccircle cx='90' cy='90' r='45' style='fill:hsl("+ icon_fg_hue + "," + icon_fg_sat + "," + icon_fg_luma + ");mix-blend-mode: difference;'%3E%3C/circle%3E%3C/svg%3E\" />");
@@ -118,7 +117,5 @@ function draw() {
   function mouseWheel(event) {
     scrollDelta = event.delta;
     clear();
-      if (scrollDelta > 0) {
-     setup();
-      } else { setup(); }
+      if (scrollDelta > 0) { setup(); } else { setup(); }
 }

@@ -17,8 +17,12 @@ function setup() {
             document.querySelector(':root').style.setProperty('--bg_hue', rr1);
             document.querySelector(':root').style.setProperty('--bg_brightness', rr2 + '%');
             document.querySelector(':root').style.setProperty('--bg_saturation', rr3 + '%');
-            document.querySelector(':root').style.setProperty('--ww', windowWidth + 'px');
-            document.querySelector(':root').style.setProperty('--wh', windowHeight + 'px');
+            document.querySelector(':root').style.setProperty('--ww', windowWidth);
+            document.querySelector(':root').style.setProperty('--wh', windowHeight);
+           var ww_val = document.querySelector(':root').style.getPropertyValue('--ww');
+           var wh_val = document.querySelector(':root').style.getPropertyValue('--wh');
+//           if (wh_val > ww_val * 2 && windowWidth > 1200) { document.querySelector(':root').style.setProperty('--txtmargin', "1.4em auto auto auto");  }
+//           if (ww_val > wh_val * 2 && windowWidth > 1200) { document.querySelector(':root').style.setProperty('--txtmargin', "1.4em 0 0 0"); }
   //text hue algorithm
    if  (rr1 < 45) {
                     huee = random(90, 360)
@@ -111,8 +115,8 @@ function draw() {
 //resizeCanvas(windowWidth + 40, windowHeight + 40);
      clear();
      setup();
-     document.querySelector(':root').style.setProperty('--ww', windowWidth + 'px');
-     document.querySelector(':root').style.setProperty('--wh', windowHeight + 'px');  
+     document.querySelector(':root').style.setProperty('--ww', windowWidth);
+     document.querySelector(':root').style.setProperty('--wh', windowHeight);  
        //$('head').querySelector('link').setAttribute("href", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='10' y='10' width='160' height='160' style='fill:hsl("+ icon_bg_hue + "," + icon_bg_sat + "," + icon_bg_luma + ");'%3E%3C/rect%3E%3Ccircle cx='90' cy='90' r='45' style='fill:hsl("+ icon_fg_hue + "," + icon_fg_sat + "," + icon_fg_luma + ");mix-blend-mode: difference;'%3E%3C/circle%3E%3C/svg%3E");
      // $('head').append("<link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='10' y='10' width='160' height='160' style='fill:hsl("+ icon_bg_hue + "," + icon_bg_sat + "," + icon_bg_luma + ");'%3E%3C/rect%3E%3Ccircle cx='90' cy='90' r='45' style='fill:hsl("+ icon_fg_hue + "," + icon_fg_sat + "," + icon_fg_luma + ");mix-blend-mode: difference;'%3E%3C/circle%3E%3C/svg%3E\" />");
   }

@@ -21,6 +21,8 @@ setTimeout(addTrans, 500);
 </script>
 <style> 
   
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;475;500;550;600&display=swap');  
+
   body {
     min-height: calc(100% + 200px);
   }  html,body {
@@ -31,9 +33,38 @@ setTimeout(addTrans, 500);
    .dotcursor::after {
   display: none;
 } 
-
-  h{user-select: none; pointer-events:none; opacity:1 !important;}
-.dotcursor:active {
+.i7::after {
+  content: "Front-End Development";
+}
+.fade::after {
+  opacity: 1;
+}
+h::after {
+  text-align: center;
+  width: auto;
+  display: flex;
+  font-size: 0.4em;
+  transition: .5s ease-in-out opacity;
+  opacity: 0;
+  font-weight: 475;
+  font-family: Inter,sans-serif;
+  margin: 1.4em auto auto auto;
+  position: inherit;
+  letter-spacing: -0.005em;
+}
+h {
+  user-select: none;
+  pointer-events: none;
+  opacity: 0;
+  padding: 10%;
+  letter-spacing: -0.02em;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter,sans-serif;
+  font-weight:550;
+}
+  .dotcursor:active {
   width: 110px;
   height: 110px;
   margin-left: -10px;
@@ -71,22 +102,16 @@ pointer-events: none;
   transform: scale(1.5);
 }
     @media screen and (max-width: 475px) {
-      h{font-size: 12vw!important;}
-    h::after {position:inherit!important;font-size: 5vw;margin-left: auto;margin-right: auto;}
+      h{font-size: 11.5vw!important;}
+    }
+  /*  Breakpoint for alignment of subtext to left */
+  @media screen and (min-width: 800px) {
+     h::after {position:inherit!important;margin: 1.5em 0 0 0;}
     }
 #view_project:hover::after {
   color: var(--colorr2)!important;
 }
 canvas {  mix-blend-mode: exclusion;}
-h::after {
-  margin-top: 1.5em;
-  text-align: center;
-  width: max-content;
-  display: flex;
-  font-size: .5em;
-  transition: .5s ease-in-out opacity;
-  opacity: 0;
-}
 h * { transition: .5s ease-in-out height, .5s ease-in-out opacity; }
 .fade::after { opacity: 1; }
 .i1::after { content: "Interactive Design"; }
@@ -120,7 +145,7 @@ h * { transition: .5s ease-in-out height, .5s ease-in-out opacity; }
   </head>
   <body onmouseenter="reveal()" ontouchstart="reveal()" ontouchend="reveal()" onmouseleave="reveal()"> 
  <a href="/Projects/" class="dotcursor"></a>
-<a href="/Projects/" style="width: fit-content;border-radius: 48px;position: absolute;width: 100%;height: 100%;align-content: center;justify-content: center;display: flex;text-decoration: none;"><h class="txt" style="color: hsl(var(--txt_hue), var(--txt_saturation), var(--txt_brightness));text-align: center;flex-direction: column;display:flex;margin: auto;position: unset;font-size: 3em;font-family: sans-serif;transition: .5s ease;">Daniel Roswadowsky
+<a href="/Projects/" style="width: fit-content;border-radius: 48px;position: absolute;width: 100%;height: 100%;align-content: center;justify-content: center;display: flex;text-decoration: none;"><h class="txt" style="color: hsl(var(--txt_hue), var(--txt_saturation), var(--txt_brightness));text-align: center;flex-direction: column;display:flex;margin: auto;position: unset;font-size: 3.5em;transition: .5s ease;">Daniel Roswadowsky
   </h></a>
     <script>
 // set rotational classes

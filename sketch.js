@@ -96,6 +96,7 @@ function setup() {
             xo = random(rr3*1.5, 100)
         document.querySelector(':root').style.setProperty('--txt_saturation', xo + '%');
     }     
+    if (document.querySelector(':root').style.getPropertyValue('--txt_brightness') < 2) { console.log('debug txt brightness below 2%'); document.getElementsByClassName('dotcursor')[0].classList.toggle("altblend"); }
       var icon_bg_hue = document.querySelector(':root').style.getPropertyValue('--bg_hue');
       var icon_bg_luma = document.querySelector(':root').style.getPropertyValue('--bg_brightness');
       var icon_bg_sat = document.querySelector(':root').style.getPropertyValue('--bg_saturation');

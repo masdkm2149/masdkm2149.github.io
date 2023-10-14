@@ -66,17 +66,13 @@ function setup() {
         document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
     }       
     else if (rr2 < 50 && rr2 > 30) {
-         if (rr3 > 60 && rr1 < 100) {
-               xy = random(rr2*0.7, 100)
-              if (xy > rr2 * 2 && xy < rr2 * 3) {document.querySelector(':root').style.setProperty('--txt_brightness', random(0, 15) + '%'); } else { document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%'); }
-         } else {
-            xy = random(rr2*1.3, 100)
-              if (xy > rr2 * 2 && xy < rr2 * 3) {document.querySelector(':root').style.setProperty('--txt_brightness', random(0, 15) + '%'); } else { document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%'); }
-         }      
+         if (rr3 > 60 && rr1 < 100) { xy = random(rr2*0.7, 100); if (xy > rr2 * 2 && xy < rr2 * 3) { document.querySelector(':root').style.setProperty('--txt_brightness', random(0, 15) + '%'); } else { document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%'); } } 
+         else { xy = random(rr2*1.3, 100); if (xy > rr2 * 2 && xy < rr2 * 3) { document.querySelector(':root').style.setProperty('--txt_brightness', random(0, 15) + '%'); } else { document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%'); } }      
     }   
     else if (rr2 < 30) {
-            xy = random(rr2*1.5, 100)
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+         if (rr2 > 20) { xy = random(rr2*1.5, 100); document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%'); }
+         if (rr2 < 10) { xy = random(50, 100); document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%'); }
+         else { xy = random(rr2*3, 100); document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%'); } 
     }      
      //text saturation algorithm
      if (rr3 > 50 && rr3 < 70) {

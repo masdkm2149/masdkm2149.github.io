@@ -1158,7 +1158,6 @@ h2 {
   }
 }
 
-
 @media screen and (max-width: 390px) {
 #body-text{
   display: none!important;
@@ -1174,32 +1173,39 @@ h2 {
   #body-copy #view_project {
     width:  min-content !important;
   }
-  .project-title{
-    width: min-content!important;;
-    display: inline-block;
-  }
 }
 
+@media screen and (max-width: 390px) and (min-height: 700px) {
+  .project-title{
+    width: -moz-available;;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
 
 *, ::before, ::after {
   box-sizing: unset;
 }
+		
 @media screen and (max-height: 600px) and (min-width: 500px) {
-.project-title {
-  font-size: 36px !important;
-  line-height: 42px !important;
+  .project-title {
+  	font-size: 36px !important;
+  	line-height: 42px !important;
+  }
+  h2{
+  	font-size: 18px!important;
+	margin: 3px 0 0 0!important;
+  	line-height: 24px!important;
+  }
+  #body-text {
+	font-size: 14px!important;
+ 	line-height:21px!important;
+   	margin-top: 12px !important;
+  }
 }
-h2{
-  font-size: 18px!important;
-  margin: 3px 0 0 0!important;
-  line-height: 24px!important;
-}
-#body-text {
- font-size: 14px!important;
- line-height:21px!important;
- margin-top: 12px !important;
-}
-}
+		
 @media screen and (max-height: 749px) and (max-width: 1500px) {
 .project-title {
   font-size: 28px !important;

@@ -1,5 +1,5 @@
 <!doctype html>
-<html dir="ltr" style="overflow:hidden;scroll-behavior: smooth; --vh: 926px; --ww: 866px; --pixelratio: 1; --elementInfoHeight-body: 417px;" lang="en-US"><head>
+<html dir="ltr" style="overflow:hidden;scroll-behavior: smooth;" lang="en-US"><head>
     <meta charset="utf-8">
     
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -13,25 +13,9 @@
 <script type="text/javascript" src="https://css-tricks.com/examples/HorzScrolling/jquery.mousewheel.js"></script>
 <script type="text/javascript">
 
-if($(window).width() < 420 && $(window).height() > 420)
-    {
-        x=1;
-        if(x==1)
-        {
-            $('meta[name=viewport]').remove();
-            $('head').append('<meta name="viewport" content="minimum-scale=.0.9, initial-scale=0.9, width=device-width, user-scalable=no">');
-            x=0;
-        };
-    }; 
- if($(window).width() > 420 && $(window).height() < 420)
-    {
-        x=1;
-        if(x==1)
-        {
-            $('meta[name=viewport]').remove();
-            $('head').append('<meta name="viewport" content="initial-scale=0.7, width=device-width, user-scalable=no">');
-            x=0;
-        };
+if ($(window).width() < 420 && $(window).height() > 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.9, initial-scale=0.9, width=device-width, user-scalable=no"); } 
+if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); }
+            
     };    
  /**   if($(window).width() < 420 && $(window).height() > 420)
     {

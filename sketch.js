@@ -59,7 +59,7 @@ function setup() {
    //txt brightness algorithm
    if (rr2 > 50 && rr2 < 70) {
             xy = random(1, rr2*0.7)
-        document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+            document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%'); 
     }       
    else if (rr2 > 70) {
             xy = random(1, rr2*0.5)
@@ -68,11 +68,10 @@ function setup() {
     else if (rr2 < 50 && rr2 > 30) {
          if (rr3 > 60 && rr1 < 100) {
                xy = random(rr2*0.7, 100)
-               document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
-         }
+              if (xy > rr2 * 2 && xy < rr2 * 3) {document.querySelector(':root').style.setProperty('--txt_brightness', random(0, 15) + '%'); } else { document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%'); }
          else {
             xy = random(rr2*1.3, 100)
-            document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%');
+              if (xy > rr2 * 2 && xy < rr2 * 3) {document.querySelector(':root').style.setProperty('--txt_brightness', random(0, 15) + '%'); } else { document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%'); }
          }      
     }   
     else if (rr2 < 30) {

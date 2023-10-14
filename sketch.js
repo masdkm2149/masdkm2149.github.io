@@ -69,7 +69,7 @@ function setup() {
          if (rr3 > 60 && rr1 < 100) {
                xy = random(rr2*0.7, 100)
               if (xy > rr2 * 2 && xy < rr2 * 3) {document.querySelector(':root').style.setProperty('--txt_brightness', random(0, 15) + '%'); } else { document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%'); }
-         else {
+         } else {
             xy = random(rr2*1.3, 100)
               if (xy > rr2 * 2 && xy < rr2 * 3) {document.querySelector(':root').style.setProperty('--txt_brightness', random(0, 15) + '%'); } else { document.querySelector(':root').style.setProperty('--txt_brightness', xy + '%'); }
          }      

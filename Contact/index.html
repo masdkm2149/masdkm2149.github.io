@@ -10,6 +10,7 @@
 <script type="text/javascript" src="https://css-tricks.com/examples/HorzScrolling/jquery.mousewheel.js"></script>
  <style>
      
+     
 @media (prefers-color-scheme: dark) {
 /* defaults to dark theme */
 body.dark-theme {
@@ -166,7 +167,7 @@ span:hover {
   line-height: 22px;
   letter-spacing: -0.01em;
   font-feature-settings: 'calt' off;
-  color: #6a7586;
+  color: var(--project-title) !important;
   font-family: 'Inter', sans-serif;
   margin: 0 auto;
   display: flex;
@@ -193,7 +194,7 @@ span:hover {
   margin-right: 30px;
 }
 #button2{
- border: solid 2px #6A7586!important;
+ border: solid 2px #6A7586 !important;
 }
 #button1::after {
   content: "Projects";
@@ -237,7 +238,7 @@ span:hover {
   color: #6a7586;
 }
 body {
-  background-color: var(--bkg-color);
+  background-color: #FFFFFF;
   /*! overflow: hidden; */
   height: var(--vh);
   /*! padding-right: 30px; */
@@ -285,7 +286,7 @@ width: 100%;
 }
 
 #view_project:hover {
-  background: #EEF1F4!important;
+  background: var(--view_project-hov);
 }
 @media screen and (max-width: 600px) {
 .project-title {
@@ -414,7 +415,7 @@ h2{
   .interface{
     width: fit-content !important;
     margin: auto 0 !important;
-    padding-top: 30px;
+    padding-top: 70px;
   }
 h2{
   font-size: 16px!important;
@@ -515,7 +516,7 @@ h2{
     width: fit-content !important;
     margin-left: 30px;
     margin: auto 0 !important;
-    padding-top: 30px;
+    padding-top: 70px;
   }
   .head-interface {
     width: fit-content;
@@ -544,7 +545,7 @@ h2{
     width: fit-content !important;
     margin-left: 30px;
     margin: auto 0 !important;
-    padding-top: 0px;
+    padding-top: 60px;
   }
   .head-interface {
     width: fit-content;
@@ -582,7 +583,7 @@ h2 {
   line-height: 22px;
   letter-spacing: -0.01em;
   font-feature-settings: 'calt' off;
-  color: #6a7586;
+  color: var(--view_project-but-text);
   font-family: 'Inter', sans-serif;
   margin: 0 auto;
   display: flex;
@@ -598,7 +599,7 @@ h2 {
   line-height: 22px;
   letter-spacing: -0.01em;
   font-feature-settings: 'calt' off;
-  color: #6a7586;
+  color: var(--view_project-but-text);
   font-family: 'Inter', sans-serif;
   margin: 0 auto;
   flex-direction: row;
@@ -612,7 +613,7 @@ h2 {
   position: relative;
 }
 body {
-  background-color: #FFFFFF;
+  background-color: var(--bkg-color);
   overflow: hidden;
   height: -webkit-fill-available;
   min-height: 100%;
@@ -664,19 +665,25 @@ width: 100%;
   line-height: 48px;
   letter-spacing: -0.02em;
   font-feature-settings: 'calt' off;
-  color: #4b515b;
+  color: var(--project-title);
 }
 #button1:active, #button2:active {
-    background-color: #eef1f4;
+    background-color: #292a2d !important;
     border: solid 2px #667080!important;
 }
- 
+ body.dark-theme .scrolldown {
+  filter: invert(1);
+}
 @keyframes floating {
     from { transform: translate(0,  0px); }
     65%  { transform: translate(0, 10px); }
     to   { transform: translate(0, 0px); }    
 }
  
+#view_project:active {
+  border: solid 2px #667080 !important;
+  background-color: var(--view_project-but);
+}
 #body-text {
     max-width: 95%;
     margin-top: 18px;
@@ -694,8 +701,9 @@ width: 100%;
   cursor: pointer;
 }
 #button1:hover {
-  background: #eef1f4 !important;
+  background: #292a2d;
   }
+
 
 
 </style></head>

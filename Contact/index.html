@@ -69,6 +69,8 @@ body.light-theme {
   }
 }
 
+
+
 /*
 
 TRANSITIONS
@@ -157,7 +159,6 @@ span:hover {
 #view_project::after {
   content: "Send Dan an email.";
   position: absolute;
-  width: fit-content;
   height: fit-content;
   font-style: normal;
   font-weight: 700;
@@ -171,6 +172,9 @@ span:hover {
   display: flex;
   float: left;
   left: 30px;
+  max-width: fit-content;
+  width: auto;
+  min-width: revert;
 }
 #body-text {
   height: fit-content;
@@ -317,7 +321,6 @@ h2{
 }
 }
     .interface{
-    margin-top: -60px !important;
   }
 h2 {
   margin: 6px 0 0 270px;
@@ -371,7 +374,6 @@ h2 {
 }
 @media screen and (max-width: 325px) {
   #body-copy > div {
-    margin-left: 30px!important;
   }
 }
 
@@ -401,11 +403,18 @@ h2{
 }
   .interface > a {
     transform: scale(.9);
-margin-left: -15px;
     
+    transform-origin: left;
   }
-    .interface{
-    margin-top: -50px !important;
+    .head-interface{
+    width:  fit-content;
+    margin: auto 30px auto 0 !important;
+  }
+  .content-main{ flex-direction: row!important; }
+  .interface{
+    width: fit-content !important;
+    margin: auto 0 !important;
+    padding-top: 30px;
   }
 h2{
   font-size: 16px!important;
@@ -413,7 +422,6 @@ h2{
   line-height: 20px!important;
 }
   .bta#body-text {
- margin-top: 48px !important;
 }
 #body-text {
  font-size: 14px!important;
@@ -436,7 +444,6 @@ h2{
  line-height:14px !important;
 }
     #body-copy {
-  bottom: 180px !important;
   }
 h2{
   margin: 3px 0 0 200px !important;
@@ -455,7 +462,8 @@ h2{
   line-height: 42px !important;
 }
   .interface{
-    margin: 60px 0 0 0 !important;
+    flex-direction: column-reverse!important;
+    margin: 10px 0 0 0 !important;
   }
 h2{
   margin: 3px 0 0 0!important;
@@ -470,17 +478,13 @@ h2{
    .bta#body-text {
  font-size: 12px !important;
  line-height:14px !important;
- margin-top: -40px !important;
+ margin-bottom: 30px;
 }
   .interface > a{
-    margin-top: 25px!important;
+    /*! margin-top: 78px !important; */
+    margin-bottom: 8px;
   }
 #body-copy {
-  left: 0 !important;
-  bottom: 0 !important;
-  top: -250px !important;
-  margin-top: auto !important;
-  margin-bottom: auto !important;
 }
 }
 }
@@ -508,13 +512,22 @@ h2{
  
 @media screen and (max-width: 1249px) and (min-width: 800px)  {
   .interface{
-    margin-top: -70px !important;
+    width: fit-content !important;
+    margin-left: 30px;
+    margin: auto 0 !important;
+    padding-top: 30px;
   }
+  .head-interface {
+    width: fit-content;
+    margin: auto 30px auto 0 !important;} 
   #body-text {
   font-size: 14px!important;
     margin-top: 50px;
     line-height: 14px !important;
   }
+.content-main {
+  flex-direction: row !important;
+}
 }
   
 @media screen and (min-width: 1250px) {
@@ -523,14 +536,28 @@ h2{
 }
   
   .bta#body-text {
-    margin-top: 60px!important;
   }
   .project-title{
     font-size: 64px!important;
   }
-      .interface{
-    margin-top: -82px !important;
+ .interface{
+    width: fit-content !important;
+    margin-left: 30px;
+    margin: auto 0 !important;
+    padding-top: 0px;
   }
+  .head-interface {
+    width: fit-content;
+    margin: auto 60px auto 0 !important;
+  } 
+  #body-text {
+  font-size: 14px!important;
+    margin-top: 50px;
+    line-height: 14px !important;
+  }
+.content-main {
+  flex-direction: row !important;
+}
 h2 {
   font-size: 32px !important;
   margin: 3px 0 0 365px !important;
@@ -541,12 +568,8 @@ h2 {
   box-sizing: unset;
 }
 #button1,#button2,#button3 {
-  width: 30px;
-  height: 12px;
-  /* margin-top: 38px; */
-  border-radius: 48px;
-  float: right;
-  margin-right: 30px;
+  box-sizing: unset;
+  word-wrap: ;
 }
 #button1::after {
   content: "Projects";
@@ -618,12 +641,16 @@ width: 100%;
   scroll-snap-type: x mandatory;
   overflow:hidden;
   scrollbar-width: none;
-  min-height: inherit;
+  /*! min-height: inherit; */
   margin: 105px 0 0 0;
   position: fixed!important;
-  width: 100%;
-  margin-top: ;
+  justify-content: center;
   display: flex;
+  flex-direction: column;
+  width: calc(100vw - 60px);
+  padding: 30px;
+  top: -30px;
+  height: calc(100vh - 135px);
 }
 .content-main::-webkit-scrollbar {
     display: none;
@@ -671,7 +698,6 @@ width: 100%;
   }
 
 
-
 </style></head>
  
   <body onresize="getWindowSpec()">
@@ -680,7 +706,8 @@ width: 100%;
 <div style="background: white;height: 105px;top: 0;width: 100%;position: absolute;"></div><a href="https://designedbydan.art/"> <div id="logo" style="width: 150px;height: 45px;background: #FFFFFF;border: 3px solid #667080;box-sizing: border-box;left: 0px;right: 0;top: 0px;bottom: 60px;border: 1px solid #667080;/*! =============== breakpoint 1150px W ===============*/position: fixed;border: 1px solid #667080;margin-left: 30px;margin-top: 30px;content: &quot;LOGO&quot;;font-size: 24px;text-align: center;display: none;"></div><div class="contain-logo" style="left: 60px;position: absolute;"><div id="logoblockone" style="width: 9vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;border-left: 1vw solid;border-left-color: currentcolor;border-left-color: #474747;"></div><div id="logoblocktwo"></div><div id="logoblockthree" style="width: 9vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;top: 22px;border-left: 1vw solid;border-left-color: #474747;"></div></div><h id="logotype" style="position: absolute;left: calc(12vw + 65px);font-family: 'Inter', sans-serif;font-style: normal;font-weight: 600;font-size: 16px;line-height: 48px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #4b515b;height: 45px;top: 28px;">Daniel Roswadowsky</h>
 </a><a href="/Projects/" id="button1" style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;/*! background: #EEF1F4; */position: relative;flex: none;order: 0;flex-grow: 0;border: solid 2px #EEF1F4;margin-right: 30px;"></a><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: absolute;/*! background: #EEF1F4; */border-radius: 24px;position: relative;flex: none;order: 0;flex-grow: 0;border: solid 2px #EEF1F4;" id="button2"></div></div>
 <main class="content-main" onresize="reorder()">
-<div style="justify-content: center;/*! display: flex; */flex-direction: column;width: 100%;"><div id="body-copy" style="min-height: fit-content;flex-direction: column;font-family: 'Inter';margin-right: 30px;font-style: normal;z-index: 2;font-weight: 400;font-size: 9px;display: inline-flex;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;margin-top: auto;margin-bottom: auto;/*! transform: scale(1.5); */position: absolute;margin-left: auto;top: 0;bottom: 135px;height: fit-content;max-width: max-content;margin-right: auto;left: calc(-12% - 200px);right: 0;"><div style="/*! transform: scale(1.5); *//*! width: 100%; *//*! height: 100%; */position: relative;width: 100%;left: 0;right: 0;top: 0;bottom: 0;margin: auto;"><h class="project-title" style="">
+  <div class="content-main" style="padding: 0;width: fit-content;/*! height: fit-content; */top: 0;bottom: 0;right: 0;left: 0;margin-left: auto;margin-right: auto;margin-bottom: auto;">
+<div class="head-interface" style="position: relative;left: 0;right: 0;top: 0;bottom: 0;/*! margin: auto; */display: flex;flex-direction: column;text-overflow: ellipsis;overflow: clip;white-space: break-spaces;word-wrap: initial;height: fit-content;margin: 0 auto;"><h class="project-title" style="">
 Lets get in contact!</h><h2 style="font-family: 'Inter', sans-serif;
 font-style: normal;
 font-weight: 700;
@@ -693,8 +720,8 @@ font-feature-settings: 'calt' off;
 /* Primary */
 color: #667080;
 position: relative;
-">Don't be shy...</h2><div class="interface" style="/*! display: flex; *//*! flex-direction: column-reverse; */position: absolute;width: 100%;margin-top: -90px;margin-left: calc(100% + 45px);">
-  <a href="mailto:danrossgfx@gmail.com" style="margin-top: -35px;width: fit-content;border-radius: 48px;display: flex;margin-bottom: 8px;position: absolute;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border: solid 2px #EEF1F4;margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://artfiles.rutgers.edu/~rad%5Cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a><h style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 16px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;display: flex;margin-left: 5px;margin-top: 50px;" class="bta" id="body-text">Resume:  <a href="/resume.pdf" style="text-decoration: none;"><span style="margin-left: 5px;color: darkseagreen;">View PDF</span></a></h><h style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;display: flex;margin-left: 5px;" id="body-text">Email: danrossgfx@gmail.com</h></div></div></div></div>
+">Don't be shy...</h2></div><div class="interface" style="width: inherit;/*! margin-left: calc(100% + 45px); */display: flex;flex-direction: column;position: relative;height: fit-content;margin: 30px 0 0 0;">
+  <a href="mailto:danrossgfx@gmail.com" style="border-radius: 48px;display: flex;flex-direction: column;max-width: fit-content;width: revert;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border: solid 2px #EEF1F4;margin-right: 0px;border-radius: 50px;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://artfiles.rutgers.edu/~rad%5Cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a><h style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 16px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;display: flex;flex-direction: row;" class="bta" id="body-text">Resume:  <a href="/resume.pdf" style="text-decoration: none;display: flex;text-overflow: clip;"><span style="margin-left: 5px;color: darkseagreen;">View PDF</span></a></h><h style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;display: flex;" id="body-text">Email: danrossgfx@gmail.com</h></div>
 
 
 
@@ -710,7 +737,7 @@ position: relative;
 
 
 
-</main><script src="/sai.js"></script><script>
+</div></main><script src="/sai.js"></script><script>
       const btn = document.querySelector(".btn-toggle");
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 

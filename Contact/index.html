@@ -8,32 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"> 
 <script type="text/javascript" src="https://css-tricks.com/examples/HorzScrolling/jquery.mousewheel.js"></script>
-<script>
-      const btn = document.querySelector(".btn-toggle");
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-const currentTheme = localStorage.getItem("theme");
-if (currentTheme == "dark") { 
-  document.body.classList.remove("light-theme");
-  document.body.classList.add("dark-theme");
-} else if (currentTheme == "light") {
-  document.body.classList.remove("dark-theme");
-  document.body.classList.add("light-theme");
-}
-
-btn.addEventListener("click", function () {
-  if (prefersDarkScheme.matches) {
-  document.body.classList.remove("dark-theme");
-  document.body.classList.add("light-theme");
-  var theme = document.body.classList.contains("light-theme") ? "light" : "dark";
-  } else {
-  document.body.classList.remove("light-theme");
-  document.body.classList.add("dark-theme");
-  var theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
-  }
-  localStorage.setItem("theme", theme);
-});
-      </script> <style>
+ <style>
 
 /*
 
@@ -677,7 +652,29 @@ position: relative;
 
 
 </main><script src="/sai.js"></script><script>
-  
+      const btn = document.querySelector(".btn-toggle");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-</script><style type="text/css"></style><style type="text/css"></style><style type="text/css"></style>
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme == "dark") { 
+  document.body.classList.remove("light-theme");
+  document.body.classList.add("dark-theme");
+} else if (currentTheme == "light") {
+  document.body.classList.remove("dark-theme");
+  document.body.classList.add("light-theme");
+}
+
+btn.addEventListener("click", function () {
+  if (prefersDarkScheme.matches) {
+  document.body.classList.remove("dark-theme");
+  document.body.classList.add("light-theme");
+  var theme = document.body.classList.contains("light-theme") ? "light" : "dark";
+  } else {
+  document.body.classList.remove("light-theme");
+  document.body.classList.add("dark-theme");
+  var theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
+  }
+  localStorage.setItem("theme", theme);
+});
+      </script><style type="text/css"></style><style type="text/css"></style><style type="text/css"></style>
 </body><style type="text/css"></style></html>

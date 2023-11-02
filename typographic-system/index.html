@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"> 
 <script type="text/javascript" src="https://css-tricks.com/examples/HorzScrolling/jquery.mousewheel.js"></script>
  <style>
+
        @media screen and (min-width: 599px) and (max-width: 1500px)
 #button1, #button2 {
   padding: 15px 45px !important;
@@ -340,7 +341,6 @@ h2{
     .interface{
   }
 h2 {
-  margin: 6px 0 0 270px;
 }
 .element-info {
   margin-top: -3px;
@@ -546,40 +546,118 @@ h2{
   flex-direction: row !important;
 }
 }
-  
+
+
+
+
+
+
+/* TYPOGRAPHY SYSTEM */
+
+
+
+/* base styles */
+p, h, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+}
+h, h1, h2, h4, h5, h6 {
+  display: flex;
+}
+h2 {
+color: var(--h2-color);  
+}
+h3 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--project-title);
+}
+h4 {
+  font-weight: 700;
+  font-size: 0.7rem;
+  line-height: 2rem;
+  letter-spacing: 0.01em;
+  color: #FFF;
+}
+#body-text{
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--body-color);
+} 
+
+/* widows & orphans */
+div.content-main *, p, h, h1, h2, h3, h4, h5, h6 {
+  overflow: unset;
+  word-wrap: break-word;
+  white-space: break-spaces;
+  word-break: break-word;
+}
+
+/* capitalization */
+div.content-main *, h1 { text-transform: capitalize;}
+
+/* (@ 4.0x) */
+
+/* Breakpoint-width ( > 1250 ) */
 @media screen and (min-width: 1250px) {
-#button1,#button2,#button3 {
+  
+/* Button Increase Padding */
+  #button1,#button2,#button3 {
   padding: 18px 55px !important;
 }
   
-  .bta#body-text {
-  }
-  .project-title{
-    font-size: 64px!important;
-  }
- .interface{
-    width: fit-content !important;
-    margin-left: 30px;
-    margin: auto 0 !important;
-    padding-top: 10px;
-  }
-  .head-interface {
-    width: fit-content;
-    margin: auto 60px auto 0 !important;
-  } 
-  #body-text {
-  font-size: 14px!important;
-    margin-top: 50px;
-    line-height: 14px !important;
-  }
-.content-main {
-  flex-direction: row !important;
+/* H1 */  
+h1, .project-title{
+  font-size:  4rem !important;
+  line-height: 5rem !important;
+}
+h1::first-line, .project-title::first-line{
+  line-height:  5rem !important;
+}
+  
+/* H2 */    
+h2::first-line {
+  line-height:  7rem;
 }
 h2 {
   font-size: 32px !important;
-  margin: 3px 0 0 365px !important;
-  line-height: 64px !important;
+  line-height: 2.25rem !important;
 }
+  
+/* H3 */    
+h3::first-line {
+  line-height: 1.5rem;
+}
+h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+  
+/* Body */   
+  p::first-line, p#body-text::first-line {
+    line-height: 2rem !important;
+  } 
+h2 ~ p {
+padding-top: 1rem;
+  }
+  p, .body-text {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+/* Etc page format */  
+ .interface{
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .head-interface {
+    width: fit-content;
+    margin: auto !important;
+  } 
+.content-main {
+  flex-direction: row !important;
+}
+
 }
 *, ::before, ::after {
   box-sizing: unset;
@@ -676,9 +754,6 @@ width: 100%;
     display: none;
 }
      .head-interface > h2:nth-child(2) {
-text-overflow: ellipsis;
-word-wrap: anywhere;
-word-break: keep-all;
 }
  div.content-main * {
 text-overflow: ellipsis;
@@ -689,8 +764,8 @@ word-wrap: break-word;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 48px;
+  font-size: 3rem;
+  line-height: 3rem;
   letter-spacing: -0.02em;
   font-feature-settings: 'calt' off;
   text-overflow: ellipsis;
@@ -718,7 +793,7 @@ word-wrap: break-word;
 }
 #body-text {
     max-width: 95%;
-    margin-top: 18px;
+    margin-top: 0;
 }
  
 
@@ -735,6 +810,8 @@ word-wrap: break-word;
 #button1:hover {
   background: #292a2d;
   }
+
+
 
 
 

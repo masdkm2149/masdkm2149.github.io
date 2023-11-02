@@ -14,6 +14,12 @@
   padding: 15px 45px !important;
   margin-top: -2px;
 }
+@media screen and (min-width: 700px) {
+*, ::before, ::after {
+  box-sizing: unset;
+  transition: all .5s ease-out;
+}
+}
 @media (prefers-color-scheme: dark) {
 /* defaults to dark theme */
 body.dark-theme {

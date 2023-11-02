@@ -791,14 +791,14 @@ window.addEventListener('resize', function(event) {
       console.log(JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize));
   if ($(window).width() > 1500){ 
       console.log($(window).width());
-    document.querySelector('.project-title.b').innerHTML = ("Scale: @3x Font Size: " + JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize) + " " + JSON.stringify(window.getComputedStyle(document.querySelector("h1"), "color"));
+    document.querySelector('.project-title.b').innerHTML = ("Scale: @3x : " + JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize) + " " + JSON.stringify(window.getComputedStyle(document.querySelector("h1"), "color"));
   } 
 });
     
 if ($(window).width() > 1500){ 
     console.log($(window).width());
-    document.querySelector('.project-title.b').innerHTML = ("Scale: @3x Font Size: " + document.querySelector('h1.project-title.b').style.getPropertyValue('font-size').replace(/[^0-9.]/g,'') + "px #"  + document.querySelector('.project-title.b').style.getPropertyValue('color').replace(/[^0-9.]/g,''));
-                             }
+    document.querySelector('.project-title.b').innerHTML = ("Scale: @3x : " + JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize) + " " + JSON.stringify(window.getComputedStyle(document.querySelector("h1"), "color"));
+}
 
     
 btn.addEventListener("click", function () {

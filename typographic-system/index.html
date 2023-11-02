@@ -788,25 +788,25 @@ if (currentTheme == "dark") {
 }
 
   if ($(window).width() >= 1500) { 
-      document.querySelector('.project-title.b').innerHTML = ("Scale: @3x : " + window.getComputedStyle(document.querySelector("h1")).fontSize + " " + window.getComputedStyle(document.querySelector("h1")).style.getPropertyValue("color"));
+      document.querySelector('.project-title.b').innerHTML = ("Scale: @3x : " + window.getComputedStyle(document.querySelector("h1")).fontSize + " " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
   }
   if (($(window).width() >= 500 && $(window).width() < 1000 )) { 
-          document.querySelector('.project-title.b').innerHTML = ("Scale: @1x : " + window.getComputedStyle(document.querySelector("h1")).fontSize + " " + window.getComputedStyle(document.querySelector("h1")).style.getPropertyValue("color"));
+          document.querySelector('.project-title.b').innerHTML = ("Scale: @1x : " + window.getComputedStyle(document.querySelector("h1")).fontSize + " " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
   }
   if ($(window).width() >= 1000 && ($(window).width() > 1500) ){ 
-          document.querySelector('.project-title.b').innerHTML = ("Scale: @2x : " + window.getComputedStyle(document.querySelector("h1")).fontSize + " " + window.getComputedStyle(document.querySelector("h1")).style.getPropertyValue("color"));
+          document.querySelector('.project-title.b').innerHTML = ("Scale: @2x : " + window.getComputedStyle(document.querySelector("h1")).fontSize + " " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
   }
     
 window.addEventListener('resize', function(event) {
       console.log(JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize));
   if ($(window).width() >= 1500) { 
-      document.querySelector('.project-title.b').innerHTML = ("Scale: @3x : " + window.getComputedStyle(document.querySelector("h1")).fontSize + " " + window.getComputedStyle(document.querySelector("h1")).style.getPropertyValue("color"));
+      document.querySelector('.project-title.b').innerHTML = ("Scale: @3x : " + window.getComputedStyle(document.querySelector("h1")).fontSize + " " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
   }
   if (($(window).width() >= 500 && $(window).width() < 1000 )) { 
-          document.querySelector('.project-title.b').innerHTML = ("Scale: @1x : " + window.getComputedStyle(document.querySelector("h1")).fontSize + " " + window.getComputedStyle(document.querySelector("h1")).style.getPropertyValue("color"));
+          document.querySelector('.project-title.b').innerHTML = ("Scale: @1x : " + window.getComputedStyle(document.querySelector("h1")).fontSize + " " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
   }
   if ($(window).width() >= 1000 && ($(window).width() > 1500) ){ 
-          document.querySelector('.project-title.b').innerHTML = ("Scale: @2x : " + window.getComputedStyle(document.querySelector("h1")).fontSize + " " + window.getComputedStyle(document.querySelector("h1")).style.getPropertyValue("color"));
+          document.querySelector('.project-title.b').innerHTML = ("Scale: @2x : " + window.getComputedStyle(document.querySelector("h1")).fontSize + " " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
   }
 });
     

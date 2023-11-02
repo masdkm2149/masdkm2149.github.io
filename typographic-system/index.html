@@ -789,19 +789,19 @@ if (currentTheme == "dark") {
 
 if ($(window).width() > 1500){ 
     console.log($(window).width());
-    document.querySelector('.project-title.b').innerHTML = ("Scale: @3x : " + JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize) + " " + JSON.stringify(window.getComputedStyle(document.querySelector("h1"), "color")));
+    document.querySelector('.project-title.b').innerHTML = ("Scale: @3x : " + JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize) + " " + JSON.stringify(window.getComputedStyle(document.querySelector("h1"), document.querySelector("h1").style.getPropertyValue)));
 }
     
 window.addEventListener('resize', function(event) {
       console.log(JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize));
   if ($(window).width() >= 1500) { 
-      document.querySelector('.project-title.b').innerHTML = ("Scale: @3x : " + JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize) + " " + JSON.stringify(window.getComputedStyle(document.querySelector("h1"), "color")));
+      document.querySelector('.project-title.b').innerHTML = ("Scale: @3x : " + JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize) + " " + JSON.stringify(window.getComputedStyle(document.querySelector("h1"), document.querySelector("h1").style.getPropertyValue)));
   }
   if (($(window).width() >= 500 && $(window).width() < 1000 )) { 
-          document.querySelector('.project-title.b').innerHTML = ("Scale: @1x : " + JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize) + " " + JSON.stringify(window.getComputedStyle(document.querySelector("h1"), "color")));
+          document.querySelector('.project-title.b').innerHTML = ("Scale: @1x : " + JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize) + " " + JSON.stringify(window.getComputedStyle(document.querySelector("h1"), document.querySelector("h1").style.getPropertyValue)));
   }
   if ($(window).width() >= 1000 && ($(window).width() > 1500) ){ 
-          document.querySelector('.project-title.b').innerHTML = ("Scale: @2x : " + JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize) + " " + JSON.stringify(window.getComputedStyle(document.querySelector("h1"), "color")));
+          document.querySelector('.project-title.b').innerHTML = ("Scale: @2x : " + JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize) + " " + JSON.stringify(window.getComputedStyle(document.querySelector("h1"), document.querySelector("h1").style.getPropertyValue)));
   }
 });
     

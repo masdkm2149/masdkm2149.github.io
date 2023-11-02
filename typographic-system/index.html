@@ -788,14 +788,16 @@ if (currentTheme == "dark") {
 }
 
 window.addEventListener('resize', function(event) {
+      console.log(document.querySelector('.project-title.b').style.getPropertyValue('font-size'));
+  
   if ($(window).width() > 1500){ 
-      console.log($(window).width()) 
-  document.querySelector('.project-title.b').innerHTML = ("Scale: @3x Font Size: " + document.querySelector('.project-title.b').style.getPropertyValue('font-size') + "px");
+      console.log($(window).width());
+    document.querySelector('.project-title.b').innerHTML = ("Scale: @3x Font Size: " + document.querySelector('.project-title.b').style.getPropertyValue('font-size') + "px #"  + document.querySelector('.project-title.b').style.getPropertyValue('color'));
   } 
 });
     
 if ($(window).width() > 1500){ 
-    console.log($(window).width())  
+    console.log($(window).width());
     document.querySelector('.project-title.b').innerHTML = ("Scale: @3x Font Size: " + document.querySelector('.project-title.b').style.getPropertyValue('font-size') + "px #"  + document.querySelector('.project-title.b').style.getPropertyValue('color'));
                              }
 

@@ -788,9 +788,9 @@ if (currentTheme == "dark") {
 }
 
 window.addEventListener('resize', function(event) {
-      console.log(JSON.stringify(document.querySelector('h1').style.getPropertyValue('font-size')));
+      console.log(JSON.stringify(window.getComputedStyle('h1.project-title.b').fontSize));
   console.log(JSON.stringify(document.querySelector("h1").style.getPropertyValue("font-size").replace(/[^0-9.]/g,'')));
-  
+
   if ($(window).width() > 1500){ 
       console.log($(window).width());
     document.querySelector('.project-title.b').innerHTML = ("Scale: @3x Font Size: " + document.querySelector('h1.project-title.b').style.getPropertyValue('font-size').replace(/[^0-9.]/g,'') + "px #"  + document.querySelector('--project-title').style.getPropertyValue('color').replace(/[^0-9.]/g,''));

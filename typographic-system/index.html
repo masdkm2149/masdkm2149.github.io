@@ -713,19 +713,33 @@ width: 100%;
   background: #292a2d;
   }
 
-</style></head>
+</style>
+
+</head>
  
-  <body onresize="getWindowSpec()">
-<div class="desktop-nav">
- 
-<div style="background: var(--bkg-color);height: 105px;top: 0;width: 100%;position: absolute;"></div><a href="https://designedbydan.art/"> <div id="logo" style="width: 150px;height: 45px;background: #FFFFFF;border: 3px solid #667080;box-sizing: border-box;left: 0px;right: 0;top: 0px;bottom: 60px;border: 1px solid #667080;/*! =============== breakpoint 1150px W ===============*/position: fixed;border: 1px solid #667080;margin-left: 30px;margin-top: 30px;content: &quot;LOGO&quot;;font-size: 24px;text-align: center;display: none;"></div><div class="contain-logo" style="left: 60px;position: absolute;"><div id="logoblockone" style="width: 9vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;border-left: 1vw solid;border-left-color: currentcolor;border-left-color: #474747;"></div><div id="logoblocktwo"></div><div id="logoblockthree" style="width: 9vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;top: 22px;border-left: 1vw solid;border-left-color: #474747;"></div></div><h3 id="logotype" style="position: absolute;left: calc(12vw + 65px);font-family: 'Inter', sans-serif;font-style: normal;font-weight: 600;/*! font-size: 16px; *//*! line-height: 48px; */letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: var(--project-title);margin: auto;/*! width: 8%; */padding: .5rem 0 .5rem 0;">Daniel Roswadowsky</h3>
-</a><a href="/Projects/" id="button1" style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;/*! background: #EEF1F4; */position: relative;flex: none;order: 0;flex-grow: 0;margin-right: 30px;"></a><h3 style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: absolute;/*! background: #EEF1F4; */border-radius: 24px;position: relative;flex: none;order: 0;flex-grow: 0;border: solid 2px #EEF1F4;" id="button2"></h3></div>
+<body onresize="getWindowSpec()">
+    
+    <div class="desktop-nav">
+     <div style="background: var(--bkg-color);height: 105px;top: 0;width: 100%;position: absolute;"></div>
+        <a href="https://designedbydan.art/"> <div id="logo" style="width: 150px;height: 45px;background: #FFFFFF;border: 3px solid #667080;box-sizing: border-box;left: 0px;right: 0;top: 0px;bottom: 60px;border: 1px solid #667080;/*! =============== breakpoint 1150px W ===============*/position: fixed;border: 1px solid #667080;margin-left: 30px;margin-top: 30px;content: &quot;LOGO&quot;;font-size: 24px;text-align: center;display: none;">
+        </div>
+            <div class="contain-logo" style="left: 60px;position: absolute;">
+                <div id="logoblockone" style="width: 9vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;border-left: 1vw solid;border-left-color: currentcolor;border-left-color: #474747;"></div>
+                <div id="logoblocktwo"></div>
+                <div id="logoblockthree" style="width: 9vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;top: 22px;border-left: 1vw solid;border-left-color: #474747;"></div>
+            </div>
+            <h3 id="logotype" style="position: absolute;left: calc(12vw + 65px);font-family: 'Inter', sans-serif;font-style: normal;font-weight: 600;/*! font-size: 16px; *//*! line-height: 48px; */letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: var(--project-title);margin: auto;/*! width: 8%; */padding: .5rem 0 .5rem 0;">Daniel Roswadowsky</h3>
+        </a>
+        <a href="/Projects/" id="button1" style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;/*! background: #EEF1F4; */position: relative;flex: none;order: 0;flex-grow: 0;margin-right: 30px;"></a>
+        <h3 style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: absolute;/*! background: #EEF1F4; */border-radius: 24px;position: relative;flex: none;order: 0;flex-grow: 0;border: solid 2px #EEF1F4;" id="button2"></h3>
+    </div>
+    
 <main class="content-main" onresize="reorder()">
-  <div class="content-main" style="overflow: clip;text-overflow: ellipsis;padding: 0;max-width: fit-content;top: 0;bottom: 0;right: 0;left: 0;margin: auto;position: relative !important;width: 100%;min-width: 0px;">
-<div class="head-interface" style="height: fit-content;margin: 0 auto;width: inherit;word-wrap: break-word;word-break: break-all;white-space: nowrap;"><h class="project-title" style="width: 78%;">H1 Headline</h>
+ <div class="content-main" style="overflow: clip;text-overflow: ellipsis;padding: 0;max-width: fit-content;top: 0;bottom: 0;right: 0;left: 0;margin: auto;position: relative !important;width: 100%;min-width: 0px;">
+<div class="head-interface" style="height: fit-content;margin: 0 auto;width: inherit;word-wrap: break-word;word-break: break-all;white-space: nowrap;"><h1 class="project-title" style="width: 78%;margin: 0;">H1 Headline</h1>
 <h2 style="position: relative;
 margin: 0;
-width: 59%;">H2 Sub Headline</h2><p style="margin: 0;width: 34%;" id="body-text">Body (Initial Line) Body (Add. Lines)</p>
+width: 49%;">H2 Sub Headline</h2><p style="margin: 0;width: 34%;" id="body-text">Body (Initial Line) Body (Add. Lines)</p>
 <h3 style="position: relative;
 margin: 0;
 font-style: normal;
@@ -740,7 +754,7 @@ color: var(--project-title);
 margin: 0;
 ">H4 Tag</h4>
 </div>
-<div class="head-interface" style="position: relative;left: 0;right: 0;top: 0;bottom: 0;display: flex;flex-direction: column;text-overflow: ellipsis;overflow: clip;height: fit-content;margin: 0 auto;width: inherit;word-wrap: break-word;word-break: break-all;white-space: nowrap;margin-left: 80px !important;"><h class="project-title" style="">var(--project-title)</h>
+<div class="head-interface" style="position: relative;left: 0;right: 0;top: 0;bottom: 0;display: flex;flex-direction: column;text-overflow: ellipsis;overflow: clip;height: fit-content;margin: 0 auto;width: inherit;word-wrap: break-word;word-break: break-all;white-space: nowrap;margin-left: 80px !important;"><h1 class="project-title" style="margin: 0;">var(--project-title)</h1>
 <h2 style="font-family: 'Inter', sans-serif;
 font-style: normal;
 font-weight: 700;
@@ -751,7 +765,6 @@ letter-spacing: -0.02em;
 font-feature-settings: 'calt' off;
  
 /* Primary */
-color: #667080;
 position: relative;
 margin: 0;
 ">H2 Sub Headline</h2><p id="body-text" style="margin: 0;">Body Copy</p>
@@ -759,21 +772,9 @@ margin: 0;
 ">H3 Display Text</h3><h4 style="margin: 0;">H4 Tag</h4>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div></main><script src="/sai.js"></script><script>
+</div>
+</main>
+<script src="/sai.js"></script><script>
       const btn = document.querySelector(".btn-toggle");
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 

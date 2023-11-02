@@ -789,11 +789,11 @@ if (currentTheme == "dark") {
 
 window.addEventListener('resize', function(event) {
       console.log(document.querySelector('h1').style.getPropertyValue('font-size'));
-  console.log(document.querySelector('h1').style.getPropertyValue('font-size').replace(/[^0-9.]/g,''));
+  console.log(document.querySelector("h1").style.getPropertyValue("font-size"));
   
   if ($(window).width() > 1500){ 
       console.log($(window).width());
-    document.querySelector('.project-title.b').innerHTML = ("Scale: @3x Font Size: " + document.querySelector('h1.project-title.b').style.getPropertyValue('font-size') + "px #"  + document.querySelector('.project-title.b').style.getPropertyValue('color'));
+    document.querySelector('.project-title.b').innerHTML = ("Scale: @3x Font Size: " + document.querySelector('h1.project-title.b').style.getPropertyValue('font-size') + "px #"  + document.querySelector('--project-title').style.getPropertyValue('color'));
   } 
 });
     

@@ -788,7 +788,8 @@ if (currentTheme == "dark") {
 }
 
 window.addEventListener('resize', function(event) {
-      console.log(document.querySelector('h1.project-title.b').style.getPropertyValue('font-size'));
+      console.log(document.querySelector('h1').style.getPropertyValue('font-size'));
+  console.log(document.querySelector('h1').style.getPropertyValue('font-size').replace(/[^0-9.]/g,''));
   
   if ($(window).width() > 1500){ 
       console.log($(window).width());

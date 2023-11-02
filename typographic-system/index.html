@@ -786,6 +786,13 @@ if (currentTheme == "dark") {
   document.body.classList.add("light-theme");
 }
 
+window.addEventListener('resize', function(event) {
+  if ($(window).width() > 1500){ console.log($(window).width()) } 
+});
+    
+if ($(window).width() > 1500){ console.log($(window).width()) }
+
+    
 btn.addEventListener("click", function () {
   if (prefersDarkScheme.matches) {
   document.body.classList.remove("dark-theme");

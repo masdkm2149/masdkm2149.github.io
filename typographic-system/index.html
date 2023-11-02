@@ -10,6 +10,7 @@
 <script type="text/javascript" src="https://css-tricks.com/examples/HorzScrolling/jquery.mousewheel.js"></script>
  <style>
 
+
        @media screen and (min-width: 599px) and (max-width: 1500px)
 #button1, #button2 {
   padding: 15px 45px !important;
@@ -187,13 +188,7 @@ span:hover {
   width: auto;
   min-width: revert;
 }
-#body-text {
-  height: fit-content;
-}
 
-#body-copy {
-  margin-bottom: 30px;
-}
 #button1,#button2,#button3 {
   width: 30px;
   height: 12px;
@@ -270,14 +265,6 @@ width: 100%;
   width: 100%;
   margin: 0 auto;
 }
-.main-image {
-  width: 58vw;
-  height: calc(var(--vh) - 150px);
-  box-sizing: content-box;
-  position: relative;
-  top: 115px;
-  margin-left: 30px;
-}
 .content-main::-webkit-scrollbar {
     display: none;
 }
@@ -306,10 +293,6 @@ word-break: keep-all;
   background: var(--view_project-hov);
 }
 @media screen and (max-width: 600px) {
-.project-title {
-  font-size: 28px !important;
-  line-height: 32px !important;
-}
 #button1::after, #button2::after, #button3::after {
   font-size: 12px !important;
   letter-spacing: 0.01em !important;
@@ -318,14 +301,6 @@ word-break: keep-all;
 #button1, #button2 {
   padding: 12px 36px !important;
   margin-top: 2.5px;
-}
-h2{
-  font-size: 16px!important;
-  line-height: 20px!important;
-}
-#body-text {
- font-size: 12px!important;
- line-height:16px!important;
 }
 }
 @media screen and (min-width: 649px) and (max-width: 1200px) {
@@ -338,13 +313,6 @@ h2{
   padding: 15px 45px!important;
 }
 }
-    .interface{
-  }
-h2 {
-}
-.element-info {
-  margin-top: -3px;
-}
 @media screen and (min-width: 1350px) {
 #button1,#button2,#button3 {
   padding: 18px 55px !important;
@@ -352,171 +320,27 @@ h2 {
 }
 
 
-
-/* breakpoint */
-
-@media screen and (max-width: 700px) {
-#button1,#button2,#button3 {
-  
-}
-}
-
-@media screen and (max-height: 429px) {
-  .element-info{
-    height: calc(100% - 30px)!important;;
-  }
-}
-
-
 @media screen and (max-width: 390px) {
-//#body-text{
-  display: none!important;
-}
   a#button1, div#button2{
   margin-right: 99px !important;
   right: -70px;
   top: -8px;
   transform: scale(.90);
   }
-#body-text {
-  margin-top: 0px!important
-}
 }
 @media screen and (max-width: 220px) {
 
-  a#button1, div#button2{
+  a#button1, #button2{
   display: none!important;
   }
   
-}
-@media screen and (max-width: 325px) {
-  #body-copy > div {
-  }
 }
 
 *, ::before, ::after {
   box-sizing: unset;
 }
-@media screen and (max-width: 649px) {
-.project-title {
-  font-size: 48px !important;
-  line-height: 42px !important;
-}
-h2{
-  font-size: 32px !important;
-  margin: 3px 0 0 365px !important;
-  line-height: 64px !important;
-}
-#body-text {
- font-size: 14px!important;
- line-height:21px!important;
- margin-top: 12px!important;
-}
-}
-@media screen and (max-width: 799px) and (min-width: 701px){
-.project-title {
-  font-size: 28px !important;
-  line-height: 32px !important;
-}
-  .interface > a {
-    transform: scale(.9);
-    
-    transform-origin: left;
-  }
-    .head-interface{
-    width:  fit-content;
-    margin: auto 30px auto 0 !important;
-  }
-  .content-main{ flex-direction: row!important; }
-  .interface{
-    width: fit-content !important;
-    margin: auto 0 !important;
-    padding-top: 18px;
-  }
-h2{
-  font-size: 16px!important;
-  margin: 3px 0 0 0!important;
-  line-height: 20px!important;
-}
-  .bta#body-text {
-}
-#body-text {
- font-size: 14px!important;
- line-height:21px!important;
- margin-top: 12px !important;
-}
-}
-@media screen and (max-width: 799px) and (min-width: 701px) {
-.project-title {
-  font-size: 36px !important;
-  line-height: 42px !important;
-}
-  #body-text {
- font-size: 12px !important;
- line-height:14px !important;
- margin-top: 12px!important;
-}
-   .bta#body-text {
- font-size: 12px !important;
- line-height:14px !important;
-}
-    #body-copy {
-  }
-h2{
-  margin: 3px 0 0 200px !important;
-  font-size: 18px!important;
-  line-height: 36px !important;
-}
-#body-text {
- /*! font-size: 14px!important; */
- /*! line-height:21px!important; */
- /*! margin-top: 12px!important; */
-}
-}
-@media screen and (max-width: 700px){
-.project-title {
-  font-size: 36px !important;
-  line-height: 42px !important;
-}
-  .interface{
-    flex-direction: column-reverse!important;
-    margin: 10px 0 0 0 !important;
-  }
-h2{
-  margin: 3px 0 0 0!important;
-  font-size: 18px!important;
-  line-height: 24px!important;
-}
-#body-text {
- font-size: 12px !important;
- line-height:14px !important;
- margin-top: 12px!important;
-}
-   .bta#body-text {
- font-size: 12px !important;
- line-height:14px !important;
- margin-bottom: 30px;
-}
-  .interface > a{
-    /*! margin-top: 78px !important; */
-    margin-bottom: 8px;
-  }
-#body-copy {
-}
-}
-}
-@media screen and (max-width: 1000px) and (max-height: 700px){
-.project-title {
-  font-size: 28px !important;
-  line-height: 32px !important;
-}
-}
-}@media screen and (max-width: 1000px) and (max-height: 700px){
-.project-title {
-  font-size: 28px !important;
-  line-height: 32px !important;
-}
-}
+
+
 @media screen and (max-width: 620px){
   .contain-logo{
     left: 60px !important;
@@ -526,43 +350,27 @@ h2{
   }
 }
 
- 
-@media screen and (max-width: 1249px) and (min-width: 800px)  {
-  .interface{
-    width: fit-content !important;
-    margin-left: 30px;
-    margin: auto 0 !important;
-    padding-top: 16px;
-  }
-  .head-interface {
-    width: fit-content;
-    margin: auto 30px auto 0 !important;} 
-  #body-text {
-  font-size: 14px!important;
-    margin-top: 50px;
-    line-height: 14px !important;
-  }
-.content-main {
-  flex-direction: row !important;
-}
-}
-
-
-
-
-
 
 /* TYPOGRAPHY SYSTEM */
 
 
-
 /* base styles */
+div.content-main * {
+  text-overflow: ellipsis;
+  overflow: clip;
+  word-wrap: break-word;
+}
 p, h, h1, h2, h3, h4, h5, h6 {
   font-family: 'Inter', sans-serif;
   font-style: normal;
 }
 h, h1, h2, h4, h5, h6 {
   display: flex;
+}
+h1 {
+  color: var(--project-title);
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 h2 {
 color: var(--h2-color);  
@@ -596,10 +404,10 @@ div.content-main *, p, h, h1, h2, h3, h4, h5, h6 {
 /* capitalization */
 div.content-main *, h1 { text-transform: capitalize;}
 
-/* (@ 4.0x) */
+/* (@ 3.0x) */
 
-/* Breakpoint-width ( > 1250 ) */
-@media screen and (min-width: 1250px) {
+/* Breakpoint-width ( > 1500 ) */
+@media screen and (min-width: 1500px) {
   
 /* Button Increase Padding */
   #button1,#button2,#button3 {
@@ -616,11 +424,8 @@ h1::first-line, .project-title::first-line{
 }
   
 /* H2 */    
-h2::first-line {
-  line-height:  7rem;
-}
 h2 {
-  font-size: 32px !important;
+  font-size: 2rem !important;
   line-height: 2.25rem !important;
 }
   
@@ -641,8 +446,8 @@ h2 ~ p {
 padding-top: 1rem;
   }
   p, .body-text {
-    font-size: 1rem;
-    line-height: 2rem;
+    font-size: 1.1rem;
+    line-height: 2.2rem;
   }
 
 /* Etc page format */  
@@ -659,6 +464,122 @@ padding-top: 1rem;
 }
 
 }
+
+/* (@ 2.0x) */
+
+/* Breakpoint-width ( > 1000  & < 1500 ) */
+@media screen and (max-width: 1499px) and (min-width: 1000px)  {
+
+  
+/* H1 */  
+h1, .project-title{
+  font-size:  3rem ;
+  line-height: 4rem!important;
+}
+h1::first-line, .project-title::first-line{
+  line-height:  1rem!important;
+}
+  
+/* H2 */    
+h2 {
+  font-size: 1.5rem !important;
+  line-height: 1.75rem !important;
+}
+  
+/* H3 */    
+h3::first-line {
+  line-height: 1.5rem;
+}
+h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+    
+  
+/* Body */   
+  p::first-line, p#body-text::first-line {
+    line-height: 1.8rem !important;
+  } 
+h2 ~ p {
+padding-top: .75rem;
+  }
+  p, .body-text {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+/* Etc page format */  
+.interface {
+  width: fit-content !important;
+  margin-left: 30px;
+  margin: auto 0 !important;
+  padding-top: 16px;
+}
+.head-interface {
+  width: fit-content;
+  margin: auto 30px auto 0 !important;
+} 
+.content-main {
+  flex-direction: row !important;
+}
+}
+
+/* (@ 1.0x) */
+
+/* Breakpoint-width ( 500 > & < 1000 ) */
+@media screen and (max-width: 1000px) and (min-width: 500px)  {
+
+  
+/* H1 */  
+h1, .project-title{
+  font-size:  2rem!important;;
+  line-height: 2.5rem!important;
+}
+  
+/* H2 */    
+h2 {
+  font-size: 1rem !important;
+  line-height: 1.125rem !important;
+}
+  
+/* H3 */    
+h3::first-line {
+  line-height: 1.2rem;
+}
+h3 {
+  font-size: .8rem;
+  line-height: 1.2rem;
+}
+    
+  
+/* Body */   
+  p::first-line, p#body-text::first-line {
+    line-height: 1.62rem !important;
+  } 
+h2 ~ p {
+padding-top: .5rem;
+  }
+  p, .body-text {
+    font-size: .9rem;
+    line-height: 1.62rem;
+  }
+
+/* Etc page format */  
+.interface {
+  width: fit-content !important;
+  margin-left: 30px;
+  margin: auto 0 !important;
+  padding-top: 16px;
+}
+.head-interface {
+  width: fit-content;
+  margin: auto 30px auto 0 !important;
+} 
+.content-main {
+  flex-direction: row !important;
+}
+}
+
 *, ::before, ::after {
   box-sizing: unset;
 }
@@ -753,27 +674,8 @@ width: 100%;
 .content-main::-webkit-scrollbar {
     display: none;
 }
-     .head-interface > h2:nth-child(2) {
-}
- div.content-main * {
-text-overflow: ellipsis;
-overflow: clip;
-word-wrap: break-word;
-}
-.project-title {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 3rem;
-  line-height: 3rem;
-  letter-spacing: -0.02em;
-  font-feature-settings: 'calt' off;
-  text-overflow: ellipsis;
-  overflow: clip;
-  word-wrap: anywhere;
-  word-break: keep-all;
-  color: var(--project-title);
-}
+
+
 #button1:active, #button2:active {
     background-color: #292a2d !important;
     border: solid 2px #667080!important;
@@ -810,10 +712,6 @@ word-wrap: break-word;
 #button1:hover {
   background: #292a2d;
   }
-
-
-
-
 
 </style></head>
  

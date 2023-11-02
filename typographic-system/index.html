@@ -790,7 +790,7 @@ if (currentTheme == "dark") {
   if ( $(window).width() > 1499 ) { 
       document.querySelector('.project-title.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
   }
-  else if ($(window).width() >= 1000 && ($(window).width() > 1500) ){ 
+  else if ($(window).width() >= 1000 && ($(window).width() < 1500) ){ 
           document.querySelector('.project-title.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
   } 
   else if ($(window).width() < 1000 ) { 
@@ -804,7 +804,7 @@ window.addEventListener('resize', function(event) {
   if ( $(window).width() > 1499 ) { 
       document.querySelector('.project-title.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
   }
-  else if ($(window).width() >= 1000 && ($(window).width() > 1500) ){ 
+  else if ($(window).width() >= 1000 && ($(window).width() < 1500) ){ 
           document.querySelector('.project-title.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
   } 
   else if ($(window).width() < 1000 ) { 

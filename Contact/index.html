@@ -196,8 +196,8 @@ span:hover {
   float: right;
   margin-right: 30px;
 }
-#button2{
- border: solid 2px #6A7586 !important;
+#button2 {
+  border: var(--border-color) !important;
 }
 #button1::after {
   content: "Projects";
@@ -575,6 +575,9 @@ h2 {
   box-sizing: unset;
   word-wrap: ;
 }
+
+#button1 { solid 2px #6A7586 !important }
+     
 #button1::after {
   content: "Projects";
   position: absolute;

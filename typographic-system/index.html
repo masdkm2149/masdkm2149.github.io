@@ -867,6 +867,12 @@ function getInfo() {
 window.addEventListener('resize', function(event) { 
      if ( $(window).width() < 501 ) {
           if ( $(window).width() < $(window).height() ) {
+              document.querySelector("h1").classList.remove("rh");
+              document.querySelector("h2").classList.remove("rh");
+              document.querySelector("h3").classList.remove("rh");
+              document.querySelector("h4").classList.remove("rh");
+              document.querySelector("p").classList.remove("rh");
+              document.querySelector(".head-interface").classList.remove("rh");
               document.querySelector("h1").classList.add("rw");
               document.querySelector("h2").classList.add("rw");
               document.querySelector("h3").classList.add("rw");
@@ -875,6 +881,12 @@ window.addEventListener('resize', function(event) {
               document.querySelector(".head-interface").classList.add("rw");
           } 
         else if ( $(window).width() > $(window).height() ) {
+              document.querySelector("h1").classList.remove("rw");
+              document.querySelector("h2").classList.remove("rw");
+              document.querySelector("h3").classList.remove("rw");
+              document.querySelector("h4").classList.remove("rw");
+              document.querySelector("p").classList.remove("rw");
+              document.querySelector(".head-interface").classList.remove("rw");
               document.querySelector("h1").classList.add("rh");
               document.querySelector("h2").classList.add("rh");
               document.querySelector("h3").classList.add("rh");

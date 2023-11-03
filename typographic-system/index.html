@@ -867,32 +867,32 @@ function getInfo() {
 window.addEventListener('resize', function(event) { 
      if ( $(window).width() < 501 ) {
           if ( $(window).width() < $(window).height() ) {
-              document.querySelector("h1").classList.remove("rh");
-              document.querySelector("h2").classList.remove("rh");
-              document.querySelector("h3").classList.remove("rh");
-              document.querySelector("h4").classList.remove("rh");
-              document.querySelector("p").classList.remove("rh");
-              document.querySelector(".head-interface").classList.remove("rh");
-              document.querySelector("h1").classList.add("rw");
-              document.querySelector("h2").classList.add("rw");
-              document.querySelector("h3").classList.add("rw");
-              document.querySelector("h4").classList.add("rw");
-              document.querySelector("p").classList.add("rw");
-              document.querySelector(".head-interface").classList.add("rw");
+              document.querySelectorAll("h1").classList.remove("rh");
+              document.querySelectorAll("h2").classList.remove("rh");
+              document.querySelectorAll("h3").classList.remove("rh");
+              document.querySelectorAll("h4").classList.remove("rh");
+              document.querySelectorAll("p").classList.remove("rh");
+              document.querySelectorAll(".head-interface").classList.remove("rh");
+              document.querySelectorAll("h1").classList.add("rw");
+              document.querySelectorAll("h2").classList.add("rw");
+              document.querySelectorAll("h3").classList.add("rw");
+              document.querySelectorAll("h4").classList.add("rw");
+              document.querySelectorAll("p").classList.add("rw");
+              document.querySelectorAll(".head-interface").classList.add("rw");
           } 
         else if ( $(window).width() > $(window).height() ) {
-              document.querySelector("h1").classList.remove("rw");
-              document.querySelector("h2").classList.remove("rw");
-              document.querySelector("h3").classList.remove("rw");
-              document.querySelector("h4").classList.remove("rw");
-              document.querySelector("p").classList.remove("rw");
-              document.querySelector(".head-interface").classList.remove("rw");
-              document.querySelector("h1").classList.add("rh");
-              document.querySelector("h2").classList.add("rh");
-              document.querySelector("h3").classList.add("rh");
-              document.querySelector("h4").classList.add("rh");
-              document.querySelector("p").classList.add("rh");
-              document.querySelector(".head-interface").classList.add("rh");
+              document.querySelectorAll("h1").classList.remove("rw");
+              document.querySelectorAll("h2").classList.remove("rw");
+              document.querySelectorAll("h3").classList.remove("rw");
+              document.querySelectorAll("h4").classList.remove("rw");
+              document.querySelectorAll("p").classList.remove("rw");
+              document.querySelectorAll(".head-interface").classList.remove("rw");
+              document.querySelectorAll("h1").classList.add("rh");
+              document.querySelectorAll("h2").classList.add("rh");
+              document.querySelectorAll("h3").classList.add("rh");
+              document.querySelectorAll("h4").classList.add("rh");
+              document.querySelectorAll("p").classList.add("rh");
+              document.querySelectorAll(".head-interface").classList.add("rh");
           } 
      } 
       console.log(JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize));

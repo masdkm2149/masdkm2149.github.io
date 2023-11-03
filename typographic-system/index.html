@@ -865,6 +865,24 @@ function getInfo() {
 }   
           getInfo();
 window.addEventListener('resize', function(event) { 
+     if ( $(window).width() < 501 ) {
+          if ( $(window).width() < $(window).height() ) {
+              document.querySelector("h1").classList.add("rw");
+              document.querySelector("h2").classList.add("rw");
+              document.querySelector("h3").classList.add("rw");
+              document.querySelector("h4").classList.add("rw");
+              document.querySelector("p").classList.add("rw");
+              document.querySelector(".head-interface").classList.add("rw");
+          } 
+        else if ( $(window).width() > $(window).height() ) {
+              document.querySelector("h1").classList.add("rh");
+              document.querySelector("h2").classList.add("rh");
+              document.querySelector("h3").classList.add("rh");
+              document.querySelector("h4").classList.add("rh");
+              document.querySelector("p").classList.add("rh");
+              document.querySelector(".head-interface").classList.add("rh");
+          } 
+     } 
       console.log(JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize));
       getInfo();
 });

@@ -875,18 +875,8 @@ margin: 0;
 
 </div>
 </main>
-<script src="/sai.js"></script><script>
-      const btn = document.querySelector(".btn-toggle");
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-const currentTheme = localStorage.getItem("theme");
-if (currentTheme == "dark") { 
-  document.body.classList.remove("light-theme");
-  document.body.classList.add("dark-theme");
-} else if (currentTheme == "light") {
-  document.body.classList.remove("dark-theme");
-  document.body.classList.add("light-theme");
-}
+<script src="/sai.js"></script>
+<script>
 function getInfo() {
   if ( $(window).width() > 1499 ) { 
         document.querySelector('.project-title.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") Weight: " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("font-weight") + " Line Height: " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("line-height") + " " +  window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
@@ -945,19 +935,6 @@ window.addEventListener('resize', function(event) {
       console.log(JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize));
       getInfo();
 });
-    
-// btn.addEventListener("click", function () {
-//  if (prefersDarkScheme.matches) {
-//  document.body.classList.remove("dark-theme");
-//  document.body.classList.add("light-theme");
-//  var theme = document.body.classList.contains("light-theme") ? "light" : "dark";
-//  } else {
-//  document.body.classList.remove("light-theme");
-//  document.body.classList.add("dark-theme");
-//  var theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
-//  }
-// localStorage.setItem("theme", theme);
-// });
       </script>
     <style type="text/css"></style><style type="text/css"></style><style type="text/css"></style>
 <style type="text/css"></style>

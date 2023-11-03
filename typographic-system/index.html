@@ -772,8 +772,6 @@ padding-top: 1vw;
   margin: 30px auto 0 auto !important;
 }   
 }
-
-
 </style>
 
 </head>
@@ -796,32 +794,27 @@ padding-top: 1vw;
     </div>
     
 <main class="content-main" onresize="reorder()">
- <div class="content-main" style="overflow: clip;text-overflow: ellipsis;padding: 0;max-width: fit-content;top: 0;bottom: 0;right: 0;left: 0;margin: auto;position: relative !important;width: 100%;min-width: 0px;">
-<div class="head-interface" style="height: fit-content;margin: 0 auto;width: inherit;word-wrap: break-word;word-break: break-all;white-space: nowrap;"><h1 class="project-title" style="width: 78%;margin: 0;">H1 Headline</h1>
-<h2 style="position: relative;
-margin: 0;
-width: 49%;">H2 Sub Headline</h2><p style="margin: 0;width: 34%;" id="body-text">Body (Initial Line) Body (Add. Lines)</p>
+<div class="content-main" style="overflow: clip;text-overflow: ellipsis;padding: 0;max-width: fit-content;top: 0;bottom: 0;right: 0;left: 0;margin: auto;position: relative !important;width: 100%;min-width: 0px;">
+<div class="head-interface" style="height: fit-content;margin: 0 auto;width: fit-content;word-wrap: break-word;word-break: break-all;white-space: nowrap;"><h1 class="project-title" style="width: fit-content;margin: 0;">H1 Headline</h1>
+<h2 style="margin: 0;
+width: fit-content;">H2 Sub Headline</h2><p style="margin: 0;max-width: fit-content !important;max-height: fit-content !important;width: 50%;" id="body-text">Body (Initial Line) Body (Add. Lines)</p>
 <h3 style="position: relative;
 margin: 0;
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 48px;
-letter-spacing: -0.02em;
-color: var(--project-title);
+width: fit-content;
 ">H3 Display Text</h3><h4 style="/* or 137% */
  
 /* Primary */
 margin: 0;
+width: fit-content;
 ">H4 Tag</h4>
 </div>
-<div class="head-interface" style="position: relative;left: 0;right: 0;top: 0;bottom: 0;display: flex;flex-direction: column;text-overflow: ellipsis;overflow: clip;height: fit-content;margin: 0 auto;width: inherit;word-wrap: break-word;word-break: break-all;white-space: nowrap;margin-left: 80px !important;"><h1 class="project-title b" style="margin: 0;"></h1>
+<div class="head-interface" style="position: relative;left: 0;right: 0;top: 0;bottom: 0;display: flex;flex-direction: column;text-overflow: ellipsis;overflow: clip;height: fit-content;margin: 0 auto;width: auto;word-wrap: break-word;word-break: break-all;width: 50%;"><h1 class="project-title b" style="margin: 0;"></h1>
 <h2 class="b" style="
 position: relative;
 margin: 0;
-"></h2><p id="body-text" style="margin: 0;">Body Copy</p>
-<h3 class="b" style="margin: 0;
-">H3 Display Text</h3><h4 style="margin: 0;">H4 Tag</h4>
+"></h2><p id="body-text" style="margin: 0;">Body</p>
+<h3 style="margin: 0;"></h3>
+<h4 style="margin: 0;"></h4>
 </div>
 
 </div>
@@ -842,17 +835,20 @@ function getInfo() {
   if ( $(window).width() > 1499 ) { 
         document.querySelector('.project-title.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("line-height") + " " +  window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
         document.querySelector('h2.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
-        document.querySelector('h3.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h3")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("color"));
+        document.querySelector('h3.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h3")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("color"));
+        document.querySelector('h4.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h4")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h4")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h4")).getPropertyValue("color"));
   }
   if ($(window).width() >= 1000 && ($(window).width() < 1500) ){ 
           document.querySelector('.project-title.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
           document.querySelector('h2.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));   
-          document.querySelector('h3.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h3")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("color"));
+          document.querySelector('h3.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h3")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("color"));
+          document.querySelector('h4.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h4")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h4")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h4")).getPropertyValue("color"));
   }
   if ( $(window).width() < 1000 ) { 
           document.querySelector('.project-title.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
           document.querySelector('h2.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
           document.querySelector('h3.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h3")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("color"));
+          document.querySelector('h4.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h4")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h4")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h4")).getPropertyValue("color"));
   }
 }   
           getInfo();

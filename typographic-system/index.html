@@ -905,36 +905,37 @@ window.addEventListener('resize', function(event) {
      if ( $(window).width() < 501 ) {
           if ( $(window).width() < $(window).height() ) {
               if ( document.querySelector(".head-interface").classList.contains("rh") ) {
-              document.querySelectorAll("h1").classList.remove("rh");
-              document.querySelectorAll("h2").classList.remove("rh");
-              document.querySelectorAll("h3").classList.remove("rh");
-              document.querySelectorAll("h4").classList.remove("rh");
-              document.querySelectorAll("p").classList.remove("rh");
-              document.querySelectorAll(".head-interface").classList.remove("rh");
+                  
+ for (let i = 0; i < document.querySelectorAll("h1").length; i++) { document.querySelectorAll("h1")[i].classList.remove("rh"); });                 
+ for (let i = 0; i < document.querySelectorAll("h2").length; i++) { document.querySelectorAll("h2")[i].classList.remove("rh"); });   
+ for (let i = 0; i < document.querySelectorAll("h3").length; i++) { document.querySelectorAll("h3")[i].classList.remove("rh"); });   
+ for (let i = 0; i < document.querySelectorAll("h4").length; i++) { document.querySelectorAll("h4")[i].classList.remove("rh"); });   
+ for (let i = 0; i < document.querySelectorAll("p").length; i++) { document.querySelectorAll("p")[i].classList.remove("rh"); });   
+ for (let i = 0; i < document.querySelectorAll(".head-interface").length; i++) { document.querySelectorAll(".head-interface")[i].classList.remove("rh"); });   
               }
-              document.querySelectorAll("h1").classList.add("rw");
-              document.querySelectorAll("h2").classList.add("rw");
-              document.querySelectorAll("h3").classList.add("rw");
-              document.querySelectorAll("h4").classList.add("rw");
-              document.querySelectorAll("p").classList.add("rw");
-              document.querySelectorAll(".head-interface").classList.add("rw");
+ for (let i = 0; i < document.querySelectorAll("h1").length; i++) { document.querySelectorAll("h1")[i].classList.add("rw"); });                 
+ for (let i = 0; i < document.querySelectorAll("h2").length; i++) { document.querySelectorAll("h2")[i].classList.add("rw"); });   
+ for (let i = 0; i < document.querySelectorAll("h3").length; i++) { document.querySelectorAll("h3")[i].classList.add("rw"); });   
+ for (let i = 0; i < document.querySelectorAll("h4").length; i++) { document.querySelectorAll("h4")[i].classList.add("rw"); });   
+ for (let i = 0; i < document.querySelectorAll("p").length; i++) { document.querySelectorAll("p")[i].classList.add("rw"); });   
+ for (let i = 0; i < document.querySelectorAll(".head-interface").length; i++) { document.querySelectorAll(".head-interface")[i].classList.add("rw"); });   
           } 
         else if ( $(window).width() > $(window).height() ) {
             if ( document.querySelector(".head-interface").classList.contains("rw") ) {
-              document.querySelectorAll("h1").classList.remove("rw");
-              document.querySelectorAll("h2").classList.remove("rw");
-              document.querySelectorAll("h3").classList.remove("rw");
-              document.querySelectorAll("h4").classList.remove("rw");
-              document.querySelectorAll("p").classList.remove("rw");
-              document.querySelectorAll(".head-interface").classList.remove("rw");
+ for (let i = 0; i < document.querySelectorAll("h1").length; i++) { document.querySelectorAll("h1")[i].classList.remove("rw"); });                 
+ for (let i = 0; i < document.querySelectorAll("h2").length; i++) { document.querySelectorAll("h2")[i].classList.remove("rw"); });   
+ for (let i = 0; i < document.querySelectorAll("h3").length; i++) { document.querySelectorAll("h3")[i].classList.remove("rw"); });   
+ for (let i = 0; i < document.querySelectorAll("h4").length; i++) { document.querySelectorAll("h4")[i].classList.remove("rw"); });   
+ for (let i = 0; i < document.querySelectorAll("p").length; i++) { document.querySelectorAll("p")[i].classList.remove("rw"); });   
+ for (let i = 0; i < document.querySelectorAll(".head-interface").length; i++) { document.querySelectorAll(".head-interface")[i].classList.remove("rw"); });   
             }
-              document.querySelectorAll("h1").classList.add("rh");
-              document.querySelectorAll("h2").classList.add("rh");
-              document.querySelectorAll("h3").classList.add("rh");
-              document.querySelectorAll("h4").classList.add("rh");
-              document.querySelectorAll("p").classList.add("rh");
-              document.querySelectorAll(".head-interface").classList.add("rh");
-          } 
+              }
+ for (let i = 0; i < document.querySelectorAll("h1").length; i++) { document.querySelectorAll("h1")[i].classList.add("rh"); });                 
+ for (let i = 0; i < document.querySelectorAll("h2").length; i++) { document.querySelectorAll("h2")[i].classList.add("rh"); });   
+ for (let i = 0; i < document.querySelectorAll("h3").length; i++) { document.querySelectorAll("h3")[i].classList.add("rh"); });   
+ for (let i = 0; i < document.querySelectorAll("h4").length; i++) { document.querySelectorAll("h4")[i].classList.add("rh"); });   
+ for (let i = 0; i < document.querySelectorAll("p").length; i++) { document.querySelectorAll("p")[i].classList.add("rh"); });   
+ for (let i = 0; i < document.querySelectorAll(".head-interface").length; i++) { document.querySelectorAll(".head-interface")[i].classList.add("rh"); });   
      } 
       console.log(JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize));
       getInfo();

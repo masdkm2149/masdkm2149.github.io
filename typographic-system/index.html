@@ -899,18 +899,18 @@ window.addEventListener('resize', function(event) {
       getInfo();
 });
     
-btn.addEventListener("click", function () {
-  if (prefersDarkScheme.matches) {
-  document.body.classList.remove("dark-theme");
-  document.body.classList.add("light-theme");
-  var theme = document.body.classList.contains("light-theme") ? "light" : "dark";
-  } else {
-  document.body.classList.remove("light-theme");
-  document.body.classList.add("dark-theme");
-  var theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
-  }
-  localStorage.setItem("theme", theme);
-});
+// btn.addEventListener("click", function () {
+//  if (prefersDarkScheme.matches) {
+//  document.body.classList.remove("dark-theme");
+//  document.body.classList.add("light-theme");
+//  var theme = document.body.classList.contains("light-theme") ? "light" : "dark";
+//  } else {
+//  document.body.classList.remove("light-theme");
+//  document.body.classList.add("dark-theme");
+//  var theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
+//  }
+// localStorage.setItem("theme", theme);
+// });
       </script>
     <style type="text/css"></style><style type="text/css"></style><style type="text/css"></style>
 <style type="text/css"></style>

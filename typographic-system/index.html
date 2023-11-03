@@ -777,36 +777,24 @@ if (currentTheme == "dark") {
   document.body.classList.remove("dark-theme");
   document.body.classList.add("light-theme");
 }
-
+function getInfo() {
   if ( $(window).width() > 1499 ) { 
-      document.querySelector('.project-title.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
+      document.querySelector('.project-title.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") Line Height:" + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height") + " " +  window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
       document.querySelector('h2.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Line Height:" + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
   }
   else if ($(window).width() >= 1000 && ($(window).width() < 1500) ){ 
-          document.querySelector('.project-title.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
+          document.querySelector('.project-title.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") Line Height:" + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height") + " " +  window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
           document.querySelector('h2.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Line Height:" + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
   } 
   else if ($(window).width() < 1000 ) { 
-          document.querySelector('.project-title.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
+          document.querySelector('.project-title.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") Line Height:" + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height") + " " +  + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
           document.querySelector('h2.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Line Height:" + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
   }
-    
-window.addEventListener('resize', function(event) {
-    
+}   
+          getInfo();
+window.addEventListener('resize', function(event) { 
       console.log(JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize));
-    
-  if ( $(window).width() > 1499 ) { 
-      document.querySelector('.project-title.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
-      document.querySelector('h2.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Line Height:" + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
-  }
-  else if ($(window).width() >= 1000 && ($(window).width() < 1500) ){ 
-          document.querySelector('.project-title.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
-          document.querySelector('h2.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Line Height:" + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
-  } 
-  else if ($(window).width() < 1000 ) { 
-          document.querySelector('.project-title.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
-          document.querySelector('h2.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Line Height:" + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
-  }
+      getInfo();
 });
     
 btn.addEventListener("click", function () {

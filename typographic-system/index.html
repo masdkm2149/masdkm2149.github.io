@@ -755,7 +755,7 @@ margin: 0;
 ">H4 Tag</h4>
 </div>
 <div class="head-interface" style="position: relative;left: 0;right: 0;top: 0;bottom: 0;display: flex;flex-direction: column;text-overflow: ellipsis;overflow: clip;height: fit-content;margin: 0 auto;width: inherit;word-wrap: break-word;word-break: break-all;white-space: nowrap;margin-left: 80px !important;"><h1 class="project-title b" style="margin: 0;"></h1>
-<h2 style="font-family: 'Inter', sans-serif;
+<h2 class="b" style="font-family: 'Inter', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 24px;
@@ -789,12 +789,15 @@ if (currentTheme == "dark") {
 
   if ( $(window).width() > 1499 ) { 
       document.querySelector('.project-title.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
+      document.querySelector('h2.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Line Height:" + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height")) + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
   }
   else if ($(window).width() >= 1000 && ($(window).width() < 1500) ){ 
           document.querySelector('.project-title.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
+          document.querySelector('h2.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Line Height:" + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height")) + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
   } 
   else if ($(window).width() < 1000 ) { 
           document.querySelector('.project-title.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
+          document.querySelector('h2.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Line Height:" + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height")) + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
   }
     
 window.addEventListener('resize', function(event) {
@@ -803,12 +806,15 @@ window.addEventListener('resize', function(event) {
     
   if ( $(window).width() > 1499 ) { 
       document.querySelector('.project-title.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
+      document.querySelector('h2.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Line Height:" + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height")) + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
   }
   else if ($(window).width() >= 1000 && ($(window).width() < 1500) ){ 
           document.querySelector('.project-title.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
+          document.querySelector('h2.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Line Height:" + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height")) + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
   } 
   else if ($(window).width() < 1000 ) { 
           document.querySelector('.project-title.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
+          document.querySelector('h2.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Line Height:" + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height")) + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
   }
 });
     

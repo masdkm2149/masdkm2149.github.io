@@ -11,6 +11,7 @@
  <style>
 
 
+
        @media screen and (min-width: 599px) and (max-width: 1500px)
 #button1, #button2 {
   padding: 15px 45px !important;
@@ -350,236 +351,6 @@ word-break: keep-all;
   }
 }
 
-
-/* TYPOGRAPHY SYSTEM */
-
-
-/* base styles */
-div.content-main * {
-  text-overflow: ellipsis;
-  overflow: clip;
-  word-wrap: break-word;
-}
-p, h, h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-}
-h, h1, h2, h4, h5, h6 {
-  display: flex;
-}
-h1 {
-  color: var(--project-title);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-h2 {
-color: var(--h2-color);  
-}
-h3 {
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--project-title);
-}
-h4 {
-  font-weight: 700;
-  font-size: 0.7rem;
-  line-height: 2rem;
-  letter-spacing: 0.01em;
-  color: #FFF;
-}
-#body-text{
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  color: var(--body-color);
-} 
-
-/* widows & orphans */
-div.content-main *, p, h, h1, h2, h3, h4, h5, h6 {
-  overflow: unset;
-  word-wrap: break-word;
-  white-space: break-spaces;
-  word-break: break-word;
-}
-
-/* capitalization */
-div.content-main *, h1 { text-transform: capitalize;}
-
-/* (@ 3.0x) */
-
-/* Breakpoint-width ( > 1500 ) */
-@media screen and (min-width: 1500px) {
-  
-/* Button Increase Padding */
-  #button1,#button2,#button3 {
-  padding: 18px 55px !important;
-}
-  
-/* H1 */  
-h1, .project-title{
-  font-size:  4rem !important;
-  line-height: 5rem !important;
-}
-h1::first-line, .project-title::first-line{
-  line-height:  5rem !important;
-}
-  
-/* H2 */    
-h2 {
-  font-size: 2rem !important;
-  line-height: 2.25rem !important;
-}
-  
-/* H3 */    
-h3::first-line {
-  line-height: 1.5rem;
-}
-h3 {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-  
-/* Body */   
-  p::first-line, p#body-text::first-line {
-    line-height: 2rem !important;
-  } 
-h2 ~ p {
-padding-top: 1rem;
-  }
-  p, .body-text {
-    font-size: 1.1rem;
-    line-height: 2.2rem;
-  }
-
-/* Etc page format */  
- .interface{
-    font-size: 1rem;
-    line-height: 1rem;
-  }
-  .head-interface {
-    width: fit-content;
-    margin: auto !important;
-  } 
-.content-main {
-  flex-direction: row !important;
-}
-
-}
-
-/* (@ 2.0x) */
-
-/* Breakpoint-width ( > 1000  & < 1500 ) */
-@media screen and (max-width: 1499px) and (min-width: 1000px)  {
-
-  
-/* H1 */  
-h1, .project-title{
-  font-size:  3rem ;
-  line-height: 4rem!important;
-}
-h1::first-line, .project-title::first-line{
-  line-height:  1rem!important;
-}
-  
-/* H2 */    
-h2 {
-  font-size: 1.5rem !important;
-  line-height: 1.75rem !important;
-}
-  
-/* H3 */    
-h3::first-line {
-  line-height: 1.5rem;
-}
-h3 {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-    
-  
-/* Body */   
-  p::first-line, p#body-text::first-line {
-    line-height: 1.8rem !important;
-  } 
-h2 ~ p {
-padding-top: .75rem;
-  }
-  p, .body-text {
-    font-size: 1rem;
-    line-height: 1.8rem;
-  }
-
-/* Etc page format */  
-.interface {
-  width: fit-content !important;
-  margin-left: 30px;
-  margin: auto 0 !important;
-  padding-top: 16px;
-}
-.head-interface {
-  width: fit-content;
-  margin: auto 30px auto 0 !important;
-} 
-.content-main {
-  flex-direction: row !important;
-}
-}
-
-/* (@ 1.0x) */
-
-/* Breakpoint-width ( 500 > & < 1000 ) */
-@media screen and (max-width: 1000px) and (min-width: 500px)  {
-
-  
-/* H1 */  
-h1, .project-title{
-  font-size:  2rem!important;;
-  line-height: 2.5rem!important;
-}
-  
-/* H2 */    
-h2 {
-  font-size: 1rem !important;
-  line-height: 1.25rem !important;
-}
-  
-/* H3 */    
-h3::first-line {
-  line-height: 1.2rem;
-}
-h3 {
-  font-size: .8rem;
-  line-height: 1.2rem;
-}
-    
-  
-/* Body */   
-  p::first-line, p#body-text::first-line {
-    line-height: 1.62rem !important;
-  } 
-h2 ~ p {
-padding-top: .5rem;
-  }
-  p, .body-text {
-    font-size: .9rem;
-    line-height: 1.62rem;
-  }
-
-/* Etc page format */  
-.interface {
-  width: fit-content !important;
-  margin-left: 30px;
-  margin: auto 0 !important;
-  padding-top: 16px;
-}
-.head-interface {
-  width: fit-content;
-  margin: auto 30px auto 0 !important;
-} 
-.content-main {
-  flex-direction: row !important;
-}
-}
-
 *, ::before, ::after {
   box-sizing: unset;
 }
@@ -713,6 +484,293 @@ width: 100%;
   background: #292a2d;
   }
 
+
+/* TYPOGRAPHY SYSTEM */
+
+
+/* base styles */
+div.content-main * {
+  text-overflow: ellipsis;
+  overflow: clip;
+  word-wrap: break-word;
+}
+p, h, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+}
+h, h1, h2, h4, h5, h6 {
+  display: flex;
+}
+h1 {
+  color: var(--project-title);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+h2 {
+color: var(--h2-color);  
+}
+h3 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--project-title);
+}
+h4 {
+  font-weight: 700;
+  font-size: 0.7rem;
+  line-height: 2rem;
+  letter-spacing: 0.01em;
+  color: #FFF;
+}
+#body-text{
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--body-color);
+} 
+
+/* widows & orphans */
+div.content-main *, p, h, h1, h2, h3, h4, h5, h6 {
+  overflow: unset;
+  word-wrap: break-word;
+  white-space: break-spaces;
+  word-break: break-word;
+}
+
+/* capitalization */
+div.content-main *, h1 { text-transform: capitalize;}
+
+/* (@ 3.0x) */
+
+/* Breakpoint-width ( > 1500 ) */
+@media screen and (min-width: 1500px) {
+  
+/* Button Increase Padding */
+  #button1,#button2,#button3 {
+  padding: 18px 55px !important;
+}
+  
+/* H1 */  
+h1, .project-title{
+  font-size:  4rem !important;
+  line-height: 5rem !important;
+}
+h1::first-line, .project-title::first-line{
+  line-height:  5rem !important;
+}
+  
+/* H2 */    
+h2 {
+  font-size: 2rem !important;
+  line-height: 2.25rem !important;
+}
+  
+/* H3 */    
+h3::first-line {
+  line-height: 1.5rem;
+}
+h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+  
+/* Body */   
+  p::first-line, p#body-text::first-line {
+    line-height: 2rem !important;
+  } 
+h2 ~ p {
+padding-top: 1rem;
+  }
+  p, .body-text {
+    font-size: 1.1rem;
+    line-height: 2.2rem;
+  }
+
+/* Etc page format */  
+ .interface{
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .head-interface {
+    width: fit-content;
+    margin: auto 30 auto 30 !important;
+  } 
+  .head-interface ~ .head-interface {
+    padding-left: 3vw;
+  } 
+.content-main {
+  flex-direction: row !important;
+}
+
+}
+
+/* (@ 2.0x) */
+
+/* Breakpoint-width ( > 1000  & < 1500 ) */
+@media screen and (max-width: 1499px) and (min-width: 1000px)  {
+
+  
+/* H1 */  
+h1, .project-title{
+  font-size:  3rem ;
+  line-height: 4rem!important;
+}
+h1::first-line, .project-title::first-line{
+  line-height:  1rem!important;
+}
+  
+/* H2 */    
+h2 {
+  font-size: 1.5rem !important;
+  line-height: 1.75rem !important;
+}
+  
+/* H3 */    
+h3::first-line {
+  line-height: 1.5rem;
+}
+h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+    
+  
+/* Body */   
+  p::first-line, p#body-text::first-line {
+    line-height: 1.8rem !important;
+  } 
+h2 ~ p {
+padding-top: .75rem;
+  }
+  p, .body-text {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+/* Etc page format */  
+.interface {
+  width: fit-content !important;
+  margin-left: 30px;
+  margin: auto 0 !important;
+  padding-top: 16px;
+}
+.head-interface {
+  width: fit-content;
+  margin: auto 30px auto 0 !important;
+} 
+.head-interface ~ .head-interface {
+    padding-left: 4vw;
+  } 
+.content-main {
+  flex-direction: row !important;
+}
+}
+
+/* (@ 1.0x) */
+
+/* Breakpoint-width ( 500 > & < 1000 ) */
+@media screen and (max-width: 1000px) and (min-width: 500px)  {
+
+  
+/* H1 */  
+h1, .project-title{
+  font-size:  2rem!important;;
+  line-height: 2.5rem!important;
+}
+  
+/* H2 */    
+h2 {
+  font-size: 1rem !important;
+  line-height: 1.25rem !important;
+}
+  
+/* H3 */    
+h3::first-line {
+  line-height: 1.2rem;
+}
+h3 {
+  font-size: .8rem;
+  line-height: 1.2rem;
+}
+    
+  
+/* Body */   
+  p::first-line, p#body-text::first-line {
+    line-height: 1.62rem !important;
+  } 
+h2 ~ p {
+padding-top: .5rem;
+  }
+  p, .body-text {
+    font-size: .9rem;
+    line-height: 1.62rem;
+  }
+
+/* Etc page format */  
+.interface {
+  width: fit-content !important;
+  margin-left: 30px;
+  margin: auto 0 !important;
+  padding-top: 16px;
+}
+.head-interface {
+  width: fit-content;
+  margin: auto 0 auto 30px !important;
+} 
+.head-interface ~ .head-interface {
+  padding: 0;
+} 
+.content-main {
+  flex-direction: row !important;
+}
+}
+
+@media screen and (max-width: 500px)  {
+  
+/* H1 */    
+  h1 {
+   font-size: 6vw
+  }  
+  
+/* H2 */    
+  h2 {
+   font-size: 3.5vw
+  }
+    
+/* H3 */    
+  h3 {
+   font-size: 2.5vw
+  }
+    
+/* H4 */    
+  h4 {
+   font-size: 2.25vw
+  }
+  
+/* Body */   
+h2 ~ p {
+padding-top: 1vw;
+  }
+  p, .body-text {
+    font-size: 3.25vw;
+    line-height: 1.62rem;
+  }
+  
+/* Etc page format */  
+.interface {
+  width: fit-content !important;
+  margin-left: 30px;
+  margin: auto 0 !important;
+  padding-top: 16px;
+}
+.head-interface {
+  width: fit-content;
+  margin: 30px auto 0 auto !important;
+} 
+.head-interface ~ .head-interface {
+  width: 55vw!important;
+  margin: 30px auto 0 auto !important;
+}   
+}
+
 </style>
 
 </head>
@@ -759,7 +817,7 @@ margin: 0;
 position: relative;
 margin: 0;
 "></h2><p id="body-text" style="margin: 0;">Body Copy</p>
-<h3 style="margin: 0;
+<h3 class="b" style="margin: 0;
 ">H3 Display Text</h3><h4 style="margin: 0;">H4 Tag</h4>
 </div>
 
@@ -781,14 +839,17 @@ function getInfo() {
   if ( $(window).width() > 1499 ) { 
         document.querySelector('.project-title.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("line-height") + " " +  window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
         document.querySelector('h2.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
+        document.querySelector('h3.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h3")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("color"));
   }
   if ($(window).width() >= 1000 && ($(window).width() < 1500) ){ 
           document.querySelector('.project-title.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
-          document.querySelector('h2.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
-  } 
+          document.querySelector('h2.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));   
+          document.querySelector('h3.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h3")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("color"));
+  }
   if ( $(window).width() < 1000 ) { 
           document.querySelector('.project-title.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
           document.querySelector('h2.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
+          document.querySelector('h3.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h3")).fontSize + ") Line Height: " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("color"));
   }
 }   
           getInfo();

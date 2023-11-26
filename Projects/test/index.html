@@ -1051,6 +1051,18 @@ function getInfo() {
 }   
           getInfo();
 window.addEventListener('resize', function(event) { 
+          if ( $(window).width() < $(window).height() ) { 
+                            if ( $('.x') ) {     
+                                for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.remove("x"); }   
+                            }
+    for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.add("y"); }   
+          }
+              if ( $(window).width() > $(window).height() ) { 
+                            if ( $('.y') ) {     
+                                for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.remove("y"); }   
+                            }
+    for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.add("x"); }   
+          }
      if ( $(window).width() < 501 ) {
           if ( $(window).width() < $(window).height() ) {
               if ( $('.rh') ) {             

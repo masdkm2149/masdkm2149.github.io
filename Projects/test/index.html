@@ -13,6 +13,138 @@ if ($(window).width() > 420 && $(window).height() > 420) { $("meta[name=viewport
 if ($(window).width() < 420 && $(window).height() > 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); } 
 if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); }
 </script>
+    <style>
+        
+.card {
+
+  display: flex;
+  scroll-snap-align: end;
+}
+.card-a {
+height: initial;
+border: var(--content-border);
+width: 100%;
+height: calc(100% - 6px);
+}
+.card-b {
+height: 100%;
+width: 100%;
+border: var(--content-border);
+padding: 3rem;
+display: flex;
+flex-direction: column;
+}
+
+.card.x {
+  left: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+.card.y {
+  flex-direction: column;
+}
+.card * {
+  box-sizing: border-box;
+}
+
+
+#ninetee.card-a {
+  object-fit: contain;
+  background-color: #48c2c5;
+  background-image: url(https://designedbydan.art/assets/images/46235423525432.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 2000px) { 
+.card {
+  width: calc(100vw - 4rem);
+  height: auto;
+  position: relative;
+}
+  .card.x {
+  width: calc(100vw - 4rem);
+  height: auto;
+  left: 2rem;
+}
+.card.y {
+  min-width: 100%;
+  /*! height: auto; */
+  /*! width: calc(100vw - 42rem); */
+  width: auto;
+}
+
+}
+
+@media screen and (min-width: 1000px) {
+  min-width: calc(100vw - 4rem);
+  height: auto;
+}
+
+.card ~ .card {
+  padding-left: 2rem;
+}
+
+.card.debug {
+  background: aquamarine;
+}
+.main-nav, * {
+  transition: all 0s !important;
+}
+@media (prefers-color-scheme: light) {
+body {
+  --text-color: #222;
+  --content-border: 3px solid rgb(102, 112, 128);
+  --bkg-color: #fff;
+  --view_project-but-text: #6a7586;   
+  --border-color: solid 2px #EEF1F4;
+  --tag-bg: #c8c8c8;
+  --h2-color: #667080;
+  --view_project-hov: #EEF1F4;
+  --view_project-but: #6a7586;
+  --body-color: #667080;
+  --project-title: #4b515b;
+  }
+  #BullseyeTracker.card-a {
+  background-image: url(https://designedbydan.art/assets/images/3240880DWE.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: center;
+}
+}
+@media (prefers-color-scheme: dark) {
+  body {
+--content-border: 3px solid rgb(18, 18, 22);
+--tag-bg: #2e313a;
+--body-color: #adb4c0;  
+--border-color: solid 2px #363840;
+--text-color: #eee;
+--h2-color: #585f6a;
+--bkg-color: #000;
+--view_project-hov: #0b0d10;
+--view_project-but: #363840;
+--view_project-but-text: #EEF1F4;  
+--project-title: #e0e0e0;
+}
+#BullseyeTracker.card-a {
+  background-image: url(https://designedbydan.art/assets/images/Wordmark_Light.png);
+  background-color: #000;  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}
+}
+
+.card.y .card-a + .card-b  {
+  border-top: none!important;
+}
+.card.x .card-a + .card-b  {
+  border-left: none!important;
+}
+
+    </style>
  <style>
 
 
@@ -849,28 +981,45 @@ padding-top: 1vw;
 
 </div>    
     
-<main class="content-main" onresize="reorder()">
-<div class="content-main" style="overflow: clip;text-overflow: ellipsis;padding: 0;max-width: fit-content;top: 0;bottom: 0;right: 0;left: 0;margin: auto;position: relative !important;width: 100%;min-width: 0px;">
-<div class="head-interface" style="height: fit-content;margin: 0 auto;width: fit-content;word-wrap: break-word;word-break: break-all;white-space: nowrap;"><h1 class="project-title" style="width: fit-content;margin: 0;">H1 Headline</h1>
-<h2 style="margin: 0;
-width: fit-content;">H2 Sub Headline</h2><p style="margin: 0;max-width: fit-content !important;max-height: fit-content !important;width: 50%;" id="body-text">Body (Initial Line) Body (Add. Lines)</p>
-<h3 style="position: relative;
+<main onresize="reorder()" class="content-main">
+<div class="main-nav" style="display: flex;flex-direction: row;height: inherit;scroll-snap-type: x mandatory;overflow-x: scroll;scroll-behavior: smooth;/*! scrollbar-width: none; */width: inherit;"><div style="" class="card y"><div id="BullseyeTracker" class="card-a"></div><div class="card-b"><h4 id="tag-branding" onclick="toggletagbranding(); reorder(); getWindowSpec(); getWindowSpec2(); getWindowSpec3();" class="rw" style="">Branding
+</h4><h1 style="width: fit-content;margin: 0;" class="project-title rw">Bullseye Tracker</h1><h2 style="margin: 0;
+width: fit-content;" class="rw">2019</h2><p style="margin: 0;max-width: fit-content !important;max-height: fit-content !important;" id="body-text" class="rw">BullseyeTracker is a web-based scoring application that simplifies all the challenges involved in Bullseye Pistol Leagues. Following the brand’s philosophy, I created a minimal wordmark and logomark reflecting their values of simplicity and ease of use.</p><a href="/Projects/BullseyeTracker/" style="margin-top: 3rem;width: fit-content;border-radius: 100px;display: flex;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border:var(--border-color);margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://designedbydan.art/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div><div style="" class="card y"><div class="card-a" id="ninetee"></div><div class="card-b"><h4 id="tag-branding" onclick="toggletagbranding(); reorder(); getWindowSpec(); getWindowSpec2(); getWindowSpec3();" class="rw" style="">Branding
+</h4><h1 class="project-title rw" style="width: fit-content;margin: 0;">9Tee</h1><h2 style="margin: 0;
+width: fit-content;" class="rw">2018</h2><p style="margin: 0;max-width: fit-content !important;max-height: fit-content !important;" id="body-text" class="rw">A minimal wordmark and logomark with a short series of digital web-based advertisements for a customizable print on-demand clothing brand.</p><a href="/Projects/9Tee/" style="width: fit-content;border-radius: 100px;display: flex;margin-top: auto;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border:var(--border-color);margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://designedbydan.art/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div><div style="" class="card y"><div class="card-a" id="generative-composition"><div class="card-bg" style="background: linear-gradient(0deg, rgb(200, 0, 134) -10%, rgb(0, 47, 200) 110%);height: 100%;width: 100%;z-index: -1;position: relative;"></div></div><div class="card-b"><h4 id="tag-coding" onclick="toggletagcoding(); reorder(); getWindowSpec(); getWindowSpec2(); getWindowSpec3();" class="rw" style="">Coding</h4><h1 class="project-title rw" style="width: fit-content;margin: 0;">Generative Abstract Composition</h1><h2 style="margin: 0;
+width: fit-content;" class="rw">P5.JS</h2><p style="margin: 0;max-width: fit-content !important;max-height: fit-content !important;/*! width: 50%; */" id="body-text" class="rw">Utilizing the P5.JS library to create a generative abstract composition using algorithmic forms with careful consideration for aesthetic issues like rhythm, color; precise control of shape, as well as the balance between both organic and geometric forms.</p><a href="/Projects/Generative-Composition/" style="width: fit-content;border-radius: 100px;display: flex;margin-top: auto;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border:var(--border-color);margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://designedbydan.art/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div><div style="" class="card y"><div id="9Tee" class="card-a"></div><div class="card-b"><h1 class="project-title rw" style="width: fit-content;margin: 0;">H1 Headline</h1><h2 style="margin: 0;
+width: fit-content;" class="rw">H2 Sub Headline</h2><p style="margin: 0;max-width: fit-content !important;max-height: fit-content !important;width: 50%;" id="body-text" class="rw">Body (Initial Line) Body (Add. Lines)</p><h3 style="position: relative;
 margin: 0;
 width: fit-content;
-">H3 Display Text</h3><h4 style="/* or 137% */
+" class="rw">H3 Display Text</h3><h4 style="/* or 137% */
  
 /* Primary */
 margin: 0;
 width: fit-content;
-">H4 Tag</h4>
+" class="rw">H4 Tag</h4><div style="height: fit-content;margin: 0 auto;width: fit-content;word-wrap: break-word;word-break: break-all;white-space: nowrap;" class="head-interface rw">
+
+
+</div></div></div></div><div style="overflow: clip;text-overflow: ellipsis;padding: 0;max-width: fit-content;top: 0;bottom: 0;right: 0;left: 0;margin: auto;position: absolute;width: 100%;min-width: 0px;z-index: -1;display: none;" class="content-main bb">
+<div class="head-interface rw" style="height: fit-content;margin: 0 auto;width: fit-content;word-wrap: break-word;word-break: break-all;white-space: nowrap;"><h1 class="project-title rw" style="width: fit-content;margin: 0;">H1 Headline</h1>
+<h2 style="margin: 0;
+width: fit-content;" class="rw">H2 Sub Headline</h2><p style="margin: 0;max-width: fit-content !important;max-height: fit-content !important;width: 50%;" id="body-text" class="rw">Body (Initial Line) Body (Add. Lines)</p>
+<h3 style="position: relative;
+margin: 0;
+width: fit-content;
+" class="rw">H3 Display Text</h3><h4 style="/* or 137% */
+ 
+/* Primary */
+margin: 0;
+width: fit-content;
+" class="rw">H4 Tag</h4>
 </div>
-<div class="head-interface" style="position: relative;left: 0;right: 0;top: 0;bottom: 0;display: flex;flex-direction: column;text-overflow: ellipsis;overflow: clip;height: fit-content;margin: 0 auto;width: auto;word-wrap: break-word;word-break: break-all;width: 50%;"><h1 class="project-title b" style="margin: 0;"></h1>
-<h2 class="b" style="
+<div class="head-interface rw" style="position: relative;left: 0;right: 0;top: 0;bottom: 0;display: flex;flex-direction: column;text-overflow: ellipsis;overflow: clip;height: fit-content;margin: 0 auto;width: auto;word-wrap: break-word;word-break: break-all;width: 50%;"><h1 class="project-title b rw" style="margin: 0;">Scale: @1x (32px) Weight: 700 Line Height: 40px rgb(75, 81, 91)</h1>
+<h2 class="b rw" style="
 position: relative;
 margin: 0;
-"></h2><p class="b" id="body-text" style="margin: 0;">Body</p>
-<h3 class="b" style="margin: 0;"></h3>
-<h4 class="b" style="margin: 0;"></h4>
+">Scale: @1x (16px) Weight: 700 Line Height: 20px rgb(102, 112, 128)</h2><p class="b rw" id="body-text" style="margin: 0;">Scale: @1x (14.4px) Weight: 400 Line Height: 25.6px rgb(102, 112, 128)</p>
+<h3 class="b rw" style="margin: 0;">Scale: @1x (12.8px) Weight: 600 Line Height: rgb(75, 81, 91)</h3>
+<h4 class="b rw" style="margin: 0;">Scale: @1x (11.2px) Weight: 700 Line Height: 32px rgb(255, 255, 255)</h4>
 </div>
 
 </div>

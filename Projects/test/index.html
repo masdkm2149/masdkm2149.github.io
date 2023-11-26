@@ -1,0 +1,945 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Daniel Roswadowsky: Portfolio Typography System</title>
+          <link rel="icon" type="image/x-icon" href="https://artfiles.rutgers.edu/~rad%5Cdbr73/assets/images/favicon.svg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"> 
+<script type="text/javascript" src="https://css-tricks.com/examples/HorzScrolling/jquery.mousewheel.js"></script>
+<script type="text/javascript">
+if ($(window).width() > 420 && $(window).height() > 420) { $("meta[name=viewport]").attr("content", "width=device-width, initial-scale=1.0, user-scalable=no"); }
+if ($(window).width() < 420 && $(window).height() > 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); } 
+if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); }
+</script>
+ <style>
+
+
+
+
+       @media screen and (min-width: 599px) and (max-width: 1500px)
+#button1, #button2 {
+  padding: 15px 45px !important;
+  margin-top: -2px;
+}
+body, html { transition: none; }
+@media screen and (min-width: 702px) {
+*, ::before, ::after {
+  transition: all .3s ease-out;
+}
+}
+@media (prefers-color-scheme: dark) {
+/* defaults to dark theme */
+body.dark-theme {
+--content-border: 3px solid rgb(12, 13, 16);
+--tag-bg: #2e313a;
+--body-color: #adb4c0;  
+--border-color: solid 2px #363840;
+--text-color: #eee;
+--h2-color: #585f6a;
+--bkg-color: #000;
+--view_project-hov: #0b0d10;
+--view_project-but: #363840;
+--view_project-but-text: #EEF1F4;  
+--project-title: #e0e0e0;
+}
+body.light-theme {
+  --text-color: #222;
+  --content-border: 3px solid rgb(102, 112, 128);
+  --bkg-color: #fff;
+  --view_project-but-text: #6a7586;   
+  --border-color: solid 2px #EEF1F4;
+  --tag-bg: #c8c8c8;
+  --h2-color: #667080;
+  --view_project-hov: #EEF1F4;
+  --view_project-but: #6a7586;
+  --body-color: #667080;
+  --project-title: #4b515b;
+  }
+}
+@media (prefers-color-scheme: light) {
+/* defaults to dark theme */
+body.dark-theme {
+--content-border: 3px solid rgb(12, 13, 16);
+--tag-bg: #2e313a;
+--body-color: #adb4c0;  
+--border-color: solid 2px #363840;
+--text-color: #eee;
+--h2-color: #585f6a;
+--bkg-color: #000;
+--view_project-hov: #0b0d10;
+--view_project-but: #363840;
+--view_project-but-text: #EEF1F4;  
+--project-title: #e0e0e0;
+}
+body.light-theme {
+  --text-color: #222;
+  --content-border: 3px solid rgb(102, 112, 128);
+  --bkg-color: #fff;
+  --view_project-but-text: #6a7586;   
+  --border-color: solid 2px #EEF1F4;
+  --tag-bg: #c8c8c8;
+  --h2-color: #667080;
+  --view_project-hov: #EEF1F4;
+  --view_project-but: #6a7586;
+  --body-color: #667080;
+  --project-title: #4b515b;
+  }
+}
+
+
+
+/*
+
+TRANSITIONS
+
+*/
+
+     html{
+     overflow:hidden;}
+.hide{
+  display:  none!important; 
+}
+.SENDTOBACK{
+  z-index:   0 !important;
+}
+.SENDTOFRONT{
+  z-index:   3 !important;
+}
+.active{
+  background: #667080!important;
+}
+     
+span:hover {
+  position: absolute;
+  animation: bounce .3s infinite alternate;
+  animation-timing-function: ease-in-out;
+}
+@keyframes bounce {
+  from {margin-left:6px;}
+  to {margin-left:5px;}
+}
+
+.temp-main-image:hover * {
+  transform: scale(1.05, 1.075);
+  transition: transform .25s ease;
+}
+.temp-main-image:hover {
+  border: none;
+  width: calc(100% - 6px);
+  left: 3px;
+  height: calc(100% - 6px);
+  top: 3px;
+}
+#background::after {
+}
+.temp-main-image:hover {
+  z-index: 0;
+}
+.tag-h-infocus {
+  max-height: -webkit-fill-available !important;
+  height: calc(var(--vh) - var(--elementInfoHeight-body) - 135px)!important;
+}
+.tag-hh-infocus{
+  height: fit-content!important;
+}
+#button1, #button2 {
+  z-index: 3 !important;
+}#tag-branding, #tag-print, #tag-media, #tag-coding {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 24px;
+  position: relative!important;
+  background: #c8c8c8;
+  border-radius: 24px;
+  width: 36px;
+  height: 12px;
+  margin: 0px 0px 18px 0px!important;
+  transition: .25s ease;
+}}@media screen and (max-width: 390px){
+#tag-branding, #tag-print, #tag-media, #tag-coding {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 24px;
+  position: relative!important;
+  background: #c8c8c8;
+  border-radius: 24px;
+  width: 36px;
+  height: 12px;
+  margin: 0px 0px 18px 0px;
+}
+#view_project { padding: 30px 90px!important;}
+}
+#view_project::after {
+  content: "Send Dan an email.";
+  position: absolute;
+  height: fit-content;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: var(--project-title) !important;
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  display: flex;
+  float: left;
+  left: 30px;
+  max-width: fit-content;
+  width: auto;
+  min-width: revert;
+}
+
+#button1,#button2,#button3 {
+  width: 30px;
+  height: 12px;
+  margin-top: -3.5px;
+  border-radius: 48px;
+    transition: .25s ease;
+  float: right;
+  margin-right: 30px;
+}
+#button1 {
+  border: var(--border-color) !important;
+}
+#button1::after {
+  content: "Projects";
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: #6a7586;
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  display: flex;
+}
+  #button2::after {
+  content: "Contact";
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: #6a7586;
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  flex-direction: row;
+}
+#logo::after {
+  font-family: 'Inter', sans-serif;
+  content: "LOGO";
+  text-align: center;
+  top: 7px;
+  position: relative;
+  text-decoration: none;
+  color: #6a7586;
+}
+body {
+  background-color: #FFFFFF;
+  /*! overflow: hidden; */
+  height: var(--vh);
+  /*! padding-right: 30px; */
+  margin: 0;
+}
+.nav-bg{
+  background: white;
+height: 115px;
+margin-bottom: -110px;
+z-index: 1;
+position: absolute;
+width: 100%;
+}
+.desktop-nav {
+  position: relative;
+  z-index: 2;
+  height: 105px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+.content-main::-webkit-scrollbar {
+    display: none;
+}
+.interface > a:nth-child(1) {
+text-overflow: ellipsis;
+overflow: clip;
+}
+ .interface {
+text-overflow: ellipsis;
+word-wrap: anywhere;
+word-break: keep-all;
+}
+@keyframes floating2 {
+    from { transform: rotate(270deg) translate(0,  0px); }
+    65%  { transform: rotate(270deg) translate(0, 5px); }
+    to   { transform: rotate(270deg) translate(0, 0px); }    
+}
+#view_project:hover > .scrolldown{
+    animation-name: floating2;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#view_project:hover {
+  background: var(--view_project-hov);
+}
+@media screen and (max-width: 600px) {
+#button1::after, #button2::after, #button3::after {
+  font-size: 12px !important;
+  letter-spacing: 0.01em !important;
+  font-weight: 600 !important;
+}
+#button1, #button2 {
+  padding: 12px 36px !important;
+  margin-top: 2.5px;
+}
+}
+@media screen and (min-width: 649px) and (max-width: 1200px) {
+#button1::after, #button2::after, #button3::after {
+  font-size: 14px !important;
+  letter-spacing: 0.01em !important;
+  font-weight: 600 !important;
+}
+#button1, #button2{
+  padding: 15px 45px!important;
+}
+}
+@media screen and (min-width: 1350px) {
+#button1,#button2,#button3 {
+  padding: 18px 55px !important;
+}
+}
+
+
+@media screen and (max-width: 390px) {
+  a#button1, div#button2{
+  margin-right: 99px !important;
+  right: -70px;
+  top: -8px;
+  transform: scale(.90);
+  }
+}
+@media screen and (max-width: 220px) {
+
+  a#button1, #button2{
+  display: none!important;
+  }
+  
+}
+
+*, ::before, ::after {
+  box-sizing: unset;
+}
+
+
+@media screen and (max-width: 620px){
+  .contain-logo{
+    left: 60px !important;
+  }
+   #logotype{
+    display: none!important;
+  }
+}
+
+*, ::before, ::after {
+  box-sizing: unset;
+}
+#button1,#button2,#button3 {
+  box-sizing: unset;
+  word-wrap: ;
+}
+
+#button2 { border: solid 2px #6A7586 !important }
+     
+#button1::after {
+  content: "Projects";
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: var(--view_project-but-text);
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  display: flex;
+}
+  #button2::after {
+  content: "Contact";
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: var(--view_project-but-text);
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  flex-direction: row;
+}
+#logo::after {
+  font-family: 'Inter', sans-serif;
+    content: "LOGO";
+    text-align: center;
+    top: 7px;
+ 
+  position: relative;
+}
+body {
+  background-color: var(--bkg-color);
+  overflow: hidden;
+  height: -webkit-fill-available;
+  min-height: 100%;
+  /*! padding-right: 30px; */
+  margin: 0;
+  position: inherit;
+}
+ 
+.nav-bg{
+  background: white;
+height: 115px;
+margin-bottom: -110px;
+z-index: 1;
+position: absolute;
+width: 100%;
+}
+.desktop-nav {
+    position: fixed;
+    z-index: 2;
+    height: 45px;
+    padding: 30px;width: 100%;
+    margin: 0px 0px 0px -30px;
+}
+
+.content-main {
+  scroll-snap-type: x mandatory;
+  overflow:hidden;
+  scrollbar-width: none;
+  /*! min-height: inherit; */
+  margin: 105px 0 0 0;
+  position: fixed!important;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 60px);
+  padding: 30px;
+  top: -30px;
+  height: calc(100vh - 135px);
+}
+.content-main::-webkit-scrollbar {
+    display: none;
+}
+
+
+#button1:active, #button2:active {
+    background-color: #292a2d !important;
+    border: solid 2px #667080!important;
+}
+ body.dark-theme .scrolldown {
+  filter: invert(1);
+}
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, 0px); }    
+}
+ 
+#view_project:active {
+  border: solid 2px #667080 !important;
+  background-color: var(--view_project-but);
+}
+#body-text {
+    max-width: 95%;
+    margin-top: 0;
+}
+ 
+
+#tag-branding:hover, #tag-coding:hover, #tag-print:hover {
+  background: #667080;
+  cursor: pointer;
+} 
+
+
+#tag-branding:active, #tag-print:active, #tag-coding:active {
+  background: #4b515b!important;
+  cursor: pointer;
+}
+#button1:hover {
+  background: #292a2d;
+  }
+
+
+/* TYPOGRAPHY SYSTEM */
+
+
+/* base styles */
+div.content-main * {
+  text-overflow: ellipsis;
+  overflow: clip;
+  word-wrap: break-word;
+}
+p, h, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+}
+h, h1, h2, h4, h5, h6 {
+  display: flex;
+}
+h1 {
+  color: var(--project-title);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+h2 {
+color: var(--h2-color);  
+}
+h3 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--project-title);
+}
+h4 {
+  font-weight: 700;
+  font-size: 0.7rem;
+  line-height: 2rem;
+  letter-spacing: 0.01em;
+  color: #FFF;
+  white-space: pre-wrap !important;
+  overflow: clip !important;
+  text-overflow: ellipsis !important;
+  display: block ruby;
+}
+#body-text{
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--body-color);
+} 
+
+/* widows & orphans */
+div.content-main *, p, h, h1, h2, h3, h4, h5, h6 {
+  overflow: unset;
+  word-wrap: break-word;
+  white-space: break-spaces;
+  word-break: break-word;
+}
+
+/* capitalization */
+div.content-main *, h1 { text-transform: capitalize;}
+
+/* (@ 3.0x) */
+
+/* Breakpoint-width ( > 1500 ) */
+@media screen and (min-width: 1500px) {
+  
+/* Button Increase Padding */
+  #button1,#button2,#button3 {
+  padding: 18px 55px !important;
+}
+  
+/* H1 */  
+h1, .project-title{
+  font-size:  4rem !important;
+  line-height: 5rem !important;
+}
+h1::first-line, .project-title::first-line{
+  line-height:  5rem !important;
+}
+  
+/* H2 */    
+h2 {
+  font-size: 2rem !important;
+  line-height: 2.25rem !important;
+}
+  
+/* H3 */    
+h3::first-line {
+  line-height: 1.5rem;
+}
+h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+  
+/* Body */   
+  p::first-line, p#body-text::first-line {
+    line-height: 2rem !important;
+  } 
+h2 ~ p {
+padding-top: 1rem;
+  }
+  p, .body-text {
+    font-size: 1.1rem;
+    line-height: 2.2rem;
+  }
+
+/* Etc page format */  
+ .interface{
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .head-interface {
+    width: fit-content;
+    margin: auto 6vw auto 0 !important;
+  } 
+  .head-interface ~ .head-interface {
+    margin: auto 0 auto 6vw !important;
+  } 
+.content-main {
+  flex-direction: row !important;
+}
+
+}
+
+/* (@ 2.0x) */
+
+/* Breakpoint-width ( > 1000  & < 1500 ) */
+@media screen and (max-width: 1499px) and (min-width: 1000px)  {
+
+  
+/* H1 */  
+h1, .project-title{
+  font-size:  3rem ;
+  line-height: 4rem!important;
+}
+h1::first-line, .project-title::first-line{
+  line-height:  1rem!important;
+}
+  
+/* H2 */    
+h2 {
+  font-size: 1.5rem !important;
+  line-height: 1.75rem !important;
+}
+  
+/* H3 */    
+h3::first-line {
+  line-height: 1.5rem;
+}
+h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+    
+  
+/* Body */   
+  p::first-line, p#body-text::first-line {
+    line-height: 1.8rem !important;
+  } 
+h2 ~ p {
+padding-top: .75rem;
+  }
+  p, .body-text {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+/* Etc page format */  
+.interface {
+  width: fit-content !important;
+  margin-left: 30px;
+  margin: auto 0 !important;
+  padding-top: 16px;
+}
+.head-interface {
+  width: fit-content;
+  margin: auto 0 auto 4vw !important;
+} 
+.head-interface ~ .head-interface {
+    margin-left: 4vw !important;
+    margin: auto 0 auto 8vw !important;
+  } 
+.content-main {
+  flex-direction: row !important;
+}
+}
+
+/* (@ 1.0x) */
+
+/* Breakpoint-width ( 500 > & < 1000 ) */
+@media screen and (max-width: 1000px) and (min-width: 500px)  {
+
+  
+/* H1 */  
+h1, .project-title{
+  font-size:  2rem!important;;
+  line-height: 2.5rem!important;
+}
+  
+/* H2 */    
+h2 {
+  font-size: 1rem !important;
+  line-height: 1.25rem !important;
+}
+  
+/* H3 */    
+h3::first-line {
+  line-height: 1.2rem;
+}
+h3 {
+  font-size: .8rem;
+  line-height: 1.2rem;
+}
+    
+  
+/* Body */   
+  p::first-line, p#body-text::first-line {
+    line-height: 1.62rem !important;
+  } 
+h2 ~ p {
+padding-top: .5rem;
+  }
+  p, .body-text {
+    font-size: .9rem;
+    line-height: 1.62rem;
+  }
+
+/* Etc page format */  
+.interface {
+  width: fit-content !important;
+  margin-left: 30px;
+  margin: auto 0 !important;
+  padding-top: 16px;
+}
+.head-interface {
+  width: fit-content;
+  margin: auto 0 auto 2vw !important;
+} 
+.head-interface ~ .head-interface {
+  margin: auto 0 auto 4vw !important;
+} 
+.content-main {
+  flex-direction: row !important;
+}
+}
+
+@media screen and (max-width: 500px)  {
+  
+/* H1 */    
+  h1 {
+   font-size: 6vw
+  }  
+  
+/* H2 */    
+  h2 {
+   font-size: 3.5vw
+  }
+    
+/* H3 */    
+  h3 {
+   font-size: 2.5vw
+  }
+    
+/* H4 */    
+  h4 {
+   font-size: 2.25vw
+  }
+  
+/* Body */   
+h2 ~ p {
+padding-top: 1vw;
+  }
+  p, .body-text {
+    font-size: 3.25vw;
+    line-height: 1.62rem;
+  }
+  
+/* Etc page format */  
+.interface {
+  width: fit-content !important;
+  margin-left: 30px;
+  margin: auto 0 !important;
+  padding-top: 16px;
+}
+.head-interface {
+  width: fit-content;
+  margin: 30px auto 0 auto !important;
+} 
+.head-interface ~ .head-interface {
+  width: 55vw!important;
+  margin: 30px auto 0 auto !important;
+}   
+}
+</style>
+
+</head>
+ 
+<body onresize="getWindowSpec()">
+    
+<div class="desktop-nav">
+ 
+    <div style="height: 105px;top: 0;width: 100%;position: absolute;"></div>
+               <script>
+          function preview_toggle(){};
+          function show_toggle(){
+              document.getElementById("state1").classList.toggle("hide");
+              document.getElementsByClassName("btn")[0].classList.toggle("hide");
+              document.getElementById("button1").classList.toggle("checked");
+          };
+      </script>
+      <div id="state1" onmouseover="preview_toggle()" onclick="show_toggle()"></div>
+    <div class="btn hide" style="position: absolute;z-index: 9;padding: 30px;right: 98px;transform: scale(0.8);top: 4px;opacity:.9;transition: .25s ease;">
+    <img class="hide" style="width: auto;opacity:.5;height: 18px;position: absolute;z-index: 3;margin: 0 auto;bottom: calc(2.2vh + 10px);left: 175;right: -45px;top: 41px;z-index: 999;transition: .1s;" src="https://designedbydan.art/assets/images/38488.png" onclick="hidebtn();">
+    <label>
+                <span class="btn-toggle" style=""></span>
+            </label>
+            
+        </div>
+    <script>
+      const btn = document.querySelector(".btn-toggle");
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme == "dark") { 
+      document.body.classList.remove("light-theme");
+      document.body.classList.add("dark-theme");
+    } else if (currentTheme == "light") {
+      document.body.classList.remove("dark-theme");
+      document.body.classList.add("light-theme");
+    }
+
+    btn.addEventListener("click", function () {
+      if (prefersDarkScheme.matches) {
+      document.body.classList.toggle("dark-theme");
+      document.body.classList.toggle("light-theme");
+      var theme = document.body.classList.contains("light-theme") ? "light" : "dark";
+      } else {
+      document.body.classList.toggle("light-theme");
+      document.body.classList.toggle("dark-theme");
+      var theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
+      }
+      localStorage.setItem("theme", theme);
+    });
+      </script>
+    <a href="https://designedbydan.art/"> 
+    <div id="logo" style="width: 150px;height: 45px;background: #FFFFFF;border: 3px solid #667080;box-sizing: border-box;left: 0px;right: 0;top: 0px;bottom: 60px;border: 1px solid #667080;/*! =============== breakpoint 1150px W ===============*/position: fixed;border: 1px solid #667080;margin-left: 30px;margin-top: 30px;content: &quot;LOGO&quot;;font-size: 24px;text-align: center;display: none;"></div>
+             <div style="left: 60px;position: absolute;">
+                 <div id="logoblockone" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;border-left: 1vw solid;border-left-color: currentcolor;border-left-color: #474747;"></div>
+                 <div id="logoblocktwo" style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);border-right: 1vw solid #474747;"></div>
+                 <div id="logoblockthree" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;top: 22px;border-left: 1vw solid;border-left-color: #474747;"></div>
+                 <div id="logoblockfour"style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);top: 22px;border-right: 1vw solid #474747;"></div>
+             </div>
+    <h id="logotype" style="position: absolute;left: calc(12vw + 60px);font-family: 'Inter', sans-serif;font-style: normal;font-weight: 600;font-size: 16px;line-height: 48px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: var(--project-title);height: 45px;top: 28px;">Daniel Roswadowsky</h>
+    </a>
+        <div id="button1" style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: relative;flex: none;order: 0;flex-grow: 0;border: var(--border-color);"></div>
+    <a href="/Contact/">
+        <div id="button2" style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: absolute;position: relative;flex: none;order: 0;flex-grow: 0;border: var(--border-color);" ></div>
+    </a>
+
+</div>    
+    
+<main class="content-main" onresize="reorder()">
+<div class="content-main" style="overflow: clip;text-overflow: ellipsis;padding: 0;max-width: fit-content;top: 0;bottom: 0;right: 0;left: 0;margin: auto;position: relative !important;width: 100%;min-width: 0px;">
+<div class="head-interface" style="height: fit-content;margin: 0 auto;width: fit-content;word-wrap: break-word;word-break: break-all;white-space: nowrap;"><h1 class="project-title" style="width: fit-content;margin: 0;">H1 Headline</h1>
+<h2 style="margin: 0;
+width: fit-content;">H2 Sub Headline</h2><p style="margin: 0;max-width: fit-content !important;max-height: fit-content !important;width: 50%;" id="body-text">Body (Initial Line) Body (Add. Lines)</p>
+<h3 style="position: relative;
+margin: 0;
+width: fit-content;
+">H3 Display Text</h3><h4 style="/* or 137% */
+ 
+/* Primary */
+margin: 0;
+width: fit-content;
+">H4 Tag</h4>
+</div>
+<div class="head-interface" style="position: relative;left: 0;right: 0;top: 0;bottom: 0;display: flex;flex-direction: column;text-overflow: ellipsis;overflow: clip;height: fit-content;margin: 0 auto;width: auto;word-wrap: break-word;word-break: break-all;width: 50%;"><h1 class="project-title b" style="margin: 0;"></h1>
+<h2 class="b" style="
+position: relative;
+margin: 0;
+"></h2><p class="b" id="body-text" style="margin: 0;">Body</p>
+<h3 class="b" style="margin: 0;"></h3>
+<h4 class="b" style="margin: 0;"></h4>
+</div>
+
+</div>
+</main>
+<script src="/sai.js"></script>
+<script>
+function getInfo() {
+  if ( $(window).width() > 1499 ) { 
+        document.querySelector('.project-title.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") Weight: " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("font-weight") + " Line Height: " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("line-height") + " " +  window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
+        document.querySelector('h2.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Weight: " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("font-weight") + " Line Height: " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
+        document.querySelector('h3.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h3")).fontSize + ") Weight: " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("font-weight") + " Line Height: " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("color"));
+        document.querySelector('h4.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("h4")).fontSize + ") Weight: " + window.getComputedStyle(document.querySelector("h4")).getPropertyValue("font-weight") + " Line Height: " + window.getComputedStyle(document.querySelector("h4")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h4")).getPropertyValue("color"));
+        document.querySelector('p.b').innerHTML = ("Scale: @3x (" + window.getComputedStyle(document.querySelector("p")).fontSize + ") Weight: " + window.getComputedStyle(document.querySelector("p")).getPropertyValue("font-weight") + " Line Height: " + window.getComputedStyle(document.querySelector("p")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("p")).getPropertyValue("color"));
+  }
+  if ($(window).width() >= 1000 && ($(window).width() < 1500) ){ 
+        document.querySelector('.project-title.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") Weight: " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("font-weight") + " Line Height: " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("line-height") + " " +  window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
+        document.querySelector('h2.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Weight: " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("font-weight") + " Line Height: " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
+        document.querySelector('h3.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h3")).fontSize + ") Weight: " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("font-weight") + " Line Height: " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("color"));
+        document.querySelector('h4.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("h4")).fontSize + ") Weight: " + window.getComputedStyle(document.querySelector("h4")).getPropertyValue("font-weight") + " Line Height: " + window.getComputedStyle(document.querySelector("h4")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h4")).getPropertyValue("color"));
+        document.querySelector('p.b').innerHTML = ("Scale: @2x (" + window.getComputedStyle(document.querySelector("p")).fontSize + ") Weight: " + window.getComputedStyle(document.querySelector("p")).getPropertyValue("font-weight") + " Line Height: " + window.getComputedStyle(document.querySelector("p")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("p")).getPropertyValue("color"));
+  }
+  if ( $(window).width() < 1000 ) { 
+        document.querySelector('.project-title.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h1")).fontSize + ") Weight: " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("font-weight") + " Line Height: " + window.getComputedStyle(document.querySelector("h1")).getPropertyValue("line-height") + " " +  window.getComputedStyle(document.querySelector("h1")).getPropertyValue("color"));
+        document.querySelector('h2.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h2")).fontSize + ") Weight: " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("font-weight") + " Line Height: " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h2")).getPropertyValue("color"));
+        document.querySelector('h3.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h3")).fontSize + ") Weight: " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("font-weight") + " Line Height: " + window.getComputedStyle(document.querySelector("h3")).getPropertyValue("color"));
+        document.querySelector('h4.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("h4")).fontSize + ") Weight: " + window.getComputedStyle(document.querySelector("h4")).getPropertyValue("font-weight") + " Line Height: " + window.getComputedStyle(document.querySelector("h4")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("h4")).getPropertyValue("color"));
+        document.querySelector('p.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("p")).fontSize + ") Weight: " + window.getComputedStyle(document.querySelector("p")).getPropertyValue("font-weight") + " Line Height: " + window.getComputedStyle(document.querySelector("p")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("p")).getPropertyValue("color"));
+  }
+}   
+          getInfo();
+window.addEventListener('resize', function(event) { 
+     if ( $(window).width() < 501 ) {
+          if ( $(window).width() < $(window).height() ) {
+              if ( $('.rh') ) {             
+                     for (let i = 0; i < document.querySelectorAll("h1").length; i++) { document.querySelectorAll("h1")[i].classList.remove("rh"); }                
+                     for (let i = 0; i < document.querySelectorAll("h2").length; i++) { document.querySelectorAll("h2")[i].classList.remove("rh"); }   
+                     for (let i = 0; i < document.querySelectorAll("h3").length; i++) { document.querySelectorAll("h3")[i].classList.remove("rh"); }   
+                     for (let i = 0; i < document.querySelectorAll("h4").length; i++) { document.querySelectorAll("h4")[i].classList.remove("rh"); }   
+                     for (let i = 0; i < document.querySelectorAll("p").length; i++) { document.querySelectorAll("p")[i].classList.remove("rh"); }   
+                     for (let i = 0; i < document.querySelectorAll(".head-interface").length; i++) { document.querySelectorAll(".head-interface")[i].classList.remove("rh"); }  
+              }
+            for (let i = 0; i < document.querySelectorAll("h1").length; i++) { document.querySelectorAll("h1")[i].classList.add("rw"); }
+            for (let i = 0; i < document.querySelectorAll("h2").length; i++) { document.querySelectorAll("h2")[i].classList.add("rw"); }   
+            for (let i = 0; i < document.querySelectorAll("h3").length; i++) { document.querySelectorAll("h3")[i].classList.add("rw"); }   
+            for (let i = 0; i < document.querySelectorAll("h4").length; i++) { document.querySelectorAll("h4")[i].classList.add("rw"); }   
+            for (let i = 0; i < document.querySelectorAll("p").length; i++) { document.querySelectorAll("p")[i].classList.add("rw"); }   
+            for (let i = 0; i < document.querySelectorAll(".head-interface").length; i++) { document.querySelectorAll(".head-interface")[i].classList.add("rw"); }   
+          } 
+          else if ( $(window).width() > $(window).height() ) {
+                if ( $('.rh') ) {
+                     for (let i = 0; i < document.querySelectorAll("h1").length; i++) { document.querySelectorAll("h1")[i].classList.remove("rw"); }                 
+                     for (let i = 0; i < document.querySelectorAll("h2").length; i++) { document.querySelectorAll("h2")[i].classList.remove("rw"); }   
+                     for (let i = 0; i < document.querySelectorAll("h3").length; i++) { document.querySelectorAll("h3")[i].classList.remove("rw"); }   
+                     for (let i = 0; i < document.querySelectorAll("h4").length; i++) { document.querySelectorAll("h4")[i].classList.remove("rw"); }   
+                     for (let i = 0; i < document.querySelectorAll("p").length; i++) { document.querySelectorAll("p")[i].classList.remove("rw"); }  
+                     for (let i = 0; i < document.querySelectorAll(".head-interface").length; i++) { document.querySelectorAll(".head-interface")[i].classList.remove("rw"); }   
+                }
+             for (let i = 0; i < document.querySelectorAll("h1").length; i++) { document.querySelectorAll("h1")[i].classList.add("rh"); }                 
+             for (let i = 0; i < document.querySelectorAll("h2").length; i++) { document.querySelectorAll("h2")[i].classList.add("rh"); }  
+             for (let i = 0; i < document.querySelectorAll("h3").length; i++) { document.querySelectorAll("h3")[i].classList.add("rh"); }   
+             for (let i = 0; i < document.querySelectorAll("h4").length; i++) { document.querySelectorAll("h4")[i].classList.add("rh"); }   
+             for (let i = 0; i < document.querySelectorAll("p").length; i++) { document.querySelectorAll("p")[i].classList.add("rh"); }   
+             for (let i = 0; i < document.querySelectorAll(".head-interface").length; i++) { document.querySelectorAll(".head-interface")[i].classList.add("rh"); }   
+            }
+     } 
+      console.log(JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize));
+      getInfo();
+});
+      </script>
+    <style type="text/css"></style><style type="text/css"></style><style type="text/css"></style>
+<style type="text/css"></style>
+</body><style type="text/css"></style></html>

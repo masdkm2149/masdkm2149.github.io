@@ -1,11 +1,11 @@
 let dsharp;
 let fnat;
 function preload() {
-  soundFormats('wav');
-  dsharp = loadSound('https://designedbydan.art/assets/D%23wav.wav');
+  soundFormats('mp3');
+  dsharp = loadSound('https://designedbydan.art/soundexp/sounds/dsharp.mp3');
   dsharp.playMode('sustain');
       dsharp.loop = 0;
-  fnat = loadSound('https://designedbydan.art/assets/Fwav.wav');
+  fnat = loadSound('https://designedbydan.art/soundexp/sounds/fnat.mp3');
   fnat.playMode('sustain');
     fnat.loop = 0;
 }

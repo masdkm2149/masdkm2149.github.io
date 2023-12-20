@@ -8,7 +8,7 @@ function preload() {
   fnat = loadSound('https://designedbydan.art/soundexp/sounds/fnat.mp3');
   fnat.playMode('sustain');
     fnat.loop = 0;
-    gnat = loadSound('https://designedbydan.art/soundexp/sounds/fnat.mp3');
+    gnat = loadSound('https://designedbydan.art/soundexp/sounds/gnat.mp3');
   gnat.playMode('sustain');
 }
 

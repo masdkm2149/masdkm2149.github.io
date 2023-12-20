@@ -24,7 +24,7 @@ function setup() {
       circle(a, b ,width*0.1);
 
       if (mouseX < 50) { 
-        if ( dhsarp.isPlaying() == "false" ) {
+        if ( dsharp.isPlaying() == "false" ) {
         dsharp.play();}
       }
       if (mouseY < 200) { fnat.play();}

@@ -8,6 +8,8 @@ function preload() {
   fnat = loadSound('https://designedbydan.art/soundexp/sounds/fnat.mp3');
   fnat.playMode('sustain');
     fnat.loop = 0;
+    gnat = loadSound('https://designedbydan.art/soundexp/sounds/fnat.mp3');
+  gnat.playMode('sustain');
 }
 
 function setup() {
@@ -24,8 +26,10 @@ function setup() {
       circle(a, b ,width*0.1);
 
       if (mouseX < 50) { 
-        if ( dsharp.isPlaying() == "false" ) {
+        console.log(dsharp.isPlaying())
+        if ( dsharp.isPlaying() == false ) {
         dsharp.play();}
       }
-      if (mouseY < 200) { fnat.play();}
+      if (mouseX < 150) { if ( fnat.isPlaying() == false ) { fnat.play();}}
+          if (mouseX < 250) { if ( gnat.isPlaying() == false ) { gnat.play();}}
 }

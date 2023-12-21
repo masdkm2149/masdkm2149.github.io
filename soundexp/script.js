@@ -27,6 +27,14 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  let context;
+  window.onload = function(){
+  context = new AudioContext();
+  }
+  window.addEventListener('mousemove', () => {
+  context.resume().then(() +> {
+  });
+  });
 }
     function scrp() {
     if (mouseX < width*0.1 ) { 

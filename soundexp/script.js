@@ -32,6 +32,7 @@ function setup() {
 document.getElementById("defaultCanvas0").onmouseout = function() {scrp();}
     document.getElementById("defaultCanvas0").ontouchstart = function() {scrp();}
     document.getElementById("defaultCanvas0").ontouchend = function() {scrp();}
+}
     function scrp() {
     if (mouseX < width*0.1 ) { 
 if ( dsharp.isPlaying() == false || dsharp.isLooping() == false) { dsharp.loop();}}
@@ -46,8 +47,6 @@ if ( dsharp.isPlaying() == false || dsharp.isLooping() == false) { dsharp.loop()
   if (mouseX < width*0.6 && mouseX > width*0.5)  { 
      if ( csharp.isPlaying() == false || csharp.isLooping() == false) { csharp.loop();}}
   }
-}
-
 
   function draw() {
   let x = width - width*0.052

@@ -11,7 +11,15 @@
     <main id="main">
     </main>
     <script src="script.js"></script>
-    <script>document.getElementById("defaultCanvas0").onmouseover = function() {scrp()}
+    <script>
+        window.onload = function(){
+  context = new AudioContext();
+  }
+  window.addEventListener('mousemove', () => {
+  context.resume().then(() => {
+  });
+  });
+      document.getElementById("defaultCanvas0").onmouseover = function() {scrp()}
     document.getElementById("defaultCanvas0").onmousemove = function() {scrp()}
 document.getElementById("defaultCanvas0").onmouseout = function() {scrp()}
     document.getElementById("defaultCanvas0").ontouchstart = function() {scrp()}

@@ -16,20 +16,11 @@
            userStartAudio();  
   context = new AudioContext();
   }
-  window.addEventListener('mousemove', () => { 
-  context.resume().then(() => { userStartAudio();  
-  });
-  });
-  
-  window.addEventListener('touchstart', () => { 
-  context.resume().then(() => {
-  });
-  });
-      document.getElementById("defaultCanvas0").onmouseover = function() {scrp()}
-    document.getElementById("defaultCanvas0").onmousemove = function() {scrp()}
-document.getElementById("defaultCanvas0").onmouseout = function() {scrp()}
-    document.getElementById("defaultCanvas0").ontouchstart = function() {scrp()}
-    document.getElementById("defaultCanvas0").ontouchend = function() {scrp()}
+      document.getElementById("defaultCanvas0").onmouseover = function() { userStartAudio(); scrp()}
+    document.getElementById("defaultCanvas0").onmousemove = function() { userStartAudio(); scrp()}
+document.getElementById("defaultCanvas0").onmouseout = function() { userStartAudio(); scrp()}
+    document.getElementById("defaultCanvas0").ontouchstart = function() { userStartAudio(); scrp()}
+    document.getElementById("defaultCanvas0").ontouchend = function() { userStartAudio(); scrp()}
 </script>
   </body>
 </html>

@@ -27,11 +27,6 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  document.getElementById("defaultCanvas0").onmouseover = function() {scrp();}
-    document.getElementById("defaultCanvas0").onmousemove = function() {scrp();}
-document.getElementById("defaultCanvas0").onmouseout = function() {scrp();}
-    document.getElementById("defaultCanvas0").ontouchstart = function() {scrp();}
-    document.getElementById("defaultCanvas0").ontouchend = function() {scrp();}
 }
     function scrp() {
     if (mouseX < width*0.1 ) { 

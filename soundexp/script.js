@@ -32,8 +32,7 @@ function setup() {
   context = new AudioContext();
   }
   window.addEventListener('mousemove', () => {
-  context.resume().then(() +> {
-  });
+  context.resume().then(() +> { scrp(); });
   });
 }
     function scrp() {

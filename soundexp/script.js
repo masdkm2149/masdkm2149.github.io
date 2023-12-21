@@ -28,11 +28,18 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-
   window.onload = function(){
   context = new AudioContext();
+  userStartAudio();
   }
-  window.addEventListener('mousemove', () => {
+  window.addEventListener('mousemove', () => { 
+  userStartAudio();  
+  context.resume().then(() => {
+  });
+  });
+  
+  window.addEventListener('touchstart', () => { 
+  userStartAudio();  
   context.resume().then(() => {
   });
   });

@@ -3,7 +3,8 @@ let fnat;
 let gnat;
 let anat;
 let bnat;
-let csharp;
+let csharp;  
+let context;
 function preload() {
   soundFormats('mp3');
   csharp = loadSound('https://designedbydan.art/soundexp/sounds/csharp.mp3');
@@ -27,7 +28,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  let context;
+
   window.onload = function(){
   context = new AudioContext();
   }

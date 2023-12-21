@@ -31,6 +31,7 @@ function setup() {
   window.onload = function(){
   context = new AudioContext();
   userStartAudio();
+    }
 }
     function scrp() {
     if (mouseX < width*0.1 ) { 

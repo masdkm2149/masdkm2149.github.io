@@ -27,17 +27,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-}
-
-
-  function draw() {
-  let x = width - width*0.052
-  let y = height - height*0.054
-  let a = map(mouseX, 0, width, width*0.052, x);
-  let b = map(mouseY, 0, height, height*0.054, y);
-    background(220);
-      circle(a, b ,width*0.1);
-document.getElementById("defaultCanvas0").onmouseover = function() {scrp();}
+  document.getElementById("defaultCanvas0").onmouseover = function() {scrp();}
     document.getElementById("defaultCanvas0").onmousemove = function() {scrp();}
 document.getElementById("defaultCanvas0").onmouseout = function() {scrp();}
     document.getElementById("defaultCanvas0").ontouchstart = function() {scrp();}
@@ -55,4 +45,15 @@ if ( dsharp.isPlaying() == false || dsharp.isLooping() == false) { dsharp.loop()
       if ( bnat.isPlaying() == false || bnat.isLooping() == false) { bnat.loop();}}
   if (mouseX < width*0.6 && mouseX > width*0.5)  { 
      if ( csharp.isPlaying() == false || csharp.isLooping() == false) { csharp.loop();}}
-  }}
+  }
+}
+
+
+  function draw() {
+  let x = width - width*0.052
+  let y = height - height*0.054
+  let a = map(mouseX, 0, width, width*0.052, x);
+  let b = map(mouseY, 0, height, height*0.054, y);
+    background(220);
+      circle(a, b ,width*0.1);
+}

@@ -13,13 +13,15 @@
     <script src="script.js"></script>
     <script>
         window.onload = function(){
+           userStartAudio();  
   context = new AudioContext();
   }
-  window.addEventListener('mousemove', () => {
-  context.resume().then(() => {
+  window.addEventListener('mousemove', () => { 
+  context.resume().then(() => { userStartAudio();  
   });
   });
-  window.addEventListener('touchstart', () => {
+  
+  window.addEventListener('touchstart', () => { 
   context.resume().then(() => {
   });
   });

@@ -37,11 +37,11 @@ function setup() {
   let b = map(mouseY, 0, height, height*0.054, y);
     background(220);
       circle(a, b ,width*0.1);
-document.getElementById("main").onmouseover = function() {scrp();}
-    document.getElementById("main").onmousemove = function() {scrp();}
-document.getElementById("main").onmouseout = function() {scrp();}
-    document.getElementById("main").ontouchstart = function() {scrp();}
-    document.getElementById("main").ontouchend = function() {scrp();}
+document.getElementById("defaultCanvas0").onmouseover = function() {scrp();}
+    document.getElementById("defaultCanvas0").onmousemove = function() {scrp();}
+document.getElementById("defaultCanvas0").onmouseout = function() {scrp();}
+    document.getElementById("defaultCanvas0").ontouchstart = function() {scrp();}
+    document.getElementById("defaultCanvas0").ontouchend = function() {scrp();}
     function scrp() {
     if (mouseX < width*0.1 ) { 
 if ( dsharp.isPlaying() == false || dsharp.isLooping() == false) { dsharp.loop();}}

@@ -31,18 +31,6 @@ function setup() {
   window.onload = function(){
   context = new AudioContext();
   userStartAudio();
-  }
-  window.addEventListener('mousemove', () => { 
-  userStartAudio();  
-  context.resume().then(() => {
-  });
-  });
-  
-  window.addEventListener('touchstart', () => { 
-  userStartAudio();  
-  context.resume().then(() => {
-  });
-  });
 }
     function scrp() {
     if (mouseX < width*0.1 ) { 

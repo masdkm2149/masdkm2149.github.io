@@ -33,10 +33,16 @@ function setup() {
   let b = map(mouseY, 0, height, height*0.054, y);
     background(220);
       circle(a, b ,width*0.1);
-
+document.addEventListener("touchmove", ads);  
+    document.addEventListener("touchstart", ads);
+    document.addEventListener("touchend", ads);  
+ document.addEventListener("mousemove", ads);      document.addEventListener("mouseover", ads);     
+function ads() {
     if (mouseX < width*0.1) { if ( dsharp.isPlaying() == false ) { dsharp.play();}}
       if (mouseX < width*0.2) { if ( fnat.isPlaying() == false ) { fnat.play();}}
           if (mouseX < width*0.3) { if ( gnat.isPlaying() == false ) { gnat.play();}}
               if (mouseX < width*0.4) { if ( anat.isPlaying() == false ) { anat.play();}}
                   if (mouseX < width*0.5) { if ( bnat.isPlaying() == false ) { bnat.play();}}
-}
+  }
+  }
+

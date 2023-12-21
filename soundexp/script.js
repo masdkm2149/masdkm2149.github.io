@@ -55,4 +55,9 @@ if ( dsharp.isPlaying() == false || dsharp.isLooping() == false) { dsharp.loop()
   let b = map(mouseY, 0, height, height*0.054, y);
     background(220);
       circle(a, b ,width*0.1);
+          document.getElementById("defaultCanvas0").onmouseover = function() { userStartAudio(); scrp()}
+    document.getElementById("defaultCanvas0").onmousemove = function() { userStartAudio(); scrp()}
+document.getElementById("defaultCanvas0").onmouseout = function() { userStartAudio(); scrp()}
+    document.getElementById("defaultCanvas0").ontouchstart = function() { userStartAudio(); scrp()}
+    document.getElementById("defaultCanvas0").ontouchend = function() { userStartAudio(); scrp()}
 }

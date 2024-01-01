@@ -1286,8 +1286,9 @@ function getInfo() {
      } 
     }
           getInfo();
+          relSizing();
 window.addEventListener('resize', function(event) { 
-    relSizing()
+    relSizing();
       console.log(JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize));
       getInfo();
 });

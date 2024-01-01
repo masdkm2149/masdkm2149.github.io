@@ -1,6 +1,6 @@
-<html><head>
+<html style="--scalefit: 926; --vh: 926px; --ww: 1357px; --pixelratio: 1;"><head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no">
     <title>Daniel Roswadowsky: Portfolio Typography System</title>
           <link rel="icon" type="image/x-icon" href="https://artfiles.rutgers.edu/~rad%5Cdbr73/assets/images/favicon.svg">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
@@ -14,17 +14,20 @@ if ($(window).width() < 420 && $(window).height() > 420) { $("meta[name=viewport
 if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); }
 </script>
     <style>
+
+
+
+
         
 .card {
 
   display: flex;
-  scroll-snap-align: end;
+  scroll-snap-align: start;
 }
 .card-a {
 height: initial;
 border: var(--content-border);
-width: 100%;
-height: calc(100% - 6px);
+height: 100%;
 }
 .card-b {
 height: 100%;
@@ -36,7 +39,6 @@ flex-direction: column;
 }
 
 .card.x {
-  left: 2rem;
   display: flex;
   flex-direction: row;
 }
@@ -64,9 +66,8 @@ flex-direction: column;
   position: relative;
 }
   .card.x {
-  width: calc(100vw - 4rem);
+  width: calc(100vw - 2rem);
   height: auto;
-  left: 2rem;
 }
 .card.y {
   min-width: 100%;
@@ -83,7 +84,7 @@ flex-direction: column;
 }
 
 .card ~ .card {
-  padding-left: 2rem;
+  padding-left: 0rem;
 }
 
 .card.debug {
@@ -143,13 +144,9 @@ body {
 .card.x .card-a + .card-b  {
   border-left: none!important;
 }
-
-    </style>
- <style>
-
-
-
-
+@media screen and (max-height: 550px) {
+         #tag-branding, #tag-print, #tag-media, #tag-coding { display: none!important;}
+}
        @media screen and (min-width: 599px) and (max-width: 1500px)
 #button1, #button2 {
   padding: 15px 45px !important;
@@ -163,6 +160,9 @@ body, html { transition: none; }
 }
 @media (prefers-color-scheme: dark) {
 /* defaults to dark theme */
+  .scrolldown {
+    filter: invert(0.8);
+  }
 body.dark-theme {
 --content-border: 3px solid rgb(12, 13, 16);
 --tag-bg: #2e313a;
@@ -308,7 +308,7 @@ span:hover {
 #view_project { padding: 30px 90px!important;}
 }
 #view_project::after {
-  content: "Send Dan an email.";
+  content: "View Project";
   position: absolute;
   height: fit-content;
   font-style: normal;
@@ -329,13 +329,13 @@ span:hover {
 }
 
 #button1,#button2,#button3 {
-  width: 30px;
+  width: 2rem;
   height: 12px;
-  margin-top: -3.5px;
+  margin-top: -2.5px;
   border-radius: 48px;
     transition: .25s ease;
   float: right;
-  margin-right: 30px;
+  margin-right: 2rem;
 }
 #button1 {
   border: var(--border-color) !important;
@@ -494,7 +494,6 @@ word-break: keep-all;
 }
 #button1,#button2,#button3 {
   box-sizing: unset;
-  word-wrap: ;
 }
 
 #button2 { border: solid 2px #6A7586 !important }
@@ -560,9 +559,9 @@ width: 100%;
 .desktop-nav {
     position: fixed;
     z-index: 2;
-    height: 45px;
-    padding: 30px;width: 100%;
-    margin: 0px 0px 0px -30px;
+    height: 3rem;
+    padding: 2rem;width: 100%;
+    margin: 0px 0px 0px -2rem;
 }
 
 .content-main {
@@ -570,15 +569,15 @@ width: 100%;
   overflow:hidden;
   scrollbar-width: none;
   /*! min-height: inherit; */
-  margin: 105px 0 0 0;
+  margin: 112px 0 0 0;
   position: fixed!important;
   justify-content: center;
   display: flex;
   flex-direction: column;
-  width: calc(100vw - 60px);
-  padding: 30px;
-  top: -30px;
-  height: calc(100vh - 135px);
+  width: calc(100vw - 4rem);
+  padding: 2rem;
+  top: -2rem;
+  height: calc(100vh - 112px - 2rem);
 }
 .content-main::-webkit-scrollbar {
     display: none;
@@ -674,7 +673,7 @@ div.content-main *, p, h, h1, h2, h3, h4, h5, h6 {
   overflow: unset;
   word-wrap: break-word;
   white-space: break-spaces;
-  word-break: break-word;
+  word-break: inherit;
 }
 
 /* capitalization */
@@ -683,9 +682,46 @@ div.content-main *, h1 { text-transform: capitalize;}
 /* (@ 3.0x) */
 
 /* Breakpoint-width ( > 1500 ) */
+
+ @media screen and (min-width: 1500px) and (max-height: 880px) {
+   .card.x  #body-text {
+
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+  }
+} 
+@media screen and (min-width: 1500px) and (max-height: 830px) {
+   .card.x  #body-text {
+
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+  }
+}
+@media screen and (min-width: 1500px) and (max-height: 790px) {
+   .card.x  #body-text {
+
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+  }
+}
+@media screen and (min-width: 1500px) and (max-height: 770px) {
+   .card.x  #body-text {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1500px) {
   
 /* Button Increase Padding */
+  #view_project {
+    padding: 2rem 7.5vw !important; 
+  }
   #button1,#button2,#button3 {
   padding: 18px 55px !important;
 }
@@ -693,7 +729,7 @@ div.content-main *, h1 { text-transform: capitalize;}
 /* H1 */  
 h1, .project-title{
   font-size:  4rem !important;
-  line-height: 5rem !important;
+  line-height: 4.75rem !important;
 }
 h1::first-line, .project-title::first-line{
   line-height:  5rem !important;
@@ -703,6 +739,7 @@ h1::first-line, .project-title::first-line{
 h2 {
   font-size: 2rem !important;
   line-height: 2.25rem !important;
+  padding-top: .75rem;
 }
   
 /* H3 */    
@@ -722,8 +759,8 @@ h2 ~ p {
 padding-top: 1rem;
   }
   p, .body-text {
-    font-size: 1.1rem;
-    line-height: 2.2rem;
+    font-size: 1.1rem !important;
+    line-height: 2.2rem !important;
   }
 
 /* Etc page format */  
@@ -745,15 +782,57 @@ padding-top: 1rem;
 }
 
 /* (@ 2.0x) */
-
 /* Breakpoint-width ( > 1000  & < 1500 ) */
+ @media screen and (max-width: 1499px) and (min-width: 1000px) and (max-height: 850px) {
+   .card.x  #body-text {
+
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+  }
+} 
+@media screen and (max-width: 1499px) and (min-width: 1000px) and (max-height: 800px) {
+   .card.x  #body-text {
+
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+  }
+}
+@media screen and (max-width: 1499px) and (min-width: 1000px) and (max-height: 770px) {
+   .card.x  #body-text {
+
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+  }
+}
+
+@media screen and (max-width: 1499px) and (min-width: 1000px) and (max-height: 740px) {
+   .card.x  #body-text {
+
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+  }
+}
+@media screen and (max-width: 1499px) and (min-width: 1000px) and (max-height: 710px) {
+   .card.x  #body-text {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1499px) and (min-width: 1000px)  {
 
   
 /* H1 */  
 h1, .project-title{
-  font-size:  3rem ;
-  line-height: 4rem!important;
+  font-size:  3rem;
+  line-height: 3.4rem !important;
 }
 h1::first-line, .project-title::first-line{
   line-height:  1rem!important;
@@ -763,6 +842,7 @@ h1::first-line, .project-title::first-line{
 h2 {
   font-size: 1.5rem !important;
   line-height: 1.75rem !important;
+  padding-top: .5rem;
 }
   
 /* H3 */    
@@ -783,11 +863,14 @@ h2 ~ p {
 padding-top: .75rem;
   }
   p, .body-text {
-    font-size: 1rem;
-    line-height: 1.8rem;
+    font-size: 1rem !important;
+    line-height: 1.8rem !important;
   }
 
 /* Etc page format */  
+  
+  
+  
 .interface {
   width: fit-content !important;
   margin-left: 30px;
@@ -810,19 +893,70 @@ padding-top: .75rem;
 /* (@ 1.0x) */
 
 /* Breakpoint-width ( 500 > & < 1000 ) */
+
+ @media screen and (max-width: 1000px) and (min-width: 500px) and (max-height: 850px) {
+   .card.x  #body-text {
+
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+  }
+} 
+ @media screen and (max-width: 1000px) and (min-width: 500px) and (max-height: 775px) {
+   .card.x  #body-text {
+
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+  }
+} 
+@media screen and (max-width: 1000px) and (min-width: 500px) and (max-height: 740px) {
+   .card.x  #body-text {
+
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 500px) and (max-height: 700px) {
+   .card.x  #body-text {
+
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 500px) and (max-height: 660px) {
+   .card.x  #body-text {
+    display: none;
+  }
+}
+
+
 @media screen and (max-width: 1000px) and (min-width: 500px)  {
 
-  
+    .card.x #view_project {
+    padding: 2rem 10vw !important;
+  }
+    .card.y #view_project {
+    padding: 2rem 120px !important;
+  }
+}
+
 /* H1 */  
 h1, .project-title{
-  font-size:  2rem!important;;
-  line-height: 2.5rem!important;
+  ;
 }
   
 /* H2 */    
 h2 {
-  font-size: 1rem !important;
-  line-height: 1.25rem !important;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  padding-top: .35rem;
 }
   
 /* H3 */    
@@ -837,7 +971,7 @@ h3 {
   
 /* Body */   
   p::first-line, p#body-text::first-line {
-    line-height: 1.62rem !important;
+    line-height: 1.62rem;
   } 
 h2 ~ p {
 padding-top: .5rem;
@@ -848,6 +982,14 @@ padding-top: .5rem;
   }
 
 /* Etc page format */  
+    .card.y  #body-text {
+
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+  }
+
 .interface {
   width: fit-content !important;
   margin-left: 30px;
@@ -865,9 +1007,18 @@ padding-top: .5rem;
   flex-direction: row !important;
 }
 }
-
+@media screen and (max-width: 325px)  {
+  .scrolldown{ float: none; left: -12px;right: 0 !important;margin: auto;}
+  #view_project::after {display: none!important;
+  }
+    #view_project {position: absolute!important; left: 0!important; right: 0!important; margin: -68px auto auto auto !important; 
+  }
+}
 @media screen and (max-width: 500px)  {
-  
+    #view_project {
+    width:    calc(100vw - 10rem) !important;
+    padding: 2rem !important;
+  }
 /* H1 */    
   h1 {
    font-size: 6vw
@@ -892,9 +1043,13 @@ padding-top: .5rem;
 h2 ~ p {
 padding-top: 1vw;
   }
-  p, .body-text {
+  #body-text {
     font-size: 3.25vw;
     line-height: 1.62rem;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
   }
   
 /* Etc page format */  
@@ -913,6 +1068,7 @@ padding-top: 1vw;
   margin: 30px auto 0 auto !important;
 }   
 }
+
 </style>
 
 </head>
@@ -921,7 +1077,7 @@ padding-top: 1vw;
     
 <div class="desktop-nav">
  
-    <div style="height: 105px;top: 0;width: 100%;position: absolute;"></div>
+    <div style="height: 112px;top: 0;width: 100%;position: absolute;"></div>
                <script>
           function preview_toggle(){};
           function show_toggle(){
@@ -930,15 +1086,15 @@ padding-top: 1vw;
               document.getElementById("button1").classList.toggle("checked");
           };
       </script>
-      <div id="state1" onmouseover="preview_toggle()" onclick="show_toggle()"></div>
-    <div class="btn hide" style="position: absolute;z-index: 9;padding: 30px;right: 98px;transform: scale(0.8);top: 4px;opacity:.9;transition: .25s ease;">
+      
+    
+    <div id="state1" onmouseover="preview_toggle()" onclick="show_toggle()"></div><div class="btn hide" style="position: absolute;z-index: 9;padding: 30px;right: 98px;transform: scale(0.8);top: 4px;opacity:.9;transition: .25s ease;">
     <img class="hide" style="width: auto;opacity:.5;height: 18px;position: absolute;z-index: 3;margin: 0 auto;bottom: calc(2.2vh + 10px);left: 175;right: -45px;top: 41px;z-index: 999;transition: .1s;" src="https://designedbydan.art/assets/images/38488.png" onclick="hidebtn();">
     <label>
                 <span class="btn-toggle" style=""></span>
             </label>
             
-        </div>
-    <script>
+        </div><script>
       const btn = document.querySelector(".btn-toggle");
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -970,24 +1126,33 @@ padding-top: 1vw;
                  <div id="logoblockone" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;border-left: 1vw solid;border-left-color: currentcolor;border-left-color: #474747;"></div>
                  <div id="logoblocktwo" style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);border-right: 1vw solid #474747;"></div>
                  <div id="logoblockthree" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;top: 22px;border-left: 1vw solid;border-left-color: #474747;"></div>
-                 <div id="logoblockfour"style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);top: 22px;border-right: 1vw solid #474747;"></div>
+                 <div id="logoblockfour" style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);top: 22px;border-right: 1vw solid #474747;"></div>
              </div>
     <h id="logotype" style="position: absolute;left: calc(12vw + 60px);font-family: 'Inter', sans-serif;font-style: normal;font-weight: 600;font-size: 16px;line-height: 48px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: var(--project-title);height: 45px;top: 28px;">Daniel Roswadowsky</h>
     </a>
         <div id="button1" style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: relative;flex: none;order: 0;flex-grow: 0;border: var(--border-color);"></div>
     <a href="/Contact/">
-        <div id="button2" style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: absolute;position: relative;flex: none;order: 0;flex-grow: 0;border: var(--border-color);" ></div>
+        <div id="button2" style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: absolute;position: relative;flex: none;order: 0;flex-grow: 0;border: var(--border-color);"></div>
     </a>
 
 </div>    
     
 <main onresize="reorder()" class="content-main">
-<div class="main-nav" style="display: flex;flex-direction: row;height: inherit;scroll-snap-type: x mandatory;overflow-x: scroll;scroll-behavior: smooth;/*! scrollbar-width: none; */width: inherit;"><div style="" class="card y"><div id="BullseyeTracker" class="card-a"></div><div class="card-b"><h4 id="tag-branding" onclick="toggletagbranding(); reorder(); getWindowSpec(); getWindowSpec2(); getWindowSpec3();" class="rw" style="">Branding
+<div class="main-nav" style="display: flex;flex-direction: row;height: inherit;scroll-snap-type: x mandatory;overflow-x: scroll;scroll-behavior: smooth;scrollbar-width: none;width: inherit;"><div style="" class="card x"><div id="BullseyeTracker" class="card-a"></div><div class="card-b"><h4 id="tag-branding" onclick="toggletagbranding(); reorder(); getWindowSpec(); getWindowSpec2(); getWindowSpec3();" class="rw" style="">Branding
 </h4><h1 style="width: fit-content;margin: 0;" class="project-title rw">Bullseye Tracker</h1><h2 style="margin: 0;
-width: fit-content;" class="rw">2019</h2><p style="margin: 0;max-width: fit-content !important;max-height: fit-content !important;" id="body-text" class="rw">BullseyeTracker is a web-based scoring application that simplifies all the challenges involved in Bullseye Pistol Leagues. Following the brand’s philosophy, I created a minimal wordmark and logomark reflecting their values of simplicity and ease of use.</p><a href="/Projects/BullseyeTracker/" style="margin-top: 3rem;width: fit-content;border-radius: 100px;display: flex;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border:var(--border-color);margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://designedbydan.art/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div><div style="" class="card y"><div class="card-a" id="ninetee"></div><div class="card-b"><h4 id="tag-branding" onclick="toggletagbranding(); reorder(); getWindowSpec(); getWindowSpec2(); getWindowSpec3();" class="rw" style="">Branding
+width: fit-content;" class="rw">2019</h2><p style="margin: 0;max-width: fit-content !important;max-height: fit-content !important;" id="body-text" class="rw">BullseyeTracker is a web-based scoring application that simplifies all the challenges involved in Bullseye Pistol Leagues. Following the brand’s philosophy, I created a minimal wordmark and logomark reflecting their values of simplicity and ease of use.</p><a href="/Projects/BullseyeTracker/" style="margin-top: 3rem;width: fit-content;border-radius: 100px;display: flex;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border:var(--border-color);margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://designedbydan.art/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div><div style="" class="card x"><div class="card-a" id="ninetee"></div><div class="card-b"><h4 id="tag-branding" onclick="toggletagbranding(); reorder(); getWindowSpec(); getWindowSpec2(); getWindowSpec3();" class="rw" style="">Branding
 </h4><h1 class="project-title rw" style="width: fit-content;margin: 0;">9Tee</h1><h2 style="margin: 0;
-width: fit-content;" class="rw">2018</h2><p style="margin: 0;max-width: fit-content !important;max-height: fit-content !important;" id="body-text" class="rw">A minimal wordmark and logomark with a short series of digital web-based advertisements for a customizable print on-demand clothing brand.</p><a href="/Projects/9Tee/" style="width: fit-content;border-radius: 100px;display: flex;margin-top: auto;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border:var(--border-color);margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://designedbydan.art/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div><div style="" class="card y"><div class="card-a" id="generative-composition"><div class="card-bg" style="background: linear-gradient(0deg, rgb(200, 0, 134) -10%, rgb(0, 47, 200) 110%);height: 100%;width: 100%;z-index: -1;position: relative;"></div></div><div class="card-b"><h4 id="tag-coding" onclick="toggletagcoding(); reorder(); getWindowSpec(); getWindowSpec2(); getWindowSpec3();" class="rw" style="">Coding</h4><h1 class="project-title rw" style="width: fit-content;margin: 0;">Generative Abstract Composition</h1><h2 style="margin: 0;
-width: fit-content;" class="rw">P5.JS</h2><p style="margin: 0;max-width: fit-content !important;max-height: fit-content !important;/*! width: 50%; */" id="body-text" class="rw">Utilizing the P5.JS library to create a generative abstract composition using algorithmic forms with careful consideration for aesthetic issues like rhythm, color; precise control of shape, as well as the balance between both organic and geometric forms.</p><a href="/Projects/Generative-Composition/" style="width: fit-content;border-radius: 100px;display: flex;margin-top: auto;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border:var(--border-color);margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://designedbydan.art/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div><div style="" class="card y"><div id="9Tee" class="card-a"></div><div class="card-b"><h1 class="project-title rw" style="width: fit-content;margin: 0;">H1 Headline</h1><h2 style="margin: 0;
+width: fit-content;" class="rw">2018</h2><p style="margin: 0;max-width: fit-content !important;max-height: fit-content !important;" id="body-text" class="rw">A minimal wordmark and logomark with a short series of digital web-based advertisements for a customizable print on-demand clothing brand.</p><a href="/Projects/9Tee/" style="width: fit-content;border-radius: 100px;display: flex;margin-top: auto;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border:var(--border-color);margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://designedbydan.art/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div><div style="" class="card x"><div class="card-a" id="generative-composition"><div class="p5jsprojpicture" style="
+    object-fit: contain;
+    background-image: url(https://designedbydan.art/assets/images/877947467dh.png);
+    z-index: 2;
+    height: inherit;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: none !important;
+                                                                                       "></div><div class="card-bg" style="background: linear-gradient(0deg, rgb(200, 0, 134) -10%, rgb(0, 47, 200) 110%);min-height: inherit;width: auto;z-index: -1;position: absolute;"></div></div><div class="card-b"><h4 id="tag-coding" onclick="toggletagcoding(); reorder(); getWindowSpec(); getWindowSpec2(); getWindowSpec3();" class="rw" style="">Coding</h4><h1 class="project-title rw" style="width: fit-content;margin: 0;">Generative Abstract Composition</h1><h2 style="margin: 0;
+width: fit-content;" class="rw">P5.JS</h2><p style="margin: 0;max-width: fit-content !important;max-height: fit-content !important;/*! width: 50%; */" id="body-text" class="rw">Utilizing the P5.JS library to create a generative abstract composition using algorithmic forms with careful consideration for aesthetic issues like rhythm, color; precise control of shape, as well as the balance between both organic and geometric forms.</p><a href="/Projects/Generative-Composition/" style="width: fit-content;border-radius: 100px;display: flex;margin-top: auto;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border:var(--border-color);margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://designedbydan.art/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div><div style="" class="card x"><div id="9Tee" class="card-a"></div><div class="card-b"><h1 class="project-title rw" style="width: fit-content;margin: 0;">H1 Headline</h1><h2 style="margin: 0;
 width: fit-content;" class="rw">H2 Sub Headline</h2><p style="margin: 0;max-width: fit-content !important;max-height: fit-content !important;width: 50%;" id="body-text" class="rw">Body (Initial Line) Body (Add. Lines)</p><h3 style="position: relative;
 margin: 0;
 width: fit-content;
@@ -1013,13 +1178,13 @@ margin: 0;
 width: fit-content;
 " class="rw">H4 Tag</h4>
 </div>
-<div class="head-interface rw" style="position: relative;left: 0;right: 0;top: 0;bottom: 0;display: flex;flex-direction: column;text-overflow: ellipsis;overflow: clip;height: fit-content;margin: 0 auto;width: auto;word-wrap: break-word;word-break: break-all;width: 50%;"><h1 class="project-title b rw" style="margin: 0;">Scale: @1x (32px) Weight: 700 Line Height: 40px rgb(75, 81, 91)</h1>
+<div class="head-interface rw" style="position: relative;left: 0;right: 0;top: 0;bottom: 0;display: flex;flex-direction: column;text-overflow: ellipsis;overflow: clip;height: fit-content;margin: 0 auto;width: auto;word-wrap: break-word;word-break: break-all;width: 50%;"><h1 class="project-title b rw" style="margin: 0;">Scale: @2x (48px) Weight: 700 Line Height: 52px rgb(224, 224, 224)</h1>
 <h2 class="b rw" style="
 position: relative;
 margin: 0;
-">Scale: @1x (16px) Weight: 700 Line Height: 20px rgb(102, 112, 128)</h2><p class="b rw" id="body-text" style="margin: 0;">Scale: @1x (14.4px) Weight: 400 Line Height: 25.6px rgb(102, 112, 128)</p>
-<h3 class="b rw" style="margin: 0;">Scale: @1x (12.8px) Weight: 600 Line Height: rgb(75, 81, 91)</h3>
-<h4 class="b rw" style="margin: 0;">Scale: @1x (11.2px) Weight: 700 Line Height: 32px rgb(255, 255, 255)</h4>
+">Scale: @2x (24px) Weight: 700 Line Height: 28px rgb(88, 95, 106)</h2><p class="b rw" id="body-text" style="margin: 0;">Scale: @2x (16px) Weight: 400 Line Height: 28.8px rgb(173, 180, 192)</p>
+<h3 class="b rw" style="margin: 0;">Scale: @2x (16px) Weight: 600 Line Height: rgb(224, 224, 224)</h3>
+<h4 class="b rw" style="margin: 0;">Scale: @2x (11.2px) Weight: 700 Line Height: 32px rgb(255, 255, 255)</h4>
 </div>
 
 </div>
@@ -1102,5 +1267,6 @@ window.addEventListener('resize', function(event) {
 });
       </script>
     <style type="text/css"></style><style type="text/css"></style><style type="text/css"></style>
+<style type="text/css"></style>
 <style type="text/css"></style>
 </body><style type="text/css"></style></html>

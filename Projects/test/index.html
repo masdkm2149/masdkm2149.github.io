@@ -1237,9 +1237,8 @@ function getInfo() {
         document.querySelector('p.b').innerHTML = ("Scale: @1x (" + window.getComputedStyle(document.querySelector("p")).fontSize + ") Weight: " + window.getComputedStyle(document.querySelector("p")).getPropertyValue("font-weight") + " Line Height: " + window.getComputedStyle(document.querySelector("p")).getPropertyValue("line-height") + " " + window.getComputedStyle(document.querySelector("p")).getPropertyValue("color"));
   }
 }   
-          getInfo();
-window.addEventListener('resize', function(event) { 
-          if ( $(window).width() < $(window).height() ) { 
+    function relSizing() {
+                  if ( $(window).width() < $(window).height() ) { 
                             if ( $('.x') ) {     
                                 for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.remove("x"); }   
                             }
@@ -1285,6 +1284,10 @@ window.addEventListener('resize', function(event) {
              for (let i = 0; i < document.querySelectorAll(".head-interface").length; i++) { document.querySelectorAll(".head-interface")[i].classList.add("rh"); }   
             }
      } 
+    }
+          getInfo();
+window.addEventListener('resize', function(event) { 
+    relSizing()
       console.log(JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize));
       getInfo();
 });

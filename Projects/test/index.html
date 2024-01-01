@@ -18,6 +18,28 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
 
 
 
+.card.x .card-a {
+  min-width: 55vw;
+  /*! width: inherit; */
+}
+.card.x .card-b {
+  padding: 4rem;
+  min-width: min-content;
+  width: calc(45vw - 4rem);
+}
+.card ~ .card {
+  margin-left: 2rem;
+}
+.p5jsprojpicture::after {
+  background: linear-gradient(0deg, rgb(200, 0, 134) -10%, rgb(0, 47, 200) 110%);
+  min-height: inherit;
+  position: relative;
+  content: "";
+  height: 100%;
+  display: flex;
+  z-index: -1;
+  transition: none !important;
+}
         
 .card {
 

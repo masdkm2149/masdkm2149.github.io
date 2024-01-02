@@ -85,7 +85,7 @@ overflow: hidden;
   background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 2000px) { 
+@media screen and (max-width: 1500px) { 
 .card {
   width: calc(100vw - 4rem);
   position: relative;
@@ -102,6 +102,24 @@ overflow: hidden;
 }
 
 }
+        @media screen and (min-width: 1500px) { 
+.card {
+  width: calc(50vw - 2rem);
+  position: relative;
+}
+  .card.x {
+  width: calc(50vw - 1rem);
+  height: auto;
+}
+.card.y {
+  min-width: 50%;
+  /*! height: auto; */
+  /*! width: calc(100vw - 42rem); */
+  width: auto;
+}
+
+}
+
 
 @media screen and (min-width: 1000px) {
   min-width: calc(100vw - 4rem);

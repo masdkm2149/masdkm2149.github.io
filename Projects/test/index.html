@@ -959,13 +959,16 @@ padding-top: .75rem;
    .card.x  #body-text {
     display: none;
   }
+     .card.x a {
+     margin-top: auto!important; 
+   }
 }
 
 
 @media screen and (max-width: 1000px) and (min-width: 500px)  {
 
     .card.x #view_project {
-    padding: 2rem 10vw !important;
+    padding: 2rem 11.5vw !important;
   }
     .card.y #view_project {
     padding: 2rem 120px !important;
@@ -1102,8 +1105,38 @@ padding-top: .5rem;
  @media screen and (max-width: 500px) and (max-height: 790px) {
    .card.y #body-text {
     display: none;
-  }
+  }   
 } 
+ @media screen and (max-width: 1000px) and (max-height: 510px) {
+   .card.x h2 {
+    display: none;
+   }
+}
+ @media screen and (max-width: 1000px) and (max-height: 490px) {
+   .card.x h1 {
+    
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+   }
+} @media screen and (max-width: 1000px) and (max-height: 460px) {
+   .card.x h1 {
+    
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+   }
+} 
+@media screen and (max-width: 1000px) and (max-height: 410px) {
+   .card.x h1 {    
+     display: none;
+   }
+     .card.x a {    
+     margin: auto!important;
+   }
+}
 </style>
 
 </head>
@@ -1250,18 +1283,18 @@ function getInfo() {
   }
 }   
     function relSizing() {
-                  if ( $(window).width() < $(window).height() ) { 
-                            if ( $('.x') ) {     
-                                for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.remove("x"); }   
-                            }
-    for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.add("y"); }   
-          }
-              if ( $(window).width() > $(window).height() ) { 
-                            if ( $('.y') ) {     
-                                for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.remove("y"); }   
-                            }
-    for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.add("x"); }   
-          }
+                  if ( $(window).width() < $(window).height() && $(window).width() < 1500 ) { 
+                            if ( $('.x') ) { for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.remove("x"); } }
+                        for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.add("y"); }   
+                  }
+              if ( $(window).width() > $(window).height() && $(window).width() < 1500 ) { 
+                            if ( $('.y') ) { for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.remove("y"); } }
+                    for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.add("x"); }   
+               }
+            if ( $(window).width() > $(window).height() && $(window).width() > 1500 ) { 
+                            if ( $('.x') ) { for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.remove("x"); } }
+                    for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.add("y"); }   
+               }
      if ( $(window).width() < 501 ) {
           if ( $(window).width() < $(window).height() ) {
               if ( $('.rh') ) {             

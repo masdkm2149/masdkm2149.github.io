@@ -1058,12 +1058,13 @@ padding-top: .5rem;
 }
 @media screen and (max-width: 500px)  {
     #view_project {
-    width:    calc(100vw - 10rem) !important;
+    width:    calc(100vw - 12rem) !important;
     padding: 2rem !important;
+    margin-top:2rem;
   }
 
    .project-title {
-   overflow: hidden;
+   overflow: clip;
    -webkit-line-clamp: 1;  
    -webkit-box-orient: vertical;  
    display: -webkit-inline-box;
@@ -1076,7 +1077,7 @@ padding-top: .5rem;
     line-height: 1.62rem;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;  
-    overflow: hidden;
+    overflow: clip;
     display: -webkit-inline-box;
   }
   
@@ -1115,7 +1116,61 @@ padding-top: .5rem;
   }
 } 
 
- @media screen and (max-width: 500px) and (max-height: 900px) {
+ @media screen and (max-width: 500px) and (max-height: 1040px) {
+   .card.y #body-text {
+
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+  }
+} 
+ @media screen and (max-width: 500px) and (max-height: 1000px) {
+   .card.y #body-text {
+
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+  }
+} 
+ @media screen and (max-width: 500px) and (max-height: 960px) {
+   .card.y #body-text {
+
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+  }
+} 
+ @media screen and (max-width: 500px) and (max-height: 920px) {
+   .card.y #body-text {
+
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+  }
+} 
+ @media screen and (max-width: 500px) and (max-height: 880px) {
+   .card.y #body-text {
+
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+  }
+} 
+ @media screen and (max-width: 500px) and (max-height: 840px) {
+   .card.y #body-text {
+
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+    display: -webkit-inline-box;
+  }
+} 
+ @media screen and (max-width: 500px) and (max-height: 800px) {
    .card.y #body-text {
 
   -webkit-line-clamp: 2;
@@ -1124,7 +1179,7 @@ padding-top: .5rem;
     display: -webkit-inline-box;
   }
 } 
- @media screen and (max-width: 500px) and (max-height: 850px) {
+ @media screen and (max-width: 500px) and (max-height: 760px) {
    .card.y #body-text {
 
   -webkit-line-clamp: 1;
@@ -1133,11 +1188,12 @@ padding-top: .5rem;
     display: -webkit-inline-box;
   }
 } 
- @media screen and (max-width: 500px) and (max-height: 790px) {
+ @media screen and (max-width: 500px) and (max-height: 720px) {
    .card.y #body-text {
     display: none;
   }   
 } 
+
  @media screen and (max-width: 1100px) and (max-height: 510px) {
    .card.x h2 {
     display: none;

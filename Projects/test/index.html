@@ -1758,7 +1758,7 @@ window.addEventListener('resize', function(event) {
          if (currentCard === 1) {
             let currentCard = 2
             document.querySelector('#2').scrollIntoView();
-/*    scrollContainer.scrollLeft += (window.innerWidth * 0.55);   */
+
         }
         if (currentCard === 2) {        
             let currentCard = 3
@@ -1770,7 +1770,8 @@ window.addEventListener('resize', function(event) {
     }
     }
     if (event.deltaY < 0) {
- /*     scrollContainer.scrollLeft += -(window.innerWidth * 0.55); */
+   scrollContainer.scrollLeft += -(window.innerWidth * 0.55);
+    }
     }
       </script>
     <style type="text/css"></style><style type="text/css"></style><style type="text/css"></style>

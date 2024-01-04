@@ -1760,29 +1760,27 @@ window.addEventListener('resize', function(event) {
             console.log(currentCard);
          }
          else if ((currentCard > 0) && (waiting === 0)) {
+             waiting = 1
             setTimeout(function(){ 
                 currentCardref = currentCard                   
                 document.querySelector(".main-nav").scrollLeft += (document.querySelector(".main-nav").scrollLeft + (window.innerWidth * 0.6)); 
                 currentCard = currentCardref + 1
                 console.log(currentCard);        
-                console.log("Paused for 290 ms"); 
-                waiting = 1 
-            }, 10);
-        setTimeout(function(){ waiting = 0 }, 200);
-         }
+                console.log("Paused for 20 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft); 
+                waiting = 0
+            }, 20);
     }
     if (event.deltaY < -15) {
          if ((currentCard > 1) && (waiting === 0)) {
+                             waiting = 1 
             setTimeout(function(){ 
                 currentCardref = currentCard                   
                 document.querySelector(".main-nav").scrollLeft += (document.querySelector(".main-nav").scrollLeft + (window.innerWidth * -0.6)); 
                 currentCard = currentCardref - 1
                 console.log(currentCard);        
-                console.log("Paused for 290 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft); 
-                waiting = 1 
-            }, 10);
-            setTimeout(function(){ waiting = 0 }, 200);
-         }
+                console.log("Paused for 20 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft); 
+                waiting = 0
+            }, 20);
     }
 })
       </script>

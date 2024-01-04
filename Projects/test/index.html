@@ -1763,7 +1763,7 @@ window.addEventListener('resize', function(event) {
     if (event.deltaY > 10) { 
         if (waiting === 0) {
             waiting = 1
-            document.querySelector(".main-nav").scrollLeft += (event.deltaY * 3); 
+            document.querySelector(".main-nav").scrollLeft += (event.deltaY * 2); 
             console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
             setTimeout(function(){         
                 waiting = 0
@@ -1773,7 +1773,7 @@ window.addEventListener('resize', function(event) {
     else if (event.deltaY < -10) {            
         if (waiting === 0) {
             waiting = 1
-            document.querySelector(".main-nav").scrollLeft += (event.deltaY * 3); 
+            document.querySelector(".main-nav").scrollLeft += (event.deltaY * 2); 
             console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
             setTimeout(function(){         
                 waiting = 0

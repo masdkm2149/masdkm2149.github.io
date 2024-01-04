@@ -24,6 +24,7 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
 
 
 
+
 .card.x .card-a {
   min-width: 55vw;
   /*! width: inherit; */
@@ -1004,7 +1005,7 @@ padding-top: .75rem;
     padding: 2rem 11.5vw !important;
   }
     .card.y #view_project {
-    padding: 2rem 120px !important;
+    padding: 2rem 8rem !important;
   }
 }
 
@@ -1070,7 +1071,7 @@ padding-top: .5rem;
 }
 
 @media screen and (max-width: 500px) and (max-height: 775px) {
-   #\33.card.y #body-text {
+   #\33 .card.y #body-text {
    display: none!important;
   }}
 @media screen and (max-width: 500px) and (max-height: 870px) {
@@ -1078,61 +1079,93 @@ padding-top: .5rem;
    -webkit-line-clamp: 1;  
   }}
 
-   #\33.card.y .project-title {
+   #\33 .card.y .project-title {
    overflow: clip;
    -webkit-box-orient: vertical;  
    display: -webkit-inline-box;
   }
-     #\33.card.y #body-text {
+     #\33 .card.y #body-text {
    overflow: clip;
    -webkit-box-orient: vertical;  
    display: -webkit-inline-box;
   }
 
 @media screen and (max-width: 500px) and (min-height: 870px) and (max-height: 910px){
-     #\33.card.y #body-text {
+     #\33 .card.y #body-text {
    -webkit-line-clamp: 1;  
   }
-     #\33.card.y .project-title {
+     #\33 .card.y .project-title {
    -webkit-line-clamp: 2;  
   }
 }
 @media screen and (max-width: 500px) and (min-height: 910px) and (max-height: 950px){
-     #\33.card.y #body-text {
+     #\33 .card.y #body-text {
    -webkit-line-clamp: 2;  
   }
-     #\33.card.y .project-title {
+     #\33 .card.y .project-title {
    -webkit-line-clamp: 2;  
   }
 }
 
 @media screen and (max-width: 500px) and (min-height: 950px) and (max-height: 990px){
-   #\33.card.y .project-title {
+   #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
 
   }
-     #\33.card.y #body-text {
+     #\33 .card.y #body-text {
    overflow: clip;
    -webkit-line-clamp: 1;  
    -webkit-box-orient: vertical;  
    display: -webkit-inline-box;
   }
 }
-@media screen and (max-width: 500px) and (min-height: 990px) and (max-height: 1030px) {
-   #\33.card.y .project-title {
+@media screen and (max-width: 500px) and (min-height: 990px) and (max-height: 1035px) {
+   #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
   }
-       #\33.card.y #body-text {
+       #\33 .card.y #body-text {
    -webkit-line-clamp: 2;  
   }
 }
+@media screen and (max-width: 500px) and (min-height: 1035px) and (max-height: 1075px) {
+       #\33 .card.y #body-text {
+   -webkit-line-clamp: 3;  
+  }
+}
+@media screen and (max-width: 500px) and (min-height: 1075px) and (max-height: 1115px) {
+       #\33 .card.y #body-text {
+   -webkit-line-clamp: 4;  
+  }
+}
+@media screen and (max-width: 500px) and (min-height: 1145px) and (max-height: 1195px) {
+       #\33 .card.y #body-text {
+   -webkit-line-clamp: 5;  
+  }
+}
+@media screen and (max-width: 500px) and (min-height: 1195px) and (max-height: 1235px) {
+       #\33 .card.y #body-text {
+   -webkit-line-clamp: 6;  
+  }
+}
+@media screen and (max-width: 500px) and (min-height: 1235px) and (max-height: 1275px) {
+       #\33 .card.y #body-text {
+   -webkit-line-clamp: 7;  
+  }
+}
+@media screen and (max-width: 500px) and (min-height: 1275px) {
+       #\33 .card.y #body-text {
+   -webkit-line-clamp: 8;  
+  }
+}
 
-@media screen and (max-width: 500px)  {
+@media screen and (max-width: 410px)  {
     #view_project {
     width:    calc(100vw - 12rem) !important;
     padding: 2rem !important;
     margin-top:2rem;
   }
+}
+@media screen and (max-width: 500px)  {
 
    .project-title {
    overflow: clip;
@@ -1141,9 +1174,6 @@ padding-top: .5rem;
     
   }
   
-  
-  
-
   #body-text {
     line-height: 1.62rem;
   -webkit-box-orient: vertical;  
@@ -1387,7 +1417,7 @@ padding-top: .5rem;
     display: none;
   }
 
- @media screen and (max-width: 500px) and (max-height: 1040px) {
+ @media screen and (max-width: 500px) and (max-height: 1140px) {
    #\33.card.y #body-text {
 
   -webkit-line-clamp: 8;
@@ -1397,7 +1427,7 @@ padding-top: .5rem;
   }
 } 
  @media screen and (max-width: 500px) and (max-height: 1000px) {
-   #\33.card.y #body-text.card.y #body-text {
+   #\33 .card.y #body-text.card.y #body-text {
 
   -webkit-line-clamp: 7;
   -webkit-box-orient: vertical;  
@@ -1405,62 +1435,42 @@ padding-top: .5rem;
     display: -webkit-inline-box;
   }
 } 
- @media screen and (max-width: 500px) and (max-height: 960px) {
-   #\33.card.y #body-text.card.y #body-text {
+ @media screen and (max-width: 500px) and (max-height: 1160px) {
+   #\33 .card.y #body-text.card.y #body-text {
 
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;  
     overflow: hidden;
     display: -webkit-inline-box;
   }
 } 
  @media screen and (max-width: 500px) and (max-height: 920px) {
-   #\33.card.y #body-text.card.y #body-text {
-
+   #\33 .card.y #body-text.card.y #body-text {
   -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;  
-    overflow: hidden;
-    display: -webkit-inline-box;
   }
 } 
  @media screen and (max-width: 500px) and (max-height: 880px) {
-   #\33.card.y #body-text.card.y #body-text {
-
+   #\33 .card.y #body-text.card.y #body-text {
   -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;  
-    overflow: hidden;
-    display: -webkit-inline-box;
   }
 } 
  @media screen and (max-width: 500px) and (max-height: 840px) {
-   #\33.card.y #body-text.card.y #body-text {
-
+   #\33 .card.y #body-text.card.y #body-text {
   -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;  
-    overflow: hidden;
-    display: -webkit-inline-box;
   }
 } 
  @media screen and (max-width: 500px) and (max-height: 800px) {
-   #\33.card.y #body-text.card.y #body-text {
-
+   #\33 .card.y #body-text.card.y #body-text {
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;  
-    overflow: hidden;
-    display: -webkit-inline-box;
   }
 } 
  @media screen and (max-width: 500px) and (max-height: 760px) {
-   #\33.card.y #body-text.card.y #body-text {
-
+   #\33 .card.y #body-text.card.y #body-text {
   -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;  
-    overflow: hidden;
-    display: -webkit-inline-box;
   }
 } 
  @media screen and (max-width: 500px) and (max-height: 720px) {
-   #\33.card.y #body-text.card.y #body-text {
+   #\33 .card.y #body-text.card.y #body-text {
     display: none;
   }   
 } 
@@ -1545,9 +1555,6 @@ padding-top: .5rem;
     display: none;
   }
 } 
-
-
-
 </style>
 
 </head>
@@ -1756,7 +1763,7 @@ window.addEventListener('resize', function(event) {
     if (event.deltaY > 10) { 
         if (waiting === 0) {
             waiting = 1
-            document.querySelector(".main-nav").scrollLeft += (event.deltaY * 5); 
+            document.querySelector(".main-nav").scrollLeft += (event.deltaY * 3); 
             console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
             setTimeout(function(){         
                 waiting = 0
@@ -1766,7 +1773,7 @@ window.addEventListener('resize', function(event) {
     else if (event.deltaY < -10) {            
         if (waiting === 0) {
             waiting = 1
-            document.querySelector(".main-nav").scrollLeft += (event.deltaY * 5); 
+            document.querySelector(".main-nav").scrollLeft += (event.deltaY * 3); 
             console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
             setTimeout(function(){         
                 waiting = 0

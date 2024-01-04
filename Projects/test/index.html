@@ -1753,7 +1753,7 @@ window.addEventListener('resize', function(event) {
     event.preventDefault();    
     if ((event.deltaY > 15) && (waiting === 0)) {
              waiting = 1                
-                 document.querySelector(".main-nav").scrollLeft += ((window.innerWidth * 0.51) (event.deltaY * 0.1)); 
+                 document.querySelector(".main-nav").scrollLeft += ((window.innerWidth * 0.51) * (event.deltaY * 0.1)); 
                 console.log("Paused for 100 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft);         console.log(event.deltaY);
             setTimeout(function(){            
                 waiting = 0
@@ -1761,7 +1761,7 @@ window.addEventListener('resize', function(event) {
     }
     else if ((event.deltaY < -15) && (waiting === 0)) {            
             waiting = 1
-                 document.querySelector(".main-nav").scrollLeft += ((window.innerWidth * 0.51) (event.deltaY * 0.1)); 
+                 document.querySelector(".main-nav").scrollLeft += ((window.innerWidth * 0.51) * (event.deltaY * 0.1)); 
                 console.log("Paused for 100 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft);         console.log(event.deltaY);
             setTimeout(function(){         
                 waiting = 0

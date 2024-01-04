@@ -1755,18 +1755,18 @@ window.addEventListener('resize', function(event) {
     if ((event.deltaY > 15) && (waiting === 0)) {
              waiting = 1                
                  document.querySelector(".main-nav").scrollLeft += (window.innerWidth * 0.75); 
-                console.log("Paused for 150 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft); 
+                console.log("Paused for 100 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft); 
             setTimeout(function(){            
                 waiting = 0
-            }, 150);
+            }, 100);
     }
     else if ((event.deltaY < -15) && (waiting === 0)) {            
             waiting = 1
                         document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.75); 
-                console.log("Paused for 150 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft); 
+                console.log("Paused for 100 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft); 
             setTimeout(function(){         
                 waiting = 0
-            }, 150);
+            }, 100);
     }
 });
       </script>

@@ -1755,17 +1755,17 @@ window.addEventListener('resize', function(event) {
         console.log(event.deltaY);
     if (event.deltaY > window.innerHeight * 0.1) {
          if (typeof currentCard == "undefined") {var currentCard = 1}
-         if (currentCard === 1) {
+         else if (currentCard === 1) {
             var currentCard = 2
             document.querySelector('[id="2"]').scrollIntoView();
             console.log(currentCard);
         }
-        if (currentCard === 2) {        
+        else if (currentCard === 2) {        
             var currentCard = 3
             document.querySelector('[id="3"]').scrollIntoView();
             console.log(currentCard);
         }
-        if (currentCard === 3) { 
+        else if (currentCard === 3) { 
             var currentCard = currentCardref + 1
             document.querySelector("[id='"+ currentCardRef + 1 +"']").scrollIntoView();
             console.log(currentCard);
@@ -1777,7 +1777,7 @@ window.addEventListener('resize', function(event) {
             document.querySelector('[id="2"]').scrollIntoView();
             console.log(currentCard);
         }
-        if (currentCard === 2) {        
+        else if (currentCard === 2) {        
             var currentCard = 1
             document.querySelector('[id="3"]').scrollIntoView();
             console.log(currentCard);

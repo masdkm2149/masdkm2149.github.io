@@ -1764,7 +1764,7 @@ window.addEventListener('resize', function(event) {
         if (waiting === 0) {
             console.log("started wait");
             waiting = 1
-            document.querySelector(".main-nav").scrollLeft += (window.innerWidth * 0.6); 
+            document.querySelector(".main-nav").scrollLeft += (window.innerWidth * 0.7); 
             console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
             setTimeout(function(){         
                 console.log("finished wait");
@@ -1776,7 +1776,7 @@ window.addEventListener('resize', function(event) {
         if (waiting === 0) {
             console.log("started wait");
             waiting = 1
-            document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.6); 
+            document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.7); 
             console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
             setTimeout(function(){         
                 console.log("finished wait");

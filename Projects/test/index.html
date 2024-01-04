@@ -1763,18 +1763,27 @@ window.addEventListener('resize', function(event) {
             currentCard = currentCardref + 1
             document.querySelector("[id='"+ currentCardref + 1 +"']").scrollIntoView();
             console.log(currentCard);
-        }
+                setTimeout(function(){
+    console.log("Executed after 500 ms");
+}, 500);
+         }
         else if (currentCard === 2) {        
             currentCardref = currentCard       
             currentCard = currentCardref + 1
             document.querySelector("[id='"+ currentCardref + 1 +"']").scrollIntoView();
             console.log(currentCard);
+                setTimeout(function(){
+    console.log("Executed after 500 ms");
+}, 500);
         }
         else if (currentCard === 3) { 
             currentCardref = currentCard       
             currentCard = currentCardref + 1
             document.querySelector("[id='"+ currentCardref + 1 +"']").scrollIntoView();
             console.log(currentCard);
+                    setTimeout(function(){
+    console.log("Executed after 500 ms");
+}, 500);
         }
     }
     if (event.deltaY < -15) {
@@ -1783,7 +1792,10 @@ window.addEventListener('resize', function(event) {
             currentCard = currentCardref - 1
             document.querySelector("[id='"+ currentCardref - 1 +"']").scrollIntoView();
             console.log(currentCard);
-        }
+        setTimeout(function(){
+    console.log("Executed after 500 ms");
+}, 500);
+         }
     }
 })
       </script>

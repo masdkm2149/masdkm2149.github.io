@@ -1749,11 +1749,12 @@ window.addEventListener('resize', function(event) {
 });
     scrollContainer.addEventListener("wheel", (event) => {
     event.preventDefault();
-        var currentCard = 1
+        var currentCard 
         var currentCardref = currentCard          
         console.log(currentCard);
         console.log(event.deltaY);
     if (event.deltaY > window.innerHeight * 0.1) {
+         if (typeof currentCard == "undefined") {var currentCard = 1}
          if (currentCard === 1) {
             var currentCard = 2
             document.querySelector('[id="2"]').scrollIntoView();

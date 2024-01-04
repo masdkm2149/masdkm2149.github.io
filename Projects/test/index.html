@@ -1762,8 +1762,8 @@ window.addEventListener('resize', function(event) {
          else if ((currentCard > 0) && (waiting === 0)) {
             setTimeout(function(){ 
                 currentCardref = currentCard                   
-                document.querySelector(".main-nav").scrollLeft += (window.innerWidth * 0.55); 
-                currentCard = currentCardref - 1
+                document.querySelector(".main-nav").scrollLeft += (window.innerWidth * 0.6); 
+                currentCard = currentCardref + 1
                 console.log(currentCard);        
                 console.log("Paused for 290 ms"); 
                 waiting = 1 
@@ -1775,7 +1775,7 @@ window.addEventListener('resize', function(event) {
          if ((currentCard > 1) && (waiting === 0)) {
             setTimeout(function(){ 
                 currentCardref = currentCard                   
-                document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.55); 
+                document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.6); 
                 currentCard = currentCardref - 1
                 console.log(currentCard);        
                 console.log("Paused for 290 ms"); 

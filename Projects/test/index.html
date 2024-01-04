@@ -1758,7 +1758,7 @@ window.addEventListener('resize', function(event) {
     }
     else if ((event.deltaY < -10) && (waiting === 0)) {            
             waiting = 1
-                 document.querySelector(".main-nav").scrollLeft += ((window.innerWidth * 0.51) * (event.deltaY * 0.01)); 
+                 document.querySelector(".main-nav").scrollLeft += (event.deltaY * 0.01); 
                 console.log("Paused for 50 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft);         console.log(event.deltaY);
             setTimeout(function(){         
                 waiting = 0

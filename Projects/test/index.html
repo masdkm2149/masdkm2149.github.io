@@ -1758,7 +1758,7 @@ window.addEventListener('resize', function(event) {
       console.log(JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize));
       getInfo();
 });
-    scrollContainer.addEventListener("wheel", (event) => {
+    document.querySelector(".main-nav").addEventListener("wheel", (event) => {
     event.preventDefault();    
     if (event.deltaY > 10) { 
         if (waiting === 0) {

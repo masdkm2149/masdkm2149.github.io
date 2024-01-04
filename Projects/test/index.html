@@ -1774,10 +1774,9 @@ window.addEventListener('resize', function(event) {
             currentCardref = currentCard                   
             document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.51); 
             currentCard = currentCardref - 1
-            console.log(currentCard);
-            waiting = 1
-            console.log("Paused for 200 ms");
-        setTimeout(function(){ waiting = 0 }, 200);
+            console.log(currentCard);        
+            setTimeout(function(){ console.log("Paused for 200 ms"); waiting = 1 }, 10);}
+            setTimeout(function(){ waiting = 0 }, 200);
          }
     }
 })

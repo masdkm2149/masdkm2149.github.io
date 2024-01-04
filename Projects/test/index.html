@@ -1753,7 +1753,7 @@ window.addEventListener('resize', function(event) {
         var currentCardref = currentCard          
         console.log(currentCard);
         console.log(event.deltaY);
-    if (event.deltaY > window.innerHeight * 0.1) {
+    if (event.deltaY > 15) {
          if (currentCard == null) {var currentCard = 1}
          else if (currentCard === 1) {
             var currentCard = 2
@@ -1771,7 +1771,7 @@ window.addEventListener('resize', function(event) {
             console.log(currentCard);
         }
     }
-    if (event.deltaY < window.innerHeight * -0.1) {
+    if (event.deltaY < -15) {
          if (currentCard === 3) {
             var currentCard = 2
             document.querySelector('[id="2"]').scrollIntoView();

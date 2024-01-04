@@ -1754,20 +1754,20 @@ window.addEventListener('resize', function(event) {
         console.log(currentCard);
         console.log(event.deltaY);
     if ((event.deltaY > 15) && (waiting === 0)) {
-             waiting = 1
+             waiting = 1                
+                 document.querySelector(".main-nav").scrollLeft += (window.innerWidth * 0.6); 
+                console.log("Paused for 150 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft); 
             setTimeout(function(){            
-                document.querySelector(".main-nav").scrollLeft += (window.innerWidth * 0.6); 
-                console.log("Paused for 50 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft); 
                 waiting = 0
-            }, 50);
+            }, 150);
     }
     if ((event.deltaY < -15) && (waiting === 0)) {            
             waiting = 1
+                        document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.6); 
+                console.log("Paused for 150 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft); 
             setTimeout(function(){         
-                document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.6); 
-                console.log("Paused for 50 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft); 
                 waiting = 0
-            }, 50);
+            }, 150);
     }
 });
       </script>

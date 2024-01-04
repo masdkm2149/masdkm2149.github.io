@@ -1753,36 +1753,21 @@ window.addEventListener('resize', function(event) {
     event.preventDefault();    
         console.log(currentCard);
         console.log(event.deltaY);
-    if (event.deltaY > 15) {
-         if (currentCard == null) {
-             currentCard = 1 
-             currentCardref = currentCard       
-            console.log(currentCard);
-         }
-         else if ((currentCard > 0) && (waiting === 0)) {
+    if (event.deltaY > 15) && (waiting === 0)) {
              waiting = 1
-            setTimeout(function(){ 
-                currentCardref = currentCard                   
+            setTimeout(function(){            
                 document.querySelector(".main-nav").scrollLeft += (window.innerWidth * 0.6); 
-                currentCard = currentCardref + 1
-                console.log(currentCard);        
-                console.log("Paused for 20 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft); 
-                waiting = 0
-            }, 50);
-    }
-    }
-    if (event.deltaY < -15) {
-         if ((currentCard > 1) && (waiting === 0)) {
-                             waiting = 1 
-            setTimeout(function(){ 
-                currentCardref = currentCard                   
-                document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.6); 
-                currentCard = currentCardref - 1
-                console.log(currentCard);        
                 console.log("Paused for 50 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft); 
                 waiting = 0
             }, 50);
-         }
+    }
+    if (event.deltaY < -15) && (waiting === 0)) {            
+            waiting = 1
+            setTimeout(function(){         
+                document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.6); 
+                console.log("Paused for 50 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft); 
+                waiting = 0
+            }, 50);
     }
 });
       </script>

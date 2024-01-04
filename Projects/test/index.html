@@ -1759,7 +1759,7 @@ window.addEventListener('resize', function(event) {
              currentCardref = currentCard       
             console.log(currentCard);
          }
-         else if (currentCard > 0 waiting === 0) {
+         else if (currentCard > 0 && waiting === 0) {
             currentCardref = currentCard       
             document.querySelector("[id=\'" + (currentCardref + 1) + "\']").scrollIntoView(); 
             currentCard = currentCardref + 1

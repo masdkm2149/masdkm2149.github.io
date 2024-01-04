@@ -1754,7 +1754,7 @@ window.addEventListener('resize', function(event) {
     event.preventDefault();    
     if (event.deltaY > 10) { 
                  document.querySelector(".main-nav").scrollLeft += (event.deltaY * 4); 
-                console.log("Paused for 50 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft);         console.log(event.deltaY);
+                console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
     }
     else if ((event.deltaY < -10) && (waiting === 0)) {            
             waiting = 1

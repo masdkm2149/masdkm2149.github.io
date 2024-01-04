@@ -45,11 +45,12 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
   z-index: -1;
   transition: none !important;
 }
-        
-.card {
-
-  display: flex;
+ .card{display: flex;}
+.card.x {
   scroll-snap-align: start;
+}
+        .card.y {
+  scroll-snap-align: center;
 }
 .card-a {
 height: 100%;

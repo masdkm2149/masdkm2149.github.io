@@ -1754,20 +1754,23 @@ window.addEventListener('resize', function(event) {
     if (event.deltaY > 15) {
          if (currentCard == null) {
              let currentCard = 1 
+             var currentCardref = currentCard       
             console.log(currentCard);
          }
          else if (currentCard === 1) {
             let currentCard = 2
+            var currentCardref = currentCard       
             document.querySelector('[id="2"]').scrollIntoView();
             console.log(currentCard);
         }
         else if (currentCard === 2) {        
             let currentCard = 3
+            var currentCardref = currentCard       
             document.querySelector('[id="3"]').scrollIntoView();
             console.log(currentCard);
         }
         else if (currentCard === 3) { 
-                var currentCardref = currentCard       
+            var currentCardref = currentCard       
             let currentCard = currentCardref + 1
             document.querySelector("[id='"+ currentCardRef + 1 +"']").scrollIntoView();
             console.log(currentCard);

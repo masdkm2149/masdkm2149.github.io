@@ -1743,6 +1743,7 @@ function getInfo() {
           relSizing();
  var currentCard
  var currentCardref
+ var waiting = 0
 window.addEventListener('resize', function(event) { 
     relSizing();
       console.log(JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize));
@@ -1758,21 +1759,23 @@ window.addEventListener('resize', function(event) {
              currentCardref = currentCard       
             console.log(currentCard);
          }
-         else if (currentCard > 0) {
+         else if (currentCard > 0 waiting === 0) {
             currentCardref = currentCard       
             document.querySelector("[id=\'" + (currentCardref + 1) + "\']").scrollIntoView(); 
             currentCard = currentCardref + 1
             console.log(currentCard);
-        setTimeout(function(){ console.log("Executed after 500 ms"); }, 500);
+            waiting = 1
+        setTimeout(function(){ console.log("Executed after 500 ms"); waiting = 0 }, 500);
          }
     }
     if (event.deltaY < -15) {
-         if (currentCard > 1 ) {
+         if (currentCard > 1 && waiting === 0) {
             currentCardref = currentCard       
             document.querySelector("[id=\'" + (currentCardref - 1) + "\']").scrollIntoView(); 
             currentCard = currentCardref - 1
             console.log(currentCard);
-        setTimeout(function(){ console.log("Executed after 500 ms"); }, 500);
+            waiting = 1
+        setTimeout(function(){ console.log("Executed after 500 ms"); waiting = 0 }, 500);
          }
     }
 })

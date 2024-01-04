@@ -1764,24 +1764,24 @@ window.addEventListener('resize', function(event) {
         if (waiting === 0) {
             console.log("started wait");
             waiting = 1
-            document.querySelector(".main-nav").scrollLeft += (event.deltaY * 2); 
+            document.querySelector(".main-nav").scrollLeft += (event.deltaY * 3); 
             console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
             setTimeout(function(){         
                 console.log("finished wait");
                 waiting = 0
-            }, 250);
+            }, 750);
         } 
     }
     else if (event.deltaY < -10) {            
         if (waiting === 0) {
             console.log("started wait");
             waiting = 1
-            document.querySelector(".main-nav").scrollLeft += (event.deltaY * 2); 
+            document.querySelector(".main-nav").scrollLeft += (event.deltaY * 3); 
             console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
             setTimeout(function(){         
                 console.log("finished wait");
                 waiting = 0
-            }, 250);
+            }, 750);
         } 
     } 
 });

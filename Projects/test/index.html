@@ -1748,13 +1748,9 @@ window.addEventListener('resize', function(event) {
       getInfo();
 });
     scrollContainer.addEventListener("wheel", (event) => {
-                           if (document.querySelector('.debug')){
-                           document.querySelector('.debug').innerHTML = ("Your Height: " + window.innerHeight + "px" + "<br><br>" + "Your Width: " + window.innerWidth + "px" + "<br><br>"  + "Your Pixel Ratio: " +  window.devicePixelRatio  + "<br><br>"  + "Your deltaY: " + event.deltaY );
-                       }
     event.preventDefault();
-       
-    if (event.deltaY > 0) {
         var currentCardref = currentCard
+    if (event.deltaY > 0) {
          if (currentCard === 1) {
             let currentCard = 2
             document.querySelector('#2').scrollIntoView();
@@ -1770,7 +1766,7 @@ window.addEventListener('resize', function(event) {
     }
     }
     if (event.deltaY < 0) {
-   scrollContainer.scrollLeft += -(window.innerWidth * 0.55);
+   scrollContainer.scrollLeft += window.innerWidth * -0.55;
     }
     }
       </script>

@@ -1752,7 +1752,8 @@ window.addEventListener('resize', function(event) {
         var currentCard = 1
         var currentCardref = currentCard          
         console.log(currentCard);
-    if (event.deltaY > 0) {
+        console.log(event.deltaY);
+    if (event.deltaY > window.innerWidth * 0.2) {
          if (currentCard === 1) {
             var currentCard = 2
             document.querySelector('[id="2"]').scrollIntoView();

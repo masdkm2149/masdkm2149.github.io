@@ -1765,7 +1765,8 @@ window.addEventListener('resize', function(event) {
             currentCard = currentCardref + 1
             console.log(currentCard);
             waiting = 1
-        setTimeout(function(){ console.log("Executed after 500 ms"); waiting = 0 }, 750);
+            console.log("Paused for 200 ms");
+        setTimeout(function(){ waiting = 0 }, 200);
          }
     }
     if (event.deltaY < -15) {
@@ -1775,7 +1776,8 @@ window.addEventListener('resize', function(event) {
             currentCard = currentCardref - 1
             console.log(currentCard);
             waiting = 1
-        setTimeout(function(){ console.log("Executed after 500 ms"); waiting = 0 }, 750);
+            console.log("Paused for 200 ms");
+        setTimeout(function(){ waiting = 0 }, 200);
          }
     }
 })

@@ -1751,7 +1751,6 @@ window.addEventListener('resize', function(event) {
 });
     scrollContainer.addEventListener("wheel", (event) => {
     event.preventDefault();    
-        console.log(currentCard);
         console.log(event.deltaY);
     if ((event.deltaY > 15) && (waiting === 0)) {
              waiting = 1                

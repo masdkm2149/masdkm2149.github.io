@@ -1762,7 +1762,7 @@ window.addEventListener('resize', function(event) {
          else if ((currentCard > 0) && (waiting === 0)) {
             setTimeout(function(){ 
                 currentCardref = currentCard                   
-                document.querySelector(".main-nav").scrollLeft += (window.innerWidth * 0.6); 
+                document.querySelector(".main-nav").scrollLeft += (document.querySelector(".main-nav").scrollLeft + (window.innerWidth * 0.6)); 
                 currentCard = currentCardref + 1
                 console.log(currentCard);        
                 console.log("Paused for 290 ms"); 
@@ -1775,10 +1775,10 @@ window.addEventListener('resize', function(event) {
          if ((currentCard > 1) && (waiting === 0)) {
             setTimeout(function(){ 
                 currentCardref = currentCard                   
-                document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.6); 
+                document.querySelector(".main-nav").scrollLeft += (document.querySelector(".main-nav").scrollLeft + (window.innerWidth * -0.6)); 
                 currentCard = currentCardref - 1
                 console.log(currentCard);        
-                console.log("Paused for 290 ms"); 
+                console.log("Paused for 290 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft); 
                 waiting = 1 
             }, 10);
             setTimeout(function(){ waiting = 0 }, 200);

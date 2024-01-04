@@ -1741,7 +1741,7 @@ function getInfo() {
     }
           getInfo();
           relSizing();
-          let currentCard = 0
+
 window.addEventListener('resize', function(event) { 
     relSizing();
       console.log(JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize));
@@ -1749,7 +1749,8 @@ window.addEventListener('resize', function(event) {
 });
     scrollContainer.addEventListener("wheel", (event) => {
     event.preventDefault();
-        var currentCardref = currentCard
+        var currentCard = 0
+        var currentCardref = currentCard          
     if (event.deltaY > 0) {
          if (currentCard === 1) {
             let currentCard = 2

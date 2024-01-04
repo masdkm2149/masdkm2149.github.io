@@ -1761,7 +1761,7 @@ window.addEventListener('resize', function(event) {
          }
          else if ((currentCard > 0) && (waiting === 0)) {
             currentCardref = currentCard       
-            document.querySelector("[id=\'" + (currentCardref + 1) + "\']").scrollIntoView(); 
+            document.querySelector("[id=\'" + (currentCardref + 1) + "\']").scrollIntoView({ behavior: "smooth", block: "end", inline: "end" }); 
             currentCard = currentCardref + 1
             console.log(currentCard);
             waiting = 1
@@ -1771,7 +1771,7 @@ window.addEventListener('resize', function(event) {
     if (event.deltaY < -15) {
          if ((currentCard > 1) && (waiting === 0)) {
             currentCardref = currentCard       
-            document.querySelector("[id=\'" + (currentCardref - 1) + "\']").scrollIntoView(); 
+            document.querySelector("[id=\'" + (currentCardref - 1) + "\']").scrollIntoView({ behavior: "smooth", block: "end", inline: "end" }); 
             currentCard = currentCardref - 1
             console.log(currentCard);
             waiting = 1

@@ -1763,7 +1763,7 @@ window.addEventListener('resize', function(event) {
              waiting = 1
             setTimeout(function(){ 
                 currentCardref = currentCard                   
-                document.querySelector(".main-nav").scrollLeft += (document.querySelector(".main-nav").scrollLeft + (window.innerWidth * 0.6)); 
+                document.querySelector(".main-nav").scrollLeft += (window.innerWidth * 0.6); 
                 currentCard = currentCardref + 1
                 console.log(currentCard);        
                 console.log("Paused for 20 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft); 
@@ -1775,7 +1775,7 @@ window.addEventListener('resize', function(event) {
                              waiting = 1 
             setTimeout(function(){ 
                 currentCardref = currentCard                   
-                document.querySelector(".main-nav").scrollLeft += (document.querySelector(".main-nav").scrollLeft + (window.innerWidth * -0.6)); 
+                document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.6); 
                 currentCard = currentCardref - 1
                 console.log(currentCard);        
                 console.log("Paused for 20 ms   scroll pos:" + document.querySelector(".main-nav").scrollLeft); 

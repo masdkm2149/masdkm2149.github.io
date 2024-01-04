@@ -1749,22 +1749,25 @@ window.addEventListener('resize', function(event) {
 });
     scrollContainer.addEventListener("wheel", (event) => {
     event.preventDefault();
-        var currentCard = 0
+        var currentCard = 1
         var currentCardref = currentCard          
+        console.log(currentCard);
     if (event.deltaY > 0) {
          if (currentCard === 1) {
             let currentCard = 2
             document.querySelector('#2').scrollIntoView();
-
+            console.log(currentCard);
         }
         if (currentCard === 2) {        
             let currentCard = 3
             document.querySelector('#3').scrollIntoView();
+            console.log(currentCard);
         }
         if (currentCard === 3) { 
             let currentCard = currentCardref + 1
             document.querySelector('#'+ currentCardRef + 1).scrollIntoView();
-    }
+            console.log(currentCard);
+        }
     }
     if (event.deltaY < 0) {
    scrollContainer.scrollLeft += window.innerWidth * -0.55;

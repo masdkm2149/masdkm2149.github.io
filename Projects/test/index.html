@@ -1762,27 +1762,42 @@ window.addEventListener('resize', function(event) {
     event.preventDefault();    
     if (event.deltaY > 10) { 
         if (waiting === 0) {
-            console.log("started wait");
-            waiting = 1
-            document.querySelector(".main-nav").scrollLeft += (window.innerWidth * 0.8); 
-            console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
-            setTimeout(function(){         
-                console.log("finished wait");
-                waiting = 0
-            }, 800);
-        } 
+            if (currentCard == null) {
+                 currentCard = 1 
+                 currentCardref = currentCard       
+                console.log(currentCard);
+             }
+            else if ((currentCard > 0) && (waiting === 0)) {
+                currentCardref = currentCard       
+                document.querySelector("[id=\'" + (currentCardref + 1) + "\']").scrollIntoView(); 
+                currentCard = currentCardref + 1
+                console.log(currentCard);
+                console.log("started wait");
+                waiting = 1
+                document.querySelector(".main-nav").scrollLeft += (window.innerWidth * 0.8); 
+                console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
+                setTimeout(function(){         
+                    console.log("finished wait");
+                    waiting = 0
+                }, 800);
+            } 
+        }
     }
     else if (event.deltaY < -10) {            
         if (waiting === 0) {
-            console.log("started wait");
-            waiting = 1
-            document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.8); 
-            console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
-            setTimeout(function(){         
-                console.log("finished wait");
-                waiting = 0
-            }, 800);
-        } 
+             if ((currentCard > 1) && (waiting === 0)) {
+                currentCardref = currentCard       
+                document.querySelector("[id=\'" + (currentCardref - 1) + "\']").scrollIntoView(); 
+                currentCard = currentCardref + 1
+                console.log(currentCard);
+                console.log("started wait");
+                waiting = 1
+                console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
+                setTimeout(function(){         
+                    console.log("finished wait");
+                    waiting = 0
+                }, 800);
+            } 
     } 
 });
       </script>

@@ -1771,6 +1771,7 @@ window.addEventListener('resize', function(event) {
                 currentCardref = currentCard       
                   for (let i = 0; i < document.querySelectorAll("[id=\'" + (i++) + "\']").length; i++) {
                 document.querySelector("[id=\'" + (currentCardref + 1) + "\']").scrollIntoView(); 
+                  }
                 currentCard = currentCardref + 1
                 console.log(currentCard);
                 console.log("started wait");

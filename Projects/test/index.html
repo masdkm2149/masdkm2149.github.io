@@ -1754,7 +1754,10 @@ window.addEventListener('resize', function(event) {
         console.log(currentCard);
         console.log(event.deltaY);
     if (event.deltaY > 15) {
-         if (currentCardref == null) {var currentCard = 1}
+         if (currentCardref == null) {
+             var currentCard = 1 
+            console.log(currentCard);
+         }
          else if (currentCard === 1) {
             var currentCard = 2
             document.querySelector('[id="2"]').scrollIntoView();

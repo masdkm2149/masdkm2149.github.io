@@ -1762,22 +1762,26 @@ window.addEventListener('resize', function(event) {
     event.preventDefault();    
     if (event.deltaY > 10) { 
         if (waiting === 0) {
+            console.log("started wait");
             waiting = 1
             document.querySelector(".main-nav").scrollLeft += (event.deltaY * 2); 
             console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
             setTimeout(function(){         
+                console.log("finished wait");
                 waiting = 0
-            }, 50);
+            }, 250);
         } 
     }
     else if (event.deltaY < -10) {            
         if (waiting === 0) {
+            console.log("started wait");
             waiting = 1
             document.querySelector(".main-nav").scrollLeft += (event.deltaY * 2); 
             console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
             setTimeout(function(){         
+                console.log("finished wait");
                 waiting = 0
-            }, 50);
+            }, 250);
         } 
     } 
 });

@@ -1775,7 +1775,7 @@ window.addEventListener('resize', function(event) {
                 currentCardref = currentCard       
                 console.log(document.querySelector("#\3" + currentCardref).length);
                 console.log("b: #\3" + currentCardref); 
-                if (document.querySelector("#\3" + currentCardref).length) { console.log("debug");  document.querySelector("[id=\'" + (currentCardref + 2) + "\']").scrollIntoView(); currentCard = currentCardref + 1 }
+                if (document.querySelector("[id=\'" + currentCardref + "\']").length) { console.log("debug");  document.querySelector("[id=\'" + (currentCardref + 2) + "\']").scrollIntoView(); currentCard = currentCardref + 1 }
                 console.log(currentCard);
                 console.log("started wait");
                /* document.querySelector(".main-nav").scrollLeft += (window.innerWidth * 0.55); */

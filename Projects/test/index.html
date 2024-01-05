@@ -1772,7 +1772,7 @@ window.addEventListener('resize', function(event) {
              }
             else if (currentCard > 0) {
                 currentCardref = currentCard       
-                if (document.querySelector("#" + currentCardref).length) { console.log("debug");  document.querySelector("[id=\'" + (currentCardref + 2) + "\']").scrollIntoView(); currentCard = currentCardref + 1 }
+                if (document.querySelector("#\3" + currentCardref).length) { console.log("debug");  document.querySelector("[id=\'" + (currentCardref + 2) + "\']").scrollIntoView(); currentCard = currentCardref + 1 }
                 console.log(currentCard);
                 console.log("started wait");
                /* document.querySelector(".main-nav").scrollLeft += (window.innerWidth * 0.55); */
@@ -1789,7 +1789,7 @@ window.addEventListener('resize', function(event) {
              waiting = 1
              if (currentCard > 1) {
                 currentCardref = currentCard                      
-                if( document.querySelector("#" + currentCardref).length) { console.log("debug"); document.querySelector("[id=\'" + (currentCardref - 2) + "\']").scrollIntoView(); currentCard = currentCardref - 1 }
+                if( document.querySelector("#\3" + currentCardref).length) { console.log("debug"); document.querySelector("[id=\'" + (currentCardref - 2) + "\']").scrollIntoView(); currentCard = currentCardref - 1 }
               /*  document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.55); */
                 console.log(currentCard);
                 console.log("started wait");

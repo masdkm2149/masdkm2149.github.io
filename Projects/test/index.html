@@ -1773,18 +1773,16 @@ window.addEventListener('resize', function(event) {
                  console.log(currentCard);
                  waiting = 0
              }
-            else if (currentCard > 0) {
+            else if ((currentCard > 0) && (currentCard < document.querySelectorAll(".card").length)) {
                 currentCardref = currentCard 
-                console.log(document.querySelectorAll(".card").length);
                 if (document.querySelectorAll(".card")) { console.log("debug"); document.querySelectorAll(".card")[currentCardref].scrollIntoView(); currentCard = currentCardref + 1 }
-
                 console.log("started wait");
                /* document.querySelector(".main-nav").scrollLeft += (window.innerWidth * 0.55); */
                 console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
                     setTimeout(function(){         
                         console.log("finished wait");
                         waiting = 0
-                    }, 300);
+                    }, 400);
             } 
         }
     }
@@ -1800,7 +1798,8 @@ window.addEventListener('resize', function(event) {
                 setTimeout(function(){         
                     console.log("finished wait");
                     waiting = 0
-                }, 300);
+                }, 400);
+             else { return }
             } 
         }
     } 

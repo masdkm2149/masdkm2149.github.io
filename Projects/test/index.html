@@ -1777,7 +1777,7 @@ window.addEventListener('resize', function(event) {
                 console.log(JSON.stringify(currentCardref));
                 console.log(("#" + CSS.escape(currentCardref).length));
                 console.log(document.querySelector("#" + CSS.escape(currentCardref)).length);
-                if (document.querySelector("\'#" + CSS.escape(currentCardref) + "\'").length) { console.log("debug");  document.querySelector("[id=\'" + (currentCardref + 2) + "\']").scrollIntoView(); currentCard = currentCardref + 1 }
+                if (document.querySelector(("#" + CSS.escape(currentCardref).length)) { console.log("debug");  document.querySelector(("#" + CSS.escape(currentCardref + 2))).scrollIntoView(); currentCard = currentCardref + 1 }
                 console.log(currentCard);
                 console.log("started wait");
                /* document.querySelector(".main-nav").scrollLeft += (window.innerWidth * 0.55); */
@@ -1794,7 +1794,7 @@ window.addEventListener('resize', function(event) {
              waiting = 1
              if (currentCard > 1) {
                 currentCardref = currentCard                      
-                if( document.querySelector("#\3" + currentCardref).length) { console.log("debug"); document.querySelector("[id=\'" + (currentCardref - 2) + "\']").scrollIntoView(); currentCard = currentCardref - 1 }
+                if (document.querySelector(("#" + CSS.escape(currentCardref).length)) { console.log("debug");  document.querySelector(("#" + CSS.escape(currentCardref - 2))).scrollIntoView(); currentCard = currentCardref - 1 }
               /*  document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.55); */
                 console.log(currentCard);
                 console.log("started wait");

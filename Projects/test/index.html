@@ -1761,7 +1761,9 @@ window.addEventListener('resize', function(event) {
       getInfo();
 });
     document.querySelector(".main-nav").addEventListener("wheel", (event) => {
-    event.preventDefault();    
+    event.preventDefault();                   
+    console.log(currentCard);
+        
     if (event.deltaY > 10) { 
         if (waiting === 0) {
             waiting = 1
@@ -1775,14 +1777,14 @@ window.addEventListener('resize', function(event) {
                 currentCardref = currentCard 
                 console.log("#" + CSS.escape(currentCardref));
                 if (document.querySelectorAll(".card")) { console.log("debug"); document.querySelectorAll(".card")[currentCardref].scrollIntoView(); currentCard = currentCardref + 1 }
-                console.log(currentCard);
+
                 console.log("started wait");
                /* document.querySelector(".main-nav").scrollLeft += (window.innerWidth * 0.55); */
                 console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
                     setTimeout(function(){         
                         console.log("finished wait");
                         waiting = 0
-                    }, 800);
+                    }, 300);
             } 
         }
     }
@@ -1792,13 +1794,13 @@ window.addEventListener('resize', function(event) {
              if (currentCard > 1) {
                 currentCardref = currentCard                      
                 if (document.querySelectorAll(".card")) { console.log("debug"); document.querySelectorAll(".card")[currentCardref - 2].scrollIntoView(); currentCard = currentCardref - 1 }              /*  document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.55); */
-                console.log(currentCard);
+
                 console.log("started wait");
                 console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
                 setTimeout(function(){         
                     console.log("finished wait");
                     waiting = 0
-                }, 800);
+                }, 300);
             } 
         }
     } 

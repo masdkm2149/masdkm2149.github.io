@@ -1772,10 +1772,10 @@ window.addEventListener('resize', function(event) {
                  waiting = 0
              }
             else if (currentCard > 0) {
-                currentCardref = currentCard       
+                currentCardref = currentCard       document.querySelectorAll("h3, span");
                 console.log("#" + CSS.escape(currentCardref));
                 console.log(document.querySelector("#\\" + CSS.escape(currentCardref)).length);
-                if (document.querySelector("#" + CSS.escape(currentCardref).length)) { console.log("debug");  document.querySelector(("#" + CSS.escape(currentCardref + 2))).scrollIntoView(); currentCard = currentCardref + 1 }
+                if (document.querySelectorAll(".card")) { console.log("debug"); document.querySelectorAll(".card")[currentCardref + 1].scrollIntoView(); currentCard = currentCardref + 1 }
                 console.log(currentCard);
                 console.log("started wait");
                /* document.querySelector(".main-nav").scrollLeft += (window.innerWidth * 0.55); */

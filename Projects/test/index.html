@@ -1790,7 +1790,7 @@ window.addEventListener('resize', function(event) {
              waiting = 1
              if (currentCard > 1) {
                 currentCardref = currentCard                      
-                for (let i = 0; i < document.querySelectorAll("[id=\'" + i++ + "\']").length; i++) { document.querySelector("[id=\'" + (currentCardref - 1) + "\']").scrollIntoView(); }
+                for (let i = 0; i < document.querySelectorAll("[id=\'" + i++ + "\']").length; i++) { console.log(i++); document.querySelector("[id=\'" + (currentCardref - 1) + "\']").scrollIntoView(); }
               /*  document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.55); */
                 currentCard = currentCardref - 1
                 console.log(currentCard);

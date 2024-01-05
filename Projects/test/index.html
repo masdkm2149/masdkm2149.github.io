@@ -1773,9 +1773,7 @@ window.addEventListener('resize', function(event) {
              }
             else if (currentCard > 0) {
                 currentCardref = currentCard       
-                
-                console.log(JSON.stringify(currentCardref));
-                console.log(("#" + CSS.escape(currentCardref).length));
+                console.log("#" + CSS.escape(currentCardref));
                 console.log(document.querySelector("#" + CSS.escape(currentCardref)).length);
                 if (document.querySelector(("#" + CSS.escape(currentCardref).length))) { console.log("debug");  document.querySelector(("#" + CSS.escape(currentCardref + 2))).scrollIntoView(); currentCard = currentCardref + 1 }
                 console.log(currentCard);

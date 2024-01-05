@@ -1774,7 +1774,7 @@ window.addEventListener('resize', function(event) {
             else if (currentCard > 0) {
                 currentCardref = currentCard 
                 console.log("#" + CSS.escape(currentCardref));
-                if (document.querySelectorAll(".card")) { console.log("debug"); document.querySelectorAll(".card")[currentCardref + 1].scrollIntoView(); currentCard = currentCardref + 1 }
+                if (document.querySelectorAll(".card")) { console.log("debug"); document.querySelectorAll(".card")[currentCardref].scrollIntoView(); currentCard = currentCardref + 1 }
                 console.log(currentCard);
                 console.log("started wait");
                /* document.querySelector(".main-nav").scrollLeft += (window.innerWidth * 0.55); */
@@ -1791,8 +1791,7 @@ window.addEventListener('resize', function(event) {
              waiting = 1
              if (currentCard > 1) {
                 currentCardref = currentCard                      
-                if (document.querySelector(("#" + CSS.escape(currentCardref).length))) { console.log("debug");  document.querySelector(("#" + CSS.escape(currentCardref - 2))).scrollIntoView(); currentCard = currentCardref - 1 }
-              /*  document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.55); */
+                if (document.querySelectorAll(".card")) { console.log("debug"); document.querySelectorAll(".card")[currentCardref - 2].scrollIntoView(); currentCard = currentCardref - 1 }              /*  document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.55); */
                 console.log(currentCard);
                 console.log("started wait");
                 console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);

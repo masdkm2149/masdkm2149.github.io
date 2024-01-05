@@ -1775,7 +1775,7 @@ window.addEventListener('resize', function(event) {
              }
             else if (currentCard > 0) {
                 currentCardref = currentCard 
-                console.log("#" + CSS.escape(currentCardref));
+                console.log(document.querySelectorAll(".card").length);
                 if (document.querySelectorAll(".card")) { console.log("debug"); document.querySelectorAll(".card")[currentCardref].scrollIntoView(); currentCard = currentCardref + 1 }
 
                 console.log("started wait");

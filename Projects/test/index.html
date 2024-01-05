@@ -1773,7 +1773,7 @@ window.addEventListener('resize', function(event) {
              }
             else if (currentCard > 0) {
                 currentCardref = currentCard       
-                console.log(document.querySelector(`#${CSS.escape(currentCardref)}`).length);
+                console.log(document.querySelector(`#${CSS.escape(JSON.stringify(currentCardref))}`).length);
                 if (document.querySelector(`#${CSS.escape(currentCardref)}`).length) { console.log("debug");  document.querySelector("[id=\'" + (currentCardref + 2) + "\']").scrollIntoView(); currentCard = currentCardref + 1 }
                 console.log(currentCard);
                 console.log("started wait");

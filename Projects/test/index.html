@@ -1754,7 +1754,9 @@ function getInfo() {
  var currentCardref
  var waiting = 0
 window.addEventListener('resize', function(event) { 
-    relSizing();
+      relSizing();
+      document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
+      document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
       console.log(JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize));
       getInfo();
 });

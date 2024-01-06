@@ -1776,7 +1776,7 @@ window.addEventListener('resize', function(event) {
                 document.querySelectorAll(".card")[currentCardref].scrollIntoView(); 
                 currentCard = currentCardref + 1 
                 console.log("started wait");
-                console.log("currentCard: " + currentCard + "scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
+                console.log("currentCard: " + currentCard + " scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
                     setTimeout(function(){         
                         console.log("finished wait");
                         waiting = 0
@@ -1791,7 +1791,7 @@ window.addEventListener('resize', function(event) {
                 document.querySelectorAll(".card")[currentCardref - 2].scrollIntoView(); 
                 currentCard = currentCardref - 1            
                 console.log("started wait");
-                console.log("currentCard: " + currentCard + "scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
+                console.log("currentCard: " + currentCard + " scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
             } else { return } 
             setTimeout(function(){         
                 console.log("finished wait");

@@ -1779,7 +1779,7 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
                 console.log("started wait");
                 console.log("currentCard: " + currentCard + " scroll pos:" + document.querySelector("body").scrollLeft + "deltaY:" + event.deltaY);
                 setTimeout(finishedWaiting, 100);
-            } else { return }  
+            }
         } else if (event.deltaY < -10) {            
             if (currentCard > 1) {
                 currentCardref = currentCard                      
@@ -1788,9 +1788,9 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
                 console.log("started wait");
                 console.log("currentCard: " + currentCard + " scroll pos:" + document.querySelector("body").scrollLeft + "deltaY:" + event.deltaY);
                 setTimeout(finishedWaiting, 100);
-            } else { return } 
-        }
-    } else { console.log("manually stopped waiting..."); waiting = 0 } 
+            }
+        } 
+    } 
 });
 
     function finishedWaiting() { console.log("finished wait"); waiting = 0 }

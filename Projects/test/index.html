@@ -1777,11 +1777,11 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
         waiting = 1 
         console.log("started wait");
         if (event.deltaY > 0) {            
-                document.querySelector(".main-nav").scrollLeft += (window.innerWidth - 32); 
-                setTimeout(finishedWaiting, 350);
+                document.querySelector(".main-nav").scroll({ left: window.innerWidth - 32, behavior: 'smooth' });
+                setTimeout(finishedWaiting, 400);
         } else if (event.deltaY < 0) {                         
                 document.querySelector(".main-nav").scrollLeft += (-window.innerWidth + 32); 
-                setTimeout(finishedWaiting, 350);
+                setTimeout(finishedWaiting, 400);
         } 
     }
 });

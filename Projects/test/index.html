@@ -1786,11 +1786,9 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
                 currentCard = currentCardref - 1            
                 console.log("started wait");
                 console.log("currentCard: " + currentCard + " scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
-          
             } else { return } 
-        } else { return } 
-        setTimeout(finishedWaiting, 600);
-    } else { console.log("waiting..."); } 
+        }
+    } else { setTimeout(finishedWaiting, 600); console.log("waiting..."); } 
 });
 
     function finishedWaiting() { console.log("finished wait"); waiting = 0 }

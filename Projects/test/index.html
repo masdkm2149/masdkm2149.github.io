@@ -1752,12 +1752,14 @@ function getInfo() {
           relSizing();
  var currentCard
  var currentCardref
- var waiting = 0
+ var waiting 
      if (currentCard == null) {
         currentCard = 1 
         currentCardref = currentCard       
     }
-    
+     if (waiting == null) {
+        waiting = 0      
+    }
 window.addEventListener('resize', function(event) { 
       relSizing();
       document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);

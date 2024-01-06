@@ -23,7 +23,7 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
 
 
 
-
+.handle-pointer {pointer-events: var(--handlePointer)}
 
 .card.x .card-a {
   min-width: 55vw;
@@ -1796,11 +1796,11 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
     }
 });
 
-    function finishedWaiting() { console.log("finished wait");  document.querySelector(".handle-pointer").style.cssText = "pointer-events:all"; waiting = 0 }
-    function scrlFF() { document.querySelector(".handle-pointer").style.cssText += "pointer-events: none"; document.querySelector(".main-nav").scrollBy({ left: window.innerWidth - 32, behavior: 'smooth' }); }
-    function scrlFR() { document.querySelector(".handle-pointer").style.cssText += "pointer-events: none"; document.querySelector(".main-nav").scrollBy({ left: -window.innerWidth + 32, behavior: 'smooth' }); }
-    function scrlHF() { document.querySelector(".handle-pointer").style.cssText += "pointer-events: none"; document.querySelector(".main-nav").scrollBy({ left: ((window.innerWidth /2) - 32), behavior: 'smooth' }); }
-    function scrlHR() { document.querySelector(".handle-pointer").style.cssText += "pointer-events: none"; document.querySelector(".main-nav").scrollBy({ left: ((-window.innerWidth /2) + 32), behavior: 'smooth' }); }
+    function finishedWaiting() { console.log("finished wait"); document.querySelector(':root').style.setProperty('--handlePointer', "all"); waiting = 0 }
+    function scrlFF() { document.querySelector(':root').style.setProperty('--handlePointer', "none"); document.querySelector(".main-nav").scrollBy({ left: window.innerWidth - 32, behavior: 'smooth' }); }
+    function scrlFR() { document.querySelector(':root').style.setProperty('--handlePointer', "none"); document.querySelector(".main-nav").scrollBy({ left: -window.innerWidth + 32, behavior: 'smooth' }); }
+    function scrlHF() { document.querySelector(':root').style.setProperty('--handlePointer', "none"); document.querySelector(".main-nav").scrollBy({ left: ((window.innerWidth /2) - 32), behavior: 'smooth' }); }
+    function scrlHR() { document.querySelector(':root').style.setProperty('--handlePointer', "none"); document.querySelector(".main-nav").scrollBy({ left: ((-window.innerWidth /2) + 32), behavior: 'smooth' }); }
       </script>
     <style type="text/css"></style><style type="text/css"></style><style type="text/css"></style>
 <style type="text/css"></style>

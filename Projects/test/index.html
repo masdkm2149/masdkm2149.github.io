@@ -1771,7 +1771,7 @@ window.addEventListener('resize', function(event) {
     if (event.deltaY > 10) { 
         if (waiting === 0) {
             waiting = 1
-             if ((currentCard > 0) && (currentCard < document.querySelectorAll(".card").length)) {
+             if ((currentCard > 0) && ((currentCard < document.querySelectorAll(".card").length) - 1 )) {
                 currentCardref = currentCard 
                 if (document.querySelectorAll(".card")) { console.log("debug"); document.querySelectorAll(".card")[currentCardref].scrollIntoView(); currentCard = currentCardref + 1 }
                 console.log("started wait");
@@ -1796,7 +1796,7 @@ window.addEventListener('resize', function(event) {
                     console.log("finished wait");
                     waiting = 0
                 }, 600);
-            } else { console.log("error at 1791"); } 
+            } else { console.log("error at 1791"); return } 
         }
     } 
 });

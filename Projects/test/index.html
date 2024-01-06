@@ -1776,12 +1776,22 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
     if (waiting === 0) {
         waiting = 1 
         console.log("started wait");
-        if (event.deltaY > 0) {            
+        if (event.deltaY > 0) {
+            if (window.innerWidth < 1500) {
                 document.querySelector(".main-nav").scrollBy({ left: window.innerWidth - 32, behavior: 'smooth' });
                 setTimeout(finishedWaiting, 400);
+            } else {
+                document.querySelector(".main-nav").scrollBy({ left: ((window.innerWidth /2) - 32), behavior: 'smooth' });
+                setTimeout(finishedWaiting, 400);
+            }
         } else if (event.deltaY < 0) {                         
+            if (window.innerWidth < 1500) {
                 document.querySelector(".main-nav").scrollBy({ left: -window.innerWidth + 32, behavior: 'smooth' });
                 setTimeout(finishedWaiting, 400);
+            } else {
+                document.querySelector(".main-nav").scrollBy({ left: ((-window.innerWidth /2) + 32), behavior: 'smooth' });
+                setTimeout(finishedWaiting, 400);
+            }
         } 
     }
 });

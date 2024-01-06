@@ -1776,25 +1776,19 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
                 currentCard = currentCardref + 1 
                 console.log("started wait");
                 console.log("currentCard: " + currentCard + " scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
-                    setTimeout(function(){         
-                        console.log("finished wait");
-                        waiting = 0
-                    }, 600);
+                setTimeout(function() { console.log("finished wait"); waiting = 0 }, 600);
             } else { return }  
         } else if (event.deltaY < -10) {            
-             if (currentCard > 1) {
+            if (currentCard > 1) {
                 currentCardref = currentCard                      
                 document.querySelectorAll(".card")[currentCardref - 2].scrollIntoView(); 
                 currentCard = currentCardref - 1            
                 console.log("started wait");
                 console.log("currentCard: " + currentCard + " scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
             } else { return } 
-            setTimeout(function(){         
-                console.log("finished wait");
-                waiting = 0
-            }, 600);
+                setTimeout(function() { console.log("finished wait"); waiting = 0 }, 600);
         } else { return } 
-    } else { return } 
+    } else { console.log("waiting..."); } 
 });
       </script>
     <style type="text/css"></style><style type="text/css"></style><style type="text/css"></style>

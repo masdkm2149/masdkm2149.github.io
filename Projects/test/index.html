@@ -1790,7 +1790,7 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
                 setTimeout(finishedWaiting, 100);
             }
         } 
-    } 
+    } else { setTimeout(finishedWaiting, 100); }
 });
 
     function finishedWaiting() { console.log("finished wait"); waiting = 0 }

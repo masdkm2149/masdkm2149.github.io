@@ -1782,7 +1782,7 @@ window.addEventListener('resize', function(event) {
                         console.log("finished wait");
                         waiting = 0
                     }, 400);
-            } 
+            }  else { return } 
         }
     }
     else if (event.deltaY < -10) {            
@@ -1790,7 +1790,9 @@ window.addEventListener('resize', function(event) {
              waiting = 1
              if (currentCard > 1) {
                 currentCardref = currentCard                      
-                if (document.querySelectorAll(".card")) { console.log("debug"); document.querySelectorAll(".card")[currentCardref - 2].scrollIntoView(); currentCard = currentCardref - 1 }              /*  document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.55); */
+                document.querySelectorAll(".card")[currentCardref - 2].scrollIntoView(); 
+                currentCard = currentCardref - 1            
+                 /*  document.querySelector(".main-nav").scrollLeft += (window.innerWidth * -0.55); */
                 console.log("started wait");
                 console.log("scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
                 setTimeout(function(){         

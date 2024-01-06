@@ -1763,16 +1763,15 @@ window.addEventListener('resize', function(event) {
     document.querySelector(".main-nav").addEventListener("wheel", (event) => {
     event.preventDefault();                   
     console.log(currentCard);
-        
+    if (currentCard == null) {
+        currentCard = 1 
+        currentCardref = currentCard       
+        console.log(currentCard);
+        waiting = 0
+    }
     if (event.deltaY > 10) { 
         if (waiting === 0) {
             waiting = 1
-            if (currentCard == null) {
-                 currentCard = 1 
-                 currentCardref = currentCard       
-                 console.log(currentCard);
-                 waiting = 0
-             }
             else if ((currentCard > 0) && (currentCard < document.querySelectorAll(".card").length)) {
                 currentCardref = currentCard 
                 if (document.querySelectorAll(".card")) { console.log("debug"); document.querySelectorAll(".card")[currentCardref].scrollIntoView(); currentCard = currentCardref + 1 }

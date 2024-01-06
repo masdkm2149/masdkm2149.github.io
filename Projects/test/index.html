@@ -1778,8 +1778,8 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
                 currentCard = currentCardref + 1 
                 console.log("started wait");
                 console.log("currentCard: " + currentCard + " scroll pos:" + document.querySelector("body").scrollLeft + "deltaY:" + event.deltaY);
-                setTimeout(finishedWaiting, 100);
-            }
+                setTimeout(finishedWaiting, 200);
+            } else { setTimeout(finishedWaiting, 100); } 
         } else if (event.deltaY < -10) {            
             if (currentCard > 1) {
                 currentCardref = currentCard                      
@@ -1787,10 +1787,10 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
                 currentCard = currentCardref - 1            
                 console.log("started wait");
                 console.log("currentCard: " + currentCard + " scroll pos:" + document.querySelector("body").scrollLeft + "deltaY:" + event.deltaY);
-                setTimeout(finishedWaiting, 100);
-            }
+                setTimeout(finishedWaiting, 200);
+            } else { setTimeout(finishedWaiting, 100); } 
         } 
-    } else { setTimeout(finishedWaiting, 100); }
+    }
 });
 
     function finishedWaiting() { console.log("finished wait"); waiting = 0 }

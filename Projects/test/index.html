@@ -1749,6 +1749,8 @@ function getInfo() {
     }
           getInfo();
           relSizing();
+          if (window.innerWidth < 1500) { document.querySelector(':root').style.setProperty('--snapTo', "center"); }
+          else { document.querySelector(':root').style.setProperty('--snapTo', "start"); }
  var currentCard
  var currentCardref
  var waiting 

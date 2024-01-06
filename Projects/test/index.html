@@ -1765,12 +1765,11 @@ window.addEventListener('resize', function(event) {
       console.log(JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize));
       getInfo();
 });
-    document.querySelector(".main-nav").addEventListener("wheel", (event) => {
+document.querySelector(".main-nav").addEventListener("wheel", (event) => {
     event.preventDefault();                   
-
-    if (event.deltaY > 10) { 
-        if (waiting === 0) {
-            waiting = 1
+    if (waiting === 0) {
+        waiting = 1
+        if (event.deltaY > 10) { 
             if ((currentCard > 0) && (currentCard < document.querySelectorAll(".card").length)) {
                 currentCardref = currentCard 
                 document.querySelectorAll(".card")[currentCardref].scrollIntoView(); 
@@ -1781,11 +1780,8 @@ window.addEventListener('resize', function(event) {
                         console.log("finished wait");
                         waiting = 0
                     }, 600);
-            } else { return } 
-        } else { return } 
-    } else if (event.deltaY < -10) {            
-        if (waiting === 0) {
-             waiting = 1
+            } else { return }  
+        } else if (event.deltaY < -10) {            
              if (currentCard > 1) {
                 currentCardref = currentCard                      
                 document.querySelectorAll(".card")[currentCardref - 2].scrollIntoView(); 

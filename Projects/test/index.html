@@ -1777,7 +1777,8 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
                 document.querySelectorAll(".card")[currentCardref].scrollIntoView(); 
                 currentCard = currentCardref + 1 
                 console.log("started wait");
-                console.log("currentCard: " + currentCard + " scroll pos:" + document.querySelector("html").scrollLeft + "deltaY:" + event.deltaY);
+                console.log("currentCard: " + currentCard + " scroll pos:" + document.querySelector("body").scrollLeft + "deltaY:" + event.deltaY);
+                setTimeout(finishedWaiting, 100);
             } else { return }  
         } else if (event.deltaY < -10) {            
             if (currentCard > 1) {
@@ -1785,10 +1786,11 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
                 document.querySelectorAll(".card")[currentCardref - 2].scrollIntoView(); 
                 currentCard = currentCardref - 1            
                 console.log("started wait");
-                console.log("currentCard: " + currentCard + " scroll pos:" + document.querySelector("html").scrollLeft + "deltaY:" + event.deltaY);
+                console.log("currentCard: " + currentCard + " scroll pos:" + document.querySelector("body").scrollLeft + "deltaY:" + event.deltaY);
+                setTimeout(finishedWaiting, 100);
             } else { return } 
         }
-    } else { setTimeout(finishedWaiting, 100); console.log("waiting..."); } 
+    } else { console.log("manually stopped waiting..."); waiting = 0 } 
 });
 
     function finishedWaiting() { console.log("finished wait"); waiting = 0 }

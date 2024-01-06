@@ -1775,8 +1775,11 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
         if (event.deltaY > 10) { 
             if ((currentCard > 0) && (currentCard < document.querySelectorAll(".card").length)) {
                 currentCardref = currentCard                 
-                document.querySelector(".main-nav").scrollLeft += (document.querySelector(".main-nav").scrollLeft);
-                /* document.querySelectorAll(".card")[currentCardref].scrollIntoView({ behavior: "smooth", block: "end", inline: "end" }); */
+                if (document.querySelector(".main-nav").scrollLeft > 0) {
+                    document.querySelector(".main-nav").scrollLeft += (document.querySelector(".main-nav").scrollLeft);
+                }
+                else { document.querySelector(".main-nav").scrollLeft += (window.innerWidth); }
+                    /* document.querySelectorAll(".card")[currentCardref].scrollIntoView({ behavior: "smooth", block: "end", inline: "end" }); */
                 currentCard = currentCardref + 1 
                 console.log("started wait");
                 console.log("currentCard: " + currentCard + " scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);

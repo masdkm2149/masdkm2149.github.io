@@ -1775,7 +1775,7 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
         if (event.deltaY > 10) { 
             if ((currentCard > 0) && (currentCard < document.querySelectorAll(".card").length)) {
                 currentCardref = currentCard                 
-                document.querySelector(".main-nav").scrollLeft += (document.querySelector(".main-nav").scrollLeft + (window.innerWidth * 0.55));
+                document.querySelector(".main-nav").scrollLeft += (document.querySelector(".main-nav").scrollLeft + (window.innerWidth * 0.5));
                 /* document.querySelectorAll(".card")[currentCardref].scrollIntoView({ behavior: "smooth", block: "end", inline: "end" }); */
                 currentCard = currentCardref + 1 
                 console.log("started wait");
@@ -1785,7 +1785,7 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
         } else if (event.deltaY < -10) {            
             if (currentCard > 1) {
                 currentCardref = currentCard                   
-                document.querySelector(".main-nav").scrollLeft += (document.querySelector(".main-nav").scrollLeft + (window.innerWidth * -0.55)); 
+                document.querySelector(".main-nav").scrollLeft += (document.querySelector(".main-nav").scrollLeft - (window.innerWidth * 0.5)); 
                 /* document.querySelectorAll(".card")[currentCardref - 2].scrollIntoView({ behavior: "smooth", block: "end", inline: "end" }); */
                 currentCard = currentCardref - 1            
                 console.log("started wait");

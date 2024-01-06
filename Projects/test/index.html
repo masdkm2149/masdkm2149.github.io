@@ -1771,7 +1771,7 @@ window.addEventListener('resize', function(event) {
       getInfo();
 });
     
-document.querySelector("html, body, .main-nav").addEventListener("wheel", (event) => {
+document.querySelector("html, body, .content-main, .main-nav").addEventListener("wheel", (event) => {
     event.preventDefault();                   
     if (waiting === 0) {
         waiting = 1 

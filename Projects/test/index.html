@@ -1768,30 +1768,18 @@ window.addEventListener('resize', function(event) {
       console.log(JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize));
       getInfo();
 });
+    
 document.querySelector(".main-nav").addEventListener("wheel", (event) => {
     event.preventDefault();                   
     if (waiting === 0) {
-        waiting = 1
-        if (event.deltaY > 10) { 
-            if ((currentCard > 0) && (currentCard < document.querySelectorAll(".card").length)) {
-                currentCardref = currentCard                 
+        waiting = 1 
+        console.log("started wait");
+        if (event.deltaY > 0) {            
                 document.querySelector(".main-nav").scrollLeft += (window.innerWidth - 32); 
-                    /* document.querySelectorAll(".card")[currentCardref].scrollIntoView({ behavior: "smooth", block: "end", inline: "end" }); */
-                currentCard = currentCardref + 1 
-                console.log("started wait");
-                console.log("currentCard: " + currentCard + " scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
                 setTimeout(finishedWaiting, 350);
-            } else { setTimeout(finishedWaiting, 100); } 
-        } else if (event.deltaY < -10) {            
-            if (currentCard > 1) {
-                currentCardref = currentCard                   
+        } else if (event.deltaY < 0) {                         
                 document.querySelector(".main-nav").scrollLeft += (-window.innerWidth + 32); 
-                /* document.querySelectorAll(".card")[currentCardref - 2].scrollIntoView({ behavior: "smooth", block: "end", inline: "end" }); */
-                currentCard = currentCardref - 1            
-                console.log("started wait");
-                console.log("currentCard: " + currentCard + " scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
                 setTimeout(finishedWaiting, 350);
-            } else { setTimeout(finishedWaiting, 100); } 
         } 
     }
 });

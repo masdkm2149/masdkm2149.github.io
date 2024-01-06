@@ -1778,7 +1778,6 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
                 currentCard = currentCardref + 1 
                 console.log("started wait");
                 console.log("currentCard: " + currentCard + " scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
-                setTimeout(function() { console.log("finished wait"); waiting = 0 }, 600);
             } else { return }  
         } else if (event.deltaY < -10) {            
             if (currentCard > 1) {
@@ -1787,11 +1786,14 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
                 currentCard = currentCardref - 1            
                 console.log("started wait");
                 console.log("currentCard: " + currentCard + " scroll pos:" + document.querySelector(".main-nav").scrollLeft + "deltaY:" + event.deltaY);
+          
             } else { return } 
-                setTimeout(function() { console.log("finished wait"); waiting = 0 }, 600);
         } else { return } 
+        setTimeout(finishedWaiting, 600);
     } else { console.log("waiting..."); } 
 });
+
+    function finishedWaiting() { console.log("finished wait"); waiting = 0 }
       </script>
     <style type="text/css"></style><style type="text/css"></style><style type="text/css"></style>
 <style type="text/css"></style>

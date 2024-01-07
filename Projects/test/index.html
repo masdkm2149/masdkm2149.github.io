@@ -15,6 +15,18 @@ if ($(window).width() < 420 && $(window).height() > 420) { $("meta[name=viewport
 if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); }
 </script>
     <style>
+    @media screen and (max-width: 500px) {
+        h1.project-title { font-size:2rem;}
+        h2 {
+          font-size: 1.05rem;
+          line-height: 1.3rem;
+          padding-top: .3rem;
+        }
+        p, .body-text {
+          font-size: .95rem;
+          line-height: 1.7rem;
+}
+    }
 @media screen and (min-width: 2500px) and (min-height: 1250px) {
   #logoblockone, #logoblocktwo, #logoblockthree, #logoblockfour {
     height: 2.5rem !important;
@@ -807,7 +819,6 @@ h, h1, h2, h4, h5, h6 {
 h1 {
   color: var(--project-title);
   font-weight: 700;
-  letter-spacing: -0.02em;
 }
 h2 {
 color: var(--h2-color);  
@@ -1116,16 +1127,17 @@ padding-top: .75rem;
   }
 }
 
-/* H1 */  
-h1, .project-title{
-  ;
+h1 {
+  letter-spacing: -0.02em;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
 }
-  
+
 /* H2 */    
 h2 {
-  font-size: 1rem;
-  line-height: 1.25rem;
-  padding-top: .35rem;
+  font-size: 1.25rem;
+  line-height: 2.5rem;
+  margin-top: -0.25rem !important;
 }
   
 /* H3 */    
@@ -1143,11 +1155,11 @@ h3 {
     line-height: 1.62rem;
   } 
 h2 ~ p {
-padding-top: .5rem;
+/*! padding-top: .5rem; */
   }
   p, .body-text {
-    font-size: .9rem;
-    line-height: 1.62rem;
+    font-size: 1rem;
+    line-height: 1.9rem;
   }
 
 /* Etc page format */  
@@ -1168,7 +1180,7 @@ padding-top: .5rem;
 .content-main {
   flex-direction: row !important;
 }
-}
+
 @media screen and (max-width: 325px)  {
   .scrolldown{ float: none; left: -12px;right: 0 !important;margin: auto;}
   #view_project::after {display: none!important;
@@ -1282,7 +1294,6 @@ padding-top: .5rem;
   }
   
   #body-text {
-    line-height: 1.62rem;
   -webkit-box-orient: vertical;  
     overflow: clip;
     display: -webkit-inline-box;

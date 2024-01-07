@@ -15,13 +15,20 @@ if ($(window).width() < 420 && $(window).height() > 420) { $("meta[name=viewport
 if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); }
 </script>
     <style>
-
-
-
-
-
 @media screen and (min-width: 2500px) and (min-height: 1250px) {
-  
+  #logoblockone, #logoblocktwo, #logoblockthree, #logoblockfour {
+    height: 2.5rem !important;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    position: relative !important;
+  }
+} 
+#tag-branding, #tag-print, #tag-media, #tag-coding {
+    padding: 1.5rem 4.5rem!important;
+    border-radius: 4rem!important;
+    font-size: 1rem;
+  }
  #logoblocktwo {
   top: -2.5rem;
 }
@@ -32,18 +39,18 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
   top: -5rem !important;
 } 
   .desktop-nav {
-  height: 5rem;
-  padding: 3rem;
-  width: calc(100% - 6rem);
-  margin: 0;
+  height: 5rem !important;
+  padding: 3rem !important;
+  width: calc(100% - 6rem) !important;
+  margin: 0 !important;
   display: flex;
 }
   .content-main {
-  margin: 8rem 0 0 0;
-  width: calc(100vw - 6rem);
-  padding: 3rem;
-  top: 0;
-  height: calc(100% - 14rem);
+  margin: 8rem 0 0 0 !important;
+  width: calc(100vw - 6rem) !important;
+  padding: 3rem !important;
+  top: 0 !important;
+  height: calc(100% - 14rem) !important;
 }
   
 h#logotype {
@@ -57,13 +64,13 @@ h#logotype {
   align-items: center;
 }
 /* Button Increase Padding */
-  #view_project {
+  a #view_project {
     padding: 3.4rem 19.6rem !important; 
     border-radius:  21rem !important;
   }
     #view_project::after {
     font-size:  1.4rem !important;
-    left: 4rem;
+    left: 4rem;!important;
   }
   #button1,#button2,#button3 {
   padding: 2rem 6rem !important;
@@ -95,8 +102,8 @@ h3::first-line {
   line-height: 1.5rem;
 }
 h3 {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1rem!important;
+  line-height: 1.5rem!important;
 }
   
 /* Body */   
@@ -124,7 +131,6 @@ line-height: 2.9rem !important;
   .head-interface ~ .head-interface {
     margin: auto 0 auto 6vw !important;
   } 
-
 }
 
 .main-nav {pointer-events: var(--handlePointer)}

@@ -20,8 +20,112 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
 
 
 
+@media screen and (min-width: 2500px) and (min-height: 1250px) {
+  
+ #logoblocktwo {
+  top: -2.5rem;
+}
+   #logoblockthree {
+  top: -2.5rem !important;
+} 
+       #logoblockfour {
+  top: -5rem !important;
+} 
+  .desktop-nav {
+  height: 5rem;
+  padding: 3rem;
+  width: calc(100% - 6rem);
+  margin: 0;
+  display: flex;
+}
+  .content-main {
+  margin: 8rem 0 0 0;
+  width: calc(100vw - 6rem);
+  padding: 3rem;
+  top: 0;
+  height: calc(100% - 14rem);
+}
+  
+h#logotype {
+  font-size: 2rem!important;
+  line-height: 48px;
 
+  top:    0 !important;
+  margin:  auto !important;
+  height: 5rem !important;
+  position: relative !important;
+  align-items: center;
+}
+/* Button Increase Padding */
+  #view_project {
+    padding: 3.4rem 19.6rem !important; 
+    border-radius:  21rem !important;
+  }
+    #view_project::after {
+    font-size:  1.4rem !important;
+    left: 4rem;
+  }
+  #button1,#button2,#button3 {
+  padding: 2rem 6rem !important;
+  margin-left: auto;
+}
+  
+  #button1::after,#button2::after,#button3::after {
+  font-size: 1.35rem !important;
+}
+  
+/* H1 */  
+h1, .project-title{
+  font-size:  4rem !important;
+  line-height: 5rem !important;
+}
+h1::first-line, .project-title::first-line{
+  line-height:  5rem !important;
+}
+  
+/* H2 */    
+h2 {
+  font-size: 2rem !important;
+  line-height: 2.25rem !important;
+  padding-top: .2rem !important;
+}
+  
+/* H3 */    
+h3::first-line {
+  line-height: 1.5rem;
+}
+h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+  
+/* Body */   
+  p::first-line, p#body-text::first-line {
+  } 
+h2 ~ p {
+padding-top: 1rem !important;
+font-size: 1.5rem !important;
+line-height: 2.9rem !important;
+  }
+  p, .body-text {
+    font-size: 1.1rem !important;
+    line-height: 2.2rem !important;
+  }
 
+/* Etc page format */  
+ .interface{
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .head-interface {
+    width: fit-content;
+    margin: auto 6vw auto 0 !important;
+  } 
+  .head-interface ~ .head-interface {
+    margin: auto 0 auto 6vw !important;
+  } 
+
+}
 
 .main-nav {pointer-events: var(--handlePointer)}
 .card.x .card-a {

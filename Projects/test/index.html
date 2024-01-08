@@ -416,9 +416,6 @@ TRANSITIONS
 .active{
   background: #667080!important;
 }
-     @media screen and (min-width: 501px) and (max-width: 671px) and (max-height: 760px) {
-      #\33.card #tag-branding, #\33.card #tag-print, #\33.card #tag-media, #\33.card #tag-coding { display: none!important;}
-}
      @media screen and (max-height: 700px) {
       #tag-branding, #tag-print, #tag-media, #tag-coding { display: none!important;}
 }
@@ -1800,8 +1797,34 @@ margin-top: 2rem;
   }
 } 
 
-   
-@media screen and (min-width: 500px) and (max-width: 540px) and (max-height: 955px) {
+@media screen and (min-width: 500px) and (max-width: 540px) and (max-height: 810px) {
+  #\33 .card.y #body-text {
+    display: none !important;
+  }
+    #\33.card.y .project-title {
+  -webkit-line-clamp: 1!important;
+  }
+} 
+
+@media screen and (min-width: 500px) and (max-width: 540px) and (min-height: 811px) and (max-height: 880px) {
+  #\33 .card.y #body-text {
+    display: none !important;
+  }
+    #\33 .card.y .project-title {
+  -webkit-line-clamp: 2;
+  }
+} 
+
+@media screen and (min-width: 500px) and (max-width: 540px) and (max-height: 900px) {
+  #\33.card.y #body-text {
+  -webkit-line-clamp: 1;
+  }
+    #\33 .card.y .project-title {
+  -webkit-line-clamp: 2;
+  }
+} 
+
+@media screen and (min-width: 500px) and (max-width: 540px) and (min-height: 900px) and (max-height: 955px) {
   #\33 .card.y #body-text {
     display: none !important;
   }
@@ -1866,6 +1889,10 @@ margin-top: 2rem;
   -webkit-line-clamp: 10;
   }
 } 
+
+@media screen and (min-width: 541px) and (max-width: 671px) and (max-height: 760px) {
+      #\33.card #tag-branding, #\33.card #tag-print, #\33.card #tag-media, #\33.card #tag-coding { display: none!important;}
+}
 
 @media screen and (min-width: 541px) and (max-width: 1000px) and (max-height: 860px) {
   #\33.card.y #body-text {
@@ -2167,6 +2194,7 @@ margin-top: 2rem;
     display: none;
   }
 } 
+
 
 
 </style>

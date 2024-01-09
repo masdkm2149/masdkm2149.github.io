@@ -1159,15 +1159,16 @@ padding: 2rem !important;
 margin-top: 2rem;
   }
    #\33 .card.y .project-title {
-   -webkit-line-clamp: 1;  
+   -webkit-line-clamp: 3;  
    max-width: 100%;
+   white-space: pre-wrap;
+   word-break: break-word;
    }
 }
 
-
 @media screen and (max-width: 250px) {
    .main-nav .card.y .project-title , .main-nav #\31.card.y .project-title, .main-nav #\33.card.y .project-title {
-   -webkit-line-clamp: 1; 
+   -webkit-line-clamp: 1 !important; 
    width: 100%!important;
   }
 }
@@ -1175,60 +1176,70 @@ margin-top: 2rem;
 @media screen and (max-width: 250px) and (min-height: 751px) and (max-height: 801px) {
    .main-nav .card.y #body-text, .main-nav #\31.card.y #body-text, .main-nav #\33.card.y #body-text {
    -webkit-line-clamp: 1; 
+    display: -webkit-inline-box;
   }
 }
 
 @media screen and (max-width: 250px) and (min-height: 801px) and (max-height: 851px) {
    .main-nav .card.y #body-text, .main-nav #\31.card.y #body-text, .main-nav #\33.card.y #body-text {
    -webkit-line-clamp: 2; 
+    display: -webkit-inline-box;
   }
 }
 
 @media screen and (max-width: 250px) and (min-height: 851px) and (max-height: 901px) {
    .main-nav .card.y #body-text, .main-nav #\31.card.y #body-text, .main-nav #\33.card.y #body-text {
-   -webkit-line-clamp: 3; 
+   -webkit-line-clamp: 3;
+    display: -webkit-inline-box;
   }
 }
 
 @media screen and (max-width: 250px) and (min-height: 901px) and (max-height: 951px) {
    .main-nav .card.y #body-text, .main-nav #\31.card.y #body-text, .main-nav #\33.card.y #body-text {
    -webkit-line-clamp: 4; 
+    display: -webkit-inline-box;
   }
 }
 
 @media screen and (max-width: 250px) and (min-height: 951px) and (max-height: 1001px) {
    .main-nav .card.y #body-text, .main-nav #\31.card.y #body-text, .main-nav #\33.card.y #body-text {
    -webkit-line-clamp: 5; 
+    display: -webkit-inline-box;
   }
 }
 
 @media screen and (max-width: 250px) and (min-height: 1001px) and (max-height: 1051px) {
    .main-nav .card.y #body-text, .main-nav #\31.card.y #body-text, .main-nav #\33.card.y #body-text {
    -webkit-line-clamp: 6; 
+    display: -webkit-inline-box;
   }
 }
 
 @media screen and (max-width: 250px) and (min-height: 1051px) and (max-height: 1101px) {
    .main-nav .card.y #body-text, .main-nav #\31.card.y #body-text, .main-nav #\33.card.y #body-text {
    -webkit-line-clamp: 7; 
+    display: -webkit-inline-box;
   }
 }
 
 @media screen and (max-width: 250px) and (min-height: 1101px) and (max-height: 1151px) {
    .main-nav .card.y #body-text, .main-nav #\31.card.y #body-text, .main-nav #\33.card.y #body-text {
    -webkit-line-clamp: 8; 
+    display: -webkit-inline-box;
   }
 }
 
 @media screen and (max-width: 250px) and (min-height: 1151px) and (max-height: 1201px) {
    .main-nav .card.y #body-text, .main-nav #\31.card.y #body-text, .main-nav #\33.card.y #body-text {
    -webkit-line-clamp: 9; 
+    display: -webkit-inline-box;
   }
 }
 
 @media screen and (max-width: 250px) and (min-height: 1201px) {
    .main-nav .card.y #body-text, .main-nav #\31.card.y #body-text, .main-nav #\33.card.y #body-text {
    -webkit-line-clamp: 10; 
+    display: -webkit-inline-box;
   }
 }
 
@@ -1237,6 +1248,13 @@ margin-top: 2rem;
    -webkit-line-clamp: 2; 
    width: 100%!important;
   }
+}
+
+@media screen and (max-width: 335px) {
+   .main-nav #\33.card.y .project-title {
+   -webkit-line-clamp: 1; 
+   width: 100%!important;
+  }   
 }
 
 @media screen and (min-width: 294px) and (max-width: 300px) {
@@ -1351,7 +1369,7 @@ margin-top: 2rem;
 
 
 
-@media screen and (max-width: 476px) and (max-height: 750px) {
+@media screen and (min-width: 335px) and (max-width: 476px) and (max-height: 750px) {
    #\33.card.y .project-title {
    -webkit-line-clamp: 1;  
   }
@@ -1360,7 +1378,7 @@ margin-top: 2rem;
   }
 }
 
-@media screen and (max-width: 476px) and (min-height: 751px) and (max-height: 830px) {
+@media screen and (min-width: 335px) and (max-width: 476px) and (min-height: 751px) and (max-height: 830px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp: 2;  
   }
@@ -1369,7 +1387,7 @@ margin-top: 2rem;
   }
 }
 
-@media screen and (max-width: 476px) and (min-height: 830px) and (max-height: 900px) {
+@media screen and (min-width: 335px) and (max-width: 476px) and (min-height: 830px) and (max-height: 900px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
   }
@@ -1378,7 +1396,7 @@ margin-top: 2rem;
   }
 }
 
-@media screen and (max-width: 476px) and (min-height: 900px) and (max-height: 960px) {
+@media screen and (min-width: 335px) and (max-width: 476px) and (min-height: 900px) and (max-height: 960px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
   }
@@ -1387,7 +1405,7 @@ margin-top: 2rem;
   }
 }
 
-@media screen and (max-width: 476px) and (min-height: 960px) and (max-height: 1010px) {
+@media screen and (min-width: 335px) and (max-width: 476px) and (min-height: 960px) and (max-height: 1010px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
   }
@@ -1396,7 +1414,7 @@ margin-top: 2rem;
   }
 }
 
-@media screen and (max-width: 476px) and (min-height: 1010px) and (max-height: 1070px) {
+@media screen and (min-width: 335px) and (max-width: 476px) and (min-height: 1010px) and (max-height: 1070px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
   }
@@ -1405,7 +1423,7 @@ margin-top: 2rem;
   }
 }
 
-@media screen and (max-width: 476px) and (min-height: 1070px) and (max-height: 1130px) {
+@media screen and (min-width: 335px) and (max-width: 476px) and (min-height: 1070px) and (max-height: 1130px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
   }
@@ -1414,7 +1432,7 @@ margin-top: 2rem;
   }
 }
 
-@media screen and (max-width: 476px) and (min-height: 1130px) and (max-height: 1190px) {
+@media screen and (min-width: 335px) and (max-width: 476px) and (min-height: 1130px) and (max-height: 1190px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
   }
@@ -1423,7 +1441,7 @@ margin-top: 2rem;
   }
 }
 
-@media screen and (max-width: 476px) and (min-height: 1190px) and (max-height: 1250px) {
+@media screen and (min-width: 335px) and (max-width: 476px) and (min-height: 1190px) and (max-height: 1250px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
   }
@@ -1432,7 +1450,7 @@ margin-top: 2rem;
   }
 }
 
-@media screen and (max-width: 476px) and (min-height: 1250px) and (max-height: 1310px) {
+@media screen and (min-width: 335px) and (max-width: 476px) and (min-height: 1250px) and (max-height: 1310px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
   }
@@ -1441,7 +1459,7 @@ margin-top: 2rem;
   }
 }
 
-@media screen and (max-width: 476px) and (min-height: 1310px) and (max-height: 1370px) {
+@media screen and (min-width: 335px) and (max-width: 476px) and (min-height: 1310px) and (max-height: 1370px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
   }
@@ -1450,7 +1468,7 @@ margin-top: 2rem;
   }
 }
 
-@media screen and (max-width: 476px) and (min-height: 1370px) and (max-height: 1430px) {
+@media screen and (min-width: 335px) and (max-width: 476px) and (min-height: 1370px) and (max-height: 1430px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
   }
@@ -1459,7 +1477,7 @@ margin-top: 2rem;
   }
 }
 
-@media screen and (max-width: 476px) and (min-height: 1430px) {
+@media screen and (min-width: 335px) and (max-width: 476px) and (min-height: 1430px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
   }
@@ -1798,7 +1816,7 @@ margin-top: 2rem;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 538px) and (max-height: 810px) {
+@media screen and (min-width: 500px) and (max-width: 539px) and (max-height: 810px) {
   #\33 .card.y #body-text {
     display: none !important;
   }
@@ -1807,7 +1825,7 @@ margin-top: 2rem;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 538px) and (min-height: 811px) and (max-height: 880px) {
+@media screen and (min-width: 500px) and (max-width: 539px) and (min-height: 811px) and (max-height: 880px) {
   #\33 .card.y #body-text {
     display: none !important;
   }
@@ -1816,7 +1834,7 @@ margin-top: 2rem;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 538px) and (max-height: 900px) {
+@media screen and (min-width: 500px) and (max-width: 539px) and (max-height: 900px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 1;
   }
@@ -1825,137 +1843,137 @@ margin-top: 2rem;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 538px) and (min-height: 900px) and (max-height: 955px) {
+@media screen and (min-width: 500px) and (max-width: 539px) and (min-height: 900px) and (max-height: 955px) {
   #\33 .card.y #body-text {
     display: none !important;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 538px) and (min-height: 955px) and (max-height: 1020px) {
+@media screen and (min-width: 500px) and (max-width: 539px) and (min-height: 955px) and (max-height: 1020px) {
   #\33 .card.y #body-text {
   -webkit-line-clamp: 1;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 538px) and (min-height: 1020px) and (max-height: 1080px) {
+@media screen and (min-width: 500px) and (max-width: 539px) and (min-height: 1020px) and (max-height: 1080px) {
   #\33 .card.y #body-text {
   -webkit-line-clamp: 2;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 538px) and (min-height: 1080px) and (max-height: 1140px) {
+@media screen and (min-width: 500px) and (max-width: 539px) and (min-height: 1080px) and (max-height: 1140px) {
   #\33 .card.y #body-text {
   -webkit-line-clamp: 3;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 538px) and (min-height: 1140px) and (max-height: 1200px) {
+@media screen and (min-width: 500px) and (max-width: 539px) and (min-height: 1140px) and (max-height: 1200px) {
   #\33 .card.y #body-text {
   -webkit-line-clamp: 4;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 538px) and (min-height: 1200px) and (max-height: 1260px) {
+@media screen and (min-width: 500px) and (max-width: 539px) and (min-height: 1200px) and (max-height: 1260px) {
   #\33 .card.y #body-text {
   -webkit-line-clamp: 5;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 538px) and (min-height: 1260px) and (max-height: 1320px) {
+@media screen and (min-width: 500px) and (max-width: 539px) and (min-height: 1260px) and (max-height: 1320px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 6;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 538px) and (min-height: 1320px) and (max-height: 1380px) {
+@media screen and (min-width: 500px) and (max-width: 539px) and (min-height: 1320px) and (max-height: 1380px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 7;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 538px) and (min-height: 1380px) and (max-height: 1440px) {
+@media screen and (min-width: 500px) and (max-width: 539px) and (min-height: 1380px) and (max-height: 1440px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 8;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 538px) and (min-height: 1440px) and (max-height: 1500px) {
+@media screen and (min-width: 500px) and (max-width: 539px) and (min-height: 1440px) and (max-height: 1500px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 9;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 538px) and (min-height: 1500px) and (max-height: 1560px) {
+@media screen and (min-width: 500px) and (max-width: 539px) and (min-height: 1500px) and (max-height: 1560px) {
   #\33 .card.y #body-text {
   -webkit-line-clamp: 10;
   }
 } 
 
-@media screen and (min-width: 538px) and (max-width: 671px) and (max-height: 760px) {
+@media screen and (min-width: 539px) and (max-width: 671px) and (max-height: 760px) {
       #\33.card #tag-branding, #\33.card #tag-print, #\33.card #tag-media, #\33.card #tag-coding { display: none!important;}
 }
 
-@media screen and (min-width: 538px) and (max-width: 1000px) and (max-height: 860px) {
+@media screen and (min-width: 539px) and (max-width: 1000px) and (max-height: 860px) {
   #\33.card.y #body-text {
     display: none;
   }
 } 
 
-@media screen and (min-width: 538px) and (max-width: 1000px) and (min-height: 860px) and (max-height: 930px) {
+@media screen and (min-width: 539px) and (max-width: 1000px) and (min-height: 860px) and (max-height: 930px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 1;
   }
 } 
 
-@media screen and (min-width: 538px) and (max-width: 1000px) and (min-height: 930px) and (max-height: 990px) {
+@media screen and (min-width: 539px) and (max-width: 1000px) and (min-height: 930px) and (max-height: 990px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 2;
   }
 } 
 
-@media screen and (min-width: 538px) and (max-width: 1000px) and (min-height: 990px) and (max-height: 1150px) {
+@media screen and (min-width: 539px) and (max-width: 1000px) and (min-height: 990px) and (max-height: 1150px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 3;
   }
 } 
 
-@media screen and (min-width: 538px) and (max-width: 1000px) and (min-height: 1150px) and (max-height: 1210px) {
+@media screen and (min-width: 539px) and (max-width: 1000px) and (min-height: 1150px) and (max-height: 1210px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 4;
   }
 } 
 
-@media screen and (min-width: 538px) and (max-width: 1000px) and (min-height: 1210px) and (max-height: 1270px) {
+@media screen and (min-width: 539px) and (max-width: 1000px) and (min-height: 1210px) and (max-height: 1270px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 5;
   }
 } 
 
-@media screen and (min-width: 538px) and (max-width: 1000px) and (min-height: 1270px) and (max-height: 1330px) {
+@media screen and (min-width: 539px) and (max-width: 1000px) and (min-height: 1270px) and (max-height: 1330px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 6;
   }
 } 
 
-@media screen and (min-width: 538px) and (max-width: 1000px) and (min-height: 1330px) and (max-height: 1390px) {
+@media screen and (min-width: 539px) and (max-width: 1000px) and (min-height: 1330px) and (max-height: 1390px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 7;
   }
 } 
 
-@media screen and (min-width: 538px) and (max-width: 1000px) and (min-height: 1390px) and (max-height: 1450px) {
+@media screen and (min-width: 539px) and (max-width: 1000px) and (min-height: 1390px) and (max-height: 1450px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 8;
   }
 } 
 
-@media screen and (min-width: 538px) and (max-width: 1000px) and (min-height: 1450px) and (max-height: 1510px) {
+@media screen and (min-width: 539px) and (max-width: 1000px) and (min-height: 1450px) and (max-height: 1510px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 9;
   }
 } 
 
-@media screen and (min-width: 538px) and (max-width: 1000px) and (min-height: 1510px) and (max-height: 1570px) {
+@media screen and (min-width: 539px) and (max-width: 1000px) and (min-height: 1510px) and (max-height: 1570px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 10;
   }
@@ -2145,6 +2163,7 @@ margin-top: 2rem;
      margin: auto!important;
    }
 }
+
 </style>
 
 </head>

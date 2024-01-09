@@ -15,9 +15,6 @@ if ($(window).width() < 420 && $(window).height() > 420) { $("meta[name=viewport
 if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); }
 </script>
     <style>
-
-
-
     @media screen and (max-width: 500px) {
         h1.project-title { font-size:2rem!important; line-height: 2.4rem !important;}
         h2 {
@@ -1909,7 +1906,12 @@ margin-top: 2rem;
   }
 } 
 
-@media screen and (min-width: 539px) and (max-width: 671px) and (max-height: 760px) {
+@media screen and (min-width: 539px) and (max-width: 771px) and (max-height: 700px) {
+      #\33.card .project-title { -webkit-line-clamp: 1;}
+}
+
+
+@media screen and (min-width: 539px) and (max-width: 771px) and (max-height: 800px) {
       #\33.card #tag-branding, #\33.card #tag-print, #\33.card #tag-media, #\33.card #tag-coding { display: none!important;}
 }
 

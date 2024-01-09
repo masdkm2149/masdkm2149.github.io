@@ -2382,7 +2382,8 @@ window.addEventListener('resize', function(event) {
       console.log(JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize));
             if (window.innerWidth < 1500) { document.querySelector(':root').style.setProperty('--snapTo', "center"); }
             else { document.querySelector(':root').style.setProperty('--snapTo', "start"); }
-    
+      document.querySelector(".main-nav").scrollTo((document.querySelector(".main-nav").scrollLeft), 0)
+
       getInfo();
 });
     

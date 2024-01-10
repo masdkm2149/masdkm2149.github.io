@@ -2080,11 +2080,24 @@ margin-top: 2rem;
      margin-top: auto!important; 
    }
 }
-
-
-
-
-
+        
+@media screen and (min-width: 600px) {
+#button1, #button2, #button3 {
+  box-sizing: inherit;
+  max-height: calc(100% - 2rem) !important;
+  height: 100% !important;
+  padding: 1rem 3rem !important;
+  margin-top: -0.15rem;
+  }
+}
+@media screen and (max-width: 600px) {
+#button1, #button2, #button3 {
+  box-sizing: inherit;
+  max-height: calc(100% - 2rem) !important;
+  height: 100% !important;
+  padding: 0.85rem 2.55rem !important;
+  }
+}
 
 @media screen and (max-width: 410px)  {
     #view_project {

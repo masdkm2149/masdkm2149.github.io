@@ -2179,6 +2179,26 @@ margin-top: 2rem;
      margin: auto!important;
    }
 }
+
+@media screen and (min-width: 1500px) {
+      #logotype {   
+position: relative;
+  left: calc(12vw + 2.5rem);
+  height: 0;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  #logoblockfour, #logoblocktwo {
+    display: none;
+  }
+  #logotype {   
+position: relative;
+  left: calc(6vw + 3.5rem);
+  height: 0;
+  }
+}
+
 </style>
 
 </head>
@@ -2186,66 +2206,23 @@ margin-top: 2rem;
 <body onresize="getWindowSpec()">
     
 <div class="desktop-nav">
- 
-    <div style="height: 112px;top: 0;width: 100%;position: absolute;"></div>
-               <script>
-          function preview_toggle(){};
-          function show_toggle(){
-              document.getElementById("state1").classList.toggle("hide");
-              document.getElementsByClassName("btn")[0].classList.toggle("hide");
-              document.getElementById("button1").classList.toggle("checked");
-          };
-      </script>
-      
     
-    <div id="state1" onmouseover="preview_toggle()" onclick="show_toggle()"></div><div class="btn hide" style="position: absolute;z-index: 9;padding: 30px;right: 98px;transform: scale(0.8);top: 4px;opacity:.9;transition: .25s ease;">
-    <img class="hide" style="width: auto;opacity:.5;height: 18px;position: absolute;z-index: 3;margin: 0 auto;bottom: calc(2.2vh + 10px);left: 175;right: -45px;top: 41px;z-index: 999;transition: .1s;" src="https://designedbydan.art/assets/images/38488.png" onclick="hidebtn();">
-    <label>
-                <span class="btn-toggle" style=""></span>
-            </label>
-            
-        </div><script>
-      const btn = document.querySelector(".btn-toggle");
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-    const currentTheme = localStorage.getItem("theme");
-    if (currentTheme == "dark") { 
-      document.body.classList.remove("light-theme");
-      document.body.classList.add("dark-theme");
-    } else if (currentTheme == "light") {
-      document.body.classList.remove("dark-theme");
-      document.body.classList.add("light-theme");
-    }
-
-    btn.addEventListener("click", function () {
-      if (prefersDarkScheme.matches) {
-      document.body.classList.toggle("dark-theme");
-      document.body.classList.toggle("light-theme");
-      var theme = document.body.classList.contains("light-theme") ? "light" : "dark";
-      } else {
-      document.body.classList.toggle("light-theme");
-      document.body.classList.toggle("dark-theme");
-      var theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
-      }
-      localStorage.setItem("theme", theme);
-    });
-      </script>
-    <a href="https://designedbydan.art/"> 
+    <a href="https://designedbydan.art/" style="position: relative;text-decoration: none;"> 
     <div id="logo" style="width: 150px;height: 45px;background: #FFFFFF;border: 3px solid #667080;box-sizing: border-box;left: 0px;right: 0;top: 0px;bottom: 60px;border: 1px solid #667080;/*! =============== breakpoint 1150px W ===============*/position: fixed;border: 1px solid #667080;margin-left: 30px;margin-top: 30px;content: &quot;LOGO&quot;;font-size: 24px;text-align: center;display: none;"></div>
-             <div style="left: 60px;position: absolute;">
+             <div style="left: 2rem;position: relative;padding-right: 2rem;width: 6vw;height: calc(100% - 4rem);top: 2px;">
                  <div id="logoblockone" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;border-left: 1vw solid;border-left-color: currentcolor;border-left-color: #474747;"></div>
                  <div id="logoblocktwo" style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);border-right: 1vw solid #474747;"></div>
                  <div id="logoblockthree" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;top: 22px;border-left: 1vw solid;border-left-color: #474747;"></div>
                  <div id="logoblockfour" style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);top: 22px;border-right: 1vw solid #474747;"></div>
              </div>
-    <h id="logotype" style="position: absolute;left: calc(12vw + 60px);font-family: 'Inter', sans-serif;font-style: normal;font-weight: 600;font-size: 16px;line-height: 48px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: var(--project-title);height: 45px;top: 28px;">Daniel Roswadowsky</h>
-    </a>
+    
+    <h id="logotype" style="font-family: 'Inter', sans-serif;font-style: normal;font-weight: 600;font-size: 1rem;line-height: 48px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: var(--project-title);">Daniel Roswadowsky</h></a>
         <div id="button1" style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: relative;flex: none;order: 0;flex-grow: 0;border: var(--border-color);"></div>
     <a href="/Contact/">
         <div id="button2" style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: absolute;position: relative;flex: none;order: 0;flex-grow: 0;border: var(--border-color);"></div>
     </a>
 
-</div>    
+</div>
     
 <main onresize="reorder()" class="content-main">
 <div class="main-nav" style="display: flex;flex-direction: row;height: 100%;scroll-snap-type: x mandatory;overflow-x: scroll;scroll-behavior: smooth;scrollbar-width: none;width: inherit;"><div style="" id="1" class="card"><div id="BullseyeTracker" class="card-a"></div><div class="card-b"><h4 id="tag-branding" onclick="toggletagbranding(); reorder(); getWindowSpec(); getWindowSpec2(); getWindowSpec3();" class="" style="">Branding

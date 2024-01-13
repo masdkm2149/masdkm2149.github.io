@@ -15,8 +15,42 @@ if ($(window).width() < 420 && $(window).height() > 420) { $("meta[name=viewport
 if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); }
 </script>
     <style>
+
+@media screen and (min-width: 1500px) {
+      #logotype {   
+position: relative;
+  left: calc(12vw + 2.5rem);
+  height: 0;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  #logoblockfour, #logoblocktwo {
+    display: none;
+  }
+  #logotype {   
+position: relative;
+  left: calc(6vw + 3.5rem);
+  height: 0;
+  }
+}
+
+
+#view_project {
+  width:    100% !important;
+  padding: 0 !important;
+  height: 4rem;
+}
+.card a {
+  width: 100% !important;
+  max-width: 16rem;
+}
+.project-title.rh {
+  width: initial !important;
+}
+
     @media screen and (max-width: 500px) {
-        h1.project-title { font-size:2rem!important; line-height: 2.4rem !important;}
+        h1.project-title { font-size:2rem!important; line-height: 2.4rem !important;overflow: clip;}
         h2 {
           font-size: 1.05rem!important;
           line-height: 2rem !important;
@@ -27,7 +61,7 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
           line-height: 1.7rem!important;
 }
     }
-@media screen and (min-width: 2500px) and (min-height: 1250px) {
+@media screen and (min-width: 2400px) and (min-height: 1250px) {
   #logoblockone, #logoblocktwo, #logoblockthree, #logoblockfour {
     height: 2.5rem !important;
     padding: 0;
@@ -74,14 +108,6 @@ h#logotype {
   align-items: center;
 }
 /* Button Increase Padding */
-  a #view_project {
-    padding: 3.4rem 19.6rem !important; 
-    border-radius:  21rem !important;
-  }
-    #view_project::after {
-    font-size:  1.4rem !important;
-    left: 4rem;!important;
-  }
   #button1,#button2,#button3 {
   padding: 2rem 6rem !important;
   margin-left: auto;
@@ -150,8 +176,8 @@ line-height: 2.9rem !important;
 }
 .card.x .card-b {
   padding: 4rem;
-  min-width: min-content;
   width: calc(45vw - 4rem);
+  max-width: 100%;
 }
 .card ~ .card {
   margin-left: 2rem;
@@ -316,8 +342,8 @@ body {
 }
 
 
-@media screen and (max-height: 550px) {
-         #tag-branding, #tag-print, #tag-media, #tag-coding { display: none!important;}
+@media screen and (max-height: 470px) {
+        .x #tag-branding, .x #tag-print, .x #tag-media, .x #tag-coding { display: none!important;}
 }
        @media screen and (min-width: 599px) and (max-width: 1500px)
 #button1, #button2 {
@@ -415,7 +441,7 @@ TRANSITIONS
   background: #667080!important;
 }
      @media screen and (max-height: 700px) {
-      #tag-branding, #tag-print, #tag-media, #tag-coding { display: none!important;}
+     .y #tag-branding, .y #tag-print, .y #tag-media, .y #tag-coding { display: none!important;}
 }
 
 span:hover {
@@ -497,10 +523,11 @@ span:hover {
   margin: 0 auto;
   display: flex;
   float: left;
-  left: 30px;
+  left: 2rem;
   max-width: fit-content;
-  width: auto;
+  width: 100%;
   min-width: revert;
+  overflow: hidden;
 }
 
 #button1,#button2,#button3 {
@@ -637,9 +664,8 @@ word-break: keep-all;
 @media screen and (max-width: 390px) {
   a#button1, div#button2{
   margin-right: 99px !important;
-  right: -70px;
-  top: -8px;
-  transform: scale(.90);
+  right: -4rem;
+  transform: scale(.9);
   }
 }
 @media screen and (max-width: 220px) {
@@ -890,7 +916,7 @@ div.content-main *, h1 { text-transform: capitalize;}
   }
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 2400px) and (min-height: 1050px) {
   
 /* Button Increase Padding */
   #view_project {
@@ -927,14 +953,14 @@ h3 {
   
 /* Body */   
   p::first-line, p#body-text::first-line {
-    line-height: 2rem !important;
+    line-height: 1.3rem !important;
   } 
 h2 ~ p {
 padding-top: 1rem;
   }
   p, .body-text {
-    font-size: 1.1rem !important;
-    line-height: 2.2rem !important;
+    font-size: 1.3rem !important;
+    line-height: 2.5rem !important;
   }
 
 /* Etc page format */  
@@ -1000,13 +1026,76 @@ padding-top: 1rem;
   }
 }
 
-@media screen and (max-width: 1499px) and (min-width: 1100px)  {
+@media screen and (min-width: 2400px)and (min-height: 1100px) {
 
+.card.y a { max-width: 32rem;}
+.card.y #view_project {
+  width: 100% !important;
+  padding: 0 !important;
+  height: 7rem;
+  border-width: .25rem !important;
+  border-radius: 7rem!important;
+}
+.card.y .scrolldown {width: 2.75rem!important;right: 2.75rem!important;}
+.card.y #view_project:after {top:2.7rem;font-size: 1.4rem!important;left: 3.25rem!important; }
   
+}
+
+@media screen and (min-width: 2400px)and (min-height: 1000px) {
+
+.card.y a { max-width: 26rem;}
+.card.y #view_project {
+  width: 100% !important;
+  padding: 0 !important;
+  height: 6rem;
+  border-width: .2rem !important;
+  border-radius: 6rem!important;
+}
+.card.y .scrolldown {width: 2.75rem!important;right: 2.75rem!important;}
+.card.y #view_project:after {top:2.25rem;font-size: 1.4rem!important;left: 3.25rem!important; }
+  
+}
+
+@media screen and (max-width: 2399px) and (min-width: 1780px) and (min-height: 1100px) {
+
+
+.card.y a { max-width: 24rem;}
+.card.y #view_project {
+  width: 100% !important;
+  padding: 0 !important;
+  height: 6rem;
+  border-width: .2rem !important;
+  border-radius: 6rem;
+}
+.card.y .scrolldown {width: 2.5rem!important;right: 2.5rem!important;}
+.card.y #view_project:after {font-size: 1.2rem!important;left: 2.75rem!important; }
+  
+}
+
+@media screen and (max-width: 2399px) and (min-width: 1100px) and (min-height: 1000px) {
+
+
+.card a { max-width: 20rem;}
+.card #view_project {
+  width: 100% !important;
+  padding: 0 !important;
+  height: 5rem;
+  border-width: .2rem !important;
+  border-radius: 5rem;
+}
+.card .scrolldown {width: 2.25rem!important;right: 2.5rem!important;}
+.card #view_project:after {font-size: 1.1rem!important;left: 2.25rem!important; }
+  
+}
+
+@media screen and (min-width: 1500px) and (min-height: 1000px) {
+
+
 /* H1 */  
 h1, .project-title{
   font-size:  3rem;
   line-height: 3.4rem !important;
+  /*! -webkit-line-clamp: 1; */
 }
 h1::first-line, .project-title::first-line{
   line-height:  1rem!important;
@@ -1150,10 +1239,10 @@ h2 ~ p {
   .scrolldown{ float: none; left: -12px;right: 0 !important;margin: auto;}
   #view_project::after {display: none!important;
   }
-    #view_project {position: absolute!important; left: 0!important; right: 0!important; margin: -4rem auto auto auto !important; 
-width: calc(100vw - 12rem) !important;
-padding: 2rem !important;
-margin-top: 2rem;
+    #view_project {/*! position: absolute!important; */ /*! left: 0!important; */ /*! right: 0!important; */ /*! margin: -4rem auto auto auto !important; */ 
+/*! width: calc(100vw - 12rem) !important; */
+/*! padding: 2rem !important; */
+/*! margin-top: 2rem; */
   }
    #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
@@ -1247,6 +1336,10 @@ margin-top: 2rem;
   }
 }
 
+@media screen and (max-width: 260px) { 
+  #tag-branding, #tag-print, #tag-media, #tag-coding { display: none;
+  }
+}
 @media screen and (max-width: 335px) {
    .main-nav #\33.card.y .project-title {
    -webkit-line-clamp: 1; 
@@ -1262,7 +1355,7 @@ margin-top: 2rem;
   }
 }
 
-@media screen and (max-width: 415px) and (min-height: 810px) and (max-height: 830px) {
+@media screen and (max-width: 415px) and (max-height: 830px) {
   #\31.card.y .project-title {
    -webkit-line-clamp: 2;  
   }
@@ -1363,14 +1456,21 @@ margin-top: 2rem;
 
 
 
-
+@media screen and (max-height: 750px) {
+   #\31.card.y .project-title {
+   -webkit-line-clamp: 1;  
+  }
+       #\31.card.y #body-text , #\33.card.y #body-text {
+   display: none;
+  }
+}
 
 
 @media screen and (min-width: 335px) and (max-width: 476px) and (max-height: 750px) {
    #\33.card.y .project-title {
    -webkit-line-clamp: 1;  
   }
-       #\33.card.y #body-text {
+       #\33.card.y #body-text , #\33.card.y #body-text {
    display: none;
   }
 }
@@ -1747,6 +1847,505 @@ margin-top: 2rem;
   }
 }
 
+
+
+@media screen and (max-width: 830px) {
+  .card.x #view_project::after {display:none;}
+.card.x .scrolldown {
+  left: -12px;
+  right: 0!important;
+  margin: auto;
+}
+       .card.x #view_project {
+    width:    100% !important;
+    height: 4rem;
+    padding: 0 !important;
+  }
+}
+@media screen and (min-width: 830px) {
+.card.x .scrolldown {  
+  right: 1.5rem !important;
+   float: right;
+} 
+}
+
+@media screen and (max-height: 520px) {
+  .card.x .project-title { -webkit-line-clamp: 1;}
+  .card.x #body-text {  display: none;} 
+}
+
+@media screen and (max-width:929px) {
+  .card.x .project-title { -webkit-line-clamp: 1;}
+}
+
+
+@media screen and (min-height: 520px) and (max-height: 555px) and (max-width:929px) {
+  .card.x #body-text { -webkit-line-clamp: 1!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 555px) and (max-height: 585px) and (max-width:929px) {
+  .card.x #body-text { -webkit-line-clamp: 2!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 585px) and (max-height: 615px) and (max-width:929px) {
+  .card.x #body-text { -webkit-line-clamp: 3!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 615px) and (max-height: 645px) and (max-width:929px) {
+  .card.x #body-text { -webkit-line-clamp: 4!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 645px) and (max-height: 675px) and (max-width:929px) {
+  .card.x #body-text { -webkit-line-clamp: 5!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 675px) and (max-height: 705px) and (max-width:929px) {
+  .card.x #body-text { -webkit-line-clamp: 6!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 705px) and (max-height: 735px) and (max-width:929px) {
+  .card.x #body-text { -webkit-line-clamp: 7!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 735px) and (max-height: 765px) and (max-width:929px) {
+  .card.x #body-text { -webkit-line-clamp: 8!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 765px) and (max-height: 795px) and (max-width:929px) {
+  .card.x #body-text { -webkit-line-clamp: 9!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 795px) and (max-height: 835px) and (max-width:929px) {
+  .card.x #body-text { -webkit-line-clamp: 10!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 835px) and (max-height: 865px) and (max-width:929px) {
+  .card.x #body-text { -webkit-line-clamp: 11!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 865px) and (max-width:929px) {
+  .card.x #body-text { -webkit-line-clamp: 12!important; display: -webkit-inline-box!important;} 
+}
+
+
+@media screen and (min-height: 520px) and (min-width: 930px) and (max-width:1099px) {
+  .card.x #body-text { -webkit-line-clamp: 1!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 550px) and (min-width: 930px) and (max-width:1099px) {
+  .card.x #body-text { -webkit-line-clamp: 2!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 580px) and (min-width: 930px) and (max-width:1099px) {
+  .card.x #body-text { -webkit-line-clamp: 3!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 610px) and (min-width: 930px) and (max-width:1099px) {
+  .card.x #body-text { -webkit-line-clamp: 4!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 640px) and (min-width: 930px) and (max-width:1099px) {
+  .card.x #body-text { -webkit-line-clamp: 5!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 670px) and (min-width: 930px) and (max-width:1099px) {
+  .card.x #body-text { -webkit-line-clamp: 6!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 700px) and (min-width: 930px) and (max-width:1099px) {
+  .card.x #body-text { -webkit-line-clamp: 7!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 730px) and (min-width: 930px) and (max-width:1099px) {
+  .card.x #body-text { -webkit-line-clamp: 8!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 760px) and (min-width: 930px) and (max-width:1099px) {
+  .card.x #body-text { -webkit-line-clamp: 9!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 790px) and (min-width: 930px) and (max-width:1099px) {
+  .card.x #body-text { -webkit-line-clamp: 10!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 570px) and (min-width: 930px) and (max-width:960px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 1!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 600px) and (min-width: 930px) and (max-width:960px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 2!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 630px) and (min-width: 930px) and (max-width:960px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 3!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 660px) and (min-width: 930px) and (max-width:960px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 4!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 690px) and (min-width: 930px) and (max-width:960px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 5!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 720px) and (min-width: 930px) and (max-width:960px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 6!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 750px) and (min-width: 930px) and (max-width:960px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 7!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 780px) and (min-width: 930px) and (max-width:960px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 8!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 810px) and (min-width: 930px) and (max-width:960px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 9!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 840px) and (min-width: 930px) and (max-width:960px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 10!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 570px) and (min-width: 960px) and (max-width:1097px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 1!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 600px) and (min-width: 960px) and (max-width:1097px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 2!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 630px) and (min-width: 960px) and (max-width:1097px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 3!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 660px) and (min-width: 960px) and (max-width:1097px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 4!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 690px) and (min-width: 960px) and (max-width:1097px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 5!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 720px) and (min-width: 960px) and (max-width:1097px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 6!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 750px) and (min-width: 960px) and (max-width:1097px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 7!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 780px) and (min-width: 960px) and (max-width:1097px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 8!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 810px) and (min-width: 960px) and (max-width:1097px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 9!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 840px) and (min-width: 960px) and (max-width:1097px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 10!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 525px) and (min-width: 1097px) and (max-width:1099px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 1!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 555px) and (min-width: 1097px) and (max-width:1099px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 2!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 585px) and (min-width: 1097px) and (max-width:1099px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 3!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 615px) and (min-width: 1097px) and (max-width:1099px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 4!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 645px) and (min-width: 1097px) and (max-width:1099px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 5!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 675px) and (min-width: 1097px) and (max-width:1099px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 6!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 705px) and (min-width: 1097px) and (max-width:1099px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 7!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 735px) and (min-width: 1097px) and (max-width:1099px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 8!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 765px) and (min-width: 1097px) and (max-width:1099px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 9!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 795px) and (min-width: 1097px) and (max-width:1099px) {
+  #\31 .card.x #body-text { -webkit-line-clamp: 10!important; display: -webkit-inline-box!important;} 
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-height: 610px) and (min-width: 930px) and (max-width:960px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 1!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 640px) and (min-width: 930px) and (max-width:960px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 2!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 670px) and (min-width: 930px) and (max-width:960px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 3!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 700px) and (min-width: 930px) and (max-width:960px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 4!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 730px) and (min-width: 930px) and (max-width:960px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 5!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 760px) and (min-width: 930px) and (max-width:960px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 6!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 790px) and (min-width: 930px) and (max-width:960px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 7!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 820px) and (min-width: 930px) and (max-width:960px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 8!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 850px) and (min-width: 930px) and (max-width:960px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 9!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 880px) and (min-width: 930px) and (max-width:960px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 10!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 910px) and (min-width: 930px) and (max-width:960px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 11!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 940px) and (min-width: 930px) and (max-width:960px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 12!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (max-height: 530px) and (min-width: 960px) and (max-width:1099px) {
+  #\33 .card.x .project-title { -webkit-line-clamp:1!important;}
+}
+
+@media screen and (min-height: 530px) and (max-height: 580px) and (min-width: 960px) and (max-width:1099px) {
+  #\33 .card.x .project-title { -webkit-line-clamp:2!important;}
+}
+
+@media screen and (max-height: 610px) and (min-width: 960px) and (max-width:1099px) {
+  #\33 .card.x #body-text { display:none!important;} 
+}
+
+@media screen and (min-height: 610px) and (min-width: 960px) and (max-width:1099px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 1!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 640px) and (min-width: 960px) and (max-width:1099px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 2!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 670px) and (min-width: 960px) and (max-width:1099px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 3!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 700px) and (min-width: 960px) and (max-width:1099px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 4!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 730px) and (min-width: 960px) and (max-width:1099px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 5!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 760px) and (min-width: 960px) and (max-width:1099px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 6!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 790px) and (min-width: 960px) and (max-width:1099px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 7!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 820px) and (min-width: 960px) and (max-width:1099px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 8!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 850px) and (min-width: 960px) and (max-width:1099px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 9!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 880px) and (min-width: 960px) and (max-width:1099px) {
+  #\33 .card.x #body-text { -webkit-line-clamp: 10!important; display: -webkit-inline-box!important;} 
+}
+
+
+@media screen and (max-height: 520px) and (min-width: 1100px) and (max-width:1499px) {
+  .card.x #body-text {display: none!important;} 
+}
+
+@media screen and (min-height: 520px) and (min-width: 1100px) and (max-width:1499px) {
+  .card.x #body-text { -webkit-line-clamp: 1!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 545px) and (min-width: 1100px) and (max-width:1499px) {
+  .card.x #body-text { -webkit-line-clamp: 2!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 585px) and (min-width: 1100px) and (max-width:1499px) {
+  .card.x #body-text { -webkit-line-clamp: 3!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 615px) and (min-width: 1100px) and (max-width:1499px) {
+  .card.x #body-text { -webkit-line-clamp: 4!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 645px) and (min-width: 1100px) and (max-width:1499px) {
+  .card.x #body-text { -webkit-line-clamp: 5!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 690px) and (min-width: 1100px) and (max-width:1499px) {
+  .card.x #body-text { -webkit-line-clamp: 6!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 720px) and (min-width: 1100px) and (max-width:1499px) {
+  .card.x #body-text { -webkit-line-clamp: 7!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 750px) and (min-width: 1100px) and (max-width:1499px) {
+  .card.x #body-text { -webkit-line-clamp: 8!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 780px) and (min-width: 1100px) and (max-width:1499px) {
+  .card.x #body-text { -webkit-line-clamp: 9!important; display: -webkit-inline-box!important;} 
+}
+
+@media screen and (min-height: 810px) and (min-width: 1100px) and (max-width:1499px) {
+  .card.x #body-text { -webkit-line-clamp: 10!important; display: -webkit-inline-box!important;} 
+}
+
+
+@media screen and (max-height: 570px) and (min-width: 1264px) and (max-width: 1499px) {
+  #\33 .card.x #body-text {display: none!important;} 
+}
+
+@media screen and (min-height: 570px) and (min-width: 1264px) and (max-width: 1499px) {
+  #\33 .card.x #body-text {-webkit-line-clamp:1!important;} 
+}
+
+@media screen and (min-height: 600px) and (min-width: 1264px) and (max-width: 1499px) {
+  #\33 .card.x #body-text {-webkit-line-clamp:2!important;} 
+}
+
+@media screen and (min-height: 630px) and (min-width: 1264px) and (max-width: 1499px) {
+  #\33 .card.x #body-text {-webkit-line-clamp:3!important;} 
+}
+
+@media screen and (min-height: 660px) and (min-width: 1264px) and (max-width: 1499px) {
+  #\33 .card.x #body-text {-webkit-line-clamp:4!important;} 
+}
+
+@media screen and (min-height: 690px) and (min-width: 1264px) and (max-width: 1499px) {
+  #\33 .card.x #body-text {-webkit-line-clamp:5!important;} 
+}
+
+@media screen and (min-height: 720px) and (min-width: 1264px) and (max-width: 1499px) {
+  #\33 .card.x #body-text {-webkit-line-clamp:6!important;} 
+}
+
+@media screen and (min-height: 750px) and (min-width: 1264px) and (max-width: 1499px) {
+  #\33 .card.x #body-text {-webkit-line-clamp:7!important;} 
+}
+@media screen and (max-height: 610px) and (min-width: 1100px) and (max-width:1263px) {
+  #\33 .card.x #body-text {display: none!important;} 
+}
+
+@media screen and (min-height: 610px) and (min-width: 1100px) and (max-width:1263px) {
+  #\33 .card.x #body-text {-webkit-line-clamp:1!important;} 
+}
+
+@media screen and (min-height: 650px) and (min-width: 1100px) and (max-width:1263px) {
+  #\33 .card.x #body-text {-webkit-line-clamp:2!important;} 
+}
+
+@media screen and (min-height: 680px) and (min-width: 1100px) and (max-width:1263px) {
+  #\33 .card.x #body-text {-webkit-line-clamp:3!important;} 
+}
+
+@media screen and (min-height: 710px) and (min-width: 1100px) and (max-width:1263px) {
+  #\33 .card.x #body-text {-webkit-line-clamp:4!important;} 
+}
+
+@media screen and (min-height: 740px) and (min-width: 1100px) and (max-width:1263px) {
+  #\33 .card.x #body-text {-webkit-line-clamp:5!important;} 
+}
+
+@media screen and (min-height: 770px) and (min-width: 1100px) and (max-width:1263px) {
+  #\33 .card.x #body-text {-webkit-line-clamp:6!important;} 
+}
+
+@media screen and (min-height: 800px) and (min-width: 1100px) and (max-width:1263px) {
+  #\33 .card.x #body-text {-webkit-line-clamp:7!important;} 
+}
+
+@media screen and (min-height: 830px) and (min-width: 1100px) and (max-width:1263px) {
+  #\33 .card.x #body-text {-webkit-line-clamp:8!important;} 
+}
+
+@media screen and (min-height: 860px) and (min-width: 1100px) and (max-width:1263px) {
+  #\33 .card.x #body-text {-webkit-line-clamp:9!important;} 
+}
+
+@media screen and (min-height: 890px) and (min-width: 1100px) and (max-width:1263px) {
+  #\33 .card.x #body-text {-webkit-line-clamp:10!important;} 
+}
+
+@media screen and (min-width:930px) and (max-width:950px) {
+  
+  #\33 .card.x .project-title { -webkit-line-clamp: 3;}
+}
+
+@media screen and (min-width:950px) {
+  
+  #\33 .card.x .project-title { -webkit-line-clamp: 4;}
+}
+
+
+
+/* @media screen and (min-height: 410px) and (max-height: 440px) {
+  .card.x .project-title { -webkit-line-clamp: 1;}
+  .card.x #body-text {  -webkit-line-clamp: 1;} 
+}
+
+@media screen and (min-height: 440px) and (max-height: 470px) {
+  .card.x .project-title { -webkit-line-clamp: 1;}
+  .card.x #body-text {  -webkit-line-clamp: 2;} 
+}
+
+@media screen and (min-height: 470px) and (max-height: 500px) {
+  .card.x .project-title { -webkit-line-clamp: 1;}
+  .card.x #body-text {  -webkit-line-clamp: 3;} 
+}
+
+*/ 
+
  @media screen and (min-width: 500px) and (max-width: 541px) and (max-height: 790px) {
    .card.y #body-text {
     display: none;
@@ -2025,14 +2624,18 @@ margin-top: 2rem;
 
 @media screen and (min-width: 501px) and (max-width: 1100px)  {
 
-    .card.x #view_project {
-    padding: 2rem 11.5vw !important;
-  }
     .card.y #view_project {
     padding: 2rem 8rem !important;
   }
 }
 
+
+@media screen and (max-width: 795px) {
+  .card.x .project-title {
+    -webkit-line-clamp: 1!important;
+  }
+
+}
 
    .project-title {
    overflow: clip;
@@ -2045,6 +2648,7 @@ margin-top: 2rem;
   -webkit-box-orient: vertical;  
     overflow: clip;
     display: -webkit-inline-box;
+  width: ;
   }
 
 
@@ -2078,9 +2682,73 @@ margin-top: 2rem;
   }
      .card.x a {
      margin-top: auto!important; 
+     left: 0 !important;
+     max-width: 15rem;
    }
 }
-        
+
+
+@media screen and (min-height: 980px) and (min-width: 1500px) {
+       #\33 .card.y #body-text {
+  -webkit-line-clamp: 1;
+  }
+}
+
+@media screen and (min-height: 1040px) and (min-width: 1500px) {
+       #\33 .card.y #body-text {
+  -webkit-line-clamp: 2;
+  }
+}
+
+@media screen and (min-height: 1100px) and (min-width: 1500px) {
+       #\33 .card.y #body-text {
+  -webkit-line-clamp: 3;
+  }
+}
+
+@media screen and (min-height: 1160px) and (min-width: 1500px) {
+       #\33 .card.y #body-text {
+  -webkit-line-clamp: 4;
+  }
+}
+
+@media screen and (min-height: 1220px) and (min-width: 1500px) {
+       #\33 .card.y #body-text {
+  -webkit-line-clamp: 5;
+  }
+}
+
+@media screen and (max-height: 780px) and (min-width: 1500px) {
+       .card.y #body-text , #\33.card.y #body-text {
+   display: none;
+  }
+}
+
+@media screen and (min-height: 780px) and (max-height: 1000px) and (min-width: 1500px) {
+       .card.y #body-text {
+  -webkit-line-clamp: 1;
+  }
+}
+
+@media screen and (min-height: 850px) and (min-width: 1500px) and (max-height: 1000px){
+       .card.y #body-text {
+  -webkit-line-clamp: 2;
+  }
+}
+
+@media screen and (min-height: 920px) and (max-height: 1000px) and (min-width: 1500px) {
+       .card.y #body-text {
+  -webkit-line-clamp: 3;
+  }
+}
+
+@media screen and (min-height: 990px) and (max-height: 1000px) and (min-width: 1500px) {
+       .card.y #body-text {
+  -webkit-line-clamp: 4;
+  }
+}
+
+
 @media screen and (min-width: 600px) {
 #button1, #button2, #button3 {
   box-sizing: inherit;
@@ -2088,6 +2756,7 @@ margin-top: 2rem;
   height: 100% !important;
   padding: 1rem 3rem !important;
   margin-top: -0.15rem;
+  margin-right: 2rem !important;
   }
 }
 @media screen and (max-width: 600px) {
@@ -2101,9 +2770,8 @@ margin-top: 2rem;
 }
 
 @media screen and (max-width: 410px)  {
-    #view_project {
-    width:    calc(100vw - 12rem) !important;
-    padding: 2rem !important;
+    .card a {
+    max-width:     100% !important;
   }
 }
 
@@ -2149,56 +2817,47 @@ margin-top: 2rem;
   }
 }  
 
- @media screen and (max-width: 1100px) and (max-height: 510px) {
+ @media screen and (min-width: 2400px) and (min-height: 1250px) {
+  #\31.card.y #body-text, .card.y #body-text, #\33.card.y #body-text {
+  -webkit-line-clamp: 2;
+  }
+}  
+
+ @media screen and (min-width: 2400px) and (min-height: 1350px) {
+  #\31.card.y #body-text, .card.y #body-text, #\33.card.y #body-text {
+  -webkit-line-clamp: 3;
+  }
+}  
+
+ @media screen and (max-width: 400px) {
+   #button1 {
+    display: none !important;
+   }
+}
+
+@media screen and (max-height: 420px) {
    .card.x h2 {
     display: none;
    }
 }
- @media screen and (max-width: 1100px) and (max-height: 490px) {
-   .card.x h1 {
-    
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;  
-    overflow: hidden;
-    display: -webkit-inline-box;
-   }
-} @media screen and (max-width: 1100px) and (max-height: 460px) {
+
+} @media screen and (max-height: 460px) {
    .card.x h1 {
     
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;  
-    overflow: hidden;
+    overflow: clip;
     display: -webkit-inline-box;
    }
 } 
 @media screen and (max-width: 1100px) and (max-height: 410px) {
    .card.x h1 {    
-     display: none;
    }
      .card.x a {    
-     margin: auto!important;
+     width: 100% !important;
+     max-width: 15rem;
    }
 }
-
-@media screen and (min-width: 1500px) {
-      #logotype {   
-position: relative;
-  left: calc(12vw + 2.5rem);
-  height: 0;
-  }
-}
-
-@media screen and (max-width: 1500px) {
-  #logoblockfour, #logoblocktwo {
-    display: none;
-  }
-  #logotype {   
-position: relative;
-  left: calc(6vw + 3.5rem);
-  height: 0;
-  }
-}
-
 </style>
 
 </head>

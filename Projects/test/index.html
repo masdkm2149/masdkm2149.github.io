@@ -16,6 +16,7 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
 </script>
     <style>
 
+
 @media screen and (min-width: 1500px) {
       #logotype {   
 position: relative;
@@ -2073,13 +2074,27 @@ h2 ~ p {
   .card.x .project-title { -webkit-line-clamp: 2;}
 }
 
-@media screen and (min-width:900px) and (max-height:650px) {
+
+@media screen and (min-width:900px) and (min-height:500px) and (max-height:560px) {
   #\33.card.x #body-text { -webkit-line-clamp: 1 !important;}
 }
 
-@media screen and (min-width:900px) and (min-height:650px) and (max-height:680px) {
+@media screen and (min-width:900px) and (min-height:570px) and (max-height:650px) {
+  #\33.card.x #body-text { -webkit-line-clamp: 1 !important;}
+}
+
+@media screen and (min-width:900px) and (min-height:560px) and (max-height:570px) {
   #\33.card.x #body-text { -webkit-line-clamp: 2 !important;}
 }
+
+@media screen and (min-width:900px) and (min-height:570px) and (max-height:590px) {
+  #\33.card.x #body-text { -webkit-line-clamp: 1 !important;}
+}
+
+@media screen and (min-width:900px) and (min-height:590px) and (max-height:650px) {
+  #\33.card.x #body-text { display: none !important;}
+}
+
 
 @media screen and (min-width:900px) and (min-height:680px) and (max-height:710px) {
   #\33.card.x #body-text { -webkit-line-clamp: 3 !important;}
@@ -2388,7 +2403,7 @@ h2 ~ p {
   #\33 .card.x #body-text { -webkit-line-clamp: 12!important; display: -webkit-inline-box!important;} 
 }
 
-@media screen and (max-height: 530px) and (min-width: 960px) and (max-width:1099px) {
+@media screen and (max-height: 530px) {
   #\33 .card.x .project-title { -webkit-line-clamp:1!important;}
 }
 
@@ -2411,7 +2426,7 @@ h2 ~ p {
 
 
 
-@media screen and (max-height: 610px) and (min-width: 960px) and (max-width:1099px) {
+@media screen and (max-height: 520px) and (min-width: 960px) and (max-width:1099px) {
   #\33 .card.x #body-text { display:none!important;} 
 }
 
@@ -2569,8 +2584,7 @@ h2 ~ p {
   #\33 .card.x #body-text {-webkit-line-clamp:10!important;} 
 }
 
-@media screen and (min-width:1000px) {
-  
+@media screen and (min-width:1000px) and (min-height:590px) {
   #\33 .card.x .project-title { -webkit-line-clamp: 3;}
 }
 
@@ -2860,6 +2874,7 @@ h2 ~ p {
    -webkit-box-orient: vertical;  
    display: -webkit-inline-box;
     
+   width: auto !important;
   }
   
   #body-text {
@@ -3180,11 +3195,11 @@ function getInfo() {
   }
 }   
     function relSizing() {
-            if ( $(window).width() < ($(window).height() * 1.1) && $(window).width() < 1500 ) { 
+            if ( $(window).width() < ($(window).height() * 1.05) && $(window).width() < 1500 ) { 
                     if ( $('.x') ) { for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.remove("x"); } }
                     for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.add("y"); }   
             }
-            if ( $(window).width() > ($(window).height() * 1.1) && $(window).width() < 1500 ) { 
+            if ( $(window).width() > ($(window).height() * 1.05) && $(window).width() < 1500 ) { 
                     if ( $('.y') ) { for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.remove("y"); } }
                     for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.add("x"); }   
             }

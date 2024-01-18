@@ -15,6 +15,7 @@ if ($(window).width() < 420 && $(window).height() > 420) { $("meta[name=viewport
 if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); }
 </script>
     <style>
+
 #\.\.\.{display:none;}
 @media screen and (min-width: 1500px) {
       #logotype {   
@@ -844,7 +845,7 @@ width: 100%;
  
 
 #tag-branding:hover, #tag-coding:hover, #tag-print:hover {
-  background: #667080;
+  background: var(--h2-color);
   cursor: pointer;
 } 
 
@@ -3534,7 +3535,6 @@ h2 ~ p {
      max-width: 15rem;
    }
 }
-
 </style>
 
 </head>

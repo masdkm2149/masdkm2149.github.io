@@ -3778,7 +3778,84 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
     function scrlFR() { document.querySelector(':root').style.setProperty('--handlePointer', "none"); document.querySelector(':root').style.setProperty('--snapTo', "center"); document.querySelector(".main-nav").scrollBy({ left: -window.innerWidth + 32, behavior: 'smooth' }); }
     function scrlHF() { document.querySelector(':root').style.setProperty('--handlePointer', "none"); document.querySelector(':root').style.setProperty('--snapTo', "start"); document.querySelector(".main-nav").scrollBy({ left: ((window.innerWidth /2) - 32), behavior: 'smooth' }); }
     function scrlHR() { document.querySelector(':root').style.setProperty('--handlePointer', "none"); document.querySelector(':root').style.setProperty('--snapTo', "start"); document.querySelector(".main-nav").scrollBy({ left: ((-window.innerWidth /2) + 32), behavior: 'smooth' }); }
-      </script>
+   function toggletagbranding() {
+  for (let i = 0; i < document.querySelectorAll('#tag-branding').length; i++) {
+	document.querySelectorAll('#tag-branding')[i].classList.toggle("active");
+}
+  for (let i = 0; i < document.querySelectorAll('.coding').length; i++) {
+  document.querySelectorAll('.coding')[i].classList.toggle("hide");
+}
+  for (let i = 0; i < document.querySelectorAll('.branding').length; i++) {
+  document.querySelectorAll('.branding > #project-element')[i].classList.toggle("tag-h-infocus");
+}
+	  for (let i = 0; i < document.querySelectorAll('.branding').length; i++) {
+  document.querySelectorAll('.branding .temp-main-image')[i].classList.toggle("active-border-1");
+}
+		  for (let i = 0; i < document.querySelectorAll('.branding').length; i++) {
+  document.querySelectorAll('.branding > .element-info')[i].classList.toggle("active-border");
+}
+  document.querySelectorAll('.branding > .element-info')[0].classList.toggle("tag-hh-infocus");/
+	document.getElementsByClassName('print')[0].classList.toggle("hide");  
+
+}
+function toggletagcoding() {
+  for (let i = 0; i < document.querySelectorAll('#tag-coding').length; i++) {
+  document.querySelectorAll('#tag-coding')[i].classList.toggle("active");
+}
+	
+  for (let i = 0; i < document.querySelectorAll('.branding').length; i++) {
+  document.querySelectorAll('.branding')[i].classList.toggle("hide");
+}
+  for (let i = 0; i < document.querySelectorAll('.print').length; i++) {
+  document.querySelectorAll('.print')[i].classList.toggle("hide");
+}
+
+  for (let i = 0; i < document.querySelectorAll('.coding').length; i++) {
+  document.querySelectorAll('.coding')[i].classList.toggle("tag-p-infocus");
+}
+  document.querySelectorAll('.coding')[0].classList.toggle("m");
+	  for (let i = 0; i < document.querySelectorAll('.coding').length; i++) {
+  document.querySelectorAll('.coding .temp-main-image')[i].classList.toggle("active-border-1");
+}
+		  for (let i = 0; i < document.querySelectorAll('.coding').length; i++) {
+  document.querySelectorAll('.coding > .element-info')[i].classList.toggle("active-border");
+}
+  for (let i = 0; i < document.querySelectorAll('.coding > #project-element').length; i++) {
+  document.querySelectorAll('.coding > #project-element')[i].classList.toggle("tag-h-infocus");
+}
+  document.querySelectorAll('.coding > .element-info')[0].classList.toggle("tag-hh-infocus");
+
+
+}
+
+function toggletagprint() {
+  for (let i = 0; i < document.querySelectorAll('#tag-print').length; i++) {
+  document.querySelectorAll('#tag-print')[i].classList.toggle("active");
+}
+  for (let i = 0; i < document.querySelectorAll('.branding').length; i++) {
+  document.querySelectorAll('.branding')[i].classList.toggle("hide");
+}
+  for (let i = 0; i < document.querySelectorAll('.coding').length; i++) {
+  document.querySelectorAll('.coding')[i].classList.toggle("hide");
+}
+
+  for (let i = 0; i < document.querySelectorAll('.print').length; i++) {
+  document.querySelectorAll('.print')[i].classList.toggle("tag-p-infocus");
+}
+  document.querySelectorAll('.print')[0].classList.toggle("m");
+  for (let i = 0; i < document.querySelectorAll('.print > #project-element').length; i++) {
+  document.querySelectorAll('.print > #project-element')[i].classList.toggle("tag-h-infocus");
+}
+  document.querySelectorAll('.print > .element-info')[0].classList.toggle("tag-hh-infocus");
+	  for (let i = 0; i < document.querySelectorAll('.print').length; i++) {
+  document.querySelectorAll('.print .temp-main-image')[i].classList.toggle("active-border-1");
+}
+		  for (let i = 0; i < document.querySelectorAll('.print').length; i++) {
+  document.querySelectorAll('.print > .element-info')[i].classList.toggle("active-border");
+}
+}
+
+</script>
     <style type="text/css"></style><style type="text/css"></style><style type="text/css"></style>
 <style type="text/css"></style>
 <style type="text/css"></style>

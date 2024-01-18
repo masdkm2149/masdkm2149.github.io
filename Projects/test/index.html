@@ -3778,7 +3778,9 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
     function scrlFR() { document.querySelector(':root').style.setProperty('--handlePointer', "none"); document.querySelector(':root').style.setProperty('--snapTo', "center"); document.querySelector(".main-nav").scrollBy({ left: -window.innerWidth + 32, behavior: 'smooth' }); }
     function scrlHF() { document.querySelector(':root').style.setProperty('--handlePointer', "none"); document.querySelector(':root').style.setProperty('--snapTo', "start"); document.querySelector(".main-nav").scrollBy({ left: ((window.innerWidth /2) - 32), behavior: 'smooth' }); }
     function scrlHR() { document.querySelector(':root').style.setProperty('--handlePointer', "none"); document.querySelector(':root').style.setProperty('--snapTo', "start"); document.querySelector(".main-nav").scrollBy({ left: ((-window.innerWidth /2) + 32), behavior: 'smooth' }); }
-   function toggletagbranding() {
+  
+	
+function toggletagbranding() {
   for (let i = 0; i < document.querySelectorAll('#tag-branding').length; i++) {
 	document.querySelectorAll('#tag-branding')[i].classList.toggle("active");
 }
@@ -3794,7 +3796,7 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
 		  for (let i = 0; i < document.querySelectorAll('.branding').length; i++) {
   document.querySelectorAll('.branding > .element-info')[i].classList.toggle("active-border");
 }
-  document.querySelectorAll('.branding > .element-info')[0].classList.toggle("tag-hh-infocus");/
+  document.querySelectorAll('.branding > .element-info')[0].classList.toggle("tag-hh-infocus");
 	document.getElementsByClassName('print')[0].classList.toggle("hide");  
 
 }

@@ -15,8 +15,9 @@ if ($(window).width() < 420 && $(window).height() > 420) { $("meta[name=viewport
 if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); }
 </script>
     <style>
+
 @media screen and (min-width: 1500px) and (max-height: 580px) { 
-	div.card.x .card-a, div.card.x{ min-width: calc(50% - 1rem); width: auto; }
+	.card.x .card-a, .card.x{ min-width: calc(50% - 1rem); width: auto; }
 	div.card.x .card-a { min-width: calc(55% - 1rem); }
 }
 
@@ -997,6 +998,14 @@ div.content-main *, h1 { text-transform: capitalize;}
     display: none;
   }
 }
+
+@media screen and (min-width: 1500px) and (max-height: 580px) {
+   .card.x  #body-text {
+     display: -webkit-inline-box;
+  }
+}
+
+
 
 @media screen and (min-width: 2400px) and (min-height: 1050px) {
   
@@ -2402,6 +2411,10 @@ h2 ~ p {
 }
 
 
+@media screen and (min-width:1500px) and (min-height:500px) and (max-height:560px) {
+  #\31.card.x #body-text, #\35.card.x #body-text, #\34.card.x #body-text, #\32.card.x #body-text { -webkit-line-clamp: 1 !important;}
+}
+
 @media screen and (min-width:900px) and (min-height:500px) and (max-height:560px) {
   #\33.card.x #body-text { -webkit-line-clamp: 1 !important;}
 }
@@ -2413,6 +2426,12 @@ h2 ~ p {
 @media screen and (min-width:900px) and (min-height:560px) and (max-height:570px) {
   #\33.card.x #body-text { -webkit-line-clamp: 2 !important;}
 }
+
+
+@media screen and (min-width:1500px) and (min-height:570px) and (max-height:590px) {
+   #\35.card.x #body-text , #\34.card.x #body-text , #\31.card.x #body-text { -webkit-line-clamp: 1 !important;}
+}
+
 
 @media screen and (min-width:900px) and (min-height:570px) and (max-height:590px) {
   #\33.card.x #body-text { -webkit-line-clamp: 1 !important;}
@@ -3794,7 +3813,6 @@ h2 ~ p {
      max-width: 15rem;
    }
 }
-
 </style>
 
 </head>

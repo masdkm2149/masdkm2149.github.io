@@ -16,6 +16,7 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
 </script>
     <style>
 
+
 .Branding.active #tag-branding, .Print.active #tag-print, .Coding.active #tag-coding {
   background: var(--h2-color) !important;
 }
@@ -391,9 +392,18 @@ body {
 }
 
 
-@media screen and (max-height: 470px) {
-        .x #tag-branding, .x #tag-print, .x #tag-media, .x #tag-coding { display: none!important;}
+@media screen and (max-height: 480px) {
+        .x #tag-branding, .x #tag-print, .x #tag-media, .x #tag-coding { position: absolute!important; top: 1.5rem; left: 1.5rem}
+  .x .card-b { padding: 3rem 4rem 3rem 4rem!important;}
+  .x #body-text, #\33.card.x .card-b #body-text { display:-webkit-inline-box!important; -webkit-line-clamp: 1!important;}
 }
+
+@media screen and (max-height: 445px) {
+  .x #body-text, #\33.card.x .card-b #body-text { display:none!important;}
+}
+
+
+
        @media screen and (min-width: 599px) and (max-width: 1500px)
 #button1, #button2 {
   padding: 15px 45px !important;
@@ -3750,6 +3760,7 @@ h2 ~ p {
      max-width: 15rem;
    }
 }
+
 
 
 </style>

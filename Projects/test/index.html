@@ -355,12 +355,19 @@ body {
   --body-color: #667080;
   --project-title: #4b515b;
   }
-  #BullseyeTracker.card-a {
+  #BullseyeTracker {
   background-image: url(https://designedbydan.art/assets/images/3240880DWE.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-color: white;
-  background-position: center;
+  background-position: center;    
+  width: 75%;
+    height: 40%;
+    margin: auto;
+    display: flex;
+    top: 2%;
+    bottom: 0;
+    position: relative;
 }
 }
 @media (prefers-color-scheme: dark) {
@@ -377,13 +384,20 @@ body {
 --view_project-but-text: #EEF1F4;  
 --project-title: #e0e0e0;
 }
-#BullseyeTracker.card-a {
-  background-image: url(https://designedbydan.art/assets/images/Wordmark_Light.png);
-  background-color: #000;  
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 80%;
-}
+  #BullseyeTracker {
+    background-image: url(https://designedbydan.art/assets/images/Wordmark_Light.png);
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 75%;
+    height: 40%;
+    margin: auto;
+    display: flex;
+    top: 2%;
+    bottom: 0;
+    position: relative;
+  }
 }
 
 .card.y .card-a + .card-b  {
@@ -499,7 +513,7 @@ TRANSITIONS
   z-index:   3 !important;
 }
      @media screen and (max-height: 700px) {
-     .y #tag-branding, .y #tag-print, .y #tag-media, .y #tag-coding { display: none!important;/*! position:    absolute !important; */}
+     .y #tag-branding, .y #tag-print, .y #tag-media, .y #tag-coding { position: absolute !important; top: 2rem; left: 2rem;}
 }
 
      @media screen and (max-height: 770px) {
@@ -3806,7 +3820,8 @@ h2 ~ p {
 <main onresize="reorder()" class="content-main">
 <div class="main-nav" style="display: flex;flex-direction: row;height: 100%;scroll-snap-type: x mandatory;overflow-x: scroll;scroll-behavior: smooth;scrollbar-width: none;width: inherit;">
     
-    <div style="" id="1" class="card Branding"><div id="BullseyeTracker" class="card-a"></div><div class="card-b"><h4 id="tag-branding" onclick="toggletagbranding();" style="">Branding
+    <div style="" id="1" class="card Branding"><div class="card-a" style="place-content: center;display: flex;">
+  <div id="BullseyeTracker"></div></div><div class="card-b"><h4 id="tag-branding" onclick="toggletagbranding();" style="">Branding
 </h4><h1 style="width: fit-content;margin: 0;" class="project-title rw">Bullseye Tracker</h1><h2 style="margin: 0;
 width: fit-content;" class="">2019</h2><p style="margin: 0;max-width: fit-content !important;max-height: fit-content !important;" id="body-text" class="">BullseyeTracker is a web-based scoring application that simplifies all the challenges involved in Bullseye Pistol Leagues. Following the brand’s philosophy, I created a minimal wordmark and logomark reflecting their values of simplicity and ease of use.</p><a href="/Projects/BullseyeTracker/" style="margin-top: auto;width: fit-content;border-radius: 100px;display: flex;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border:var(--border-color);margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://designedbydan.art/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a></div></div>
     

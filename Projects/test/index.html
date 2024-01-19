@@ -3992,24 +3992,21 @@ document.querySelector(".main-nav").addEventListener("wheel", (event) => {
   
 	
 function toggletagbranding() {
-  for (let i = 0; i < document.querySelectorAll('#tag-branding').length; i++) {
-	document.querySelectorAll('#tag-branding')[i].classList.toggle("active");
+  for (let i = 0; i < document.querySelectorAll('.Branding').length; i++) { document.querySelectorAll('.Branding')[i].classList.toggle("active"); }
+  for (let i = 0; i < document.querySelectorAll('.Coding').length; i++) { document.querySelectorAll('.Coding')[i].classList.toggle("hide"); }
+  for (let i = 0; i < document.querySelectorAll('.Print').length; i++) { document.querySelectorAll('.Print')[i].classList.toggle("hide"); }
 }
-  for (let i = 0; i < document.querySelectorAll('.Coding').length; i++) { document.querySelectorAll('#Coding')[i].classList.toggle("hide"); }
-  for (let i = 0; i < document.querySelectorAll('.Print').length; i++) { document.querySelectorAll('#Print')[i].classList.toggle("hide"); }
-}
+	
 function toggletagcoding() {
-  for (let i = 0; i < document.querySelectorAll('#tag-coding').length; i++) { document.querySelectorAll('#tag-coding')[i].classList.toggle("active"); }	
-  for (let i = 0; i < document.querySelectorAll('.Branding').length; i++) { document.querySelectorAll('#Branding')[i].classList.toggle("hide"); }
-  for (let i = 0; i < document.querySelectorAll('.Print').length; i++) { document.querySelectorAll('#Print')[i].classList.toggle("hide"); }
+  for (let i = 0; i < document.querySelectorAll('.Coding').length; i++) { document.querySelectorAll('.Coding')[i].classList.toggle("active"); }	
+  for (let i = 0; i < document.querySelectorAll('.Branding').length; i++) { document.querySelectorAll('.Branding')[i].classList.toggle("hide"); }
+  for (let i = 0; i < document.querySelectorAll('.Print').length; i++) { document.querySelectorAll('.Print')[i].classList.toggle("hide"); }
 }
 
 function toggletagprint() {
-  for (let i = 0; i < document.querySelectorAll('#tag-print').length; i++) {
-  document.querySelectorAll('#tag-print')[i].classList.toggle("active");
-}	
-  for (let i = 0; i < document.querySelectorAll('.Branding').length; i++) { document.querySelectorAll('#Branding')[i].classList.toggle("hide"); }
-  for (let i = 0; i < document.querySelectorAll('.Coding').length; i++) { document.querySelectorAll('#Coding')[i].classList.toggle("hide"); }	
+  for (let i = 0; i < document.querySelectorAll('.Print').length; i++) { document.querySelectorAll('.Print')[i].classList.toggle("active"); }	
+  for (let i = 0; i < document.querySelectorAll('.Branding').length; i++) { document.querySelectorAll('.Branding')[i].classList.toggle("hide"); }
+  for (let i = 0; i < document.querySelectorAll('.Coding').length; i++) { document.querySelectorAll('.Coding')[i].classList.toggle("hide"); }	
 }
 
 </script>

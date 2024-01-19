@@ -16,6 +16,7 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
 </script>
     <style>
 
+
 #\.\.\.{display:none;}
 @media screen and (min-width: 1500px) {
       #logotype {   
@@ -477,8 +478,15 @@ TRANSITIONS
   background: #667080!important;
 }
      @media screen and (max-height: 700px) {
-     .y #tag-branding, .y #tag-print, .y #tag-media, .y #tag-coding { display: none!important;}
+     .y #tag-branding, .y #tag-print, .y #tag-media, .y #tag-coding { display: none!important;/*! position:    absolute !important; */}
 }
+
+     @media screen and (max-height: 770px) {
+     .y .project-title { -webkit-line-clamp: 1!important;/*! position:    absolute !important; */}
+}
+
+
+
 
 span:hover {
   position: absolute;
@@ -1610,16 +1618,8 @@ h2 ~ p {
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 500px) and (min-height: 751px) and (max-height: 830px) {
-   #\33 .card.y .project-title {
-   -webkit-line-clamp: 2;  
-  }
-       #\33 .card.y #body-text {
-   display: none;
-  }
-}
 
-@media screen and (min-width: 375px) and (max-width: 500px) and (min-height: 830px) and (max-height: 970px) {
+@media screen and (min-width: 375px) and (max-width: 477px) and (min-height: 830px) and (max-height: 985px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
   }
@@ -1628,6 +1628,23 @@ h2 ~ p {
   }
 }
 
+@media screen and (min-width: 477px) and (max-width: 671px) and (min-height: 830px) and (max-height: 890px) {
+   #\33 .card.y .project-title {
+   -webkit-line-clamp:2;  
+  }
+       #\33 .card.y #body-text {
+   -webkit-line-clamp: 1;
+  }
+}
+
+@media screen and (min-width: 477px) and (min-height: 890px) and (max-height: 990px) {
+   #\33 .card.y .project-title {
+   -webkit-line-clamp:2;  
+  }
+       #\33 .card.y #body-text {
+   -webkit-line-clamp: 2;
+  }
+}
 @media screen and (min-width: 375px) and (max-width: 500px) and (min-height: 970px) and (max-height: 1060px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
@@ -1637,7 +1654,7 @@ h2 ~ p {
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 500px) and (min-height: 1060px) and (max-height: 1110px) {
+@media screen and (min-width: 375px) and (max-width: 500px) and (min-height: 1060px) and (max-height: 1140px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
   }
@@ -1646,7 +1663,7 @@ h2 ~ p {
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 500px) and (min-height: 1110px) and (max-height: 1180px) {
+@media screen and (min-width: 375px) and (max-width: 500px) and (min-height: 1140px) and (max-height: 1200px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
   }
@@ -1655,7 +1672,7 @@ h2 ~ p {
   }
 }
 
-@media screen and (min-width: 375px) and (max-width:500px) and (min-height: 1180px) and (max-height: 1250px) {
+@media screen and (min-width: 375px) and (max-width:500px) and (min-height: 1200px) and (max-height: 1260px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
   }
@@ -1664,7 +1681,7 @@ h2 ~ p {
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 500px) and (min-height: 1250px) and (max-height: 1320px) {
+@media screen and (min-width: 375px) and (max-width: 500px) and (min-height: 1260px) and (max-height: 1320px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
   }
@@ -1767,7 +1784,7 @@ h2 ~ p {
   }
 }
 
-@media screen and (max-width: 478px) and (min-height: 870px) and (max-height: 901px) {
+@media screen and (max-width: 478px) and (min-height: 870px) and (max-height: 900px) {
    .card.y .project-title {
    -webkit-line-clamp: 1;  
   }
@@ -1775,7 +1792,7 @@ h2 ~ p {
    -webkit-line-clamp: 3;  
   }
 }
-@media screen and (max-width: 478px) and (min-height: 901px) and (max-height: 960px) {
+@media screen and (max-width: 478px) and (min-height: 900px) and (max-height: 960px) {
    .card.y .project-title {
    -webkit-line-clamp: 1;  
   }  
@@ -1868,6 +1885,11 @@ h2 ~ p {
   }
 }
 
+
+
+
+
+
 @media screen and (max-width: 478px) and (min-height: 930px) and (max-height: 1000px) {
    .card.y .project-title {
    -webkit-line-clamp: 1;  
@@ -1879,6 +1901,130 @@ h2 ~ p {
    -webkit-line-clamp: 3;  
   }
 }
+
+
+
+@media screen and (min-width: 400px) and (min-height: 910px) and (max-height: 960px) {
+    #\35 .card.y .project-title {
+   -webkit-line-clamp: 2;  
+  }
+    #\35 .card.y #body-text {
+   -webkit-line-clamp: 1;  
+  }
+}
+
+@media screen and (min-width: 400px) and (min-height: 960px) and (max-height: 1010px) {
+    #\35 .card.y .project-title {
+   -webkit-line-clamp: 2;  
+  }
+    #\35 .card.y #body-text {
+   -webkit-line-clamp: 2;  
+  }
+}
+
+@media screen and (min-width: 400px) and (min-height: 1010px)  {
+    #\35 .card.y .project-title {
+   -webkit-line-clamp: 3;  
+  }
+}
+
+
+@media screen and (min-width: 400px) and (min-height: 1010px) and (max-height: 1070px) {
+    #\35 .card.y #body-text {
+   -webkit-line-clamp: 1;  
+  }
+}
+
+@media screen and (min-width: 400px) and (min-height: 1070px) and (max-height: 1140px) {
+    #\35 .card.y #body-text {
+   -webkit-line-clamp: 2;  
+  }
+}
+
+@media screen and (min-width: 400px) and (min-height: 1140px) and (max-height: 1200px) {
+    #\35 .card.y #body-text {
+   -webkit-line-clamp: 3;  
+  }
+}
+
+@media screen and (min-width: 400px) and (min-height: 1200px) and (max-height: 1270px) {
+    #\35 .card.y #body-text {
+   -webkit-line-clamp: 4;  
+  }
+}
+
+@media screen and (min-width: 400px) and (min-height: 1270px) and (max-height: 1340px) {
+    #\35 .card.y #body-text {
+   -webkit-line-clamp: 5;  
+  }
+}
+
+@media screen and (min-width: 400px) and (min-height: 1340px) and (max-height: 1410px) {
+    #\35 .card.y #body-text {
+   -webkit-line-clamp: 6;  
+  }
+}
+
+@media screen and (min-width: 400px) and (min-height: 1410px) and (max-height: 1480px) {
+    #\35 .card.y #body-text {
+   -webkit-line-clamp: 7;  
+  }
+}
+
+@media screen and (min-width: 400px) and (min-height: 1480px) and (max-height: 1550px) {
+    #\35 .card.y #body-text {
+   -webkit-line-clamp: 8;  
+  }
+}
+
+@media screen and (min-width: 400px) and (min-height: 1550px) and (max-height: 1620px) {
+    #\35 .card.y #body-text {
+   -webkit-line-clamp: 9;  
+  }
+}
+
+@media screen and (min-width: 400px) and (min-height: 1620px) and (max-height: 1690px) {
+    #\35 .card.y #body-text {
+   -webkit-line-clamp: 10;  
+  }
+}
+
+
+@media screen and (max-width: 422px) and (min-height: 910px) and (max-height: 960px) {
+    #\34 .card.y .project-title {
+   -webkit-line-clamp: 2;  
+  }
+    #\34 .card.y #body-text {
+   -webkit-line-clamp: 1;  
+  }
+}
+
+@media screen and (max-width: 422px) and (min-height: 960px) and (max-height: 1050px) {
+    #\34 .card.y #body-text {
+   -webkit-line-clamp: 2;  
+  }
+}
+
+@media screen and (max-width: 422px) and (min-height: 1050px) and (max-height: 1120px) {
+    #\34 .card.y #body-text {
+   -webkit-line-clamp: 3;  
+  }
+}
+
+@media screen and (max-width: 422px) and (min-height: 1120px) and (max-height: 1190x) {
+    #\34 .card.y #body-text {
+   -webkit-line-clamp: 4;  
+  }
+}
+
+
+
+@media screen and (max-width: 478px) and (min-height: 960px) {
+    #\34 .card.y .project-title {
+   -webkit-line-clamp: 2;  
+  }
+}
+
 @media screen and (max-width: 478px) and (min-height: 1000px) and (max-height: 1070px) {
    .card.y .project-title {
    -webkit-line-clamp: 1;  
@@ -1950,6 +2096,90 @@ h2 ~ p {
    -webkit-line-clamp: 9;  
   }
 }
+
+
+
+
+@media screen and (max-width: 478px) and (min-height: 960px) and (max-height: 1040px) {
+  #\34.card.y #body-text {
+   -webkit-line-clamp: 2;  
+  }
+}
+
+@media screen and (max-width: 478px) and (min-height: 1040px) and (max-height: 1100px) {
+  #\34.card.y #body-text {
+   -webkit-line-clamp:3;  
+  }
+}
+
+@media screen and (max-width: 478px) and (min-height: 1100px) and (max-height: 1160px) {
+  #\34.card.y #body-text {
+   -webkit-line-clamp:4;  
+  }
+}
+
+@media screen and (max-width: 478px) and (min-height: 1160px) and (max-height: 1220px) {
+  #\34.card.y #body-text {
+   -webkit-line-clamp:5;  
+  }
+}
+
+@media screen and (max-width: 478px) and (min-height: 1220px) and (max-height: 1280px) {
+  #\34.card.y #body-text {
+   -webkit-line-clamp:6;  
+  }
+}
+
+@media screen and (max-width: 478px) and (min-height: 1280px) and (max-height: 1340px) {
+  #\34.card.y #body-text {
+   -webkit-line-clamp:7;  
+  }
+}
+
+@media screen and (max-width: 478px) and (min-height: 1340px) and (max-height: 1400px) {
+  #\34.card.y #body-text {
+   -webkit-line-clamp:8;  
+  }
+}
+
+@media screen and (max-width: 478px) and (min-height: 1400px) and (max-height: 1460px) {
+  #\34.card.y #body-text {
+   -webkit-line-clamp:9;  
+  }
+}
+
+@media screen and (max-width: 478px) and (min-height: 1460px) and (max-height: 1520px) {
+  #\34.card.y #body-text {
+   -webkit-line-clamp:10;  
+  }
+}
+
+@media screen and (max-width: 478px) and (min-height: 1520px) and (max-height: 1580px) {
+  #\34.card.y #body-text {
+   -webkit-line-clamp:11;  
+  }
+}
+
+@media screen and (max-width: 478px) and (min-height: 1580px)  and (max-height: 1640px) {
+  #\34.card.y #body-text {
+   -webkit-line-clamp:12;  
+  }
+}
+
+@media screen and (max-width: 478px) and (min-height: 1640px)  and (max-height: 1700px) {
+  #\34.card.y #body-text {
+   -webkit-line-clamp:13;  
+  }
+}
+
+@media screen and (max-width: 478px) and (min-height: 1700px) {
+  #\34 .card.y #body-text {
+   -webkit-line-clamp:14;  
+  }
+}
+
+
+
 
 @media screen and (max-width: 478px) and (min-height: 1370px) {
    .card.y .project-title {
@@ -2939,67 +3169,78 @@ h2 ~ p {
 
 */ 
 
- @media screen and (min-width: 500px) and (max-width: 541px) and (max-height: 790px) {
-   .card.y #body-text {
+ @media screen and (min-width: 500px) and (max-width: 1100px) and (max-height: 770px) {
+   .card.y #body-text, #\33.card.y #body-text  {
     display: none;
    }
 }
    
-@media screen and (min-width: 500px) and (max-width: 541px) and (min-height: 790px) and (max-height: 850px) {
+@media screen and (min-width: 500px) and (max-width: 1100px) and (min-height: 770px) and (max-height: 830px) {
   .card.y #body-text {
   -webkit-line-clamp: 1;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 541px) and (min-height: 850px) and (max-height: 930px) {
+@media screen and (min-width: 500px) and (max-width: 1100px) and (min-height: 830px) and (max-height: 880px) {
   .card.y #body-text {
   -webkit-line-clamp: 2;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 541px) and (min-height: 930px) and (max-height: 990px) {
+@media screen and (min-width: 500px) and (max-width: 1100px) and (min-height: 880px) and (max-height: 900px) {
   .card.y #body-text {
   -webkit-line-clamp: 3;
   }
+}
+@media screen and (min-width: 500px) and (max-width: 1100px) and (min-height: 900px) and (max-height: 930px) {
+  .card.y #body-text {
+  -webkit-line-clamp: 2;
+  }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 541px) and (min-height: 990px) and (max-height: 1050px) {
+@media screen and (min-width: 500px) and (max-width: 1100px) and (min-height: 930px) and (max-height: 1010px) {
+  .card.y #body-text {
+  -webkit-line-clamp: 3;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1100px) and (min-height: 1010px) and (max-height: 1080px) {
   .card.y #body-text {
   -webkit-line-clamp: 4;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 541px) and (min-height: 1050px) and (max-height: 1110px) {
+@media screen and (min-width: 500px) and (max-width: 1100px) and (min-height: 1080px) and (max-height: 1150px) {
   .card.y #body-text {
   -webkit-line-clamp: 5;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 541px) and (min-height: 1110px) and (max-height: 1170px) {
+@media screen and (min-width: 500px) and (max-width: 1100px) and (min-height: 1150px) and (max-height: 1210px) {
   .card.y #body-text {
   -webkit-line-clamp: 6;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 541px) and (min-height: 1170px) and (max-height: 1230px) {
+@media screen and (min-width: 500px) and (max-width: 1100px) and (min-height: 1210px) and (max-height: 1270px) {
   .card.y #body-text {
   -webkit-line-clamp: 7;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 541px) and (min-height: 1230px) and (max-height: 1290px) {
+@media screen and (min-width: 500px) and (max-width: 1100px) and (min-height: 1270px) and (max-height: 1330px) {
   .card.y #body-text {
   -webkit-line-clamp: 8;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 541px) and (min-height: 1290px) and (max-height: 1350px) {
+@media screen and (min-width: 500px) and (max-width: 1100px) and (min-height: 1330px) and (max-height: 1390px) {
   .card.y #body-text {
   -webkit-line-clamp: 9;
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 541px) and (min-height: 1350px) and (max-height: 1410px) {
+@media screen and (min-width: 500px) and (max-width: 1100px) and (min-height: 1390px) and (max-height: 1450px) {
   .card.y #body-text {
   -webkit-line-clamp: 10;
   }
@@ -3014,7 +3255,7 @@ h2 ~ p {
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 539px) and (min-height: 811px) and (max-height: 880px) {
+@media screen and (min-width: 500px) and (max-width: 539px) and (min-height: 811px) and (max-height: 840px) {
   #\33 .card.y #body-text {
     display: none !important;
   }
@@ -3035,6 +3276,8 @@ h2 ~ p {
 @media screen and (min-width: 500px) and (max-width: 539px) and (min-height: 900px) and (max-height: 1000px) {
   #\33.card.y #body-text {
     display: none !important;
+  }    #\33 .card.y .project-title {
+  -webkit-line-clamp: 3;
   }
 } 
 
@@ -3071,13 +3314,10 @@ h2 ~ p {
 
 
 @media screen and (min-width: 539px) and (max-width: 771px) and (max-height: 700px) {
-      #\33.card .project-title { -webkit-line-clamp: 1;}
+      #\33.card .project-title,  #\35.card .project-title { -webkit-line-clamp: 1;}
 }
 
 
-@media screen and (min-width: 539px) and (max-width: 771px) and (max-height: 800px) {
-      #\33.card.y #tag-branding, #\33.card.y #tag-print, #\33.card.y #tag-media, #\33.card.y #tag-coding { display: none!important;}
-}
 
 
 @media screen and (min-width: 478px) and (max-width: 490px) and (min-height: 900px) and (max-height: 1000px) {
@@ -3117,11 +3357,6 @@ h2 ~ p {
 } 
 
 
-@media screen and (min-width: 478px) and (max-width: 702px) and (max-height: 840px) {
-  #\35 .card.y #body-text {
-    display: none;
-  }
-} 
 
 @media screen and (min-width: 478px) and (max-width: 702px) and (min-height: 840px) and (max-height: 890px) {
   #\35 .card.y #body-text {
@@ -3196,113 +3431,72 @@ h2 ~ p {
   }
 } 
 
-@media screen and (min-width: 539px) and (max-width: 670px) and (max-height: 860px) {
-  #\33.card.y #body-text {
+@media screen and (min-width: 539px) and (max-width: 670px) and (max-height: 850px) {
+  #\33.card.y #body-text,  #\35.card.y #body-text {
     display: none;
   }
 } 
 
-@media screen and (min-width: 539px) and (max-width: 771px) and (min-height: 860px) and (max-height: 930px) {
+@media screen and (min-width: 539px) and (max-width: 671px) and (min-height: 860px) and (max-height: 950px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 1;
   }
 } 
 
-@media screen and (min-width: 539px) and (max-width: 771px) and (min-height: 930px) and (max-height: 990px) {
+@media screen and (min-width: 539px) and (max-width: 771px) and (min-height: 950px) and (max-height: 1040px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 2;
   }
 } 
 
-@media screen and (min-width: 539px) and (max-width: 771px) and (min-height: 990px) and (max-height: 1150px) {
+@media screen and (min-width: 539px) and (max-width: 771px) and (min-height: 1040px) and (max-height: 1110px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 3;
   }
 } 
 
-@media screen and (min-width: 539px) and (max-width: 771px) and (min-height: 1050px) and (max-height: 1210px) {
+@media screen and (min-width: 539px) and (max-width: 771px) and (min-height: 1110px) and (max-height: 1170px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 4;
   }
 } 
 
-@media screen and (min-width: 539px) and (max-width: 771px) and (min-height: 1110px) and (max-height: 1270px) {
+@media screen and (min-width: 539px) and (max-width: 771px) and (min-height: 1170px) and (max-height: 1230px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 5;
   }
 } 
 
-@media screen and (min-width: 539px) and (max-width: 771px) and (min-height: 1170px) and (max-height: 1330px) {
+@media screen and (min-width: 539px) and (max-width: 771px) and (min-height: 1230px) and (max-height: 1290px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 6;
   }
 } 
 
-@media screen and (min-width: 539px) and (max-width: 771px) and (min-height: 1230px) and (max-height: 1390px) {
+@media screen and (min-width: 539px) and (max-width: 771px) and (min-height: 1290px) and (max-height: 1350px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 7;
   }
 } 
 
-@media screen and (min-width: 539px) and (max-width: 771px) and (min-height: 1290px) and (max-height: 1450px) {
+@media screen and (min-width: 539px) and (max-width: 771px) and (min-height: 1350px) and (max-height: 1410px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 8;
   }
 } 
 
-@media screen and (min-width: 539px) and (max-width: 771px) and (min-height: 1350px) and (max-height: 1510px) {
+@media screen and (min-width: 539px) and (max-width: 771px) and (min-height: 1410px) and (max-height: 1470px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 9;
   }
 } 
 
-@media screen and (min-width: 539px) and (max-width: 771px) and (min-height: 1410px) and (max-height: 1570px) {
+@media screen and (min-width: 539px) and (max-width: 771px) and (min-height: 1470px) and (max-height: 1453px) {
   #\33.card.y #body-text {
   -webkit-line-clamp: 10;
   }
 } 
 
-
-@media screen and (min-width: 540px) and (max-width: 1100px) and (max-height: 780px) {
-  .card.y #body-text {
-    display: none;
-  }
-} 
-
-@media screen and (min-width: 540px) and (max-width: 1100px) and (min-height: 780px) and (max-height: 860px) {
-  .card.y #body-text {
-
-  -webkit-line-clamp: 1;
-  }
-} 
-
-@media screen and (min-width: 540px) and (max-width: 1100px) and (min-height: 860px) and (max-height: 940px) {
-  .card.y #body-text {
-
-  -webkit-line-clamp: 2;
-  }
-} 
-
-@media screen and (min-width: 540px) and (max-width: 1100px) and (min-height: 940px) and (max-height: 1000px) {
-  .card.y #body-text {
-
-  -webkit-line-clamp: 3;
-  }
-} 
-
-@media screen and (min-width: 541px) and (max-width: 1100px) and (min-height: 1000px) and (max-height: 1060px) {
-  .card.y #body-text {
-
-  -webkit-line-clamp: 4;
-  }
-} 
-
-@media screen and (min-width: 541px) and (max-width: 1100px) and (min-height: 1060px) and (max-height: 1120px) {
-  .card.y #body-text {
-
-  -webkit-line-clamp: 5;
-  }
-} 
 
 @media screen and (min-width: 501px) and (max-width: 1100px)  {
 
@@ -3535,6 +3729,7 @@ h2 ~ p {
      max-width: 15rem;
    }
 }
+
 </style>
 
 </head>

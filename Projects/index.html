@@ -3937,9 +3937,13 @@ function getInfo() {
                     if ( $('.y') ) { for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.remove("y"); } }
                     for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.add("x"); }   
             }
-            if ( $(window).width() >= 1500 ) { 
+            if ( ($(window).width() >= 1500) && ($(window).height() >= 590) ) { 
                     if ( $('.x') ) { for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.remove("x"); } }
                     for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.add("y"); }   
+            }
+	   if ( ($(window).width() >= 1500) && ($(window).height() < 590) ) { 
+                    if ( $('.x') ) { for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.remove("y"); } }
+                    for (let i = 0; i < document.querySelectorAll(".card").length; i++) { document.querySelectorAll(".card")[i].classList.add("x"); }   
             }
 
      if ( $(window).width() < 501 ) {

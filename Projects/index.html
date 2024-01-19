@@ -15,8 +15,6 @@ if ($(window).width() < 420 && $(window).height() > 420) { $("meta[name=viewport
 if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); }
 </script>
     <style>
-
-
 @media screen and (min-width: 1500px) and (max-height: 580px) { 
 	.card.x .card-a, .card.x{ min-width: calc(50% - 1rem); width: auto; }
 	div.card.x .card-a { min-width: calc(55% - 1rem); }
@@ -1676,7 +1674,17 @@ h2 ~ p {
   }
 }
 
-@media screen and (min-width: 477px) and (max-width: 671px) and (min-height: 830px) and (max-height: 890px) {
+
+@media screen and (min-width: 477px) and (max-width: 671px) and (min-height: 760px) and (max-height: 840px) {
+   #\33 .card.y .project-title {
+   -webkit-line-clamp:2;  
+  }
+       #\33 .card.y #body-text {
+   display: none;
+  }
+}
+
+@media screen and (min-width: 477px) and (max-width: 671px) and (min-height: 830px) and (max-height: 880px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp:2;  
   }
@@ -1685,7 +1693,16 @@ h2 ~ p {
   }
 }
 
-@media screen and (min-width: 477px) and (min-height: 900px) and (max-height: 940px) {
+@media screen and (min-width: 477px) and (min-height: 880px) and (max-height: 890px) {
+   #\33 .card.y .project-title {
+   -webkit-line-clamp:2;  
+  }
+       #\33 .card.y #body-text {
+   -webkit-line-clamp: 1;
+  }
+}
+
+@media screen and (min-width: 477px) and (min-height: 890px) and (max-height: 900px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp:2;  
   }
@@ -1694,16 +1711,29 @@ h2 ~ p {
   }
 }
 
-@media screen and (min-width: 477px) and (min-height: 940px) and (max-height: 990px) {
+
+
+
+
+@media screen and (min-width: 477px) and (min-height: 900px) and (max-height: 950px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp:2;  
   }
        #\33 .card.y #body-text {
-   -webkit-line-clamp: 3;
+   -webkit-line-clamp: 1;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 500px) and (min-height: 950px) and (max-height: 1000px) {
+   #\33 .card.y .project-title {
+   -webkit-line-clamp: 3;  
+  }
+       #\33 .card.y #body-text {
+   display: none;
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 500px) and (min-height: 970px) and (max-height: 1060px) {
+
+@media screen and (min-width: 375px) and (max-width: 500px) and (min-height: 950px) and (max-height: 1060px) {
    #\33 .card.y .project-title {
    -webkit-line-clamp: 3;  
   }
@@ -1850,25 +1880,6 @@ h2 ~ p {
    -webkit-line-clamp: 3;  
   }
 }
-
-@media screen and (max-width: 478px) and (min-height: 890px) and (max-height: 900px) {
-   #\35 .card.y .project-title {
-   -webkit-line-clamp: 2;  
-  }
-   #\35 .card.y #body-text {
-   -webkit-line-clamp: 2;  
-  }
-}
-
-@media screen and (max-width: 478px) and (min-height: 840px) and (max-height: 890px) {
-   #\35 .card.y .project-title {
-   -webkit-line-clamp: 2;  
-  }
-   #\35 .card.y #body-text {
-   -webkit-line-clamp: 1;  
-  }
-}
-
 @media screen and (max-width: 478px) and (min-height: 900px) and (max-height: 960px) {
    .card.y .project-title {
    -webkit-line-clamp: 1;  
@@ -2013,7 +2024,7 @@ h2 ~ p {
   }
 }
 
-@media screen and (min-width: 490px) and (max-width: 702px) and (min-height: 800px) and (max-height: 840px) {
+@media screen and (min-width: 490px) and (max-width: 702px) and (min-height: 770px) and (max-height: 840px) {
   #\35.card.y #body-text {
   display: none;
   }
@@ -3274,19 +3285,6 @@ h2 ~ p {
     display: none;
    }
 }
-
- @media screen and (min-width: 500px) and (max-width: 771px) and (max-height: 840px) {
-    #\33.card.y #body-text  {
-    display: none;
-   }
-}
-
-
- @media screen and (min-width: 500px) and (max-width: 702px)  and (max-height: 840px) {
-   #\35.card.y #body-text  {
-    display: none;
-   }
-}
    
 @media screen and (min-width: 500px) and (max-width: 1100px) and (min-height: 770px) and (max-height: 830px) {
   .card.y #body-text {
@@ -3384,13 +3382,7 @@ h2 ~ p {
   }
 } 
 
-@media screen and (min-width: 500px) and (max-width: 539px) and (min-height: 900px) and (max-height: 1000px) {
-  #\33.card.y #body-text {
-    display: none !important;
-  }    #\33 .card.y .project-title {
-  -webkit-line-clamp: 3;
-  }
-} 
+
 
 @media screen and (min-width: 500px) and (max-width: 539px) and (min-height: 1000px) and (max-height: 1060px) {
   #\33.card.y #body-text {
@@ -3508,7 +3500,7 @@ h2 ~ p {
 } 
 
 
-@media screen and (min-width: 490px) and (max-width: 702px) and (min-height: 900px) and (max-height: 910px) {
+@media screen and (min-width: 490px) and (max-width: 702px) and (min-height: 900px) and (max-height: 900px) {
   #\35 .card.y #body-text {
   display: none;
   }
@@ -3864,8 +3856,6 @@ h2 ~ p {
      max-width: 15rem;
    }
 }
-
-
 </style>
 
 </head>

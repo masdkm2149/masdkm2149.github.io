@@ -1365,11 +1365,20 @@ h2 ~ p {
   }
 }
 
-@media screen and (max-width: 365px) and (min-height: 900px) {
+@media screen and (min-width: 240px) and (max-width: 365px) and (min-height: 900px) {
   .scrolldown{ float: none; left: 12px;right: 0 !important;margin: auto;}
-  #view_project::after {display: none!important;
+  #view_project::after {display: none!important;}
+}
+
+@media screen and (max-width: 240px) and (min-height: 900px) {
+  .scrolldown{ display: none;} #view_project::after {display: none!important;}
+}
+
+@media screen and (max-width: 200px) and (min-height: 900px) {
+  .card-b  {display: none!important;
   }
 }
+
 @media screen and (max-width: 250px) {
    .main-nav .card.y .project-title , .main-nav #\31.card.y .project-title, .main-nav #\33.card.y .project-title {
    -webkit-line-clamp: 1 !important; 
@@ -3733,6 +3742,8 @@ h2 ~ p {
      max-width: 15rem;
    }
 }
+
+
 </style>
 
 </head>

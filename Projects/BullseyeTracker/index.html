@@ -889,6 +889,22 @@ document.getElementsByClassName('content-main')[0].scrollTop +=8;
 }
 
 window.addEventListener('resize', function(event) {
+    if ( window.innerHeight > document.querySelectorAll('#body-text')[0].clientHeight * 2.25) {
+        if ((window.innerWidth > 300) && (window.innerWidth < 1000)) {
+         document.querySelectorAll('#body-text')[0].style.setProperty('-webkit-line-clamp', 8)
+    }}
+    if ( window.innerHeight > document.querySelectorAll('#body-text')[0].clientHeight * 2.15) {
+        if ((window.innerWidth > 300) && (window.innerWidth < 1000)) {
+         document.querySelectorAll('#body-text')[0].style.setProperty('-webkit-line-clamp', 7)
+    }}
+    if ( window.innerHeight > document.querySelectorAll('#body-text')[0].clientHeight * 2.05) {
+        if ((window.innerWidth > 300) && (window.innerWidth < 1000)) {
+         document.querySelectorAll('#body-text')[0].style.setProperty('-webkit-line-clamp', 6)
+    }}
+    if ( window.innerHeight > document.querySelectorAll('#body-text')[0].clientHeight * 1.95) {
+        if ((window.innerWidth > 300) && (window.innerWidth < 1000)) {
+         document.querySelectorAll('#body-text')[0].style.setProperty('-webkit-line-clamp', 5)
+    }}
     reorder();
 }, true);
 

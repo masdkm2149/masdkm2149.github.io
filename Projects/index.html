@@ -15,6 +15,7 @@ if ($(window).width() < 420 && $(window).height() > 420) { $("meta[name=viewport
 if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); }
 </script>
     <style>
+
 	    @media screen and (max-width: 1500px) {
      body:has(.card.x) #logotype {   
 position: relative;
@@ -24,13 +25,31 @@ position: relative;
        body:has(.card.x) #logoblockone {
   width: 3vw!important;
   height: 2rem!important;
-  top: .5rem!important;
+  top: .4rem !important;
 }
        body:has(.card.x) #logoblockthree {
   width: 3vw!important;
   height: 2rem!important;
   left: 4vw!important;
-  top: .5rem!important;
+  top: .4rem !important;
+}
+}	    @media screen and (min-width: 1500px) {
+     body:has(.card.x) #logotype {   
+position: relative;
+  left: calc(11vw + 3.5rem);
+  height: 0;
+  }
+  	  body:has(.card.x) #logoblocktwo, body:has(.card.x) #logoblockfour {display:none;}	   
+       body:has(.card.x) #logoblockone {
+  width: 4vw!important;
+  height: 2rem!important;
+  top: .4rem !important;
+}
+       body:has(.card.x) #logoblockthree {
+  width: 4vw!important;
+  height: 2rem!important;
+  left: 5vw!important;
+  top: .4rem!important;
 }
 }
 @media screen and (min-width: 1500px) and (max-height: 580px) { 

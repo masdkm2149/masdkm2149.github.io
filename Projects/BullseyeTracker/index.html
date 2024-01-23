@@ -883,6 +883,7 @@ position: relative;
 </div></div></div><script>
 
 
+
    window.addEventListener("scroll", function(event) {
     var y = document.getElementsByClassName('content-main')[0].scrollTop
 
@@ -892,7 +893,7 @@ console.log(window.innerHeight * 7)
 /*console.log($(document).height() * 7);
 
 */
-if (y > window.innerHeight * 3.75) {
+if (y > document.getElementsByClassName('content-main')[0].clientHeight * 8) {
             document.querySelector('.scrolldown').style.display='none'; 
         }
         else {

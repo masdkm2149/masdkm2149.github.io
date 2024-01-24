@@ -79,7 +79,11 @@ span a#url {
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-      }
+      }  
+    #button1:active, #button2:active {
+    background-color: #eef1f4;
+    border: solid 2px #667080!important;
+}
   body {
   --text-color: #222;
   --content-border: 3px solid rgb(102, 112, 128);
@@ -107,9 +111,16 @@ span a#url {
     position: relative;
 }
 }
+      #button1, #button2, #button3 {
+text-decoration: none;
+}
 @media (prefers-color-scheme: dark) {
    .scrolldown {
     filter: invert(0.8);
+  }
+  #button1:active, #button2:active {
+    background-color: var(--tag-bg);
+    border: solid 2px #667080 !important;
   }
   body {
 --content-border: 3px solid rgb(18, 18, 22);
@@ -696,10 +707,6 @@ width: 100%;
     transition: .25s ease;
   float: right;
   margin-right: 30px;
-}
-#button1:active, #button2:active {
-    background-color: #eef1f4;
-    border: solid 2px #667080!important;
 }
 #button1:hover, #button2:hover, #view_project:hover {
    background: var(--view_project-hov);

@@ -5,7 +5,7 @@ var multiplicator = 1.5;
 
 
 function setup() {
-createCanvas(w,  document.querySelector('.p5Canvas').offsetHeight); 
+createCanvas(w, document.querySelector('.p5Canvas').offsetHeight); 
 }
 
 function draw() {

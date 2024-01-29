@@ -6,6 +6,6 @@ html, body {
 canvas {
   display: block;
 }
-.p5canvas {
+.p5Canvas {
   height: auto!important;
 }

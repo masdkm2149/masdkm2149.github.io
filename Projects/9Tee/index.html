@@ -920,7 +920,24 @@ right: 0;
  </head>
 
 <body>
-
+<script>
+function changevidsrc() {    
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_3.mp4');
+    video.setAttribute('type', 'video/mp4');
+} else {
+    video.setAttribute('src', 'https://designedbydan.art/assets/images/9tee21lmw_5.mp4');
+    video.setAttribute('type', 'video/mp4');
+} 
+    video.play();
+}
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+        changevidsrc();
+    });    
+    $( document ).ready(function() {
+        changevidsrc();
+    });
+    </script>
 <div class="desktop-nav">
  <div style="background: var(--bkg-color);height: 105px;top: 0;width: 100%;position: absolute;"></div>
          <img class="scrolldown floating" style="opacity: 0.45; width: 50px; position: fixed; margin-left: auto; margin-right: auto; right: 0px; bottom: 30px; left: 0px; z-index: 2; display: block;" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(300, -250, 1, 800))">

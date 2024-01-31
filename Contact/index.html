@@ -352,13 +352,36 @@ h2 {
   padding: 18px 55px !important;
 }
 }
-     
+
 @media screen and (max-width: 380px) {
 .project-title, h2, h, #body-text { text-align: center;
 }
   #body-text { margin:  auto; position: relative; width: min-content!important;;  }
   .bta > a:nth-child(1) {width: max-content;}
   .interface > a:nth-child(1) {margin: auto;}
+}
+@media screen and (max-width: 310px) {
+  .interface > a:nth-child(1){ max-width: 100% !important;width: 100% !important;border-radius: 5rem;flex-direction: unset !important;}
+  .interface > a:nth-child(1)::after {
+    background-image: url(https://designedbydan.art/assets/images/noun-email-6495766.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 45px;
+    content: "";
+    filter: invert(1);
+    width: 36px;
+    position: absolute;
+    margin: 15px auto auto auto;
+    left: 0;
+    right: 0;
+  }
+#view_project {
+  width: 100% !important;
+  padding: 0 !important;
+  height: 4rem;
+}
+  #view_project::after {display: none;}
+  .scrolldown {display: none;}
 }
 
 @media screen and (max-width: 1200px) and (min-height: 250px) {
@@ -454,11 +477,8 @@ a {
 //#body-text{
   display: none!important;
 }
-  a#button1, div#button2{
-  margin-right: 99px !important;
-  right: -70px;
-  top: -8px;
-  transform: scale(.90);
+   #button2{
+display: none!important;
   }
 #body-text {
   margin-top: 0px!important

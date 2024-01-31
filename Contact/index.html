@@ -352,16 +352,91 @@ h2 {
   padding: 18px 55px !important;
 }
 }
-
+     
 @media screen and (max-width: 380px) {
 .project-title, h2, h, #body-text { text-align: center;
 }
-  #body-text { margin:  auto; position: relative; width: min-content;  }
+  #body-text { margin:  auto; position: relative; width: min-content!important;;  }
   .bta > a:nth-child(1) {width: max-content;}
   .interface > a:nth-child(1) {margin: auto;}
 }
-/* breakpoint */
 
+@media screen and (max-width: 1200px) and (min-height: 250px) {
+#body-header{
+margin-top:  var(--vh) !important;
+    position: relative !important;
+    width: 100% !important;
+    scroll-snap-align: center;
+    flex: none;
+    left: 0PX !important;
+    justify-content: space-around;
+padding-bottom: 60px !important;
+}.page-2{margin-top: var(--vh) !important;}
+  #logoblockfour, #logoblocktwo {
+    display: none;
+  }
+  #logoblockone, #logoblockthree {
+    border-left: solid #474747 1vw!important;
+    margin-left: 0px;
+  }
+  #body-text {
+  width: 100%;
+  max-width: 75vw !important;
+}
+.main-image {
+    margin-left: auto!important;
+    position: absolute!important;
+    left: 0;
+    width: 100%!important;
+    margin-right: auto!important;
+    right: 0;
+}
+  .body-2{
+  margin-top: calc(var(--vh) * 1) !important;
+  }
+    .body-3{
+  margin-top: calc(var(--vh) * -.25) !important;
+  }
+  
+}
+  #logoblockfour, #logoblocktwo {
+    display: none;
+  }
+@media screen and (max-width: 600px) {
+  #button1, #button2, #button3 {
+    box-sizing: inherit;
+    max-height: calc(100% - 2rem) !important;
+    height: 100% !important;
+    padding: 0.85rem 2.55rem !important;
+    margin-top: 0;
+  }
+}
+  #button1, #button2, #button3 {
+    margin-right: 2rem !important;
+}
+@media screen and (min-width: 600px) {
+  #button1, #button2, #button3 {
+    box-sizing: inherit;
+    max-height: calc(100% - 2rem) !important;
+    height: 100% !important;
+    padding: 1rem 3rem !important;
+    margin-top: -0.15rem;
+  }
+}
+  #logotype {
+    position: relative;
+    left: calc(6vw + 3.5rem);
+    height: 0;
+}
+  @media screen and (max-width: 620px) {
+  #logotype {
+    display: none !important;
+  }
+}
+/* breakpoint */
+a {
+  text-decoration: none;
+}
 @media screen and (max-width: 700px) {
 #button1,#button2,#button3 {
   
@@ -596,7 +671,7 @@ h2 {
   word-wrap: ;
 }
 
-#button2 { border: solid 2px #6A7586 !important }
+#button2 { border: solid 2px #6A7586 !important; }
      
 #button1::after {
   content: "Projects";

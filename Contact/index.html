@@ -14,12 +14,8 @@
   transition: background ease-in-out .15s !important;
 }
      .project-title{overflow: visible !important;}
-       @media screen and (min-width: 599px) and (max-width: 1500px) {
-#button1, #button2 {
-  padding: 15px 45px !important;
-  margin-top: -2px;
-}
-body, html { transition: none; }
+
+     
 @media screen and (min-width: 702px) {
 *, ::before, ::after {
   transition: all .3s ease-out;
@@ -27,7 +23,7 @@ body, html { transition: none; }
 }
 @media (prefers-color-scheme: dark) {
 /* defaults to dark theme */
-body.dark-theme {
+body {
 --content-border: 3px solid rgb(12, 13, 16);
 --tag-bg: #2e313a;
 --body-color: #adb4c0;  
@@ -40,36 +36,14 @@ body.dark-theme {
 --view_project-but-text: #EEF1F4;  
 --project-title: #e0e0e0;
 }
-body.light-theme {
-  --text-color: #222;
-  --content-border: 3px solid rgb(102, 112, 128);
-  --bkg-color: #fff;
-  --view_project-but-text: #6a7586;   
-  --border-color: solid 2px #EEF1F4;
-  --tag-bg: #c8c8c8;
-  --h2-color: #667080;
-  --view_project-hov: #EEF1F4;
-  --view_project-but: #6a7586;
-  --body-color: #667080;
-  --project-title: #4b515b;
-  }
+     body.dark-theme .scrolldown {
+  filter: invert(1);
+}
 }
 @media (prefers-color-scheme: light) {
 /* defaults to dark theme */
-body.dark-theme {
---content-border: 3px solid rgb(12, 13, 16);
---tag-bg: #2e313a;
---body-color: #adb4c0;  
---border-color: solid 2px #363840;
---text-color: #eee;
---h2-color: #585f6a;
---bkg-color: #000;
---view_project-hov: #0b0d10;
---view_project-but: #363840;
---view_project-but-text: #EEF1F4;  
---project-title: #e0e0e0;
-}
-body.light-theme {
+
+body {
   --text-color: #222;
   --content-border: 3px solid rgb(102, 112, 128);
   --bkg-color: #fff;
@@ -83,6 +57,7 @@ body.light-theme {
   --project-title: #4b515b;
   }
 }
+
 
 
 

@@ -11,6 +11,7 @@
 <script type="text/javascript" src="https://css-tricks.com/examples/HorzScrolling/jquery.mousewheel.js"></script>
  <style>
      
+     
      #button2 {
 border-radius: 3rem !important;
 }
@@ -341,7 +342,7 @@ h2 {
 @media screen and (max-width: 380px) {
 .project-title, h2, h, #body-text { text-align: center;
 }
-  #body-text { margin:  auto; position: relative; width: min-content!important;;  }
+  #body-text { margin:  auto; position: relative; width:  max-content !important;;  max-width:  fit-content !important;white-space: break-spaces;overflow: clip;word-break: break-word;}
   .bta > a:nth-child(1) {width: max-content;}
   .interface > a:nth-child(1) {margin: auto;}
 }
@@ -387,10 +388,7 @@ padding-bottom: 60px !important;
     border-left: solid #474747 1vw!important;
     margin-left: 0px;
   }
-  #body-text {
-  width: 100%;
-  max-width: 75vw !important;
-}
+ 
 .main-image {
     margin-left: auto!important;
     position: absolute!important;
@@ -518,7 +516,7 @@ h2{
   .interface{
     width: fit-content !important;
     margin: auto 0 !important;
-    padding-top: 18px;
+    padding-top: 60px;
   }
 h2{
   font-size: 16px!important;
@@ -808,6 +806,7 @@ white-space: break-spaces;
     max-width: 95%;
     margin-top: 18px;
 }
+
 </style></head>
  
   <body onresize="getWindowSpec()">

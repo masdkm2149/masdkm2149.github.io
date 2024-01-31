@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"> 
 <script type="text/javascript" src="https://css-tricks.com/examples/HorzScrolling/jquery.mousewheel.js"></script>
  <style>
+
      .project-title{overflow: visible !important;}
        @media screen and (min-width: 599px) and (max-width: 1500px)
 #button1, #button2 {
@@ -23,7 +24,7 @@ body, html { transition: none; }
 }
 @media (prefers-color-scheme: dark) {
 /* defaults to dark theme */
-body {
+body.dark-theme {
 --content-border: 3px solid rgb(12, 13, 16);
 --tag-bg: #2e313a;
 --body-color: #adb4c0;  
@@ -36,14 +37,36 @@ body {
 --view_project-but-text: #EEF1F4;  
 --project-title: #e0e0e0;
 }
-     body.dark-theme .scrolldown {
-  filter: invert(1);
-}
+body.light-theme {
+  --text-color: #222;
+  --content-border: 3px solid rgb(102, 112, 128);
+  --bkg-color: #fff;
+  --view_project-but-text: #6a7586;   
+  --border-color: solid 2px #EEF1F4;
+  --tag-bg: #c8c8c8;
+  --h2-color: #667080;
+  --view_project-hov: #EEF1F4;
+  --view_project-but: #6a7586;
+  --body-color: #667080;
+  --project-title: #4b515b;
+  }
 }
 @media (prefers-color-scheme: light) {
 /* defaults to dark theme */
-
-body {
+body.dark-theme {
+--content-border: 3px solid rgb(12, 13, 16);
+--tag-bg: #2e313a;
+--body-color: #adb4c0;  
+--border-color: solid 2px #363840;
+--text-color: #eee;
+--h2-color: #585f6a;
+--bkg-color: #000;
+--view_project-hov: #0b0d10;
+--view_project-but: #363840;
+--view_project-but-text: #EEF1F4;  
+--project-title: #e0e0e0;
+}
+body.light-theme {
   --text-color: #222;
   --content-border: 3px solid rgb(102, 112, 128);
   --bkg-color: #fff;
@@ -330,8 +353,13 @@ h2 {
 }
 }
 
-
-
+@media screen and (max-width: 380px) {
+.project-title, h2, h, #body-text { text-align: center;
+}
+  #body-text { margin:  auto; position: relative; width: min-content;  }
+  .bta > a:nth-child(1) {width: max-content;}
+  .interface > a:nth-child(1) {margin: auto;}
+}
 /* breakpoint */
 
 @media screen and (max-width: 700px) {
@@ -663,6 +691,7 @@ word-break: keep-all;
 text-overflow: ellipsis;
 overflow: clip;
 word-wrap: break-word;
+white-space: break-spaces;
 }
 .project-title {
   font-family: 'Inter', sans-serif;
@@ -682,7 +711,9 @@ word-wrap: break-word;
     background-color: #292a2d !important;
     border: solid 2px #667080!important;
 }
-
+ body.dark-theme .scrolldown {
+  filter: invert(1);
+}
 @keyframes floating {
     from { transform: translate(0,  0px); }
     65%  { transform: translate(0, 10px); }
@@ -712,9 +743,6 @@ word-wrap: break-word;
 #button1:hover {
   background: #292a2d;
   }
-
-
-
 </style></head>
  
   <body onresize="getWindowSpec()">

@@ -23,30 +23,6 @@ $( document ).ready(function() {
     </script>
   <style>
 
-@media (prefers-color-scheme: light) {
-body {
-  --text-color: #222;
-  --content-border: 3px solid rgb(102, 112, 128);
-  --bkg-color: #fff;
-  --view_project-but-text: #6a7586;   
-  --border-color: solid 2px #EEF1F4;
-  --tag-bg: #c8c8c8;
-  --h2-color: #667080;
-  --view_project-hov: #EEF1F4;
-  --view_project-but: #6a7586;
-  --body-color: #667080;
-  --project-title: #4b515b;
-  }
-  body.light-theme .main-image.BTprojpicture::after {
-  background: white;
-}
-  #button1:active, #button2:active {
-    background-color: #eef1f4;
-    border: solid 2px #667080!important;
-}
-#button1:hover, #button2:hover, #view_project:hover {
-  background: #EEF1F4;
-}
   @media screen and (min-width: 1000px) {
 div.content-main div.page-3 div#body-copy div h.project-title {
   font-size: 3rem !important;
@@ -92,7 +68,31 @@ body div.content-main div.page-3 div#body-copy div h.project-title br {
     margin: 1.25rem 0 0 0 !important;
   }
 }
-  
+
+@media (prefers-color-scheme: light) {
+body {
+  --text-color: #222;
+  --content-border: 3px solid rgb(102, 112, 128);
+  --bkg-color: #fff;
+  --view_project-but-text: #6a7586;   
+  --border-color: solid 2px #EEF1F4;
+  --tag-bg: #c8c8c8;
+  --h2-color: #667080;
+  --view_project-hov: #EEF1F4;
+  --view_project-but: #6a7586;
+  --body-color: #667080;
+  --project-title: #4b515b;
+  }
+  body.light-theme .main-image.BTprojpicture::after {
+  background: white;
+}
+  #button1:active, #button2:active {
+    background-color: #eef1f4;
+    border: solid 2px #667080!important;
+}
+#button1:hover, #button2:hover, #view_project:hover {
+  background: #EEF1F4;
+}
 }
 @media (prefers-color-scheme: dark) {
   body {
@@ -158,23 +158,6 @@ border: solid 2px #667080 !important;
 }
 
 
-@media screen and (max-width: 1600px) {
-.page-3 .project-title {
-  font-size: 28px !important;
-  line-height: 32px !important;
-}
-.page-3 h2{
-  font-size: 16px!important;
-  margin: 3px 0 0 0!important;
-  line-height: 20px!important;
-}
-.page-3 h#body-text {
- font-size: 14px !important;
- line-height:21px!important;
- margin-top: 0px !important;
- max-width: 29.5vw !important;
-} 
-}
 @media screen and (max-width: 1400px) {
 .page-3 h#body-text {
  max-width: 66vw !important;

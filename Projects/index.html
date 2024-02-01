@@ -18,6 +18,13 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
 body #tag-branding, body #tag-coding, body #tag-print, body #button2, body #button1, body #view_project {
   transition: background ease-in-out .15s !important;
 }
+	
+#logotype:hover {
+  color: var(--body-color) !important;
+}
+#logotype {
+transition: color .15s ease-in-out !important;
+}    
 	    @media screen and (max-width: 1500px) {
      body:has(.card.x) #logotype {   
 position: relative;

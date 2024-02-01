@@ -16,6 +16,7 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
 </script>
     <style>
   
+  
      
 #logotype:hover {
   color: var(--body-color) !important;
@@ -343,7 +344,7 @@ h2{
     .interface{
   }
 h2 {
-  margin: 6px 0 0 270px;
+  margin: 1rem 0 0 auto;
 }
 .element-info {
   margin-top: -3px;
@@ -354,7 +355,7 @@ h2 {
 }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 388px) {
 .project-title, h2, h, #body-text { text-align: center;
 }
   #body-text { margin:  auto; position: relative; width:  max-content !important;;  max-width:  fit-content !important;white-space: break-spaces;overflow: clip;word-break: break-word;}
@@ -458,7 +459,7 @@ padding-bottom: 60px !important;
 a {
   text-decoration: none;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 #button1,#button2,#button3 {
   
 }
@@ -513,7 +514,7 @@ h2{
  margin-top: 12px!important;
 }
 }
-@media screen and (max-width: 799px) and (min-width: 701px){
+@media screen and (max-width: 1099px) and (min-width: 751px){
 .project-title {
   font-size: 28px !important;
   line-height: 32px !important;
@@ -529,7 +530,7 @@ h2{
   .interface{
     width: fit-content !important;
     margin: auto 0 !important;
-    padding-top: 2rem;
+    padding-top: 4.25rem;
   }
 h2{
   font-size: 16px!important;
@@ -544,28 +545,29 @@ h2{
  margin-top: 12px !important;
 }
 }
-@media screen and (max-width: 799px) and (min-width: 701px) {
+@media screen and (max-width: 1099px) and (min-width: 751px) {
 .project-title {
   font-size: 36px !important;
   line-height: 42px !important;
 }
   #body-text {
- font-size: 12px !important;
- line-height:14px !important;
- margin-top: 12px !important;
+ font-size: .9rem !important;
+ line-height:1.4rem !important;
+ margin-top: .9rem !important;
 }
    .bta#body-text {
-margin-top: 1rem !important;
+margin-top: 1.5rem !important;
 
-     font-size: 12px !important;
- line-height:14px !important;
+     font-size: .9rem !important;
+ line-height:1.4rem !important;
 }
     #body-copy {
   }
 h2{
-  margin: 3px 0 0 200px !important;
-  font-size: 18px!important;
-  line-height: 36px !important;
+  margin: 3px 0 0 auto !important;
+  font-size: 1.1rem !important;
+  line-height: 1.6rem !important;
+  width: fit-content;
 }
 #body-text {
  /*! font-size: 14px!important; */
@@ -573,7 +575,27 @@ h2{
  /*! margin-top: 12px!important; */
 }
 }
-@media screen and (max-width: 700px){
+
+@media screen and (max-width: 220px){
+
+  .bta#body-text {display: none!important;}
+  
+  #body-text {margin-bottom: 2rem;}
+}
+@media screen and (max-width: 200px){
+.project-title {-webkit-line-clamp: 4; display: -webkit-inline-box!important; overflow: clip!important; -webkit-box-orient: vertical; } 
+}
+@media screen and (max-width:180px){
+.project-title {-webkit-line-clamp: 3; display: -webkit-inline-box!important; overflow: clip!important; -webkit-box-orient: vertical; } 
+}
+@media screen and (max-width:140px){
+.project-title { margin-left: -2rem; -webkit-line-clamp: 1; display: -webkit-inline-box!important; overflow: clip!important; -webkit-box-orient: vertical; } 
+h2 {display: none!important;}
+}
+
+
+
+@media screen and (max-width: 750px){
 .project-title {
   font-size: 36px !important;
   line-height: 42px !important;
@@ -584,17 +606,17 @@ h2{
   }
 h2{
   margin: 3px 0 0 0!important;
-  font-size: 18px!important;
-  line-height: 24px!important;
+  font-size:  1.1rem !important;
+  line-height:  1.6rem !important;
 }
 #body-text {
- font-size: 12px !important;
- line-height:14px !important;
- margin-top: 12px!important;
+ font-size: 1rem !important;
+ line-height: 1.6rem !important;
+ margin-top:  0.5rem !important;
 }
    .bta#body-text {
- font-size: 12px !important;
- line-height:14px !important;
+ font-size: 1rem !important;
+ line-height: 1.6rem !important;
  margin-bottom: 30px;
 }
   .interface > a{
@@ -627,58 +649,61 @@ h2{
 }
 
  
-@media screen and (max-width: 1249px) and (min-width: 800px)  {
+@media screen and (max-width: 1449px) and (min-width: 1100px)  {
   .interface{
     width: fit-content !important;
     margin-left: 30px;
     margin: auto 0 !important;
-    padding-top: 2rem;
+    padding-top: 3.5rem;
   }
   .head-interface {
     width: fit-content;
-    margin: auto 30px auto 0 !important;} 
+    margin: auto 3rem auto 0 !important;} 
   #body-text {
-  font-size: 14px!important;
+  font-size: 1rem !important;
     margin-top: 50px;
-    line-height: 14px !important;
+    line-height: 1.6rem !important;
   }
+    .bta#body-text {
+    margin-top: 1.5rem;
+   }
 .content-main {
   flex-direction: row !important;
 }
 }
   
-@media screen and (min-width: 1250px) {
+@media screen and (min-width: 1450px) {
 #button1,#button2,#button3 {
   padding: 18px 55px !important;
 }
   
-  .bta#body-text {
+  .bta#body-text {margin-top: 1.5rem !important;
   }
   .project-title{
-    font-size: 64px!important;
+    font-size:  5rem !important;
   }
  .interface{
     width: fit-content !important;
     margin-left: 30px;
     margin: auto 0 !important;
-    padding-top: 2rem;
+    padding-top: 2.75rem;
   }
   .head-interface {
     width: fit-content;
-    margin: auto 60px auto 0 !important;
+    margin: auto 4rem auto 0 !important;
   } 
   #body-text {
-  font-size: 14px!important;
+  font-size: 1rem !important;
     margin-top: 50px;
-    line-height: 14px !important;
+    line-height: 1.6rem !important;
   }
 .content-main {
   flex-direction: row !important;
 }
 h2 {
-  font-size: 32px !important;
-  margin: 3px 0 0 365px !important;
-  line-height: 64px !important;
+  font-size: 2rem !important;
+  margin: 1.5rem 0 0 auto !important;
+  line-height:  3rem !important;
 }
 }
 *, ::before, ::after {
@@ -790,7 +815,7 @@ white-space: break-spaces;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 4rem;
   line-height: 48px;
   letter-spacing: -0.02em;
   font-feature-settings: 'calt' off;
@@ -819,8 +844,9 @@ white-space: break-spaces;
 }
 #body-text {
     max-width: 95%;
-    margin-top: 18px;
+    margin-top: 1rem;
 }
+
 </style></head>
  
   <body onresize="getWindowSpec()">

@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"> 
 <script type="text/javascript" src="https://css-tricks.com/examples/HorzScrolling/jquery.mousewheel.js"></script>
  <style>
+  
      
  .content-main {transition: none;}    
      #button2 {
@@ -271,6 +272,7 @@ width: 100%;
 .interface > a:nth-child(1) {
 text-overflow: ellipsis;
 overflow: clip;
+transition: background .15s ease-in-out;
 }
  .interface {
 text-overflow: ellipsis;
@@ -339,7 +341,7 @@ h2 {
 }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 390px) {
 .project-title, h2, h, #body-text { text-align: center;
 }
   #body-text { margin:  auto; position: relative; width:  max-content !important;;  max-width:  fit-content !important;white-space: break-spaces;overflow: clip;word-break: break-word;}
@@ -504,9 +506,7 @@ h2{
   line-height: 32px !important;
 }
   .interface > a {
-    transform: scale(.9);
     
-    transform-origin: left;
   }
     .head-interface{
     width:  fit-content;
@@ -516,7 +516,7 @@ h2{
   .interface{
     width: fit-content !important;
     margin: auto 0 !important;
-    padding-top: 60px;
+    padding-top: 2rem;
   }
 h2{
   font-size: 16px!important;
@@ -539,10 +539,12 @@ h2{
   #body-text {
  font-size: 12px !important;
  line-height:14px !important;
- margin-top: 12px!important;
+ margin-top: 12px !important;
 }
    .bta#body-text {
- font-size: 12px !important;
+margin-top: 1rem !important;
+
+     font-size: 12px !important;
  line-height:14px !important;
 }
     #body-copy {
@@ -565,7 +567,7 @@ h2{
 }
   .interface{
     flex-direction: column-reverse!important;
-    margin: 10px 0 0 0 !important;
+    margin: 0 0 0 0 !important;
   }
 h2{
   margin: 3px 0 0 0!important;
@@ -617,7 +619,7 @@ h2{
     width: fit-content !important;
     margin-left: 30px;
     margin: auto 0 !important;
-    padding-top: 65px;
+    padding-top: 2rem;
   }
   .head-interface {
     width: fit-content;
@@ -646,7 +648,7 @@ h2{
     width: fit-content !important;
     margin-left: 30px;
     margin: auto 0 !important;
-    padding-top: 55px;
+    padding-top: 2rem;
   }
   .head-interface {
     width: fit-content;
@@ -752,10 +754,10 @@ width: 100%;
   justify-content: center;
   display: flex;
   flex-direction: column;
-  width: calc(100vw - 60px);
-  padding: 30px;
-  top: -30px;
-  height: calc(100vh - 135px);
+  width: calc(100vw - 4rem);
+  padding: 2rem;
+  top: -2rem;
+  height: calc(100vh - 105px - 2rem);
 }
 .content-main::-webkit-scrollbar {
     display: none;
@@ -806,7 +808,6 @@ white-space: break-spaces;
     max-width: 95%;
     margin-top: 18px;
 }
-
 </style></head>
  
   <body onresize="getWindowSpec()">

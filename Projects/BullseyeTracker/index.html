@@ -13,6 +13,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"> 
   <style>
 /* Nav Code */
+      
+  #view_project:hover, #button2:active {
+background: var(--view_project-hov);
+}
+
+      @media screen and (max-width: 620px) {
+  #logotype
+{
+    display: none !important;
+  }
+}
+      #logoblockfour, #logoblocktwo
+{
+  display: none;
+}
+.desktop-nav > a:nth-child(2) > div:nth-child(2) *
+{
+  transition: none;
+}
+      @media screen and (max-width: 1200px) and (min-height: 250px) {
+  #logoblockone, #logoblockthree
+{
+    border-left: solid #474747 1vw !important;
+    margin-left: 0px;
+  }
+}
       #button1, #button2, #button3
 {
     border-radius: 3rem !important;
@@ -41,7 +67,12 @@
     padding: 1rem 3rem !important;
     margin-top: -0.15rem;
   }
-
+#logotype
+{
+  position: relative;
+  left: calc(6vw + 3.5rem);
+  height: 0;
+}
 /* end nav code */
 
       
@@ -151,6 +182,8 @@ text-decoration: none;
    .scrolldown {
     filter: invert(0.8);
   }
+
+     
  label {background: none;}
  .btn-toggle::before {
 transform: translateX(48px)translateY(-1px)scale(.4);
@@ -369,26 +402,6 @@ margin-top: 0!important;
   user-select: none;
 }
   #body-copy{width: calc(100% - 60px);}
-#state1 {
-width: 30px;
-height: 30px;
-border-radius: 50%;
-box-shadow: inset 9px -6px 0px 3px var(--dark);
-position: absolute;
-right: 2px;
-z-index: 999;
-cursor:pointer;
-pointer-events: all;
-transition: .25s ease;
-top: calc(100vh - 34px);
-transform: scale(.8);
-}
-
-#state1:hover {
-transform: scale(1.15);
-bottom: 5px;
-right: 5px;
-}
   .checked{margin-right:130px!important;}
   :root {
 --light: #fff;
@@ -449,17 +462,7 @@ transform: scale(.9);
   background-image: url(https://designedbydan.art/assets/images/3240880DWE.png);
 }
 
-  #view_project:hover, #button2:active {
-background: var(--view_project-hov);
-}
- body.dark-theme #button2:hover, body.dark-theme #button1:hover {
-background-color: var(--dark);
-}
-
- body.dark-theme #view_project:active, body.dark-theme #button1:active, body.dark-theme #button2:active {
-background-color: var(--view_project-but);
-border: solid 2px #667080 !important;
-}@media screen and (max-width: 520px){
+@media screen and (max-width: 520px){
   .contain-logo{
     left: 30px!important;
   }

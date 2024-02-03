@@ -12,7 +12,82 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"> 
   <style>
+/* Content-main code */
+.page-1, .page-2, .page-3, page-4
+{
+  scroll-snap-align: start;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  position: relative;
+  display: flex;
+  z-index: 1;
+  padding-top: 7rem;
+  padding-bottom: 2rem;
+}.main-image {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: calc(100vh - 9rem);
+    position: fixed;
+    width: calc(100% - 4rem);
+    height: -webkit-fill-available;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+.content-main {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: calc(100vh - 9rem);
+    position: fixed;
+    width: calc(100% - 4rem);
+    height: -webkit-fill-available;
+    padding: 7rem 2rem 2rem 2rem;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+/* end content-main code */
 /* Nav Code */
+#logotype
+{
+  position: relative;
+  left: calc(6vw + 3.5rem);
+  height: 0;
+}
+#button1,#button2,#button3 {
+  width: 2rem;
+  height: 12px;
+  margin-top: 40px;
+  border-radius: 100px;
+}
+#button1,#button2,#button3 {
+  width: 2rem;
+  height: 12px;
+  margin-top: 0;
+  border-radius: 100px;
+    transition: .25s ease;
+  float: right;
+  margin-right: 30px;
+}
+#button1:hover, #button2:hover, #view_project:hover {
+   background: var(--view_project-hov);
+}
+.nav-bg{
+  background: white;
+height: 115px;
+margin-bottom: -110px;
+z-index: 1;
+position: absolute;
+width: 100%;
+}
+.desktop-nav
+{
+  position: fixed;
+  z-index: 2;
+  height: 3rem;
+  padding: 2rem;
+  width: 100%;
+  margin: 0px 0px 0px -2rem;
+}
       #logoblockfour, #logoblocktwo
 {
   display: none;
@@ -20,7 +95,7 @@
   #view_project:hover, #button2:active {
 background: var(--view_project-hov);
 }
-
+.desktop-nav * {text-decoration: none;}
       @media screen and (max-width: 620px) {
   #logotype
 {
@@ -37,8 +112,8 @@ background: var(--view_project-hov);
 }
       #button1, #button2, #button3 {
     border-radius: 3rem !important;
-  margin-right: 2rem !important;       
-          border: var(--border-color);
+  margin-right: 2rem !important;
+        border: var(--border-color);
 }
 @media screen and (max-width: 600px) {
   #button1, #button2, #button3
@@ -51,16 +126,16 @@ background: var(--view_project-hov);
   }
 }      
       body #tag-branding, body #tag-coding, body #tag-print, body #button2, body #button1, #view_project {
-  transition: background ease-in-out .15s !important;
+  transition: border background ease-in-out .15s !important;
 }
 @media screen and (min-width: 600px) {
   #button1, #button2, #button3
 {
     box-sizing: inherit;
-    max-height: calc(100% - 2rem) !important;
+    max-height: calc(100% - 2rem);
     height: 100% !important;
     padding: 1rem 3rem !important;
-    margin-top: -0.15rem;
+    margin-top: -0.15rem!important;
   }
 }
 #logotype
@@ -150,6 +225,15 @@ span a#url {
 @media (prefers-color-scheme: dark) {
    .scrolldown {   filter: invert(0.8);  }
  label {background: none;}
+  #button2:hover, #button1:hover {
+background-color:var(--view_project-hov);
+border-color: #6A7586 !important;
+}
+
+#view_project:active, #button1:active, #button2:active {
+background-color: var(--view_project-but);
+border: solid 2px #667080 !important;
+}
  .btn-toggle::before {
 transform: translateX(48px)translateY(-1px)scale(.4);
 box-shadow: none;
@@ -480,14 +564,14 @@ transform: scale(.9);
 
 @media screen and (max-width: 900px) and (min-height: 250px) {
 #body-header{
-margin-top:  var(--vh) !important;
+margin-top:    100vh !important;
     position: relative !important;
     width: 100% !important;
-    scroll-snap-align: center;
+    scroll-snap-align: end;
     flex: none;
     left: 0PX !important;
     justify-content: space-around;
-padding-bottom: 60px !important;
+padding-bottom: 2rem;
 }.page-2{margin-top: var(--vh) !important;}
   #logoblockfour, #logoblocktwo {
     display: none;
@@ -496,10 +580,7 @@ padding-bottom: 60px !important;
     border-left: solid #474747 1vw!important;
     margin-left: 0px;
   }
-  #logotype{
-  left: calc(6vw + 45px) !important;
 
-  }
   #body-text {
   width: 100%;
   max-width: 75vw !important;
@@ -634,32 +715,6 @@ body {
   margin: 0;
 }
 
-/*.main-image {
-  width: 58vw;
-  height: calc(100vh - 157px);
-  background: #EEF1F4;
-  border: 3px solid #667080;
-  box-sizing: content-box;
-  position: relative;
-  top: calc(60px - -3.75vw);
-  margin-left: 30px;
-}
-*/
-.nav-bg{
-  background: white;
-height: 115px;
-margin-bottom: -110px;
-z-index: 1;
-position: absolute;
-width: 100%;
-}
-.desktop-nav {
-    position: fixed;
-    z-index: 2;
-    height: 45px;
-    padding: 30px;width: calc(100% - 60px);
-    margin: 0;
-}
 .temp-main-image {
   width: 58vw;
   height: calc(100vh - 150px);
@@ -672,47 +727,13 @@ width: 100%;
 }
 .main-image {
   width: calc(60vw - 30px);
-  height: calc(var(--vh) - 135px);
+  height: calc(100vh - 9rem);
   box-sizing: content-box;
   position: relative;
   place-content: center;
   display: inline-grid;
 }
-.content-main {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    min-height: calc(100vh - 60px);
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    max-height: 100vh;
-    position: fixed;
-    width: calc(100% - 60px);
-    height: -webkit-fill-available;
-    padding: 105px 30px 30px 30px;
-}
-.page-1, .page-2, .page-3, page-4 {
-  scroll-snap-align: start;
-  width: 100%;
-  height: var(--vh);
-  pointer-events: none; 
-  position: relative;
-  display: flex;
-  z-index: 1;
-  padding-top: 105px;
-  padding-bottom: 30px;
-}
-#button1,#button2,#button3 {
-  width: 30px;
-  height: 12px;
-  margin-top: 0;
-  border-radius: 100px;
-    transition: .25s ease;
-  float: right;
-  margin-right: 30px;
-}
-#button1:hover, #button2:hover, #view_project:hover {
-   background: var(--view_project-hov);
-}
+
 .project-title {
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -778,8 +799,7 @@ right: 0;
 transition: color .15s ease-in-out !important;
 }
 
-  
-      
+       
     </style>
 
 </head>

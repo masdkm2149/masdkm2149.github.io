@@ -118,6 +118,28 @@ text-decoration: none;
    .scrolldown {
     filter: invert(0.8);
   }
+ label {background: none;}
+ .btn-toggle::before {
+transform: translateX(48px)translateY(-1px)scale(.4);
+box-shadow: none;
+opacity: 0;
+}
+.btn-toggle::after {
+background-image: url(https://designedbydan.art/assets/images/icons8-sun.svg);
+width: 30px;
+height: 30px;
+opacity: 1;
+position: absolute;
+top: 3px;
+right: 3px;
+filter: invert(1);
+}
+ .one .BTprojpicture {
+  background-image: url(https://designedbydan.art/assets/images/Wordmark_Light.png) !important;
+background-color: black;
+  background-size:    77% !important;
+}    
+    
   #button1:active, #button2:active {
     background-color: var(--tag-bg);
     border: solid 2px #667080 !important;
@@ -328,7 +350,7 @@ transition: .25s ease;
 top: calc(100vh - 34px);
 transform: scale(.8);
 }
-body.dark-theme .scrolldown{filter: invert(1)}
+
 #state1:hover {
 transform: scale(1.15);
 bottom: 5px;
@@ -354,7 +376,7 @@ input {
 position: absolute;
 display: none;
 }
-body.dark-theme #state1 {box-shadow: inset 9px -6px 0px 3px var(--light);}
+
 .btn-toggle {
 position: absolute;
 width: 100%;
@@ -385,35 +407,15 @@ box-shadow: inset 8.5px -3px 0px 3.5px var(--light);
 transition: 0.5s;
 /*! transition-property: background-color,transform; */
 }
-body.dark-theme label {background: none;}
-body.dark-theme .btn-toggle::before {
-transform: translateX(48px)translateY(-1px)scale(.4);
-box-shadow: none;
-opacity: 0;
-}
+
 .btn-toggle::after { content:""; transition: .5s; right:65px; opacity: 0;
 position: absolute;
 transform: scale(.9);
-}
-body.dark-theme .btn-toggle::after {
-background-image: url(https://designedbydan.art/assets/images/icons8-sun.svg);
-width: 30px;
-height: 30px;
-opacity: 1;
-position: absolute;
-top: 3px;
-right: 3px;
-filter: invert(1);
 }
   .one .BTprojpicture {
   background-image: url(https://designedbydan.art/assets/images/3240880DWE.png);
 }
 
-body.dark-theme .one .BTprojpicture {
-  background-image: url(https://designedbydan.art/assets/images/Wordmark_Light.png) !important;
-background-color: black;
-  background-size:    77% !important;
-}    
   #view_project:hover, #button2:active {
 background: var(--view_project-hov);
 }
@@ -764,6 +766,20 @@ right: 0;
 #url:hover {
   color: var(--view_project-but);
 }
+
+
+
+  
+     
+#logotype:hover {
+  color: var(--body-color) !important;
+}
+#logotype {
+transition: color .15s ease-in-out !important;
+}
+
+  
+      
     </style>
 
 </head>

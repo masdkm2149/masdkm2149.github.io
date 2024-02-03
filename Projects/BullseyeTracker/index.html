@@ -12,11 +12,39 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"> 
   <style>
-
+/* Nav Code */
+      #button1, #button2, #button3
+{
+    border-radius: 3rem !important;
+  margin-right: 2rem !important;
+}
+@media screen and (max-width: 600px) {
+  #button1, #button2, #button3
+{
+    box-sizing: inherit;
+    max-height: calc(100% - 2rem) !important;
+    height: 100% !important;
+    padding: 0.85rem 2.55rem !important;
+    margin-top: 0;
+  }
+}      
       body #tag-branding, body #tag-coding, body #tag-print, body #button2, body #button1, #view_project
 {
   transition: background ease-in-out .15s !important;
 }
+@media screen and (min-width: 600px) {
+  #button1, #button2, #button3
+{
+    box-sizing: inherit;
+    max-height: calc(100% - 2rem) !important;
+    height: 100% !important;
+    padding: 1rem 3rem !important;
+    margin-top: -0.15rem;
+  }
+
+/* end nav code */
+
+      
 #view_project::after {
   content: "Send Dan an email.";
   position: absolute;

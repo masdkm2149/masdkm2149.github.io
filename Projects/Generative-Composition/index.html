@@ -1013,57 +1013,30 @@ transition: color .15s ease-in-out !important;
         @media screen and (max-width: 700px) {
   .page-1 > div:nth-child(2) > h:nth-child(4) { overflow: clip; -webkit-box-orient: vertical; display: -webkit-inline-box;  counter-reset: p124h 410;}
   @media screen and (max-height: 410px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-     counter-reset: p124 1;
-     counter-increment: p124h +30;
-     -webkit-line-clamp: counter(p124);
 }
   }
 @media screen and (min-height: 410px) and (max-height: 440px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-    counter-increment: p124 +1;
-    counter-increment: p124h +30;
-    -webkit-line-clamp: counter(p124);
 }
   }
   @media screen and (min-height: 440px) and (max-height: 470px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-    counter-increment: p124 +1;
-    counter-increment: p124h +30;
-    -webkit-line-clamp: counter(p124);
 }
   }
     @media screen and (min-height: 470px) and (max-height: 500px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-     counter-increment: p124 +1;
-    counter-increment: p124h +30;
-    -webkit-line-clamp: counter(p124);
-}
+
   }
    @media screen and (min-height: 500px) and (max-height: 530px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-      counter-increment: p124 +1;
-    counter-increment: p124h +30;
-    -webkit-line-clamp: counter(p124);
 }
   }
    @media screen and (min-height: 530px) and (max-height: 560px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-      counter-increment: p124 +1;
-    counter-increment: p124h +30;
-    -webkit-line-clamp: counter(p124);
 }
   }
       @media screen and (min-height: 560px) and (max-height: 590px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-      counter-increment: p124 +1;
-    counter-increment: p124h +30;
-    -webkit-line-clamp: counter(p124);
 }
   }
          @media screen and (min-height: 590px) and (max-height: 620px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-      counter-increment: p124 +1;
-    counter-increment: p124h +30;
-    -webkit-line-clamp: counter(p124);
 }
   }
    @media screen and (min-height: 620px) and (max-height: 650px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-      counter-increment: p124 +1;
-    counter-increment: p124h +30;
-    -webkit-line-clamp: counter(p124);
 }
   }
      @media screen and (min-height: 650px) and (max-height: 680px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
@@ -1218,7 +1191,7 @@ window.addEventListener('resize', function(event) {
                        document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
                        document.querySelector(':root').style.setProperty('--ww', window.innerWidth + 'px');
                        document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
-      
+                             document.querySelector('.page-1 > div:nth-child(2) > h:nth-child(4)').style.setProperty('-webkit-line-clamp', mapRange(window.innerHeight, 420, 1800, 1, 60));
     if (window.innerWidth > window.innerHeight) { 
         if (mapRange(window.innerHeight, 144, 864, 0, 1.0) <= 1.0 ) { document.querySelector(':root').style.setProperty('--scaleapp', mapRange(window.innerHeight, 144, 864, 0, 1.0)); } else { document.querySelector(':root').style.setProperty('--scaleapp', 1); }
     } else { 

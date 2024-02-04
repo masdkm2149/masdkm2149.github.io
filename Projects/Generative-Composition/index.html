@@ -1090,7 +1090,16 @@ document.getElementsByClassName('content-main')[0].scrollTop +=8;
                        document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
 }
 
-window.addEventListener('resize', function(event) {
+// linearly maps value from the range (a..b) to (c..d)
+function mapRange (value, a, b, c, d) {
+    // first map value from (a..b) to (0..1)
+    value = (value - a) / (b - a);
+    // then map it from (0..1) to (c..d) and return it
+    return c + value * (d - c);
+}
+        
+        
+        window.addEventListener('resize', function(event) {
     reorder();
 }, true);
 
@@ -1099,7 +1108,7 @@ window.onresize = reorder();
 $( document ).ready(function() {
       
     if (window.innerWidth > window.innerHeight) { 
-        if ((window.innerHeight *.0011) <= 1.0 ) { document.querySelector(':root').style.setProperty('--scaleapp', window.innerHeight *.00055); } else { document.querySelector(':root').style.setProperty('--scaleapp', 1); }
+        if ((window.innerHeight *.0011) <= 1.0 ) { document.querySelector(':root').style.setProperty('--scaleapp', mapRange(window.innerHeight, 0, 750, 0, 1)); } else { document.querySelector(':root').style.setProperty('--scaleapp', 1); }
     } else { 
         if ((window.innerWidth *.0011) <= 1.0 ) { document.querySelector(':root').style.setProperty('--scaleapp', window.innerWidth *.0011); } else { document.querySelector(':root').style.setProperty('--scaleapp', 1); }
     }
@@ -1122,7 +1131,7 @@ window.addEventListener('resize', function(event) {
                        document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
       
     if (window.innerWidth > window.innerHeight) { 
-        if ((window.innerHeight *.0011) <= 1.0 ) { document.querySelector(':root').style.setProperty('--scaleapp', window.innerHeight *.00055); } else { document.querySelector(':root').style.setProperty('--scaleapp', 1); }
+        if ((window.innerHeight *.0011) <= 1.0 ) { document.querySelector(':root').style.setProperty('--scaleapp', mapRange(window.innerHeight, 0, 750, 0, 1)); } else { document.querySelector(':root').style.setProperty('--scaleapp', 1); }
     } else { 
         if ((window.innerWidth *.0011) <= 1.0 ) { document.querySelector(':root').style.setProperty('--scaleapp', window.innerWidth *.0011); } else { document.querySelector(':root').style.setProperty('--scaleapp', 1); }
     }

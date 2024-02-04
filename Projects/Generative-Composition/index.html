@@ -662,8 +662,25 @@ div.page-3:nth-child(4) > div:nth-child(1) {
     margin: 0 !important;
   }
 }
-@media screen and (max-width: 1750px) and (min-height: 250px) {
-  
+
+@media screen and (min-width: 1750px) and (max-height: 550px) {
+  .page-1 > div:nth-child(2), .content-main > div:nth-child(4) > div:nth-child(1) {
+margin-top:100vh !important;
+    position:    relative !important;
+    width: 75% !important;
+    scroll-snap-align: end;
+    flex: none;
+    left: 0PX !important;
+    justify-content: space-around;
+padding-bottom: 2rem;
+place-content: center;
+}  
+  html body div.content-main div.page-1 div#body-header{position:     relative !important;right: 0;/*! height: calc(100% - 9rem) !important; */}
+  .page-2{margin-top: 100vh !important;}
+}
+
+@media screen and (max-width: 1750px) {
+
   html body div.content-main div.page-1 div#body-header{position:     relative !important;right: 0;/*! height: calc(100% - 9rem) !important; */}
   
   
@@ -716,7 +733,22 @@ place-content: center;
   position: relative;
   z-index: 2;
 }
+/*@media screen and (max-width: 900px) {
+.scrolldown {
+ width: 150px!important ;
+}
+}
 
+
+BREAKPOINT WIDTH
+
+1150PX
+
+!!!!!!!!!!!!!!!!!!!
+
+
+
+*/
 @media screen and (max-width: 750px) {
 .project-title {
   font-size: 2rem !important;
@@ -946,6 +978,10 @@ div.page-3:nth-child(5) > div:nth-child(2) > h:nth-child(3)::before{
   content: "When I drafted a series of ads for 9Tee's digital marketing campaign, my priority was to effectively connect the audience to the products and services offered by 9Tee while also communicating the brand's identity. To achieve this, I started with a clear and structured layout, utilizing grids and alignment to create a visually balanced composition. With close attention to UX principles, I facilitated a seamless user experience that allows for easy comprehension of information. To maintain consistency with the brand’s visual identity, I ensured the designs complemented the same typography, color palette, and overall aesthetic as the brand’s wordmark and logomark, incorporating attention-grabbing visuals with personality. To accommodate various ad formats, devices, and proportions, I developed a versatile library of modular UI components, such as buttons, image placeholders, and text blocks that provided efficiency and flexibility for any alterations or iterations while ensuring a consistent visual language. By strategically placing important elements with a focus on hierarchy, such as the brand’s logo, tagline, featured products, and calls to action, I employed effective layout techniques that guide the user’s attention and encourage engagement.";
   }
   }
+#video > video:nth-child(1) {
+clip-path: inset(0 0 5px 0);
+}
+
 </style>
     
 
@@ -954,7 +990,7 @@ div.page-3:nth-child(5) > div:nth-child(2) > h:nth-child(3)::before{
 <body>
 
 <div class="desktop-nav">
- <img class="scrolldown floating" style="opacity: 0.45; width: 50px; position: fixed; margin-left: auto; margin-right: auto; right: 0px; bottom: 30px; left: -10px; z-index: 2; display: block;" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(300, -250, 1, 800))">
+ <img class="scrolldown floating" style="opacity: 0.45; width: 50px; position: fixed; margin-left: auto; margin-right: auto; right: 0px; bottom: 30px; left: -10px; z-index: 2; display: none;" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(300, -250, 1, 800))">
 <div style="background: var(--bkg-color);height: 7rem;top: 0;width: 100%;position: absolute;"></div><a href="https://designedbydan.art/"> <div id="logo" style="width: 150px;height: 45px;background: #FFFFFF;border: 3px solid #667080;box-sizing: border-box;left: 0px;right: 0;top: 0px;bottom: 60px;border: 1px solid #667080;/*! =============== breakpoint 1150px W ===============*/position: fixed;border: 1px solid #667080;margin-left: 30px;margin-top: 30px;content: &quot;LOGO&quot;;font-size: 24px;text-align: center;display: none;"></div><div style="left: 2rem;position: relative;padding-right: 2rem;width: 6vw;height: calc(100% - 4rem);top: 2px;">
                  <div id="logoblockone" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;border-left: 1vw solid;border-left-color: currentcolor;border-left-color: #474747;"></div>
                  <div id="logoblocktwo" style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);border-right: 1vw solid #474747;"></div>
@@ -1039,10 +1075,8 @@ font-feature-settings: 'calt' off;
 color: #667080;
 position: relative;
 ">Don't be shy...</h2><h style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;display: flex;" id="body-text">Email: danrossgfx@gmail.com</h></div><a href="mailto:danrossgfx@gmail.com" style="width: fit-content;border-radius: 100px;display: flex;margin-top: auto;pointer-events: all;top: 2rem;position: relative;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border:var(--border-color);margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity: 0.45; width: 25px; transform: rotate(270deg); right: 30px; position: absolute; display: block;" class="scrolldown" src="https://designedbydan.art/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a>
-</div></div></div></div><script>
-
-
-
+</div></div></div></div>
+    <script>
    window.addEventListener("scroll", function(event) {
     var y = document.getElementsByClassName('content-main')[0].scrollTop
 
@@ -1060,28 +1094,8 @@ window.addEventListener('resize', function(event) {
     reorder();
 }, true);
 
-
-
 window.onresize = reorder();
 
-                       document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
-
-
-  function reorder(){
-document.getElementsByClassName('content-main')[0].scrollTop +=8;
-                       document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
-}
-
-window.addEventListener('resize', function(event) {
-    reorder();
-}, true);
-
-</script>
-
-
-
-
-<script>	
 $( document ).ready(function() {
 
       		          document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);

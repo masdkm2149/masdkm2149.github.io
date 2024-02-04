@@ -18,6 +18,9 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
 </script>
   <style>
 
+
+
+
 /* Content-main code */
 
   @media screen and (min-width: 900px) and (min-height: 900px) {
@@ -217,6 +220,26 @@ background: var(--view_project-hov);
   margin-right: 2rem !important;
         border: var(--border-color);
 }
+
+@media screen and (max-width: 390px) {
+  #button1, #button2 {transform: scale(.9)} 
+  #button2 {margin-right: .8rem!important; }
+}
+@media screen and (max-width: 360px) {
+  #button1, #button2 {transform: scale(.8)} 
+  #button2 {margin-right: -0.2rem!important; }
+}
+@media screen and (max-width: 330px) {
+  #button1, #button2 {transform: scale(.7)} 
+  #button2 {margin-right: -1rem!important; }
+}
+
+@media screen and (max-width: 300px) {
+  #button1 { margin-top: -1.2rem!important;}
+  #button1, #button2 {transform: scale(.6)} 
+  #button2 {margin-right: -7.4rem!important; margin-top: 1.2rem!important;}
+}
+
 @media screen and (max-width: 600px) {
   #button1, #button2, #button3
 {
@@ -224,11 +247,11 @@ background: var(--view_project-hov);
     max-height: calc(100% - 2rem) !important;
     height: 100% !important;
     padding: 0.85rem 2.55rem !important;
-    margin-top: 0;
+    margin-top: 0.5px;
   }
 }      
       body #tag-branding, body #tag-coding, body #tag-print, body #button2, body #button1, #view_project {
-  transition: border background ease-in-out .15s !important;
+  transition: border scale background ease-in-out 0.15s !important;
 }
 @media screen and (min-width: 600px) {
   #button1, #button2, #button3

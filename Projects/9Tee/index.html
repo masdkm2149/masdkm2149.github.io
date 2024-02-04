@@ -23,12 +23,12 @@ body div.content-main div.page-3 div#body-copy div h.project-title br {
   margin-bottom: 2.4rem!important;
 }
 
-  .page-3 h2 {
+  div.page-3:nth-child(7) h2 {
     font-size: 1.4rem !important;
     margin: 1.4rem 0 0 0 !important;
     line-height: 1.4rem !important;
   }  
-.page-3 h#body-text {
+div.page-3:nth-child(7) h#body-text {
     font-size: 1rem !important;
     line-height: 1.5rem !important;
     margin: 1.5rem 0 0 0 !important;
@@ -46,7 +46,7 @@ body div.content-main div.page-3 div#body-copy div h.project-title br {
   margin-bottom: 2.75rem!important;
 }
 
-  .page-3 h2 {
+  div.page-3:nth-child(7) h2 {
     font-size: 1.25rem !important;
     margin: 1.25rem 0 0 0 !important;
     line-height: 1.25rem !important;
@@ -734,7 +734,8 @@ BREAKPOINT WIDTH
 }
 h2{
   font-size: 1.05rem !important;
-  line-height: 2rem !important;
+  line-height: 1.5rem !important;
+  padding: .25rem 0 .25rem 0;
 }
 #body-text {
  font-size:  .95rem !important;
@@ -750,8 +751,8 @@ h2{
 }
 h2{
   font-size: 1.25rem !important;
-  line-height: 2.5rem !important;
-  margin-top: -0.25rem !important;
+  line-height: 2rem !important;
+  padding: .25rem 0 .25rem 0;
 }
 #body-text {
  font-size: 1rem !important;
@@ -769,9 +770,19 @@ h2{
 }
 }
 
-
-@media screen and (min-width: 1600px) {
-
+@media screen and (min-width: 1701px) {
+  div.page-3:nth-child(5) > div:nth-child(1) {width: 60%;margin-left: 2%;}
+  div.page-3:nth-child(5) > div:nth-child(2) {    margin-right: auto;
+    margin-left: auto;width: 40%;
+place-self: center;
+}
+}
+@media screen and (max-width: 1700px) and (min-width: 1601px) {
+  div.page-3:nth-child(5) > div:nth-child(1) {width: 60%;margin-left: 1%;}
+  div.page-3:nth-child(5) > div:nth-child(2) {    margin-right: auto;
+    margin-left: auto;width: 35%;
+place-self: center;
+}
 }
 @media screen and (max-width: 1600px) {
     .page-4 {margin-top: 100vh!important;}
@@ -924,6 +935,7 @@ div.page-3:nth-child(5) > div:nth-child(2) > h:nth-child(3)::before{
   content: "When I drafted a series of ads for 9Tee's digital marketing campaign, my priority was to effectively connect the audience to the products and services offered by 9Tee while also communicating the brand's identity. To achieve this, I started with a clear and structured layout, utilizing grids and alignment to create a visually balanced composition. With close attention to UX principles, I facilitated a seamless user experience that allows for easy comprehension of information. To maintain consistency with the brand’s visual identity, I ensured the designs complemented the same typography, color palette, and overall aesthetic as the brand’s wordmark and logomark, incorporating attention-grabbing visuals with personality. To accommodate various ad formats, devices, and proportions, I developed a versatile library of modular UI components, such as buttons, image placeholders, and text blocks that provided efficiency and flexibility for any alterations or iterations while ensuring a consistent visual language. By strategically placing important elements with a focus on hierarchy, such as the brand’s logo, tagline, featured products, and calls to action, I employed effective layout techniques that guide the user’s attention and encourage engagement.";
   }
   }
+
 </style>
     
 
@@ -1084,18 +1096,12 @@ window.addEventListener('resize', function(event) {
     reorder();
 }, true);
 
-</script><style type="text/css"></style>
+</script>
 
 
 
 
-</body><script>	
-    function reorder(){
-document.getElementsByClassName('content-main')[0].scrollLeft +=8
-}
-function reorder2(){
-document.getElementsByClassName('content-main')[0].scrollLeft +=400}
-    
+<script>	
 $( document ).ready(function() {
 
       		          document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
@@ -1103,8 +1109,6 @@ $( document ).ready(function() {
                        document.querySelector(':root').style.setProperty('--ww', window.innerWidth + 'px');
                        document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
          document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
-         reorder();
-      
 });
 
 
@@ -1118,4 +1122,6 @@ window.addEventListener('resize', function(event) {
                        document.querySelector(':root').style.setProperty('--ww', window.innerWidth + 'px');
                        document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
 });
-      </script></html>
+      </script>
+</body>
+</html>

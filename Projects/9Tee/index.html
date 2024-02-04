@@ -9,21 +9,10 @@
           <link rel="icon" type="image/x-icon" href="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/favicon.svg">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"> 
-<script>
-$( document ).ready(function() {
-  const currentTheme = localStorage.getItem("theme");
-  if (currentTheme == "dark") { 
-    document.body.classList.remove("light-theme");
-    document.body.classList.add("dark-theme");
-} else if (currentTheme == "light") {
-    document.body.classList.remove("dark-theme");
-    document.body.classList.add("light-theme");
-}
-});
-    </script>
   <style>
+/* Content-main code */
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 900px) and (min-height: 900px) {
 div.content-main div.page-3 div#body-copy div h.project-title {
   font-size: 3rem !important;
 
@@ -46,7 +35,7 @@ body div.content-main div.page-3 div#body-copy div h.project-title br {
   }
 }
 
-@media screen and (max-width: 1000px) and (min-width: 600px) {
+@media screen and (min-width: 700px)  and (max-width: 900px)  {
 div.content-main div.page-3 div#body-copy div h.project-title {
   font-size: 2.5rem !important;
 
@@ -62,15 +51,258 @@ body div.content-main div.page-3 div#body-copy div h.project-title br {
     margin: 1.25rem 0 0 0 !important;
     line-height: 1.25rem !important;
   }  
-.page-3 h#body-text {
+div.page-3:nth-child(6) h#body-text {
+    font-size: 1rem !important;
+    line-height: 1.25rem !important;
+    margin: 1.25rem 0 0 0 !important;
+  }
+}
+@media screen and (min-width: 700px)  and (max-height: 900px)  {
+div.content-main div.page-3 div#body-copy div h.project-title {
+  font-size: 2.5rem !important;
+
+    line-height: 2.5rem !important;
+}
+
+body div.content-main div.page-3 div#body-copy div h.project-title br {
+  margin-bottom: 2.75rem!important;
+}
+
+#body-copy > div:nth-child(1) h2 {
+    font-size: 1.25rem !important;
+    margin: 1.25rem 0 0 0 !important;
+    line-height: 1.25rem !important;
+  }  
+#body-copy > div:nth-child(1) h#body-text {
     font-size: 1rem !important;
     line-height: 1.25rem !important;
     margin: 1.25rem 0 0 0 !important;
   }
 }
 
+.page-1, .page-2, .page-3, .page-4
+{
+  scroll-snap-align: end;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  position: relative;
+  display: flex;
+  z-index: 1;
+  padding-top: 7rem;
+  padding-bottom: 2rem;
+}.main-image {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 100%;
+    position: fixed;
+    width: calc(100% - 4rem);
+    height: -webkit-fill-available;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+.content-main {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: calc(100% - 9rem);
+    position: fixed;
+    width: calc(100% - 4rem);
+    height: -webkit-fill-available;
+    padding: 7rem 2rem 2rem 2rem;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+/* end content-main code */
+/* Nav Code */
+
+@media screen and (max-width: 600px) {
+  #button1::after, #button2::after, #button3::after
+{
+    font-size: 12px !important;
+    letter-spacing: 0.01em !important;
+    font-weight: 600 !important;
+  }
+}
+      
+#button1::after
+{
+  content: "Projects";
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: var(--view_project-but-text);
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  display: flex;
+}
+#logotype
+{
+  position: relative;
+  left: calc(6vw + 3.5rem);
+  height: 0;
+}
+#button1,#button2,#button3 {
+  width: 2rem;
+  height: 12px;
+  margin-top: 40px;
+  border-radius: 100px;
+}
+#button1,#button2,#button3 {
+  width: 2rem;
+  height: 12px;
+  margin-top: 0;
+  border-radius: 100px;
+    transition: .25s ease;
+  float: right;
+  margin-right: 30px;
+}
+#button1:hover, #button2:hover, #view_project:hover {
+   background: var(--view_project-hov);
+}
+.nav-bg{
+  background: white;
+height: 115px;
+margin-bottom: -110px;
+z-index: 1;
+position: absolute;
+width: 100%;
+}
+.desktop-nav
+{
+  position: fixed;
+  z-index: 2;
+  height: 3rem;
+  padding: 2rem;
+  width: 100%;
+  margin: 0px 0px 0px -2rem;
+}
+      #logoblockfour, #logoblocktwo
+{
+  display: none;
+}
+  #view_project:hover, #button2:active {
+background: var(--view_project-hov);
+}
+.desktop-nav * {text-decoration: none;}
+      @media screen and (max-width: 620px) {
+  #logotype
+{
+    display: none !important;
+  }
+}
+      #logoblockfour, #logoblocktwo {  display: none;  }
+.desktop-nav > a:nth-child(2) > div:nth-child(2) * { transition: none; }
+      @media screen and (max-width: 1200px) and (min-height: 250px) {
+  #logoblockone, #logoblockthree {
+    border-left: solid #474747 1vw !important;
+    margin-left: 0px;
+  }
+}
+      #button1, #button2, #button3 {
+    border-radius: 3rem !important;
+  margin-right: 2rem !important;
+        border: var(--border-color);
+}
+
+@media screen and (max-width: 390px) {
+  #button1, #button2 {transform: scale(.9)} 
+  #button2 {margin-right: .8rem!important; }
+}
+@media screen and (max-width: 360px) {
+  #button1, #button2 {transform: scale(.8)} 
+  #button2 {margin-right: -0.2rem!important; }
+}
+@media screen and (max-width: 330px) {
+  #button1, #button2 {transform: scale(.7)} 
+  #button2 {margin-right: -1rem!important; }
+}
+
+@media screen and (max-width: 300px) {
+  #button1 { margin-top: -1.2rem!important;}
+  #button1, #button2 {transform: scale(.6)} 
+  #button2 {margin-right: -7.4rem!important; margin-top: 1.2rem!important;}
+}
+
+@media screen and (max-width: 600px) {
+  #button1, #button2, #button3
+{
+    box-sizing: inherit;
+    max-height: calc(100% - 2rem) !important;
+    height: 100% !important;
+    padding: 0.85rem 2.55rem !important;
+    margin-top: 0.5px;
+  }
+}      
+      body #tag-branding, body #tag-coding, body #tag-print, body #button2, body #button1, #view_project {
+  transition: border scale background ease-in-out 0.15s !important;
+}
+@media screen and (min-width: 600px) {
+  #button1, #button2, #button3
+{
+    box-sizing: inherit;
+    max-height: calc(100% - 2rem);
+    height: 100% !important;
+    padding: 1rem 3rem !important;
+    margin-top: -0.15rem!important;
+  }
+}
+#logotype
+{
+  position: relative;
+  left: calc(6vw + 3.5rem);
+  height: 0;
+}
+    
+/* end nav code */
+
+      
+#view_project::after {
+  content: "Send Dan an email.";
+  position: absolute;
+  height: fit-content;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'calt' off;
+  color: var(--project-title) !important;
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  display: flex;
+  float: left;
+  left: 30px;
+  max-width: fit-content;
+  width: auto;
+  min-width: revert;
+}
+
+
+#body-text{
+    overflow: clip;
+  -webkit-box-orient: vertical;
+  display: -webkit-inline-box;
+    color: var(--body-color) !important;
+      }
+      h2 {
+      color: var(--h2-color);
+      }
+    
+span a#url {
+  pointer-events: all;
+}
 @media (prefers-color-scheme: light) {
-body {
+    #button1:active, #button2:active {
+    background-color: #eef1f4;
+    border: solid 2px #667080!important;
+}
+  body {
   --text-color: #222;
   --content-border: 3px solid rgb(102, 112, 128);
   --bkg-color: #fff;
@@ -83,34 +315,21 @@ body {
   --body-color: #667080;
   --project-title: #4b515b;
   }
-  body.light-theme .main-image.BTprojpicture::after {
-  background: white;
 }
-  #button1:active, #button2:active {
-    background-color: #eef1f4;
-    border: solid 2px #667080!important;
-}
-#button1:hover, #button2:hover, #view_project:hover {
-  background: #EEF1F4;
-}
-}
+      #button1, #button2, #button3 { text-decoration: none; }
 @media (prefers-color-scheme: dark) {
-  body {
---content-border: 3px solid rgb(18, 18, 22);
---tag-bg: #2e313a;
---body-color: #adb4c0;  
---border-color: solid 2px #363840;
---text-color: #eee;
---h2-color: #585f6a;
---bkg-color: #000;
---view_project-hov: #0b0d10;
---view_project-but: #363840;
---view_project-but-text: #EEF1F4;  
---project-title: #e0e0e0;
+   .scrolldown {   filter: invert(0.8);  }
+ label {background: none;}
+  #button2:hover, #button1:hover {
+background-color:var(--view_project-hov);
+border-color: #6A7586 !important;
 }
 
-label {background: none;}
-.btn-toggle::before {
+#view_project:active, #button1:active, #button2:active {
+background-color: var(--view_project-but);
+border: solid 2px #667080 !important;
+}
+ .btn-toggle::before {
 transform: translateX(48px)translateY(-1px)scale(.4);
 box-shadow: none;
 opacity: 0;
@@ -124,89 +343,25 @@ position: absolute;
 top: 3px;
 right: 3px;
 filter: invert(1);
-}
-.one .BTprojpicture {
-  background-image: url(https://designedbydan.art/assets/images/Wordmark_Light.png) !important;
-background-color: black;
-  background-size:    77% !important;
-}    
- #button2:hover, #button1:hover {
-background-color:var(--view_project-hov);
-border-color: #6A7586 !important;
-}
-
-#view_project:active, #button1:active, #button2:active {
-background-color: var(--view_project-but);
-border: solid 2px #667080 !important;
-}
-  .scrolldown{filter: invert(1)}
-#state1 {box-shadow: inset 9px -6px 0px 3px var(--light);}
-  .btn-toggle {   box-sizing:border-box; border: 2px solid #363840;}
-.main-image.BTprojpicture::after{background: #000!important; }
-
-}
-
-  #logotype {
-    position: relative;
-    left: calc(6vw + 3.5rem);
-    height: 0;
-}
-  @media screen and (max-width: 620px) {
-  #logotype {
-    display: none !important;
-  }
-}
-
-
-@media screen and (max-width: 1400px) {
-.page-3 h#body-text {
- max-width: 66vw !important;
-} 
 }   
-.page-3 #body-text {
-max-width: 35vw!important;
-} 
-@media screen and (min-width: 1201px)and (max-width: 1400px) and (min-height: 250px) {
-  .page-3 .main-image {
-  margin-left: auto !important;
-  position: absolute !important;
-  left: 0;
-  width: 100% !important;
-  margin-right: auto !important;
-  right: 0;
-}
-    .page-2.a {
-  margin-top: var(--vh) !important;
-}
-  .page-3 #body-header {
-  margin-top: var(--vh) !important;
-  position: relative !important;
-  width: 100% !important;
-  scroll-snap-align: center;
-  flex: none;
-  left: 0PX !important;
-  justify-content: space-around;
-  padding-bottom: 60px !important;
+  #button1:active, #button2:active {
+    background-color: var(--tag-bg);
+    border: solid 2px #667080 !important;
+  }
+  body {
+--content-border: 3px solid rgb(18, 18, 22);
+--tag-bg: #2e313a;
+--body-color: #adb4c0;  
+--border-color: solid 2px #363840;
+--text-color: #eee;
+--h2-color: #585f6a;
+--bkg-color: #000;
+--view_project-hov: #0b0d10;
+--view_project-but: #363840;
+--view_project-but-text: #EEF1F4;  
+--project-title: #e0e0e0;
 }
 }
-.main-image.BTprojpicture::after {
-  content: "";
-  width: 100%;
-  height: 4px;
-  position: relative;
-  display: flex;
-  bottom: 2px;
-}
- 
-
-      
-#body-text{
-    color: var(--body-color) !important;
-      }
-      h2 {
-      color: var(--h2-color);
-      }
-
 * {
 font-family: Arial, Helvetica, sans-serif;
 }
@@ -354,14 +509,7 @@ height: 12px;
   to   { transform: rotate(270deg) translate(0, 0px); }    
 }
 
-@keyframes rotatehue {
-  from { filter: hue-rotate(0deg); }
-  to  { filter: hue-rotate(360deg);}
-}
 
-.main-image.BTprojpicture {
-  animation: rotatehue 30s infinite;
-}
 #view_project:active {
   background-color: #eef1f4;
   border: solid 2px #667080!important;
@@ -385,27 +533,7 @@ margin-top: 0!important;
   user-select: none;
 }
   #body-copy{width: calc(100% - 60px);}
-#state1 {
-width: 30px;
-height: 30px;
-border-radius: 50%;
-box-shadow: inset 9px -6px 0px 3px var(--dark);
-position: absolute;
-right: 2px;
-z-index: 999;
-cursor:pointer;
-pointer-events: all;
-transition: .25s ease;
-top: calc(var(--vh) - 34px);
-transform: scale(.8);
-}
-
-#state1:hover {
-transform: scale(1.15);
-bottom: 5px;
-right: 5px;
-}
-  #button1.checked{margin-right:130px!important;}
+  .checked{margin-right:130px!important;}
   :root {
 --light: #fff;
 --dark: #28292c;
@@ -426,7 +554,6 @@ position: absolute;
 display: none;
 }
 
-}
 .btn-toggle {
 position: absolute;
 width: 100%;
@@ -434,13 +561,13 @@ height: 100%;
 border-radius: 50px;
 z-index:99;
 }
-.content-main * {
-    direction:ltr;
-      }
+
 button{
   all:unset;
       }
 .btn{transform: scale(.85)}
+body.dark-theme .btn-toggle {   box-sizing:border-box; border: 2px solid #363840;
+}
 .btn::hover {
 opacity: 1!important;
 }
@@ -458,23 +585,15 @@ transition: 0.5s;
 /*! transition-property: background-color,transform; */
 }
 
-
-
-
 .btn-toggle::after { content:""; transition: .5s; right:65px; opacity: 0;
 position: absolute;
 transform: scale(.9);
 }
-
-
   .one .BTprojpicture {
   background-image: url(https://designedbydan.art/assets/images/3240880DWE.png);
 }
 
-  #view_project:hover, #button2:active {
-background: var(--view_project-hov);
-}
-}@media screen and (max-width: 590px){
+@media screen and (max-width: 520px){
   .contain-logo{
     left: 30px!important;
   }
@@ -482,74 +601,78 @@ background: var(--view_project-hov);
     display: none!important;
   }
 }
-  @media screen and (max-height: 550px) {
-#body-header{
-    margin-top: calc(var(--vh) * 2)!important;
-    position: relative !important;
-    width: 100% !important;
-    scroll-snap-align: center;
-    flex: none;
-    left: 0PX !important;
-    justify-content: space-around;
-    padding-bottom: 60px !important;
-}.page-2{margin-top: calc(var(--vh) * 2) !important;}
-  .fixsize{max-height: calc(var(--vh) - 165px) !important;}
-  #body-text {
-  width: 100%;
-  max-width: 75vw !important;
-}
-    #logoblockfour, #logoblocktwo {
-    display: none;
-  }
-  #logoblockone, #logoblockthree {
-    border-left: solid #474747 1vw!important;
-    margin-left: 0px;
-  }
-  #logotype{
-  left: calc(6vw + 45px) !important;
 
+@media screen and (max-width:1300px) {
+
+  .page-4 {margin-top: 100vh!important;} 
+  
+div.page-3:nth-child(4) > div:nth-child(2)#body-header{
+margin-top:    100vh !important;
+    position: absolute !important;
+    max-width:    850px !important;
+    scroll-snap-align: end;
+padding-bottom: 2rem;
+place-content: center;
+display: flex;
+align-content: center;
+left: 0;
+right: 0;
+}
+
+  div.page-3:nth-child(4) > div:nth-child(2) > h:nth-child(4)#body-text {
+    /*! max-width: 70% !important; */
   }
-.main-image {
-    margin-left: auto!important;
-    position: absolute!important;
+}
+
+
+@media screen and (min-width:1300px) {
+  
+  div.page-3:nth-child(4) > div:nth-child(2)#body-header{
+    width: 30% !important;
+}
+  
+div.page-3:nth-child(4) > div:nth-child(1) {
+  min-width: 60% !important;
+  height: calc(100vh - 9rem);
+  box-sizing: content-box;
+  position: relative;
+  place-content: center;
+    display: inline-grid;
+  }
+}
+@media screen and (min-width: 1750px) and (min-height: 550px) {.page-1 > div:nth-child(2)#body-header {
+  width: 30% !important;
+  padding-right: 4rem;
+  position: inherit !important;
+  } 
+  #video {
+    margin: 0!important;
+  }
+}
+@media screen and (max-width: 1750px) and (min-height: 250px) {
+  #video {
     left: 0;
-    width: 100%!important;
-    margin-right: auto!important;
     right: 0;
+    min-width: 100%;
+    display: inline-grid;
+    position: absolute;
+    height: calc(100% - 9rem) !important;
   }
-    .page-2 > .main-image{
-     position: relative !important;
-  }
-  .body-2{
-    margin-top: var(--vh);
-  }
-}
-
-@media screen and (min-width: 1400px) and (max-height: 620px) {
-  .fixsize{width: auto !important;height:var(--vh) !important;}
-}
-@media screen and (max-width: 600px) and (max-height: 450px) {
-  .fixsize{width:100% !important;height: auto !important;}
-}
-@media screen and (min-width: 1400px) and (max-height: 580px) {
-  .fixsize{width:auto !important;height: var(--vh) !important;}
-}
-@media screen and (max-width: 1399px) and (min-width: 1350px) and (max-height: 580px) {
-  .fixsize{width:auto !important;max-height:  var(--vh) !important; /*! position: absolute !important; */}
-}
-
-
-@media screen and (max-width: 1200px) and (min-height: 250px) {
-#body-header{
-margin-top:  var(--vh) !important;
-    position: relative !important;
-    width: 100% !important;
-    scroll-snap-align: center;
+  
+  html body div.content-main div.page-1 div#body-header{position:     relative !important;right: 0;/*! height: calc(100% - 9rem) !important; */}
+  
+  
+  .page-1 > div:nth-child(2), .content-main > div:nth-child(4) > div:nth-child(1) {
+margin-top:100vh !important;
+    position:    relative !important;
+    width: 75% !important;
+    scroll-snap-align: end;
     flex: none;
     left: 0PX !important;
     justify-content: space-around;
-padding-bottom: 60px !important;
-}.page-2{margin-top: var(--vh) !important;}
+padding-bottom: 2rem;
+place-content: center;
+}.page-2{margin-top: 100vh !important;}
   #logoblockfour, #logoblocktwo {
     display: none;
   }
@@ -557,9 +680,8 @@ padding-bottom: 60px !important;
     border-left: solid #474747 1vw!important;
     margin-left: 0px;
   }
+
   #body-text {
-  width: 100%;
-  max-width: 75vw !important;
 }
 .main-image {
     margin-left: auto!important;
@@ -568,6 +690,7 @@ padding-bottom: 60px !important;
     width: 100%!important;
     margin-right: auto!important;
     right: 0;
+    height: 100%;
 }
   .body-2{
   margin-top: calc(var(--vh) * 1) !important;
@@ -577,33 +700,8 @@ padding-bottom: 60px !important;
   }
   
 }
-  #logoblockfour, #logoblocktwo {
-    display: none;
-  }
-@media screen and (max-width: 600px) {
-  #button1, #button2, #button3 {
-    box-sizing: inherit;
-    max-height: calc(100% - 2rem) !important;
-    height: 100% !important;
-    padding: 0.85rem 2.55rem !important;
-    margin-top: 0;
-  }
-}
-  #button1, #button2, #button3 {
-    margin-right: 2rem !important;
-}
-@media screen and (min-width: 600px) {
-  #button1, #button2, #button3 {
-    box-sizing: inherit;
-    max-height: calc(100% - 2rem) !important;
-    height: 100% !important;
-    padding: 1rem 3rem !important;
-    margin-top: -0.15rem;
-  }
-}
-#body-text {
-  max-width: 25vw;
-}
+
+
 
 #url {
   color: #2b9f97;
@@ -629,47 +727,36 @@ BREAKPOINT WIDTH
 
 
 */
-@media screen and (max-width: 380px) {
-      .checked, #button1, #button2 {
-  margin-left: 250px !important;
-  margin-right: 0px !important;
-  margin-bottom: 6px !important;
-}
-    .desktop-nav #button1.checked {
-  margin-right: 0px !important;
-      }
-.desktop-nav .btn {
-  position: fixed !important;
-  right: 50px !important;
-  bottom: 15px !important;
-  top: unset !important;
-}
-      }
-@media screen and (max-width: 720px) and (min-width: 380px) {
-    .desktop-nav #button1.checked {
-  margin-right: 0px !important;
-      }
-.desktop-nav .btn {
-  position: fixed !important;
-  right: 50px !important;
-  bottom: 15px !important;
-  top: unset !important;
-}
-      }
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 750px) {
 .project-title {
-  font-size: 28px !important;
-  line-height: 32px !important;
+  font-size: 2rem !important;
+  line-height: 2.4rem !important;
 }
 h2{
-  font-size: 16px!important;
-  margin: 3px 0 0 0!important;
-  line-height: 20px!important;
+  font-size: 1.05rem !important;
+  line-height: 2rem !important;
 }
 #body-text {
- font-size: 14px !important;
- line-height:21px!important;
- margin-top: 0px !important;
+ font-size:  .95rem !important;
+ line-height:1.7rem !important;
+ margin-top:  .4rem !important;
+ /*! width: 23vw; */
+} #body-header {}}
+
+@media screen and (min-width: 750px) {
+.project-title {
+  font-size: 2.4rem !important;
+  line-height: 2.8rem !important;
+}
+h2{
+  font-size: 1.25rem !important;
+  line-height: 2.5rem !important;
+  margin-top: -0.25rem !important;
+}
+#body-text {
+ font-size: 1rem !important;
+ line-height:1.8rem !important;
+ margin-top: .5rem !important;
  /*! width: 23vw; */
 } #body-header {}}
 
@@ -677,32 +764,34 @@ h2{
 #button1::after,#button2::after,#button3::after {
   font-size: 14px !important;
 }
-}
-*, ::before, ::after {
-  box-sizing: unset;
-}
 #button1,#button2,#button3 {
-  width: 30px;
-  height: 12px;
-  margin-top: 40px;
-  border-radius: 100px;
+  padding: 18px 55px !important;
 }
-#button1::after {
-  content: "Projects";
-  position: relative;
-  width: fit-content;
-  height: fit-content;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 22px;
-  letter-spacing: -0.01em;
-  font-feature-settings: 'calt' off;
-  color: var(--view_project-but-text);
-  font-family: 'Inter', sans-serif;
-  right: 0;
-  margin: 0 auto;
 }
+
+
+@media screen and (min-width: 1600px) {
+
+}
+@media screen and (max-width: 1600px) {
+    .page-4 {margin-top: 100vh!important;}
+  div.page-3:nth-child(5) > div:nth-child(2) {
+    margin-top: 100vh;
+    scroll-snap-align: end;
+    height: 100%;
+    /*! /*! display: inline-grid; */ /*! **/ display: inline-grid;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    place-content: center;
+    padding-bottom: 2rem;
+  }
+  
+div.page-3:nth-child(5) > div:nth-child(1) {position: absolute;height: calc(100% - 9rem) !important;width: 100%;margin: auto;left: 0;right: 0;}
+}
+
+
   #button2::after {
   content: "Contact";
   position: relative;
@@ -737,33 +826,6 @@ body {
   margin: 0;
 }
 
-/*.main-image {
-  width: 58vw;
-  height: calc(100vh - 157px);
-  background: #EEF1F4;
-  border: 3px solid #667080;
-  box-sizing: content-box;
-  position: relative;
-  top: calc(60px - -3.75vw);
-  margin-left: 30px;
-}
-*/
-.nav-bg{
-  background: white;
-height: 115px;
-margin-bottom: -110px;
-z-index: 1;
-position: absolute;
-width: 100%;
-}
-.desktop-nav {
-  position: fixed;
-  z-index: 2;
-  height: 3rem;
-  padding: 2rem;
-  width: 100%;
-  margin: 0px 0px 0px -2rem;
-}
 .temp-main-image {
   width: 58vw;
   height: calc(100vh - 150px);
@@ -775,45 +837,12 @@ width: 100%;
   margin-left: 30px;
 }
 .main-image {
-  width: calc(60vw - 30px);
-  height: calc(var(--vh) - 135px);
-  box-sizing: content-box;
+  /*! max-width: 60%; */
+  /*! max-height: 100%; */
+  /*! box-sizing: content-box; */
   position: relative;
-  place-content: center;
+  /*! /*! place-content: center; */ /*! **/ \/
   display: inline-grid;
-}
-.content-main {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    direction:rtl;
-    min-height: calc(100vh - 60px);
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    max-height: 100vh;
-    position: fixed;
-    width: calc(100% - 60px);
-    height: -webkit-fill-available;
-    padding: 105px 30px 30px 30px;
-}
-.page-1, .page-2, .page-3, page-4 {
-  scroll-snap-align: start;
-  width: 100%;
-  height: var(--vh);
-  pointer-events: none; 
-  position: relative;
-  display: flex;
-  z-index: 1;
-  padding-top: 105px;
-  padding-bottom: 30px;
-}
-#button1,#button2,#button3 {
-  width: 30px;
-  height: 12px;
-  margin-top: 0;
-  border-radius: 100px;
-    transition: .25s ease;
-  float: right;
-  margin-right: 30px;
 }
 
 .project-title {
@@ -828,15 +857,20 @@ width: 100%;
 }
 
 #tag-branding::after {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
   content: "Branding";
   font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-weight: 700;
-  font-size: 10.5px;
-  line-height: 22px;
   letter-spacing: -0.01em;
   font-feature-settings: 'calt' off;
   color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.7rem;
+  line-height: 2rem;
 }
 #tag-branding {
   display: flex;
@@ -847,7 +881,7 @@ width: 100%;
   border-radius: 24px;
   width: 36px;
   height: 12px;
-  margin: 12px 0px 18px 0px;
+  margin: 0.4rem 0px .6rem 0px;
 }
 #view_project:hover > .scrolldown{
     animation-name: floating2;
@@ -867,27 +901,20 @@ left: 0;
 right: 0;
 }
 #url:hover {
-  color: #191d20;
+  color: var(--view_project-but);
 }
-#view_project::after {
-  content: "Send Dan an email.";
-  position: absolute;
-  width: fit-content;
-  height: fit-content;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 22px;
-  letter-spacing: -0.01em;
-  font-feature-settings: 'calt' off;
-  color: var(--view_project-but-text);
-  font-family: 'Inter', sans-serif;
-  margin: 0 auto;
-  display: flex;
-  float: left;
-  left: 30px;
+
+
+
+  
+     
+#logotype:hover {
+  color: var(--body-color) !important;
 }
-@media screen and (max-width: 550px) {
+#logotype {
+transition: color .15s ease-in-out !important;
+}
+    
 .page-3 h#body-text.b::before {
   content: "When I drafted a series of ads for 9Tee's marketing campaign, my priority was connecting the audience to the brand's products and services, while staying true to the visual identity. With clear layouts using grids and alignment for visual balance, I employed crucial UX principles for a seamless user experience and easy comprehension. The designs complement the brand's aesthetic, featuring attention-grabbing visuals. I created a versatile library of UI components to accommodate different formats and devices, ensuring both consistency and flexibility. Strategic placement of elements like the logo, tagline, products, and calls to action guide user attention and encourage engagement.";
   }
@@ -922,32 +949,20 @@ function changevidsrc() {
     });
     </script>
 <div class="desktop-nav">
- <div style="background: var(--bkg-color);height: 105px;top: 0;width: 100%;position: absolute;"></div>
-         <img class="scrolldown floating" style="opacity: 0.45; width: 50px; position: fixed; margin-left: auto; margin-right: auto; right: 0px; bottom: 30px; left: 0px; z-index: 2; display: block;" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(300, -250, 1, 800))">
-               
-      
-    
-
-         <a href="https://designedbydan.art/" style="position: relative;text-decoration: none;"> <div id="logo" style="width: 150px;height: 45px;background: #FFFFFF;border: 3px solid #667080;box-sizing: border-box;left: 0px;right: 0;top: 0px;bottom: 60px;border: 1px solid #667080;/*! =============== breakpoint 1150px W ===============*/position: fixed;border: 1px solid #667080;margin-left: 30px;margin-top: 30px;content: &quot;LOGO&quot;;font-size: 24px;text-align: center;display: none;"></div><div style="left: 2rem;position: relative;padding-right: 2rem;width: 6vw;height: calc(100% - 4rem);top: 2px;">
+ <img class="scrolldown floating" style="opacity: 0.45; width: 50px; position: fixed; margin-left: auto; margin-right: auto; right: 0px; bottom: 30px; left: -10px; z-index: 2; display: none;" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(300, -250, 1, 800))">
+<div style="background: var(--bkg-color);height: 7rem;top: 0;width: 100%;position: absolute;"></div><a href="https://designedbydan.art/"> <div id="logo" style="width: 150px;height: 45px;background: #FFFFFF;border: 3px solid #667080;box-sizing: border-box;left: 0px;right: 0;top: 0px;bottom: 60px;border: 1px solid #667080;/*! =============== breakpoint 1150px W ===============*/position: fixed;border: 1px solid #667080;margin-left: 30px;margin-top: 30px;content: &quot;LOGO&quot;;font-size: 24px;text-align: center;display: none;"></div><div style="left: 2rem;position: relative;padding-right: 2rem;width: 6vw;height: calc(100% - 4rem);top: 2px;">
                  <div id="logoblockone" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;border-left: 1vw solid;border-left-color: currentcolor;border-left-color: #474747;"></div>
                  <div id="logoblocktwo" style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);border-right: 1vw solid #474747;"></div>
                  <div id="logoblockthree" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;top: 22px;border-left: 1vw solid;border-left-color: #474747;"></div>
                  <div id="logoblockfour" style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);top: 22px;border-right: 1vw solid #474747;"></div>
              </div><h id="logotype" style="font-family: 'Inter', sans-serif;font-style: normal;font-weight: 600;font-size: 16px;line-height: 48px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: var(--project-title);">Daniel Roswadowsky</h>
-</a><a href="/Projects/"> <div id="button1" style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: relative;flex: none;order: 0;flex-grow: 0;border: var(--border-color);margin-right: 0;"></div></a>
-  <a href="/Contact/">
-    <div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: absolute;position: relative;flex: none;order: 0;flex-grow: 0;border: var(--border-color);" id="button2">
-    </div>
-  </a>
-    </div>
+</a><a tabindex="0" href="/Projects/" id="button1" style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;/*! background: #EEF1F4; */position: relative;flex: none;order: 0;flex-grow: 0;margin-right: 30px;"></a><a style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 15px 45px;position: absolute;/*! background: #EEF1F4; */border-radius: 3rem;position: relative;flex: none;order: 0;flex-grow: 0;" id="button2" tabindex="0" href="/Contact/"></a></div>
+     
+<div class="content-main">
+<div class="page-1" style="">  
+<video muted="" autoplay="" playsinline="" loop="" width="100%" id="video" style="margin: auto;max-width: 100% !important;max-height: 100% !important;height: auto;width: auto;" src="https://designedbydan.art/assets/images/9tee21lmw_3.mp4" type="video/mp4">
 
-
-<div class="content-main" style="overflow-y: auto;">
-<div class="page-1" style="width: 100%;">  
-<div class="main-image BTprojpicture"><video muted="" autoplay="" playsinline="" loop="" width="100%" id="video" style="min-height:auto;max-height: -webkit-fill-available;margin: auto;top: 0;bottom: 0;block-size: inherit;" src="https://designedbydan.art/assets/images/9tee21lmw_3.mp4" type="video/mp4">
-
-</video>    
-</div><div id="body-header" style="position: inherit;height: calc(var(--vh) - 135px);font-family:'Inter';font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;margin-left: auto;font-feature-settings:'calt' off;color: #667080;display: inline-grid;align-content: center;bottom: 0;width: fit-content;/*! margin-top: calc(200% + 330px); */top: 0;margin-right: auto;"><h class="project-title" style="">9Tee</h><h2 style="font-family: 'Inter', sans-serif;
+</video><div id="body-header" style="position: absolute;height: 100%;font-family:'Inter';font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;margin-left: auto;font-feature-settings:'calt' off;color: #667080;display: inline-grid;align-content: center;bottom: 0;width: fit-content;/*! margin-top: calc(200% + 330px); */top: 0;margin-right: auto;max-width: 720px !important;"><h class="project-title" style="">9Tee</h><h2 style="font-family: 'Inter', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 24px;
@@ -958,27 +973,24 @@ font-feature-settings: 'calt' off;
 
 /* Primary */
 color: #667080;
-margin: 6px 0 0 0;
-">2018</h2><div id="tag-branding"></div><h id="body-text" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;">9Tee is a customizable print on-demand clothing brand that was developed as part of my portfolio. I took on the responsibility of designing a complete visual identity, including a minimal wordmark and logomark that would embody the brand's essence. Through careful consideration of form, typography, color, and other visual elements, the brand identity captures the unique personality of 9Tee. Designed alongisde the wordmark and logomark, I drafted a seies of modular web-based advertisements intended to clearly and quickly communicate the services provided while also effectively representing the brand's vision.</h></div>
-
-
-
-</div><div style="width: 100%;" class="page-2">  
-
-
-
-
-<div style="height: calc(var(--vh) - 135px);width: inherit;place-content: center;display: flex;align-items: center;"><div style="position: relative;top: 0;bottom: 0;width: 75%;height: 75%;"><div class="main-image" style="/*! background: linear-gradient(1255deg, rgb(0, 0, 0) -50%, rgb(61, 86, 97) 150%); */background-image: url(https://designedbydan.art/assets/images/weqhj15232.png);background-size: contain;background-position: center;background-repeat:no-repeat;height: 100%;width: 100%;"></div></div></div></div>
-
-    <div style="width: 100%;" class="page-2">  
-<div style="height: calc(var(--vh) - 135px);width: inherit;place-content: center;display: flex;align-items: center;"><div style="position: relative;top: 0;bottom: 0;width: 85%;height: 85%;"><div class="main-image" style="height: 100% !important;/*! background: linear-gradient(1255deg, rgb(0, 0, 0) -50%, rgb(61, 86, 97) 150%); */background-image: url(https://designedbydan.art/assets/images/weqhj32@0.5x.png);background-size: contain;background-position: center;background-repeat:no-repeat;width: 100%;"></div></div></div>
+margin: 0;
+">2018</h2><div id="tag-branding"></div><h id="body-text" style="font-style: normal; font-weight: 400; font-size: 16px; line-height: 24px; letter-spacing: -0.02em; font-feature-settings: &quot;calt&quot; 0; color: rgb(102, 112, 128); font-family: &quot;Inter&quot;, sans-serif;">9Tee is a customizable print on-demand clothing brand that was developed as part of my portfolio. I took on the responsibility of designing a complete visual identity, including a minimal wordmark and logomark that would embody the brand's essence. Through careful consideration of form, typography, color, and other visual elements, the brand identity captures the unique personality of 9Tee. Designed alongisde the wordmark and logomark, I drafted a seies of modular web-based advertisements intended to clearly and quickly communicate the services provided while also effectively representing the brand's vision.</h></div>
 
 
 
 </div>
-    
-    
-<div style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;place-content: ;width: 100% !important;scroll-snap-align: center;display: inherit;max-width: 1000px;margin-left: auto;margin-right: auto;scroll-snap-align: center;justify-content: space-around;margin-top: calc(var(--vh) / 2);margin-bottom: calc(var(--vh) / 2);" class="" id="body-header"><h class="project-title" style="max-width: 90%;display: block;margin: auto;">Designing the Brand Identity</h><h2 style="font-family: 'Inter', sans-serif;
+<div style="" class="page-2">  
+
+
+
+
+<div style="position: relative;width: 80%;height: 80%;margin: auto;display: flex;"><div class="main-image" style="/*! background: linear-gradient(1255deg, rgb(0, 0, 0) -50%, rgb(61, 86, 97) 150%); */background-image: url(https://designedbydan.art/assets/images/weqhj15232.png);background-size: contain;background-position: center;background-repeat:no-repeat;height: 100%;width: 100%;"></div></div></div><div style="" class="page-2">  
+
+
+
+
+<div style="position: relative;width: 85%;height: 85%;margin: auto;display: flex;"><div class="main-image" style="/*! background: linear-gradient(1255deg, rgb(0, 0, 0) -50%, rgb(61, 86, 97) 150%); */background-image: url(https://designedbydan.art/assets/images/weqhj32@0.5x.png);background-size: contain;background-position: center;background-repeat:no-repeat;height: 100%;width: 100%;"></div></div></div><div style="height: 100%;margin-top: 100vh !important;position: relative !important;width: 100% !important;scroll-snap-align: end;flex: none;left: 0PX !important;justify-content: space-around;padding-bottom: 2rem;display: inline-grid;align-content: center;top: 0;bottom: 0;margin: auto;place-content: center;">
+  <div style="position: relative;font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;max-width: 1150px;justify-content: space-around;scroll-snap-align: none;padding: 0;margin:  auto !important;" class="" id="body-header"><h class="project-title" style="">Designing the Brand Identity</h><h2 style="font-family: 'Inter', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 24px;
@@ -989,20 +1001,18 @@ font-feature-settings: 'calt' off;
 
 /* Primary */
 color: #667080;
-margin:   6px auto auto auto !important;
+margin:   6px 0 0 0 !important;
 display: block;
-max-width: 90%;
-">Statement:</h2><div></div><h id="body-text" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;margin-top: 12px !important;margin: auto;max-width: 90% !important;display: block;">
-Designing the logomark, I focused on clarity and simple gesture through form. It was a priority for the mark to be easily recognizable and legible across different applications, whether it would displayed on the website, social media profiles, or printed on clothing tags and accessories. For the wordmark, I decided on crafting a unique typographic style to complement the logomark that visually reflected the brand’s personality, evoking a clean, balanced, and playful look that conveys unconventionality. </h></div><div style="width: 100%;" class="page-3">  
-<div class="main-image" style="background-image: url(https://designedbydan.art/assets/images/9Teeadsr463.png);max-width: 850px;margin: 0 auto;background-size: contain;background-position: center;background-repeat: no-repeat;"></div>
+">Statement:</h2><h id="body-text" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;margin-top: 12px;margin: auto;display: block;">Designing the logomark, I focused on clarity and simple gesture through form. It was a priority for the mark to be easily recognizable and legible across different applications, whether it would displayed on the website, social media profiles, or printed on clothing tags and accessories. For the wordmark, I decided on crafting a unique typographic style to complement the logomark that visually reflected the brand’s personality, evoking a clean, balanced, and playful look that conveys unconventionality. </h></div></div>
+    
+    
+    <div style="" class="page-3">  
+<div style="place-content: center;height: inherit;display: flex;background-image: url(https://designedbydan.art/assets/images/9Teeadsr463.png);max-width: 850px !important;background-size: contain;background-position: center;background-repeat: no-repeat;"></div>
 
 
 
 
-
-
-
-<div style="place-content: center;bottom: 0;position: inherit;height: calc(var(--vh) - 135px);font-family: 'Inter';font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;display: inline-grid;align-content: center;bottom: 0;width: fit-content;top: 0;margin: 0 auto;" id="body-header"><h class="project-title">Web Advertisements</h><h2 style="font-family: 'Inter', sans-serif;
+<div id="body-header" style=""><h class="project-title">Web Advertisements</h><h2 style="font-family: 'Inter', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 24px;
@@ -1014,17 +1024,16 @@ font-feature-settings: 'calt' off;
 /* Primary */
 color: #667080;
 margin: 6px 0 0 0;
-">Drafts for Marketing Campaign</h2><div></div><h class="b" id="body-text" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;margin-top: 12px !important;"></h></div></div>
-      <div style="width: 100%;" class="page-2 a">  
+">Drafts for Marketing Campaign</h2><h id="body-text" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;margin-top: 12px;"></h></div></div>
+<div style="" class="page-4">  
 
 
 
 
-<div style="height: calc(var(--vh) - 135px);width: inherit;place-content: center;display: flex;align-items: center;"><div style="position: relative;top: 0;bottom: 0;width: 95%;height: 90%;"><div class="main-image" style="height: 100% !important;/*! background: linear-gradient(1255deg, rgb(0, 0, 0) -50%, rgb(61, 86, 97) 150%); */background-image: url(https://designedbydan.art/assets/images/Screenshot%2020D23-11-01%20114130.png);background-size: contain;background-position: center;background-repeat:no-repeat;width: 100%;"></div></div></div></div>
-
-
+<div style="position: relative;top: 0;bottom: 0;width: 98%;height: 90%;background-image: url(https://designedbydan.art/assets/images/Screenshot%2020D23-11-01%20114130.png);background-size: contain;background-position: center;background-repeat: no-repeat;left: 0;right: 0;margin: auto;"></div></div>
     
-<div class="page-3" style="height: var(--vh);width: 100%;scroll-snap-align: center;position: relative;padding-top: 105px;padding-bottom: 30px;align-items: center;"> <div id="body-copy" style="min-height: fit-content;flex-direction: column;font-family: 'Inter';margin-right: 30px;font-style: normal;z-index: 2;font-weight: 400;font-size: 9px;display: inline-flex;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;top: 0;bottom: 0px;height: fit-content;left: 0;right: 0;justify-content: center;position: absolute;width: fit-content;margin: auto;padding-bottom: 30px;/*! width: calc(100vw - 60px); */max-width: calc(100vw - 60px);"><div style="/*! transform: scale(1.5); *//*! width: 100%; *//*! height: 100%; */max-width: 832px;"><h class="project-title" style="">That's all for this project.<br style="margin-bottom: 30px;">
+    <div class="page-3" style=""> <div style="width: 100%;place-content: center;display: flex;height: 100%;">
+  <div id="body-copy" style="flex-direction: column;font-family: 'Inter';margin-right: 30px;font-style: normal;z-index: 2;font-weight: 400;font-size: 9px;display: inline-flex;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;top: 30px;bottom: 0px;height: fit-content;width: fit-content;margin: auto;padding-bottom: 30px;"><div style="/*! transform: scale(1.5); *//*! width: 100%; *//*! height: 100%; */max-width: 832px;"><h class="project-title" style="">That's all for this project.<br style="margin-bottom: 30px;">
 Lets get in contact!</h><h2 style="font-family: 'Inter', sans-serif;
 font-style: normal;
 font-weight: 700;
@@ -1037,15 +1046,18 @@ font-feature-settings: 'calt' off;
 /* Primary */
 color: #667080;
 position: relative;
-">Don't be shy...</h2><h style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;display: flex;" id="body-text">Email: danrossgfx@gmail.com</h></div><a href="mailto:danrossgfx@gmail.com" style="width: fit-content;border-radius: 100px;display: flex;margin-top: auto;pointer-events: all;top: 2rem;position: relative;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border:var(--border-color);margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity:45%;width: 25px;transform: rotate(270deg);right: 30px;position: absolute;" class="scrolldown" src="https://designedbydan.art/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a>
-<a href="mailto:danrossgfx@gmail.com"></a></div></div></div><script>
-window.addEventListener("scroll", function(event) {
-var y = document.getElementsByClassName('content-main')[0].scrollTop
-console.log(y);
-console.log(window.innerHeight * 7)
-if (y > window.innerHeight * 3.75) { document.querySelector('.scrolldown').style.display='none'; } else { document.querySelector('.scrolldown').style.display='block'; } }, true);
+">Don't be shy...</h2><h style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;display: flex;" id="body-text">Email: danrossgfx@gmail.com</h></div><a href="mailto:danrossgfx@gmail.com" style="width: fit-content;border-radius: 100px;display: flex;margin-top: auto;pointer-events: all;top: 2rem;position: relative;"><div style="display: inline-flex;flex-direction: row;justify-content: center;align-items: center;padding: 30px 120px;border:var(--border-color);margin-right: 0px;border-radius: 50px;width: fit-content;position: sticky;transition: ease-in-out .25s;cursor: pointer;" id="view_project"><img style="opacity: 0.45; width: 25px; transform: rotate(270deg); right: 30px; position: absolute; display: block;" class="scrolldown" src="https://designedbydan.art/assets/images/noun-down-928643.svg#svgView(viewBox(350, -380, 1, 820))"></div></a>
+</div></div></div></div><script>
 
-     
+
+
+   window.addEventListener("scroll", function(event) {
+    var y = document.getElementsByClassName('content-main')[0].scrollTop
+
+if (y > document.getElementsByClassName('content-main')[0].clientHeight) { document.querySelector('img.scrolldown').style.display='none'; }
+else { document.querySelector('img.scrolldown').style.display='block';} 
+}, true);
+
 
   function reorder(){
 document.getElementsByClassName('content-main')[0].scrollTop +=8;
@@ -1066,73 +1078,17 @@ window.onresize = reorder();
   function reorder(){
 document.getElementsByClassName('content-main')[0].scrollTop +=8;
                        document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
-      document.getElementsByClassName('content-main')[0].style.setProperty('overflow-y', 'auto');
 }
 
 window.addEventListener('resize', function(event) {
     reorder();
 }, true);
 
-</script><style type="text/css"></style><script>	
-    function reorder(){
-document.getElementsByClassName('content-main')[0].scrollLeft +=8
-}
-function reorder2(){
-document.getElementsByClassName('content-main')[0].scrollLeft +=400}
-    
-$( document ).ready(function() {
-
-      		          document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
-                       document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
-                       document.querySelector(':root').style.setProperty('--ww', window.innerWidth + 'px');
-                       document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
-         document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
-         reorder();
-      
-});
+</script><style type="text/css"></style>
 
 
-const scrollContainer = document.querySelector(".content-main");
-
-window.addEventListener('resize', function(event) {
-              document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
-          document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
-    		          document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
-                       document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
-                       document.querySelector(':root').style.setProperty('--ww', window.innerWidth + 'px');
-                       document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
-});
-      </script>
-<script>	
-    function reorder(){
-document.getElementsByClassName('content-main')[0].scrollLeft +=8
-}
-function reorder2(){
-document.getElementsByClassName('content-main')[0].scrollLeft +=400}
-    
-$( document ).ready(function() {
-
-      		          document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
-                       document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
-                       document.querySelector(':root').style.setProperty('--ww', window.innerWidth + 'px');
-                       document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
-         document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
-         reorder();
-      
-});
 
 
-const scrollContainer = document.querySelector(".content-main");
-
-window.addEventListener('resize', function(event) {
-              document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
-          document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
-    		          document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
-                       document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
-                       document.querySelector(':root').style.setProperty('--ww', window.innerWidth + 'px');
-                       document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
-});
-      </script>
 </body><script>	
     function reorder(){
 document.getElementsByClassName('content-main')[0].scrollLeft +=8

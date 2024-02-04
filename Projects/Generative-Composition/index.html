@@ -967,82 +967,13 @@ right: 0;
 transition: color .15s ease-in-out !important;
 }
 
+
+        
 @media screen and (min-width: 700px) and (max-width: 870px) {
   .page-1 > div:nth-child(2) > h:nth-child(4) { overflow: clip; -webkit-box-orient: vertical; display: -webkit-inline-box; }
-  @media screen and (max-height: 410px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-  -webkit-line-clamp: 1;
-}
-  }
-@media screen and (min-height: 410px) and (max-height: 440px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-  -webkit-line-clamp: 2;
-}
-  }
-  @media screen and (min-height: 440px) and (max-height: 470px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-  -webkit-line-clamp: 3;
-}
-  }
-    @media screen and (min-height: 470px) and (max-height: 500px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-  -webkit-line-clamp: 4;
-}
-  }
-   @media screen and (min-height: 500px) and (max-height: 530px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-  -webkit-line-clamp: 5;
-}
-  }
-   @media screen and (min-height: 530px) and (max-height: 560px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-  -webkit-line-clamp: 6;
-}
-  }
-      @media screen and (min-height: 560px) and (max-height: 590px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-  -webkit-line-clamp: 7;
-}
-  }
-         @media screen and (min-height: 590px) and (max-height: 620px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-  -webkit-line-clamp: 8;
-}
-  }
-   @media screen and (min-height: 620px) and (max-height: 650px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-  -webkit-line-clamp: 9;
-}
-  }
-     @media screen and (min-height: 650px) and (max-height: 680px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-  -webkit-line-clamp: 10;
-}
-  }
 }
         @media screen and (max-width: 700px) {
   .page-1 > div:nth-child(2) > h:nth-child(4) { overflow: clip; -webkit-box-orient: vertical; display: -webkit-inline-box; }
-  @media screen and (max-height: 410px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-}
-  }
-@media screen and (min-height: 410px) and (max-height: 440px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-}
-  }
-  @media screen and (min-height: 440px) and (max-height: 470px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-}
-  }
-    @media screen and (min-height: 470px) and (max-height: 500px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-
-  }
-   @media screen and (min-height: 500px) and (max-height: 530px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-}
-  }
-   @media screen and (min-height: 530px) and (max-height: 560px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-}
-  }
-      @media screen and (min-height: 560px) and (max-height: 590px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-}
-  }
-         @media screen and (min-height: 590px) and (max-height: 620px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-}
-  }
-   @media screen and (min-height: 620px) and (max-height: 650px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-}
-  }
-     @media screen and (min-height: 650px) and (max-height: 680px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
-  -webkit-line-clamp: 10;
-}
-  }
 }
 </style>
     
@@ -1191,7 +1122,10 @@ window.addEventListener('resize', function(event) {
                        document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
                        document.querySelector(':root').style.setProperty('--ww', window.innerWidth + 'px');
                        document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
-                             document.querySelector('.page-1 > div:nth-child(2) > h:nth-child(4)').style.setProperty('-webkit-line-clamp', Math.round(mapRange(window.innerHeight, 420, 1800, 1, 60)));
+                             
+    if (window.innerWidth > 700 && window.innerWidth < 870) {
+    document.querySelector('.page-1 > div:nth-child(2) > h:nth-child(4)').style.setProperty('-webkit-line-clamp', Math.round(mapRange(window.innerHeight, 420, 1800, 1, 60)));
+    }
     if (window.innerWidth > window.innerHeight) { 
         if (mapRange(window.innerHeight, 144, 864, 0, 1.0) <= 1.0 ) { document.querySelector(':root').style.setProperty('--scaleapp', mapRange(window.innerHeight, 144, 864, 0, 1.0)); } else { document.querySelector(':root').style.setProperty('--scaleapp', 1); }
     } else { 

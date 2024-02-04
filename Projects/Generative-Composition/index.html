@@ -17,6 +17,7 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
     <style>
 
 
+
 /* Content-main code */
 
   @media screen and (min-width: 900px) and (min-height: 900px) {
@@ -611,7 +612,7 @@ transform: scale(.9);
 
 @media screen and (max-width:1300px) {
 
-  .page-4 {margin-top: 100vh!important;} 
+  .page-4 {/*! margin-top: 100vh!important; */} 
   
 div.page-3:nth-child(4) > div:nth-child(2)#body-header{
 margin-top:    100vh !important;
@@ -811,10 +812,11 @@ place-self: center;
   div.page-3:nth-child(5) > div:nth-child(2) {    margin-right: auto;
     margin-left: auto;width: 35%;
 place-self: center;
-}
+}   
+  .page-4 {/*! margin-top: 100% !important; */}
 }
 @media screen and (max-width: 1600px) {
-    .page-4 {margin-top: 100vh!important;}
+
   div.page-3:nth-child(5) > div:nth-child(2) {
     margin-top: 100vh;
     scroll-snap-align: end;
@@ -985,9 +987,7 @@ div.page-3:nth-child(5) > div:nth-child(2) > h:nth-child(3)::before{
   content: "When I drafted a series of ads for 9Tee's digital marketing campaign, my priority was to effectively connect the audience to the products and services offered by 9Tee while also communicating the brand's identity. To achieve this, I started with a clear and structured layout, utilizing grids and alignment to create a visually balanced composition. With close attention to UX principles, I facilitated a seamless user experience that allows for easy comprehension of information. To maintain consistency with the brand’s visual identity, I ensured the designs complemented the same typography, color palette, and overall aesthetic as the brand’s wordmark and logomark, incorporating attention-grabbing visuals with personality. To accommodate various ad formats, devices, and proportions, I developed a versatile library of modular UI components, such as buttons, image placeholders, and text blocks that provided efficiency and flexibility for any alterations or iterations while ensuring a consistent visual language. By strategically placing important elements with a focus on hierarchy, such as the brand’s logo, tagline, featured products, and calls to action, I employed effective layout techniques that guide the user’s attention and encourage engagement.";
   }
   }
-#video > video:nth-child(1) {
-clip-path: inset(0 0 5px 0);
-}
+
 
 
 

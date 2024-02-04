@@ -1011,7 +1011,7 @@ transition: color .15s ease-in-out !important;
   }
 }
         @media screen and (max-width: 700px) {
-  .page-1 > div:nth-child(2) > h:nth-child(4) { overflow: clip; -webkit-box-orient: vertical; display: -webkit-inline-box;  counter-reset: p124h 410;}
+  .page-1 > div:nth-child(2) > h:nth-child(4) { overflow: clip; -webkit-box-orient: vertical; display: -webkit-inline-box; }
   @media screen and (max-height: 410px) { .page-1 > div:nth-child(2) > h:nth-child(4) {
 }
   }
@@ -1191,7 +1191,7 @@ window.addEventListener('resize', function(event) {
                        document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
                        document.querySelector(':root').style.setProperty('--ww', window.innerWidth + 'px');
                        document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
-                             document.querySelector('.page-1 > div:nth-child(2) > h:nth-child(4)').style.setProperty('-webkit-line-clamp', Math.round(mapRange(window.innerHeight, 420, 1800, 1, 60));
+                             document.querySelector('.page-1 > div:nth-child(2) > h:nth-child(4)').style.setProperty('-webkit-line-clamp', Math.round(mapRange(window.innerHeight, 420, 1800, 1, 60)));
     if (window.innerWidth > window.innerHeight) { 
         if (mapRange(window.innerHeight, 144, 864, 0, 1.0) <= 1.0 ) { document.querySelector(':root').style.setProperty('--scaleapp', mapRange(window.innerHeight, 144, 864, 0, 1.0)); } else { document.querySelector(':root').style.setProperty('--scaleapp', 1); }
     } else { 

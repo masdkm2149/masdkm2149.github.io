@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"> 
   <style>
+
 /* Content-main code */
 
   @media screen and (min-width: 900px) and (min-height: 900px) {
@@ -662,9 +663,6 @@ div.page-3:nth-child(4) > div:nth-child(1) {
   }
 }
 @media screen and (max-width: 1750px) and (min-height: 250px) {
-  #vid {
-
-  }
   
   html body div.content-main div.page-1 div#body-header{position:     relative !important;right: 0;/*! height: calc(100% - 9rem) !important; */}
   
@@ -718,22 +716,7 @@ place-content: center;
   position: relative;
   z-index: 2;
 }
-/*@media screen and (max-width: 900px) {
-.scrolldown {
- width: 150px!important ;
-}
-}
 
-
-BREAKPOINT WIDTH
-
-1150PX
-
-!!!!!!!!!!!!!!!!!!!
-
-
-
-*/
 @media screen and (max-width: 750px) {
 .project-title {
   font-size: 2rem !important;
@@ -889,7 +872,7 @@ body {
   font-feature-settings: 'calt' off;
   color: var(--project-title);
 }
-#p5jsapp { transform: scale(var(--scaleapp)); }
+#p5jsapp { transform: scale(var(--scaleapp)); margin: var(--scaleapp) !important;}
 @media screen and (max-width: 550px) {
  .content-main > div:nth-child(4) > div:nth-child(1) > h:nth-child(3)::before { content: "A user interface controlled by sliders allows for adjustments to various properties in the code which actively shape the composition. Users can explore different visual outcomes with the slider interface and find their own preferred aesthetics. Adjusting various properties of the composition in real-time dynamically corresponds to changes in the code. Interactivity, as implemented in this project offered an opportunity for participants to actively engage in the creative process."; }
   .page-1 h#body-text::before { content: "Leveraging the power of JavaScript and p5.js library, I developed an interactive visual experience which transforms code into a generative abstract composition. The project combines algorithmic forms, user interaction, and aesthetics like shape, color, and rhythm. An interactive user interface allows adjustments to properties of the composition using sliders. Adjusting the properties in real-time corresponds with different visual outcomes. I designed and selected different compositions which display a variety of iterations."; }
@@ -963,11 +946,6 @@ div.page-3:nth-child(5) > div:nth-child(2) > h:nth-child(3)::before{
   content: "When I drafted a series of ads for 9Tee's digital marketing campaign, my priority was to effectively connect the audience to the products and services offered by 9Tee while also communicating the brand's identity. To achieve this, I started with a clear and structured layout, utilizing grids and alignment to create a visually balanced composition. With close attention to UX principles, I facilitated a seamless user experience that allows for easy comprehension of information. To maintain consistency with the brand’s visual identity, I ensured the designs complemented the same typography, color palette, and overall aesthetic as the brand’s wordmark and logomark, incorporating attention-grabbing visuals with personality. To accommodate various ad formats, devices, and proportions, I developed a versatile library of modular UI components, such as buttons, image placeholders, and text blocks that provided efficiency and flexibility for any alterations or iterations while ensuring a consistent visual language. By strategically placing important elements with a focus on hierarchy, such as the brand’s logo, tagline, featured products, and calls to action, I employed effective layout techniques that guide the user’s attention and encourage engagement.";
   }
   }
-#video > video:nth-child(1) {
-clip-path: inset(0 0 5px 0);
-}
-
-
 </style>
     
 
@@ -976,7 +954,7 @@ clip-path: inset(0 0 5px 0);
 <body>
 
 <div class="desktop-nav">
- <img class="scrolldown floating" style="opacity: 0.45; width: 50px; position: fixed; margin-left: auto; margin-right: auto; right: 0px; bottom: 30px; left: -10px; z-index: 2; display: none;" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(300, -250, 1, 800))">
+ <img class="scrolldown floating" style="opacity: 0.45; width: 50px; position: fixed; margin-left: auto; margin-right: auto; right: 0px; bottom: 30px; left: -10px; z-index: 2; display: block;" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/noun-down-928643.svg#svgView(viewBox(300, -250, 1, 800))">
 <div style="background: var(--bkg-color);height: 7rem;top: 0;width: 100%;position: absolute;"></div><a href="https://designedbydan.art/"> <div id="logo" style="width: 150px;height: 45px;background: #FFFFFF;border: 3px solid #667080;box-sizing: border-box;left: 0px;right: 0;top: 0px;bottom: 60px;border: 1px solid #667080;/*! =============== breakpoint 1150px W ===============*/position: fixed;border: 1px solid #667080;margin-left: 30px;margin-top: 30px;content: &quot;LOGO&quot;;font-size: 24px;text-align: center;display: none;"></div><div style="left: 2rem;position: relative;padding-right: 2rem;width: 6vw;height: calc(100% - 4rem);top: 2px;">
                  <div id="logoblockone" style="width: 4vw;height: 22px;left: 0;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;border-right: calc(1vw) solid;border-color: #474747;border-left: 1vw solid;border-left-color: currentcolor;border-left-color: #474747;"></div>
                  <div id="logoblocktwo" style="width: 4vw;height: 22px;background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);z-index: 2;position: absolute;left: calc(6vw - 2px);border-right: 1vw solid #474747;"></div>
@@ -1044,7 +1022,7 @@ display: block;
 
 
 
-<div style="left: 0;right: 0;min-width: 100%;display: inline-grid;position: absolute;height: calc(100% - 9rem);"><iframe id="p5jsapp" scrolling="no" style="pointer-events: all;margin:auto;overflow:hidden!important;max-width: 720px;min-height: 720px;border: none;z-index: 1;height: auto;min-width: 720px;" src="https://designedbydan.art/Projects/Generative-Composition/webapp.html" width="100%" height="100%" frameborder="0"></iframe></div></div>
+<div style="left: 0;right: 0;min-width: 100%;display: inline-grid;position: absolute;height: calc(100% - 9rem);"><div style="margin: calc(var(--scaleapp) * 100);position: relative;width: calc(100vw - 4rem) !important;display: inline-grid;place-content: center;height: calc(100vh - 9rem);"><iframe scrolling="no" style="pointer-events: all;margin:0;overflow:hidden!important;max-width: 720px;min-height: 720px;border: none;z-index: 1;height: auto;min-width: 720px;" src="https://designedbydan.art/Projects/Generative-Composition/webapp.html" width="100%" height="100%" frameborder="0" id="p5jsapp" class="appmargins"></iframe></div></div></div>
     
     <div class="page-3" style=""> <div style="width: 100%;place-content: center;display: flex;height: 100%;">
   <div id="body-copy" style="flex-direction: column;font-family: 'Inter';margin-right: 30px;font-style: normal;z-index: 2;font-weight: 400;font-size: 9px;display: inline-flex;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;top: 30px;bottom: 0px;height: fit-content;width: fit-content;margin: auto;padding-bottom: 30px;"><div style="/*! transform: scale(1.5); *//*! width: 100%; *//*! height: 100%; */max-width: 832px;"><h class="project-title" style="">That's all for this project.<br style="margin-bottom: 30px;">
@@ -1128,6 +1106,7 @@ if (window.innerWidth > window.innerHeight) { document.querySelector(':root').st
 else { document.querySelector(':root').style.setProperty('--scaleapp', window.innerWidth *.0011); }
 });
       </script>
+
 
 
 

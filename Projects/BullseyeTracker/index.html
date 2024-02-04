@@ -19,6 +19,7 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
   <style>
 
 
+
 /* Content-main code */
 
   @media screen and (min-width: 900px) and (min-height: 900px) {
@@ -77,12 +78,12 @@ body div.content-main div.page-3 div#body-copy div h.project-title br {
   margin-bottom: 2.75rem!important;
 }
 
-  .page-3 h2 {
+#body-copy > div:nth-child(1) h2 {
     font-size: 1.25rem !important;
     margin: 1.25rem 0 0 0 !important;
     line-height: 1.25rem !important;
   }  
-.page-3 h#body-text {
+#body-copy > div:nth-child(1) h#body-text {
     font-size: 1rem !important;
     line-height: 1.25rem !important;
     margin: 1.25rem 0 0 0 !important;
@@ -103,7 +104,7 @@ body div.content-main div.page-3 div#body-copy div h.project-title br {
 }.main-image {
     -ms-overflow-style: none;
     scrollbar-width: none;
-    height: calc(100vh - 9rem);
+    height: 100%;
     position: fixed;
     width: calc(100% - 4rem);
     height: -webkit-fill-available;
@@ -113,7 +114,7 @@ body div.content-main div.page-3 div#body-copy div h.project-title br {
 .content-main {
     -ms-overflow-style: none;
     scrollbar-width: none;
-    height: calc(100vh - 9rem);
+    height: calc(100% - 9rem);
     position: fixed;
     width: calc(100% - 4rem);
     height: -webkit-fill-available;
@@ -650,11 +651,11 @@ div.page-3:nth-child(4) > div:nth-child(1) {
     display: inline-grid;
   }
 }
-@media screen and (min-width: 1100px) {.page-1 > div:nth-child(2) {
+@media screen and (min-width: 1200px) {.page-1 > div:nth-child(2) {
   width: 30%!important;
   }
 }
-@media screen and (max-width: 1100px) and (min-height: 250px) {
+@media screen and (max-width: 1200px) and (min-height: 250px) {
 #body-header{
 margin-top:100vh !important;
     position: relative !important;
@@ -684,6 +685,7 @@ padding-bottom: 2rem;
     width: 100%!important;
     margin-right: auto!important;
     right: 0;
+    height: calc(100% - 9rem) !important;
 }
   .body-2{
   margin-top: calc(var(--vh) * 1) !important;
@@ -720,21 +722,36 @@ BREAKPOINT WIDTH
 
 
 */
-
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 750px) {
 .project-title {
-  font-size: 28px !important;
-  line-height: 32px !important;
+  font-size: 2rem !important;
+  line-height: 2.4rem !important;
 }
 h2{
-  font-size: 16px!important;
-  margin: 3px 0 0 0!important;
-  line-height: 20px!important;
+  font-size: 1.05rem !important;
+  line-height: 2rem !important;
 }
 #body-text {
- font-size: 14px !important;
- line-height:21px!important;
- margin-top: 0px !important;
+ font-size:  .95rem !important;
+ line-height:1.7rem !important;
+ margin-top:  .4rem !important;
+ /*! width: 23vw; */
+} #body-header {}}
+
+@media screen and (min-width: 750px) {
+.project-title {
+  font-size: 2.4rem !important;
+  line-height: 2.8rem !important;
+}
+h2{
+  font-size: 1.25rem !important;
+  line-height: 2.5rem !important;
+  margin-top: -0.25rem !important;
+}
+#body-text {
+ font-size: 1rem !important;
+ line-height:1.8rem !important;
+ margin-top: .5rem !important;
  /*! width: 23vw; */
 } #body-header {}}
 
@@ -794,7 +811,7 @@ body {
 }
 .main-image {
   width: calc(60vw - 30px);
-  height: calc(100% - 9rem);
+  height: 100%;
   box-sizing: content-box;
   position: relative;
   place-content: center;
@@ -813,15 +830,20 @@ body {
 }
 
 #tag-branding::after {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
   content: "Branding";
   font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-weight: 700;
-  font-size: 10.5px;
-  line-height: 22px;
   letter-spacing: -0.01em;
   font-feature-settings: 'calt' off;
   color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.7rem;
+  line-height: 2rem;
 }
 #tag-branding {
   display: flex;
@@ -832,7 +854,7 @@ body {
   border-radius: 24px;
   width: 36px;
   height: 12px;
-  margin: 12px 0px 18px 0px;
+  margin: 0.4rem 0px .6rem 0px;
 }
 #view_project:hover > .scrolldown{
     animation-name: floating2;
@@ -866,9 +888,7 @@ right: 0;
 transition: color .15s ease-in-out !important;
 }
 
-  
-    
-    
+
     </style>
 
 </head>
@@ -887,7 +907,7 @@ transition: color .15s ease-in-out !important;
      
 <div class="content-main">
 <div class="page-1" style="">  
-<div class="main-image BTprojpicture"></div><div id="body-header" style="position: inherit;height: 100%;font-family:'Inter';font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;margin-left: auto;font-feature-settings:'calt' off;color: #667080;display: inline-grid;align-content: center;bottom: 0;width: fit-content;/*! margin-top: calc(200% + 330px); */top: 0;margin-right: auto;"><h class="project-title" style="">Bullseye Tracker</h><h2 style="font-family: 'Inter', sans-serif;
+<div class="main-image BTprojpicture" style=""></div><div id="body-header" style="position: inherit;height: 100%;font-family:'Inter';font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;margin-left: auto;font-feature-settings:'calt' off;color: #667080;display: inline-grid;align-content: center;bottom: 0;width: fit-content;/*! margin-top: calc(200% + 330px); */top: 0;margin-right: auto;"><h class="project-title" style="">Bullseye Tracker</h><h2 style="font-family: 'Inter', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 24px;
@@ -898,7 +918,7 @@ font-feature-settings: 'calt' off;
 
 /* Primary */
 color: #667080;
-margin: 6px 0 0 0;
+margin: 0;
 ">2019</h2><div id="tag-branding"></div><h id="body-text" style="font-style: normal; font-weight: 400; font-size: 16px; line-height: 24px; letter-spacing: -0.02em; font-feature-settings: &quot;calt&quot; 0; color: rgb(102, 112, 128); font-family: &quot;Inter&quot;, sans-serif;">BullseyeTracker (<span style=""><a style="" id="url" href="https://bullseyetracker.com">BullseyeTracker.com</a></span>) is a web-based scoring application that simplifies all the challenges involved in Bullseye Pistol Leagues. The goal was to design a brand identity that accurately reflected the function, values, and mission of the BullseyeTracker brand.
   <span style="">Designing the visual identity, I was responsible for developing the wordmark, logomark, UI/UX samples for web, and a brief style guide to help ensure visual consistency and cohesion.</span></h></div>
 
@@ -911,7 +931,7 @@ margin: 6px 0 0 0;
 
 
 <div class="main-image" style="width: 100%;background: linear-gradient(1255deg, rgb(0, 0, 0) -50%, rgb(61, 86, 97) 150%);"><img media="(min-width: 1500px)" style="width: 90%;display: flex;flex-direction: row;margin: 0 auto;top: 0;bottom: 0;position: relative;display: flex;place-content: center;max-width: 1400px;" src="https://artfiles.rutgers.edu/~rad%5cdbr73/assets/images/34r893i4t3.png"></div></div><div style="height: 100%;margin-top: 100vh !important;position: relative !important;width: 100% !important;scroll-snap-align: end;flex: none;left: 0PX !important;justify-content: space-around;padding-bottom: 2rem;display: inline-grid;align-content: center;top: 0;bottom: 0;margin: auto;place-content: center;">
-  <div style="position: relative;font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;max-width: 1000px;justify-content: space-around;scroll-snap-align: none;padding: 0;margin: 0 !important;" class="" id="body-header"><h class="project-title" style="max-width: 90%;display: block;margin: auto;">Designing the Brand Identity</h><h2 style="font-family: 'Inter', sans-serif;
+  <div style="position: relative;font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;max-width: 1150px;justify-content: space-around;scroll-snap-align: none;padding: 0;margin: 0 !important;" class="" id="body-header"><h class="project-title" style="max-width: 80%;display: block;margin: auto;">Designing the Brand Identity</h><h2 style="font-family: 'Inter', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 24px;
@@ -924,8 +944,8 @@ font-feature-settings: 'calt' off;
 color: #667080;
 margin:   6px auto auto auto !important;
 display: block;
-max-width: 90%;
-">Statement:</h2><div></div><h id="body-text" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;margin-top: 12px !important;margin: auto;max-width: 90% !important;display: block;">
+max-width: 80%;
+">Statement:</h2><div></div><h id="body-text" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;margin-top: 12px;margin: auto;max-width: 80% !important;display: block;">
   
  Communicating the brand’s philosophy through design, the visual identity for BullseyeTracker incorporates their core values of simplicity and ease of use. Crafting the wordmark and logomark, it was important that it would be recognizable to their target audience. The wordmark is clean, modern, and legible, with a bold yet approachable font that compliments the logomark and conveys the brand's no-nonsense approach to pistol leagues. Designing brand style guidelines provided a visual framework for ensuring cohesion in brand identity. The 12 page booklet includes guidelines for consistency in how visual assets are displayed across various applications, such as webpages in digital media, or business cards in printed media. </h></div></div><div style="" class="page-3">  
 <div style="place-content: center;min-width: 100%;height: inherit;display: flex;"><div class="main-image" style="position:     relative !important;
@@ -958,7 +978,7 @@ font-feature-settings: 'calt' off;
 /* Primary */
 color: #667080;
 margin: 6px 0 0 0;
-">Statement:</h2><div></div><h id="body-text" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;margin-top: 12px !important;">A logomark is the core visual representation of a brand's identity. Creating a sucessful mark should effectively communicate the brand's function or services as well as an essential overarching mission. The mark should be recognizable to a brand's targeted users as well as the broader community. On this basis, the criteria for developing the mark required it to be adaptable, identifiable, informative, and succinct. The BullseyeTracker logomark is a simple yet effective design which incorporates the iconic shape of the bullseye pistol.</h></div></div>
+">Statement:</h2><div></div><h id="body-text" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;margin-top: 12px;">A logomark is the core visual representation of a brand's identity. Creating a sucessful mark should effectively communicate the brand's function or services as well as an essential overarching mission. The mark should be recognizable to a brand's targeted users as well as the broader community. On this basis, the criteria for developing the mark required it to be adaptable, identifiable, informative, and succinct. The BullseyeTracker logomark is a simple yet effective design which incorporates the iconic shape of the bullseye pistol.</h></div></div>
 
 <div style="" class="page-4">  
 
@@ -1040,5 +1060,6 @@ window.addEventListener('resize', function(event) {
 }, true);
 
 </script><style type="text/css"></style>
+
 
 </body></html>

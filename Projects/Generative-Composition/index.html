@@ -1098,6 +1098,15 @@ function clamptextforpages (){
     if (window.innerWidth > 700) {
     document.querySelector('.content-main > div:nth-child(4) > div:nth-child(1) > h:nth-child(3)').style.setProperty('-webkit-line-clamp', Math.round(mapRange(window.innerHeight, 350, 2100, 1, 70)));
     }
+    if (window.innerWidth < 700 && window.innerWidth > 560) {
+    document.querySelector('.content-main > div:nth-child(4) > div:nth-child(1) > h:nth-child(3)').style.setProperty('-webkit-line-clamp', Math.round(mapRange(window.innerHeight, 320, 2100, 1, 70)));
+    }
+    if (window.innerWidth < 560 && window.innerWidth > 479) {
+    document.querySelector('.content-main > div:nth-child(4) > div:nth-child(1) > h:nth-child(3)').style.setProperty('-webkit-line-clamp', Math.round(mapRange(window.innerHeight, 370, 2100, 1, 70)));
+    }
+    if (window.innerWidth < 479 && window.innerWidth > 332) {
+    document.querySelector('.content-main > div:nth-child(4) > div:nth-child(1) > h:nth-child(3)').style.setProperty('-webkit-line-clamp', Math.round(mapRange(window.innerHeight, 385, 2100, 1, 70)));
+    }
 }
         
 // linearly maps value from the range (a..b) to (c..d)

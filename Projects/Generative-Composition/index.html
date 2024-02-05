@@ -194,9 +194,6 @@ width: 100%;
 {
   display: none;
 }
-  #view_project:hover, #button2:active {
-background: var(--view_project-hov);
-}
 .desktop-nav * {text-decoration: none;}
       @media screen and (max-width: 620px) {
   #logotype
@@ -306,7 +303,8 @@ span a#url {
   pointer-events: all;
 }
 @media (prefers-color-scheme: light) {
-    #button1:active, #button2:active {
+    #logotype:hover:active { color: var(--h2-color) !important; }
+    #view_project:hover:active, #button1:hover:active, #button2:hover:active {
     background-color: #eef1f4;
     border: solid 2px #667080!important;
 }
@@ -329,11 +327,10 @@ span a#url {
    .scrolldown {   filter: invert(0.8);  }
  label {background: none;}
   #button2:hover, #button1:hover {
-background-color:var(--view_project-hov);
 border-color: #6A7586 !important;
 }
-
-#view_project:active, #button1:active, #button2:active {
+#logotype:hover:active { color: var(--h2-color) !important; }
+#view_project:hover:active, #button1:hover:active, #button2:hover:active {
 background-color: var(--view_project-but);
 border: solid 2px #667080 !important;
 }

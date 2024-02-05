@@ -1083,6 +1083,18 @@ document.getElementsByClassName('content-main')[0].scrollTop +=8;
                        document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
 }
 
+function clamptextforpages (){
+    if (window.innerWidth > 470 && window.innerWidth < 700) {
+    document.querySelector('.page-1 > div:nth-child(2) > h:nth-child(4)').style.setProperty('-webkit-line-clamp', Math.round(mapRange(window.innerHeight, 420, 1800, 1, 60)));
+    }
+    if (window.innerWidth > 700 && window.innerWidth < 871) {
+    document.querySelector('.page-1 > div:nth-child(2) > h:nth-child(4)').style.setProperty('-webkit-line-clamp', Math.round(mapRange(window.innerHeight, 450, 2100, 1, 60)));
+    }
+    if (window.innerWidth > 871) {
+    document.querySelector('.page-1 > div:nth-child(2) > h:nth-child(4)').style.setProperty('-webkit-line-clamp', Math.round(mapRange(window.innerHeight, 420, 2100, 1, 60)));
+    }
+}
+        
 // linearly maps value from the range (a..b) to (c..d)
 function mapRange (value, a, b, c, d) {
     // first map value from (a..b) to (0..1)
@@ -1099,7 +1111,7 @@ function mapRange (value, a, b, c, d) {
 window.onresize = reorder();
 
 $( document ).ready(function() {
-      
+clamptextforpages();
     if (window.innerWidth > window.innerHeight) { 
         if (mapRange(window.innerHeight, 144, 864, 0, 1.0) <= 1.0 ) { document.querySelector(':root').style.setProperty('--scaleapp', mapRange(window.innerHeight, 144, 864, 0, 1.0)); } else { document.querySelector(':root').style.setProperty('--scaleapp', 1); }
     } else { 
@@ -1122,16 +1134,8 @@ window.addEventListener('resize', function(event) {
                        document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
                        document.querySelector(':root').style.setProperty('--ww', window.innerWidth + 'px');
                        document.querySelector(':root').style.setProperty('--pixelratio', window.devicePixelRatio);
-                             
-    if (window.innerWidth > 470 && window.innerWidth < 700) {
-    document.querySelector('.page-1 > div:nth-child(2) > h:nth-child(4)').style.setProperty('-webkit-line-clamp', Math.round(mapRange(window.innerHeight, 420, 1800, 1, 60)));
-    }
-    if (window.innerWidth > 700 && window.innerWidth < 871) {
-    document.querySelector('.page-1 > div:nth-child(2) > h:nth-child(4)').style.setProperty('-webkit-line-clamp', Math.round(mapRange(window.innerHeight, 450, 2100, 1, 60)));
-    }
-    if (window.innerWidth > 871) {
-    document.querySelector('.page-1 > div:nth-child(2) > h:nth-child(4)').style.setProperty('-webkit-line-clamp', Math.round(mapRange(window.innerHeight, 420, 2100, 1, 60)));
-    }
+                    
+clamptextforpages();
     if (window.innerWidth > window.innerHeight) { 
         if (mapRange(window.innerHeight, 144, 864, 0, 1.0) <= 1.0 ) { document.querySelector(':root').style.setProperty('--scaleapp', mapRange(window.innerHeight, 144, 864, 0, 1.0)); } else { document.querySelector(':root').style.setProperty('--scaleapp', 1); }
     } else { 

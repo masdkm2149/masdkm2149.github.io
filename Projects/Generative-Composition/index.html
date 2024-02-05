@@ -1023,7 +1023,7 @@ margin: 0;
 
 
 <div style="position: relative;width: 100%;height: 100%;margin: auto;display: flex;"><div class="main-image" style="background-image: url(https://designedbydan.art/assets/images/43535-459-34-95.png);background-size: contain;background-position: center;background-repeat:no-repeat;height: 100%;width: 100%;"></div></div></div><div style="height: 100%;margin-top: 100vh !important;position: relative !important;width: 100% !important;scroll-snap-align: end;flex: none;left: 0PX !important;justify-content: space-around;padding-bottom: 2rem;display: inline-grid;align-content: center;top: 0;bottom: 0;margin: auto;place-content: center;">
-  <div style="position: relative;font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;max-width: 1150px;justify-content: space-around;scroll-snap-align: none;padding: 0;margin:  auto !important;" class="" id="body-header"><h class="project-title" style="">Designing for Interaction</h><h2 style="font-family: 'Inter', sans-serif;
+  <div style="position: relative;font-style: normal;font-weight: 400;font-size: 16px;line-height: 22px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;max-width: 1150px;justify-content: space-around;scroll-snap-align: none;padding: 0;margin:  auto !important;place-content: center;display: inherit;" class="" id="body-header"><h class="project-title" style="">Designing for Interaction</h><h2 style="font-family: 'Inter', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 24px;
@@ -1036,7 +1036,7 @@ font-feature-settings: 'calt' off;
 color: #667080;
 margin:   6px 0 0 0 !important;
 display: block;
-">About Interactivity &amp; User Interface (UI)</h2><h id="body-text" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;margin-top: 12px;margin: auto;display: block;"></h></div></div>
+">About Interactivity &amp; User Interface (UI)</h2><h id="body-text" style="font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -0.02em;font-feature-settings: 'calt' off;color: #667080;font-family: 'Inter', sans-serif;margin-top: 12px;margin: auto;"></h></div></div>
     
     
     <div style="" class="page-3">  
@@ -1084,6 +1084,7 @@ document.getElementsByClassName('content-main')[0].scrollTop +=8;
 }
 
 function clamptextforpages (){
+    //page one
     if (window.innerWidth > 470 && window.innerWidth < 700) {
     document.querySelector('.page-1 > div:nth-child(2) > h:nth-child(4)').style.setProperty('-webkit-line-clamp', Math.round(mapRange(window.innerHeight, 420, 1800, 1, 60)));
     }
@@ -1092,6 +1093,10 @@ function clamptextforpages (){
     }
     if (window.innerWidth > 871) {
     document.querySelector('.page-1 > div:nth-child(2) > h:nth-child(4)').style.setProperty('-webkit-line-clamp', Math.round(mapRange(window.innerHeight, 420, 2100, 1, 60)));
+    }
+    //page four
+    if (window.innerWidth > 700) {
+    document.querySelector('.content-main > div:nth-child(4) > div:nth-child(1) > h:nth-child(3)').style.setProperty('-webkit-line-clamp', Math.round(mapRange(window.innerHeight, 350, 2100, 1, 70)));
     }
 }
         

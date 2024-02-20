@@ -21,6 +21,7 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
 
 
 
+
 /* Content-main code */
 
   @media screen and (min-width: 900px) and (min-height: 900px) {
@@ -665,17 +666,35 @@ right: 0;
     /*! max-width: 70% !important; */
   }
 }
+@media screen and (min-width:1800px) and (max-width:2000px)  {
+  
+  div.page-3:nth-child(4) > div:nth-child(2)#body-header{
+width:    35% !important;
+    max-width: fit-content !important;
+margin-left: 0 !important;
+padding-right: 4%;
+}
+}
+@media screen and (min-width:2000px) {
+  
+  div.page-3:nth-child(4) > div:nth-child(2)#body-header{
+width:    40% !important;
+    max-width: fit-content !important;
+margin-left: 0 !important;
+padding-right: 4%;
+}
+}
 
-
-@media screen and (min-width:1300px) {
+@media screen and (min-width:1300px) and (max-width:1800px) {
   
   div.page-3:nth-child(4) > div:nth-child(2)#body-header{
 max-width: fit-content !important;
 margin-left: 0 !important;
 padding-right: 4%;
-width: 40% !important;
+width:     30% !important;
+  }
 }
-  
+  @media screen and (min-width:1300px) {
 div.page-3:nth-child(4) > div:nth-child(1) {
     margin-right: auto;
     min-width: max-content !important;
@@ -924,6 +943,7 @@ right: 0;
 #logotype {
 transition: color .15s ease-in-out !important;
 }
+    
     </style>
 
 </head>

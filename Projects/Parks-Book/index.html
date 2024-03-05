@@ -17,6 +17,7 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
     <style>
 
 
+
 /* Content-main code */
 
   @media screen and (min-width: 900px) and (min-height: 900px) {
@@ -658,8 +659,34 @@ div.page-3:nth-child(4) > div:nth-child(1) {
     display: inline-grid;
   }
 }
+@media screen and (max-height:700px) {
+  html body div.content-main div.page-1 div { position: absolute;left: 0;right: 0;}
+  html body div.content-main div.page-1 div#body-header{position:       relative !important;right: 0;/*! height: calc(100% - 9rem) !important; */}
+  
+  
+  .page-1 > div:nth-child(2), .content-main > div:nth-child(4) > div:nth-child(1) {
+margin-top:100vh !important;
+    position:    relative !important;
+    width: 75% !important;
+    scroll-snap-align: end;
+    flex: none;
+    left: 0PX !important;
+    justify-content: space-around;
+padding-bottom: 2rem;
+place-content: center;
+}.page-2{margin-top: 100vh !important;}
 
-@media screen and (min-width: 2000px) and (min-height: 550px) {.page-1 > div:nth-child(2)#body-header {
+.main-image {
+    margin-left: auto!important;
+    position: absolute!important;
+    left: 0;
+    width: 100%!important;
+    margin-right: auto!important;
+    right: 0;
+    height: 100%;
+}  
+}
+@media screen and (min-width: 2000px) and (min-height: 700px) {.page-1 > div:nth-child(2)#body-header {
   padding: 0 10% 0 10%;
   max-width: 931px;
   } 
@@ -668,17 +695,17 @@ div.page-3:nth-child(4) > div:nth-child(1) {
 }
 
 
-@media screen and (max-width: 2000px) and (min-width: 1500px) and (min-height: 550px) {.page-1 > div:nth-child(2)#body-header {
+@media screen and (max-width: 2000px) and (min-width: 1500px) and (min-height:700px) {.page-1 > div:nth-child(2)#body-header {
   padding: 0 7% 0 7%;
   } 
 }
 
-@media screen and (max-width: 1500px) and (min-width: 1250px) and (min-height: 550px) {.page-1 > div:nth-child(2)#body-header {
+@media screen and (max-width: 1500px) and (min-width: 1250px) and (min-height: 700px) {.page-1 > div:nth-child(2)#body-header {
   padding: 0 6% 0 6%;
   } 
 }
 
-@media screen and (min-width: 1250px) and (min-height: 550px) {.page-1 > div:nth-child(2)#body-header {
+@media screen and (min-width: 1250px) and (min-height: 700px) {.page-1 > div:nth-child(2)#body-header {
   position: inherit !important;
   margin-left:   0 !important;
   } 
@@ -689,7 +716,7 @@ div.page-3:nth-child(4) > div:nth-child(1) {
   } 
   html body div.content-main div.page-1 div.p1i1 { /*! position: relative; *//*! left: -2rem; */width:  200% !important;}
 }
-@media screen and (max-width: 1250px) and (min-height: 250px) {
+@media screen and (max-width: 1250px){
   #vid {
     left: 0;
     right: 0;
@@ -1001,7 +1028,6 @@ div.page-3:nth-child(5) > div:nth-child(2) > h:nth-child(3)::before{
   .page-1 h#body-text::before {
   content: "I had the privilege of designing this book which exhibits the natural beauty of various national parks through a collection of stunning photograhs sourced from the National Park Service (NPS). The photography included in the short book is accompanied with brief overviews for the 16 parks selected. As the designer, my responsibilities were to provide the underlying structure, layout, hierarchy, and components for all the visuals and text.";}
   }
-
 </style>
     
 

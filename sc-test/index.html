@@ -10,15 +10,9 @@
 	</head>
 	<body ontouchstart="">
 		<script type="module" src="model-viewer.min.js"></script>
-<model-viewer src="scene.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="0.4" exposure="2" shadow-softness="1" tone-mapping="agx" environment-image="pillars_1k.hdr" auto-rotate min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 98deg auto" camera-orbit="259.2deg 54.43deg 3.686m" field-of-view="30deg">
+<model-viewer src="scene.gltf" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" poster="poster.webp" shadow-softness="1" auto-rotate="" min-camera-orbit="auto 0deg auto" camera-orbit="259.2deg 54.43deg 3.686m" field-of-view="30deg" ar-status="not-presenting" tone-mapping="ACES" environment-image="neutral.hdr" exposure="1" max-camera-orbit="auto 95deg auto" shadow-intensity="0.3">
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
-    </div>
-    <button slot="ar-button" id="ar-button">
-        View in your space
-    </button>
-    <div id="ar-prompt">
-        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
     </div>
 </model-viewer>
 	</body>

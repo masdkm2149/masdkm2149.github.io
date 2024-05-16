@@ -75,6 +75,8 @@ h {
 }
   .dotcursor.show { transition: .025s ease-out left, .025s ease-out right, .025s ease-out bottom, .025s ease-out top, 0.4s ease-out background-color, 0.2s ease-out width, 0.2s ease-out height, 0.2s ease-out margin; }
   .dotcursor {
+  user-select: none;
+  pointer-events: none;
   height: 80px;
   width: 80px;
   background-color: hsl(var(--txt_hue), var(--txt_saturation), var(--txt_brightness));

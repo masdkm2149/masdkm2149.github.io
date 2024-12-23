@@ -532,7 +532,7 @@ N3 = () => (
         let mouseX = 0,
             mouseY = 0,
             isOutsideViewport = true,
-            hasMovedInside = false; // Tracks if sufficient movement has occurred
+            hasMovedInside = false; // Tracks if movement threshold has been met
 
         // Function to append transform transition
         const appendTransformTransition = () => {
@@ -564,8 +564,8 @@ N3 = () => (
             if (isOutsideViewport) {
                 isOutsideViewport = false;
                 hasMovedInside = false;
-                removeTransformTransition(); // Remove transform transition on entry
                 cursorElement.classList.add("show"); // Add 'show' class on reentry
+                removeTransformTransition(); // Remove transform transition on entry
             }
 
             // Calculate movement distance
@@ -581,7 +581,7 @@ N3 = () => (
                 // Only append transition after 2px movement
                 if (!hasMovedInside && (dx >= 2 || dy >= 2)) {
                     hasMovedInside = true;
-                    appendTransformTransition();
+                    appendTransformTransition(); // Add transition after sufficient movement
                 }
             }
         }, 8);
@@ -660,9 +660,6 @@ N3 = () => (
         ],
     })
 );
-
-
-
 
 function $3(e) {
     return e && e.__esModule && Object.prototype.hasOwnProperty.call(e, "default") ? e.default : e

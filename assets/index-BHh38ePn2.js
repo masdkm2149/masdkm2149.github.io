@@ -532,10 +532,11 @@ N3 = () => (
         let mouseX = 0,
             mouseY = 0,
             isOutsideViewport = true,
-            hasMovedInside = false; // Tracks if movement threshold has been met
+            isTransitioning = false,  // Track if we are in the middle of a transition
+            movementThresholdMet = false;  // Flag to check if 2px movement threshold is met
 
-        // Function to append transform transition
-        const appendTransformTransition = () => {
+        // Function to append transform transition after the threshold is met
+        const appendTransition = () => {
             const computedStyle = window.getComputedStyle(cursorElement).transition;
             if (!computedStyle.includes("transform 0.05s ease-out")) {
                 cursorElement.style.transition = `${computedStyle}, transform 0.05s ease-out`.replace(
@@ -545,8 +546,8 @@ N3 = () => (
             }
         };
 
-        // Function to remove transform transition
-        const removeTransformTransition = () => {
+        // Function to remove transform transition (used when cursor is still)
+        const removeTransition = () => {
             const computedStyle = window.getComputedStyle(cursorElement).transition;
             cursorElement.style.transition = computedStyle
                 .split(",")
@@ -555,42 +556,44 @@ N3 = () => (
                 .trim();
         };
 
-        // Handle mouse move event
+        // Handle mouse movement inside the viewport
         const handleMouseMove = Vm((event) => {
             const newX = event.clientX;
             const newY = event.clientY;
 
-            // Detect when cursor reenters the viewport
+            // Detect when cursor re-enters the viewport
             if (isOutsideViewport) {
                 isOutsideViewport = false;
-                hasMovedInside = false;
-                cursorElement.classList.add("show"); // Add 'show' class on reentry
-                removeTransformTransition(); // Remove transform transition on entry
+                movementThresholdMet = false;
+                cursorElement.classList.add("show");  // Add show class when cursor re-enters
+                removeTransition();  // Remove transition to prevent any immediate effects
             }
 
             // Calculate movement distance
             const dx = Math.abs(newX - mouseX);
             const dy = Math.abs(newY - mouseY);
 
-            // Apply translation and add transition after valid movement
+            // Apply translation, but only after the movement threshold is met (2px)
             if (dx > 0 || dy > 0) {
                 mouseX = newX;
                 mouseY = newY;
                 cursorElement.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
 
-                // Only append transition after 2px movement
-                if (!hasMovedInside && (dx >= 2 || dy >= 2)) {
-                    hasMovedInside = true;
-                    appendTransformTransition(); // Add transition after sufficient movement
+                // If movement is above threshold, apply transition after a slight delay
+                if (!movementThresholdMet && (dx >= 2 || dy >= 2)) {
+                    movementThresholdMet = true;
+                    setTimeout(() => {
+                        appendTransition();  // Delay applying transition to avoid immediate jitter
+                    }, 50);  // 50ms delay for smoother transition after the threshold
                 }
             }
         }, 8);
 
-        // Handle mouse leave event
+        // Handle mouse leave event (remove transition and show class)
         const handleMouseLeave = () => {
-            isOutsideViewport = true; // Mark cursor as outside
-            removeTransformTransition(); // Remove transform transition
-            cursorElement.classList.remove("show"); // Remove 'show' class on exit
+            isOutsideViewport = true;
+            removeTransition();  // Remove transform transition on mouse leave
+            cursorElement.classList.remove("show");  // Remove show class on exit
         };
 
         // Handle touch move event
@@ -601,18 +604,18 @@ N3 = () => (
                 const newX = touch.clientX;
                 const newY = touch.clientY;
 
-                // Calculate movement distance
+                // Calculate movement distance for touch events
                 const dx = Math.abs(newX - mouseX);
                 const dy = Math.abs(newY - mouseY);
 
-                // Apply translation and add transition after valid movement
+                // Apply translation and add transition after sufficient movement
                 if (dx > 0 || dy > 0) {
                     mouseX = newX;
                     mouseY = newY;
                     cursorElement.style.transform = `translate(${mouseX - 10}px, ${mouseY - 10}px)`;
 
-                    // Append transition immediately for touch interactions
-                    appendTransformTransition();
+                    // Apply transition immediately for touch interaction
+                    appendTransition();
                 }
             }
         }, 8);
@@ -628,13 +631,13 @@ N3 = () => (
                 mouseX = touch.clientX;
                 mouseY = touch.clientY;
                 cursorElement.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-                appendTransformTransition(); // Always append for touch
+                appendTransition();  // Immediately apply transition for touch
             }
         });
         document.body.addEventListener("touchend", () => cursorElement.classList.remove("show"));
         document.body.addEventListener("touchmove", handleTouchMove);
 
-        // Cleanup on component unmount
+        // Cleanup event listeners on component unmount
         return () => {
             document.body.removeEventListener("mouseenter", () =>
                 cursorElement.classList.add("show")
@@ -660,6 +663,7 @@ N3 = () => (
         ],
     })
 );
+
 
 function $3(e) {
     return e && e.__esModule && Object.prototype.hasOwnProperty.call(e, "default") ? e.default : e

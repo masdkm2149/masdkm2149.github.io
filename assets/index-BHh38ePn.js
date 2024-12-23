@@ -531,67 +531,44 @@ N3 = () => (
 
         let mouseX = 0,
             mouseY = 0,
+            currentX = 0,
+            currentY = 0,
             isOutsideViewport = true;
 
-        // Flag to check if transition should be applied
-        let isTransitionAllowed = false;
+        // The speed at which the cursor will move to the target position
+        const cursorSpeed = 0.1; // Adjust this value for faster/slower smoothing
 
-        // Function to append transform transition
-        const appendTransformTransition = () => {
-            const computedStyle = window.getComputedStyle(cursorElement).transition;
-            if (!computedStyle.includes("transform 0.05s ease-out")) {
-                cursorElement.style.transition = `${computedStyle}, transform 0.05s ease-out`.replace(
-                    /^, /,
-                    ""
-                );
-            }
-        };
+        // Function to update cursor position smoothly
+        const updateCursorPosition = () => {
+            const dx = mouseX - currentX;
+            const dy = mouseY - currentY;
 
-        // Function to remove transform transition
-        const removeTransformTransition = () => {
-            const computedStyle = window.getComputedStyle(cursorElement).transition;
-            cursorElement.style.transition = computedStyle
-                .split(",")
-                .filter((t) => !t.trim().startsWith("transform"))
-                .join(",")
-                .trim();
+            // Lerp (linear interpolation) to gradually move the cursor
+            currentX += dx * cursorSpeed;
+            currentY += dy * cursorSpeed;
+
+            cursorElement.style.transform = `translate(${currentX}px, ${currentY}px)`;
+
+            // Continue the animation as long as the cursor is within the viewport
+            requestAnimationFrame(updateCursorPosition);
         };
 
         // Handle mouse move event
         const handleMouseMove = Vm((event) => {
-            const newX = event.clientX;
-            const newY = event.clientY;
+            mouseX = event.clientX;
+            mouseY = event.clientY;
 
             // Detect when cursor reenters the viewport
             if (isOutsideViewport) {
                 isOutsideViewport = false;
                 cursorElement.classList.add("show"); // Add 'show' class on reentry
-                removeTransformTransition(); // Remove transition on entry
-                // Only allow transition after movement starts
-                isTransitionAllowed = true;
-            }
-
-            // Calculate movement distance
-            const dx = Math.abs(newX - mouseX);
-            const dy = Math.abs(newY - mouseY);
-
-            // Apply translation and add transition after valid movement
-            if (dx > 0 || dy > 0) {
-                mouseX = newX;
-                mouseY = newY;
-                cursorElement.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-
-                // Add transition only if movement is detected and not on re-entry
-                if (isTransitionAllowed) {
-                    appendTransformTransition();
-                }
+                updateCursorPosition(); // Start smooth movement
             }
         }, 8);
 
         // Handle mouse leave event
         const handleMouseLeave = () => {
             isOutsideViewport = true; // Mark cursor as outside
-            removeTransformTransition(); // Remove transform transition
             cursorElement.classList.remove("show"); // Remove 'show' class on exit
         };
 
@@ -600,14 +577,11 @@ N3 = () => (
             event.preventDefault();
             if (event.touches.length > 0) {
                 const touch = event.touches[0];
-                const newX = touch.clientX;
-                const newY = touch.clientY;
+                mouseX = touch.clientX;
+                mouseY = touch.clientY;
 
-                // Apply translation and add transition
-                mouseX = newX;
-                mouseY = newY;
-                cursorElement.style.transform = `translate(${mouseX - 10}px, ${mouseY - 10}px)`;
-                appendTransformTransition(); // Always append for touch
+                // Apply smooth cursor movement for touch events
+                updateCursorPosition(); // Start smooth movement for touch
             }
         }, 8);
 
@@ -621,8 +595,7 @@ N3 = () => (
                 const touch = event.touches[0];
                 mouseX = touch.clientX;
                 mouseY = touch.clientY;
-                cursorElement.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-                appendTransformTransition(); // Always append for touch
+                updateCursorPosition(); // Start smooth movement for touch
             }
         });
         document.body.addEventListener("touchend", () => cursorElement.classList.remove("show"));
@@ -630,17 +603,11 @@ N3 = () => (
 
         // Cleanup on component unmount
         return () => {
-            document.body.removeEventListener("mouseenter", () =>
-                cursorElement.classList.add("show")
-            );
+            document.body.removeEventListener("mouseenter", () => cursorElement.classList.add("show"));
             document.body.removeEventListener("mouseleave", handleMouseLeave);
             document.body.removeEventListener("mousemove", handleMouseMove);
-            document.body.removeEventListener("touchstart", () =>
-                cursorElement.classList.add("show")
-            );
-            document.body.removeEventListener("touchend", () =>
-                cursorElement.classList.remove("show")
-            );
+            document.body.removeEventListener("touchstart", (event) => cursorElement.classList.add("show"));
+            document.body.removeEventListener("touchend", () => cursorElement.classList.remove("show"));
             document.body.removeEventListener("touchmove", handleTouchMove);
         };
     }, []),

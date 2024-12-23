@@ -526,7 +526,7 @@ const Vm = (e, t) => {
 
 N3 = () => (
     Jo.useEffect(() => {
-        const cursorElement = document.querySelector(".dotcursor");
+        const cursorElement = document.querySelector("a.dotcursor");
         if (!cursorElement) return;
 
         let mouseX = 0,

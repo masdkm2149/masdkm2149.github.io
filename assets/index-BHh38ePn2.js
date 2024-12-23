@@ -531,8 +531,8 @@ N3 = () => (
 
         let mouseX = 0,
             mouseY = 0,
-            isOutsideViewport = true, // Tracks if the cursor is outside the viewport
-            hasMovedInside = false; // Tracks if the cursor has moved inside after entering
+            isOutsideViewport = true,
+            hasMovedInside = false; // Tracks if sufficient movement has occurred
 
         // Function to append transform transition
         const appendTransformTransition = () => {
@@ -563,20 +563,25 @@ N3 = () => (
             // Detect when cursor reenters the viewport
             if (isOutsideViewport) {
                 isOutsideViewport = false;
-                hasMovedInside = false; // Reset movement flag
+                hasMovedInside = false;
                 removeTransformTransition(); // Remove transform transition on entry
-                cursorElement.classList.add("show"); // Ensure 'show' class is added on reentry
+                cursorElement.classList.add("show"); // Add 'show' class on reentry
             }
 
+            // Calculate movement distance
+            const dx = Math.abs(newX - mouseX);
+            const dy = Math.abs(newY - mouseY);
+
             // Apply translation and add transition after valid movement
-            if (newX !== mouseX || newY !== mouseY) {
+            if (dx > 0 || dy > 0) {
                 mouseX = newX;
                 mouseY = newY;
                 cursorElement.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
 
-                if (!hasMovedInside) {
-                    hasMovedInside = true; // First valid movement detected
-                    appendTransformTransition(); // Add transition after first movement
+                // Only append transition after 2px movement
+                if (!hasMovedInside && (dx >= 2 || dy >= 2)) {
+                    hasMovedInside = true;
+                    appendTransformTransition();
                 }
             }
         }, 8);
@@ -585,7 +590,7 @@ N3 = () => (
         const handleMouseLeave = () => {
             isOutsideViewport = true; // Mark cursor as outside
             removeTransformTransition(); // Remove transform transition
-            cursorElement.classList.remove("show"); // Ensure 'show' class is removed on exit
+            cursorElement.classList.remove("show"); // Remove 'show' class on exit
         };
 
         // Handle touch move event
@@ -596,12 +601,18 @@ N3 = () => (
                 const newX = touch.clientX;
                 const newY = touch.clientY;
 
+                // Calculate movement distance
+                const dx = Math.abs(newX - mouseX);
+                const dy = Math.abs(newY - mouseY);
+
                 // Apply translation and add transition after valid movement
-                if (newX !== mouseX || newY !== mouseY) {
+                if (dx > 0 || dy > 0) {
                     mouseX = newX;
                     mouseY = newY;
                     cursorElement.style.transform = `translate(${mouseX - 10}px, ${mouseY - 10}px)`;
-                    appendTransformTransition(); // Always append for touch
+
+                    // Append transition immediately for touch interactions
+                    appendTransformTransition();
                 }
             }
         }, 8);
@@ -649,6 +660,7 @@ N3 = () => (
         ],
     })
 );
+
 
 
 

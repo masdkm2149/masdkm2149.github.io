@@ -534,16 +534,22 @@ N3 = () => (
             isOutsideViewport = false;
 
         const appendTransformTransition = () => {
-            if (!cursorElement.style.transition.includes("transform 0.05s ease-out")) {
-                cursorElement.style.transition += ", transform 0.05s ease-out";
+            const computedStyle = window.getComputedStyle(cursorElement).transition;
+            if (!computedStyle.includes("transform 0.05s ease-out")) {
+                cursorElement.style.transition = `${computedStyle}, transform 0.05s ease-out`.replace(
+                    /^, /,
+                    ""
+                );
             }
         };
 
         const removeTransformTransition = () => {
-            cursorElement.style.transition = cursorElement.style.transition
+            const computedStyle = window.getComputedStyle(cursorElement).transition;
+            cursorElement.style.transition = computedStyle
                 .split(",")
                 .filter((t) => !t.trim().startsWith("transform"))
-                .join(",");
+                .join(",")
+                .trim();
         };
 
         const handleMouseMove = Vm((event) => {
@@ -575,7 +581,11 @@ N3 = () => (
             }
         }, 8);
 
-        const showCursor = () => cursorElement.classList.add("show");
+        const showCursor = () => {
+            cursorElement.classList.add("show");
+            appendTransformTransition();
+        };
+
         const hideCursor = () => {
             cursorElement.classList.remove("show");
             removeTransformTransition();
@@ -616,8 +626,6 @@ N3 = () => (
         ],
     })
 );
-
-
 
 function $3(e) {
     return e && e.__esModule && Object.prototype.hasOwnProperty.call(e, "default") ? e.default : e

@@ -533,6 +533,19 @@ N3 = () => (
             mouseY = 0,
             isOutsideViewport = false;
 
+        const appendTransformTransition = () => {
+            if (!cursorElement.style.transition.includes("transform 0.05s ease-out")) {
+                cursorElement.style.transition += ", transform 0.05s ease-out";
+            }
+        };
+
+        const removeTransformTransition = () => {
+            cursorElement.style.transition = cursorElement.style.transition
+                .split(",")
+                .filter((t) => !t.trim().startsWith("transform"))
+                .join(",");
+        };
+
         const handleMouseMove = Vm((event) => {
             mouseX = event.clientX;
             mouseY = event.clientY;
@@ -543,10 +556,11 @@ N3 = () => (
 
             if (isOutside !== isOutsideViewport) {
                 isOutsideViewport = isOutside;
-                cursorElement.style.transition = isOutside
-                    ? "background-color 0.4s ease-out"
-                    : "background-color 0.4s ease-out, transform 0.05s ease-out";
-                cursorElement.offsetHeight; // Force reflow
+                if (isOutside) {
+                    removeTransformTransition();
+                } else {
+                    appendTransformTransition();
+                }
             }
         }, 8);
 
@@ -557,11 +571,15 @@ N3 = () => (
                 mouseX = touch.clientX;
                 mouseY = touch.clientY;
                 cursorElement.style.transform = `translate(${mouseX - 10}px, ${mouseY - 10}px)`;
+                appendTransformTransition();
             }
         }, 8);
 
         const showCursor = () => cursorElement.classList.add("show");
-        const hideCursor = () => cursorElement.classList.remove("show");
+        const hideCursor = () => {
+            cursorElement.classList.remove("show");
+            removeTransformTransition();
+        };
 
         document.body.addEventListener("mouseenter", showCursor);
         document.body.addEventListener("mouseleave", hideCursor);
@@ -573,6 +591,7 @@ N3 = () => (
                 mouseX = touch.clientX;
                 mouseY = touch.clientY;
                 cursorElement.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+                appendTransformTransition();
             }
         });
         document.body.addEventListener("touchend", hideCursor);
@@ -597,6 +616,7 @@ N3 = () => (
         ],
     })
 );
+
 
 
 function $3(e) {

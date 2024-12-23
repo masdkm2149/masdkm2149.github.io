@@ -565,6 +565,7 @@ N3 = () => (
                 isOutsideViewport = false;
                 hasMovedInside = false; // Reset movement flag
                 removeTransformTransition(); // Remove transform transition on entry
+                cursorElement.classList.add("show"); // Ensure 'show' class is added on reentry
             }
 
             // Apply translation and add transition after valid movement
@@ -584,6 +585,7 @@ N3 = () => (
         const handleMouseLeave = () => {
             isOutsideViewport = true; // Mark cursor as outside
             removeTransformTransition(); // Remove transform transition
+            cursorElement.classList.remove("show"); // Ensure 'show' class is removed on exit
         };
 
         // Handle touch move event
@@ -604,22 +606,12 @@ N3 = () => (
             }
         }, 8);
 
-        // Show the cursor when entering
-        const showCursor = () => {
-            cursorElement.classList.add("show");
-        };
-
-        // Hide the cursor when leaving
-        const hideCursor = () => {
-            cursorElement.classList.remove("show");
-        };
-
         // Add event listeners for mouse and touch events
-        document.body.addEventListener("mouseenter", showCursor);
+        document.body.addEventListener("mouseenter", () => cursorElement.classList.add("show"));
         document.body.addEventListener("mouseleave", handleMouseLeave);
         document.body.addEventListener("mousemove", handleMouseMove);
         document.body.addEventListener("touchstart", (event) => {
-            showCursor();
+            cursorElement.classList.add("show");
             if (event.touches.length > 0) {
                 const touch = event.touches[0];
                 mouseX = touch.clientX;
@@ -628,16 +620,22 @@ N3 = () => (
                 appendTransformTransition(); // Always append for touch
             }
         });
-        document.body.addEventListener("touchend", hideCursor);
+        document.body.addEventListener("touchend", () => cursorElement.classList.remove("show"));
         document.body.addEventListener("touchmove", handleTouchMove);
 
         // Cleanup on component unmount
         return () => {
-            document.body.removeEventListener("mouseenter", showCursor);
+            document.body.removeEventListener("mouseenter", () =>
+                cursorElement.classList.add("show")
+            );
             document.body.removeEventListener("mouseleave", handleMouseLeave);
             document.body.removeEventListener("mousemove", handleMouseMove);
-            document.body.removeEventListener("touchstart", showCursor);
-            document.body.removeEventListener("touchend", hideCursor);
+            document.body.removeEventListener("touchstart", () =>
+                cursorElement.classList.add("show")
+            );
+            document.body.removeEventListener("touchend", () =>
+                cursorElement.classList.remove("show")
+            );
             document.body.removeEventListener("touchmove", handleTouchMove);
         };
     }, []),
@@ -651,6 +649,7 @@ N3 = () => (
         ],
     })
 );
+
 
 
 function $3(e) {

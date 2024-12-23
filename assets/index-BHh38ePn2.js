@@ -530,60 +530,67 @@ N3 = () => (
         if (!cursorElement) return;
 
         let mouseX = 0,
-            mouseY = 0,
-            currentX = 0,
-            currentY = 0,
-            isOutsideViewport = true;
+            mouseY = 0;
+        let targetX = 0,
+            targetY = 0;
 
-        // The speed at which the cursor will move to the target position
-        const cursorSpeed = 0.1; // Adjust this value for faster/slower smoothing
+        // Flag to check if mouse is inside the viewport
+        let isInsideViewport = false;
 
-        // Function to update cursor position smoothly
-        const updateCursorPosition = () => {
-            const dx = mouseX - currentX;
-            const dy = mouseY - currentY;
+        // Easing function for smooth motion
+        const easeOut = (start, end, t) => {
+            return start + (end - start) * (1 - Math.pow(1 - t, 3));
+        };
 
-            // Lerp (linear interpolation) to gradually move the cursor
-            currentX += dx * cursorSpeed;
-            currentY += dy * cursorSpeed;
+        // Function to move the cursor smoothly
+        const moveCursor = () => {
+            const deltaX = targetX - mouseX;
+            const deltaY = targetY - mouseY;
 
-            cursorElement.style.transform = `translate(${currentX}px, ${currentY}px)`;
+            // If movement is small, no need to animate further
+            if (Math.abs(deltaX) < 0.5 && Math.abs(deltaY) < 0.5) {
+                mouseX = targetX;
+                mouseY = targetY;
+                return; // Exit the function if no movement is needed
+            }
 
-            // Continue the animation as long as the cursor is within the viewport
-            requestAnimationFrame(updateCursorPosition);
+            // Easing for smooth cursor movement
+            mouseX = easeOut(mouseX, targetX, 0.2); // 0.2 is the "easing factor" controlling speed
+            mouseY = easeOut(mouseY, targetY, 0.2);
+
+            cursorElement.style.left = `${mouseX}px`;
+            cursorElement.style.top = `${mouseY}px`;
+
+            // Continue the animation
+            requestAnimationFrame(moveCursor);
         };
 
         // Handle mouse move event
-        const handleMouseMove = Vm((event) => {
-            mouseX = event.clientX;
-            mouseY = event.clientY;
-
-            // Detect when cursor reenters the viewport
-            if (isOutsideViewport) {
-                isOutsideViewport = false;
-                cursorElement.classList.add("show"); // Add 'show' class on reentry
-                updateCursorPosition(); // Start smooth movement
+        const handleMouseMove = (event) => {
+            targetX = event.clientX;
+            targetY = event.clientY;
+            if (!isInsideViewport) {
+                isInsideViewport = true;
+                cursorElement.classList.add("show"); // Show cursor when it enters the viewport
             }
-        }, 8);
+            moveCursor(); // Start or continue the smooth movement
+        };
 
         // Handle mouse leave event
         const handleMouseLeave = () => {
-            isOutsideViewport = true; // Mark cursor as outside
-            cursorElement.classList.remove("show"); // Remove 'show' class on exit
+            isInsideViewport = false;
+            cursorElement.classList.remove("show"); // Hide cursor when leaving viewport
         };
 
         // Handle touch move event
-        const handleTouchMove = Vm((event) => {
+        const handleTouchMove = (event) => {
             event.preventDefault();
             if (event.touches.length > 0) {
-                const touch = event.touches[0];
-                mouseX = touch.clientX;
-                mouseY = touch.clientY;
-
-                // Apply smooth cursor movement for touch events
-                updateCursorPosition(); // Start smooth movement for touch
+                targetX = event.touches[0].clientX;
+                targetY = event.touches[0].clientY;
+                moveCursor(); // Move the cursor smoothly on touch move
             }
-        }, 8);
+        };
 
         // Add event listeners for mouse and touch events
         document.body.addEventListener("mouseenter", () => cursorElement.classList.add("show"));
@@ -592,14 +599,13 @@ N3 = () => (
         document.body.addEventListener("touchstart", (event) => {
             cursorElement.classList.add("show");
             if (event.touches.length > 0) {
-                const touch = event.touches[0];
-                mouseX = touch.clientX;
-                mouseY = touch.clientY;
-                updateCursorPosition(); // Start smooth movement for touch
+                targetX = event.touches[0].clientX;
+                targetY = event.touches[0].clientY;
+                moveCursor(); // Start smooth movement on touch start
             }
         });
-        document.body.addEventListener("touchend", () => cursorElement.classList.remove("show"));
         document.body.addEventListener("touchmove", handleTouchMove);
+        document.body.addEventListener("touchend", () => cursorElement.classList.remove("show"));
 
         // Cleanup on component unmount
         return () => {
@@ -607,10 +613,11 @@ N3 = () => (
             document.body.removeEventListener("mouseleave", handleMouseLeave);
             document.body.removeEventListener("mousemove", handleMouseMove);
             document.body.removeEventListener("touchstart", (event) => cursorElement.classList.add("show"));
-            document.body.removeEventListener("touchend", () => cursorElement.classList.remove("show"));
             document.body.removeEventListener("touchmove", handleTouchMove);
+            document.body.removeEventListener("touchend", () => cursorElement.classList.remove("show"));
         };
     }, []),
+
     nr.jsxs(nr.Fragment, {
         children: [
             nr.jsx("a", {

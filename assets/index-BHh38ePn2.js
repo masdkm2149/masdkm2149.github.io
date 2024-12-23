@@ -552,6 +552,11 @@ N3 = () => (
                 .trim();
         };
 
+        const updateTransform = () => {
+            if (!cursorElement.style.transform.includes("translate")) return;
+            appendTransformTransition();
+        };
+
         const handleMouseMove = Vm((event) => {
             mouseX = event.clientX;
             mouseY = event.clientY;
@@ -565,8 +570,10 @@ N3 = () => (
                 if (isOutside) {
                     removeTransformTransition();
                 } else {
-                    appendTransformTransition();
+                    updateTransform();
                 }
+            } else {
+                updateTransform();
             }
         }, 8);
 
@@ -577,13 +584,13 @@ N3 = () => (
                 mouseX = touch.clientX;
                 mouseY = touch.clientY;
                 cursorElement.style.transform = `translate(${mouseX - 10}px, ${mouseY - 10}px)`;
-                appendTransformTransition();
+                updateTransform();
             }
         }, 8);
 
         const showCursor = () => {
             cursorElement.classList.add("show");
-            appendTransformTransition();
+            updateTransform();
         };
 
         const hideCursor = () => {
@@ -601,7 +608,7 @@ N3 = () => (
                 mouseX = touch.clientX;
                 mouseY = touch.clientY;
                 cursorElement.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-                appendTransformTransition();
+                updateTransform();
             }
         });
         document.body.addEventListener("touchend", hideCursor);
@@ -626,6 +633,7 @@ N3 = () => (
         ],
     })
 );
+
 
 function $3(e) {
     return e && e.__esModule && Object.prototype.hasOwnProperty.call(e, "default") ? e.default : e

@@ -884,20 +884,9 @@ margin: 0;
 </body><style type="text/css"></style>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Get the RGB value from --color
-            const h1Element = document.querySelector('h1');
-            if (h1Element) {
-                const colorValue = getComputedStyle(h1Element)
-                    .getPropertyValue('--color')
-                    .trim(); // Get the value of --color
-
-                console.log(`Color Value: "${colorValue}"`); // Log the value for debugging
-
-                // Set the --color variable for h1::after
-                h1Element.style.setProperty('--computed-color', colorValue);
-            } else {
-                console.error('h1 element not found');
-            }
+const h1 = document.querySelector('h1');
+        const computedColor = window.getComputedStyle(h1).color;
+        h1.style.setProperty('--computed-color', computedColor);
         });
     </script>
 </html>

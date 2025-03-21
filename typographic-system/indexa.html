@@ -902,24 +902,27 @@ margin: 0;
                 --computed-color: "${computedColor}";
             }
         `;
-console.log('Updated color to:', computedColor); // Debug log
+console.log('Color updated to:', computedColor);
         }
 
         // Initial update
         updateColor();
 
         // Monitor prefers-color-scheme changes
-        const mediaQuery = window.matchMedia('(prefers-color-scheme)');
+        const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        // Modern event listener
+        const handleChange = () => {
+            console.log('Color scheme changed. Dark mode:', darkMediaQuery.matches);
+            updateColor();
+        };
 
-        // Check if the event listener is supported and working
-        if (mediaQuery.addEventListener) {
-            mediaQuery.addEventListener('change', (e) => {
-                console.log('Color scheme changed. Dark mode:', e.matches);
-                updateColor();
-            });
-        } else {
-            // Fallback for older browsers
-            mediaQuery.addListener(updateColor);
+        // Add listener with modern method
+        darkMediaQuery.addEventListener('change', handleChange);
+
+        // Fallback for older browsers (if needed)
+        if (!darkMediaQuery.addEventListener) {
+            darkMediaQuery.addListener(handleChange);
         }
     </script>
 </html>

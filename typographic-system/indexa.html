@@ -890,9 +890,11 @@ margin: 0;
 </body><style type="text/css"></style>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-        const h1 = document.querySelector('h1');
-        const computedColor = window.getComputedStyle(h1).color;
-        h1.style.setProperty('--computed-color', `"${computedColor}"`); /* Stringify with quotes */
+const headings = document.querySelectorAll('h1');
+        headings.forEach(h1 => {
+            const computedColor = window.getComputedStyle(h1).color;
+            h1.style.setProperty('--computed-color', `"${computedColor}"`);
+        });
         });
     </script>
 </html>

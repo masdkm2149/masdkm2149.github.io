@@ -15,7 +15,7 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
 </script>
  <style>
 /* Page Styles */
-h1::after {counter-reset: font-size calc(var(--font-size)*16) line-height calc(var(--line-height)*16) font-weight calc(var(--font-weight)*16); content: "Scale:" var(--ui-scale) "(" counter(font-size) ") Weight: " counter(font-weight) " Line Height: " counter(line-height) " " var(--color);}
+h1::after {counter-reset: font-size calc(var(--font-size)*16) line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" counter(font-size) ") Weight: " counter(font-weight) " Line Height: " counter(line-height) " " var(--color);}
 .no-after::after {content: none;}
 
        @media screen and (min-width: 599px) and (max-width: 1500px)

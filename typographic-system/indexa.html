@@ -37,7 +37,19 @@ h1 { color: var(--color); --color: rgb(var(--project-title)); }
 /* Dark Mode */     
 @media (prefers-color-scheme: dark) {
 /* defaults to dark theme */
-
+body {
+--content-border: 3px solid rgb(12, 13, 16);
+--tag-bg: #2e313a;
+--body-color: #adb4c0;  
+--border-color: solid 2px #363840;
+--text-color: #eee;
+--h2-color: #585f6a;
+--bkg-color: #000;
+--view_project-hov: #0b0d10;
+--view_project-but: #363840;
+--view_project-but-text: #EEF1F4;  
+--project-title: #e0e0e0;
+}
     
 body.dark-theme {
 --content-border: 3px solid rgb(12, 13, 16);
@@ -67,8 +79,23 @@ body.light-theme {
   --project-title: #4b515b;
   }
 }
-@media (prefers-color-scheme: light) {
-/* defaults to dark theme */
+@media (prefers-color-scheme: light) {    
+/* defaults to light theme */
+    
+body {
+  --text-color: #222;
+  --content-border: 3px solid rgb(102, 112, 128);
+  --bkg-color: #fff;
+  --view_project-but-text: #6a7586;   
+  --border-color: solid 2px #EEF1F4;
+  --tag-bg: #c8c8c8;
+  --h2-color: #667080;
+  --view_project-hov: #EEF1F4;
+  --view_project-but: #6a7586;
+  --body-color: #667080;
+  --project-title: #4b515b;
+  }
+
 body.dark-theme {
 --content-border: 3px solid rgb(12, 13, 16);
 --tag-bg: #2e313a;

@@ -37,8 +37,7 @@ h1 { color: var(--color); --color: rgb(var(--project-title)); /* Convert to RGB 
 h2 { color: var(--color); --color: rgb(var(--h2-color)); /* Convert to RGB */ }
           
 /* Dark Mode */     
-@media (prefers-color-scheme: dark) {
-/* defaults to dark theme */
+@media (prefers-color-scheme: dark) { /* defaults to dark theme */
     body {
         --content-border: 3px solid rgb(12, 13, 16);
         --tag-bg: #2e313a;
@@ -53,23 +52,22 @@ h2 { color: var(--color); --color: rgb(var(--h2-color)); /* Convert to RGB */ }
         --project-title: #e0e0e0;
     }
 }
-     
-@media (prefers-color-scheme: light) {    
-/* defaults to light theme */
-body {
-  --text-color: #222;
-  --content-border: 3px solid rgb(102, 112, 128);
-  --bkg-color: #fff;
-  --view_project-but-text: #6a7586;   
-  --border-color: solid 2px #EEF1F4;
-  --tag-bg: #c8c8c8;
-  --h2-color: #667080;
-  --view_project-hov: #EEF1F4;
-  --view_project-but: #6a7586;
-  --body-color: #667080;
-  --project-title: #4b515b;
-  }
-}
+/* Light Mode */     
+@media (prefers-color-scheme: light) { /* defaults to light theme */
+    body {
+      --text-color: #222;
+      --content-border: 3px solid rgb(102, 112, 128);
+      --bkg-color: #fff;
+      --view_project-but-text: #6a7586;   
+      --border-color: solid 2px #EEF1F4;
+      --tag-bg: #c8c8c8;
+      --h2-color: #667080;
+      --view_project-hov: #EEF1F4;
+      --view_project-but: #6a7586;
+      --body-color: #667080;
+      --project-title: #4b515b;
+      }
+    }
 
 
 
@@ -532,33 +530,23 @@ div.content-main *, p, h, h1, h2, h3, h4, h5, h6 {
 div.content-main *, h1 { text-transform: capitalize;}
 
 /* (@ 2.0x) */
-/* Breakpoint-width ( > 1500 ) */
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1500px) { /* Breakpoint-width ( > 1500 ) */
   :root{--ui-scale:"@2x"}
-/* Button Increase Padding */
-  #button1,#button2,#button3 {
-  padding: 18px 55px !important;
-}
-  
-/* H1 */  
-  h1 {--font-size:4;--font-weight:700;--line-height:5;}
-h1, .project-title{
-  font-size: calc(var(--font-size)*1rem);
-  line-height: calc(var(--line-height)*1rem);
-}
-/* h1::first-line, .project-title::first-line{
-  line-height:  5rem !important;
-} */
-  
-  
-/* H2 */    
-h2 {
+  #button1,#button2,#button3 { padding: 18px 55px !important; } /* Button Increase Padding */ 
+  h1 { /* H1 */  
+        --font-size:4;
+        --font-weight:700;
+        --line-height:5;
+        font-size: calc(var(--font-size)*1rem);
+        line-height: calc(var(--line-height)*1rem);
+  }
+  h2 { /* H2 */
     --font-size:2;
     --font-weight:700;
     --line-height:2.5;
     font-size: calc(var(--font-size)*1rem);
     line-height: calc(var(--line-height)*1rem);
-}
+  }
   
 /* H3 */    
 h3::first-line {

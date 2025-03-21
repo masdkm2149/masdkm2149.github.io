@@ -885,7 +885,7 @@ margin: 0;
             const projectTitleValue = getComputedStyle(document.documentElement)
                 .getPropertyValue('--project-title')
                 .trim(); // Get the value of --project-title
-
+console.log(`Project Title Value: "${projectTitleValue}"`);
             // Check if projectTitleValue is not empty
             if (projectTitleValue) {
                 // Create the RGB string

@@ -17,6 +17,7 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
      
 /* Page Styles */
 h1::after {counter-reset: font-size calc(var(--font-size)*16) line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" counter(font-size) "px) Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
+h2::after {counter-reset: font-size calc(var(--font-size)*16) line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" counter(font-size) "px) Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
 .no-after::after {content: none;}
 
        @media screen and (min-width: 599px) and (max-width: 1500px)
@@ -32,84 +33,30 @@ body, html { transition: none; }
 }
 
 /* Color Variable Assignments */
-h1 { color: var(--color); --color: rgb(var(--project-title)); }
-     
+h1 { color: var(--color); --color: rgb(var(--project-title)); /* Convert to RGB */ }
+h2 { color: var(--color); --color: rgb(var(--h2-color)); /* Convert to RGB */ }
+          
 /* Dark Mode */     
 @media (prefers-color-scheme: dark) {
 /* defaults to dark theme */
-body {
---content-border: 3px solid rgb(12, 13, 16);
---tag-bg: #2e313a;
---body-color: #adb4c0;  
---border-color: solid 2px #363840;
---text-color: #eee;
---h2-color: #585f6a;
---bkg-color: #000;
---view_project-hov: #0b0d10;
---view_project-but: #363840;
---view_project-but-text: #EEF1F4;  
---project-title: #e0e0e0;
+    body {
+        --content-border: 3px solid rgb(12, 13, 16);
+        --tag-bg: #2e313a;
+        --body-color: #adb4c0;  
+        --border-color: solid 2px #363840;
+        --text-color: #eee;
+        --h2-color: #585f6a;
+        --bkg-color: #000;
+        --view_project-hov: #0b0d10;
+        --view_project-but: #363840;
+        --view_project-but-text: #EEF1F4;  
+        --project-title: #e0e0e0;
+    }
 }
-    
-body.dark-theme {
---content-border: 3px solid rgb(12, 13, 16);
---tag-bg: #2e313a;
---body-color: #adb4c0;  
---border-color: solid 2px #363840;
---text-color: #eee;
---h2-color: #585f6a;
---bkg-color: #000;
---view_project-hov: #0b0d10;
---view_project-but: #363840;
---view_project-but-text: #EEF1F4;  
---project-title: #e0e0e0;
-}
-
-body.light-theme {
-  --text-color: #222;
-  --content-border: 3px solid rgb(102, 112, 128);
-  --bkg-color: #fff;
-  --view_project-but-text: #6a7586;   
-  --border-color: solid 2px #EEF1F4;
-  --tag-bg: #c8c8c8;
-  --h2-color: #667080;
-  --view_project-hov: #EEF1F4;
-  --view_project-but: #6a7586;
-  --body-color: #667080;
-  --project-title: #4b515b;
-  }
-}
+     
 @media (prefers-color-scheme: light) {    
 /* defaults to light theme */
-    
 body {
-  --text-color: #222;
-  --content-border: 3px solid rgb(102, 112, 128);
-  --bkg-color: #fff;
-  --view_project-but-text: #6a7586;   
-  --border-color: solid 2px #EEF1F4;
-  --tag-bg: #c8c8c8;
-  --h2-color: #667080;
-  --view_project-hov: #EEF1F4;
-  --view_project-but: #6a7586;
-  --body-color: #667080;
-  --project-title: #4b515b;
-  }
-
-body.dark-theme {
---content-border: 3px solid rgb(12, 13, 16);
---tag-bg: #2e313a;
---body-color: #adb4c0;  
---border-color: solid 2px #363840;
---text-color: #eee;
---h2-color: #585f6a;
---bkg-color: #000;
---view_project-hov: #0b0d10;
---view_project-but: #363840;
---view_project-but-text: #EEF1F4;  
---project-title: #e0e0e0;
-}
-body.light-theme {
   --text-color: #222;
   --content-border: 3px solid rgb(102, 112, 128);
   --bkg-color: #fff;
@@ -655,11 +602,13 @@ padding-top: 1rem;
 :root{--ui-scale:"@1.5x"}
   
 /* H1 */  
-  h1 {--font-size:3;--font-weight:700;--line-height:3.75;}
-h1, .project-title{
-  font-size: calc(var(--font-size)*1rem);
-  line-height: calc(var(--line-height)*1rem);
-}
+  h1 {
+      --font-size:3;
+      --font-weight:700;
+      --line-height:3.75;
+      font-size: calc(var(--font-size)*1rem);
+      line-height: calc(var(--line-height)*1rem);
+    }
 
 /* h1::first-line, .project-title::first-line{
   line-height:  1rem!important;
@@ -667,8 +616,11 @@ h1, .project-title{
   
 /* H2 */    
 h2 {
-  font-size: 1.5rem !important;
-  line-height: 1.75rem !important;
+    --font-size:1.5;
+    --font-weight:700;
+    --line-height:1.75;
+    font-size: calc(var(--font-size)*1rem);
+    line-height: calc(var(--line-height)*1rem);
 }
   
 /* H3 */    
@@ -892,14 +844,17 @@ margin: 0;
     <script>
 
         const styleSheet = document.getElementById('dynamic');
-        const h1 = document.querySelector('h1'); 
 
         function updateColor() {    
-            const computedColor = window.getComputedStyle(h1).color;
+            const h1Color = window.getComputedStyle(document.querySelector('h1')).color;
+            const h2Color = window.getComputedStyle(document.querySelector('h2')).color;
             styleSheet.textContent = `
             /* Dynamically Generated Stylesheet (used to assign color values as strings) */
             h1 {
-                --computed-color: "${computedColor}";
+                --computed-color: "${h1Color}";
+            }
+            h2 {
+                --computed-color: "${h2Color}";
             }
         `;
         }

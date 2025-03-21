@@ -15,7 +15,7 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
 </script>
  <style>
 /* Page Styles */
-h1::after {content: "Scale:" var(--ui-scale) "(" var(--font-size) ") Weight: " var(--font-weight) " Line Height: " var(--line-height) " " var(--color);}
+h1::after {counter-reset: font-size var(--font-size) line-height var(--line-height) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" var(--font-size) ") Weight: " var(--font-weight) " Line Height: " var(--line-height) " " var(--color);}
 .no-after::after {content: none;}
 
        @media screen and (min-width: 599px) and (max-width: 1500px)
@@ -551,10 +551,10 @@ div.content-main *, p, h, h1, h2, h3, h4, h5, h6 {
 /* capitalization */
 div.content-main *, h1 { text-transform: capitalize;}
 
-/* (@ 3.0x) */
+/* (@ 2.0x) */
 /* Breakpoint-width ( > 1500 ) */
 @media screen and (min-width: 1500px) {
-  :root{--ui-scale:"@3x"}
+  :root{--ui-scale:"@2x"}
 /* Button Increase Padding */
   #button1,#button2,#button3 {
   padding: 18px 55px !important;
@@ -566,7 +566,6 @@ div.content-main *, h1 { text-transform: capitalize;}
 h1, .project-title{
   font-size: var(--font-size);
   line-height: var(--line-height);
-  content: "Scale:" var(--ui-scale) "(" var(--font-size) ") Weight: " var(--font-weight) " Line Height: " var(--line-height) " " var(--text-color);
 }
 /* h1::first-line, .project-title::first-line{
   line-height:  5rem !important;
@@ -618,18 +617,17 @@ padding-top: 1rem;
 
 }
 
-/* (@ 2.0x) */
+/* (@1.5x) */
 /* Breakpoint-width ( > 1000  & < 1500 ) */
 @media screen and (max-width: 1499px) and (min-width: 1000px)  {
-:root{--ui-scale:"@2x"}
+:root{--ui-scale:"@1.5x"}
   
 /* H1 */  
-  h1 {--font-size:3rem;--font-weight:700;--line-height:4rem;}
+  h1 {--font-size:3rem;--font-weight:700;--line-height:3.75rem;}
   h1::after {--font-size:"3rem";--font-weight:"700";--line-height:"4rem";}
 h1, .project-title{
   font-size: var(--font-size);
   line-height: var(--line-height);
-  content: "Scale:" var(--ui-scale) "(" var(--font-size) ") Weight: " var(--font-weight) " Line Height: " var(--line-height) " " var(--text-color);
 }
 
 /* h1::first-line, .project-title::first-line{

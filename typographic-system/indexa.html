@@ -16,7 +16,7 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
  <style>
      
 /* Page Styles */
-h1::after {counter-reset: font-size calc(var(--font-size)*16) line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" counter(font-size) "px) Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--color);}
+h1::after {counter-reset: font-size calc(var(--font-size)*16) line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" counter(font-size) "px) Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
 .no-after::after {content: none;}
 
        @media screen and (min-width: 599px) and (max-width: 1500px)
@@ -881,7 +881,18 @@ margin: 0;
 
 </div>
 </main>
-</body><style type="text/css"></style><script> document.addEventListener('DOMContentLoaded', () => {
+</body><style type="text/css"></style><script> <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Your Title Here</h1>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
             // Get the RGB value from --color
             const h1Element = document.querySelector('h1');
             if (h1Element) {
@@ -890,8 +901,15 @@ margin: 0;
                     .trim(); // Get the value of --color
 
                 console.log(`Color Value: "${colorValue}"`); // Log the value for debugging
+
+                // Set the --color variable for h1::after
+                h1Element.style.setProperty('--computed-color', colorValue);
             } else {
                 console.error('h1 element not found');
             }
         });
+    </script>
+</body>
+</html>
+
 </script></html>

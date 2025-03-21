@@ -902,7 +902,6 @@ margin: 0;
                 --computed-color: "${computedColor}";
             }
         `;
-console.log('Color updated to:', computedColor);
         }
 
         // Initial update
@@ -913,7 +912,6 @@ console.log('Color updated to:', computedColor);
         
         // Modern event listener
         const handleChange = () => {
-            console.log('Color scheme changed. Dark mode:', darkMediaQuery.matches);
             updateColor();
         };
 

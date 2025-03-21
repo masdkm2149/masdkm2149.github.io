@@ -886,7 +886,7 @@ margin: 0;
         document.addEventListener('DOMContentLoaded', () => {
         const h1 = document.querySelector('h1');
         const computedColor = window.getComputedStyle(h1).color;
-        h1.style.setProperty('--color', `"${computedColor}"`); /* Stringify with quotes */
+        h1.style.setProperty('--computed-color', `"${computedColor}"`); /* Stringify with quotes */
         });
     </script>
 </html>

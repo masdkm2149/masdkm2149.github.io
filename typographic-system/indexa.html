@@ -553,8 +553,11 @@ h1, .project-title{
   
 /* H2 */    
 h2 {
-  font-size: 2rem !important;
-  line-height: 2.25rem !important;
+    --font-size:2;
+    --font-weight:700;
+    --line-height:2.5;
+    font-size: calc(var(--font-size)*1rem);
+    line-height: calc(var(--line-height)*1rem);
 }
   
 /* H3 */    
@@ -618,7 +621,7 @@ padding-top: 1rem;
 h2 {
     --font-size:1.5;
     --font-weight:700;
-    --line-height:1.75;
+    --line-height:1.875;
     font-size: calc(var(--font-size)*1rem);
     line-height: calc(var(--line-height)*1rem);
 }
@@ -676,9 +679,16 @@ h1, .project-title{
   font-size: calc(var(--font-size)*1rem);
   line-height: calc(var(--line-height)*1rem);
 }
-  
+
 /* H2 */    
 h2 {
+    --font-size:1;
+    --font-weight:700;
+    --line-height:1.25;
+    font-size: calc(var(--font-size)*1rem);
+    line-height: calc(var(--line-height)*1rem);
+}
+    
   font-size: 1rem !important;
   line-height: 1.25rem !important;
 }

@@ -890,17 +890,14 @@ margin: 0;
 </body><style type="text/css" id="dynamic"></style>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-const headings = document.querySelectorAll('h1');
-        let cssRules = '';
-        headings.forEach((h1, index) => {
-            const computedColor = window.getComputedStyle(h1).color;
-            cssRules += `
-                h1:nth-child(${index + 1}) {
-                    --computed-color: "${computedColor}";
-                }
-            `;
-        });
-        document.getElementById('dynamic').textContent = cssRules;
+        const styleSheet = document.getElementById('dynamic-styles');
+        const h1 = document.querySelector('h1'); 
+        const computedColor = window.getComputedStyle(h1).color;
+styleSheet.textContent = `
+            h1 {
+                --color: "${computedColor}";
+            }
+        `;
         });
     </script>
 </html>

@@ -12,6 +12,8 @@
 if ($(window).width() > 420 && $(window).height() > 420) { $("meta[name=viewport]").attr("content", "width=device-width, initial-scale=1.0, user-scalable=no"); }
 if ($(window).width() < 420 && $(window).height() > 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); } 
 if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); }
+style.textContent = 'h1 { --color: rgb(var(--project-title), 1); }';
+document.head.appendChild(style);
 </script>
  <style>
      
@@ -45,9 +47,7 @@ body.dark-theme {
 --view_project-but-text: #EEF1F4;  
 --project-title: #e0e0e0;
 }
-  h1 {
-  --color: rgb(var(--project-title), 1);
-  }
+
 body.light-theme {
   --text-color: #222;
   --content-border: 3px solid rgb(102, 112, 128);

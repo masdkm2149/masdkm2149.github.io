@@ -12,8 +12,17 @@
 if ($(window).width() > 420 && $(window).height() > 420) { $("meta[name=viewport]").attr("content", "width=device-width, initial-scale=1.0, user-scalable=no"); }
 if ($(window).width() < 420 && $(window).height() > 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); } 
 if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); }
-style.textContent = 'h1 { --color: rgb(var(--project-title), 1); }';
-document.head.appendChild(style);
+// Get the RGB value from --project-title
+const projectTitleValue = getComputedStyle(document.documentElement)
+  .getPropertyValue('--project-title')
+  .trim(); // Get the value of --project-title
+
+// Create the RGB string
+const rgbValue = `rgb(${projectTitleValue})`;
+
+// Set the --color variable
+document.querySelector('h1').style.setProperty('--color', rgbValue);
+
 </script>
  <style>
      

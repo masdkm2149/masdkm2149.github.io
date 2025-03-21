@@ -32,12 +32,12 @@ body, html { transition: none; }
 }
 
 /* Color Variable Assignments */
-h1 { color: var(--color); }     
+h1 { color: var(--color); --color: rgb(var(--project-title)); }
      
 /* Dark Mode */     
 @media (prefers-color-scheme: dark) {
 /* defaults to dark theme */
-    h1 { --color: rgb(var(--project-title)); }
+
     
 body.dark-theme {
 --content-border: 3px solid rgb(12, 13, 16);

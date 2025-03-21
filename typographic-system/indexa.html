@@ -902,13 +902,24 @@ margin: 0;
                 --computed-color: "${computedColor}";
             }
         `;
+console.log('Updated color to:', computedColor); // Debug log
         }
+
         // Initial update
         updateColor();
 
         // Monitor prefers-color-scheme changes
         const mediaQuery = window.matchMedia('(prefers-color-scheme)');
-        mediaQuery.addEventListener('change', updateColor);
 
+        // Check if the event listener is supported and working
+        if (mediaQuery.addEventListener) {
+            mediaQuery.addEventListener('change', (e) => {
+                console.log('Color scheme changed. Dark mode:', e.matches);
+                updateColor();
+            });
+        } else {
+            // Fallback for older browsers
+            mediaQuery.addListener(updateColor);
+        }
     </script>
 </html>

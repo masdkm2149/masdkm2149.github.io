@@ -15,7 +15,7 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
 </script>
  <style>
 /* Page Styles */
-h1::after {counter-reset: font-size var(--font-size) line-height var(--line-height) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" counter(font-size) ") Weight: " counter(font-weight) " Line Height: " counter(line-height) " " var(--color);}
+h1::after {counter-reset: font-size calc(var(--font-size)*16) line-height calc(var(--line-height)*16) font-weight calc(var(--font-weight)*16); content: "Scale:" var(--ui-scale) "(" counter(font-size) ") Weight: " counter(font-weight) " Line Height: " counter(line-height) " " var(--color);}
 .no-after::after {content: none;}
 
        @media screen and (min-width: 599px) and (max-width: 1500px)
@@ -561,10 +561,10 @@ div.content-main *, h1 { text-transform: capitalize;}
 }
   
 /* H1 */  
-  h1 {--font-size:4rem;--font-weight:700;--line-height:5rem;}
+  h1 {--font-size:4;--font-weight:700;--line-height:5;}
 h1, .project-title{
-  font-size: var(--font-size);
-  line-height: var(--line-height);
+  font-size: calc(var(--font-size)*1rem);
+  line-height: calc(var(--line-height)*1rem);
 }
 /* h1::first-line, .project-title::first-line{
   line-height:  5rem !important;
@@ -622,10 +622,10 @@ padding-top: 1rem;
 :root{--ui-scale:"@1.5x"}
   
 /* H1 */  
-  h1 {--font-size:3rem;--font-weight:700;--line-height:3.75rem;}
+  h1 {--font-size:3;--font-weight:700;--line-height:3.75;}
 h1, .project-title{
-  font-size: var(--font-size);
-  line-height: var(--line-height);
+  font-size: calc(var(--font-size)*1rem);
+  line-height: calc(var(--line-height)*1rem);
 }
 
 /* h1::first-line, .project-title::first-line{
@@ -686,11 +686,10 @@ padding-top: .75rem;
 :root{--ui-scale:"@1x"}
   
 /* H1 */  
-  h1 {--font-size:2rem;--font-weight:700;--line-height:2.5rem;}
+  h1 {--font-size:2;--font-weight:700;--line-height:2.5;}
 h1, .project-title{
-  font-size: var(--font-size);
-  line-height: var(--line-height);
-  content: "Scale:" var(--ui-scale) "(" var(--font-size) ") Weight: " var(--font-weight) " Line Height: " var(--line-height) " " var(--text-color);
+  font-size: calc(var(--font-size)*1rem);
+  line-height: calc(var(--line-height)*1rem);
 }
   
 /* H2 */    

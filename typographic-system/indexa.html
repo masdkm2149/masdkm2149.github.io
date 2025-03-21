@@ -14,20 +14,9 @@ if ($(window).width() < 420 && $(window).height() > 420) { $("meta[name=viewport
 if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); }
 </script>
  <style>
-@function rgb($hexcolor, $opacity) {
-  $red: red($hexcolor);
-  $green: green($hexcolor);
-  $blue: blue($hexcolor);
-  
-  @if $opacity == 1 or $opacity == 100% {
-    @return unquote("rgb(#{$red}, #{$green}, #{$blue})");
-  } @else {
-    @return unquote("rgba(#{$red}, #{$green}, #{$blue}, #{$opacity})");
-  }
-}
      
 /* Page Styles */
-h1::after {counter-reset: font-size calc(var(--font-size)*16) line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" counter(font-size) "px) Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " "#{rgb(var(--project-title), 1)}";}
+h1::after {counter-reset: font-size calc(var(--font-size)*16) line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" counter(font-size) "px) Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--color);}
 .no-after::after {content: none;}
 
        @media screen and (min-width: 599px) and (max-width: 1500px)
@@ -57,7 +46,7 @@ body.dark-theme {
 --project-title: #e0e0e0;
 }
   h1 {
-  --color: "#{rgb(var(--project-title), 1)}";
+  --color: rgb(var(--project-title), 1);
   }
 body.light-theme {
   --text-color: #222;

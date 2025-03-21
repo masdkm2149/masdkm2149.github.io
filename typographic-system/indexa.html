@@ -12,24 +12,29 @@
 if ($(window).width() > 420 && $(window).height() > 420) { $("meta[name=viewport]").attr("content", "width=device-width, initial-scale=1.0, user-scalable=no"); }
 if ($(window).width() < 420 && $(window).height() > 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); } 
 if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); }
-document.addEventListener('DOMContentLoaded', () => {
-  // Your code here
-  const projectTitleValue = getComputedStyle(document.documentElement)
-    .getPropertyValue('--project-title')
-    .trim(); // Get the value of --project-title
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get the RGB value from --project-title
+            const projectTitleValue = getComputedStyle(document.documentElement)
+                .getPropertyValue('--project-title')
+                .trim(); // Get the value of --project-title
 
-  // Create the RGB string
-  const rgbValue = `rgb(${projectTitleValue})`;
+            // Check if projectTitleValue is not empty
+            if (projectTitleValue) {
+                // Create the RGB string
+                const rgbValue = `rgb(${projectTitleValue})`;
 
-  // Set the --color variable
-  const h1Element = document.querySelector('h1');
-  if (h1Element) {
-    h1Element.style.setProperty('--color', rgbValue);
-  } else {
-    console.error('h1 element not found');
-  }
-});
-
+                // Set the --color variable
+                const h1Element = document.querySelector('h1');
+                if (h1Element) {
+                    h1Element.style.setProperty('--color', rgbValue);
+                    console.log(`--color set to: ${rgbValue}`); // Log the value for debugging
+                } else {
+                    console.error('h1 element not found');
+                }
+            } else {
+                console.error('--project-title is empty or not defined');
+            }
+        });
 </script>
  <style>
      

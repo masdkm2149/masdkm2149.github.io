@@ -37,6 +37,7 @@ body, html { transition: none; }
 h1, h3, h4 { color: var(--color); --color: rgb(var(--project-title)); /* Convert to RGB */ }
 h2 { color: var(--color); --color: rgb(var(--h2-color)); /* Convert to RGB */ }
 p { color: var(--color); --color: rgb(var(--body-color)); /* Convert to RGB */ }
+     
 /* Dark Mode */     
 @media (prefers-color-scheme: dark) { /* defaults to dark theme */
     body {
@@ -691,11 +692,13 @@ h3 {
 h2 ~ p {
 padding-top: .5rem;
   }
-  p, .body-text {    
+p {    
     --font-size: clamp(0.9rem, 3vw, 1rem);
+    --font-weight:400;
+    --line-height:1.6;
     font-size: var(--font-size);
-    line-height: 1.62rem;
-  }
+    line-height: calc(var(--line-height)*1em);
+}
 
 /* Etc page format */  
 .interface {

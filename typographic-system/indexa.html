@@ -567,9 +567,12 @@ h3 {
 h2 ~ p {
 padding-top: 1rem;
   }
-  p, .body-text {
-    font-size: 1.1rem;
-    line-height: 2.2rem;
+  p{
+    --font-size:1;
+    --font-weight:700;
+    --line-height:1.6;
+    font-size: calc(var(--font-size)*1rem);
+    line-height: calc(var(--line-height)*1rem);
   }
 
 /* Etc page format */  
@@ -629,11 +632,12 @@ h3 {
   
 /* Body */   
 
+p::after {counter-reset: line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" var(--font-size) "px) Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
 h2 ~ p {
 padding-top: .75rem;
   }
   p{
-    --font-size:1.5;
+    --font-size:1;
     --font-weight:700;
     --line-height:1.6;
     font-size: calc(var(--font-size)*1rem);

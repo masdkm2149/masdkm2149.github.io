@@ -626,13 +626,12 @@ h3 {
     
   
 /* Body */   
-  p::first-line, p#body-text::first-line {
-    line-height: 1.8rem !important;
-  } 
+
 h2 ~ p {
 padding-top: .75rem;
   }
   p, .body-text {
+      
     font-size: 1rem;
     line-height: 1.8rem;
   }
@@ -693,14 +692,12 @@ h3 {
     
   
 /* Body */   
-  p::first-line, p#body-text::first-line {
-    line-height: 1.62rem !important;
-  } 
 h2 ~ p {
 padding-top: .5rem;
   }
   p, .body-text {
-    font-size: .9rem;
+    --font-size: clamp(.9rem, 3vw, 1rem);
+    font-size: clamp(.9rem, 3vw, 1rem);
     line-height: 1.62rem;
   }
 

@@ -691,9 +691,10 @@ h3 {
 h2 ~ p {
 padding-top: .5rem;
   }
-  p, .body-text {
-    --font-size: clamp(.9rem, 3vw, 1rem);
-    font-size: clamp(.9rem, 3vw, 1rem);
+  p, .body-text {    
+    --computed-value: clamp(0.9rem, 3vw, 1rem);
+    --font-size: var(--computed-value);
+    font-size: var(--computed-value);
     line-height: 1.62rem;
   }
 

@@ -834,46 +834,64 @@ margin: 0;
 </main>
 </body><style type="text/css" id="dynamic"></style>
     <script>
+const styleSheet = document.getElementById('dynamic');
 
-        const styleSheet = document.getElementById('dynamic');
+function updateColor() {    
+    const h1Color = window.getComputedStyle(document.querySelector('h1')).color;
+    const h2Color = window.getComputedStyle(document.querySelector('h2')).color;
+    const pColor = window.getComputedStyle(document.querySelector('p')).color;
+    const pFontSize = window.getComputedStyle(document.querySelector('p')).fontSize;
+    
+    styleSheet.textContent = `
+    /* Dynamically Generated Stylesheet (used to assign color values as strings) */
+    h1 {
+        --computed-color: "${h1Color}";
+    }
+    h2 {
+        --computed-color: "${h2Color}";
+    }
+    p {
+        --computed-color: "${pColor}";
+        --computed-font-size: "${pFontSize}";
+    }
+    `;
+}
 
-        function updateColor() {    
-            const h1Color = window.getComputedStyle(document.querySelector('h1')).color;
-            const h2Color = window.getComputedStyle(document.querySelector('h2')).color;
-            const pColor = window.getComputedStyle(document.querySelector('p')).color;
-            const pFontSize = window.getComputedStyle(document.querySelector('p')).fontSize;
-            styleSheet.textContent = `
-            /* Dynamically Generated Stylesheet (used to assign color values as strings) */
-            h1 {
-                --computed-color: "${h1Color}";
-            }
-            h2 {
-                --computed-color: "${h2Color}";
-            }
-            p {
-                --computed-color: "${pColor}";
-                --computed-font-size: "${pFontSize}";
-            }
-        `;
-        }
+// Initial update
+updateColor();
 
-        // Initial update
+// Monitor prefers-color-scheme changes
+const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+// Modern event listener
+const handleChange = () => {
+    updateColor();
+};
+
+// Add listener with modern method
+darkMediaQuery.addEventListener('change', handleChange);
+
+// Fallback for older browsers (if needed)
+if (!darkMediaQuery.addEventListener) {
+    darkMediaQuery.addListener(handleChange);
+}
+
+// Function to check font size and update if below 16px
+function checkFontSize() {
+    const pFontSize = parseFloat(window.getComputedStyle(document.querySelector('p')).fontSize);
+    if (pFontSize < 16) {
         updateColor();
+    }
+}
 
-        // Monitor prefers-color-scheme changes
-        const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        
-        // Modern event listener
-        const handleChange = () => {
-            updateColor();
-        };
+// Create a MutationObserver to watch for changes in the <p> element and configure the observer to watch for attribute changes (like style changes)
+new resizeObserver(checkFontSize).observe(document.querySelector('p'), {
+    attributes: true,
+    attributeFilter: ['style'] // Only observe changes to the style attribute
+});
 
-        // Add listener with modern method
-        darkMediaQuery.addEventListener('change', handleChange);
+// Initial check for font size
+checkFontSize();
 
-        // Fallback for older browsers (if needed)
-        if (!darkMediaQuery.addEventListener) {
-            darkMediaQuery.addListener(handleChange);
-        }
     </script>
 </html>

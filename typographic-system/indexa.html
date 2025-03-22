@@ -33,9 +33,9 @@ body, html { transition: none; }
 }
 
 /* Color Variable Assignments */
-h1 { color: var(--color); --color: rgb(var(--project-title)); /* Convert to RGB */ }
+h1, h3, h4 { color: var(--color); --color: rgb(var(--project-title)); /* Convert to RGB */ }
 h2 { color: var(--color); --color: rgb(var(--h2-color)); /* Convert to RGB */ }
-          
+p { color: var(--color); --color: rgb(var(--body-color)); /* Convert to RGB */ }
 /* Dark Mode */     
 @media (prefers-color-scheme: dark) { /* defaults to dark theme */
     body {

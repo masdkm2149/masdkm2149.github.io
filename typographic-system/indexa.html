@@ -876,22 +876,16 @@ if (!darkMediaQuery.addEventListener) {
     darkMediaQuery.addListener(handleChange);
 }
 
-// Function to check font size and update if below 16px
-function checkFontSize() {
+// Use ResizeObserver to monitor changes in the <p> element's size
+const resizeObserver = new ResizeObserver(() => {
     const pFontSize = parseFloat(window.getComputedStyle(document.querySelector('p')).fontSize);
     if (pFontSize < 16) {
         updateColor();
     }
-}
-
-// Create a MutationObserver to watch for changes in the <p> element and configure the observer to watch for attribute changes (like style changes)
-new resizeObserver(checkFontSize).observe(document.querySelector('p'), {
-    attributes: true,
-    attributeFilter: ['style'] // Only observe changes to the style attribute
 });
 
-// Initial check for font size
-checkFontSize();
+// Start observing the <p> element
+resizeObserver.observe(document.querySelector('p'));
 
     </script>
 </html>

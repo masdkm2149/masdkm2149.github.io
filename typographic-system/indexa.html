@@ -692,9 +692,8 @@ h2 ~ p {
 padding-top: .5rem;
   }
   p, .body-text {    
-    --computed-value: clamp(0.9rem, 3vw, 1rem);
-    --font-size: var(--computed-value);
-    font-size: var(--computed-value);
+    --font-size: clamp(0.9rem, 3vw, 1rem);
+    font-size: var(--font-size);
     line-height: 1.62rem;
   }
 
@@ -841,6 +840,8 @@ margin: 0;
         function updateColor() {    
             const h1Color = window.getComputedStyle(document.querySelector('h1')).color;
             const h2Color = window.getComputedStyle(document.querySelector('h2')).color;
+            const pColor = window.getComputedStyle(document.querySelector('p')).color;
+            const pFontSize = window.getComputedStyle(document.querySelector('p')).fontSize;
             styleSheet.textContent = `
             /* Dynamically Generated Stylesheet (used to assign color values as strings) */
             h1 {
@@ -848,6 +849,10 @@ margin: 0;
             }
             h2 {
                 --computed-color: "${h2Color}";
+            }
+            p {
+                --computed-color: "${pColor}";
+                --computed-font-size: "${pFontSize}";
             }
         `;
         }

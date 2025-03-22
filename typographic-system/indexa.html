@@ -18,7 +18,7 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
 /* Page Styles */
 h1::after {counter-reset: font-size calc(var(--font-size)*16) line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" counter(font-size) "px) Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
 h2::after {counter-reset: font-size calc(var(--font-size)*16) line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" counter(font-size) "px) Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
-p::after {counter-reset: line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" var(--computed-font-size) "px) Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
+p::after {counter-reset: line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" var(--computed-font-size) ") Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
 .no-after::after {content: none;}
 
        @media screen and (min-width: 599px) and (max-width: 1500px)

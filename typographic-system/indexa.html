@@ -560,7 +560,7 @@ h3 {
 }
   
 /* Body */   
-  p::after {counter-reset: line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" var(--font-size) "px) Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
+  p::after {counter-reset: font-size calc(var(--font-size)*16) line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" counter(font-size) "px) Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
   p::first-line, p#body-text::first-line {
     line-height: 2rem !important;
   } 
@@ -631,8 +631,7 @@ h3 {
     
   
 /* Body */   
-
-p::after {counter-reset: line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" var(--font-size) "px) Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
+p::after {counter-reset: font-size calc(var(--font-size)*16) line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" counter(font-size) "px) Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
 h2 ~ p {
 padding-top: .75rem;
   }

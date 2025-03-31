@@ -14,6 +14,7 @@ if ($(window).width() < 420 && $(window).height() > 420) { $("meta[name=viewport
 if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport]").attr("content", "minimum-scale=.0.7, initial-scale=0.7, width=device-width, user-scalable=no"); }
 </script>
  <style>
+
      
 /* Page Styles */
 h1::after {counter-reset: font-size calc(var(--font-size)*16) line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" counter(font-size) "px) Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
@@ -528,28 +529,56 @@ div.content-main *, p, h, h1, h2, h3, h4, h5, h6 {
   word-break: break-word;
 }
 
+
+
+
+
+
+    
+/* H1 */  
+h1 {--font-size:2;--font-weight:700;--line-height:2.5;}
+h1{
+  font-size: calc(var(--font-size)*var(--scale));
+  line-height: calc(var(--line-height)*var(--scale));
+}
+h1 ~ h2 {
+ top: calc(0.2*var(--scale));
+}
+
+h2 { --font-size:1; --font-weight:700; --line-height:1.3; }
+h2 {
+    font-size: calc(var(--font-size)*var(--scale));
+    line-height: calc(var(--line-height)*var(--scale));
+}
+
+h2 ~ p {
+ top: calc(0.5*var(--scale));
+  position: relative;
+}
+
+
+p {    
+    --font-size: clamp(calc(0.9*var(--scale)), 3vw, calc(1*var(--scale)));
+    --font-weight:400;
+    --line-height:1.6;
+    font-size: var(--font-size);
+    line-height: calc(var(--line-height)*var(--scale));
+}
+
+
 /* capitalization */
 div.content-main *, h1 { text-transform: capitalize;}
+/* Body */   
+p::after {counter-reset: line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" var(--computed-font-size) ") Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
 
 /* (@ 2.0x) */
 @media screen and (min-width: 1500px) { /* Breakpoint-width ( > 1500 ) */
   :root{--ui-scale:"@2x"}
+    :root {
+    --scale:2rem;
+  }
   #button1,#button2,#button3 { padding: 18px 55px !important; } /* Button Increase Padding */ 
-  h1 { /* H1 */  
-        --font-size:4;
-        --font-weight:700;
-        --line-height:5;
-        font-size: calc(var(--font-size)*1rem);
-        line-height: calc(var(--line-height)*1rem);
-  }
-  h2 { /* H2 */
-    --font-size:2;
-    --font-weight:700;
-    --line-height:2.5;
-    font-size: calc(var(--font-size)*1rem);
-    line-height: calc(var(--line-height)*1rem);
-  }
-  
+
 /* H3 */    
 h3::first-line {
   line-height: 1.5rem;
@@ -559,22 +588,13 @@ h3 {
   line-height: 1.5rem;
 }
   
-/* Body */   
-  p::after {counter-reset: font-size calc(var(--font-size)*16) line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" counter(font-size) "px) Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
-  p::first-line, p#body-text::first-line {
+      p {
+    --scale: 1.12rem;
+  }
+ p::first-line, p#body-text::first-line {
     line-height: 2rem !important;
   } 
-h2 ~ p {
-padding-top: 1rem;
-  }
-  p{
-    --font-size:1;
-    --font-weight:700;
-    --line-height:1.6;
-    font-size: calc(var(--font-size)*1rem);
-    line-height: calc(var(--line-height)*1rem);
-  }
-
+  
 /* Etc page format */  
  .interface{
     font-size: 1rem;
@@ -597,29 +617,13 @@ padding-top: 1rem;
 /* Breakpoint-width ( > 1000  & < 1500 ) */
 @media screen and (max-width: 1499px) and (min-width: 1000px)  {
 :root{--ui-scale:"@1.5x"}
-  
-/* H1 */  
-  h1 {
-      --font-size:3;
-      --font-weight:700;
-      --line-height:3.75;
-      font-size: calc(var(--font-size)*1rem);
-      line-height: calc(var(--line-height)*1rem);
-    }
+    :root {
+    --scale: 1.5rem;
+  }
+    p {
+    --scale: 1.06rem;
+  }
 
-/* h1::first-line, .project-title::first-line{
-  line-height:  1rem!important;
-} */
-  
-/* H2 */    
-h2 {
-    --font-size:1.5;
-    --font-weight:700;
-    --line-height:1.875;
-    font-size: calc(var(--font-size)*1rem);
-    line-height: calc(var(--line-height)*1rem);
-}
-  
 /* H3 */    
 h3::first-line {
   line-height: 1.5rem;
@@ -630,18 +634,6 @@ h3 {
 }
     
   
-/* Body */   
-p::after {counter-reset: font-size calc(var(--font-size)*16) line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" counter(font-size) "px) Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
-h2 ~ p {
-padding-top: .75rem;
-  }
-  p{
-    --font-size:1;
-    --font-weight:700;
-    --line-height:1.6;
-    font-size: calc(var(--font-size)*1rem);
-    line-height: calc(var(--line-height)*1rem);
-  }
 
 /* Etc page format */  
 .interface {
@@ -667,23 +659,11 @@ padding-top: .75rem;
 /* Breakpoint-width ( 500 > & < 1000 ) */
 @media screen and (max-width: 1000px) and (min-width: 500px)  {
 :root{--ui-scale:"@1x"}
+  :root {
+    --scale: 1rem;
+  }  
 
-    
-/* H1 */  
-  h1 {--font-size:2;--font-weight:700;--line-height:2.5;}
-h1, .project-title{
-  font-size: calc(var(--font-size)*1rem);
-  line-height: calc(var(--line-height)*1rem);
-}
-
-/* H2 */    
-h2 {
-    --font-size:1;
-    --font-weight:700;
-    --line-height:1.25;
-    font-size: calc(var(--font-size)*1rem);
-    line-height: calc(var(--line-height)*1rem);
-}
+   
   
 /* H3 */    
 h3::first-line {
@@ -694,20 +674,6 @@ h3 {
   line-height: 1.2rem;
 }
     
-  
-/* Body */   
-p::after {counter-reset: line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" var(--computed-font-size) ") Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
-h2 ~ p {
-padding-top: .5rem;
-  }
-p {    
-    --font-size: clamp(0.9rem, 3vw, 1rem);
-    --font-weight:400;
-    --line-height:1.6;
-    font-size: var(--font-size);
-    line-height: calc(var(--line-height)*1em);
-}
-
 /* Etc page format */  
 .interface {
   width: fit-content !important;
@@ -774,7 +740,6 @@ padding-top: 1vw;
   margin: 30px auto 0 auto !important;
 }   
 }
-
 </style>
 
 </head>
@@ -889,10 +854,7 @@ if (!darkMediaQuery.addEventListener) {
 
 // Use ResizeObserver to monitor changes in the <p> element's size
 const resizeObserver = new ResizeObserver(() => {
-    const pFontSize = parseFloat(window.getComputedStyle(document.querySelector('p')).fontSize);
-    if (pFontSize < 16) {
         updateColor();
-    }
 });
 
 // Start observing the <p> element

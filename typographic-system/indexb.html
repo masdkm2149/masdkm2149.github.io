@@ -815,7 +815,7 @@ function updateColor() {
     const pColor = window.getComputedStyle(document.querySelector('p')).color;
     const pFontSize = window.getComputedStyle(document.querySelector('p')).fontSize;
     const h2FontSize = window.getComputedStyle(document.querySelector('h2')).fontSize;
-    
+    const h1FontSize = window.getComputedStyle(document.querySelector('h1')).fontSize;
     styleSheet.textContent = `
     /* Dynamically Generated Stylesheet (used to assign color values as strings) */
     h1 {
@@ -828,7 +828,7 @@ function updateColor() {
         --computed-color: "${pColor}";
         --computed-p-font-size: "${pFontSize}";
         --computed-h2-font-size: "${h2FontSize}";
-
+        --computed-h1-font-size: "${h1FontSize}";
     }
     `;
 }

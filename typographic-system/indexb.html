@@ -17,8 +17,8 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
 
      
 /* Page Styles */
-h1::after {counter-reset: font-size calc(var(--font-size)*16) line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" counter(font-size) "px) Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
-h2::after {counter-reset: font-size calc(var(--font-size)*16) line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" counter(font-size) "px) Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
+h1::after {line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "("  var(--computed-h1-font-size) ") Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
+h2::after {line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" var(--computed-h2-font-size) ") Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
 
 .no-after::after {content: none;}
 
@@ -568,7 +568,7 @@ p {
 /* capitalization */
 div.content-main *, h1 { text-transform: capitalize;}
 /* Body */   
-p::after {counter-reset: line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" var(--computed-font-size) ") Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
+p::after {counter-reset: line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale:" var(--ui-scale) "(" var(--computed-p-font-size) ") Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
 
 /* (@ 2.0x) */
 @media screen and (min-width: 1500px) { /* Breakpoint-width ( > 1500 ) */
@@ -814,6 +814,7 @@ function updateColor() {
     const h2Color = window.getComputedStyle(document.querySelector('h2')).color;
     const pColor = window.getComputedStyle(document.querySelector('p')).color;
     const pFontSize = window.getComputedStyle(document.querySelector('p')).fontSize;
+    const h2FontSize = window.getComputedStyle(document.querySelector('h2')).fontSize;
     
     styleSheet.textContent = `
     /* Dynamically Generated Stylesheet (used to assign color values as strings) */
@@ -825,7 +826,9 @@ function updateColor() {
     }
     p {
         --computed-color: "${pColor}";
-        --computed-font-size: "${pFontSize}";
+        --computed-p-font-size: "${pFontSize}";
+        --computed-h2-font-size: "${h2FontSize}";
+
     }
     `;
 }

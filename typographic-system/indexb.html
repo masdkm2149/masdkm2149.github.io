@@ -17,7 +17,7 @@ if ($(window).width() > 420 && $(window).height() < 420) { $("meta[name=viewport
 
      
 /* Page Styles */
-h1::after {line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale: " var(--ui-scale) "("  var(--computed-h1-font-size) ") Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
+h1::after {line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale: " var(--ui-scale) "(" var(--computed-h1-font-size) ") Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
 h2::after {line-height calc(var(--line-height)*16) font-weight var(--font-weight); content: "Scale: " var(--ui-scale) "(" var(--computed-h2-font-size) ") Weight: "counter(font-weight)" Line Height: "counter(line-height)"px " var(--computed-color);}
 
 .no-after::after {content: none;}

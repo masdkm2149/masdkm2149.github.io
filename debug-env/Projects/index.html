@@ -4088,65 +4088,234 @@ function getInfo() {
     }
           getInfo();
           relSizing();
-          if (window.innerWidth < 1500) { document.querySelector(':root').style.setProperty('--snapTo', "center"); }
-          else { document.querySelector(':root').style.setProperty('--snapTo', "start"); }
- var currentCard
- var currentCardref
- var waiting 
-     if (currentCard == null) {
-        currentCard = 1 
-        currentCardref = currentCard       
-        /*  BACK TO FIRST CARD ON LOAD
-        document.querySelectorAll(".card")[0].scrollIntoView(); 
-        */
-    }
-     if (waiting == null) {
-        waiting = 0      
-    }
-window.addEventListener('resize', function(event) { 
-      relSizing();
-      document.querySelector(':root').style.setProperty('--scalefit', window.innerHeight);
-      document.querySelector(':root').style.setProperty('--vh', window.innerHeight + 'px');
-      console.log(JSON.stringify(window.getComputedStyle(document.querySelector("h1")).fontSize));
-            if (window.innerWidth < 1500) { document.querySelector(':root').style.setProperty('--snapTo', "center"); }
-            else { document.querySelector(':root').style.setProperty('--snapTo', "start"); }
 
-      getInfo();
-});
-    /*console.log("started wait");*/
-    /*console.log("finished wait");*/
-	
-document.querySelector(".main-nav").addEventListener("wheel", (event) => {
-    event.preventDefault();                   
-    if (waiting === 0) {
-        waiting = 1 
 
-        if (event.deltaY > 0) {
-            if (window.innerWidth < 1500) {
-                scrlFF();
-                setTimeout(finishedWaiting, 325);
+// Configuration
+const BREAKPOINT = 1500;
+const SCROLL_DELAY = 325;
+const SCROLL_OFFSET = 32;
+
+// State management
+let currentCard = 1;
+let currentCardRef = 1;
+let isScrolling = false;
+
+// Initialize on load
+function initialize() {
+    updateSnapSettings();
+    
+    // Uncomment if you want to scroll to first card on load
+    // const firstCard = document.querySelector(".card");
+    // if (firstCard) firstCard.scrollIntoView();
+}
+
+// Update CSS custom properties based on screen size
+function updateSnapSettings() {
+    const root = document.querySelector(':root');
+    const snapValue = window.innerWidth < BREAKPOINT ? "center" : "start";
+    root.style.setProperty('--snapTo', snapValue);
+}
+
+// Handle window resize
+function handleResize() {
+    const root = document.querySelector(':root');
+    
+    // Update sizing properties
+    root.style.setProperty('--scalefit', window.innerHeight);
+    root.style.setProperty('--vh', window.innerHeight + 'px');
+    
+    // Update snap settings
+    updateSnapSettings();
+    
+    // Call your existing functions if they exist
+    if (typeof relSizing === 'function') relSizing();
+    if (typeof getInfo === 'function') getInfo();
+    
+    console.log('Font size:', window.getComputedStyle(document.querySelector("h1")).fontSize);
+}
+
+// Reset pointer events and scrolling state
+function finishScrolling() {
+    document.querySelector(':root').style.setProperty('--handlePointer', "all");
+    isScrolling = false;
+}
+
+// Generic scroll function
+function performScroll(scrollAmount) {
+    const root = document.querySelector(':root');
+    const mainNav = document.querySelector(".main-nav");
+    
+    if (!mainNav) {
+        console.error('Main navigation element not found');
+        return;
+    }
+    
+    // Disable pointer events during scroll
+    root.style.setProperty('--handlePointer', "none");
+    
+    // Perform scroll
+    mainNav.scrollBy({ 
+        left: scrollAmount, 
+        behavior: 'smooth' 
+    });
+    
+    // Re-enable after delay
+    setTimeout(finishScrolling, SCROLL_DELAY);
+}
+
+// Scroll functions for different screen sizes and directions
+function scrollMobileForward() {
+    document.querySelector(':root').style.setProperty('--snapTo', "center");
+    performScroll(window.innerWidth - SCROLL_OFFSET);
+}
+
+function scrollMobileBackward() {
+    document.querySelector(':root').style.setProperty('--snapTo', "center");
+    performScroll(-window.innerWidth + SCROLL_OFFSET);
+}
+
+function scrollDesktopForward() {
+    document.querySelector(':root').style.setProperty('--snapTo', "start");
+    performScroll((window.innerWidth / 2) - SCROLL_OFFSET);
+}
+
+function scrollDesktopBackward() {
+    document.querySelector(':root').style.setProperty('--snapTo', "start");
+    performScroll((-window.innerWidth / 2) + SCROLL_OFFSET);
+}
+
+// Enhanced wheel event handler with better device compatibility
+function handleWheelEvent(event) {
+    event.preventDefault();
+    
+    // Prevent multiple rapid scrolls
+    if (isScrolling) return;
+    
+    isScrolling = true;
+    
+    // Normalize wheel delta for better cross-browser/device compatibility
+    let deltaY = event.deltaY;
+    
+    // Handle different wheel modes
+    if (event.deltaMode === 1) { // DOM_DELTA_LINE
+        deltaY *= 16; // Convert lines to pixels (approximate)
+    } else if (event.deltaMode === 2) { // DOM_DELTA_PAGE
+        deltaY *= window.innerHeight; // Convert pages to pixels
+    }
+    
+    // Set minimum threshold to avoid tiny movements
+    const threshold = 10;
+    if (Math.abs(deltaY) < threshold) {
+        isScrolling = false;
+        return;
+    }
+    
+    const isMobile = window.innerWidth < BREAKPOINT;
+    
+    if (deltaY > 0) {
+        // Scrolling down/forward
+        if (isMobile) {
+            scrollMobileForward();
+        } else {
+            scrollDesktopForward();
+        }
+    } else {
+        // Scrolling up/backward
+        if (isMobile) {
+            scrollMobileBackward();
+        } else {
+            scrollDesktopBackward();
+        }
+    }
+}
+
+// Add keyboard navigation support
+function handleKeydown(event) {
+    if (isScrolling) return;
+    
+    const isMobile = window.innerWidth < BREAKPOINT;
+    
+    switch (event.key) {
+        case 'ArrowLeft':
+            event.preventDefault();
+            if (isMobile) {
+                scrollMobileBackward();
             } else {
-                scrlHF();
-                setTimeout(finishedWaiting, 325);
+                scrollDesktopBackward();
             }
-        } else if (event.deltaY < 0) {                         
-            if (window.innerWidth < 1500) {
-                scrlFR();
-                setTimeout(finishedWaiting, 325);
+            break;
+        case 'ArrowRight':
+            event.preventDefault();
+            if (isMobile) {
+                scrollMobileForward();
             } else {
-                scrlHR();
-                setTimeout(finishedWaiting, 325);
+                scrollDesktopForward();
             }
-        } 
+            break;
     }
-});
+}
 
-    function finishedWaiting() {  document.querySelector(':root').style.setProperty('--handlePointer', "all"); waiting = 0 }
-    function scrlFF() { document.querySelector(':root').style.setProperty('--handlePointer', "none"); document.querySelector(':root').style.setProperty('--snapTo', "center"); document.querySelector(".main-nav").scrollBy({ left: window.innerWidth - 32, behavior: 'smooth' }); }
-    function scrlFR() { document.querySelector(':root').style.setProperty('--handlePointer', "none"); document.querySelector(':root').style.setProperty('--snapTo', "center"); document.querySelector(".main-nav").scrollBy({ left: -window.innerWidth + 32, behavior: 'smooth' }); }
-    function scrlHF() { document.querySelector(':root').style.setProperty('--handlePointer', "none"); document.querySelector(':root').style.setProperty('--snapTo', "start"); document.querySelector(".main-nav").scrollBy({ left: ((window.innerWidth /2) - 32), behavior: 'smooth' }); }
-    function scrlHR() { document.querySelector(':root').style.setProperty('--handlePointer', "none"); document.querySelector(':root').style.setProperty('--snapTo', "start"); document.querySelector(".main-nav").scrollBy({ left: ((-window.innerWidth /2) + 32), behavior: 'smooth' }); }
-  
+// Add touch support for mobile devices
+let touchStartX = 0;
+let touchEndX = 0;
+
+function handleTouchStart(event) {
+    touchStartX = event.changedTouches[0].screenX;
+}
+
+function handleTouchEnd(event) {
+    if (isScrolling) return;
+    
+    touchEndX = event.changedTouches[0].screenX;
+    const touchDiff = touchStartX - touchEndX;
+    const threshold = 50; // Minimum swipe distance
+    
+    if (Math.abs(touchDiff) > threshold) {
+        const isMobile = window.innerWidth < BREAKPOINT;
+        
+        if (touchDiff > 0) {
+            // Swiped left (go forward)
+            if (isMobile) {
+                scrollMobileForward();
+            } else {
+                scrollDesktopForward();
+            }
+        } else {
+            // Swiped right (go backward)
+            if (isMobile) {
+                scrollMobileBackward();
+            } else {
+                scrollDesktopBackward();
+            }
+        }
+    }
+}
+
+// Event listeners
+window.addEventListener('resize', handleResize);
+window.addEventListener('keydown', handleKeydown);
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initialize);
+} else {
+    initialize();
+}
+
+// Add wheel event listener to main-nav when it's available
+function attachWheelListener() {
+    const mainNav = document.querySelector(".main-nav");
+    if (mainNav) {
+        mainNav.addEventListener("wheel", handleWheelEvent, { passive: false });
+        mainNav.addEventListener("touchstart", handleTouchStart);
+        mainNav.addEventListener("touchend", handleTouchEnd);
+    } else {
+        // Retry after a short delay if element not found
+        setTimeout(attachWheelListener, 100);
+    }
+}
+
+attachWheelListener();
 	
 function toggletagbranding() {
   for (let i = 0; i < document.querySelectorAll('.Branding').length; i++) { document.querySelectorAll('.Branding')[i].classList.toggle("active"); }

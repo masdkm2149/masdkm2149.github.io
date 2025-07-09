@@ -445,6 +445,8 @@ function updateTextOverflowClampingForAllCards() {
 	 debouncedResize();
 	});
 	
+	window.visualViewport.addEventListener('resize', debouncedResize);
+	
 	window.addEventListener('keydown', handleKeydown);
 
 	// ---- End of Event listeners ---- //

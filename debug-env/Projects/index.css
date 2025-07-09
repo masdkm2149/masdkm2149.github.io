@@ -471,6 +471,12 @@
 				.x #tag-branding, .x #tag-print, .x #tag-media, .x #tag-coding { position: absolute; top: 1.5rem; left: 1.5rem}
 			}
 
+			
+			@media screen and (max-width: 550px) and (min-aspect-ratio: 1.05/1) {
+				.x #tag-branding, .x #tag-print, .x #tag-media, .x #tag-coding { position: absolute; top: 1.5rem; left: 1.5rem}
+			}
+
+
             @media screen and (min-aspect-ratio: 1.05 / 1) and (max-aspect-ratio: 1.5 / 1) and (max-height: 550px) {
                 .card.x .card-b {
                     padding: 3rem;
@@ -716,8 +722,10 @@
 					display: none;
 				}
 			}
-
 			@media screen and (max-height: 450px) {
+				.card.y .card-b h4 {
+					display: none!important;
+				}
 				.card.y .card-b h1 {
 					display: none;
 				}
@@ -975,11 +983,6 @@
 			/* capitalization */
 			div.content-main *, h1 { text-transform: capitalize;}
 
-			@media screen and (max-height: 480px) and (max-aspect-ratio:1.05/1) {
-				h4 {
-					display: none;
-				}
-			}
 
 			@media screen and (max-height: 425px) and (min-aspect-ratio:1.05/1) {
 				h4 {
@@ -1209,7 +1212,7 @@
 				background-color: #859673;
 			}
 
-			@media screen and (min-width: 501px) and (max-width: 1100px)  {
+			@media screen and (min-width: 501px) and (min-height: 550px) and (max-width: 1100px)  {
 
 					.card.y #view_project {
 					padding: 2rem 8rem !important;

@@ -1,4 +1,4 @@
-// Constants
+  // Constants
 
 	// Document Query Selectors
 	const mainNav = document.querySelector(".main-nav");

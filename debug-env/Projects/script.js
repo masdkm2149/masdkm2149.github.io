@@ -368,52 +368,6 @@ function updateTextOverflowClampingForAllCards() {
 
     });
     
-
-	// Clamping for sentences (widows/orphans/new lines)
-
-/*
-
-
-		const targetSpan = document.querySelector('div#\\31.card.Branding.y p span:nth-of-type(2)');
-
-		if (targetSpan) {
-		let offsetTopToTest;
-
-		const isCurrentlyHidden = targetSpan.style.display === 'none';
-
-		if (isCurrentlyHidden) {
-			targetSpan.style.visibility = 'hidden';
-			targetSpan.style.display = ''; // Revert to default display style
-
-			offsetTopToTest = targetSpan.offsetTop;
-
-			targetSpan.style.display = 'none';
-			targetSpan.style.visibility = '';
-		} else {
-			offsetTopToTest = targetSpan.offsetTop;
-		}
-
-		const newDisplayStyle = ((document.querySelector('div#\\31.card.Branding.y p#body-text').style.webkitLineClamp === "2") && (offsetTopToTest > 33)) ? 'none' : '';
-
-		// Only update the DOM if the style actually needs to change. This is a small optimization
-		// that prevents unnecessary screen repaints.
-		if (targetSpan.style.display !== newDisplayStyle) {
-			const subsequentSpans = document.querySelectorAll('div#\\31.card.Branding.y p span:nth-of-type(2)' + ' ~ span');
-
-			// Apply the determined style to the target span...
-			targetSpan.style.display = newDisplayStyle;
-			// ...and to all its subsequent siblings.
-			subsequentSpans.forEach(span => {
-			span.style.display = newDisplayStyle;
-			});
-		}
-		}
-
-
-	document.querySelectorAll('p span:nth-of-type(2)').forEach(el => { 
-		if (el.scrollWidth*1.5 < el.offsetWidth) { el.style.visibility}
-	});
-*/
     setTimeout(() => {
         isUpdatingTextClamping = false;
     }, 50);

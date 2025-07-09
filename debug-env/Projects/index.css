@@ -706,6 +706,19 @@
 				margin-top: 2.5px;
 			}
 			}
+
+			@media screen and (max-height: 510px) {
+				.card.y .card-b h2 {
+					display: none;
+				}
+			}
+
+			@media screen and (max-height: 425px) {
+				.card.x .card-b h2 {
+					display: none;
+				}
+			}
+
 			@media screen and (min-width: 649px) and (max-width: 1200px) {
 			#button1::after, #button2::after, #button3::after {
 				font-size: 14px !important;

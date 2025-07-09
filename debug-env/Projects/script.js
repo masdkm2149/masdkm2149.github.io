@@ -48,6 +48,7 @@
 	// Functions
 
 	function initialize() { // Initialize on load
+		debouncedResize();
 		relSizing();
 		setDynamicStyles();
 		updateSnapSettings();

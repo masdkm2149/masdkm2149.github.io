@@ -732,6 +732,7 @@
 				.card.y .card-b #view_project, .card.y .card-b p#body-text ~ a {
 					margin: auto!important;
 				}
+				p.body-text { display: none;}
 			}
 
 			@media screen and (max-height: 380px) {

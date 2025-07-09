@@ -440,6 +440,11 @@ function updateTextOverflowClampingForAllCards() {
 	window.addEventListener('resize', () => {
 		debouncedResize();
 	});
+	
+	window.addEventListener('orientationchange', () => {
+	 debouncedResize();
+	});
+	
 	window.addEventListener('keydown', handleKeydown);
 
 	// ---- End of Event listeners ---- //

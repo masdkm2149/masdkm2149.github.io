@@ -216,7 +216,7 @@ function updateTextOverflowClampingForAllCards() {
             return parseFloat(val) || fallback;
         }
 
-        alternateTagPosition = (window.innerHeight <= 480 && window.matchMedia('(max-aspect-ratio: 1.05/1)').matches); 
+        alternateTagPosition = (document.querySelector(h4).style.left > 1 && window.matchMedia('(max-aspect-ratio: 1.05/1)').matches); 
 
         const bodyLineHeight = Math.round(getChildOffset(bodyText, 'lineHeight'));
         const bodyTextHeight = bodyText.scrollHeight;

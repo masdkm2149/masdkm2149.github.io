@@ -467,6 +467,10 @@
 				.x .card-b { padding: 3rem 4rem 3rem 4rem;}
 			}
 
+			@media screen and (max-height: 425px) {
+				.x #tag-branding, .x #tag-print, .x #tag-media, .x #tag-coding { position: absolute; top: 1.5rem; left: 1.5rem}
+			}
+
             @media screen and (min-aspect-ratio: 1.05 / 1) and (max-aspect-ratio: 1.5 / 1) and (max-height: 550px) {
                 .card.x .card-b {
                     padding: 3rem;
@@ -713,9 +717,36 @@
 				}
 			}
 
-			@media screen and (max-height: 425px) {
+			@media screen and (max-height: 450px) {
+				.card.y .card-b h1 {
+					display: none;
+				}
+				.card.y .card-b #view_project, .card.y .card-b p#body-text ~ a {
+					margin: auto!important;
+				}
+			}
+
+			@media screen and (max-height: 380px) {
 				.card.x .card-b h2 {
 					display: none;
+				}
+			}
+
+			@media screen and (max-height: 370px) {
+				div.card-b h1.project-title {
+					display: none!important;
+				}
+				.card-b #view_project, .card-b p#body-text ~ a {
+					margin: auto!important;
+				}
+				.card.x .card-b {
+					padding: 1rem!important;
+				}
+			}
+
+			@media screen and (max-height: 330px) {
+				.card.x .card-b h4 {
+					display: none!important;
 				}
 			}
 
@@ -945,6 +976,12 @@
 			div.content-main *, h1 { text-transform: capitalize;}
 
 			@media screen and (max-height: 480px) and (max-aspect-ratio:1.05/1) {
+				h4 {
+					display: none;
+				}
+			}
+
+			@media screen and (max-height: 425px) and (min-aspect-ratio:1.05/1) {
 				h4 {
 					display: none;
 				}

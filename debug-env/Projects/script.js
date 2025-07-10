@@ -19,7 +19,7 @@
 	// Scroll position tracking
 	let lastScrollPosition = 0;
 	// Window width tracking
-	let lastwindowWidth = window.innerWidth;
+	let lastwindowWidth = window.visualViewport.width;
 
 	// Card Line Clamping
 	let suggestedMaxTitleLines;
@@ -90,7 +90,7 @@
 
 	// Update CSS custom properties based on screen size
 	function updateSnapSettings() {
-		const snapValue = (window.innerWidth < BREAKPOINT) && window.innerHeight > window.innerWidth ? "center" : "start";
+		const snapValue = (window.visualViewport.width < BREAKPOINT) && window.visualViewport.height > window.visualViewport.width ? "center" : "start";
 		root.style.setProperty('--snapTo', snapValue);
 	}
 
@@ -132,7 +132,7 @@
 		if (event.deltaMode === 1) { // DOM_DELTA_LINE
 			deltaY *= 16; // Convert lines to pixels (approximate)
 		} else if (event.deltaMode === 2) { // DOM_DELTA_PAGE
-			deltaY *= window.innerHeight; // Convert pages to pixels
+			deltaY *= window.visualViewport.height; // Convert pages to pixels
 		}
 		const threshold = 10; // Set minimum threshold to avoid tiny movements
 		if (Math.abs(deltaY) < threshold) {
@@ -172,8 +172,8 @@
 
 	// Set stylesheet dynamically
 	function setDynamicStyles() {
-		root.style.setProperty('--vw', window.innerWidth);
-		root.style.setProperty('--vh', window.innerHeight);
+		root.style.setProperty('--vw', window.visualViewport.width);
+		root.style.setProperty('--vh', window.visualViewport.height);
 		
 		// Set the margin-top for view_project based on card-b padding
 		document.querySelectorAll('#view_project').forEach(el => {
@@ -217,7 +217,7 @@ function updateTextOverflowClampingForAllCards() {
             return parseFloat(val) || fallback;
         }
 
-        alternateTagPosition = (document.querySelector('h4').style.left > 1 && window.matchMedia('(max-aspect-ratio: 1.05/1)').matches); 
+        alternateTagPosition = (parseFloat(window.getComputedStyle(document.querySelector('h4')).left) > 1 && window.matchMedia('(max-aspect-ratio: 1.05/1)').matches); 
 
         const bodyLineHeight = Math.round(getChildOffset(bodyText, 'lineHeight'));
         const bodyTextHeight = bodyText.scrollHeight;
@@ -335,6 +335,8 @@ function updateTextOverflowClampingForAllCards() {
             const remainingHeight = bestScenario.maxPossibleBodyTextHeight + titleLineHeight - (finalTitleLines * titleLineHeight);
             const recalculatedBodyLines = Math.floor(remainingHeight / bodyLineHeight);
             finalBodyLines = Math.max(0, Math.min(recalculatedBodyLines, bodyTotalLines));
+			//alert(`${cardId}: TL: ${finalTitleLines} BL: ${finalBodyLines}`);
+
         }
         else if (finalBodyLines === finalTitleLines && finalBodyLines > 1) { // Prioritize the title display if the body and title have an equal number of lines 
 			finalBodyLines = finalBodyLines - 1;
@@ -369,41 +371,6 @@ function updateTextOverflowClampingForAllCards() {
 
     });
 
-		const targetSpan = document.querySelector('div#\\31.card.Branding.y p span:nth-of-type(2)');
-
-		if (targetSpan) {
-			let offsetTopToTest;
-
-			const isCurrentlyHidden = targetSpan.style.display === 'none';
-
-			if (isCurrentlyHidden) {
-				targetSpan.style.visibility = 'hidden';
-				targetSpan.style.display = ''; // Revert to default display style
-
-				offsetTopToTest = targetSpan.offsetTop;
-
-				targetSpan.style.display = 'none';
-				targetSpan.style.visibility = '';
-			} else {
-				offsetTopToTest = targetSpan.offsetTop;
-			}
-
-			const newDisplayStyle = ((document.querySelector('div#\\31.card.Branding.y p#body-text').style.webkitLineClamp === "2") && (offsetTopToTest > 33)) ? 'none' : '';
-
-			// Only update the DOM if the style actually needs to change. This is a small optimization
-			// that prevents unnecessary screen repaints.
-			if (targetSpan.style.display !== newDisplayStyle) {
-				const subsequentSpans = document.querySelectorAll('div#\\31.card.Branding.y p span:nth-of-type(2)' + ' ~ span');
-
-				// Apply the determined style to the target span...
-				targetSpan.style.display = newDisplayStyle;
-				// ...and to all its subsequent siblings.
-				subsequentSpans.forEach(span => {
-				span.style.display = newDisplayStyle;
-				});
-			}
-		}
-
     setTimeout(() => {
         isUpdatingTextClamping = false;
     }, 50);
@@ -416,8 +383,8 @@ function updateTextOverflowClampingForAllCards() {
 
 	// Relative sizing function to adjust card layout based on window dimensions (1.05 ratio crossing / 1500px fixed width & 580px fixed height crossing)
     function relSizing() {
-        const width = window.innerWidth;
-        const height = window.innerHeight;
+        const width = window.visualViewport.width;
+        const height = window.visualViewport.height;
         const ratio = width / height;
         let classToAdd = "";
         let classToRemove = "";
@@ -471,17 +438,8 @@ function updateTextOverflowClampingForAllCards() {
 	// ---- End of Functions ---- //
 
 	// Event listeners
-
-	// Add event listener for window resize
-	window.addEventListener('resize', () => {
-		debouncedResize();
-	});
 	
-	window.addEventListener('orientationchange', () => {
-	 debouncedResize();
-	});
-	
-	window.visualViewport.addEventListener('resize', debouncedResize());
+	window.visualViewport.addEventListener('resize', debouncedResize);
 	
 	window.addEventListener('keydown', handleKeydown);
 

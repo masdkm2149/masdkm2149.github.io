@@ -20,16 +20,30 @@
 					viewportMeta.setAttribute("name", "viewport");
 					document.head.appendChild(viewportMeta);
 				}
-				// Update the content attribute
-				viewportMeta.setAttribute('content', `width=device-width, initial-scale=${1/(window.devicePixelRatio*.44)}, user-scalable=no`);
+				
+				if (screen.orientation && viewportMeta) {
+					if (screen.orientation.type.includes('landscape')) {
+						// Update the content attribute
+						viewportMeta.setAttribute('content', `width=device-width, initial-scale=${1/(window.devicePixelRatio*.5)}, minimum-scale=${1/(window.devicePixelRatio*.5)}, maximum-scale=${1/(window.devicePixelRatio*.5)}, user-scalable=no`);
+					}
+					else {
+						// Update the content attribute
+						viewportMeta.setAttribute('content', `width=device-width, initial-scale=${1/(window.devicePixelRatio*.44)}, minimum-scale=${1/(window.devicePixelRatio*.44)}, maximum-scale=${1/(window.devicePixelRatio*.44)}, user-scalable=no`);
+					}
+				} else {
+					viewportMeta.setAttribute('content', `width=device-width, initial-scale=1, user-scalable=yes`);
+				}
 			}
 
 			// Call the function initially
 			updateViewport();
 
 			// Listen for orientation change and resize events
-			window.addEventListener("resize", updateViewport);
-			window.addEventListener("orientationchange", updateViewport);
+			//window.addEventListener("resize", updateViewport);
+			
+				window.addEventListener('orientationchange', function() {
+					updateViewport();
+				});
 			
 		</script>
 

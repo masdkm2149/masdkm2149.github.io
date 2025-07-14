@@ -27,6 +27,8 @@
 	// Resizing
 	let resizeTimeout;
 
+    let brDisplay;
+
 	// Tag position tracking
 	let alternateTagPosition;
 	let tagIsHidden = false; // Initialize tagIsHidden state
@@ -48,11 +50,11 @@
 	// Functions
 
 	function initialize() { // Initialize on load
-		debouncedResize();
 		relSizing();
 		setDynamicStyles();
 		updateSnapSettings();
 		updateTextOverflowClampingForAllCards();
+		updateTextBasedOnBrDisplay();
 	}
 
 	// Track scroll position for resize handling
@@ -217,7 +219,7 @@ function updateTextOverflowClampingForAllCards() {
             return parseFloat(val) || fallback;
         }
 
-        alternateTagPosition = (parseFloat(window.getComputedStyle(document.querySelector('h4')).left) > 1 && window.matchMedia('(max-aspect-ratio: 1.05/1)').matches); 
+        alternateTagPosition = (parseFloat(window.getComputedStyle(document.querySelector('.card-b > h4')).left) > 1 && window.matchMedia('(max-aspect-ratio: 1.05/1)').matches); 
 
         const bodyLineHeight = Math.round(getChildOffset(bodyText, 'lineHeight'));
         const bodyTextHeight = bodyText.scrollHeight;
@@ -317,6 +319,8 @@ function updateTextOverflowClampingForAllCards() {
 
         let finalTitleLines = Math.max(1, Math.floor(maxTitleLines));
         let finalBodyLines = Math.max(0, Math.floor(maxBodyTextLines));
+		
+			console.log(`${cardId}: TL: ${finalTitleLines} BL: ${finalBodyLines}`);
         let newWordBreakStyle = 'break-word';
 
         if (finalTitleLines > 2) { 
@@ -335,17 +339,19 @@ function updateTextOverflowClampingForAllCards() {
             const remainingHeight = bestScenario.maxPossibleBodyTextHeight + titleLineHeight - (finalTitleLines * titleLineHeight);
             const recalculatedBodyLines = Math.floor(remainingHeight / bodyLineHeight);
             finalBodyLines = Math.max(0, Math.min(recalculatedBodyLines, bodyTotalLines));
-			//alert(`${cardId}: TL: ${finalTitleLines} BL: ${finalBodyLines}`);
+		//	console.log(`${cardId}: TL: ${finalTitleLines} BL: ${finalBodyLines}`);
 
         }
         else if (finalBodyLines === finalTitleLines && finalBodyLines > 1) { // Prioritize the title display if the body and title have an equal number of lines 
 			finalBodyLines = finalBodyLines - 1;
         }
                 
-        if (finalTitleLines > 2 && cardB.offsetWidth < 350) { // If there are more than two title lines (AND) available card width is less than 300px...
-            newWordBreakStyle = 'break-all';
+        if (finalTitleLines > 2 && cardB.offsetWidth < 350) { 
+			// If: > 2 title lines (AND) available card width is less than 350px...
+			newWordBreakStyle = 'break-all';
             if (finalTitleLines > finalBodyLines) {
-                finalTitleLines = Math.floor(Math.max(1, (finalTitleLines - bodyTotalLines*.11)))
+				// If: Title Lines > Body Lines
+                finalTitleLines = Math.floor(Math.max(1, (finalTitleLines - 1)))
                 finalBodyLines = Math.floor(Math.max(1, ((bestScenario.maxPossibleBodyTextHeight + titleLineHeight - (finalTitleLines*titleLineHeight)) / bodyLineHeight)))
             }
         }
@@ -398,7 +404,7 @@ function updateTextOverflowClampingForAllCards() {
                 classToRemove = "y";
             }
         } else {
-            if (height >= 580) {
+            if (height >= 610) {
                 classToAdd = "y";
                 classToRemove = "x";
             } else {
@@ -413,6 +419,25 @@ function updateTextOverflowClampingForAllCards() {
         });
     }
 
+  // Function to update the text based on the <br> display style
+        function updateTextBasedOnBrDisplay() {
+                const firstTextNode = document.querySelector('#\\31 > div:nth-child(2) > p:nth-child(4)').firstChild;
+
+                if (document.querySelector('#\\31 > div:nth-child(2) > p:nth-child(4) > br:nth-child(1)') && firstTextNode && firstTextNode.nodeType === Node.TEXT_NODE) {
+                    const originalText = 'Tracking your Bullseye Pistol League scores should be simple';
+                    const newTextWithDots = 'Tracking your Bullseye Pistol League scores should be simple...';
+
+                    // Get the computed style of the <br> element
+                    brDisplay = window.getComputedStyle(document.querySelector('#\\31 > div:nth-child(2) > p:nth-child(4) > br:nth-child(1)')).display;
+
+                    if (brDisplay === 'none') {
+                        firstTextNode.nodeValue = newTextWithDots;
+                    } else {
+                        firstTextNode.nodeValue = originalText;
+					}
+                }
+	        }
+
 	// Handle window resize with position preservation
 	function handleResize() {
 		if (isResizing) return; // Prevent multiple rapid resize calls
@@ -426,6 +451,9 @@ function updateTextOverflowClampingForAllCards() {
 				updateTextOverflowClampingForAllCards();
 			}
 			isResizing = false;
+			if (document.querySelector('#\\31.y  > div:nth-child(2) > p:nth-child(4) > br:nth-child(1)') && document.querySelector('#\\31.y  > div:nth-child(2) > p:nth-child(4) > br:nth-child(1)').style.display !== brDisplay) {
+				updateTextBasedOnBrDisplay()
+			}
 		});
 	}
 
